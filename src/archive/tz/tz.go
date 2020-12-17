@@ -1,5 +1,5 @@
 /*
-@Time : 2020-12-17 18:02
+@Time : 2020-12-18 00:15
 @Author : wyf
 @File : tz
 @Software: GoLand
@@ -10,212 +10,200 @@ package tz
 import (
 	"archive/tar"
 	"errors"
-	"goapi/src/archive"
 	"io"
+	"io/ioutil"
 	"os"
 	"path"
-	"path/filepath"
-	"strings"
 )
 
-// A File represents a file or directory entry in archive.
-type File struct {
-	*tar.Header
-	absPath string
-}
-
-// A TzArchive represents a file archive, compressed with Tar and Gzip.
-type TzArchive struct {
-	*ReadCloser
-	FileName   string
-	NumFiles   int
-	Flag       int
-	Permission os.FileMode
-
-	files        []*File
-	isHasChanged bool
-
-	// For supporting flushing to io.Writer.
-	writer      io.Writer
-	isHasWriter bool
-}
-
-// OpenFile is the generalized open call; most users will use Open
-// instead. It opens the named tar.gz file with specified flag
-// (O_RDONLY etc.) if applicable. If successful,
-// methods on the returned TzArchive can be used for I/O.
-// If there is an error, it will be of type *PathError.
-func OpenFile(fileName string, flag int, perm os.FileMode) (*TzArchive, error) {
-	tz := new(TzArchive)
-	err := tz.Open(fileName, flag, perm)
-	return tz, err
-}
-
-// Create creates the named tar.gz file, truncating
-// it if it already exists. If successful, methods on the returned
-// TzArchive can be used for I/O; the associated file descriptor has mode
-// O_RDWR.
-// If there is an error, it will be of type *PathError.
-func Create(fileName string) (*TzArchive, error) {
-	os.MkdirAll(path.Dir(fileName), os.ModePerm)
-	return OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0666)
-}
-
-// Open opens the named tar.gz file for reading. If successful, methods on
-// the returned TzArchive can be used for reading; the associated file
-// descriptor has mode O_RDONLY.
-// If there is an error, it will be of type *PathError.
-func Open(fileName string) (*TzArchive, error) {
-	return OpenFile(fileName, os.O_RDONLY, 0)
-}
-
-// New accepts a variable that implemented interface io.Writer
-// for write-only purpose operations.
-func New(w io.Writer) *TzArchive {
-	return &TzArchive{
-		writer:      w,
-		isHasWriter: true,
-	}
-}
-
-// List returns a string slice of files' name in TzArchive.
-// Specify prefixes will be used as filters.
-func (tz *TzArchive) List(prefixes ...string) []string {
-	isHasPrefix := len(prefixes) > 0
-	names := make([]string, 0, tz.NumFiles)
-	for _, f := range tz.files {
-		if isHasPrefix && !archive.HasPrefix(f.Name, prefixes) {
-			continue
-		}
-		names = append(names, f.Name)
-	}
-	return names
-}
-
-// AddEmptyDir adds a raw directory entry to TzArchive,
-// it returns false if same directory enry already existed.
-func (tz *TzArchive) AddEmptyDir(dirPath string) bool {
-	if !strings.HasSuffix(dirPath, "/") {
-		dirPath += "/"
-	}
-
-	for _, f := range tz.files {
-		if dirPath == f.Name {
-			return false
+// 将文件或目录打包成 .tar 文件
+// src 是要打包的多个文件夹或者多个文件
+// dstTar 是要生成的 .tar 文件的路径
+// failIfExist 标记如果 dstTar 文件存在，是否放弃打包，如果否，则会覆盖已存在的文件
+func Tar(srcs []string, dstTar string, failIfExist bool) (err error) {
+	// 判断目标文件是否存在
+	if FileExists(dstTar) {
+		if failIfExist { // 不覆盖已存在的文件
+			return errors.New("目标文件已经存在：" + dstTar)
+		} else { // 覆盖已存在的文件
+			if er := os.Remove(dstTar); er != nil {
+				return er
+			}
 		}
 	}
-
-	dirPath = strings.TrimSuffix(dirPath, "/")
-	if strings.Contains(dirPath, "/") {
-		// Auto add all upper level directories.
-		tz.AddEmptyDir(path.Dir(dirPath))
+	// 创建空的目标文件
+	fw, er := os.Create(dstTar)
+	if er != nil {
+		return er
 	}
-	tz.files = append(tz.files, &File{
-		Header: &tar.Header{
-			Name: dirPath + "/",
-		},
-	})
-	tz.updateStat()
-	return true
-}
+	defer fw.Close()
 
-// AddDir adds a directory and subdirectories entries to TzArchive.
-func (tz *TzArchive) AddDir(dirPath, absPath string) error {
-	dir, err := os.Open(absPath)
-	if err != nil {
-		return err
-	}
-	defer dir.Close()
+	// 创建 tar.Writer，执行打包操作
+	tw := tar.NewWriter(fw)
+	defer func() {
+		// 这里要判断 tw 是否关闭成功，如果关闭失败，则 .tar 文件可能不完整
+		if er := tw.Close(); er != nil {
+			err = er
+		}
+	}()
 
-	tz.AddEmptyDir(dirPath)
+	for _, src := range srcs {
+		// 清理路径字符串
+		src = path.Clean(src)
 
-	fis, err := dir.Readdir(0)
-	if err != nil {
-		return err
-	}
-	for _, fi := range fis {
-		curPath := strings.Replace(absPath+"/"+fi.Name(), "\\", "/", -1)
-		tmpRecPath := strings.Replace(filepath.Join(dirPath, fi.Name()), "\\", "/", -1)
+		// 判断要打包的文件或目录是否存在
+		if !Exists(src) {
+			return errors.New("要打包的文件或目录不存在：" + src)
+		}
+		// 获取文件或目录信息
+		fi, er := os.Stat(src)
+		if er != nil {
+			return er
+		}
+		// 获取要打包的文件或目录的所在位置和名称
+		srcBase, srcRelative := path.Split(path.Clean(src))
+		// 开始打包
 		if fi.IsDir() {
-			if err = tz.AddDir(tmpRecPath, curPath); err != nil {
-				return err
-			}
+			tarDir(srcBase, srcRelative, tw, fi)
 		} else {
-			if err = tz.AddFile(tmpRecPath, curPath); err != nil {
-				return err
+			tarFile(srcBase, srcRelative, tw, fi)
+		}
+	}
+	return nil
+}
+
+// 因为要执行遍历操作，所以要单独创建一个函数
+func tarDir(srcBase, srcRelative string, tw *tar.Writer, fi os.FileInfo) (err error) {
+	// 获取完整路径
+	srcFull := srcBase + srcRelative
+	// 在结尾添加 "/"
+	last := len(srcRelative) - 1
+	if srcRelative[last] != os.PathSeparator {
+		srcRelative += string(os.PathSeparator)
+	}
+	// 获取 srcFull 下的文件或子目录列表
+	fis, er := ioutil.ReadDir(srcFull)
+	if er != nil {
+		return er
+	}
+	// 开始遍历
+	for _, fi := range fis {
+		if fi.IsDir() {
+			tarDir(srcBase, srcRelative+fi.Name(), tw, fi)
+		} else {
+			tarFile(srcBase, srcRelative+fi.Name(), tw, fi)
+		}
+	}
+	// 写入目录信息
+	if len(srcRelative) > 0 {
+		hdr, er := tar.FileInfoHeader(fi, "")
+		if er != nil {
+			return er
+		}
+		hdr.Name = srcRelative
+
+		if er = tw.WriteHeader(hdr); er != nil {
+			return er
+		}
+	}
+	return nil
+}
+
+// 因为要在 defer 中关闭文件，所以要单独创建一个函数
+func tarFile(srcBase, srcRelative string, tw *tar.Writer, fi os.FileInfo) (err error) {
+	// 获取完整路径
+	srcFull := srcBase + srcRelative
+	// 写入文件信息
+	hdr, er := tar.FileInfoHeader(fi, "")
+	if er != nil {
+		return er
+	}
+	hdr.Name = srcRelative
+	if er = tw.WriteHeader(hdr); er != nil {
+		return er
+	}
+	// 打开要打包的文件，准备读取
+	fr, er := os.Open(srcFull)
+	if er != nil {
+		return er
+	}
+	defer fr.Close()
+	// 将文件数据写入 tw 中
+	if _, er = io.Copy(tw, fr); er != nil {
+		return er
+	}
+	return nil
+}
+
+// 因为要在 defer 中关闭文件，所以要单独创建一个函数
+func unTarFile(dstFile string, tr *tar.Reader) error {
+	// 创建空文件，准备写入解包后的数据
+	fw, er := os.Create(dstFile)
+	if er != nil {
+		return er
+	}
+	defer fw.Close()
+	// 写入解包后的数据
+	_, er = io.Copy(fw, tr)
+	if er != nil {
+		return er
+	}
+	return nil
+}
+
+func UnTar(srcTar string, dstDir string) (err error) {
+	// 清理路径字符串
+	dstDir = path.Clean(dstDir) + string(os.PathSeparator)
+	// 打开要解包的文件
+	fr, er := os.Open(srcTar)
+	if er != nil {
+		return er
+	}
+	defer fr.Close()
+	// 创建 tar.Reader，准备执行解包操作
+	tr := tar.NewReader(fr)
+	// 遍历包中的文件
+	for hdr, er := tr.Next(); er != io.EOF; hdr, er = tr.Next() {
+		if er != nil {
+			return er
+		}
+		// 获取文件信息
+		fi := hdr.FileInfo()
+		// 获取绝对路径
+		dstFullPath := dstDir + hdr.Name
+		if hdr.Typeflag == tar.TypeDir {
+			// 创建目录
+			os.MkdirAll(dstFullPath, fi.Mode().Perm())
+			// 设置目录权限
+			os.Chmod(dstFullPath, fi.Mode().Perm())
+		} else {
+			// 创建文件所在的目录
+			os.MkdirAll(path.Dir(dstFullPath), os.ModePerm)
+			// 将 tr 中的数据写入文件中
+			if er := unTarFile(dstFullPath, tr); er != nil {
+				return er
 			}
+			// 设置文件权限
+			os.Chmod(dstFullPath, fi.Mode().Perm())
 		}
 	}
 	return nil
 }
 
-// updateStat should be called after every change for rebuilding statistic.
-func (tz *TzArchive) updateStat() {
-	tz.NumFiles = len(tz.files)
-	tz.isHasChanged = true
+// 判断档案是否存在
+func Exists(name string) bool {
+	_, err := os.Stat(name)
+	return err == nil || os.IsExist(err)
 }
 
-// AddFile adds a file entry to TzArchive.
-func (tz *TzArchive) AddFile(fileName, absPath string) error {
-	if archive.IsFilter(absPath) {
-		return nil
-	}
-
-	si, err := os.Lstat(absPath)
-	if err != nil {
-		return err
-	}
-
-	target := ""
-	if si.Mode()&os.ModeSymlink != 0 {
-		target, err = os.Readlink(absPath)
-		if err != nil {
-			return err
-		}
-	}
-
-	file := new(File)
-	file.Header, err = tar.FileInfoHeader(si, target)
-	if err != nil {
-		return err
-	}
-	file.Name = fileName
-	file.absPath = absPath
-
-	tz.AddEmptyDir(path.Dir(fileName))
-
-	isExist := false
-	for _, f := range tz.files {
-		if fileName == f.Name {
-			f = file
-			isExist = true
-			break
-		}
-	}
-	if !isExist {
-		tz.files = append(tz.files, file)
-	}
-
-	tz.updateStat()
-	return nil
+// 判断文件是否存在
+func FileExists(filename string) bool {
+	fi, err := os.Stat(filename)
+	return (err == nil || os.IsExist(err)) && !fi.IsDir()
 }
 
-// DeleteIndex deletes an entry in the archive by its index.
-func (tz *TzArchive) DeleteIndex(idx int) error {
-	if idx >= tz.NumFiles {
-		return errors.New("index out of range of number of files")
-	}
-
-	tz.files = append(tz.files[:idx], tz.files[idx+1:]...)
-	return nil
-}
-
-// DeleteName deletes an entry in the archive by its name.
-func (tz *TzArchive) DeleteName(name string) error {
-	for i, f := range tz.files {
-		if f.Name == name {
-			return tz.DeleteIndex(i)
-		}
-	}
-	return errors.New("entry with given name not found")
+// 判断目录是否存在
+func DirExists(dirname string) bool {
+	fi, err := os.Stat(dirname)
+	return (err == nil || os.IsExist(err)) && fi.IsDir()
 }

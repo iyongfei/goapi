@@ -7,16 +7,15 @@
 
 package main
 
-import (
-	"fmt"
-	"os"
+import "fmt"
+
+type Format int
+
+const (
+	_ Format = (iota + 1) * 2
+	A
 )
 
-func main()  {
-	fi, statErr := os.Stat("file")
-	if statErr!=nil{
-		fmt.Printf("statErr:%+v",statErr)
-	}
-
-	fmt.Println(fi.Name())
+func main() {
+	fmt.Println(A)
 }
