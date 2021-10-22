@@ -5,7 +5,7 @@
 @Software: GoLand
 */
 
-package tz
+package archive
 
 import (
 	"archive/tar"
