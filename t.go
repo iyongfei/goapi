@@ -7,21 +7,19 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type Format int
 
+
 const (
-	_ Format = (iota + 1) * 2
-	A
+	TT int = (iota +1)*2
+	AA
 )
 
 func main() {
-	fmt.Println(A)
-
-	var buf [3]byte
-	fmt.Println("ReadBufferToBuf", len(buf))
-	for k, v := range buf {
-		fmt.Println(k, v)
-	}
+	fmt.Println(math.MaxInt64)
 }
