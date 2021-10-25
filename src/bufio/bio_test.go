@@ -32,6 +32,16 @@ func TestWriteToBuffer(t *testing.T) {
 	fmt.Println("log...",ret)
 }
 
+
+//读取数据到buffer中
+func TestBufioPeek(t *testing.T) {
+
+	bys := []byte("hello go")
+
+	Peek(bys)
+}
+
+
 /**
 默认按着\n分割
  */

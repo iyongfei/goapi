@@ -37,6 +37,16 @@ func WriteToBuffer(bys ...[]byte) (string, error) {
 }
 
 /**
+peek
+ */
+
+func Peek(bys []byte)  {
+	buffer := bytes.NewBuffer(bys)
+	reader := bufio.NewReader(buffer)
+	ret,_ := reader.Peek(3)
+	fmt.Println("ret::",string(ret))
+}
+/**
 扫描\n
  */
 func ScannerLine(str string)  {
@@ -98,16 +108,12 @@ func ScanCustomSplitFunc(data []byte, atEOF bool) (advance int, token []byte, er
 		// We have a full newline-terminated line.
 		return i + 1, dropCR(data[0:i]), nil
 	}
-	// If we're at EOF, we have a final, non-terminated line. Return it.
 	if atEOF {
 		return len(data), dropCR(data), nil
 	}
-	// Request more data.
 	return 0, nil, nil
 }
 
-
-// dropCR drops a terminal \r from the data.
 func dropCR(data []byte) []byte {
 	if len(data) > 0 && data[len(data)-1] == '\r' {
 		return data[0 : len(data)-1]

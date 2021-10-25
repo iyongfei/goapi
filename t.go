@@ -7,19 +7,30 @@
 
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "io"
 
-type Format int
+//type Inter interface {
+//	say()
+//
+//}
 
-
-const (
-	TT int = (iota +1)*2
-	AA
-)
+type S struct {
+	rd           io.Reader
+	err          error
+}
 
 func main() {
-	fmt.Println(math.MaxInt64)
+
+
+}
+
+func (b *S) Read(p []byte) (n int, err error) {
+	return 0,nil
+}
+
+func Func(in io.Reader)  {
+
+
+
+
 }
