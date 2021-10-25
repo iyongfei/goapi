@@ -7,30 +7,21 @@
 
 package main
 
-import "io"
+import (
+	"bufio"
+	"fmt"
+	"strings"
+)
 
-//type Inter interface {
-//	say()
-//
-//}
-
-type S struct {
-	rd           io.Reader
-	err          error
-}
 
 func main() {
-
-
-}
-
-func (b *S) Read(p []byte) (n int, err error) {
-	return 0,nil
-}
-
-func Func(in io.Reader)  {
-
-
-
+	s := strings.NewReader(strings.Repeat("a", 40) + "s|ss")
+	r := bufio.NewReader(s)
+	token, err := r.ReadBytes('|')
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("Token: %q\n", token)
 
 }
+

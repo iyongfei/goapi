@@ -12,13 +12,31 @@ import (
 	"testing"
 )
 
+
+/**
+readbytes
+类似于slice切片
+*/
+func TestBufioReadBytes(t *testing.T) {
+	str := "ABCDHEFGHIJKELM"
+	ret := BufioReadBytes(str,byte('H'))
+	fmt.Println(ret)
+}
+
+/**
+readbytes
+类似于slice切片
+*/
+func TestBufioReadString(t *testing.T) {
+	str := "ABCDHEFGHIJKELM"
+	ret := BufioReadString(str,byte('H'))
+	fmt.Println(ret)
+}
+
 //读取数据到buffer中
 func TestReadBufferToBuf(t *testing.T) {
-
 	bys := []byte("hello go")
-
 	ret, _ := ReadBufferToBuf(bys)
-
 	fmt.Println("log...",ret)
 }
 
@@ -35,9 +53,7 @@ func TestWriteToBuffer(t *testing.T) {
 
 //读取数据到buffer中
 func TestBufioPeek(t *testing.T) {
-
 	bys := []byte("hello go")
-
 	Peek(bys)
 }
 
