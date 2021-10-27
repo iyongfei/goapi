@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SSH Brute Forcer Mimicking (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends out the same Client Protocol field as the SSH brute forcer that is popularly used to discover accounts with weak passwords.  The client field can also be used for legitimate applications but would rarely be seen used for this purpose.  SSH typically listens on port 22. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Scoping"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="SSH/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://dev.gentoo.org/~krispykringle/sshnotes.txt"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="f5d47ff120aed9844abf55f87d5bff8a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236797451"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X53\X53\X48\X2D\X32\X2E\X30\X2D\X6C\X69\X62\X73\X73\X68\X2D\X30\X2E\X31\X0D\X0A"/>
+    <Created value="1139462483" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="F"/>
+    <NamedVar name="SSHdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$SSHdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="5353482D322E302D6C69627373682D302E310D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="0,1,2">
+    <Output index="A" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="5353482d322e302d4f70656e5353485f342e350a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="000002e40a14a8f2ec40167bdbf7f920000002e40a14a8f2ec40167bdbf7786639207e6469666669652d68656c6c6d616e2d67726f75702d65786368616e67652d7368613235362c6469666669652d68656c6c6d616e2d67726f75702d65786368616e67652d736861312c6469666669652d68656c6c6d616e2d67726f757031342d736861312c6469666669652d68656c6c6d616e2d67726f7570312d736861310000000f7373682d7273612c7373682d6473610000009d6165733132382d6362632c336465732d6362632c626c6f77666973682d6362632c636173743132382d6362632c617263666f75723132382c617263666f75723235362c617263666f75722c6165733139322d6362632c6165733235362d6362632c72696a6e6461656c2d636263406c797361746f722e6c69752e73652c6165733132382d6374722c6165733139322d6374722c6165733235362d637472000000556165733132382d6362632c336465732d6362632c626c6f77666973682d6362632c636173743132382d6362632c617263666f75723132382c617263666f75723235362c617263666f75722c6165733139322d6362632c6165733235362d6362632c72696a6e6461656c2d636263406c797361746f722e6c69752e73652c6165733132382d6374722c6165733139322d6374722c6165733235362d6374720000005555686d61632d6d64352c686d61632d736861312c686d61632d726970656d643136302c686d61632d726970656d64313630406f70656e7373682e636f6d2c686d61632d736861312d39362c686d61632d6d64352d39360000005555686d61632d6d64352c686d61632d736861312c686d61632d726970656d643136302c686d61632d726970656d64313630406f70656e7373682e636f6d2c686d61632d736861312d39362c686d61632d6d64352d3936000000156e6f6e652c7a6c6962406f70656e7373682e636f6d000000156e6f6e652c7a6c6962406f70656e7373682e636f6d000000000000000000000000000000" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="5353482d322e302d4f70656e5353485f342e342e50726f746f636f6c206d69736d617463682e0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

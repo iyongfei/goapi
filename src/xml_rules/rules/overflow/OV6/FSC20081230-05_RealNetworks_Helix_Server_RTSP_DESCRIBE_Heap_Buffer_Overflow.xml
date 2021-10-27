@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="RealNetworks Helix Server RTSP DESCRIBE Heap Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in the way RealNetworks Helix Server handles RTSP requests. Remote unauthenticated attackers can exploit this vulnerability by sending a malicious RTSP request with a crafted Proxy-Require to the affected server. As a result of processing the malicious command, a heap-based buffer overflow can be triggered which may result in injection and execution of arbitrary code within the security privileges of the vulnerable service on the target system. In the case of an attack, where code injection is unsuccessful, the Helix Server service will terminate, and all the connected sessions will be closed immediately. Furthermore, the functionality of all the services that depend on the vulnerable service might be affected as well. In the case where code injection was successful, the behaviour of the system will be entirely dependent on the nature of the injected code. Any code executed will be with the the security privileges of the vulnerable service, normally System."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="RTSP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="RealNetworks"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="RealNetworks_Helix_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="RealNetworks_Helix_Mobile_Server_11.x&amp;12.x/RealNetworks_Helix_Server_11.x&amp;12.x/RealNetworks_Helix_DNA_Server_11.x"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-5911"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="ae660808ec4eed6047473e7a74622a8d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634027084564393363"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1267093808" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="RTSPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="E">
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:0B:7C:E1" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="009E" Identification="39BC" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="9F0B" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="36189" destPort="$RTSPdestPort" SeqNumber="7F63A859" AckNumber="D48AABC3" HeaderLength="08" WindowSize="002E" Checksum="C2DF" UrgentPointer="0000" Options="0101080AC12791E200000000" Payload="444553435249424520727473703A2F2F646863703131322F77686174657665722E726D20525453502F312E300D0A435365713A20310D0A50726F78792D526571756972653A2041414141414141414141414141414141414141414141414141414141414141410D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="E" Count="">
+      <Ethernet srcMac="00:0C:29:0B:7C:E1" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00B6" Identification="1703" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="81AC" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$RTSPdestPort" destPort="36189" SeqNumber="D48AABC3" AckNumber="7F63A8C3" HeaderLength="08" WindowSize="FF95" Checksum="7AC3" UrgentPointer="0000" Options="0101080A001A0613C12791E2" Payload="525453502F312E3020353531204F7074696F6E206E6F7420737570706F727465640D0A435365713A20310D0A446174653A204672692C203230204D617220323030392032303A33333A333120474D540D0A556E737570706F727465643A2041414141414141414141414141414141414141414141414141414141414141410D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

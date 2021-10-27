@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="UDP x86 NOOP Variant 2 (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends UDP packets with a payload filled with NOOP assembly instructions. This gets flagged on IDS systems as a possible shellcode injection attack. NOOPs are used as a sled to insure greater probability for shellcode to execute. Unfortunately, NOOPs are also quite common in binary downloads from websites as well, causing many false positives. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="UDP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.snort.org/snort-db/sid.html?sid=1424"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Phil Trainor"/>
+    <ID display="true" value="d2ed9e2bbed64e992b6b75576458a5bb"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211994542"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\XEB\X02\XEB\X02\XEB\X02\XEB\X02\XEB\X02\XEB\X02\XEB\X02\XEB\X02\XEB\X02\XEB\X02"/>
+    <Created value="1139462580" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+    <for index="F"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1025, 65535)" destPort="$destPort" checksum="" length="" Payload="EB02EB02EB02EB02EB02EB02EB02EB02EB02EB02"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

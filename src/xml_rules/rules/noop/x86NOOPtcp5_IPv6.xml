@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="TCP x86 NOOP Packet Variant 5 (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends a TCP packet that appears to be part of an existing valid connection with a NOOP sled in it. A NOOP sled is used by shellcode to insure that the injected code will execute. Unfortunately, there are many other reasons why a NOOP might appear in traffic. This threat utilized equivalent assembly instructions to the standard NOOP instruction. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="TCP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ALL"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.snort.org/snort-db/sid.html?sid=2312"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Phil Trainor"/>
+    <ID display="true" value="593489a0ee7bcf0467736f07cac71042"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211994523"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X71\XFB\X7B\XAB\X71\XFB\X7B\XAB\X71\XFB\X7B\XAB\X71\XFB\X7B\XAB"/>
+    <Created value="1139462571" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="sourcePort" type="ImperfectControls.Port" value="null" index="F"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+    <for index="F"/>
+    <for index="G"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="$sourcePort" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="" WindowSize="@random(0,FFFF)" Checksum="" UrgentPointer="" Options="" Payload="71FB7BAB71FB7BAB71FB7BAB71FB7BAB" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

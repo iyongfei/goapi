@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SIPPING: Name-Addr URI Not in &lt;&gt; (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends out a SIP REGISTER message with an escaped Contact header not enclosed in &lt;&gt;. This is invalid, and since it is unexpected it may confuse or crash a SIP implementation. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="SIP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="IETF Draft: draft-ietf-sipping-torture-tests-07.txt"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID value="325b36eaa4310c9cb12953193f9d0bab" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <Suite display="true" value="VoIP"/>
+    <Created value="1141448974" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="$SIPdestPort" destPort="$SIPdestPort" checksum="" length="" Payload="5245474953544552207369703A6578616D706C652E636F6D205349502F322E300D0A546F3A207369703A75736572406578616D706C652E636F6D0D0A46726F6D3A207369703A75736572406578616D706C652E636F6D3B7461673D3939383333320D0A4D61782D466F7277617264733A2037300D0A43616C6C2D49443A2072656762616463742E6B3334356173726C33666462764031302E302E302E310D0A435365713A20312052454749535445520D0A5669613A205349502F322E302F554450203133352E3138302E3133302E3133333A353036303B6272616E63683D7A39684734624B6B646A75770D0A436F6E746163743A207369703A75736572406578616D706C652E636F6D3F526F7574653D2533437369703A7369702E6578616D706C652E636F6D2533450D0A6C3A20300D0A0D0A"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

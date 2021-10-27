@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP Power Manager Administration Web Server Stack Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists within HP Power Manager. This vulnerability may be exploited by remote unauthenticated attackers to cause execution of arbitrary code on the target system.In an attack scenario where code execution is successful the injected code will be executed within the security context of the SYSTEM user. An unsuccessful exploit attempt may abnormally terminate the affected application"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="IPV6,HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="HP_Power_Manager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="HP_Power_Manager_prior_to_4.3.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20101216-05"/>
+    <CVEID display="true" value="CVE-2010-4113"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Jim Liu"/>
+    <ID display="true" value="cb936228526f91bf552b5db6c2252db4"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634317334444762774"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1296124217" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="B">
+      <for index="E"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:12:DB:6D" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$srcIP" Destination-Address="$destIP">
+        <TCP srcPort="54326" destPort="$HTTPdestPort" SeqNumber="FA8F1417" AckNumber="159F12AA" HeaderLength="08" WindowSize="002E" Checksum="D97B" UrgentPointer="0000" Options="0101080A27AEEE2300000000" Payload="504F5354202F676F666F726D2F666F726D4C6F67696E20485454502F312E310D0A436F6E74656E742D4C656E6774683A203435380D0A43616368652D436F6E74726F6C3A206E6F2D63616368650D0A0D0A4C6F67696E3D4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:12:DB:6D" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="$srcIP">
+          <TCP srcPort="$HTTPdestPort" destPort="54326" SeqNumber="159F12AA" AckNumber="FA8F1632" HeaderLength="08" WindowSize="F8D5" Checksum="36F6" UrgentPointer="0000" Options="0101080A0002022027AEEE23" Payload="485454502F312E3020323030204F4B0D0A5365727665723A20476F41686561642D576562730D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SIP INVITE Bad Scheme Contact: Field"/>
+    <EngDesc display="true" value="This threat sends out a SIP INVITE message with a Contact: field using FTP. This can confuse or crash a PBX that is not very robust."/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="SIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP_Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.cs.columbia.edu/sip/sipit/torture.html"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID display="true" value="00000109c8ce7ba200c000a80001003c7e03a9ab"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="1.8"/>
+    <Suite display="true" value="VoIP"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value=""/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633198431172187500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1184260850" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="pbxIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+    <NamedVar name="destExt" type="ImperfectControls.MultiLine" value="null" index="I"/>
+    <NamedVar name="sourceExt" type="ImperfectControls.MultiLine" value="null" index="H"/>
+    <NamedVar name="phoneIP" type="ImperfectControls.IPv4Address" value="null" index="A"/>
+    <NamedVar name="fromURI" type="ImperfectControls.MultiLine" value="null" index="F"/>
+    <NamedVar name="SIPCallID" type="ImperfectControls.MultiLine" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="J">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="G"/>
+      <for index="I"/>
+      <for index="H"/>
+      <for index="A"/>
+      <for index="F"/>
+      <for index="K"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="J" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$pbxIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="$SIPdestPort" destPort="$SIPdestPort" checksum="" length="">
+          <SIP_Invite Method="INVITE" Request-URI="sip:$destExt\@$pbxIP" SIP-Version="SIP/2.0" ViaVersion="SIP/2.0/UDP" ViaAddress="$phoneIP" ViaPort="$SIPdestPort" BranchTagCookie="z9hG4bK" BranchTagRest="@randstring(8)" FromName="@randstring(8)" From-URI="$fromURI" Tag="@randstring(10)" ToName="@randstring(8)" To-URI="sip:$destExt\@$pbxIP" ContactName="@randstring(8)" Contact-URI="ftp://ftp.openbsd.org" CallID="$SIPCallID" CallIDAddress="$phoneIP" CSeqNum="42" CSeqMeth="INVITE" MaxForwards="70" ContentType="application/sdp" UserAgent="X-Lite release 1103m" AdditionalHeaders="" ContentLength="288" Payload="763D300D0A6F3D323030203135353138383834332031353531383838353920494E20495034203132372E302E302E310D0A733D582D4C6974650D0A633D494E20495034203132372E302E302E310D0A743D3020300D0A6D3D617564696F2038303030205254502F415650203020382033203938203937203130310D0A613D7274706D61703A302070636D752F383030300D0A613D7274706D61703A382070636D612F383030300D0A613D7274706D61703A332067736D2F383030300D0A613D7274706D61703A393820694C42432F383030300D0A613D7274706D61703A39372073706565782F383030300D0A613D7274706D61703A3130312074656C6570686F6E652D6576656E742F383030300D0A613D666D74703A31303120302D31350D0A"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Stateful display="false" value="false"/>
+  <DestIPVarName display="false" value="$pbxIP"/>
+</threatSignature>

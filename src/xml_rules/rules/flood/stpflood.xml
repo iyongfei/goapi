@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Spanning Tree Protocol Flood"/>
+    <EngDesc display="true" value="This is an attempt to confuse routers and switches by flooding them with false spanning tree protocol packets."/>
+    <Intent display="true">
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="STP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Switch"/>
+      <item value="Router"/>
+      <item value="Firewall"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2003-0550"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="10294"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000102d84d332700c000a80001003c705a4c33"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742243280781250"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="STP"/>
+    <Rate display="false" value="5"/>
+    <Regex display="false" value=""/>
+    <Created value="1139462485" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <IEEE8023 dstMAC="01:80:c2:00:00:00" srcMAC="$sourceMAC" pktLength="0026">
+      <LogicalLink DSAP_IG="42" SSAP_CR="42" Control_field="03">
+        <STP ProtoID="0000" VerID="00" BPDU="00" BPDUFlags="@random(00,FF)" RootID="8000" RootID_MAC="00:0F:66:1a:d2:5c" RootCost="00000000" BridgeID="8000" BridgeID_MAC="00:0F:66:1a:d2:5c" PortID="8003" MessageAge="0000" MaxAge="1400" HelloTime="0200" ForwardDelay="0F00"/>
+      </LogicalLink>
+    </IEEE8023>
+  </Output>
+</threatSignature>

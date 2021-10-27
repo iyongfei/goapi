@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Windows Message Queuing Service Queue Name Handling Memory Corruption (IPv6 Version)"/>
+    <EngDesc display="true" value="A memory corruption vulnerability exists in Microsoft Windows Message Queuing Service. The vulnerability is caused by a failure to validate messages containing user-defined memory address. Remote unauthenticated attackers can exploit this vulnerability by sending specially crafted messages to the affected interface. A successful exploitation can lead to arbitrary code execution with System level privileges. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="MEMORY_CORRUPTION"/>
+    </Intent>
+    <Protocol display="true" value="ZEPHYR-CLT/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20081014-17"/>
+    <CVEID display="true" value="CVE-2008-3479"/>
+    <bugtraqID display="true" value="31637"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="91f73453c4d8fb309c8dd16a5815670c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1229608569"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1229572903" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="M"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="N"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="O"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="P"/>
+    <NamedVar name="ZEPHYR-CLTdestPort" type="ImperfectControls.Port" value="null" index="Q"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="E"/>
+    <for index="G">
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="H"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$ZEPHYR-CLTdestPort" SeqNumber="1A30F196" AckNumber="4CC52D2C" HeaderLength="08" WindowSize="002E" Checksum="C301" UrgentPointer="0000" Options="0101080A98C4ED8700000000" Payload="05000B03100000007400000001000000D016D01600000000020000000000010030A0B3FD5F06D111BB9B00A024EA552501000000045D888AEB1CC9119FE808002B104860020000000100010030A0B3FD5F06D111BB9B00A024EA5525010000002C1CB76C12984045030000000000000001000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="G" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$ZEPHYR-CLTdestPort" SeqNumber="1A30F20A" AckNumber="4CC52D80" HeaderLength="08" WindowSize="002E" Checksum="70BE" UrgentPointer="0000" Options="0101080A98C4ED8A0001BB23" Payload="050000031000000048000000010000003000000000000100ECF31E0001000000000002000C000000000000000C000000080000C2080000C508000083210000C2080000C508000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3">
+    <Output index="E" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="4CC52D2C" AckNumber="1A30F20A" HeaderLength="08" WindowSize="FF8B" Checksum="E87D" UrgentPointer="0000" Options="0101080A0001BB2398C4ED87" Payload="05000C03100000005400000001000000D016D016FCB0AC0005003231303300000200000000000000045D888AEB1CC9119FE808002B10486002000000020002000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="H" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="4CC52D80" AckNumber="1A30F252" HeaderLength="08" WindowSize="FF43" Checksum="7AA0" UrgentPointer="0000" Options="0101080A0001BB2398C4ED8A" Payload="05000203100000004800000001000000300000000000000001000000E8F314000C000000000000000C000000080000C2080000C508000083210000C2080000C508000000050000C0" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

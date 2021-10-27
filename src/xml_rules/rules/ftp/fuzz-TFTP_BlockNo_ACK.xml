@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <EngDesc display="true" value="Fuzzes BlockNo in a TFTP ACK Packet by ranging the block value. OpCode is 0004."/>
+    <ExecDesc display="true" value="TFTP Fuzzer fuzz-TFTP_BlockNo_ACK.xml"/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="TFTP"/>
+    <Type_Of_Equipment display="true"/>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Hailu Awlachew"/>
+    <ID value="0000010850dd481400c000a80001003c54daf479" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="True"/>
+    <SoftwareRevision display="true" value="1.7"/>
+    <RunOnce display="false" value="False"/>
+    <Valid_Traffic display="false" value="False"/>
+    <Suite display="true" value="Fuzzing"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="local"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="none"/>
+    <ImpactBias value="normal"/>
+    <Created value="1135228835" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="TFTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="G"/>
+      <for index="J" range="BlockNo"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <UDP srcPort="@random(1026,65535)" TFTPdestPort="$destPort" checksum="" length="">
+          <TFTP_ACK OpCode="0004" BlockNo="@range( 0,FFFF)"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

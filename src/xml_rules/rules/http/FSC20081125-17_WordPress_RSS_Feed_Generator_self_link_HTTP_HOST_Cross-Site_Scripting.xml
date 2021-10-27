@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="WordPress RSS Feed Generator self_link HTTP_HOST Cross-Site Scripting"/>
+    <EngDesc display="true" value="There exists a cross-site script insertion vulnerability in WordPress. The vulnerability is due to lack of sanitization for data supplied in the HTTP Host header. Remote attackers can exploit this vulnerability to execute arbitrary HTML and script code in the users' browser sessions in the context of the vulnerable web site. A successful attack will inject malicious HTML or script code in the target server RSS feed. If the URL in the RSS feed is opened on a client's browser, the arbitrary HTML and script code would be executed in the user's browser session, in the security context of the affected Web site."/>
+    <Intent display="true">
+      <item value="Cross-Site_Scripting/Input_Validation_Error"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="WordPress"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="WordPress_WordPress"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="WordPress_WordPress_Prior_to_2.6.5"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-5278"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="72ba62b4853d1b544f0a0423728c538a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633995983693437044"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1263983403" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="Q"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="R"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+    <for index="H">
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+    <for index="K">
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:92:72:31" destMac="00:0C:29:CA:00:08" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0058" Identification="5B51" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="7648" srcIP="172.16.8.28" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="53703" destPort="$HTTPdestPort" SeqNumber="26404330" AckNumber="2BFA649F" HeaderLength="08" WindowSize="016D" Checksum="93EE" UrgentPointer="0000" Options="0101080A204722A5204795D6" Payload="474554202F776F726470726573732F77702D61746F6D2E70687020485454502F312E310A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="00:0C:29:92:72:31" destMac="00:0C:29:CA:00:08" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0035" Identification="5B53" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="7669" srcIP="172.16.8.28" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="53703" destPort="$HTTPdestPort" SeqNumber="26404381" AckNumber="2BFA649F" HeaderLength="08" WindowSize="016D" Checksum="D037" UrgentPointer="0000" Options="0101080A20475A5B2047CAAC" Payload="0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="2">
+    <Output index="K" Count="">
+      <Ethernet srcMac="00:0C:29:CA:00:08" destMac="00:0C:29:92:72:31" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="024E" Identification="C489" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="0B1A" srcIP="$destIP" destIP="172.16.8.28" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="53703" SeqNumber="2BFA6A47" AckNumber="26404382" HeaderLength="08" WindowSize="016A" Checksum="F2EE" UrgentPointer="0000" Options="0101080A2047DDF920475A5B" Payload="5468697320697320796F757220666972737420706F73742E2045646974206F722064656C6574652069742C207468656E20737461727420626C6F6767696E67210A5D5D3E3C2F73756D6D6172793E0A09093C636F6E74656E7420747970653D2268746D6C2220786D6C3A626173653D22687474703A2F2F646863703230322F776F726470726573732F61726368697665732F31223E3C215B43444154415B3C703E57656C636F6D6520746F20576F726450726573732E205468697320697320796F757220666972737420706F73742E2045646974206F722064656C6574652069742C207468656E20737461727420626C6F6767696E67213C2F703E0A5D5D3E3C2F636F6E74656E743E0A09093C6C696E6B2072656C3D227265706C6965732220747970653D22746578742F68746D6C2220687265663D22687474703A2F2F646863703230322F776F726470726573732F61726368697665732F3123636F6D6D656E747322207468723A636F756E743D2231222F3E0A09093C6C696E6B2072656C3D227265706C6965732220747970653D226170706C69636174696F6E2F61746F6D2B786D6C2220687265663D22687474703A2F2F646863703230322F776F726470726573732F61726368697665732F312F666565642F61746F6D22207468723A636F756E743D2231222F3E0A09093C7468723A746F74616C3E313C2F7468723A746F74616C3E0A093C2F656E7472793E0A093C2F666565643E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

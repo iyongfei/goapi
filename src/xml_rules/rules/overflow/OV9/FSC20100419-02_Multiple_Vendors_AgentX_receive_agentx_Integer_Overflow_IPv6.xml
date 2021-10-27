@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Multiple Vendors AgentX receive_agentx Integer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in multiple products that use the AgentX++ software. The vulnerability is due to an integer overflow error in AgentX::receive_agentx function that can lead to a heap buffer overflow. A remote unauthenticated attacker can exploit this vulnerability by sending maximum payload length value in a packet to the target server on port 705/TCP. Successful exploitation would allow for arbitrary code injection and execution with the privileges of the server process. Code injection that does not result in execution could terminate the application due to memory corruption, and could result in a Denial of Service condition. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Code_Execution/Integer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="AgentX/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Multiple_Vendors"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Frank_Fock_AgentX/RealNetworks_Helix_Server/RealNetworks_Helix_Mobile_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Frank_Fock_AgentX_1.4.17_and_prior/RealNetworks_Helix_Server_11.x&amp;12.X&amp;13.X/RealNetworks_Helix_Mobile_Server_11.x&amp;12.X&amp;13.X"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2010-1319"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="80da33cfba0e6455d879a6553cd3e10b"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634082343329074697"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1274434204" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIPv6" type="ImperfectControls.IPv6Address" value="null" index="H"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="I"/>
+    <NamedVar name="sourceIPv6" type="ImperfectControls.IPv6Address" value="null" index="J"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:58:D0:E3" destMac="00:0C:29:2B:76:41" pktType="0800">
+      <IPv6 Version="6" InternetHeaderLength="05" TypeofService="00" TotalLength="0068" Identification="3B3C" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="961E" srcIP="$sourceIPv6" destIP="$destIPv6" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="53262" destPort="$destPort" SeqNumber="73F38305" AckNumber="14BBC540" HeaderLength="08" WindowSize="016D" Checksum="13CF" UrgentPointer="0000" Options="0101080A0115B8410003FCB9" Payload="01010000000000000000000001000000FFFFFFFF0500000000000000130000004167656E7458344A2054657374206167656E7400" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

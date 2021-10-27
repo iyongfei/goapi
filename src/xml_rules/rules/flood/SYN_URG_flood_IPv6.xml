@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Urgent SYN Flood (IPv6 Version)"/>
+    <EngDesc display="true" value="The urgent flag causes data to be immediately processed. A TCP SYN flood with the URG flag designated is known to evade IDS/IPS systems whose function is to defend against resource exhaustive attacks such as a SYN flood. The normal 3-way handshake for establishing a TCP session between the client and server involves the client sending a TCP SYN packet, the server receiving this packet and opening a socket connection for that user and sending a TCP SYN/ACK packet in return. At this point the server waits, with an open connection for the client to send a TCP ACK to confirm the session. This threat is executed by sending many TCP SYN packets with the URG bit set to the targeted machine from a spoofed source address. This will result in the target opening connections until its resources have been exhausted. This will result in a denial of service for all legitimate users. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Resource_Exhaustion"/>
+      <item value="Flood"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="TCP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Transport_Layer_TCP"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Phil Trainor"/>
+    <ID display="true" value="61e7e6ea173a53cb73d56fa9fb6f63ac"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211994016"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="5"/>
+    <Regex display="false" value=""/>
+    <Created value="1139461841" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1024,65535)" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="0" HeaderLength="" WindowSize="@random(1000,4000)" Checksum="" UrgentPointer="0" Options="" Payload="" CWR="false" ECE="false" URG="true" ACK="false" PSH="false" RST="false" SYN="true" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

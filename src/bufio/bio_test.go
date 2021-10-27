@@ -50,6 +50,13 @@ func TestWriteToBuffer(t *testing.T) {
 	fmt.Println("log...",ret)
 }
 
+func TestBufioString(t *testing.T) {
+	ret:= BufioString("rrrree的")
+	fmt.Println("log...",ret)
+}
+
+
+
 
 //读取数据到buffer中
 func TestBufioPeek(t *testing.T) {

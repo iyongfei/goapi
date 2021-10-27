@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <EngDesc display="true" value="Fuzzes ErrorNullTerm field by appending “%s%s” to the ErrorMessage with ranging sizes. OpCode is 05"/>
+    <ExecDesc display="true" value="TFTP Fuzzer fuzz-TFTP_ErrorCode_Message_formats.xml"/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="TFTP"/>
+    <Type_Of_Equipment display="true"/>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Hailu Awlachew"/>
+    <ID value="0000010850dd518f00c000a80001003c398f00a6" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="True"/>
+    <SoftwareRevision display="true" value="1.7"/>
+    <RunOnce display="false" value="False"/>
+    <Valid_Traffic display="false" value="False"/>
+    <Suite display="true" value="Fuzzing"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="local"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="none"/>
+    <ImpactBias value="normal"/>
+    <Created value="1135228835" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="TFTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="B"/>
+      <for index="G"/>
+      <for index="I" range="ErrorNullTerm"/>
+      <for index="J" range="ErrorCode"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="11" HeaderChecksum="" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026,65535)" TFTPdestPort="$destPort" checksum="" length="">
+          <TFTP_Error OpCode="0005" ErrorCode="@range(0,7)" ErrorNullTerm="@fill(2573,@range(0,700))00"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>
