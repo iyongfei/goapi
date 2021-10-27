@@ -214,7 +214,6 @@ func Heco(r string) string {
 				retStr:= string(hex_data)
 				if hexTmp != ""{
 					hexTmp = ""
-					//tmp = strings.TrimRight(tmp," ")
 					tmp += "]]"
 				}
 				tmp += retStr
