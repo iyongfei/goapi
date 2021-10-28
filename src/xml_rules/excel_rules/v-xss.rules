@@ -1,0 +1,182 @@
+#xss:4059000~4059999
+
+#BEAWeblogic_XSS.xml
+alert TCP any any -> any any (msg:BEA Weblogic XSS; content:"456"; sid:4059000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Confixxpro_XSS.xml
+alert TCP any any -> any any (msg:Confixx Pro ftplogin login Variable XSS; content:"456"; sid:4059001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#InternetExplorerHistoryXSS.xml
+alert TCP any any -> any any (msg:Internet Explorer History XSS Attack; content:"456"; sid:4059002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#InternetExplorerSearchXSS.xml
+alert TCP any any -> any any (msg:Internet Explorer XSS Injection Through Searchbar; content:"456"; sid:4059003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#InternetExplorerSearchXSS2.xml
+alert TCP any any -> any any (msg:Internet Explorer Search Bar Injection; content:"456"; sid:4059004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#UserAgentXSS.xml
+alert TCP any any -> any any (msg:Generic User-Agent XSS Attempt; content:"456"; sid:4059005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#XSS_Server_Injection.xml
+alert TCP any any -> any any (msg:XSS HTTP Server Header Reply; content:"456"; sid:4059006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#absolute_xss.xml
+alert TCP any any -> any any (msg:Absolute Image Gallery XE Multiple Cross-Site Scripting Vulnerability; content:"456"; sid:4059007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#antvilleXSS.xml
+alert TCP any any -> any any (msg:Antville URL XSS injection; content:"456"; sid:4059008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#awstatsXSS.xml
+alert TCP any any -> any any (msg:AWStats Referer XSS; content:"456"; sid:4059009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#b1gbb_xss.xml
+alert TCP any any -> any any (msg:B1GBB Visitenkarte.PHP Cross Site Scripting Vulnerability; content:"456"; sid:4059010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#babykatie_vsreal_xss.xml
+alert TCP any any -> any any (msg:ScriptsEZ Easy Ad-Manager Details.PHP Cross-Site Scripting Vulnerability; content:"456"; sid:4059011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#blur6ex_xss.xml
+alert TCP any any -> any any (msg:Blursoft Blur6ex Cross-site scripting Vulnerability; content:"456"; sid:4059012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#contentnow_xss.xml
+alert TCP any any -> any any (msg:ContentNow 1.30 (upload/xss) Cross-site Scripting Vulnerability; content:"456"; sid:4059013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#contrexx_XSS_injection.xml
+alert TCP any any -> any any (msg:Contrexx Cross Site Scripting Attack; content:"456"; sid:4059014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#coppermine_xss.xml
+alert TCP any any -> any any (msg:Coppermine <= 1.4.12 Cross Site Scripting ; content:"456"; sid:4059015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#coppermine_xss_b.xml
+alert TCP any any -> any any (msg:Coppermine <= 1.4.12 Cross Site Scripting and Local File Inclusion; content:"456"; sid:4059016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cubecart_xss.xml
+alert TCP any any -> any any (msg:CubeCart Cross-site Scripting Vulnerability; content:"456"; sid:4059017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#drake_cms_xss.xml
+alert TCP any any -> any any (msg:Drake CMS UI.DTA.PHP Cross-Site Scripting Vulnerability; content:"456"; sid:4059018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#easy-content_xss.xml
+alert TCP any any -> any any (msg:Easy-Content Forums 1.0 XSS Vulnerability; content:"456"; sid:4059019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#efiction_xss_a.xml
+alert TCP any any -> any any (msg:eFiction XSS Vulnerabilities; content:"456"; sid:4059020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#efiction_xss_b.xml
+alert TCP any any -> any any (msg:eFiction XSS and SQL Insertion; content:"456"; sid:4059021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#flexwatch_xss.xml
+alert TCP any any -> any any (msg:FlexWATCH Network Camera Cross-Site Scripting Vulnerability; content:"456"; sid:4059022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fusebox_xss.xml
+alert TCP any any -> any any (msg:Fusebox Cross Site Scripting Attack; content:"456"; sid:4059023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#guestbook_xss.xml
+alert TCP any any -> any any (msg:Toms Guestebuch 1.00; content:"456"; sid:4059024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#guestbook_xss_b.xml
+alert TCP any any -> any any (msg:Toms Guestebuch 1.00; content:"456"; sid:4059025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#guestbook_xss_c.xml
+alert TCP any any -> any any (msg:Toms Guestebuch  1.00; content:"456"; sid:4059026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hivemail_xss.xml
+alert TCP any any -> any any (msg:HiveMail XSS Vulnerability; content:"456"; sid:4059027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#host_xss.xml
+alert TCP any any -> any any (msg:HTTP Host XSS; content:"456"; sid:4059028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ideocontent_xss.xml
+alert TCP any any -> any any (msg: IdeoContent Manager news_full.php page Variable XSS; content:"456"; sid:4059029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ideocontent_xss_b.xml
+alert TCP any any -> any any (msg: IdeoContent Manager Index.php page Variable XSS; content:"456"; sid:4059030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ie7_jpg_xss.xml
+alert TCP any any -> any any (msg:IE7 Malformed Image XSS; content:"456"; sid:4059031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#litespeed_xss.xml
+alert TCP any any -> any any (msg:LiteSpeed ConfMgr.php Cross-Site Scripting Vulnerability; content:"456"; sid:4059032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mailsite_xss.xml
+alert TCP any any -> any any (msg: Rockliffe MailSite HTTP Management Agent WCONSOLE.DLL XSS; content:"456"; sid:4059033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#miniwebshop_xss.xml
+alert TCP any any -> any any (msg:Mini Web Shop View.PHP Viewcategory.PHP Cross-Site Scripting Vulnerability; content:"456"; sid:4059034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ned_xss.xml
+alert TCP any any -> any any (msg:Nokia Electronic Documentation Cross Site Scripting; content:"456"; sid:4059035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#netgear_xss.xml
+alert TCP any any -> any any (msg:Netgear URL Filter Cross-Site Scripting Injection; content:"456"; sid:4059036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#netgear_xss2.xml
+alert TCP any any -> any any (msg:Netgear URL Logging XSS; content:"456"; sid:4059037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#oracle_reports_xss.xml
+alert TCP any any -> any any (msg:Oracle Reports Server XSS Attempt; content:"456"; sid:4059038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#php_phpinfo_xss.xml
+alert TCP any any -> any any (msg:PHP 4.4.3 - 4.4.6 phpinfo() Remote Cross-Site Scripting Variant Vulnerability; content:"456"; sid:4059039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpbb_datenbank_xss.xml
+alert TCP any any -> any any (msg:Datenbank Module For PHPBB Remote Mod.PHP Cross-Site Scripting Vulnerability; content:"456"; sid:4059040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpcommunitycalendar_xss.xml
+alert TCP any any -> any any (msg:phpCommunityCalendar 4.0.3 Cross Site Scripting Vulnerability; content:"456"; sid:4059041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpcommunitycalendar_xss_b.xml
+alert TCP any any -> any any (msg:phpCommunityCalendar 4.0.3 Cross Site Scripting Vulnerability; content:"456"; sid:4059042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpinfoXSS.xml
+alert TCP any any -> any any (msg:phpinfo() Cross Site Scripting Attempt; content:"456"; sid:4059043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpraid_XSS.xml
+alert TCP any any -> any any (msg:PHPraid View.php Cross-Site Scripting Vulnerability; content:"456"; sid:4059044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#pmwiki_xss.xml
+alert TCP any any -> any any (msg:PmWiki Search Cross-Site Scripting Vulnerability; content:"456"; sid:4059045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#refererXSS.xml
+alert TCP any any -> any any (msg:Generic Referer XSS Attempt; content:"456"; sid:4059046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#reloadcms_xss_cmi.xml
+alert TCP any any -> any any (msg:ReloadCMS User-Agent HTML Injection Vulnerability; content:"456"; sid:4059047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#revizecms_xss.xml
+alert TCP any any -> any any (msg:Revize CMS HTTPTranslatorServlet XSS; content:"456"; sid:4059048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#rhino_xss.xml
+alert TCP any any -> any any (msg:Rhino XSS Attack; content:"456"; sid:4059049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#rwauction_xss.xml
+alert TCP any any -> any any (msg:RWAuction Pro Search.ASP Cross-Site Scripting Vulnerability; content:"456"; sid:4059050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sawmill_xss.xml
+alert TCP any any -> any any (msg:Sawmill XSS Attempt; content:"456"; sid:4059051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#selectapix_xss.xml
+alert TCP any any -> any any (msg:SelectaPix Cross-Site Scripting; content:"456"; sid:4059052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sixcms_xss.xml
+alert TCP any any -> any any (msg:SixCMS 6.0 List.PHP Cross-Site Scripting Vulnerability; content:"456"; sid:4059053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sqwebmail_xss.xml
+alert TCP any any -> any any (msg:SqWebMail Attachment XSS; content:"456"; sid:4059054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tikiwiki_xss.xml
+alert TCP any any -> any any (msg:TikiWiki Cross-Site Scripting Vulnerability; content:"456"; sid:4059055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tinywebgallery_xss.xml
+alert TCP any any -> any any (msg:Tiny Web Gallery XSS vulnerability; content:"456"; sid:4059056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ultimatehelpdesk_xss.xml
+alert TCP any any -> any any (msg:Ultimate HelpDesk Index.ASP Cross-Site Scripting Vulnerability; content:"456"; sid:4059057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wbblog_xss.xml
+alert TCP any any -> any any (msg:WBBlog Cross Site Scripting Vulnerability; content:"456"; sid:4059058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#widexl_download_tracker_xss.xml
+alert TCP any any -> any any (msg:Widexl Download Tracker down.pl ID Variable XSS; content:"456"; sid:4059059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

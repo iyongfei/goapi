@@ -120,10 +120,12 @@ var HexMap = map[string]string{
 
 
 func main() {
-	r := "607F8F61618F8F8F8F"
 
-	ret:=M(r)
-	fmt.Println(ret)
+	a := []byte{'a','b','c','d'}
+	b := []byte{'a'}
+
+	r := bytes.SplitN(a,b,-1)
+	fmt.Println(r)
 
 
 

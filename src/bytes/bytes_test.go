@@ -22,3 +22,43 @@ func TestBytesBufferWriteString(t *testing.T) {
 	ret := BytesBufferWriteString(strs...)
 	fmt.Println(ret)
 }
+
+
+func TestBytesBufferReadFrom(t *testing.T) {
+	retStr := BytesBufferReadFrom()
+	fmt.Println(retStr)
+}
+
+func TestBytesBufferWriteTo(t *testing.T) {
+	BytesBufferWriteTo("write to 输出")
+}
+
+func TestBytesBufferRead(t *testing.T)  {
+	BytesBufferRead()
+}
+
+
+func TestBytesBufferReadByte(t *testing.T)  {
+	BytesBufferReadByte()
+}
+
+func TestBytesBufferReadBytes(t *testing.T)  {
+	BytesBufferReadBytes()
+}
+
+
+func TestBytesBufferReadString(t *testing.T)  {
+	BytesBufferReadString()
+}
+
+
+func TestBytesBufferNext(t *testing.T)  {
+	BytesBufferNext()
+}
+
+
+//read
+
+func TestByteReader(t *testing.T)  {
+	ByteReader()
+}

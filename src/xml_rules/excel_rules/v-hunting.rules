@@ -1,0 +1,11 @@
+#hunting:4042000~4042999
+
+#proxy_hunt1.xml
+alert TCP any any -> any any (msg:Proxy Connection; content:"456"; sid:4042000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#proxy_hunt2.xml
+alert TCP any any -> any any (msg:Proxy Hunting with CONNECT; content:"456"; sid:4042001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#proxy_hunt3.xml
+alert TCP any any -> any any (msg:Proxy Hunting Spam; content:"456"; sid:4042002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

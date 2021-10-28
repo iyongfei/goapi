@@ -1,0 +1,265 @@
+#cmi:4037000~4037999
+
+#ActionApps_cmi.xml
+alert TCP any any -> any any (msg:ActionApps 2.8.1  Remote File Inclusion; content:"456"; sid:4037000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#EQdkp_cmi.xml
+alert TCP any any -> any any (msg:EQdkp Arbitrary Remote File Execution; content:"456"; sid:4037001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Prodder_cmi.xml
+alert TCP any any -> any any (msg:Prodder Arbitrary Shell Command Execution Vulnerability; content:"456"; sid:4037002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TotalCalendar_cmi.xml
+alert TCP any any -> any any (msg:TotalCalendar 2.30 Remote File Include Vulnerability; content:"456"; sid:4037003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ZenCart_sqlcmi.xml
+alert TCP any any -> any any (msg:ZenCart SQL Injection Into Remote Command Execution; content:"456"; sid:4037004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#aardvarktopsites_cmi.xml
+alert TCP any any -> any any (msg:Aardvark Topsites PHP 4.2.2 Arbitrary Command Execution (join.php); content:"456"; sid:4037005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#aardvarktopsites_cmi_b.xml
+alert TCP any any -> any any (msg:Aardvark Topsites PHP 4.2.2 Remote Command Execution; content:"456"; sid:4037006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#acal_cmi.xml
+alert TCP any any -> any any (msg:ACal 2.2.6  Arbitrary Command Execution; content:"456"; sid:4037007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#admbook_cmi.xml
+alert TCP any any -> any any (msg:Admbook Arbitrary Command Execution Vulnerability; content:"456"; sid:4037008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#albinator_cmi.xml
+alert TCP any any -> any any (msg:Albinator Multiple Remote File Include Vulnerabilities; content:"456"; sid:4037009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#angelinecms_cmi.xml
+alert TCP any any -> any any (msg:AngelineCMS 0.8.1 installpath argument Remote File Inclusion Exploit; content:"456"; sid:4037010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#awstats_cmi.xml
+alert TCP any any -> any any (msg:AWStats Referrer Arbitrary Command Execution Vulnerability; content:"456"; sid:4037011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#awstats_cmi_b.xml
+alert TCP any any -> any any (msg:AWStats 6.5  Remote Command Injection; content:"456"; sid:4037012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#awstats_cmi_c.xml
+alert TCP any any -> any any (msg:AWStats Logfile Parameter Remote Command Execution Vulnerability; content:"456"; sid:4037013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#bluedragoncms_cmi.xml
+alert TCP any any -> any any (msg:Php Blue Dragon CMS 2.9 Remote File Include Vulnerability; content:"456"; sid:4037014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#burncms_cmi_a.xml
+alert TCP any any -> any any (msg:burnCMS <= 0.2(root)Remote File Include Vulnerabilities; content:"456"; sid:4037015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#burncms_cmi_b.xml
+alert TCP any any -> any any (msg:burnCMS <= 0.2(root)Remote File Include Vulnerabilities; content:"456"; sid:4037016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#burncms_cmi_c.xml
+alert TCP any any -> any any (msg:burnCMS <= 0.2(root)Remote File Include Vulnerabilities; content:"456"; sid:4037017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#burncms_cmi_d.xml
+alert TCP any any -> any any (msg:burnCMS <= 0.2(root)Remote File Include Vulnerabilities; content:"456"; sid:4037018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#burncms_cmi_e.xml
+alert TCP any any -> any any (msg:burnCMS <= 0.2(root)Remote File Include Vulnerabilities; content:"456"; sid:4037019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#calogic_calander_cmi.xml
+alert TCP any any -> any any (msg:CaLogic Calendars 1.2.2 Remote File Inclusion; content:"456"; sid:4037020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cbsms_mambo_cmi.xml
+alert TCP any any -> any any (msg:CBSMS Mambo Module 1.0  Remote File Include Vulnerabilities; content:"456"; sid:4037021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#docebocms_cmi.xml
+alert TCP any any -> any any (msg:DoceboCMS Arbitrary PHP File Inclusion; content:"456"; sid:4037022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#docebocms_cmi_b.xml
+alert TCP any any -> any any (msg:DoceboCMS Arbitrary PHP File Inclusion; content:"456"; sid:4037023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#efiction_cmi.xml
+alert TCP any any -> any any (msg:eFiction Image Upload Arbitrary Command Execution; content:"456"; sid:4037024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ej3_topo_rcmi.xml
+alert TCP any any -> any any (msg:EJ3 TOPO Class_DB_Text.PHP Multiple Remote PHP Script Code Injection Vulnerability; content:"456"; sid:4037025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#foing_cmi_a.xml
+alert TCP any any -> any any (msg:Foing 0.7.0 (phpBB) Remote File Inclusion Vulnerability; content:"456"; sid:4037026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#foing_cmi_b.xml
+alert TCP any any -> any any (msg:Foing 0.7.0 (phpBB) Remote File Inclusion Vulnerability; content:"456"; sid:4037027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#foing_cmi_c.xml
+alert TCP any any -> any any (msg:Foing 0.7.0 (phpBB) Remote File Inclusion Vulnerability; content:"456"; sid:4037028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#foing_cmi_d.xml
+alert TCP any any -> any any (msg:Foing 0.7.0 (phpBB) Remote File Inclusion Vulnerability; content:"456"; sid:4037029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#foing_cmi_e.xml
+alert TCP any any -> any any (msg:Foing 0.7.0 (phpBB) Remote File Inclusion Vulnerability; content:"456"; sid:4037030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#foing_cmi_f.xml
+alert TCP any any -> any any (msg:Foing 0.7.0 (phpBB) Remote File Inclusion Vulnerability; content:"456"; sid:4037031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#googleapp_cmi.xml
+alert TCP any any -> any any (msg:Google Appliance ProxyStyleSheet Command Execution; content:"456"; sid:4037032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hivemail_cmi_a.xml
+alert TCP any any -> any any (msg:HiveMail Vulnerabilities Remote Command Execution; content:"456"; sid:4037033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hivemail_cmi_b.xml
+alert TCP any any -> any any (msg:HiveMail Vulnerabilities Remote Command Execution; content:"456"; sid:4037034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hivemail_cmi_c.xml
+alert TCP any any -> any any (msg:HiveMail Vulnerabilities Remote Command Execution; content:"456"; sid:4037035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hivemail_cmi_d.xml
+alert TCP any any -> any any (msg:HiveMail 1.3 remote command execution exploit; content:"456"; sid:4037036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#horde_cmi.xml
+alert TCP any any -> any any (msg:Horde help viewer module remote PHP code execution; content:"456"; sid:4037037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#iprimal_cmi.xml
+alert TCP any any -> any any (msg:IPrimal Forums Index.PHP Authentication Bypass Vulnerability; content:"456"; sid:4037038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#loudblog_cmi.xml
+alert TCP any any -> any any (msg:Loudblog backend_settings.php GLOBALS[path] Variable Remote File Inclusion; content:"456"; sid:4037039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mediagallery_geeklog_cmi.xml
+alert TCP any any -> any any (msg:Media Gallery for Geeklog <= 1.4.8a Remote File Inclusion Vulnerability; content:"456"; sid:4037040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#msie_xmlcore_cmi.xml
+alert TCP any any -> any any (msg:MS Internet Explorer 6/7 (XML Core Services)  Remote Code Execution Vulnerability; content:"456"; sid:4037041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mysql_commander_cmi.xml
+alert TCP any any -> any any (msg:MySQL Commander <= 2.7 (home) Remote File Inclusion Vulnerability; content:"456"; sid:4037042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nettools_cmi.xml
+alert TCP any any -> any any (msg:PHP Net Tools 2.7.1 Remote Code Execution Exploit; content:"456"; sid:4037043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#newsportal_cmi.xml
+alert TCP any any -> any any (msg:Newsportal (poll.php) Remote File Inclusion Vulnerability; content:"456"; sid:4037044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#noahsclassifieds_cmi.xml
+alert TCP any any -> any any (msg:Noah's classifieds Remote Code Execution Vulnerability; content:"456"; sid:4037045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nocc_cmi_a.xml
+alert TCP any any -> any any (msg:NOCC Arbitrary Local File Inclusion \ Command Execution Vulnerability, lang field; content:"456"; sid:4037046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nocc_cmi_b.xml
+alert TCP any any -> any any (msg:NOCC Arbitrary Local File Inclusion \ Command Execution Vulnerability, themes field; content:"456"; sid:4037047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nocc_cmi_c.xml
+alert TCP any any -> any any (msg:NOCC Arbitrary Local File Inclusion \ Command Execution Vulnerability, footer.php; content:"456"; sid:4037048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#osx_metadata_cmi.xml
+alert TCP any any -> any any (msg:Apple Mac OS X Archive Metadata Command Execution Vulnerability; content:"456"; sid:4037049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#pafiledb_cmi.xml
+alert TCP any any -> any any (msg:PAFileDB Pafiledb_Constants.PHP Remote File Include Vulnerability; content:"456"; sid:4037050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#pearl_for_mambo_cmi.xml
+alert TCP any any -> any any (msg:Pearl For Mambo 1.6 Remote File Include Vulnerability; content:"456"; sid:4037051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#perlpodder_cmi.xml
+alert TCP any any -> any any (msg:PerlPodder Arbitrary Shell Command Execution Vulnerability; content:"456"; sid:4037052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpBazar_cmi.xml
+alert TCP any any -> any any (msg:phpBazar 2.1.0 Multiple Vulnerabilities; content:"456"; sid:4037053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpbb_cmi.xml
+alert TCP any any -> any any (msg:phpBB admin 2 exec Exploit; content:"456"; sid:4037054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpbbauction_cmi.xml
+alert TCP any any -> any any (msg:phpBB auction mod - Remote File Inclusion Vulnerability; content:"456"; sid:4037055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpbbguestbook_cmi.xml
+alert TCP any any -> any any (msg:phpBB advanced guestbook mod - Remote File Inclusion Vulnerability; content:"456"; sid:4037056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpfusion_cmi.xml
+alert TCP any any -> any any (msg:PHP-Fusion 6.00.306 Multiple Vulnerabilities Exploit
+; content:"456"; sid:4037057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpglossar_cmi.xml
+alert TCP any any -> any any (msg:PHPGlossar Version 0.8 <=  Remote File Inclusion Vulnerability; content:"456"; sid:4037058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpim_cmi.xml
+alert TCP any any -> any any (msg:PHPIM Remote Command Injection /SQL Injection Flaw; content:"456"; sid:4037059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpkit_cmi.xml
+alert TCP any any -> any any (msg:PHPKIT remote command execution exploit; content:"456"; sid:4037060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phplistpro_cmi_a.xml
+alert TCP any any -> any any (msg:phpListPro config.php returnpath Variable Remote File Inclusion ; content:"456"; sid:4037061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phplistpro_cmi_b.xml
+alert TCP any any -> any any (msg:phpListPro editsite.php returnpath Variable Remote File Inclusion ; content:"456"; sid:4037062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phplistpro_cmi_c.xml
+alert TCP any any -> any any (msg:phpListPro in.php returnpath Variable Remote File Inclusion ; content:"456"; sid:4037063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phplistpro_cmi_d.xml
+alert TCP any any -> any any (msg:phpListPro addsite.php returnpath Variable Remote File Inclusion ; content:"456"; sid:4037064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpmyagenda_cmi_a.xml
+alert TCP any any -> any any (msg:phpMyAgenda 3.0 Arbitrary Remote File Inclusion (agenda2.php3); content:"456"; sid:4037065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpmyagenda_cmi_b.xml
+alert TCP any any -> any any (msg:phpMyAgenda 3.0 Arbitrary Remote File Inclusion (agenda2.php3); content:"456"; sid:4037066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpmydirectory_cmi.xml
+alert TCP any any -> any any (msg:phpMyDirectory 10.4.4 Remote File Inclusion Vulnerability; content:"456"; sid:4037067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpraid_cmi.xml
+alert TCP any any -> any any (msg:phpRaid Remote File Inclusion; content:"456"; sid:4037068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpraid_cmi_b.xml
+alert TCP any any -> any any (msg:phpRaid Remote File Inclusion; content:"456"; sid:4037069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpwebsite_cmi.xml
+alert TCP any any -> any any (msg:PHPWebSite 0.10.2 Remote Command Execution; content:"456"; sid:4037070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#quezza_cmi.xml
+alert TCP any any -> any any (msg:Quezza BB 1.0 (quezza_root_path) File Inclusion Vulnerability.; content:"456"; sid:4037071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#rsgallery_cmi.xml
+alert TCP any any -> any any (msg:RsGallery2 1.11.2 (rsgallery.html.php) File Include Vulnerability; content:"456"; sid:4037072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#runcms_cmi.xml
+alert TCP any any -> any any (msg:RunCMS Remote Code Execution Vulnerability; content:"456"; sid:4037073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#runcms_cmi_b.xml
+alert TCP any any -> any any (msg:RunCMS Remote Code Execution Vulnerability; content:"456"; sid:4037074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#safari_windows_cmi.xml
+alert TCP any any -> any any (msg:Safari 3 for Windows Beta Remote Command Execution Vulnerability; content:"456"; sid:4037075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#scoznews_cmi.xml
+alert TCP any any -> any any (msg:ScozNet ScozNews Multiple Remote File Include Vulnerabilities; content:"456"; sid:4037076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#simplog_cmi.xml
+alert TCP any any -> any any (msg:Simplog  0.9.2  Remote Command Execution Exploit; content:"456"; sid:4037077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#squirrelcart_cmi.xml
+alert TCP any any -> any any (msg:Squirrelcart 2.2.0 (cart_content.php) Remote File Inclusion; content:"456"; sid:4037078; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#statit_cmi.xml
+alert TCP any any -> any any (msg:Statit V4 Remote File Inclusion exploit
+; content:"456"; sid:4037079; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tcexam_cmi.xml
+alert TCP any any -> any any (msg:TCExam <= 4.0.011 $_COOKIE["SessionUserLang"] shell injection exploit
+TCExam <= 4.0.011 $_COOKIE["SessionUserLang"] shell injection exploit
+TCExam <= 4.0.011 $_COOKIE["SessionUserLang"] shell injection exploit
+; content:"456"; sid:4037080; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#thefingerserver_cmi.xml
+alert TCP any any -> any any (msg:Finger Server Pipe Vulnerability; content:"456"; sid:4037081; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tikiwiki_pref_cmi.xml
+alert TCP any any -> any any (msg:TikiWiki tiki-user_preferences.php Command Injection; content:"456"; sid:4037082; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ubbthreats_cmi.xml
+alert TCP any any -> any any (msg:UBBThreads Remote File Inclusion; content:"456"; sid:4037083; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#websitebakery_cmi.xml
+alert TCP any any -> any any (msg:Website Baker Remote Command Execution; content:"456"; sid:4037084; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#xoops_cmi.xml
+alert TCP any any -> any any (msg:XOOPS Arbitrary Script Inclusion; content:"456"; sid:4037085; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

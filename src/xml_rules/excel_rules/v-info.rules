@@ -1,0 +1,23 @@
+#info:4043000~4043999
+
+#Backdoor.Haxdoor.B.5ea70f86.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Backdoor.Haxdoor.B; content:"456"; sid:4043000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Backdoor.Rustock.B.0dace309.xml
+alert TCP any any -> any any (msg:Email Virus Backdoor.Rustock.B; content:"456"; sid:4043001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Backdoor.Rustock.B.111d19b6.xml
+alert TCP any any -> any any (msg:Email Virus Backdoor.Rustock.B; content:"456"; sid:4043002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Backdoor.Rustock.B.28a56f3a.xml
+alert TCP any any -> any any (msg:Email Virus Backdoor.Rustock.B; content:"456"; sid:4043003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100219-02_IBM_Cognos_Server_Backdoor_Account_Remote_Code_Execution.xml
+alert TCP any any -> any any (msg:IBM Cognos Server Backdoor Account Remote Code Execution; content:"456"; sid:4043004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20110131-08_HP_OpenView_Performance_Insight_Server_Backdoor_Account_Code_Execution.xml
+alert TCP any any -> any any (msg:HP OpenView Performance Insight Server Backdoor Account Code Execution; content:"456"; sid:4043005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nvp_backdoor.xml
+alert IP any any -> any any (msg:IP Protocol 11; content:"456"; sid:4043006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

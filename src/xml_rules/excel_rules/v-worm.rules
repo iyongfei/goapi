@@ -1,0 +1,2774 @@
+#worm:4049000~4049999
+
+#Email-Worm.BAT.BWG.b.b.a397c393.xml
+alert TCP any any -> any any (msg:Email Worm Email-Worm.BAT.BWG.b.b.a397c393; content:"456"; sid:4049000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.BAT.BWG.e.e.04e84f95.xml
+alert TCP any any -> any any (msg:Email Virus ; content:"456"; sid:4049001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.BAT.Krim.a.a.316113b7.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.BAT.Krim.a.a; content:"456"; sid:4049002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.BAT.Rogut.rog.ed010bb8.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.BAT.Rogut.rog; content:"456"; sid:4049003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.BAT.Without.b.b.f331646b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.BAT.Without.b.b; content:"456"; sid:4049004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Heybro.hey.6634551b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Heybro.hey; content:"456"; sid:4049005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.d.d.4a01a7d0.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.d.d; content:"456"; sid:4049006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.e.e.2fee0483.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.e.e; content:"456"; sid:4049007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.f.f.95109868.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.f.f; content:"456"; sid:4049008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.g.g.cf5d80d9.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.g.g; content:"456"; sid:4049009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.h.h.86883930.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.h.h; content:"456"; sid:4049010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.i.i.ca2d8546.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.i.i; content:"456"; sid:4049011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.j.j.5e816e39.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.j.j; content:"456"; sid:4049012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.k.k.c8fc670e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.k.k; content:"456"; sid:4049013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.l.l.d1b98f7e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.l.l; content:"456"; sid:4049014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.m.m.5f9bd12f.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.m.m; content:"456"; sid:4049015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.n.n.7df75d1c.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.n.n; content:"456"; sid:4049016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.o.o.9c9070bb.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.DOS.Kondrik.o.o; content:"456"; sid:4049017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.JS.Astrology.ast.f8fe12c1.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.JS.Astrology.ast; content:"456"; sid:4049018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.JS.CoolNow.coo.b974199c.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.JS.CoolNow.coo; content:"456"; sid:4049019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.JS.Gigger.gig.afae28cc.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.JS.Gigger.gig; content:"456"; sid:4049020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.JS.Sigbug.b.b.8827c3bb.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.JS.Sigbug.b.b; content:"456"; sid:4049021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.JS.Sigbug.sig.5f855666.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.JS.Sigbug.sig; content:"456"; sid:4049022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.JS.Spth.Jsg.b.b.975019a2.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.JS.Spth.Jsg.b.b; content:"456"; sid:4049023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.JS.Spth.Jsg.c.c.5f4962a6.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.JS.Spth.Jsg.c.c; content:"456"; sid:4049024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.JS.Yama.yam.f1233115.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.JS.Yama.yam; content:"456"; sid:4049025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.MSWord.Bizon.biz.6100093b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.MSWord.Bizon.biz; content:"456"; sid:4049026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.MSWord.Macreg.mac.c747d0ed.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.MSWord.Macreg.mac; content:"456"; sid:4049027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.MSWord.Tenebris.ten.a6aebdfc.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.MSWord.Tenebris.ten; content:"456"; sid:4049028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.MSWord.Tijor.tij.3ae473ce.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.MSWord.Tijor.tij; content:"456"; sid:4049029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.MSWord.Turmol.doc.3b9cbb48.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.MSWord.Turmol.doc; content:"456"; sid:4049030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.MSWord.Xinap.xin.22b12289.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.MSWord.Xinap.xin; content:"456"; sid:4049031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.MSWord.ZWMVC.zwm.6cf6479f.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.MSWord.ZWMVC.zwm; content:"456"; sid:4049032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Apmas.apm.b35477e6.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Apmas.apm; content:"456"; sid:4049033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Brit.g.g.63217616.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Brit.g.g; content:"456"; sid:4049034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Brit.i.i.e1dd3520.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Brit.i.i; content:"456"; sid:4049035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Caser.cas.3e14c75b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Caser.cas; content:"456"; sid:4049036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.DDV.c.c.9b1b30a4.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.DDV.c.c; content:"456"; sid:4049037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Dagli.dag.774192de.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Dagli.dag; content:"456"; sid:4049038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Davinia.dav.ee28f7d0.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Davinia.dav; content:"456"; sid:4049039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Desin.des.2f846684.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Desin.des; content:"456"; sid:4049040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Draft.b.b.0571d54e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Draft.b.b; content:"456"; sid:4049041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Draft.dra.3d0ac91a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Draft.dra; content:"456"; sid:4049042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.DragonBall.dra.924d895c.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.DragonBall.dra; content:"456"; sid:4049043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Falckon.a.a.ef67a01b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Falckon.a.a; content:"456"; sid:4049044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Godzilla.god.b1fa0612.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Godzilla.god; content:"456"; sid:4049045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Granil.gra.1e0e08a2.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Granil.gra; content:"456"; sid:4049046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Hely.hel.56be140f.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Hely.hel; content:"456"; sid:4049047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Horid.hor.365887be.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Horid.hor; content:"456"; sid:4049048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Horty.b.b.b22f1e9a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Horty.b.b; content:"456"; sid:4049049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.ItPoem.itp.c1ebeaf3.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.ItPoem.itp; content:"456"; sid:4049050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Kivi.kiv.b84e6f52.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Kivi.kiv; content:"456"; sid:4049051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Linn.lin.95fc28e0.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Linn.lin; content:"456"; sid:4049052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Lipossa.a.a.fa7fcf99.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Lipossa.a.a; content:"456"; sid:4049053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Logic.b.b.01208271.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Logic.b.b; content:"456"; sid:4049054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Mantan.man.74c989a2.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Mantan.man; content:"456"; sid:4049055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Nemit.b.b.6c1ef977.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Nemit.b.b; content:"456"; sid:4049056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Numgame.num.d06636e3.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Numgame.num; content:"456"; sid:4049057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Pahi.a.a.93e30cc0.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Pahi.a.a; content:"456"; sid:4049058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Polsev.a.a.9c5e07c2.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Polsev.a.a; content:"456"; sid:4049059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Qoma.b.b.9b33ab9e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Qoma.b.b; content:"456"; sid:4049060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Qoma.c.c.597a6bfd.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Qoma.c.c; content:"456"; sid:4049061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Qoma.e.e.9d4cedb0.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Qoma.e.e; content:"456"; sid:4049062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Qoma.f.f.58dd01c1.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Qoma.f.f; content:"456"; sid:4049063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Razor.a.a.48860712.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Razor.a.a; content:"456"; sid:4049064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.SSIWG2.ssi.4b1e2c5a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.SSIWG2.ssi; content:"456"; sid:4049065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.SillyWorm.a.a.6b2487fc.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.SillyWorm.a.a; content:"456"; sid:4049066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Tireg.a.a.0496f87f.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Tireg.a.a; content:"456"; sid:4049067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Uaper.a.a.0d969225.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Uaper.a.a; content:"456"; sid:4049068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Uaper.b.b.bd06afea.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Uaper.b.b; content:"456"; sid:4049069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.VBSWG.aa.aa.292c4794.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.VBSWG.aa.aa; content:"456"; sid:4049070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Yang.yan.afc8fa31.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Yang.yan; content:"456"; sid:4049071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Ypsan.b.b.12592fae.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Ypsan.b.b; content:"456"; sid:4049072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Zheng.zhe.f86d6485.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Zheng.zhe; content:"456"; sid:4049073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Zimac.zim.ca0e8fde.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Zimac.zim; content:"456"; sid:4049074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.VBS.Zuoning.zuo.4f600be9.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.VBS.Zuoning.zuo; content:"456"; sid:4049075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Abotus.abo.fe02a495.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Abotus.abo; content:"456"; sid:4049076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Actem.act.0355dcc9.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Actem.act; content:"456"; sid:4049077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Ainjo.d.d.1e8fb563.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Ainjo.d.d; content:"456"; sid:4049078; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Alcaul.ah.ah.22977b85.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Alcaul.ah.ah; content:"456"; sid:4049079; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Alcaul.ak.ak.be817e4a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Alcaul.ak.ak; content:"456"; sid:4049080; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Alcaul.b.b.eec5778a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Alcaul.b.b; content:"456"; sid:4049081; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Anap.b.b.19bd1bec.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Anap.b.b; content:"456"; sid:4049082; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Anar.b.b.9ace2649.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Anar.b.b; content:"456"; sid:4049083; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Anel.ane.bfdb80c8.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Anel.ane; content:"456"; sid:4049084; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Apbost.h.h.9be8a527.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Apbost.h.h; content:"456"; sid:4049085; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Assarm.ass.e3e151ac.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Assarm.ass; content:"456"; sid:4049086; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Avron.b.b.c80e8ea9.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Avron.b.b; content:"456"; sid:4049087; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Avron.e.e.2f9165c9.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Avron.e.e; content:"456"; sid:4049088; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Banof.ban.00cf080a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Banof.ban; content:"456"; sid:4049089; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Bater.a.exe.c0d5abbe.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Bater.a.exe; content:"456"; sid:4049090; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Bridex.b.b.7bfc3642.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Bridex.b.b; content:"456"; sid:4049091; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Buzill.a.a.abb60ef5.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Buzill.a.a; content:"456"; sid:4049092; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Buzill.b.b.64407db1.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Buzill.b.b; content:"456"; sid:4049093; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Calgary.b.b.b311f402.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Calgary.b.b; content:"456"; sid:4049094; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Calgary.c.c.9661abf8.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Calgary.c.c; content:"456"; sid:4049095; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Cazinat.a.a.15cd1169.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Cazinat.a.a; content:"456"; sid:4049096; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Celebit.c.c.cdac47ac.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Celebit.c.c; content:"456"; sid:4049097; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Centar.j.j.4e489950.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Centar.j.j; content:"456"; sid:4049098; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Centar.k.k.681a08e6.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Centar.k.k; content:"456"; sid:4049099; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Chet.a.a.db7b0b9e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Chet.a.a; content:"456"; sid:4049100; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Ciosor.cio.ab0647ba.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Ciosor.cio; content:"456"; sid:4049101; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Coronex.a.a.0bb8c80d.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Coronex.a.a; content:"456"; sid:4049102; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Creepy.b.b.59d8562d.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Creepy.b.b; content:"456"; sid:4049103; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Deberia.deb.9e60ebcb.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Deberia.deb; content:"456"; sid:4049104; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Delf.d.d.632e8282.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Delf.d.d; content:"456"; sid:4049105; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Desos.a.a.e84ab293.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Desos.a.a; content:"456"; sid:4049106; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Desos.b.b.5cef527d.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Desos.b.b; content:"456"; sid:4049107; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Duksten.c.c.6c18f8aa.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Duksten.c.c; content:"456"; sid:4049108; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Dumaru.e.e.7c5b9ad2.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Dumaru.e.e; content:"456"; sid:4049109; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Dumaru.p.p.7a645ce9.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Dumaru.p.p; content:"456"; sid:4049110; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Ecopic.eco.add7ad76.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Ecopic.eco; content:"456"; sid:4049111; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Energy.d.d.26a3ca35.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Energy.d.d; content:"456"; sid:4049112; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Energy.g.g.655b604b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Energy.g.g; content:"456"; sid:4049113; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Entangle.ent.911e5ba3.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Entangle.ent; content:"456"; sid:4049114; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Fagled.fag.10054a7d.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Fagled.fag; content:"456"; sid:4049115; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Finaldo.b.b.a44e6de4.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Finaldo.b.b; content:"456"; sid:4049116; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Fintas.b.b.42b1eb95.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Fintas.b.b; content:"456"; sid:4049117; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Fintas.c.c.6f3c6e4f.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Fintas.c.c; content:"456"; sid:4049118; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.FreeTrip.d.d.2a8a6ecc.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.FreeTrip.d.d; content:"456"; sid:4049119; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Frethem.a.a.043145c9.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Frethem.a.a; content:"456"; sid:4049120; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Gain.gai.970a06be.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Gain.gai; content:"456"; sid:4049121; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Goround.gor.20a2a423.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Goround.gor; content:"456"; sid:4049122; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Heads.hea.971ee13b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Heads.hea; content:"456"; sid:4049123; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Heffer.a.a.73c0fd80.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Heffer.a.a; content:"456"; sid:4049124; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Heffer.d.d.fbff8e90.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Heffer.d.d; content:"456"; sid:4049125; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Hermon.her.8da91e09.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Hermon.her; content:"456"; sid:4049126; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Hobex.hob.6490b29e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Hobex.hob; content:"456"; sid:4049127; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Hopalon.b.b.836e1cd6.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Hopalon.b.b; content:"456"; sid:4049128; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Hunch.a.a.333bd791.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Hunch.a.a; content:"456"; sid:4049129; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Hunch.b.b.819bfb77.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Hunch.b.b; content:"456"; sid:4049130; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Hunch.c.c.4fc73573.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Hunch.c.c; content:"456"; sid:4049131; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Jantic.jan.5fd9740a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Jantic.jan; content:"456"; sid:4049132; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Jubon.a.a.2817c402.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Jubon.a.a; content:"456"; sid:4049133; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Kazus.b.b.ed651d65.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Kazus.b.b; content:"456"; sid:4049134; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Kelino.b.b.6389436e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Kelino.b.b; content:"456"; sid:4049135; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Kelino.g.g.a629d04d.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Kelino.g.g; content:"456"; sid:4049136; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Kelino.l.l.5465177d.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Kelino.l.l; content:"456"; sid:4049137; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Kitro.g1.g1.eb131252.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Kitro.g1.g1; content:"456"; sid:4049138; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Klexe.kle.fa4a807c.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Klexe.kle; content:"456"; sid:4049139; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Lafon.d.d.1080bf86.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Lafon.d.d; content:"456"; sid:4049140; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Lamado.lam.fe71b49a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Lamado.lam; content:"456"; sid:4049141; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Langex.lan.a21f458d.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Langex.lan; content:"456"; sid:4049142; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Lentin.b.b.3b0b3d1f.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Lentin.b.b; content:"456"; sid:4049143; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Lindodia.lin.9796500e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Lindodia.lin; content:"456"; sid:4049144; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Logex.log.d54f0bf7.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Logex.log; content:"456"; sid:4049145; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Maldal.a.a.cbcd34a2.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Maldal.a.a; content:"456"; sid:4049146; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Maldal.b.b.2a0b92da.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Maldal.b.b; content:"456"; sid:4049147; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Maldal.mal.24b79b36.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Maldal.mal; content:"456"; sid:4049148; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Manymize.man.5e26c953.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Manymize.man; content:"456"; sid:4049149; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Manyx.man.8adcd31a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Manyx.man; content:"456"; sid:4049150; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Mari.c.c.be0d3918.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Mari.c.c; content:"456"; sid:4049151; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Matcher.mat.2eb06e18.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Matcher.mat; content:"456"; sid:4049152; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Menace.men.8de2cf46.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Menace.men; content:"456"; sid:4049153; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Menger.men.c9de93a6.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Menger.men; content:"456"; sid:4049154; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Merkur.a.frm.81ee1128.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Merkur.a.frm; content:"456"; sid:4049155; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Merkur.b.b.13a37ee0.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Merkur.b.b; content:"456"; sid:4049156; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Mimail.k.k.290995b4.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Mimail.k.k; content:"456"; sid:4049157; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Morbex.mor.c5496dd6.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Morbex.mor; content:"456"; sid:4049158; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.MsWorld.msw.7bd8a009.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.MsWorld.msw; content:"456"; sid:4049159; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.MyPics.k.k.d669f879.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.MyPics.k.k; content:"456"; sid:4049160; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Mylife.h.h.fa93efd3.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Mylife.h.h; content:"456"; sid:4049161; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Neight.nei.f2f85781.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Neight.nei; content:"456"; sid:4049162; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Netav.b.b.7ecd458b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Netav.b.b; content:"456"; sid:4049163; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Neton.net.022d587f.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Neton.net; content:"456"; sid:4049164; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Newapt.f.f.03ab6973.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Newapt.f.f; content:"456"; sid:4049165; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Newpic.c.c.22d01826.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Newpic.c.c; content:"456"; sid:4049166; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Nihilit.h.h.c17513bd.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Nihilit.h.h; content:"456"; sid:4049167; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Nihilit.i.i.b1983ab0.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Nihilit.i.i; content:"456"; sid:4049168; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Nihilit.k.k.50cff8c9.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Nihilit.k.k; content:"456"; sid:4049169; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Nihilit.nih.3b31cc70.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Nihilit.nih; content:"456"; sid:4049170; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Nihilit.q.q.a9548bb5.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Nihilit.q.q; content:"456"; sid:4049171; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Nimrod.a.a.5ca2b790.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Nimrod.a.a; content:"456"; sid:4049172; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Nocana.d.d.e4e7fcbe.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Nocana.d.d; content:"456"; sid:4049173; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Nohoper.64043.640.7268bf4d.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Nohoper.64043.640; content:"456"; sid:4049174; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Nohoper.64481.644.2d1cda79.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Nohoper.64481.644; content:"456"; sid:4049175; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Nohoper.7342.734.966bcb52.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Nohoper.7342.734; content:"456"; sid:4049176; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Paukor.a.a.87748874.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Paukor.a.a; content:"456"; sid:4049177; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Paukor.b.b.7629f68e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Paukor.b.b; content:"456"; sid:4049178; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Pereban.b.b.336b2f0f.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Pereban.b.b; content:"456"; sid:4049179; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Plemood.ple.d31fbdcc.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Plemood.ple; content:"456"; sid:4049180; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Povgon.b.b.7ca80937.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Povgon.b.b; content:"456"; sid:4049181; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Predec.b.b.df178921.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Predec.b.b; content:"456"; sid:4049182; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Predec.c.c.b0db94c1.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Predec.c.c; content:"456"; sid:4049183; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Predec.d.d.6b604fce.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Predec.d.d; content:"456"; sid:4049184; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Predec.e.e.4f874b0b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Predec.e.e; content:"456"; sid:4049185; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Predec.f.f.ef9cba45.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Predec.f.f; content:"456"; sid:4049186; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Predec.g.g.49ca4c9a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Predec.g.g; content:"456"; sid:4049187; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Predec.h.h.ff761bbc.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Predec.h.h; content:"456"; sid:4049188; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Predec.i.i.58c6c324.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Predec.i.i; content:"456"; sid:4049189; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Predec.j.j.a304cdfd.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Predec.j.j; content:"456"; sid:4049190; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Quamo.qua.a1f72232.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Quamo.qua; content:"456"; sid:4049191; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Radix.c.c.ca183ad2.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Radix.c.c; content:"456"; sid:4049192; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Radix.d.d.594df4aa.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Radix.d.d; content:"456"; sid:4049193; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Roaller.roa.310db78b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Roaller.roa; content:"456"; sid:4049194; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Sandra.san.9b897efa.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Sandra.san; content:"456"; sid:4049195; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Scorpion.sco.1d57149c.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Scorpion.sco; content:"456"; sid:4049196; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Shatrix.sha.f65d8ab1.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Shatrix.sha; content:"456"; sid:4049197; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Shuq.e.e.a7b6351e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Shuq.e.e; content:"456"; sid:4049198; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Silly.a.a.d105fadd.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Silly.a.a; content:"456"; sid:4049199; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Silly.b.b.763748e3.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Silly.b.b; content:"456"; sid:4049200; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Silly.d.exe.582da284.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Silly.d.exe; content:"456"; sid:4049201; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Snapper.sna.f5b5592a.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Snapper.sna; content:"456"; sid:4049202; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Stator.b.b.7481b1a2.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Stator.b.b; content:"456"; sid:4049203; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Stepaik.c.c.c4fae069.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Stepaik.c.c; content:"456"; sid:4049204; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Stina.sti.3d6294c8.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Stina.sti; content:"456"; sid:4049205; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Sucon.c.c.6c4eac16.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Sucon.c.c; content:"456"; sid:4049206; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Suppl.sup.ac725bab.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Suppl.sup; content:"456"; sid:4049207; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Taripox.b.b.a2243e18.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Taripox.b.b; content:"456"; sid:4049208; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Tempex.tem.be3e41bf.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Tempex.tem; content:"456"; sid:4049209; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Trilissa.h.h.fb6e7488.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Trilissa.h.h; content:"456"; sid:4049210; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Unis.c.c.71117908.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Unis.c.c; content:"456"; sid:4049211; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Updater.e.e.b1cafbf0.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Updater.e.e; content:"456"; sid:4049212; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Updater.f.f.94148e69.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Updater.f.f; content:"456"; sid:4049213; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Urbe.b.b.e62e5ce6.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Urbe.b.b; content:"456"; sid:4049214; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Urbe.c.c.93296357.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Urbe.c.c; content:"456"; sid:4049215; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.VB.a.a.8a636888.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.VB.a.a; content:"456"; sid:4049216; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.VB.h.h.dcd7089c.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.VB.h.h; content:"456"; sid:4049217; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Viled.a.a.138119b5.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Viled.a.a; content:"456"; sid:4049218; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Viled.vil.e1b7d861.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Viled.vil; content:"456"; sid:4049219; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Waber.wab.b3d31831.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Waber.wab; content:"456"; sid:4049220; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Wideman.8135.a.a.d4370120.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Wideman.8135.a.a; content:"456"; sid:4049221; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Wideman.8135.b.b.99519cea.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Wideman.8135.b.b; content:"456"; sid:4049222; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Winext.a.a.63882596.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Winext.a.a; content:"456"; sid:4049223; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Xanax.c.c.d28f7d63.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Xanax.c.c; content:"456"; sid:4049224; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Xanax.d.d.4d60863c.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Xanax.d.d; content:"456"; sid:4049225; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Xanax.e.e.02506b10.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Xanax.e.e; content:"456"; sid:4049226; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Xanax.f.f.c444552e.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Xanax.f.f; content:"456"; sid:4049227; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Yarner.a.a.64218ac8.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Yarner.a.a; content:"456"; sid:4049228; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Yever.a.a.ca63f7dd.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Yever.a.a; content:"456"; sid:4049229; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Youzer.you.a489c2bd.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Youzer.you; content:"456"; sid:4049230; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Yoyks.b.b.ddfee83b.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Yoyks.b.b; content:"456"; sid:4049231; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.ZippedFiles.c.c.055fcccc.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.ZippedFiles.c.c; content:"456"; sid:4049232; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.ZippedFiles.d.d.884b68d5.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.ZippedFiles.d.d; content:"456"; sid:4049233; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Zircon.a.a.708ea6e7.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Zircon.a.a; content:"456"; sid:4049234; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Zircon.e.e.30c5e0b4.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Zircon.e.e; content:"456"; sid:4049235; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Zoek.a.a.346c2d02.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Zoek.a.a; content:"456"; sid:4049236; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Zoek.dll.dll.3c584e88.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Zoek.dll.dll; content:"456"; sid:4049237; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.Win32.Zokrim.c.c.03063822.xml
+alert TCP any any -> any any (msg:Email Virus Email-Worm.Win32.Zokrim.c.c; content:"456"; sid:4049238; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.Fix2001.d2a5f4b7.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Fix2001; content:"456"; sid:4049239; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.Gift.Anap.038c9db8.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap; content:"456"; sid:4049240; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.Gift.Anap.a6f5addf.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap; content:"456"; sid:4049241; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.MP.Virus.52040688.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.MP.Virus; content:"456"; sid:4049242; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Newapt.IWorm.151af978.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4049243; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Newapt.IWorm.6a96c7fc.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4049244; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Newapt.IWorm.8d8d94a1.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4049245; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Newapt.IWorm.8eb51ea1.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4049246; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Newapt.IWorm.a274ae97.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4049247; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Suppl.Worm_1.7ec3bc06.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Suppl.Worm_#1; content:"456"; sid:4049248; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Worm.Navidad.3d315a99.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Worm.Navidad; content:"456"; sid:4049249; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.IWorm.Lee.I.5ae2dc1b.xml
+alert TCP any any -> any any (msg:Email Virus VBS.IWorm.Lee.I; content:"456"; sid:4049250; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.PicaWorm.B.d18f2497.xml
+alert TCP any any -> any any (msg:Email Virus VBS.PicaWorm.B; content:"456"; sid:4049251; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.PicaWorm.C4.2b125d4f.xml
+alert TCP any any -> any any (msg:Email Virus VBS.PicaWorm.C4; content:"456"; sid:4049252; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.PicaWorm.D.0e882bb7.xml
+alert TCP any any -> any any (msg:Email Virus VBS.PicaWorm.D; content:"456"; sid:4049253; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.PicaWorm.I.c5fe22de.xml
+alert TCP any any -> any any (msg:Email Virus VBS.PicaWorm.I; content:"456"; sid:4049254; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.PicaWorm.M.d93a6fa8.xml
+alert TCP any any -> any any (msg:Email Virus VBS.PicaWorm.M; content:"456"; sid:4049255; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#W32.BadassWorm.af3d7ff4.xml
+alert TCP any any -> any any (msg:Email Virus W32.BadassWorm; content:"456"; sid:4049256; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#W32.IWorm.Haiku.bc41f463.xml
+alert TCP any any -> any any (msg:Email Virus W32.IWorm.Haiku; content:"456"; sid:4049257; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#W32.Worm.Brid.6b58f116.xml
+alert TCP any any -> any any (msg:Email Virus W32.Worm.Brid; content:"456"; sid:4049258; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#W32.Worm.Choke.68b13c38.xml
+alert TCP any any -> any any (msg:Email Virus W32.Worm.Choke; content:"456"; sid:4049259; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#W32.Worm.Choke.b14bacd6.xml
+alert TCP any any -> any any (msg:Email Virus W32.Worm.Choke; content:"456"; sid:4049260; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#W32.Worm.Choke.ddff1350.xml
+alert TCP any any -> any any (msg:Email Virus W32.Worm.Choke; content:"456"; sid:4049261; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#W32.Worm.Choke.eafe6fd6.xml
+alert TCP any any -> any any (msg:Email Virus W32.Worm.Choke; content:"456"; sid:4049262; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#W32.Worm.Hoko.faa0aad3.xml
+alert TCP any any -> any any (msg:Email Virus W32.Worm.Hoko; content:"456"; sid:4049263; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#W32.Worm.Winevar.e79d0b1a.xml
+alert TCP any any -> any any (msg:Email Virus W32.Worm.Winevar; content:"456"; sid:4049264; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#WORM.Music.1bb12d29.xml
+alert TCP any any -> any any (msg:Email Virus WORM.Music; content:"456"; sid:4049265; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#WORM.TheFly.402d5086.xml
+alert TCP any any -> any any (msg:Email Virus WORM.TheFly; content:"456"; sid:4049266; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.3D-Stars.1.d7387686.xml
+alert TCP any any -> any any (msg:Email Virus Worm.3D-Stars.1; content:"456"; sid:4049267; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.ASP.Paq.A.0ab6eca5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.ASP.Paq.A; content:"456"; sid:4049268; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Agist.A.9377eb52.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Agist.A; content:"456"; sid:4049269; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Alcaul.M1.46f4becc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Alcaul.M1; content:"456"; sid:4049270; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Alcaul.O.c882635e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Alcaul.O; content:"456"; sid:4049271; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Alcaul.t.084d8243.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Alcaul.t; content:"456"; sid:4049272; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Alcaul.v.922f647d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Alcaul.v; content:"456"; sid:4049273; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Alcobul.b.7336765d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Alcobul.b; content:"456"; sid:4049274; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Alcop.Gen.3.6dbdb716.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Alcop.Gen.3; content:"456"; sid:4049275; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Alcop.Gen.3.8fc6b90c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Alcop.Gen.3; content:"456"; sid:4049276; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Alcop.Gen.3.b1ed76c6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Alcop.Gen.3; content:"456"; sid:4049277; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Alcop.Gen.3.d123b9ac.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Alcop.Gen.3; content:"456"; sid:4049278; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Alcop.Gen.3.feb481a8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Alcop.Gen.3; content:"456"; sid:4049279; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Aleat.3.4b578d00.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Aleat.3; content:"456"; sid:4049280; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Along.3689e77a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Along; content:"456"; sid:4049281; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Anar.A.c3993c02.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Anar.A; content:"456"; sid:4049282; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Anset.A.f3aeaa6a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Anset.A; content:"456"; sid:4049283; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Anset.B.2cccfcd5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Anset.B; content:"456"; sid:4049284; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Antiax.8dfb3a3b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Antiax; content:"456"; sid:4049285; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Antites.cd15440a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Antites; content:"456"; sid:4049286; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Apost.A.946f4b65.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Apost.A; content:"456"; sid:4049287; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Arica.b.1165e819.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Arica.b; content:"456"; sid:4049288; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Arica.d91178df.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Arica; content:"456"; sid:4049289; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Avoner.A.3354ef97.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Avoner.A; content:"456"; sid:4049290; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Axam.b.1f1f49c4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Axam.b; content:"456"; sid:4049291; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Axam.d644fe97.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Axam; content:"456"; sid:4049292; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Azag.A.b8c4adfa.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Azag.A; content:"456"; sid:4049293; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.BAT.FLove.ed38bbd9.xml
+alert TCP any any -> any any (msg:Email Virus Worm.BAT.FLove; content:"456"; sid:4049294; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.BAT.Ioana.A.e951c265.xml
+alert TCP any any -> any any (msg:Email Virus Worm.BAT.Ioana.A; content:"456"; sid:4049295; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.BWG.A.e70e9df8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.BWG.A; content:"456"; sid:4049296; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.BWG.C.2e728958.xml
+alert TCP any any -> any any (msg:Email Virus Worm.BWG.C; content:"456"; sid:4049297; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Baatezu.2820d151.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Baatezu; content:"456"; sid:4049298; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.BadTrans.1.39c85a0d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.BadTrans.1; content:"456"; sid:4049299; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.BadTrans.B1.0bf5eaee.xml
+alert TCP any any -> any any (msg:Email Virus Worm.BadTrans.B1; content:"456"; sid:4049300; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AC.d7df9ba6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AC; content:"456"; sid:4049301; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AE.62035831.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AE; content:"456"; sid:4049302; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AF.1d9b5f7c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AF; content:"456"; sid:4049303; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.08c05361.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049304; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.0c8e034e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049305; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.239644e3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049306; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.333fd91e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049307; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.45c947ac.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049308; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.680d191a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049309; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.72fff9ae.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049310; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.82e8971d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049311; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.88a13860.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049312; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.95ef42bd.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049313; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.a053ab02.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049314; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.aeacf455.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049315; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.d060da6a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049316; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.e4e7d15d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049317; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.eab0f022.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049318; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.2.f98ebfc2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG.2; content:"456"; sid:4049319; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.8b4e37d5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG; content:"456"; sid:4049320; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AG.d02de7ae.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AG; content:"456"; sid:4049321; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AI.dc44c93d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AI; content:"456"; sid:4049322; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AP.f7882c8d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AP; content:"456"; sid:4049323; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AT.13497c6e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AT; content:"456"; sid:4049324; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.AU.6e96df83.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.AU; content:"456"; sid:4049325; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.BA-RAR.179ffe50.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.BA-RAR; content:"456"; sid:4049326; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.BB-gen.3710e115.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.BB-gen; content:"456"; sid:4049327; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.BB-gen.4a42956f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.BB-gen; content:"456"; sid:4049328; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.BB-gen.b05d6259.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.BB-gen; content:"456"; sid:4049329; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.BB-gen.c09b69a2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.BB-gen; content:"456"; sid:4049330; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.BY-2.57f4aa23.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.BY-2; content:"456"; sid:4049331; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.D-dll.a0c9ed58.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.D-dll; content:"456"; sid:4049332; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.F.bb364cd2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.F; content:"456"; sid:4049333; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-1.58f05e95.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-1; content:"456"; sid:4049334; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-dll.c0bf8276.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-dll; content:"456"; sid:4049335; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-dll.e65d7ab6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-dll; content:"456"; sid:4049336; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-vbs.6c6238ce.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-vbs; content:"456"; sid:4049337; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-zippwd.09116bae.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-zippwd; content:"456"; sid:4049338; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-zippwd.470bb58a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-zippwd; content:"456"; sid:4049339; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-zippwd.4977a287.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-zippwd; content:"456"; sid:4049340; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-zippwd.52b01701.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-zippwd; content:"456"; sid:4049341; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-zippwd.54d70e5b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-zippwd; content:"456"; sid:4049342; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-zippwd.a3730f2b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-zippwd; content:"456"; sid:4049343; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-zippwd.b5b92d0a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-zippwd; content:"456"; sid:4049344; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-zippwd.f298be77.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-zippwd; content:"456"; sid:4049345; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Gen-zippwd.f7ad7737.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Gen-zippwd; content:"456"; sid:4049346; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.H.b1aac76f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.H; content:"456"; sid:4049347; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.I.0f00a007.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.I; content:"456"; sid:4049348; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.N.895d5751.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.N; content:"456"; sid:4049349; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.P.75c2df98.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.P; content:"456"; sid:4049350; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Q.ef57933f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Q; content:"456"; sid:4049351; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Z.853d9d8f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Z; content:"456"; sid:4049352; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Z.dd3da05f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Z; content:"456"; sid:4049353; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.Z.e9baa7ed.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.Z; content:"456"; sid:4049354; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bagle.src.bf63ff3a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bagle.src; content:"456"; sid:4049355; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bajar.B.36d2683e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bajar.B; content:"456"; sid:4049356; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bajar.C.9a403d20.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bajar.C; content:"456"; sid:4049357; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Batwin.5cfaa0bf.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Batwin; content:"456"; sid:4049358; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Batzback.c.1b9eb196.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Batzback.c; content:"456"; sid:4049359; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bindal.a.ebf478d4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bindal.a; content:"456"; sid:4049360; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.BleBla.A.3c75b73b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.BleBla.A; content:"456"; sid:4049361; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Borzella.defd1398.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Borzella; content:"456"; sid:4049362; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Breberka.77f8c8b1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Breberka; content:"456"; sid:4049363; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Brit.B.75e88297.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Brit.B; content:"456"; sid:4049364; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Brit.B.997f3291.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Brit.B; content:"456"; sid:4049365; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Brit.D1.42080bde.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Brit.D1; content:"456"; sid:4049366; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Brit.E.3033d2e9.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Brit.E; content:"456"; sid:4049367; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Brit.f.f1a8c3a4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Brit.f; content:"456"; sid:4049368; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Brit.h.863c53a5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Brit.h; content:"456"; sid:4049369; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.BritneyPic.1.abd315d3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.BritneyPic.1; content:"456"; sid:4049370; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.BubbleBoy.msg.bb7b91d1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.BubbleBoy.msg; content:"456"; sid:4049371; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.BugBear.B.c5592458.xml
+alert TCP any any -> any any (msg:Email Virus Worm.BugBear.B; content:"456"; sid:4049372; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Bumdoc.1.8fd4eeb1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Bumdoc.1; content:"456"; sid:4049373; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Calhob.A.d1a46e8d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Calhob.A; content:"456"; sid:4049374; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Calposa.492cb47d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Calposa; content:"456"; sid:4049375; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Centar.A.35a0c808.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Centar.A; content:"456"; sid:4049376; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Challenge.f95b1ad3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Challenge; content:"456"; sid:4049377; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Choke.1.484e156c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Choke.1; content:"456"; sid:4049378; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Choke.1.ed9a8cd4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Choke.1; content:"456"; sid:4049379; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Chu.1.de34d735.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Chu.1; content:"456"; sid:4049380; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Claus.88952561.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Claus; content:"456"; sid:4049381; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Clown.a.702524dd.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Clown.a; content:"456"; sid:4049382; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Clown.a.c560bbd3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Clown.a; content:"456"; sid:4049383; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Clown.a.f46ae1f9.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Clown.a; content:"456"; sid:4049384; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Corad.6e2fb08c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Corad; content:"456"; sid:4049385; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Cosol.A.a3633ab0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Cosol.A; content:"456"; sid:4049386; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Cowpox.f9744915.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Cowpox; content:"456"; sid:4049387; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Craytron.3b9695f2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Craytron; content:"456"; sid:4049388; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Crist.A.68e77e71.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Crist.A; content:"456"; sid:4049389; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Cuerto.53f9d81f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Cuerto; content:"456"; sid:4049390; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Dblue.2.5fe86b52.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Dblue.2; content:"456"; sid:4049391; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Delta.A.f0ed4e5b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Delta.A; content:"456"; sid:4049392; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Desor.1b17ce5b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Desor; content:"456"; sid:4049393; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Doday.c6be62c1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Doday; content:"456"; sid:4049394; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Doggy.5e3c01ee.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Doggy; content:"456"; sid:4049395; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Dracv.2.b35c3c00.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Dracv.2; content:"456"; sid:4049396; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Drefir.C.9594702d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Drefir.C; content:"456"; sid:4049397; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Drink.1.0127c451.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Drink.1; content:"456"; sid:4049398; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Dumaru.A.66ca6fb3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Dumaru.A; content:"456"; sid:4049399; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Dumb.2.797810f9.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Dumb.2; content:"456"; sid:4049400; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Energy.27def401.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Energy; content:"456"; sid:4049401; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Energy.B.aaa73660.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Energy.B; content:"456"; sid:4049402; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Energy.C.d71b2d51.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Energy.C; content:"456"; sid:4049403; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Energy.E.d377a5dd.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Energy.E; content:"456"; sid:4049404; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Enviar.7e2f37ef.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Enviar; content:"456"; sid:4049405; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Eversaw.ce9f6729.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Eversaw; content:"456"; sid:4049406; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Fakenap.B.ca637c0c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Fakenap.B; content:"456"; sid:4049407; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Famster.c7a088c2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Famster; content:"456"; sid:4049408; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Fanker.16d945b2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Fanker; content:"456"; sid:4049409; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Fbound.C.08c40dc6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Fbound.C; content:"456"; sid:4049410; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Fbound.C.638e2c92.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Fbound.C; content:"456"; sid:4049411; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Fbound.C.d1b4f623.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Fbound.C; content:"456"; sid:4049412; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Fintas.D.69ab5282.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Fintas.D; content:"456"; sid:4049413; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Fintas.a.a503f729.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Fintas.a; content:"456"; sid:4049414; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Fizzer.A.a89c0ed6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Fizzer.A; content:"456"; sid:4049415; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.FlyingV.A.1.42f6071b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.FlyingV.A.1; content:"456"; sid:4049416; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Forgotten.5d5a377d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Forgotten; content:"456"; sid:4049417; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.FreeLove.5a482d04.xml
+alert TCP any any -> any any (msg:Email Virus Worm.FreeLove; content:"456"; sid:4049418; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Frethem.d.bb68fe35.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Frethem.d; content:"456"; sid:4049419; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Funny.6dc98b4d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Funny; content:"456"; sid:4049420; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Funny.8a0f69cb.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Funny; content:"456"; sid:4049421; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.FunnyPics.ce281ff3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.FunnyPics; content:"456"; sid:4049422; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Futonik.11b9bdcf.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Futonik; content:"456"; sid:4049423; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Futonik.9a4a8754.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Futonik; content:"456"; sid:4049424; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.GOP.A.44882f5b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.GOP.A; content:"456"; sid:4049425; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gaggl.690a27dd.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gaggl; content:"456"; sid:4049426; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gaggl.D.97d9f0fc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gaggl.D; content:"456"; sid:4049427; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gaggl.acaee15d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gaggl; content:"456"; sid:4049428; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gaggl.b552e8e4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gaggl; content:"456"; sid:4049429; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Ganda-A.c1e17ccf.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Ganda-A; content:"456"; sid:4049430; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gibe.1.9fa3a173.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gibe.1; content:"456"; sid:4049431; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gibe.B.4613a17f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gibe.B; content:"456"; sid:4049432; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gibe.B.bcde20ab.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gibe.B; content:"456"; sid:4049433; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gibe.B.e932f86f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gibe.B; content:"456"; sid:4049434; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gibe.F.b09e26c2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gibe.F; content:"456"; sid:4049435; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gift.B.d6dd0e68.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gift.B; content:"456"; sid:4049436; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.20650c59.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049437; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.38a35577.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049438; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.41f04b64.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049439; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.5e0a9fe1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049440; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.8f940828.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049441; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.b273839d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049442; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.b647bbd3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049443; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.d14a5a2c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049444; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.dd8725c2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049445; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.ea4de788.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049446; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.ec7c4e01.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049447; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Godog.ef542e18.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Godog; content:"456"; sid:4049448; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gong.4e56c693.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gong; content:"456"; sid:4049449; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Goofy.a440d4c7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Goofy; content:"456"; sid:4049450; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Greel.A.901f172b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Greel.A; content:"456"; sid:4049451; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Gruel.A.b0feccdd.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Gruel.A; content:"456"; sid:4049452; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Guorm.46042fdd.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Guorm; content:"456"; sid:4049453; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Hanged.490dbb43.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Hanged; content:"456"; sid:4049454; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.HappyTime.166ca5f7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.HappyTime; content:"456"; sid:4049455; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Hatred.b.055697d6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Hatred.b; content:"456"; sid:4049456; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Hatred.b.34775617.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Hatred.b; content:"456"; sid:4049457; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Hatred.b.e4b9069b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Hatred.b; content:"456"; sid:4049458; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Hatred.b.f08dd849.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Hatred.b; content:"456"; sid:4049459; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Hawawi.B.816028ed.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Hawawi.B; content:"456"; sid:4049460; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Headline.38c404b6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Headline; content:"456"; sid:4049461; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.01505ec7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049462; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.05cb6600.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049463; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.5fc5ceb0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049464; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.75355112.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049465; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.89031853.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049466; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.95bfa05c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049467; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.9a6ae361.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049468; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.b4cce11f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049469; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.c56e42a1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049470; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.d0f67ff1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049471; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heath.c.ecafc7fa.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heath.c; content:"456"; sid:4049472; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heather.3925747a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heather; content:"456"; sid:4049473; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heather.916b82bd.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heather; content:"456"; sid:4049474; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heather.b22c1405.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heather; content:"456"; sid:4049475; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Heyya.55051131.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Heyya; content:"456"; sid:4049476; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Hobat.A.0dd3ef0f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Hobat.A; content:"456"; sid:4049477; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Homepage.fbbfea3a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Homepage; content:"456"; sid:4049478; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Horty.A.dda67ba3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Horty.A; content:"456"; sid:4049479; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Hotlix.eeb26ae0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Hotlix; content:"456"; sid:4049480; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.IFeel.15ec2d19.xml
+alert TCP any any -> any any (msg:Email Virus Worm.IFeel; content:"456"; sid:4049481; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.IRC.Ainjo.A.88e00495.xml
+alert TCP any any -> any any (msg:Email Virus Worm.IRC.Ainjo.A; content:"456"; sid:4049482; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.IRC.Hetrad.06ad57e7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.IRC.Hetrad; content:"456"; sid:4049483; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.IRC.Sudal.d9c9826b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.IRC.Sudal; content:"456"; sid:4049484; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.IRCGen.YuS.2.299d0734.xml
+alert TCP any any -> any any (msg:Email Virus Worm.IRCGen.YuS.2; content:"456"; sid:4049485; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Icecubes.A.0556976e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Icecubes.A; content:"456"; sid:4049486; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Icecubes.B.6d957f8f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Icecubes.B; content:"456"; sid:4049487; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Indor.b.0c716b79.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Indor.b; content:"456"; sid:4049488; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Injust.2f9f8d89.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Injust; content:"456"; sid:4049489; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Invalid.fedd478c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Invalid; content:"456"; sid:4049490; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Iwing.b.d6de7cb9.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Iwing.b; content:"456"; sid:4049491; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.JS.Crus.7453d64c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.JS.Crus; content:"456"; sid:4049492; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Janu.662a8c1f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Janu; content:"456"; sid:4049493; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Jerm.a.07ccb143.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Jerm.a; content:"456"; sid:4049494; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Jerm.a.233665c4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Jerm.a; content:"456"; sid:4049495; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Jerm.c.bc74b5f2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Jerm.c; content:"456"; sid:4049496; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.JuneX.945a914e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.JuneX; content:"456"; sid:4049497; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Junkboat.a.5a0cd5c3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Junkboat.a; content:"456"; sid:4049498; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Junkboat.b.8ef82c44.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Junkboat.b; content:"456"; sid:4049499; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Kadra.154bf120.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Kadra; content:"456"; sid:4049500; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Kagra.ac087b23.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Kagra; content:"456"; sid:4049501; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.KakWorm.D.367615d2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.KakWorm.D; content:"456"; sid:4049502; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Kazus.2.b0a2473e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Kazus.2; content:"456"; sid:4049503; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Kelino.A.cd7cf3f0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Kelino.A; content:"456"; sid:4049504; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Kitro.E.16678a86.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Kitro.E; content:"456"; sid:4049505; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Klez.E.0990bc18.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Klez.E; content:"456"; sid:4049506; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Klez.E.160a2c19.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Klez.E; content:"456"; sid:4049507; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Klez.E.25ef8d05.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Klez.E; content:"456"; sid:4049508; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Klez.E.9138c146.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Klez.E; content:"456"; sid:4049509; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Klez.E.a7d6779c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Klez.E; content:"456"; sid:4049510; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Klez.E.ec1a90c3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Klez.E; content:"456"; sid:4049511; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Klez.E.f2db87b3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Klez.E; content:"456"; sid:4049512; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Klez.E.f4776425.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Klez.E; content:"456"; sid:4049513; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Klez.H.543c358d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Klez.H; content:"456"; sid:4049514; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Klez.H.74e3e172.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Klez.H; content:"456"; sid:4049515; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Kondrik.a.4df586c4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Kondrik.a; content:"456"; sid:4049516; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Kondrik.b.575c9073.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Kondrik.b; content:"456"; sid:4049517; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Kondrik.c.b53b531a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Kondrik.c; content:"456"; sid:4049518; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Kouds.9e3c3be6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Kouds; content:"456"; sid:4049519; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Krim.B.5de8ac8d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Krim.B; content:"456"; sid:4049520; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Kuasa.c15a7ae1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Kuasa; content:"456"; sid:4049521; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lacro.A.3f539f31.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lacro.A; content:"456"; sid:4049522; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lara.c949c3a2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lara; content:"456"; sid:4049523; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Largepile.fb31972b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Largepile; content:"456"; sid:4049524; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lassorm.06e877cf.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lassorm; content:"456"; sid:4049525; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LastWord.68929e28.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LastWord; content:"456"; sid:4049526; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lee.C.e2258b28.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lee.C; content:"456"; sid:4049527; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lee.K2.d3325123.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lee.K2; content:"456"; sid:4049528; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lee.L.7951d724.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lee.L; content:"456"; sid:4049529; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lee.ci.52b8f283.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lee.ci; content:"456"; sid:4049530; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lee.r.5213917c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lee.r; content:"456"; sid:4049531; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lee.r.558c0dc7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lee.r; content:"456"; sid:4049532; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lentin.I.d6e098e6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lentin.I; content:"456"; sid:4049533; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Ley.5796104f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Ley; content:"456"; sid:4049534; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Liberte.c2eba4b8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Liberte; content:"456"; sid:4049535; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Likun.b.1dd54d76.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Likun.b; content:"456"; sid:4049536; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Likun.b.86e1de0e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Likun.b; content:"456"; sid:4049537; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Likun.c.cc02d935.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Likun.c; content:"456"; sid:4049538; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Loding.b.5f196b52.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Loding.b; content:"456"; sid:4049539; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Loding.b.a4dc18d1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Loding.b; content:"456"; sid:4049540; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Logic.6582bb66.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Logic; content:"456"; sid:4049541; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lohack.B.50611798.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lohack.B; content:"456"; sid:4049542; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lohack.a.6f6de9e7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lohack.a; content:"456"; sid:4049543; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lohack.c.d1226adc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lohack.c; content:"456"; sid:4049544; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Longbe.A.4dc49e97.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Longbe.A; content:"456"; sid:4049545; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lorda.64b1e500.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lorda; content:"456"; sid:4049546; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lorda.7d2654a6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lorda; content:"456"; sid:4049547; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lorda.d77119bc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lorda; content:"456"; sid:4049548; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lorena.b.e437aa72.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lorena.b; content:"456"; sid:4049549; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LostGame.2849aeb5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LostGame; content:"456"; sid:4049550; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.22f21bd1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter; content:"456"; sid:4049551; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.AJ.fd34b68a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.AJ; content:"456"; sid:4049552; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.AM.87993159.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.AM; content:"456"; sid:4049553; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.AV.fb898bd3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.AV; content:"456"; sid:4049554; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.BB.b2cda449.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.BB; content:"456"; sid:4049555; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.BD.7e8a6fca.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.BD; content:"456"; sid:4049556; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.BI.aef7e1c1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.BI; content:"456"; sid:4049557; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.BK.252665b8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.BK; content:"456"; sid:4049558; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.BK.3879d6af.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.BK; content:"456"; sid:4049559; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.BK.461a2642.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.BK; content:"456"; sid:4049560; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.BK.c1d89319.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.BK; content:"456"; sid:4049561; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.BL.2337a6cc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.BL; content:"456"; sid:4049562; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.BR.dd079200.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.BR; content:"456"; sid:4049563; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.DG.837708e2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.DG; content:"456"; sid:4049564; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.DK.086805a8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.DK; content:"456"; sid:4049565; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.LoveLetter.Y.23cd4244.xml
+alert TCP any any -> any any (msg:Email Virus Worm.LoveLetter.Y; content:"456"; sid:4049566; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lovelorn.2.82eee862.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lovelorn.2; content:"456"; sid:4049567; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lovgate.AD.c9ac8641.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lovgate.AD; content:"456"; sid:4049568; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lovgate.AE.e64547e9.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lovgate.AE; content:"456"; sid:4049569; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lovgate.AH.e62f2456.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lovgate.AH; content:"456"; sid:4049570; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lovgate.N.f56cef0f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lovgate.N; content:"456"; sid:4049571; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lovgate.O.2.0a65e532.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lovgate.O.2; content:"456"; sid:4049572; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lovgate.S.809c50d2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lovgate.S; content:"456"; sid:4049573; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lovgate.T.0a5859ef.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lovgate.T; content:"456"; sid:4049574; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lovgate.X.6506075d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lovgate.X; content:"456"; sid:4049575; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lovgate.Y.068ab7af.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lovgate.Y; content:"456"; sid:4049576; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lucky.B.434b21e6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lucky.B; content:"456"; sid:4049577; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Luna.B.1d4d25a1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Luna.B; content:"456"; sid:4049578; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Luna.B.d7a5f426.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Luna.B; content:"456"; sid:4049579; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Luna.C.d4784029.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Luna.C; content:"456"; sid:4049580; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Lynder.b9fb4176.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Lynder; content:"456"; sid:4049581; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MTX.plugin.Trojan.533fe353.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4049582; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MTX.plugin.Trojan.78f6c62a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4049583; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MTX.plugin.Trojan.c4b35f89.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4049584; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MTX.plugin.Trojan.d17c5406.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4049585; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MTX.plugin.Trojan.d4698441.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4049586; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MTX.plugin.Trojan.e1fcb0fb.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4049587; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MTX.plugin.ZIP.A.d33881c7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.ZIP.A; content:"456"; sid:4049588; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MTX.plugin.ZIP.A.e0099a41.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.ZIP.A; content:"456"; sid:4049589; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mabutu.A.3.21c524fb.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mabutu.A.3; content:"456"; sid:4049590; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Maddas.0c1dd269.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Maddas; content:"456"; sid:4049591; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Magistr.A.poly.a3804d2c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Magistr.A.poly; content:"456"; sid:4049592; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Magistr.B.poly.0cd0a719.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Magistr.B.poly; content:"456"; sid:4049593; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Maldal.c.6494cc24.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Maldal.c; content:"456"; sid:4049594; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Maldal.c.86e97dd2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Maldal.c; content:"456"; sid:4049595; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Maldal.h.798c04a9.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Maldal.h; content:"456"; sid:4049596; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mari.b.6513e97c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mari.b; content:"456"; sid:4049597; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Maslan.A.6e35636c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Maslan.A; content:"456"; sid:4049598; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Matra.4d6f4017.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Matra; content:"456"; sid:4049599; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mawanella.e7dac122.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mawanella; content:"456"; sid:4049600; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Melting.4784e42c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Melting; content:"456"; sid:4049601; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Merlin.8ec48842.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Merlin; content:"456"; sid:4049602; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Merlin.a9a5de52.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Merlin; content:"456"; sid:4049603; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Merlin.b.71c0c1d5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Merlin.b; content:"456"; sid:4049604; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Microyano.c1e96ae1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Microyano; content:"456"; sid:4049605; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Migrate.9a6f9d08.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Migrate; content:"456"; sid:4049606; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mimail.C.3d95b8ad.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mimail.C; content:"456"; sid:4049607; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mimail.I.b1ad7269.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mimail.I; content:"456"; sid:4049608; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mimail.J.0d8a08fb.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mimail.J; content:"456"; sid:4049609; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mimail.Q.b9ebe489.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mimail.Q; content:"456"; sid:4049610; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mir.2ab6b53b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mir; content:"456"; sid:4049611; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Moffas.87beb3e0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Moffas; content:"456"; sid:4049612; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Moncher.B.f7ef5ae1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Moncher.B; content:"456"; sid:4049613; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mountoni.3fa8d63c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mountoni; content:"456"; sid:4049614; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Music.A.6f0e9a9b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Music.A; content:"456"; sid:4049615; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Music.B.39e25a38.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Music.B; content:"456"; sid:4049616; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Music.B.adaf15fb.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Music.B; content:"456"; sid:4049617; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MyPics.F.a052ff2b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MyPics.F; content:"456"; sid:4049618; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MyPics.a.17c633c1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MyPics.a; content:"456"; sid:4049619; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MyPics.a.36d7db58.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MyPics.a; content:"456"; sid:4049620; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MyPics.a.94ec4742.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MyPics.a; content:"456"; sid:4049621; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MyPics.c.8239dab4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MyPics.c; content:"456"; sid:4049622; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MyPics.d.5e045198.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MyPics.d; content:"456"; sid:4049623; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MyPics.d.c0ef9839.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MyPics.d; content:"456"; sid:4049624; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.MyPics.e.f8ad9e75.xml
+alert TCP any any -> any any (msg:Email Virus Worm.MyPics.e; content:"456"; sid:4049625; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mydoom.B.cc6e6aa3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mydoom.B; content:"456"; sid:4049626; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mydoom.F.a9cf6301.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mydoom.F; content:"456"; sid:4049627; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mydoom.H.47cc271e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mydoom.H; content:"456"; sid:4049628; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mydoom.I.7b68f330.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mydoom.I; content:"456"; sid:4049629; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mydoom.M.65eb44f6.xml
+alert TCP any any -> any any (msg:Worm.Mydoom.M; content:"456"; sid:4049630; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mydoom.M.d8d9ebce.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mydoom.M; content:"456"; sid:4049631; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mydoom.S.4d46781c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mydoom.S; content:"456"; sid:4049632; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mydoom.W.f169c212.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mydoom.W; content:"456"; sid:4049633; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mylife.C.c755c0d4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mylife.C; content:"456"; sid:4049634; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mytob.S.2cda519a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Mytob.S; content:"456"; sid:4049635; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Mytob.S.931e4d09.xml
+alert TCP any any -> any any (msg:Worm.Mytob.S; content:"456"; sid:4049636; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.NHKR.a.fc9d1be1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.NHKR.a; content:"456"; sid:4049637; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.NHKR.b.565b3f57.xml
+alert TCP any any -> any any (msg:Email Virus Worm.NHKR.b; content:"456"; sid:4049638; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Naked.da9dba70.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Naked; content:"456"; sid:4049639; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.NatiDay.207486d1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.NatiDay; content:"456"; sid:4049640; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Netav.A.8d56dc69.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Netav.A; content:"456"; sid:4049641; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Netsup.A.e20439f1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Netsup.A; content:"456"; sid:4049642; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Nevezed.a0ca0ce0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Nevezed; content:"456"; sid:4049643; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.NewPic.Choke.5de107c0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.NewPic.Choke; content:"456"; sid:4049644; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Newman.89d7b360.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Newman; content:"456"; sid:4049645; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Newman.B.bca20f5b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Newman.B; content:"456"; sid:4049646; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Nihilit.J.bb2ae190.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Nihilit.J; content:"456"; sid:4049647; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Nihilit.c.188e2521.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Nihilit.c; content:"456"; sid:4049648; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Niqim.b6852898.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Niqim; content:"456"; sid:4049649; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Nocana.B.b7abeaac.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Nocana.B; content:"456"; sid:4049650; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Nohoper.A.8c067312.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Nohoper.A; content:"456"; sid:4049651; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Nooler.B.1bef08e1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Nooler.B; content:"456"; sid:4049652; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Noon.B.6b461fc5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Noon.B; content:"456"; sid:4049653; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Noon.e80c93c7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Noon; content:"456"; sid:4049654; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Noverus.ea21ee79.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Noverus; content:"456"; sid:4049655; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Nyxem.A.dfe59f12.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Nyxem.A; content:"456"; sid:4049656; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Orkiz.1.a2eb64ae.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Orkiz.1; content:"456"; sid:4049657; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.P2000.c5a6139b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.P2000; content:"456"; sid:4049658; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Paroc.A.d4f43810.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Paroc.A; content:"456"; sid:4049659; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Peach.98d8706c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Peach; content:"456"; sid:4049660; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Petik.I.8781b9a7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Petik.I; content:"456"; sid:4049661; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Petik.J.4ec0004f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Petik.J; content:"456"; sid:4049662; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Petik.l.175dbf33.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Petik.l; content:"456"; sid:4049663; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Picris.7e4051e2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Picris; content:"456"; sid:4049664; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Pics.76a3ab4c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Pics; content:"456"; sid:4049665; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Pics.b.dab362e2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Pics.b; content:"456"; sid:4049666; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Pikachu.AuExec.715614e0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Pikachu.AuExec; content:"456"; sid:4049667; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Plexis.4.17e6f1e0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Plexis.4; content:"456"; sid:4049668; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Plexus.B.4e4f8808.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Plexus.B; content:"456"; sid:4049669; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Poly.28dd1832.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Poly; content:"456"; sid:4049670; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.PonyExpress.fe15c8b0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.PonyExpress; content:"456"; sid:4049671; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Poo.4f292a8e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Poo; content:"456"; sid:4049672; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Postman.a2fb3b08.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Postman; content:"456"; sid:4049673; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Propec.B.f32a0ced.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Propec.B; content:"456"; sid:4049674; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Psych.85de9cbe.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Psych; content:"456"; sid:4049675; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Puron.b3df8b68.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Puron; content:"456"; sid:4049676; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Qoma.B.b4d5eb74.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Qoma.B; content:"456"; sid:4049677; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Quocus.256c8660.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Quocus; content:"456"; sid:4049678; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Quocus.e64a7392.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Quocus; content:"456"; sid:4049679; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Rastam.e4fda82a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Rastam; content:"456"; sid:4049680; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Rayman.b1b65950.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Rayman; content:"456"; sid:4049681; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Rays.A.01aefd7c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Rays.A; content:"456"; sid:4049682; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Rays.A.2a53b32f8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Rays.A; content:"456"; sid:4049683; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Razac.A.10ce9a77.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Razac.A; content:"456"; sid:4049684; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Redirect.9c031483.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Redirect; content:"456"; sid:4049685; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Repah.a.3b7622cc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Repah.a; content:"456"; sid:4049686; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Repah.a.d19bbffc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Repah.a; content:"456"; sid:4049687; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Req.6bad8d09.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Req; content:"456"; sid:4049688; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Rous.A.ab46b2fe.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Rous.A; content:"456"; sid:4049689; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SCO.A.53df3909.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SCO.A; content:"456"; sid:4049690; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SLight.f1a90278.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SLight; content:"456"; sid:4049691; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sabak.A.82bcaf48.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sabak.A; content:"456"; sid:4049692; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sabia.97dcff7b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sabia; content:"456"; sid:4049693; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Santa.c8e2086f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Santa; content:"456"; sid:4049694; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Santen.A.e546e24f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Santen.A; content:"456"; sid:4049695; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Saros.A.e7f16ccd.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Saros.A; content:"456"; sid:4049696; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Satan.7076ae22.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Satan; content:"456"; sid:4049697; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Scaline.A.566740df.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Scaline.A; content:"456"; sid:4049698; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Scary.b4978d1e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Scary; content:"456"; sid:4049699; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sdan.a.04443ed5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sdan.a; content:"456"; sid:4049700; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sdan.b.526fc860.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sdan.b; content:"456"; sid:4049701; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Seliz.36e29c1e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Seliz; content:"456"; sid:4049702; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Serotin.ec1f91fc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Serotin; content:"456"; sid:4049703; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Shuq.B.3d49489e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Shuq.B; content:"456"; sid:4049704; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Shuq.D.5d7e77db.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Shuq.D; content:"456"; sid:4049705; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Shuq.D.d18f3431.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Shuq.D; content:"456"; sid:4049706; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Siney.B.39c69154.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Siney.B; content:"456"; sid:4049707; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sint.9457158a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sint; content:"456"; sid:4049708; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sircam.85faf716b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Rays.A; content:"456"; sid:4049709; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sircam.98b60c86.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sircam; content:"456"; sid:4049710; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sity.417143d7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sity; content:"456"; sid:4049711; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Skudex.8102e9ee.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Skudex; content:"456"; sid:4049712; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Skudex.a3db0c52.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Skudex; content:"456"; sid:4049713; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Skybag.A.c9759d00.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Skybag.A; content:"456"; sid:4049714; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sober.C1.b6af0985.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sober.C1; content:"456"; sid:4049715; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sober.D.f258a945.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sober.D; content:"456"; sid:4049716; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sober.L.96fd4a01.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sober.L; content:"456"; sid:4049717; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sobig.A.a24ff177.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sobig.A; content:"456"; sid:4049718; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sobig.C.6ffabb00.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sobig.C; content:"456"; sid:4049719; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sobig.D.70bc5688.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sobig.D; content:"456"; sid:4049720; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sobig.E.d3a8b3dc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sobig.E; content:"456"; sid:4049721; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sobig.F.d39fe366.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sobig.F; content:"456"; sid:4049722; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Soda.56a183ab.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Soda; content:"456"; sid:4049723; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.AB.06e4cfd3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.AB; content:"456"; sid:4049724; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.AD.e355f889.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.AD; content:"456"; sid:4049725; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.AM.e6d771c2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.AM; content:"456"; sid:4049726; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.Gen-1.0e17dbec.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.Gen-1; content:"456"; sid:4049727; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.Gen-1.3d23ec8b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.Gen-1; content:"456"; sid:4049728; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.Gen-1.6f49434d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.Gen-1; content:"456"; sid:4049729; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.Gen-2.d4a36779.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.Gen-2; content:"456"; sid:4049730; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.Gen-2.ff05ddc0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.Gen-2; content:"456"; sid:4049731; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.I.e26bc655.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.I; content:"456"; sid:4049732; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.K.301b39b3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.K; content:"456"; sid:4049733; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.O.9d7006e3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.O; content:"456"; sid:4049734; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.P.3018e998.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.P; content:"456"; sid:4049735; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.Q.04871d17.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.Q; content:"456"; sid:4049736; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.R.5bbb322a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.R; content:"456"; sid:4049737; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.X.2eaf40e4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.X; content:"456"; sid:4049738; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.Y.5d7c0dc3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.Y; content:"456"; sid:4049739; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SomeFool.Z.2f4f05bb.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SomeFool.Z; content:"456"; sid:4049740; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sonic.27.260dfd03.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sonic.27; content:"456"; sid:4049741; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sonic.27.5f643093.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sonic.27; content:"456"; sid:4049742; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sonic.55.85f11213.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sonic.55; content:"456"; sid:4049743; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sonic.55.ca569c37.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sonic.55; content:"456"; sid:4049744; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sonic.A.2325cd4e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sonic.A; content:"456"; sid:4049745; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SouthPark.ed49cba2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SouthPark; content:"456"; sid:4049746; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sowsat.F.f7db1120.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sowsat.F; content:"456"; sid:4049747; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Spam.Brief.d94551fc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Spam.Brief; content:"456"; sid:4049748; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Spth.Jsg.a.eecf3f3d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Spth.Jsg.a; content:"456"; sid:4049749; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Stepaik.A.b66016c1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Stepaik.A; content:"456"; sid:4049750; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Stration.AL-1.4988ef8f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Stration.AL-1; content:"456"; sid:4049751; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sucon.b.756f4c0e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sucon.b; content:"456"; sid:4049752; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Symten.b.8839d89a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Symten.b; content:"456"; sid:4049753; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.SysClock.f0c88112.xml
+alert TCP any any -> any any (msg:Email Virus Worm.SysClock; content:"456"; sid:4049754; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Sysnom.94c40237.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Sysnom; content:"456"; sid:4049755; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Talorm.88d0606e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Talorm; content:"456"; sid:4049756; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Taz.78071c5d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Taz; content:"456"; sid:4049757; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Timofonica.C.97537e23.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Timofonica.C; content:"456"; sid:4049758; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Timofonica.e9ab05c5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Timofonica; content:"456"; sid:4049759; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Tossed.8b789e63.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Tossed; content:"456"; sid:4049760; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Totilix.A.ba6bd0ba.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Totilix.A; content:"456"; sid:4049761; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Totilix.B.ad147327.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Totilix.B; content:"456"; sid:4049762; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Totilix.C.21dbca1c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Totilix.C; content:"456"; sid:4049763; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Trader.63119305.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Trader; content:"456"; sid:4049764; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Trilissa.e.969548bd.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Trilissa.e; content:"456"; sid:4049765; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Trillissa.D.17c39533.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Trillissa.D; content:"456"; sid:4049766; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Trood.47d1f48a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Trood; content:"456"; sid:4049767; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Unicle.57171666.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Unicle; content:"456"; sid:4049768; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Unicle.B.3e34f872.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Unicle.B; content:"456"; sid:4049769; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Unicle.B.58948742.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Unicle.B; content:"456"; sid:4049770; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Unis.B.bd1ac3a7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Unis.B; content:"456"; sid:4049771; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Updater.A.a233033b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Updater.A; content:"456"; sid:4049772; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Urbe.a.c3891f3d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Urbe.a; content:"456"; sid:4049773; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Urick.b.3f3f41fc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Urick.b; content:"456"; sid:4049774; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Breeder.caeb734b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Breeder; content:"456"; sid:4049775; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Carnival.3483eedb.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Carnival; content:"456"; sid:4049776; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Decbel.4ab4ae3f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Decbel; content:"456"; sid:4049777; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Emin.d9fd66a8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Emin; content:"456"; sid:4049778; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Ereal.d79675c6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Ereal; content:"456"; sid:4049779; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Frido.4bd22144.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Frido; content:"456"; sid:4049780; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Frido.B.6348862c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Frido.B; content:"456"; sid:4049781; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Fundll.218fe324.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Fundll; content:"456"; sid:4049782; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Himeh.38feac70.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Himeh; content:"456"; sid:4049783; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Imitator.64761e6b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Imitator; content:"456"; sid:4049784; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Intr.A.95dc66a6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Intr.A; content:"456"; sid:4049785; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Isabel.54e640a8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Isabel; content:"456"; sid:4049786; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Kielhorn.17966efb.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Kielhorn; content:"456"; sid:4049787; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Kuasa.B.51d3c1f7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Kuasa.B; content:"456"; sid:4049788; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Kuasa.B.74f6e7d5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Kuasa.B; content:"456"; sid:4049789; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Maniz.4bacf1da.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Maniz; content:"456"; sid:4049790; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.MooD.c81495a1.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.MooD; content:"456"; sid:4049791; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Noth.1fe97570.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Noth; content:"456"; sid:4049792; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Obi.f0c66ecf.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Obi; content:"456"; sid:4049793; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Pahi.B.13129193.xml
+alert TCP any any -> any any (msg:Email Virus Wotm.VBS.Pahi.B; content:"456"; sid:4049794; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Pahi.C.20a6688e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Pahi.C; content:"456"; sid:4049795; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Par.a4609cb8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Par; content:"456"; sid:4049796; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Pleh.55cde934.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Pleh; content:"456"; sid:4049797; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Potok.ac937448.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Potok; content:"456"; sid:4049798; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Proud.e449f193.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Proud; content:"456"; sid:4049799; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Randa.4c560521.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Randa; content:"456"; sid:4049800; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Rodybot.90163da0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Rodybot; content:"456"; sid:4049801; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Rowam.A.112c4f5c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Rowam.A; content:"456"; sid:4049802; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Rowam.C.7d811834.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Rowam.C; content:"456"; sid:4049803; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Sdan.C.d2e41848.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Sdan.C; content:"456"; sid:4049804; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Tavo.71bee564.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Tavo; content:"456"; sid:4049805; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Thea.926afa95.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Thea; content:"456"; sid:4049806; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Titel.B.14d74038.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Titel.B; content:"456"; sid:4049807; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Titel.c3d48c9d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Titel; content:"456"; sid:4049808; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Ymale.4f4acb65.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Ymale; content:"456"; sid:4049809; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Yumao.bdd4e8ab.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Yumao; content:"456"; sid:4049810; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Yumao.e4995453.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Yumao; content:"456"; sid:4049811; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBS.Zsyang.77a8e4b5.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBS.Zsyang; content:"456"; sid:4049812; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VBSWG.ac.d4956efc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VBSWG.ac; content:"456"; sid:4049813; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.VWS.e280eb68.xml
+alert TCP any any -> any any (msg:Email Virus Worm.VWS; content:"456"; sid:4049814; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Veka.19d67837.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Veka; content:"456"; sid:4049815; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Verocha.66b1b149.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Verocha; content:"456"; sid:4049816; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Veryfun.9b42816a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Veryfun; content:"456"; sid:4049817; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Vierika.242c9030.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Vierika; content:"456"; sid:4049818; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Visilin.9c93bcef.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Visilin; content:"456"; sid:4049819; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Vorgon.B.11622ebc.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Vorgon.B; content:"456"; sid:4049820; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Vorgon.B.203f63fb.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Vorgon.B; content:"456"; sid:4049821; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Vorgon.B.2a5b7d8d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Vorgon.B; content:"456"; sid:4049822; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Vorgon.B.abf4792b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Vorgon.B; content:"456"; sid:4049823; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Vote.87812683.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Vote; content:"456"; sid:4049824; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Vote.b.89bece15.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Vote.b; content:"456"; sid:4049825; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Vote.b.f2c5b9ad.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Vote.b; content:"456"; sid:4049826; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.WCGen.4c2b4d62.xml
+alert TCP any any -> any any (msg:Email Virus Worm.WCGen; content:"456"; sid:4049827; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Wabbin.e1c336c3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Wabbin; content:"456"; sid:4049828; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Watcher.0d4e3923.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Watcher; content:"456"; sid:4049829; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.White.A.dff252d3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.White.A; content:"456"; sid:4049830; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.White.B.866fbc39.xml
+alert TCP any any -> any any (msg:Email Virus Worm.White.B; content:"456"; sid:4049831; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Whitehome.0e5b4f5c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Whitehome; content:"456"; sid:4049832; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Without.E.c8ebbde8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Without.E; content:"456"; sid:4049833; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Without.a.623aa8ed.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Without.a; content:"456"; sid:4049834; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Without.c.b69622e8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Without.c; content:"456"; sid:4049835; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Wlymak.bb427fa6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Wlymak; content:"456"; sid:4049836; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Wozer.C.ab4771ab.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Wozer.C; content:"456"; sid:4049837; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Wozer.E.fc5b2213.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Wozer.E; content:"456"; sid:4049838; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Wozer.F.5d9a4018.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Wozer.F; content:"456"; sid:4049839; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.XPMsg.8084b3d6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.XPMsg; content:"456"; sid:4049840; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Xemez.2980c3ca.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Xemez; content:"456"; sid:4049841; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yaha.G-2.b63eae8c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yaha.G-2; content:"456"; sid:4049842; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yaha.P.ba9cbc0d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yaha.P; content:"456"; sid:4049843; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yarner.B.0c32628e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yarner.B; content:"456"; sid:4049844; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yarner.B.bb088d1c.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yarner.B; content:"456"; sid:4049845; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yarner.D.14726762.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yarner.D; content:"456"; sid:4049846; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yarner.D.2c20d8ff.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yarner.D; content:"456"; sid:4049847; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yarner.D.e3692cb7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yarner.D; content:"456"; sid:4049848; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yarner.F.2e77976d.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yarner.F; content:"456"; sid:4049849; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Youdgos.a.8ac2c92e.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Youdgos.a; content:"456"; sid:4049850; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Youdgos.a.c04b062b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Youdgos.a; content:"456"; sid:4049851; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.YoursID.f4cc1b17.xml
+alert TCP any any -> any any (msg:Email Virus Worm.YoursID; content:"456"; sid:4049852; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yoxec.171f0d02.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yoxec; content:"456"; sid:4049853; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yoxec.1d7069df.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yoxec; content:"456"; sid:4049854; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yoxec.61af70c0.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yoxec; content:"456"; sid:4049855; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yoxec.660b1a5b.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yoxec; content:"456"; sid:4049856; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yoxec.de20b9d3.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yoxec; content:"456"; sid:4049857; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Yoxec.ff2f730a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Yoxec; content:"456"; sid:4049858; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Ypsan.a.4bb94fc8.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Ypsan.a; content:"456"; sid:4049859; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Zafi.B.652968e7.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Zafi.B; content:"456"; sid:4049860; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Zafi.D.387ea0a6.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Zafi.D; content:"456"; sid:4049861; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Zaid.2c154c5f.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Zaid; content:"456"; sid:4049862; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Zapchast.bb3dc04a.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Zapchast; content:"456"; sid:4049863; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Zeam.b90df190.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Zeam; content:"456"; sid:4049864; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.ZippedFiles.a.0e109930.xml
+alert TCP any any -> any any (msg:Email Virus Worm.ZippedFiles.a; content:"456"; sid:4049865; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Zokrim.a.8d77fad4.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Zokrim.a; content:"456"; sid:4049866; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.Zooboo.0459a6fb.xml
+alert TCP any any -> any any (msg:Email Virus Worm.Zooboo; content:"456"; sid:4049867; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Worm.generic.90ea68c2.xml
+alert TCP any any -> any any (msg:Email Virus Worm.generic; content:"456"; sid:4049868; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper1.xml
+alert TCP any any -> any any (msg:Lupper Worm 1; content:"456"; sid:4049869; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper12.xml
+alert TCP any any -> any any (msg:Lupper Worm 12; content:"456"; sid:4049870; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper13.xml
+alert TCP any any -> any any (msg:Lupper Worm 13; content:"456"; sid:4049871; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper14.xml
+alert TCP any any -> any any (msg:Lupper Worm 14; content:"456"; sid:4049872; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper15.xml
+alert TCP any any -> any any (msg:Lupper Worm 15; content:"456"; sid:4049873; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper16.xml
+alert TCP any any -> any any (msg:Lupper Worm 16; content:"456"; sid:4049874; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper17.xml
+alert TCP any any -> any any (msg:Lupper Worm 17; content:"456"; sid:4049875; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper18.xml
+alert TCP any any -> any any (msg:Lupper Worm 18; content:"456"; sid:4049876; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper19.xml
+alert TCP any any -> any any (msg:Lupper Worm 19; content:"456"; sid:4049877; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper2.xml
+alert TCP any any -> any any (msg:Lupper Worm 2; content:"456"; sid:4049878; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper20.xml
+alert TCP any any -> any any (msg:Lupper Worm 20; content:"456"; sid:4049879; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper21.xml
+alert TCP any any -> any any (msg:Lupper Worm 21; content:"456"; sid:4049880; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper22.xml
+alert TCP any any -> any any (msg:Lupper Worm 22; content:"456"; sid:4049881; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper23.xml
+alert TCP any any -> any any (msg:Lupper Worm 23; content:"456"; sid:4049882; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper24.xml
+alert TCP any any -> any any (msg:Lupper Worm 24; content:"456"; sid:4049883; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper25.xml
+alert TCP any any -> any any (msg:Lupper Worm 25; content:"456"; sid:4049884; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper26.xml
+alert TCP any any -> any any (msg:Lupper Worm 26; content:"456"; sid:4049885; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper27.xml
+alert TCP any any -> any any (msg:Lupper Worm 27; content:"456"; sid:4049886; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper28.xml
+alert TCP any any -> any any (msg:Lupper Worm 28; content:"456"; sid:4049887; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper29.xml
+alert TCP any any -> any any (msg:Lupper Worm 29; content:"456"; sid:4049888; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper3.xml
+alert TCP any any -> any any (msg:Lupper Worm 3; content:"456"; sid:4049889; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper30.xml
+alert TCP any any -> any any (msg:Lupper Worm 30; content:"456"; sid:4049890; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper31.xml
+alert TCP any any -> any any (msg:Lupper Worm 31; content:"456"; sid:4049891; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper32.xml
+alert TCP any any -> any any (msg:Lupper Worm 32; content:"456"; sid:4049892; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper33.xml
+alert TCP any any -> any any (msg:Lupper Worm 33; content:"456"; sid:4049893; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper34.xml
+alert TCP any any -> any any (msg:Lupper Worm 34; content:"456"; sid:4049894; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper35.xml
+alert TCP any any -> any any (msg:Lupper Worm 35; content:"456"; sid:4049895; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper4.xml
+alert TCP any any -> any any (msg:Lupper Worm 4; content:"456"; sid:4049896; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper5.xml
+alert TCP any any -> any any (msg:Lupper Worm 5; content:"456"; sid:4049897; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper6.xml
+alert TCP any any -> any any (msg:Lupper Worm 6; content:"456"; sid:4049898; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper7.xml
+alert TCP any any -> any any (msg:Lupper Worm 7; content:"456"; sid:4049899; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper8.xml
+alert TCP any any -> any any (msg:Lupper Worm 8; content:"456"; sid:4049900; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lupper_dl.xml
+alert TCP any any -> any any (msg:Lupper Worm Binary Download; content:"456"; sid:4049901; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#net-worm.linux.mare.e-web1.xml
+alert TCP any any -> any any (msg:Net-Worm.Linux.Mare.E worm HTTP Payload Vulnerability; content:"456"; sid:4049902; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#net-worm.linux.mare.e.xml
+alert TCP any any -> any any (msg:Net-Worm.Linux.Mare.E worm HTTP Payload Vulnerability; content:"456"; sid:4049903; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda1.xml
+alert TCP any any -> any any (msg:Nimda Request URL 1; content:"456"; sid:4049904; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda10.xml
+alert TCP any any -> any any (msg:Nimda Request URL 10; content:"456"; sid:4049905; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda11.xml
+alert TCP any any -> any any (msg:Nimda Request URL 11; content:"456"; sid:4049906; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda12.xml
+alert TCP any any -> any any (msg:Nimda Request URL 12; content:"456"; sid:4049907; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda13.xml
+alert TCP any any -> any any (msg:Nimda Request URL 13; content:"456"; sid:4049908; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda14.xml
+alert TCP any any -> any any (msg:Nimda Request URL 14; content:"456"; sid:4049909; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda15.xml
+alert TCP any any -> any any (msg:Nimda Request URL 15; content:"456"; sid:4049910; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda16.xml
+alert TCP any any -> any any (msg:Nimda Request URL 16; content:"456"; sid:4049911; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda17.xml
+alert TCP any any -> any any (msg:Nimda Stage 2; content:"456"; sid:4049912; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda2.xml
+alert TCP any any -> any any (msg:Nimda Request URL 2; content:"456"; sid:4049913; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda3.xml
+alert TCP any any -> any any (msg:Nimda Request URL 3; content:"456"; sid:4049914; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda4.xml
+alert TCP any any -> any any (msg:Nimda Request URL 4; content:"456"; sid:4049915; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda5.xml
+alert TCP any any -> any any (msg:Nimda Request URL 5; content:"456"; sid:4049916; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda6.xml
+alert TCP any any -> any any (msg:Nimda Request URL 6; content:"456"; sid:4049917; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda7.xml
+alert TCP any any -> any any (msg:Nimda Request URL 7; content:"456"; sid:4049918; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda8.xml
+alert TCP any any -> any any (msg:Nimda Request URL 8; content:"456"; sid:4049919; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nimda9.xml
+alert TCP any any -> any any (msg:Nimda Request URL 9; content:"456"; sid:4049920; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpworm1.xml
+alert TCP any any -> any any (msg:phpinclude.worm Attack 1; content:"456"; sid:4049921; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpworm2.xml
+alert TCP any any -> any any (msg:phpinclude.worm Attack 2; content:"456"; sid:4049922; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#phpworm3.xml
+alert TCP any any -> any any (msg:phpinclude.worm Attack 3; content:"456"; sid:4049923; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

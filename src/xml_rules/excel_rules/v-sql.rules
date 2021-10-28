@@ -1,0 +1,173 @@
+#sql:4032000~4032999
+
+#Contrexx_SQL_Injection.xml
+alert TCP any any -> any any (msg:Contrexx SQL Injection Attack; content:"456"; sid:4032000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060502-06_MySQL_Login_Handshake_Information_Disclosure.xml
+alert TCP any any -> any any (msg:MySQL Login Handshake Information Disclosure; content:"456"; sid:4032001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060502-12_MySQL_COM_TABLE_DUMP_Function_Stack_Overflow.xml
+alert TCP any any -> any any (msg:MySQL COM_TABLE_DUMP Function Stack Overflow; content:"456"; sid:4032002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060718-14_Oracle_Database_SYS_KUPW-WORKER_Package_MAIN_Procedure_SQL_Injection.xml
+alert TCP any any -> any any (msg:Oracle Database SYS.KUPW-WORKER Package MAIN Procedure SQL Injection; content:"456"; sid:4032003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060721-02_MySQL_Server_Date_Format_Function_Format_String_Vulnerability.xml
+alert TCP any any -> any any (msg:MySQL Server Date_Format Function Format String Vulnerability; content:"456"; sid:4032004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070907-14_Microsoft_SQL_Server_Distributed_Management_Objects_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Microsoft SQL Server Distributed Management Objects Buffer Overflow; content:"456"; sid:4032005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071029-03_Oracle_Database_SYS_LT_FINDRICSET_SQL_Injection.xml
+alert TCP any any -> any any (msg:Oracle Database SYS.LT.FINDRICSET SQL Injection; content:"456"; sid:4032006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071029-03_Oracle_Database_SYS_LT_FINDRICSET_SQL_Injectioni.xml
+alert TCP any any -> any any (msg:Oracle Database SYS.LT.FINDRICSET SQL Injection; content:"456"; sid:4032007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080104-15_MySQL_yaSSL_SSL_Hello_Message_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:MySQL yaSSL SSL Hello Message Buffer Overflow; content:"456"; sid:4032008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080131-07_Oracle_Database_Server_XDB_PITRIG_TRUNCATE_and_DROP_Procedures_SQL_Injection.xml
+alert TCP any any -> any any (msg:Oracle Database Server XDB PITRIG TRUNCATE and DROP Procedures SQL Injection; content:"456"; sid:4032009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080220-19_Sybase_SQL_Anywhere_MobiLink_Crafted_Strings_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Sybase SQL Anywhere MobiLink Crafted Strings Buffer Overflow; content:"456"; sid:4032010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080708-03_Microsoft_SQL_Server_CONVERT_Function_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Microsoft SQL Server CONVERT Function Buffer Overflow; content:"456"; sid:4032011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080708-04_Microsoft_SQL_Server_INSERT_Statement_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Microsoft SQL Server INSERT Statement Buffer Overflow; content:"456"; sid:4032012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080708-05_Microsoft_SQL_Server_Backup_Restoring_Memory_Corruption.xml
+alert TCP any any -> any any (msg:Microsoft SQL Server Backup Restoring Memory Corruption; content:"456"; sid:4032013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080911-11_Microsoft_SQL_Server_2000_Client_Components_ActiveX_Control_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Microsoft SQL Server 2000 Client Components ActiveX Control Buffer Overflow; content:"456"; sid:4032014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081209-02_Microsoft_SQL_Server_sp_replwritetovarbin_Stored_Procedure_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Microsoft SQL Server sp_replwritetovarbin Stored Procedure Buffer Overflow; content:"456"; sid:4032015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090113-25_Oracle_Database_Trigger_MDSYS.SDO_TOPO_DROP_FTBL_SQL_Injection_Vulnerability.xml
+alert TCP any any -> any any (msg:Oracle Database Trigger MDSYS.SDO_TOPO_DROP_FTBL SQL Injection Vulnerability; content:"456"; sid:4032016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090213-15_ProFTPD_Server_Username_Handling_SQL_Injection.xml
+alert TCP any any -> any any (msg:ProFTPD Server Username Handling SQL Injection; content:"456"; sid:4032017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090304-05_MySQL_XML_Functions_Scalar_XPath_Denial_of_Service.xml
+alert TCP any any -> any any (msg:MySQL XML Functions Scalar XPath Denial of Service; content:"456"; sid:4032018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090417-07_Oracle_Database_DBMS_AQADM_SYS_Package_GRANT_TYPE_ACCESS_Procedure_SQL_Injection.xml
+alert TCP any any -> any any (msg:Oracle Database DBMS_AQADM_SYS Package GRANT_TYPE_ACCESS Procedure SQL Injection; content:"456"; sid:4032019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090706-04_Oracle_Database_Server_Workspace_Manager_Multiple_SQL_Injection.xml
+alert TCP any any -> any any (msg:Oracle Database Server Workspace Manager Multiple SQL Injection; content:"456"; sid:4032020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090709-06_Sun_MySQL_mysql_log_Format_String_Vulnerability.xml
+alert TCP any any -> any any (msg:Sun MySQL mysql_log Format String Vulnerability; content:"456"; sid:4032021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090731-07_Firebird_SQL_op_connect_request_Denial_of_Service.xml
+alert TCP any any -> any any (msg:Firebird SQL op_connect_request Denial of Service; content:"456"; sid:4032022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090826-12_Oracle_Database_REPCAT_RPC.VALIDATE_REMOTE_RC_SQL_Injection.xml
+alert TCP any any -> any any (msg:Oracle Database REPCAT_RPC.VALIDATE_REMOTE_RC SQL Injection; content:"456"; sid:4032023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091124-03_Sun_MySQL_Database_SELECT_Subquery_Denial_of_Service.xml
+alert TCP any any -> any any (msg:Sun MySQL Database SELECT Subquery Denial of Service; content:"456"; sid:4032024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091125-03_Sun_MySQL_Database_PROCEDURE_ANALYSE_Denial_of_Service.xml
+alert TCP any any -> any any (msg:Sun MySQL Database PROCEDURE ANALYSE Denial of Service; content:"456"; sid:4032025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100126-08_PostgreSQL_Bit_Substring_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:PostgreSQL Bit Substring Buffer Overflow; content:"456"; sid:4032026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100127-08_IBM_DB2_Database_Server_SQL_REPEAT_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:IBM DB2 Database Server SQL REPEAT Buffer Overflow; content:"456"; sid:4032027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100826-09_Oracle_MySQL_Database_Unique_SET_Column_Join_Denial_of_Service.xml
+alert TCP any any -> any any (msg:Oracle MySQL Database Unique SET Column Join Denial of Service; content:"456"; sid:4032028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100826-10_Oracle_MySQL_Database_IN_and_CASE_NULL_Argument_Denial_of_Service.xml
+alert TCP any any -> any any (msg:Oracle MySQL Database IN and CASE NULL Argument Denial of Service; content:"456"; sid:4032029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20101105-04_Symantec_IM_Manager_LoggedInUsers_lgx_Definition_File_Multiple_SQL_Injections.xml
+alert TCP any any -> any any (msg:Symantec IM Manager LoggedInUsers.lgx Definition File Multiple; content:"456"; sid:4032030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#MSsqlDoS.xml
+alert UDP any any -> any any (msg:MS02-039 MS SQL Server 2000 UDP Ping Flood; content:"456"; sid:4032031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#MSsqlHeap.xml
+alert UDP any any -> any any (msg:MS02-039/MS02-061 MS SQL Server 2000 Heap Overflow; content:"456"; sid:4032032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#MSsqlOverflow.xml
+alert UDP any any -> any any (msg:MS02-039/MS02-061 MS SQL Server 2000 Buffer Overflow; content:"456"; sid:4032033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20110427-05_Cisco_Unified_Communications_Manager_Multiple_SQL_Injections.xml
+alert TCP any any -> any any (msg:Cisco Unified Communications Manager Multiple SQL Injections; content:"456"; sid:4032034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20111111-02_HP_Data_Protector_Multiple_Products_GetPolicies_SQL_Injection.xml
+alert TCP any any -> any any (msg:HP Data Protector Multiple Products GetPolicies SQL Injection; content:"456"; sid:4032035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20111117-01_HP_Data_Protector_Multiple_Products_FinishedCopy_SQL_Injection.xml
+alert TCP any any -> any any (msg:HP Data Protector Multiple Products FinishedCopy SQL Injection; content:"456"; sid:4032036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20111123-03_HP_Data_Protector_Multiple_Products_RequestCopy_SQL_Injection.xml
+alert TCP any any -> any any (msg:HP Data Protector Multiple Products RequestCopy SQL Injection; content:"456"; sid:4032037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20120208-09_CA_Total_Defense_Suite_UNCWS_exportReport_SQL_Injection.xml
+alert TCP any any -> any any (msg:CA Total Defense Suite UNCWS exportReport SQL Injection; content:"456"; sid:4032038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20120301-10_IBM_Tivoli_Provisioning_Manager_Express_Asset_getMimeType_SQL_Injection.xml
+alert TCP any any -> any any (msg:IBM Tivoli Provisioning Manager Express Asset.getMimeType SQL Injection; content:"456"; sid:4032039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20120618-02_Ruby_on_Rails_Where_Hash_SQL_Injection.xml
+alert TCP any any -> any any (msg:Ruby on Rails Where Hash SQL Injection; content:"456"; sid:4032040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20120618-02_Ruby_on_Rails_Where_Hash_SQL_Injection_IPV6.xml
+alert TCP any any -> any any (msg:Ruby on Rails Where Hash SQL Injection(IPV6 Version); content:"456"; sid:4032041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20120928-04_Trend_Micro_Control_Manager_ad_hoc_query_Module_SQL_Injection.xml
+alert TCP any any -> any any (msg:Trend Micro Control Manager ad hoc query Module SQL Injection; content:"456"; sid:4032042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140618-14_Symantec_Web_Gateway_dbutils.php_SQL_Injection.xml
+alert TCP any any -> any any (msg:Symantec Web Gateway dbutils.php SQL Injection; content:"456"; sid:4032043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20141016-03_Drupal_Core_database_inc_expandArguments_SQL_Injection.xml
+alert TCP any any -> any any (msg:Drupal Core database.inc expandArguments SQL Injection; content:"456"; sid:4032044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ZenCart_sqlcmi.xml
+alert TCP any any -> any any (msg:ZenCart SQL Injection Into Remote Command Execution; content:"456"; sid:4032045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#brighstor_sql.xml
+alert TCP any any -> any any (msg:CA Brighstor ARCserve Backup Agent for MS SQL Buffer Overflow; content:"456"; sid:4032046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#gamesitescript_sql.xml
+alert TCP any any -> any any (msg:GameSiteScript <= 3.1 (profile id) Remote SQL Injection Vulnerability; content:"456"; sid:4032047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mssql_svr_activex_bof.xml
+alert TCP any any -> any any (msg:Microsoft SQL Server (sqldmo.dll) ActiveX Buffer Overflow Vulnerability; content:"456"; sid:4032048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mybb_search_sql.xml
+alert TCP any any -> any any (msg:MyBulletinBoard SQL Injection Attack; content:"456"; sid:4032049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mysql_commander_cmi.xml
+alert TCP any any -> any any (msg:MySQL Commander <= 2.7 (home) Remote File Inclusion Vulnerability; content:"456"; sid:4032050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#oracle_web_plsql_1.xml
+alert TCP any any -> any any (msg:Oracle PLSQL Bypass Attack One; content:"456"; sid:4032051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#oracle_web_plsql_2.xml
+alert TCP any any -> any any (msg:Oracle PLSQL Bypass Attack Two; content:"456"; sid:4032052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#oracle_web_plsql_3.xml
+alert TCP any any -> any any (msg:Oracle PLSQL Bypass Attack Three; content:"456"; sid:4032053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#revizecms_sql.xml
+alert TCP any any -> any any (msg:Revize CMS Query_results.JSP SQL Injection Vulnerability; content:"456"; sid:4032054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#simpleblog_sql.xml
+alert TCP any any -> any any (msg:8Pixel.net SimpleBlog ID Parameter Remote SQL Injection Vulnerability; content:"456"; sid:4032055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wbblog_sql.xml
+alert TCP any any -> any any (msg:WBBlog Remote SQL Injection Vulnerability; content:"456"; sid:4032056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

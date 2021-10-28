@@ -1,0 +1,237 @@
+#ftp:4011000~4011999
+
+#3CTftpSvc_dos.xml
+alert UDP any any -> any any (msg:3CTftpSvc <= 2.0.1 (Long Transporting Mode) Buffer Overflow Vulnerability; content:"456"; sid:4011000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070213-08_Microsoft_Internet_Explorer_FTP_Response_Parsing_Memory_Corruption.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer FTP Response Parsing Memory Corruption; content:"456"; sid:4011001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080508-18_TFTP_Server_Error_Packet_Handling_Buffer_Overflow.xml
+alert UDP any any -> any any (msg:TFTP Server Error Packet Handling Buffer Overflow; content:"456"; sid:4011002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080806-07_Apache_HTTP_Server_mod_proxy_ftp_Wildcard_Characters_Cross-Site_Scripting.xml
+alert TCP any any -> any any (msg:Apache HTTP Server mod_proxy_ftp Wildcard Characters Cross-Site Scripting; content:"456"; sid:4011003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080814-06_FlashGet_FTP_PWD_Command_Stack_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:FlashGet FTP PWD Command Stack Buffer Overflow; content:"456"; sid:4011004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080818-06_Ipswitch_WS_FTP_Client_Format_String_Vulnerability.xml
+alert TCP any any -> any any (msg:Ipswitch WS_FTP Client Format String Vulnerability; content:"456"; sid:4011005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081003-18_Rhino_Software_Serv-U_FTP_Server_rnto_Command_Directory_Traversal.xml
+alert TCP any any -> any any (msg:Rhino Software Serv-U FTP Server rnto Command Directory Traversal; content:"456"; sid:4011006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081023-02_GoodTech_SSH_Server_SFTP_Processing_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:GoodTech SSH Server SFTP Processing Buffer Overflow; content:"456"; sid:4011007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090213-15_ProFTPD_Server_Username_Handling_SQL_Injection.xml
+alert TCP any any -> any any (msg:ProFTPD Server Username Handling SQL Injection; content:"456"; sid:4011008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090831-01_Microsoft_Internet_Information_Services_FTP_Server_Remote_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Microsoft Internet Information Services FTP Server Remote Buffer Overflow; content:"456"; sid:4011009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090922-01_Dnsmasq_TFTP_Service_Remote_Heap_Buffer_Overflow.xml
+alert UDP any any -> any any (msg:Dnsmasq TFTP Service Remote Heap Buffer Overflow; content:"456"; sid:4011010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100330-01_Novell_Netware_FTP_Server_Remote_Stack_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Novell Netware FTP Server Remote Stack Buffer Overflow; content:"456"; sid:4011011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20101101-06_ProFTPD_FTP_Server_TELNET_IAC_Stack_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:ProFTPD FTP Server TELNET_IAC Stack Buffer Overflow; content:"456"; sid:4011012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20110321-05_Novell_Netware_FTP_Server_DELE_Command_Stack_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Novell Netware FTP Server DELE Command Stack Buffer Overflow; content:"456"; sid:4011013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FTP_Windows_Listing.xml
+alert TCP any any -> any any (msg:FTP C:\Windows\ listing; content:"456"; sid:4011014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#InternetExplorerFTPXSS.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer FTP XSS attempt; content:"456"; sid:4011015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20090512-09_MicrosoftPowerPoint_LegacyFormat_SchemesRecord_BufferOverflow.xml
+alert TCP any any -> any any (msg:Microsoft Office PowerPoint Legacy Format Schemes Record Buffer Overflow; content:"456"; sid:4011016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20110512-03_HP_Intelligent_Management_Center_TFTP_Server_MODE_Remote_Code_Execution.xml
+alert UDP any any -> any any (msg:HP Intelligent Management Center TFTP Server MODE Remote Code Execution; content:"456"; sid:4011017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140815-05_Attachmate_Reflection_FTP_Client_ActiveX_GetGlobalSettings_Memory_Corruption.xml
+alert TCP any any -> any any (msg:Attachmate Reflection FTP Client ActiveX GetGlobalSettings Memory Corruption; content:"456"; sid:4011018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#aceftp_dos.xml
+alert TCP any any -> any any (msg:Ace-FTP Client 1.24a Remote Buffer Overflow Proof of Concept; content:"456"; sid:4011019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#acftp_dos.xml
+alert TCP any any -> any any (msg:ACFTP FTP Server User Command Remote Denial of Service Vulnerability; content:"456"; sid:4011020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#acftpd_bof.xml
+alert TCP any any -> any any (msg:acFTPd FTP Server USER command buffer overflow; content:"456"; sid:4011021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#at-tftp_dos.xml
+alert UDP any any -> any any (msg:AT-TFTP <= 1.9 (Long Filename) Remote Buffer Overflow Vulnerability (POC); content:"456"; sid:4011022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#bisonftp_dos.xml
+alert TCP any any -> any any (msg:BisonFTP Remote Denial Of Service Vulnerability
+; content:"456"; sid:4011023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#bulletproofftp_client_bof.xml
+alert TCP any any -> any any (msg:BulletProof FTP (Client) V2.45 Remote Buffer Overflow; content:"456"; sid:4011024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cesarftp_bof.xml
+alert TCP any any -> any any (msg:CesarFTP 0.99g (MKD) Remote Buffer Overflow Exploit; content:"456"; sid:4011025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#crobftp_dos.xml
+alert TCP any any -> any any (msg:Crob FTP Server Remote Heap Buffer Overflow Vulnerability; content:"456"; sid:4011026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dreamftp_bof.xml
+alert TCP any any -> any any (msg:BolinTech DreamFTP USER buffer overflow Vulnerability; content:"456"; sid:4011027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#easyftp_pass_bof.xml
+alert TCP any any -> any any (msg:Easy File Sharing FTP PASS Command Server Buffer Overflow Vulnerability; content:"456"; sid:4011028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#efs_ftp_bof.xml
+alert TCP any any -> any any (msg:Easy File Sharing FTP Server 2.0 (PASS) Remote Exploit (Win2K SP4); content:"456"; sid:4011029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#filecopaftp_list_bof.xml
+alert TCP any any -> any any (msg:FileCOPA FTP Server <= 1.01 (LIST) Remote Buffer Overflow Exploit; content:"456"; sid:4011030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefox_ftp_dos.xml
+alert TCP any any -> any any (msg:Mozilla Firefox FTP Denial of Service Vulnerability; content:"456"; sid:4011031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ftp_buffer_overflow_1025.xml
+alert TCP any any -> any any (msg:FTP Buffer Overflow [1025] Attack; content:"456"; sid:4011032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ftp_buffer_overflow_129.xml
+alert TCP any any -> any any (msg:FTP Buffer Overflow [129] Attack; content:"456"; sid:4011033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ftp_buffer_overflow_257.xml
+alert TCP any any -> any any (msg:FTP Buffer Overflow [257] Attack; content:"456"; sid:4011034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ftp_buffer_overflow_513.xml
+alert TCP any any -> any any (msg:FTP Buffer Overflow [513] Attack; content:"456"; sid:4011035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ftp_format.xml
+alert TCP any any -> any any (msg:FTP Format String Attack; content:"456"; sid:4011036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ftpd_ssl.xml
+alert TCP any any -> any any (msg:FTP SSL Threat; content:"456"; sid:4011037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#goldenftp_bof.xml
+alert TCP any any -> any any (msg:Golden FTP Server Pro 2.70 APPE command buffer overflow; content:"456"; sid:4011038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hp_jetdir_ftpserver_dos.xml
+alert TCP any any -> any any (msg:HP Jetdirect FTP Print Server RERT Command Denial Of Service Vulnerability; content:"456"; sid:4011039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hp_printservftp_dos.xml
+alert TCP any any -> any any (msg:Hewlett-Packard FTP Print Server Version 2.4.5 Buffer Overflow Vulnerability; content:"456"; sid:4011040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ipswitch_ws-ftpd_bof.xml
+alert TCP any any -> any any (msg:Ipswitch WS_FTP Server XCRC XSHA1 and XMD5 Commands Buffer Overflow Vulnerabilities; content:"456"; sid:4011041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#net-ftpd.xml
+alert TCP any any -> any any (msg:NetFTPd Buffer Overflow; content:"456"; sid:4011042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#quickneasyftp_bof.xml
+alert TCP any any -> any any (msg:Pablo Software Solutions Quick 'n Easy FTP Server Logging Buffer Overflow Vulnerability; content:"456"; sid:4011043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sami_ftp_bof.xml
+alert TCP any any -> any any (msg:Sami FTP Server Buffer Overflow; content:"456"; sid:4011044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#samiftp_bof.xml
+alert TCP any any -> any any (msg: 1-2-All Broadcast E-mail /admin/index.php Username Field SQL Injection; content:"456"; sid:4011045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#samiftp_bof_b.xml
+alert TCP any any -> any any (msg:Sami FTP Server 2.0.2 USER/PASS buffer overflow Vulnerability; content:"456"; sid:4011046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#squid_ftp_bof.xml
+alert TCP any any -> any any (msg:Squid Proxy FTP URL Buffer Overflow; content:"456"; sid:4011047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#starftp_dos.xml
+alert TCP any any -> any any (msg:Star FTP Server 1.10 (RETR) Remote Denial of Service Vulnerability; content:"456"; sid:4011048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tftpTransfer.xml
+alert UDP any any -> any any (msg:TFTP Long Transfer Mode String; content:"456"; sid:4011049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tftpd32.xml
+alert UDP any any -> any any (msg:TFTPD32 Denial of Service; content:"456"; sid:4011050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tftpd32_fs.xml
+alert UDP any any -> any any (msg:Tftpd32 Format String Vulnerability; content:"456"; sid:4011051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tftpd_rfs.xml
+alert UDP any any -> any any (msg:Tftpd32 SEND / GET Remote Format String Vulnerability; content:"456"; sid:4011052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tftpdwin_bof.xml
+alert UDP any any -> any any (msg:TFTPDWIN 0.4.2 Remote Buffer Overflow Vulnerability; content:"456"; sid:4011053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#vicftps_cwd_bof.xml
+alert TCP any any -> any any (msg:VicFTPs Server CWD Remote Buffer Overflow Vulnerability; content:"456"; sid:4011054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#warftp_user_bof.xml
+alert TCP any any -> any any (msg:WarFTP 1.65 (USER) Remote Buffer Overflow Vulnerability; content:"456"; sid:4011055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#windowsNT_FTPbof-1.xml
+alert TCP any any -> any any (msg:MS99-003 Windows NT 4 FTP Buffer Overflow; content:"456"; sid:4011056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winftp_dos.xml
+alert TCP any any -> any any (msg:WinFtp Server Version 2.0.2 Denial of Service Vulnerability; content:"456"; sid:4011057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wsftp.xml
+alert TCP any any -> any any (msg:WS_FTP Denial of Service; content:"456"; sid:4011058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wuftp_exec_cmi.xml
+alert TCP any any -> any any (msg:WU-FTPD Site EXEC Race Condition; content:"456"; sid:4011059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wuftp_exec_fs.xml
+alert TCP any any -> any any (msg:Wu-Ftpd Remote Format String Stack Overwrite Vulnerability; content:"456"; sid:4011060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wuftpd_globbing.xml
+alert TCP any any -> any any (msg:WU-FTP Heap Overflow; content:"456"; sid:4011061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wuftpd_globbing_dos.xml
+alert TCP any any -> any any (msg:WU-FTP File Globbing DOS; content:"456"; sid:4011062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wzdftpd_user_bof.xml
+alert TCP any any -> any any (msg:wzdftpd USER Command Remote Denial of Service Vulnerability; content:"456"; sid:4011063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#xmpersonalftp_bof.xml
+alert TCP any any -> any any (msg:XM Easy Personal FTP Server; content:"456"; sid:4011064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20101101-06_ProFTPD_FTP_Server_TELNET_IAC_Stack_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:ProFTPD FTP Server TELNET_IAC Stack Buffer Overflow; content:"456"; sid:4011065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20101101-06_ProFTPD_FTP_Server_TELNET_IAC_Stack_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:ProFTPD FTP Server TELNET_IAC Stack Buffer Overflow (IPV6 VERSION); content:"456"; sid:4011066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20110321-05_Novell_Netware_FTP_Server_DELE_Command_Stack_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Novell Netware FTP Server DELE Command Stack Buffer Overflow; content:"456"; sid:4011067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20110321-05_Novell_Netware_FTP_Server_DELE_Command_Stack_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Novell Netware FTP Server DELE Command Stack Buffer Overflow(IPv6 Version); content:"456"; sid:4011068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#efs_ftp_bof.xml
+alert TCP any any -> any any (msg:Easy File Sharing FTP Server 2.0 (PASS) Remote Exploit (Win2K SP4); content:"456"; sid:4011069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#efs_ftp_bof_IPv6.xml
+alert TCP any any -> any any (msg:Easy File Sharing FTP Server 2.0 (PASS) Remote Exploit (Win2K SP4) (IPv6 Version); content:"456"; sid:4011070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefox_ftp_dos.xml
+alert TCP any any -> any any (msg:Mozilla Firefox FTP Denial of Service Vulnerability; content:"456"; sid:4011071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefox_ftp_dos_IPv6.xml
+alert TCP any any -> any any (msg:Mozilla Firefox FTP Denial of Service Vulnerability (IPv6 Version); content:"456"; sid:4011072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ftp_buffer_overflow_129.xml
+alert TCP any any -> any any (msg:FTP Buffer Overflow [129] Attack; content:"456"; sid:4011073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ftp_buffer_overflow_129_IPv6.xml
+alert TCP any any -> any any (msg:FTP Buffer Overflow [129] Attack (IPv6 Version); content:"456"; sid:4011074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hp_jetdir_ftpserver_dos.xml
+alert TCP any any -> any any (msg:HP Jetdirect FTP Print Server RERT Command Denial Of Service Vulnerability; content:"456"; sid:4011075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hp_jetdir_ftpserver_dos_IPv6.xml
+alert TCP any any -> any any (msg:HP Jetdirect FTP Print Server RERT Command Denial Of Service Vulnerability (IPv6 Version); content:"456"; sid:4011076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sami_ftp_bof.xml
+alert TCP any any -> any any (msg:Sami FTP Server Buffer Overflow; content:"456"; sid:4011077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

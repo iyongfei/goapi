@@ -1,0 +1,53 @@
+#flood:4038000~4038999
+
+#BGPupdateFlood.xml
+alert BGP-Header any any -> any any (msg:BGP Update Flood; content:"456"; sid:4038000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FloodUDPservice.xml
+alert UDP any any -> any any (msg:UDP Service Flood; content:"456"; sid:4038001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FloodUDPservice_liuyin.xml
+alert UDP any any -> any any (msg:UDP Service Flood; content:"456"; sid:4038002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#IGRPreqflood.xml
+alert IP any any -> any any (msg:IGRP Request Flood; content:"456"; sid:4038003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#KshGetRootFlood.xml
+alert TCP any any -> any any (msg:KSH Get Root Flood; content:"456"; sid:4038004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#RipReqFlood.xml
+alert UDP any any -> any any (msg:RIP Request Flood; content:"456"; sid:4038005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#UPnP_Flood.xml
+alert UDP any any -> any any (msg:Microsoft Universal Plug and Play Denial of Service; content:"456"; sid:4038006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#bashGetRootFlood.xml
+alert TCP any any -> any any (msg:Bash Get Root Flood; content:"456"; sid:4038007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cdpflood.xml
+alert CDP any any -> any any (msg:CDP Flood; content:"456"; sid:4038008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cshGetRootFlood.xml
+alert TCP any any -> any any (msg:CSH Get Root Flood; content:"456"; sid:4038009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hibyeflood.xml
+alert UDP any any -> any any (msg:SIP HI-BYE Flood; content:"456"; sid:4038010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ipv6_first_frag_flood.xml
+alert IPv6 any any -> any any (msg:IPv6 First Fragment Flood; content:"456"; sid:4038011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ipv6_frag_flood.xml
+alert IPv6 any any -> any any (msg:IPv6 Fragment Flood; content:"456"; sid:4038012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#radiusAuthFlood.xml
+alert UDP any any -> any any (msg:Radius Authentication Flood; content:"456"; sid:4038013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipkeepaliveflood.xml
+alert UDP any any -> any any (msg:SIP Keepalive Flood; content:"456"; sid:4038014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#syslogFlood.xml
+alert UDP any any -> any any (msg:Syslog Message Flood; content:"456"; sid:4038015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#vlanflood.xml
+alert VLAN_Ethernet any any -> any any (msg:VLAN Flood; content:"456"; sid:4038016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

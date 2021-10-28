@@ -8,9 +8,11 @@
 package util
 
 import (
+	"bufio"
 	"bytes"
 	"encoding/hex"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"os"
 	"strings"
@@ -241,4 +243,136 @@ func Heco(r string) string {
 		}
 	}
 	return tmp
+}
+//doc game 序列号重复
+
+var RuleHeaderMap = map[string]string{
+	"ftp":   "#ftp:4011000~4011999",
+	"telnet":"#telnet:4012000~4012999",
+	"tftp":"#tftp:4013000~4013999",
+	"imap":"#imap:4014000~4014999",//多一个
+	"smtp":"#smtp:4015000~4015999",//多一个
+	"dhcp":"#dhcp:4016000~4016999",
+	"dnp3":"dnp3:4017000~4017999",//有误
+	"dns":"#dns:4018000~4018999",
+	"http":"#http:4019000~4019999",
+	"icmp":"#icmp:4020000~4020999",
+	"kerberos":"#kerberos:4021000~4021999",
+	"netbios":"#netbios:4022000~4022999",
+	"nfs":"#nfs:4023000~4023999",
+	"ntp":"#ntp:4024000~4024999",//错误
+	"smb":"#smb:4025000~4025999",
+	//少
+	"snmp":"#snmp:4027000~4027999",
+	"ssh":"#ssh:4028000~4028999",
+	"tls":"#tls:4029000~4029999",
+	"shellcode":"#shellcode:4031000~4031999",
+	"sql":"#sql:4032000~4032999",
+	"dos":"#dos:4033000~4033999",//修改
+	"bypass":"#bypass:4035000~4035999",
+	"chat":"#chat:4036000~4036999",
+	"cmi":"#cmi:4037000~4037999",//有误
+	"flood":"#flood:4038000~4038999",
+	"fuzz":"#fuzz:4039000~4039999",
+	"game":"#game:4040000~4040999",//同dos
+	"iis":"#iis:4050000~4050999",
+	"js":"#js:4051000~4051999",
+	"noop":"#noop:4052000~4052999",
+	"oracle":"#oracle:4053000~4053999",
+	"overflow":"#overflow:4054000~4054999",
+	"php":"#php:4055000~4055999",
+	"policy":"#policy:4056000~4056999",
+	"vbs":"#vbs:4057000~4057999",
+	"web":"#web:4058000~4058999",
+
+
+	//新添加的
+	"denial_of_service":"#denial_of_service:4041000~4041999",
+	"hunting":"#hunting:4042000~4042999",
+	"info":"#info:4043000~4043999",
+	"microsoft":"#microsoft:4044000~4044999",
+	"portscan":"#portscan:4045000~4045999",
+	"sip":"#sip:4046000~4046999",
+	"ssl":"#ssl:4047000~4047999",
+	"trojan":"#trojan:4048000~4048999",
+	"worm":"#worm:4049000~4049999",
+	"xss":"#xss:4059000~4059999",
+}
+var RuleHeaderMapT = map[string]string{
+	"bypass":"#bypass:4035000~4035999",
+	"chat":"#chat:4036000~4036999",
+	"cmi":"#cmi:4037000~4037999",//有误
+	"denial_of_service":"",
+	"dhcp":"#dhcp:4016000~4016999",
+	"dnp3":"dnp3:4017000~4017999",//有误
+	"dns":"#dns:4018000~4018999",
+	"dos":"#dos:4034000~4034999",
+	"flood":"#flood:4038000~4038999",
+	"ftp":"#ftp:4011000~4011999",
+	"fuzz":"#fuzz:4039000~4039999",
+	"game":"#game:4034000~4034999",
+	"http":"#http:4019000~4019999",
+	"hunting":"",
+	"icmp":"#icmp:4020000~4020999",
+	"iis":"#iis:4050000~4050999",
+	"imap":"#imap:4030000~4030999",
+	"info":"",
+	"js":"#js:4051000~4051999",
+	"kerberos":"#kerberos:4021000~4021999",
+	"microsoft":"",
+	"netbios":"#netbios:4022000~4022999",
+	"nfs":"#nfs:4023000~4023999",
+	"noop":"#noop:4052000~4052999",
+	"ntp":"#ntp:4024000~402499",
+	"oracle":"#oracle:4053000~4053999",
+	"overflow":"#overflow:4054000~4054999",
+	"php":"#php:4055000~4055999",
+	"policy":"#policy:4056000~4056999",
+	"portscan":"",
+	"shellcode":"#shellcode:4031000~4031999",
+	"sip":"",
+	"smb":"#smb:4025000~4025999",
+	"smtp":"#smtp:4015000~4015999",//多一个
+	"snmp":"#snmp:4027000~4027999",
+	"sql":"#sql:4032000~4032999",
+	"ssh":"#ssh:4028000~4028999",
+	"ssl":"",
+	"telnet":"#telnet:4012000~4012999",
+	"tftp":"#tftp:4013000~4013999",
+	"tls":"#tls:4029000~4029999",
+	"trojan":"",
+	"vbs":"#vbs:4057000~4057999",
+	"web":"#web:4058000~4058999",
+	"worm":"",
+	"xss":"",
+}
+/**
+序列
+#dhcp3:4017000~4017999
+#smtp:4026000~4026999
+#activex:4033000~4033999
+*/
+
+func GetRuleHeaderMap()  {
+
+
+}
+func GetRuleLineHeaderMap() map[string] string{
+	f, err := os.Open("suricata_rules_cnt.tex")
+	if err != nil {
+		return nil
+	}
+	buf := bufio.NewReader(f)
+	for {
+		line, err := buf.ReadString('\n')
+		line = strings.TrimSpace(line)
+		if err != nil {
+			if err == io.EOF {
+				return nil
+			}
+			return nil
+		}
+
+	}
+	return nil
 }

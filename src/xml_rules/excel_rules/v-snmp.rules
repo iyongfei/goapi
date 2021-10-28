@@ -1,0 +1,68 @@
+#snmp:4027000~4027999
+
+#FSC20060523-07_Linux_Kernel_SNMP_NAT_Netfilter_Memory_Corruption.xml
+alert UDP any any -> any any (msg:Linux Kernel SNMP NAT Netfilter Memory Corruption; content:"456"; sid:4027000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20061212-06_Microsoft_Windows_SNMP_Service_Memory_Corruption.xml
+alert UDP any any -> any any (msg:Microsoft Windows SNMP Service Memory Corruption; content:"456"; sid:4027001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080430-03_Castle_Rock_Computing_SNMPc_Network_Manager_Community_String_Stack_Buffer_Overflow.xml
+alert UDP any any -> any any (msg:Castle Rock Computing SNMPc Network Manager Community String Stack Buffer Overflow; content:"456"; sid:4027002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091210-06_HP_OpenView_Network_Node_Manager_snmp.exe_Oid_Variable_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:HP OpenView Network Node Manager snmp.exe Oid Variable Buffer Overflow; content:"456"; sid:4027003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091210-07_HP_OpenView_Network_Node_Manager_ovwebsnmpsrv.exe_OVwSelection_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:HP OpenView Network Node Manager ovwebsnmpsrv.exe OVwSelection Buffer Overflow; content:"456"; sid:4027004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091210-08_HP_OpenView_Network_Node_Manager_snmpviewer.exe_Host_Header_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:HP OpenView Network Node Manager snmpviewer.exe Host Header Buffer Overflow; content:"456"; sid:4027005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100512-03_HP_OpenView_NNM_snmpviewer.exe_CGI_Stack_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:HP OpenView NNM snmpviewer.exe CGI Stack Buffer Overflow; content:"456"; sid:4027006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#SNMPprobe.xml
+alert UDP any any -> any any (msg:SNMP Probe OID: 2; content:"456"; sid:4027007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#SNMPv3PIX.xml
+alert UDP any any -> any any (msg:Cisco PIX SNMPv3 Denial of Service; content:"456"; sid:4027008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#SNMPv3catDoS.xml
+alert UDP any any -> any any (msg:Cisco SNMPv3 Denial of Service; content:"456"; sid:4027009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#avaya_snmp_hidden.xml
+alert UDP any any -> any any (msg:Avaya Hidden Community String; content:"456"; sid:4027010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ciscoMalSNMP.xml
+alert UDP any any -> any any (msg:Cisco Malformed SNMPv1 Message Denial of Service; content:"456"; sid:4027011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ciscoMalSNMP2.xml
+alert UDP any any -> any any (msg:Cisco IOS Solicited SNMP Message Crash; content:"456"; sid:4027012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dlink_snmp_pass.xml
+alert UDP any any -> any any (msg:D-Link Wireless Router Password Disclosure; content:"456"; sid:4027013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hpopenview_snmp_hidden.xml
+alert UDP any any -> any any (msg:HP OpenView Hidden Community Name; content:"456"; sid:4027014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#linux_natsnmp_dos.xml
+alert UDP any any -> any any (msg:Linux Kernel SNMP NAT Helper Remote DoS; content:"456"; sid:4027015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#nokia_snmp.xml
+alert UDP any any -> any any (msg:Nokia SNMP Disclosure of Information; content:"456"; sid:4027016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#oneSNMP.xml
+alert UDP any any -> any any (msg:SNMP Probe OID: 1; content:"456"; sid:4027017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#radiusSNMP.xml
+alert UDP any any -> any any (msg:GNU SNMP RADIUS DoS; content:"456"; sid:4027018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#snmpTerm.xml
+alert UDP any any -> any any (msg:SNMP Terminal Escape Code Community String; content:"456"; sid:4027019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#snmpXSS.xml
+alert UDP any any -> any any (msg:SNMP XSS attempt; content:"456"; sid:4027020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#solaris_snmp_hidden.xml
+alert UDP any any -> any any (msg:Solaris Hidden Community String; content:"456"; sid:4027021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

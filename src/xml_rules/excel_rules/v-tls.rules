@@ -1,0 +1,14 @@
+#tls:4029000~4029999
+
+#FSC20041104-01_Cisco_Secure_ACS_EAP-TLS_Authentication_Bypass_Vulnerability.xml
+alert UDP any any -> any any (msg:Cisco Secure ACS EAP-TLS Authentication Bypass Vulnerability; content:"456"; sid:4029000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100325-01_OpenSSL_TLS_Connection_Record_Handling_Denial_of_Service.xml
+alert TCP any any -> any any (msg:OpenSSL TLS Connection Record Handling Denial of Service; content:"456"; sid:4029001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140408-01_OpenSSL_TLS_DTLS_Heartbeat_Information_Disclosure.xml
+alert TCP any any -> any any (msg:OpenSSL TLS DTLS Heartbeat Information Disclosure; content:"456"; sid:4029002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20150109-08_OpenSSL_DTLS_dtls1_buffer_record_Denial_of_Service.xml
+alert UDP any any -> any any (msg:OpenSSL DTLS dtls1_buffer_record Denial of Service; content:"456"; sid:4029003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
