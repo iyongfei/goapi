@@ -3,18 +3,36 @@
 #PortScanEverything.xml
 alert TCP any any -> any any (msg:Portscan: Everything; content:"456"; sid:4045000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#PortScanEverything_IPv6.xml
+alert TCP any any -> any any (msg:Portscan: Everything (IPv6 Version); content:"456"; sid:4045001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #PortScanFIN.xml
-alert TCP any any -> any any (msg:Portscan: FIN; content:"456"; sid:4045001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Portscan: FIN; content:"456"; sid:4045002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#PortScanFIN_IPv6.xml
+alert TCP any any -> any any (msg:Portscan: FIN (IPv6 Version); content:"456"; sid:4045003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #PortScanXMAS.xml
-alert TCP any any -> any any (msg:Portscan: XMAS; content:"456"; sid:4045002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Portscan: XMAS; content:"456"; sid:4045004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#PortScanXMAS_IPv6.xml
+alert TCP any any -> any any (msg:Portscan: XMAS (IPv6 Version); content:"456"; sid:4045005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #portscanNull.xml
-alert TCP any any -> any any (msg:Portscan: Null; content:"456"; sid:4045003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Portscan: Null; content:"456"; sid:4045006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#portscanNull_IPv6.xml
+alert TCP any any -> any any (msg:Portscan: Null (IPv6 Version); content:"456"; sid:4045007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #portscanSYN.xml
-alert TCP any any -> any any (msg:Portscan: SYN; content:"456"; sid:4045004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Portscan: SYN; content:"456"; sid:4045008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#portscanSYN_IPv6.xml
+alert TCP any any -> any any (msg:Portscan: SYN (IPv6 Version); content:"456"; sid:4045009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #portscanUDP.xml
-alert UDP any any -> any any (msg:Portscan: UDP; content:"456"; sid:4045005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Portscan: UDP; content:"456"; sid:4045010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#portscanUDP_IPv6.xml
+alert UDP any any -> any any (msg:Portscan: UDP (IPv6 Version); content:"456"; sid:4045011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

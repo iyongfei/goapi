@@ -3,210 +3,168 @@
 #BGPopenFlood.xml
 alert BGP-Open any any -> any any (msg:BGP Open Flood; content:"456"; sid:4038000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#BGPopenFlood_IPv6.xml
+alert BGP-Open any any -> any any (msg:BGP Open Flood (IPv6 Version); content:"456"; sid:4038001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #BGPupdateFlood.xml
-alert BGP-Header any any -> any any (msg:BGP Update Flood; content:"456"; sid:4038001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert BGP-Header any any -> any any (msg:BGP Update Flood; content:"456"; sid:4038002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#BGPupdateFlood_IPv6.xml
+alert BGP-Header any any -> any any (msg:BGP Update Flood (IPv6 Version); content:"456"; sid:4038003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FloodAck.xml
-alert TCP any any -> any any (msg:TCP ACK Flood; content:"456"; sid:4038002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:TCP ACK Flood; content:"456"; sid:4038004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FloodAck_IPv6.xml
+alert TCP any any -> any any (msg:TCP ACK Flood (IPv6 Version); content:"456"; sid:4038005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FloodAck_liuyin.xml
-alert TCP any any -> any any (msg:TCP ACK Flood; content:"456"; sid:4038003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:TCP ACK Flood; content:"456"; sid:4038006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FloodUDPservice.xml
-alert UDP any any -> any any (msg:UDP Service Flood; content:"456"; sid:4038004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:UDP Service Flood; content:"456"; sid:4038007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FloodUDPservice_liuyin.xml
-alert UDP any any -> any any (msg:UDP Service Flood; content:"456"; sid:4038005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:UDP Service Flood; content:"456"; sid:4038008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #IGRPreqflood.xml
-alert IP any any -> any any (msg:IGRP Request Flood; content:"456"; sid:4038006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IP any any -> any any (msg:IGRP Request Flood; content:"456"; sid:4038009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#IGRPreqflood_IPv6.xml
+alert IPv6 any any -> any any (msg:IGRP Request Flood (IPv6 Version); content:"456"; sid:4038010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #KshGetRootFlood.xml
-alert TCP any any -> any any (msg:KSH Get Root Flood; content:"456"; sid:4038007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#RSTFlood.xml
-alert TCP any any -> any any (msg:RST Flood; content:"456"; sid:4038008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#RSTFlood_liuyin.xml
-alert TCP any any -> any any (msg:RST Flood; content:"456"; sid:4038009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#RipAnnounceFlood1.xml
-alert RIPv1_Payload any any -> any any (msg:RIPv1 Announce Flood Static Source; content:"456"; sid:4038010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#RipAnnounceFlood2.xml
-alert RIPv1_Payload any any -> any any (msg:RIPv1 Announce Flood Random Source; content:"456"; sid:4038011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#RipReqFlood.xml
-alert UDP any any -> any any (msg:RIP Request Flood; content:"456"; sid:4038012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#SYNACKflood.xml
-alert TCP any any -> any any (msg:TCP SYN/ACK Flood; content:"456"; sid:4038013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#SYNFINflood.xml
-alert TCP any any -> any any (msg:TCP SYN FIN Flood; content:"456"; sid:4038014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#SYNRSTflood.xml
-alert TCP any any -> any any (msg:TCP SYN RST Flood; content:"456"; sid:4038015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#SYN_URG_flood.xml
-alert TCP any any -> any any (msg:Urgent SYN Flood; content:"456"; sid:4038016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#SYNflood.xml
-alert TCP any any -> any any (msg:TCP SYN Flood; content:"456"; sid:4038017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#SYNflood2.xml
-alert TCP any any -> any any (msg:TCP SYN Flood 2; content:"456"; sid:4038018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#SYNflood_liuyin.xml
-alert TCP any any -> any any (msg:TCP SYN Flood; content:"456"; sid:4038019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#SYNflood_modified.xml
-alert TCP any any -> any any (msg:TCP SYN Flood; content:"456"; sid:4038020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TCPstateFlood.xml
-alert TCP any any -> any any (msg:TCP State Flood; content:"456"; sid:4038021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#UPnP_Flood.xml
-alert UDP any any -> any any (msg:Microsoft Universal Plug and Play Denial of Service; content:"456"; sid:4038022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:KSH Get Root Flood; content:"456"; sid:4038011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #bashGetRootFlood.xml
-alert TCP any any -> any any (msg:Bash Get Root Flood; content:"456"; sid:4038023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Bash Get Root Flood; content:"456"; sid:4038012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#bashGetRootFlood_IPv6.xml
+alert TCP any any -> any any (msg:Bash Get Root Flood (IPv6 Version); content:"456"; sid:4038013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #cdpflood.xml
-alert CDP any any -> any any (msg:CDP Flood; content:"456"; sid:4038024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert CDP any any -> any any (msg:CDP Flood; content:"456"; sid:4038014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cdpflood_IPv6.xml
+alert CDP any any -> any any (msg:CDP Flood (IPv6 Version); content:"456"; sid:4038015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #cshGetRootFlood.xml
-alert TCP any any -> any any (msg:CSH Get Root Flood; content:"456"; sid:4038025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:CSH Get Root Flood; content:"456"; sid:4038016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cshGetRootFlood_IPv6.xml
+alert TCP any any -> any any (msg:CSH Get Root Flood (IPv6 Version); content:"456"; sid:4038017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #cwrflood.xml
-alert TCP any any -> any any (msg:TCP CWR Flood; content:"456"; sid:4038026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:TCP CWR Flood; content:"456"; sid:4038018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cwrflood_IPv6.xml
+alert TCP any any -> any any (msg:TCP CWR Flood (IPv6 Version); content:"456"; sid:4038019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #eceflood.xml
-alert TCP any any -> any any (msg:TCP ECE Flood; content:"456"; sid:4038027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:TCP ECE Flood; content:"456"; sid:4038020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#eceflood_IPv6.xml
+alert TCP any any -> any any (msg:TCP ECE Flood (IPv6 Version); content:"456"; sid:4038021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #finflood.xml
-alert TCP any any -> any any (msg:TCP FIN Flood; content:"456"; sid:4038028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:TCP FIN Flood; content:"456"; sid:4038022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#finflood_IPv6.xml
+alert TCP any any -> any any (msg:TCP FIN Flood (IPv6 Version); content:"456"; sid:4038023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #flagflood.xml
-alert TCP any any -> any any (msg:Erroneous Flags Flood; content:"456"; sid:4038029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Erroneous Flags Flood; content:"456"; sid:4038024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #hibyeflood.xml
-alert UDP any any -> any any (msg:SIP HI-BYE Flood; content:"456"; sid:4038030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIP HI-BYE Flood; content:"456"; sid:4038025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #hibyeflood.xml
-alert SIP_Bye any any -> any any (msg:SIP HI-BYE Flood; content:"456"; sid:4038031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Bye any any -> any any (msg:SIP HI-BYE Flood; content:"456"; sid:4038026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hibyeflood_IPv6.xml
+alert SIP_Bye any any -> any any (msg:SIP HI-BYE Flood (IPv6 Version); content:"456"; sid:4038027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hibyeflood_IPv6.xml
+alert UDP any any -> any any (msg:SIP HI-BYE Flood (IPv6 Version); content:"456"; sid:4038028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_ack_flood.xml
-alert Ethernet any any -> any any (msg:ACK Flood IPv6; content:"456"; sid:4038032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:ACK Flood IPv6; content:"456"; sid:4038029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_ack_flood.xml
-alert IPv6 any any -> any any (msg:ACK Flood IPv6; content:"456"; sid:4038033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert Ethernet any any -> any any (msg:ACK Flood IPv6; content:"456"; sid:4038030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_ack_flood.xml
-alert TCP any any -> any any (msg:ACK Flood IPv6; content:"456"; sid:4038034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IPv6 any any -> any any (msg:ACK Flood IPv6; content:"456"; sid:4038031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_cwr_flood.xml
-alert IPv6 any any -> any any (msg:CWR Flood IPv6; content:"456"; sid:4038035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert Ethernet any any -> any any (msg:CWR Flood IPv6; content:"456"; sid:4038032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_cwr_flood.xml
-alert TCP any any -> any any (msg:CWR Flood IPv6; content:"456"; sid:4038036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IPv6 any any -> any any (msg:CWR Flood IPv6; content:"456"; sid:4038033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_cwr_flood.xml
-alert Ethernet any any -> any any (msg:CWR Flood IPv6; content:"456"; sid:4038037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:CWR Flood IPv6; content:"456"; sid:4038034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_ece_flood.xml
-alert TCP any any -> any any (msg:ECE Flood IPv6; content:"456"; sid:4038038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert Ethernet any any -> any any (msg:ECE Flood IPv6; content:"456"; sid:4038035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_ece_flood.xml
-alert Ethernet any any -> any any (msg:ECE Flood IPv6; content:"456"; sid:4038039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IPv6 any any -> any any (msg:ECE Flood IPv6; content:"456"; sid:4038036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_ece_flood.xml
-alert IPv6 any any -> any any (msg:ECE Flood IPv6; content:"456"; sid:4038040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:ECE Flood IPv6; content:"456"; sid:4038037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_fin_flood.xml
-alert Ethernet any any -> any any (msg:FIN Flood IPv6; content:"456"; sid:4038041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert Ethernet any any -> any any (msg:FIN Flood IPv6; content:"456"; sid:4038038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_fin_flood.xml
-alert IPv6 any any -> any any (msg:FIN Flood IPv6; content:"456"; sid:4038042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IPv6 any any -> any any (msg:FIN Flood IPv6; content:"456"; sid:4038039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_fin_flood.xml
-alert TCP any any -> any any (msg:FIN Flood IPv6; content:"456"; sid:4038043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:FIN Flood IPv6; content:"456"; sid:4038040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_first_frag_flood.xml
-alert IPv6 any any -> any any (msg:IPv6 First Fragment Flood; content:"456"; sid:4038044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IPv6 any any -> any any (msg:IPv6 First Fragment Flood; content:"456"; sid:4038041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_frag_flood.xml
-alert IPv6 any any -> any any (msg:IPv6 Fragment Flood; content:"456"; sid:4038045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IPv6 any any -> any any (msg:IPv6 Fragment Flood; content:"456"; sid:4038042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_ping_flood.xml
-alert Ethernet any any -> any any (msg:IPv6 Ping Flood; content:"456"; sid:4038046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert Ethernet any any -> any any (msg:IPv6 Ping Flood; content:"456"; sid:4038043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_rst_flood.xml
-alert IPv6 any any -> any any (msg:RST Flood IPv6; content:"456"; sid:4038047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert Ethernet any any -> any any (msg:RST Flood IPv6; content:"456"; sid:4038044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_rst_flood.xml
-alert TCP any any -> any any (msg:RST Flood IPv6; content:"456"; sid:4038048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IPv6 any any -> any any (msg:RST Flood IPv6; content:"456"; sid:4038045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_rst_flood.xml
-alert Ethernet any any -> any any (msg:RST Flood IPv6; content:"456"; sid:4038049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:RST Flood IPv6; content:"456"; sid:4038046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_syn_flood1.xml
-alert Ethernet any any -> any any (msg:IPv6 SYN Flood; content:"456"; sid:4038050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert Ethernet any any -> any any (msg:IPv6 SYN Flood; content:"456"; sid:4038047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_syn_flood1.xml
-alert IPv6 any any -> any any (msg:IPv6 SYN Flood; content:"456"; sid:4038051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IPv6 any any -> any any (msg:IPv6 SYN Flood; content:"456"; sid:4038048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_syn_flood1.xml
-alert TCP any any -> any any (msg:IPv6 SYN Flood; content:"456"; sid:4038052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:IPv6 SYN Flood; content:"456"; sid:4038049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_syn_flood2.xml
-alert Ethernet any any -> any any (msg:IPv6 SYN Flood 2; content:"456"; sid:4038053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert Ethernet any any -> any any (msg:IPv6 SYN Flood 2; content:"456"; sid:4038050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_syn_flood2.xml
-alert IPv6 any any -> any any (msg:IPv6 SYN Flood 2; content:"456"; sid:4038054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IPv6 any any -> any any (msg:IPv6 SYN Flood 2; content:"456"; sid:4038051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_syn_flood2.xml
-alert TCP any any -> any any (msg:IPv6 SYN Flood 2; content:"456"; sid:4038055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:IPv6 SYN Flood 2; content:"456"; sid:4038052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_urg_flood.xml
-alert Ethernet any any -> any any (msg:URG Flood IPv6; content:"456"; sid:4038056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert Ethernet any any -> any any (msg:URG Flood IPv6; content:"456"; sid:4038053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_urg_flood.xml
-alert IPv6 any any -> any any (msg:URG Flood IPv6; content:"456"; sid:4038057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IPv6 any any -> any any (msg:URG Flood IPv6; content:"456"; sid:4038054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ipv6_urg_flood.xml
-alert TCP any any -> any any (msg:URG Flood IPv6; content:"456"; sid:4038058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#my111SYNACKflood.xml
-alert TCP any any -> any any (msg:TCP SYN/ACK Flood; content:"456"; sid:4038059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#mySYNACKflood.xml
-alert TCP any any -> any any (msg:TCP SYN/ACK Flood; content:"456"; sid:4038060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#pshAckFlood.xml
-alert TCP any any -> any any (msg:TCP PSH/ACK Flood; content:"456"; sid:4038061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#radiusAuthFlood.xml
-alert UDP any any -> any any (msg:Radius Authentication Flood; content:"456"; sid:4038062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipbyeflood.xml
-alert SIP_Bye any any -> any any (msg:SIP BYE Flood; content:"456"; sid:4038063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipcancelflood.xml
-alert SIP_Cancel any any -> any any (msg:SIP CANCEL Flood; content:"456"; sid:4038064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipkeepaliveflood.xml
-alert UDP any any -> any any (msg:SIP Keepalive Flood; content:"456"; sid:4038065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipregisterflood.xml
-alert SIP_Register any any -> any any (msg:SIP Register Flood; content:"456"; sid:4038066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#syslogFlood.xml
-alert UDP any any -> any any (msg:Syslog Message Flood; content:"456"; sid:4038067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#urgFlood.xml
-alert TCP any any -> any any (msg:TCP URG Flood; content:"456"; sid:4038068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#vlanflood.xml
-alert VLAN_Ethernet any any -> any any (msg:VLAN Flood; content:"456"; sid:4038069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:URG Flood IPv6; content:"456"; sid:4038055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

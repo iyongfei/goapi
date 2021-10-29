@@ -3,1304 +3,1014 @@
 #FSC20040217-01_Microsoft_Internet_Explorer_Malformed_BMP_File_Buffer_Overrun_Vulnerability.xml
 alert TCP any any -> any any (msg:Microsoft Internet Explorer Malformed BMP File Buffer Overrun Vulnerability; content:"456"; sid:4044000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#FSC20040217-01_Microsoft_Internet_Explorer_Malformed_BMP_File_Buffer_Overrun_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Malformed BMP File Buffer Overrun Vulnerability (IPv6 Version); content:"456"; sid:4044001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #FSC20040309-02_Microsoft_Outlook_2002_Script_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Outlook 2002 Script Execution; content:"456"; sid:4044001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Outlook 2002 Script Execution; content:"456"; sid:4044002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040309-02_Microsoft_Outlook_2002_Script_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Outlook 2002 Script Execution (IPv6 Version); content:"456"; sid:4044003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040421-01_Microsoft_HSC_URL_RemoteCodeExecution.xml
-alert TCP any any -> any any (msg:Microsoft HSC URL RemoteCodeExecution; content:"456"; sid:4044002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft HSC URL RemoteCodeExecution; content:"456"; sid:4044004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040421-01_Microsoft_HSC_URL_RemoteCodeExecution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft HSC URL RemoteCodeExecution (IPv6 Version); content:"456"; sid:4044005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040511-02_Microsoft_HSC_URL_RemoteCodeExecution2.xml
-alert TCP any any -> any any (msg:Microsoft HSC URL RemoteCodeExecution2; content:"456"; sid:4044003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft HSC URL RemoteCodeExecution2; content:"456"; sid:4044006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040511-02_Microsoft_HSC_URL_RemoteCodeExecution2_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft HSC URL RemoteCodeExecution2 (IPv6 Version); content:"456"; sid:4044007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040712-01_Microsoft_Outlook_-_Word_Object_Tag_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Outlook - Word Object Tag Vulnerability; content:"456"; sid:4044004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Outlook - Word Object Tag Vulnerability; content:"456"; sid:4044008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040712-01_Microsoft_Outlook_-_Word_Object_Tag_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Outlook - Word Object Tag Vulnerability (IPv6 Version); content:"456"; sid:4044009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040713-02_Microsoft_showHelp_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft showHelp Vulnerability; content:"456"; sid:4044005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft showHelp Vulnerability; content:"456"; sid:4044010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040713-02_Microsoft_showHelp_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft showHelp Vulnerability (IPv6 Version); content:"456"; sid:4044011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040803-01_Microsoft_Internet_Explorer_Malformed_GIF_File_Double_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Malformed GIF File Double Free Vulnerability; content:"456"; sid:4044006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Malformed GIF File Double Free Vulnerability; content:"456"; sid:4044012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040803-01_Microsoft_Internet_Explorer_Malformed_GIF_File_Double_Free_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Malformed GIF File Double Free Vulnerability (IPv6 Version); content:"456"; sid:4044013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040914-02_Microsoft_JPEG_Processing_Buffer_Overrun.xml
-alert TCP any any -> any any (msg:Microsoft JPEG Processing Buffer Overflow; content:"456"; sid:4044007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft JPEG Processing Buffer Overflow; content:"456"; sid:4044014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040914-02_Microsoft_JPEG_Processing_Buffer_Overrun_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft JPEG Processing Buffer Overflow (IPv6 Version); content:"456"; sid:4044015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20041008-01_Microsoft_ASP_NET_Canonicalization_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft ASP.NET Canonicalization Vulnerability; content:"456"; sid:4044008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft ASP.NET Canonicalization Vulnerability; content:"456"; sid:4044016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20041008-01_Microsoft_ASP_NET_Canonicalization_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft ASP.NET Canonicalization Vulnerability (IPv6 Version); content:"456"; sid:4044017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20041012-03_Microsoft_Internet_Explorer_CSS_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Memory Corruption; content:"456"; sid:4044009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Memory Corruption; content:"456"; sid:4044018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20041012-03_Microsoft_Internet_Explorer_CSS_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Memory Corruption (IPv6 Version); content:"456"; sid:4044019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20041101-01_Microsoft_Internet_Explorer_Status_Bar_URL_Spoofing.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Status Bar URL Spoofing; content:"456"; sid:4044010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Status Bar URL Spoofing; content:"456"; sid:4044020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20041101-01_Microsoft_Internet_Explorer_Status_Bar_URL_Spoofing_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Status Bar URL Spoofing (IPv6 Version); content:"456"; sid:4044021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20041118-01_Microsoft_Internet_Explorer_execCommand_File_Type_Spoofing.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer execCommand File Type Spoofing; content:"456"; sid:4044011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer execCommand File Type Spoofing; content:"456"; sid:4044022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20041118-01_Microsoft_Internet_Explorer_execCommand_File_Type_Spoofing_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer execCommand File Type Spoofing (IPv6 Version); content:"456"; sid:4044023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20050412-02_Microsoft_Windows_IP_Validation_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Windows IP Validation Vulnerability; content:"456"; sid:4044012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows IP Validation Vulnerability; content:"456"; sid:4044024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20050412-02_Microsoft_Windows_IP_Validation_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows IP Validation Vulnerability (IPv6 Version); content:"456"; sid:4044025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060214-05_Microsoft_Windows_Media_Player_Plug-in_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media Player Plug-in Vulnerability; content:"456"; sid:4044013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Media Player Plug-in Vulnerability; content:"456"; sid:4044026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060214-05_Microsoft_Windows_Media_Player_Plug-in_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Media Player Plug-in Vulnerability (IPv6 Version); content:"456"; sid:4044027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060217-04_Microsoft_Internet_Explorer_Script_Engine_Stack_Exhaustion.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Script Engine Stack Exhaustion; content:"456"; sid:4044014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Script Engine Stack Exhaustion; content:"456"; sid:4044028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060217-04_Microsoft_Internet_Explorer_Script_Engine_Stack_Exhaustion_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Script Engine Stack Exhaustion (IPv6 Version); content:"456"; sid:4044029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060314-07_Microsoft_Excel_Malformed_Range_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Malformed Range Code Execution; content:"456"; sid:4044015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Range Code Execution; content:"456"; sid:4044030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060314-07_Microsoft_Excel_Malformed_Range_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Range Code Execution (IPv6 Version); content:"456"; sid:4044031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060314-08_Microsoft_Excel_Malformed_File_Format_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Malformed File Format Parsing Code Execution; content:"456"; sid:4044016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Malformed File Format Parsing Code Execution; content:"456"; sid:4044032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060314-08_Microsoft_Excel_Malformed_File_Format_Parsing_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Malformed File Format Parsing Code Execution (IPv6 Version); content:"456"; sid:4044033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060314-10_Microsoft_Excel_Malformed_Graphic_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Malformed Graphic Code Execution; content:"456"; sid:4044017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Graphic Code Execution; content:"456"; sid:4044034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060314-10_Microsoft_Excel_Malformed_Graphic_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Graphic Code Execution (IPv6 Version); content:"456"; sid:4044035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060314-11_Microsoft_Excel_Malformed_Record_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Malformed Record Code Execution; content:"456"; sid:4044018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Record Code Execution; content:"456"; sid:4044036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060314-11_Microsoft_Excel_Malformed_Record_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Record Code Execution (IPv6 Version); content:"456"; sid:4044037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060314-12_Microsoft_Office_Malformed_Routing_Slip_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Malformed Routing Slip Code Execution; content:"456"; sid:4044019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Malformed Routing Slip Code Execution; content:"456"; sid:4044038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060314-12_Microsoft_Office_Malformed_Routing_Slip_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Office Malformed Routing Slip Code Execution (IPv6 Version); content:"456"; sid:4044039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060322-08_Microsoft_Internet_Explorer_createTextRange_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer createTextRange Code Execution; content:"456"; sid:4044020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer createTextRange Code Execution; content:"456"; sid:4044040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060322-08_Microsoft_Internet_Explorer_createTextRange_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer createTextRange Code Execution (IPv6 Version); content:"456"; sid:4044041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060403-11_Microsoft_Internet_Explorer_Plugin_Loading_Address_Bar_Spoofing.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Plugin Loading Address Bar Spoofing; content:"456"; sid:4044021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Plugin Loading Address Bar Spoofing; content:"456"; sid:4044042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060403-11_Microsoft_Internet_Explorer_Plugin_Loading_Address_Bar_Spoofing_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Plugin Loading Address Bar Spoofing (IPv6 Version); content:"456"; sid:4044043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060411-15_Microsoft_Internet_Explorer_HTML_Tag_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Tag Memory Corruption; content:"456"; sid:4044022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Tag Memory Corruption; content:"456"; sid:4044044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060411-15_Microsoft_Internet_Explorer_HTML_Tag_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Tag Memory Corruption (IPv6 Version); content:"456"; sid:4044045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060411-20_Microsoft_Outlook_Express_Windows_Address_Book_File_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Outlook Express Windows Address Book File Vulnerability; content:"456"; sid:4044023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Outlook Express Windows Address Book File Vulnerability; content:"456"; sid:4044046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060411-20_Microsoft_Outlook_Express_Windows_Address_Book_File_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Outlook Express Windows Address Book File Vulnerability (IPv6 Version); content:"456"; sid:4044047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060424-01_Microsoft_Internet_Explorer_Nested_Object_Tag_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Nested Object Tag Handling Memory Corruption; content:"456"; sid:4044024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Nested Object Tag Handling Memory Corruption; content:"456"; sid:4044048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060424-01_Microsoft_Internet_Explorer_Nested_Object_Tag_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Nested Object Tag Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060509-15_Microsoft_Windows_itss_dll_CHM_File_Handling_Heap_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows itss.dll CHM File Handling Heap Corruption; content:"456"; sid:4044025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows itss.dll CHM File Handling Heap Corruption; content:"456"; sid:4044050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060509-15_Microsoft_Windows_itss_dll_CHM_File_Handling_Heap_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows itss.dll CHM File Handling Heap Corruption (IPv6 Version); content:"456"; sid:4044051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060519-09_Microsoft_Word_Smart_Tags_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Word Smart Tags Code Execution; content:"456"; sid:4044026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word Smart Tags Code Execution; content:"456"; sid:4044052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060613-07_Microsoft_Internet_Explorer_HTML_Decoding_Memory_Corruption_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Decoding Memory Corruption; content:"456"; sid:4044027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Decoding Memory Corruption; content:"456"; sid:4044053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060613-07_Microsoft_Internet_Explorer_HTML_Decoding_Memory_Corruption_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Decoding Memory Corruption (IPv6 Version); content:"456"; sid:4044054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060613-09_Microsoft_Internet_Explorer_COM_Object_Instantiation_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption; content:"456"; sid:4044028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption; content:"456"; sid:4044055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060613-09_Microsoft_Internet_Explorer_COM_Object_Instantiation_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption (IPv6 Version); content:"456"; sid:4044056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060620-09_Microsoft_Excel_Embedded_Shockwave_Flash_Object_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Embedded Shockwave Flash Object Code Execution; content:"456"; sid:4044029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Embedded Shockwave Flash Object Code Execution; content:"456"; sid:4044057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060620-09_Microsoft_Excel_Embedded_Shockwave_Flash_Object_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Embedded Shockwave Flash Object Code Execution (IPv6 Version); content:"456"; sid:4044058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060627-02_Microsoft_Internet_Explorer_Cross_Domain_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Cross Domain Information Disclosure; content:"456"; sid:4044030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Cross Domain Information Disclosure; content:"456"; sid:4044059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060627-02_Microsoft_Internet_Explorer_Cross_Domain_Information_Disclosure_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Cross Domain Information Disclosure (IPv6 Version); content:"456"; sid:4044060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060704-01_Microsoft_Internet_Explorer_HHCtrl_ocx_Image_Property_Heap_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HHCtrl.ocx Image Property Heap Corruption; content:"456"; sid:4044031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HHCtrl.ocx Image Property Heap Corruption; content:"456"; sid:4044061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060704-01_Microsoft_Internet_Explorer_HHCtrl_ocx_Image_Property_Heap_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HHCtrl.ocx Image Property Heap Corruption (IPv6 Version); content:"456"; sid:4044062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060707-14_Microsoft_Word_mso_dll_LsCreateLine_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Word mso.dll LsCreateLine Memory Corruption; content:"456"; sid:4044032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word mso.dll LsCreateLine Memory Corruption; content:"456"; sid:4044063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060707-14_Microsoft_Word_mso_dll_LsCreateLine_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Word mso.dll LsCreateLine Memory Corruption (IPv6 Version); content:"456"; sid:4044064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060711-08_Microsoft_ASP_NET_Application_Folder_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft ASP.NET Application Folder Information Disclosure; content:"456"; sid:4044033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft ASP.NET Application Folder Information Disclosure; content:"456"; sid:4044065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060711-08_Microsoft_ASP_NET_Application_Folder_Information_Disclosure_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft ASP.NET Application Folder Information Disclosure (IPv6 Version); content:"456"; sid:4044066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060711-13_Microsoft_Excel_Malformed_SELECTION_Record_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Malformed SELECTION Record Code Execution; content:"456"; sid:4044034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Malformed SELECTION Record Code Execution; content:"456"; sid:4044067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060711-13_Microsoft_Excel_Malformed_SELECTION_Record_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Malformed SELECTION Record Code Execution (IPv6 Version); content:"456"; sid:4044068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060711-16_Microsoft_Excel_Malformed_OBJECT_Record_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Malformed OBJECT Record Code Execution; content:"456"; sid:4044035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Malformed OBJECT Record Code Execution; content:"456"; sid:4044069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060711-16_Microsoft_Excel_Malformed_OBJECT_Record_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Malformed OBJECT Record Code Execution (IPv6 Version); content:"456"; sid:4044070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060711-17_Microsoft_Excel_Malformed_FNGROUPCOUNT_Value_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Malformed FNGROUPCOUNT Value Code Execution; content:"456"; sid:4044036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Malformed FNGROUPCOUNT Value Code Execution; content:"456"; sid:4044071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060711-17_Microsoft_Excel_Malformed_FNGROUPCOUNT_Value_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Malformed FNGROUPCOUNT Value Code Execution (IPv6 Version); content:"456"; sid:4044072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060711-25_Microsoft_Office_Malformed_GIF_File_Processing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Malformed GIF File Processing Code Execution; content:"456"; sid:4044037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Malformed GIF File Processing Code Execution; content:"456"; sid:4044073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060711-25_Microsoft_Office_Malformed_GIF_File_Processing_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Office Malformed GIF File Processing Code Execution (IPv6 Version); content:"456"; sid:4044074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060718-04_Microsoft_PowerPoint_PPT_File_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft PowerPoint PPT File Parsing Memory Corruption; content:"456"; sid:4044038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft PowerPoint PPT File Parsing Memory Corruption; content:"456"; sid:4044075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060718-04_Microsoft_PowerPoint_PPT_File_Parsing_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft PowerPoint PPT File Parsing Memory Corruption (IPv6 Version); content:"456"; sid:4044076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070104-11_Microsoft_XML_Core_Services_MIME_Viewer_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft XML Core Services MIME Viewer Memory Corruption; content:"456"; sid:4044039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft XML Core Services MIME Viewer Memory Corruption; content:"456"; sid:4044077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070109-11_Microsoft_Internet_Explorer_VML_Buffer_Overrun_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer VML Buffer Overrun Vulnerability; content:"456"; sid:4044040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer VML Buffer Overrun Vulnerability; content:"456"; sid:4044078; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070109-11_Microsoft_Internet_Explorer_VML_Buffer_Overrun_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer VML Buffer Overrun Vulnerability (IPv6 Version); content:"456"; sid:4044079; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070109-16_Microsoft_Excel_Column_Record_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Column Record Handling Memory Corruption; content:"456"; sid:4044041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Column Record Handling Memory Corruption; content:"456"; sid:4044080; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070109-16_Microsoft_Excel_Column_Record_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Column Record Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044081; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070109-17_Microsoft_Excel_Malformed_Palette_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel Malformed Palette Record Memory Corruption; content:"456"; sid:4044042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Palette Record Memory Corruption; content:"456"; sid:4044082; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070109-17_Microsoft_Excel_Malformed_Palette_Record_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Palette Record Memory Corruption (IPv6 Version); content:"456"; sid:4044083; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070213-12_Microsoft_Internet_Explorer_COM_Object_Instantiation_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption; content:"456"; sid:4044043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption; content:"456"; sid:4044084; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070213-12_Microsoft_Internet_Explorer_COM_Object_Instantiation_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption (IPv6 Version); content:"456"; sid:4044085; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070213-15_Microsoft_Internet_Explorer_COM_Object_Instantiation_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption; content:"456"; sid:4044044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption; content:"456"; sid:4044086; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070213-15_Microsoft_Internet_Explorer_COM_Object_Instantiation_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption (IPv6 Version); content:"456"; sid:4044087; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070214-18_Microsoft_Word_Document_Stream_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Word Document Stream Handling Code Execution; content:"456"; sid:4044045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word Document Stream Handling Code Execution; content:"456"; sid:4044088; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070214-18_Microsoft_Word_Document_Stream_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Word Document Stream Handling Code Execution (IPv6 Version); content:"456"; sid:4044089; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070314-16_Microsoft_Internet_Explorer_7_Navigation_Canceled_Page_Cross-Site_Scripting.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer 7 Navigation Canceled Page Cross-Site Scripting; content:"456"; sid:4044046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer 7 Navigation Canceled Page Cross-Site Scripting; content:"456"; sid:4044090; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070314-16_Microsoft_Internet_Explorer_7_Navigation_Canceled_Page_Cross-Site_Scripting_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer 7 Navigation Canceled Page Cross-Site Scripting (IPv6 Version); content:"456"; sid:4044091; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070323-01_Microsoft_Windows_Vista_Windows_Mail_File_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Vista Windows Mail File Execution; content:"456"; sid:4044047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Vista Windows Mail File Execution; content:"456"; sid:4044092; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070323-01_Microsoft_Windows_Vista_Windows_Mail_File_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Vista Windows Mail File Execution (IPv6 Version); content:"456"; sid:4044093; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070409-05_Microsoft_Word_TextBox_Sub-document_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Word TextBox Sub-document Memory Corruption; content:"456"; sid:4044048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word TextBox Sub-document Memory Corruption; content:"456"; sid:4044094; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070409-05_Microsoft_Word_TextBox_Sub-document_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Word TextBox Sub-document Memory Corruption (IPv6 Version); content:"456"; sid:4044095; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070508-11_Microsoft_Exchange_Server_MIME_Base64_Decoding_Code_Execution_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Exchange Server MIME Base64 Decoding Code Execution Vulnerability; content:"456"; sid:4044049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Exchange Server MIME Base64 Decoding Code Execution Vulnerability; content:"456"; sid:4044096; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070508-11_Microsoft_Exchange_Server_MIME_Base64_Decoding_Code_Execution_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Exchange Server MIME Base64 Decoding Code Execution Vulnerability (IPv6 Version); content:"456"; sid:4044097; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070508-15_Microsoft_Office_Drawing_Object_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Drawing Object Code Execution; content:"456"; sid:4044050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Drawing Object Code Execution; content:"456"; sid:4044098; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070508-19_Microsoft_Excel_Set_Font_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Set Font Handling Code Execution; content:"456"; sid:4044051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Set Font Handling Code Execution; content:"456"; sid:4044099; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070508-19_Microsoft_Excel_Set_Font_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Set Font Handling Code Execution (IPv6 Version); content:"456"; sid:4044100; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070508-20_Microsoft_Excel_Malformed_Filter_Records_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Malformed Filter Records Handling Code Execution; content:"456"; sid:4044052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Filter Records Handling Code Execution; content:"456"; sid:4044101; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070508-20_Microsoft_Excel_Malformed_Filter_Records_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Filter Records Handling Code Execution (IPv6 Version); content:"456"; sid:4044102; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070508-22_Microsoft_Internet_Explorer_Table_Column_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Table Column Memory Corruption; content:"456"; sid:4044053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Table Column Memory Corruption; content:"456"; sid:4044103; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070508-22_Microsoft_Internet_Explorer_Table_Column_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Table Column Memory Corruption (IPv6 Version); content:"456"; sid:4044104; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070508-23_Microsoft_Internet_Explorer_CSS_Property_Method_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Property Method Handling Memory Corruption; content:"456"; sid:4044054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Property Method Handling Memory Corruption; content:"456"; sid:4044105; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070508-23_Microsoft_Internet_Explorer_CSS_Property_Method_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Property Method Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044106; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070604-06_Microsoft_Internet_Explorer_Javascript_Page_Update_Race_Condition.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Javascript Page Update Race Condition; content:"456"; sid:4044055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Javascript Page Update Race Condition; content:"456"; sid:4044107; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070612-08_Microsoft_Visio_Version_Number_Handling_Code_Execution_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Visio Version Number Handling Code Execution Vulnerability; content:"456"; sid:4044056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Visio Version Number Handling Code Execution Vulnerability; content:"456"; sid:4044108; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070612-08_Microsoft_Visio_Version_Number_Handling_Code_Execution_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Visio Version Number Handling Code Execution Vulnerability (IPv6 Version); content:"456"; sid:4044109; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070612-09_Microsoft_Windows_Schannel_Security_Package_Code_Execution_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Windows Schannel Security Package Code Execution Vulnerability; content:"456"; sid:4044057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Schannel Security Package Code Execution Vulnerability; content:"456"; sid:4044110; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070612-09_Microsoft_Windows_Schannel_Security_Package_Code_Execution_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Schannel Security Package Code Execution Vulnerability (IPv6 Version); content:"456"; sid:4044111; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070612-10_Microsoft_Windows_Win32_API_Code_Execution_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Windows Win32 API Code Execution Vulnerability; content:"456"; sid:4044058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Win32 API Code Execution Vulnerability; content:"456"; sid:4044112; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070612-10_Microsoft_Windows_Win32_API_Code_Execution_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Win32 API Code Execution Vulnerability (IPv6 Version); content:"456"; sid:4044113; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070612-11_Microsoft_Visio_Packed_Object_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Visio Packed Object Parsing Memory Corruption; content:"456"; sid:4044059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Visio Packed Object Parsing Memory Corruption; content:"456"; sid:4044114; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070612-11_Microsoft_Visio_Packed_Object_Parsing_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Visio Packed Object Parsing Memory Corruption (IPv6 Version); content:"456"; sid:4044115; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070612-12_Microsoft_Internet_Explorer_COM_Object_Instantiation_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption; content:"456"; sid:4044060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption; content:"456"; sid:4044116; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070612-12_Microsoft_Internet_Explorer_COM_Object_Instantiation_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer COM Object Instantiation Memory Corruption (IPv6 Version); content:"456"; sid:4044117; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070612-14_Microsoft_Internet_Explorer_CSS_Tag_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Tag Handling Memory Corruption; content:"456"; sid:4044061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Tag Handling Memory Corruption; content:"456"; sid:4044118; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070612-14_Microsoft_Internet_Explorer_CSS_Tag_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Tag Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044119; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070703-08_Microsoft_Excel_Sheet_Name_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel Sheet Name Memory Corruption; content:"456"; sid:4044062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Sheet Name Memory Corruption; content:"456"; sid:4044120; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070703-08_Microsoft_Excel_Sheet_Name_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Sheet Name Memory Corruption (IPv6 Version); content:"456"; sid:4044121; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070710-12_Microsoft_Excel_Version_Information_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Version Information Handling Code Execution; content:"456"; sid:4044063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Version Information Handling Code Execution; content:"456"; sid:4044122; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070710-12_Microsoft_Excel_Version_Information_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Version Information Handling Code Execution (IPv6 Version); content:"456"; sid:4044123; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070710-14_Microsoft_Excel_rtWindow1_Record_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel rtWindow1 Record Handling Code Execution; content:"456"; sid:4044064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel rtWindow1 Record Handling Code Execution; content:"456"; sid:4044124; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070710-14_Microsoft_Excel_rtWindow1_Record_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel rtWindow1 Record Handling Code Execution (IPv6 Version); content:"456"; sid:4044125; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070710-16_Microsoft_Excel_Workbook_Workspace_Designation_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Workbook Workspace Designation Handling Code Execution; content:"456"; sid:4044065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Workbook Workspace Designation Handling Code Execution; content:"456"; sid:4044126; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070710-16_Microsoft_Excel_Workbook_Workspace_Designation_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Workbook Workspace Designation Handling Code Execution (IPv6 Version); content:"456"; sid:4044127; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070710-18_Microsoft__NET_Framework_CLI_Loader_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft .NET Framework CLI Loader Memory Corruption; content:"456"; sid:4044066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft .NET Framework CLI Loader Memory Corruption; content:"456"; sid:4044128; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070710-18_Microsoft__NET_Framework_CLI_Loader_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft .NET Framework CLI Loader Memory Corruption (IPv6 Version); content:"456"; sid:4044129; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070716-17_Microsoft_Internet_Explorer_OnBeforeUnload_JavaScript_Address_Bar_Spoofing.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer OnBeforeUnload JavaScript Address Bar Spoofing; content:"456"; sid:4044067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer OnBeforeUnload JavaScript Address Bar Spoofing; content:"456"; sid:4044130; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070716-17_Microsoft_Internet_Explorer_OnBeforeUnload_JavaScript_Address_Bar_Spoofing_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer OnBeforeUnload JavaScript Address Bar Spoofing (IPv6 Version); content:"456"; sid:4044131; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070814-05_Microsoft_Excel_Workspace_Index_Value_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel Workspace Index Value Memory Corruption; content:"456"; sid:4044068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Workspace Index Value Memory Corruption; content:"456"; sid:4044132; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070814-05_Microsoft_Excel_Workspace_Index_Value_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Workspace Index Value Memory Corruption (IPv6 Version); content:"456"; sid:4044133; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070814-08_Microsoft_Internet_Explorer_CSS_Strings_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Strings Parsing Memory Corruption; content:"456"; sid:4044069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Strings Parsing Memory Corruption; content:"456"; sid:4044134; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070814-09_Microsoft_Windows_Graphics_Rendering_Engine_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Graphics Rendering Engine Code Execution; content:"456"; sid:4044070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Graphics Rendering Engine Code Execution; content:"456"; sid:4044135; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070814-09_Microsoft_Windows_Graphics_Rendering_Engine_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Graphics Rendering Engine Code Execution (IPv6 Version); content:"456"; sid:4044136; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070814-13_Microsoft_Windows_Media_Player_Skin_Decompression_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media Player Skin Decompression Code Execution; content:"456"; sid:4044071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Media Player Skin Decompression Code Execution; content:"456"; sid:4044137; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070814-13_Microsoft_Windows_Media_Player_Skin_Decompression_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Media Player Skin Decompression Code Execution (IPv6 Version); content:"456"; sid:4044138; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070814-15_Microsoft_Windows_Vista_Feed_Headlines_Gadget_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Vista Feed Headlines Gadget Code Execution; content:"456"; sid:4044072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Vista Feed Headlines Gadget Code Execution; content:"456"; sid:4044139; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070814-15_Microsoft_Windows_Vista_Feed_Headlines_Gadget_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Vista Feed Headlines Gadget Code Execution (IPv6 Version); content:"456"; sid:4044140; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070911-10_Microsoft_Visual_Studio_Crystal_Reports_RPT_File_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Visual Studio Crystal Reports RPT File Handling Code Execution; content:"456"; sid:4044073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Visual Studio Crystal Reports RPT File Handling Code Execution; content:"456"; sid:4044141; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070911-10_Microsoft_Visual_Studio_Crystal_Reports_RPT_File_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Visual Studio Crystal Reports RPT File Handling Code Execution (IPv6 Version); content:"456"; sid:4044142; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070911_Microsoft_Visual_Studio_Crystal_Reports_RPT_File_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Visual Studio Crystal Reports RPT File Handling Code Execution; content:"456"; sid:4044074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Visual Studio Crystal Reports RPT File Handling Code Execution; content:"456"; sid:4044143; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071009-16_Microsoft_Windows_Kodak_Image_Viewer_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Kodak Image Viewer Code Execution; content:"456"; sid:4044075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Kodak Image Viewer Code Execution; content:"456"; sid:4044144; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071009-16_Microsoft_Windows_Kodak_Image_Viewer_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Kodak Image Viewer Code Execution (IPv6 Version); content:"456"; sid:4044145; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071009-20_Microsoft_Windows_SharePoint_Services_Cross_Site_Scripting.xml
-alert TCP any any -> any any (msg:Microsoft Windows SharePoint Services Cross Site Scripting; content:"456"; sid:4044076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SharePoint Services Cross Site Scripting; content:"456"; sid:4044146; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071009-20_Microsoft_Windows_SharePoint_Services_Cross_Site_Scripting_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows SharePoint Services Cross Site Scripting (IPv6 Version); content:"456"; sid:4044147; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071009-21_Microsoft_Word_Malformed_String_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Word Malformed String Memory Corruption; content:"456"; sid:4044077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word Malformed String Memory Corruption; content:"456"; sid:4044148; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071009-21_Microsoft_Word_Malformed_String_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Word Malformed String Memory Corruption (IPv6 Version); content:"456"; sid:4044149; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071009-22_Microsoft_Internet_Explorer_Error_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Error Handling Code Execution; content:"456"; sid:4044078; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Error Handling Code Execution; content:"456"; sid:4044150; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071009-22_Microsoft_Internet_Explorer_Error_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Error Handling Code Execution (IPv6 Version); content:"456"; sid:4044151; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071211-08_Microsoft_Windows_Media_Format_ASF_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media Format ASF Parsing Code Execution; content:"456"; sid:4044079; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Media Format ASF Parsing Code Execution; content:"456"; sid:4044152; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071211-08_Microsoft_Windows_Media_Format_ASF_Parsing_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Media Format ASF Parsing Code Execution (IPv6 Version); content:"456"; sid:4044153; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071211-09_Microsoft_DirectX_SAMI_File_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft DirectX SAMI File Parsing Code Execution; content:"456"; sid:4044080; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft DirectX SAMI File Parsing Code Execution; content:"456"; sid:4044154; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071211-09_Microsoft_DirectX_SAMI_File_Parsing_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft DirectX SAMI File Parsing Code Execution (IPv6 Version); content:"456"; sid:4044155; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071211-10_Microsoft_Internet_Explorer_Object_Reference_Counting_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Object Reference Counting Memory Corruption; content:"456"; sid:4044081; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Object Reference Counting Memory Corruption; content:"456"; sid:4044156; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071211-10_Microsoft_Internet_Explorer_Object_Reference_Counting_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Object Reference Counting Memory Corruption (IPv6 Version); content:"456"; sid:4044157; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071211-11_Microsoft_Internet_Explorer_DHTML_Objects_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer DHTML Objects Memory Corruption; content:"456"; sid:4044082; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer DHTML Objects Memory Corruption; content:"456"; sid:4044158; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071211-11_Microsoft_Internet_Explorer_DHTML_Objects_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer DHTML Objects Memory Corruption (IPv6 Version); content:"456"; sid:4044159; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071211-13_Microsoft_DirectX_WAV_and_AVI_File_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft DirectX WAV and AVI File Parsing Code Execution; content:"456"; sid:4044083; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft DirectX WAV and AVI File Parsing Code Execution; content:"456"; sid:4044160; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071211-13_Microsoft_DirectX_WAV_and_AVI_File_Parsing_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft DirectX WAV and AVI File Parsing Code Execution (IPv6 Version); content:"456"; sid:4044161; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071211-14_Microsoft_Internet_Explorer_Clone_Object_Reference_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Clone Object Reference Memory Corruption; content:"456"; sid:4044084; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Clone Object Reference Memory Corruption; content:"456"; sid:4044162; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071211-14_Microsoft_Internet_Explorer_Clone_Object_Reference_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Clone Object Reference Memory Corruption (IPv6 Version); content:"456"; sid:4044163; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071211-15_Microsoft_Internet_Explorer_DOM_Object_Cache_Management_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer DOM Object Cache Management Memory Corruption; content:"456"; sid:4044085; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer DOM Object Cache Management Memory Corruption; content:"456"; sid:4044164; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071211-15_Microsoft_Internet_Explorer_DOM_Object_Cache_Management_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer DOM Object Cache Management Memory Corruption (IPv6 Version); content:"456"; sid:4044165; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080108-06_Microsoft_Windows_Kernel_IGMPv3_and_MLDv2_Request_Processing_Code_Execution.xml
-alert IP any any -> any any (msg:Microsoft Windows Kernel IGMPv3 and MLDv2 Request Processing Code Execution; content:"456"; sid:4044086; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert IP any any -> any any (msg:Microsoft Windows Kernel IGMPv3 and MLDv2 Request Processing Code Execution; content:"456"; sid:4044166; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080108-06_Microsoft_Windows_Kernel_IGMPv3_and_MLDv2_Request_Processing_Code_Execution_IPv6.xml
+alert IPv6 any any -> any any (msg:Microsoft Windows Kernel IGMPv3 and MLDv2 Request Processing Code Execution (IPv6 Version); content:"456"; sid:4044167; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080110-04_Microsoft_Rich_Textbox_Control_SaveFile_Insecure_Method_Arbitrary_File_Overwrite.xml
-alert TCP any any -> any any (msg:Microsoft Rich Textbox Control SaveFile Insecure Method Arbitrary File Overwrite; content:"456"; sid:4044087; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Rich Textbox Control SaveFile Insecure Method Arbitrary File Overwrite; content:"456"; sid:4044168; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080110-04_Microsoft_Rich_Textbox_Control_SaveFile_Insecure_Method_Arbitrary_File_Overwrite_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Rich Textbox Control SaveFile Insecure Method Arbitrary File Overwrite (IPv6 Version); content:"456"; sid:4044169; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080116-02_Microsoft_Excel_File_Handling_Code_Execution_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Excel File Handling Code Execution Vulnerability; content:"456"; sid:4044088; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel File Handling Code Execution Vulnerability; content:"456"; sid:4044170; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080116-02_Microsoft_Excel_File_Handling_Code_Execution_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel File Handling Code Execution Vulnerability (IPv6 Version); content:"456"; sid:4044171; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080212-08_Microsoft_Internet_Explorer_HTML_Rendering_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Rendering Memory Corruption; content:"456"; sid:4044089; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Rendering Memory Corruption; content:"456"; sid:4044172; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080212-08_Microsoft_Internet_Explorer_HTML_Rendering_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Rendering Memory Corruption (IPv6 Version); content:"456"; sid:4044173; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080212-11_Microsoft_Internet_Information_Services_ASP_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Internet Information Services ASP Handling Code Execution; content:"456"; sid:4044090; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Information Services ASP Handling Code Execution; content:"456"; sid:4044174; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080212-11_Microsoft_Internet_Information_Services_ASP_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Information Services ASP Handling Code Execution (IPv6 Version); content:"456"; sid:4044175; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080212-12_Microsoft_Windows_OLE_Automation_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows OLE Automation Remote Code Execution; content:"456"; sid:4044091; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows OLE Automation Remote Code Execution; content:"456"; sid:4044176; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080212-12_Microsoft_Windows_OLE_Automation_Remote_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows OLE Automation Remote Code Execution (IPv6 Version); content:"456"; sid:4044177; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080212-13_Microsoft_Internet_Explorer_ANIMATEMOTION_Properties_Assignment_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer ANIMATEMOTION Properties Assignment Memory Corruption; content:"456"; sid:4044092; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer ANIMATEMOTION Properties Assignment Memory Corruption; content:"456"; sid:4044178; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080212-13_Microsoft_Internet_Explorer_ANIMATEMOTION_Properties_Assignment_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer ANIMATEMOTION Properties Assignment Memory Corruption (IPv6 Version); content:"456"; sid:4044179; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080212-16_Microsoft_Internet_Explorer_Image_Processing_Argument_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Image Processing Argument Handling Memory Corruption; content:"456"; sid:4044093; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Image Processing Argument Handling Memory Corruption; content:"456"; sid:4044180; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080212-16_Microsoft_Internet_Explorer_Image_Processing_Argument_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Image Processing Argument Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044181; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080212-17_Microsoft_Word_File_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Word File Handling Memory Corruption; content:"456"; sid:4044094; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word File Handling Memory Corruption; content:"456"; sid:4044182; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080212-17_Microsoft_Word_File_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Word File Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044183; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080212-18_Microsoft_Office_Publisher_Invalid_Memory_Reference.xml
-alert TCP any any -> any any (msg:Microsoft Office Publisher Invalid Memory Reference; content:"456"; sid:4044095; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Publisher Invalid Memory Reference; content:"456"; sid:4044184; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080212-20_Microsoft_Works_File_Converter_WPS_File_Section_Length_Headers_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Works File Converter WPS File Section Length Headers Memory Corruption; content:"456"; sid:4044096; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Works File Converter WPS File Section Length Headers Memory Corruption; content:"456"; sid:4044185; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080212-22_Microsoft_Office_Works_File_Converter_WPS_File_Field_Length_Stack_Ove.xml
-alert TCP any any -> any any (msg:Microsoft Office Works File Converter WPS File Field Length Stack Overflow; content:"456"; sid:4044097; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Works File Converter WPS File Field Length Stack Overflow; content:"456"; sid:4044186; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080212-22_Microsoft_Office_Works_File_Converter_WPS_File_Field_Length_Stack_Ove_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Office Works File Converter WPS File Field Length Stack Overflow (IPv6 Version); content:"456"; sid:4044187; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080311-10_Microsoft_Excel_Data_Validation_Record_Processing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Data Validation Record Processing Code Execution; content:"456"; sid:4044098; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Data Validation Record Processing Code Execution; content:"456"; sid:4044188; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080311-12_Microsoft_Office_Outlook_mailto_URI_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Outlook mailto URI Handling Code Execution; content:"456"; sid:4044099; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Outlook mailto URI Handling Code Execution; content:"456"; sid:4044189; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080311-14_Microsoft_Office_Drawing_Shapes_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Drawing Shapes Handling Memory Corruption; content:"456"; sid:4044100; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Drawing Shapes Handling Memory Corruption; content:"456"; sid:4044190; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080311-15_Microsoft_Excel_File_Importing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel File Importing Code Execution; content:"456"; sid:4044101; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel File Importing Code Execution; content:"456"; sid:4044191; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080311-16_Microsoft_Excel_Style_Record_Data_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Style Record Data Handling Code Execution; content:"456"; sid:4044102; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Style Record Data Handling Code Execution; content:"456"; sid:4044192; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080311-18_Microsoft_Excel_Malformed_Formula_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Malformed Formula Parsing Code Execution; content:"456"; sid:4044103; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Malformed Formula Parsing Code Execution; content:"456"; sid:4044193; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080311-19_Microsoft_Excel_Rich_Text_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Rich Text Handling Code Execution; content:"456"; sid:4044104; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Rich Text Handling Code Execution; content:"456"; sid:4044194; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080311-20_Microsoft_Excel_Conditional_Formatting_Values_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Conditional Formatting Values Handling Code Execution; content:"456"; sid:4044105; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Conditional Formatting Values Handling Code Execution; content:"456"; sid:4044195; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080408-09_Microsoft_Project_Invalid_Memory_Pointer_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Project Invalid Memory Pointer Code Execution; content:"456"; sid:4044106; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Project Invalid Memory Pointer Code Execution; content:"456"; sid:4044196; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080408-11_Microsoft_Internet_Explorer_Data_Stream_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Data Stream Handling Memory Corruption; content:"456"; sid:4044107; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Data Stream Handling Memory Corruption; content:"456"; sid:4044197; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080408-11_Microsoft_Internet_Explorer_Data_Stream_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Data Stream Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044198; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080408-13_Microsoft_Windows_Scripting_Engines_Script_Encoding_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Scripting Engines Script Encoding Code Execution; content:"456"; sid:4044108; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Scripting Engines Script Encoding Code Execution; content:"456"; sid:4044199; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080408-13_Microsoft_Windows_Scripting_Engines_Script_Encoding_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Scripting Engines Script Encoding Code Execution (IPv6 Version); content:"456"; sid:4044200; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080408-16_Microsoft_Visio_DXF_File_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Visio DXF File Handling Code Execution; content:"456"; sid:4044109; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Visio DXF File Handling Code Execution; content:"456"; sid:4044201; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080408-16_Microsoft_Visio_DXF_File_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Visio DXF File Handling Code Execution (IPv6 Version); content:"456"; sid:4044202; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080513-06_Microsoft_Word_RTF_File_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Word RTF File Handling Memory Corruption; content:"456"; sid:4044110; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word RTF File Handling Memory Corruption; content:"456"; sid:4044203; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080513-07_Microsoft_Publisher_Object_Handler_Validation_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Publisher Object Handler Validation Code Execution; content:"456"; sid:4044111; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Publisher Object Handler Validation Code Execution; content:"456"; sid:4044204; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080513-08_Microsoft_Word_Cascading_Style_Sheet_Processing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Word Cascading Style Sheet Processing Code Execution; content:"456"; sid:4044112; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word Cascading Style Sheet Processing Code Execution; content:"456"; sid:4044205; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080610-09_Microsoft_DirectX_SAMI_Format_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft DirectX SAMI Format Parsing Code Execution; content:"456"; sid:4044113; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft DirectX SAMI Format Parsing Code Execution; content:"456"; sid:4044206; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080610-09_Microsoft_DirectX_SAMI_Format_Parsing_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft DirectX SAMI Format Parsing Code Execution (IPv6 Version); content:"456"; sid:4044207; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080610-13_Microsoft_DirectX_Crafted_MJPEG_Stream_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft DirectX Crafted MJPEG Stream Handling Code Execution; content:"456"; sid:4044114; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft DirectX Crafted MJPEG Stream Handling Code Execution; content:"456"; sid:4044208; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080610-15_Microsoft_Internet_Explorer_HTML_Objects_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Objects Memory Corruption; content:"456"; sid:4044115; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Objects Memory Corruption; content:"456"; sid:4044209; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080610-15_Microsoft_Internet_Explorer_HTML_Objects_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Objects Memory Corruption (IPv6 Version); content:"456"; sid:4044210; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080626-08_Microsoft_Internet_Explorer_Location_Property_Cross_Domain_Scripting.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Location Property Cross Domain Scripting; content:"456"; sid:4044116; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Location Property Cross Domain Scripting; content:"456"; sid:4044211; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080708-09_Microsoft_Windows_Explorer_Search-ms_File_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Explorer Search-ms File Parsing Code Execution; content:"456"; sid:4044117; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Explorer Search-ms File Parsing Code Execution; content:"456"; sid:4044212; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080708-09_Microsoft_Windows_Explorer_Search-ms_File_Parsing_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Explorer Search-ms File Parsing Code Execution (IPv6 Version); content:"456"; sid:4044213; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080709-06_Microsoft_Word_Crafted_SmartTag_Record_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Word Crafted SmartTag Record Code Execution; content:"456"; sid:4044118; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word Crafted SmartTag Record Code Execution; content:"456"; sid:4044214; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080709-06_Microsoft_Word_Crafted_SmartTag_Record_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Word Crafted SmartTag Record Code Execution (IPv6 Version); content:"456"; sid:4044215; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080812-07_Microsoft_Internet_Explorer_Print_Preview_Handling_Command_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Print Preview Handling Command Execution; content:"456"; sid:4044119; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Print Preview Handling Command Execution; content:"456"; sid:4044216; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080812-07_Microsoft_Internet_Explorer_Print_Preview_Handling_Command_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Print Preview Handling Command Execution (IPv6 Version); content:"456"; sid:4044217; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080812-08_Microsoft_PowerPoint_Viewer_Memory_Allocation_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft PowerPoint Viewer Memory Allocation Code Execution; content:"456"; sid:4044120; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft PowerPoint Viewer Memory Allocation Code Execution; content:"456"; sid:4044218; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080812-11_Microsoft_Excel_Axisparent_Record_Index_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Axisparent Record Index Handling Code Execution; content:"456"; sid:4044121; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel Axisparent Record Index Handling Code Execution; content:"456"; sid:4044219; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080812-11_Microsoft_Excel_Axisparent_Record_Index_Handling_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel Axisparent Record Index Handling Code Execution (IPv6 Version); content:"456"; sid:4044220; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080812-12_Microsoft_Excel_FORMAT_Record_Array_Index_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel FORMAT Record Array Index Memory Corruption; content:"456"; sid:4044122; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel FORMAT Record Array Index Memory Corruption; content:"456"; sid:4044221; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080812-12_Microsoft_Excel_FORMAT_Record_Array_Index_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel FORMAT Record Array Index Memory Corruption (IPv6 Version); content:"456"; sid:4044222; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080812-19_Microsoft_Internet_Explorer_Objects_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Objects Handling Memory Corruption; content:"456"; sid:4044123; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Objects Handling Memory Corruption; content:"456"; sid:4044223; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080812-19_Microsoft_Internet_Explorer_Objects_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Objects Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044224; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080812-20_Microsoft_Internet_Explorer_TextRange_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer TextRange Object Memory Corruption; content:"456"; sid:4044124; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer TextRange Object Memory Corruption; content:"456"; sid:4044225; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080812-20_Microsoft_Internet_Explorer_TextRange_Object_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer TextRange Object Memory Corruption (IPv6 Version); content:"456"; sid:4044226; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080812-26_Microsoft_Powerpoint_TxMasterStyle10Atom_Processing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Powerpoint TxMasterStyle10Atom Processing Code Execution; content:"456"; sid:4044125; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Powerpoint TxMasterStyle10Atom Processing Code Execution; content:"456"; sid:4044227; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080812-26_Microsoft_Powerpoint_TxMasterStyle10Atom_Processing_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Powerpoint TxMasterStyle10Atom Processing Code Execution (IPv6 Version); content:"456"; sid:4044228; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080812-28_Microsoft_Office_PICT_Filter_Invalid_Length_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office PICT Filter Invalid Length Memory Corruption; content:"456"; sid:4044126; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office PICT Filter Invalid Length Memory Corruption; content:"456"; sid:4044229; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080812-28_Microsoft_Office_PICT_Filter_Invalid_Length_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Office PICT Filter Invalid Length Memory Corruption (IPv6 Version); content:"456"; sid:4044230; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080812-29_Microsoft_Office_PICT_Filter_Map_Structure_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office PICT Filter Map Structure Memory Corruption; content:"456"; sid:4044127; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office PICT Filter Map Structure Memory Corruption; content:"456"; sid:4044231; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080812-29_Microsoft_Office_PICT_Filter_Map_Structure_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Office PICT Filter Map Structure Memory Corruption (IPv6 Version); content:"456"; sid:4044232; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080909-06_Microsoft_Media_Player_Audio_Sampling_Rate_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Media Player Audio Sampling Rate Memory Corruption; content:"456"; sid:4044128; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Media Player Audio Sampling Rate Memory Corruption; content:"456"; sid:4044233; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080909-10_Microsoft_Windows_Graphics_Rendering_Engine_EMF_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows Graphics Rendering Engine EMF Parsing Memory Corruption; content:"456"; sid:4044129; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Graphics Rendering Engine EMF Parsing Memory Corruption; content:"456"; sid:4044234; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080909-10_Microsoft_Windows_Graphics_Rendering_Engine_EMF_Parsing_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Graphics Rendering Engine EMF Parsing Memory Corruption (IPv6 Version); content:"456"; sid:4044235; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081014-12_Microsoft_Host_Integration_Server_Remote_Command_Execution_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Host Integration Server Remote Command Execution Vulnerability; content:"456"; sid:4044130; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Host Integration Server Remote Command Execution Vulnerability; content:"456"; sid:4044236; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081014-12_Microsoft_Host_Integration_Server_Remote_Command_Execution_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Host Integration Server Remote Command Execution Vulnerability (IPv6 Version); content:"456"; sid:4044237; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081014-14_Microsoft_Internet_Explorer_Uninitialized_Layout_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Layout Memory Corruption; content:"456"; sid:4044131; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Layout Memory Corruption; content:"456"; sid:4044238; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081014-14_Microsoft_Internet_Explorer_Uninitialized_Layout_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Layout Memory Corruption (IPv6 Version); content:"456"; sid:4044239; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081014-17_Microsoft_Windows_Message_Queuing_Service_Queue_Name_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows Message Queuing Service Queue Name Handling Memory Corruption; content:"456"; sid:4044132; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Message Queuing Service Queue Name Handling Memory Corruption; content:"456"; sid:4044240; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081014-17_Microsoft_Windows_Message_Queuing_Service_Queue_Name_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Message Queuing Service Queue Name Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044241; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081014-20_Microsoft_Excel_VisualBasic_Object_Validation_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel VisualBasic Object Validation Code Execution; content:"456"; sid:4044133; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel VisualBasic Object Validation Code Execution; content:"456"; sid:4044242; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081014-20_Microsoft_Excel_VisualBasic_Object_Validation_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Excel VisualBasic Object Validation Code Execution (IPv6 Version); content:"456"; sid:4044243; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081014-22_Microsoft_Internet_Explorer_createRange_Cross_Domain_Scripting.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer createRange Cross Domain Scripting; content:"456"; sid:4044134; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer createRange Cross Domain Scripting; content:"456"; sid:4044244; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081014-22_Microsoft_Internet_Explorer_createRange_Cross_Domain_Scripting_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer createRange Cross Domain Scripting (IPv6 Version); content:"456"; sid:4044245; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081014-27_Microsoft_Internet_Explorer_HTML_Attribute_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Attribute Handling Memory Corruption; content:"456"; sid:4044135; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Attribute Handling Memory Corruption; content:"456"; sid:4044246; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081014-27_Microsoft_Internet_Explorer_HTML_Attribute_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Attribute Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044247; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081111-12_Microsoft_XML_Core_Services_MSXML_Header_Request_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft XML Core Services MSXML Header Request Information Disclosure; content:"456"; sid:4044136; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft XML Core Services MSXML Header Request Information Disclosure; content:"456"; sid:4044248; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081209-04_Microsoft_Office_Excel_File_OBJ_record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel File OBJ record Memory Corruption; content:"456"; sid:4044137; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel File OBJ record Memory Corruption; content:"456"; sid:4044249; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081209-05_Microsoft_Excel_TXO_and_OBJ_Records_Parsing_Stack_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel TXO and OBJ Records Parsing Stack Memory Corruption; content:"456"; sid:4044138; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel TXO and OBJ Records Parsing Stack Memory Corruption; content:"456"; sid:4044250; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081209-13_Microsoft_Windows_search-ms_Protocol_Handler_Command_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows search-ms Protocol Handler Command Execution; content:"456"; sid:4044139; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows search-ms Protocol Handler Command Execution; content:"456"; sid:4044251; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081209-13_Microsoft_Windows_search-ms_Protocol_Handler_Command_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows search-ms Protocol Handler Command Execution (IPv6 Version); content:"456"; sid:4044252; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081209-15_Microsoft_Excel_NAME_Record_Array_Indexing_Stack_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel NAME Record Array Indexing Stack Corruption; content:"456"; sid:4044140; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Excel NAME Record Array Indexing Stack Corruption; content:"456"; sid:4044253; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081209-22_Microsoft_Word_RTF_Stylesheet_Control_Word_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Word RTF Stylesheet Control Word Memory Corruption; content:"456"; sid:4044141; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word RTF Stylesheet Control Word Memory Corruption; content:"456"; sid:4044254; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081209-24_Microsoft_Word_Crafted_Sprm_Structure_Stack_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Word Crafted Sprm Structure Stack Memory Corruption; content:"456"; sid:4044142; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Word Crafted Sprm Structure Stack Memory Corruption; content:"456"; sid:4044255; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081210-04_Microsoft_Internet_Explorer_XML_Processing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer XML Processing Memory Corruption; content:"456"; sid:4044143; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer XML Processing Memory Corruption; content:"456"; sid:4044256; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081210-04_Microsoft_Internet_Explorer_XML_Processing_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer XML Processing Memory Corruption (IPv6 Version); content:"456"; sid:4044257; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090210-10_Microsoft_Internet_Explorer_Cloned_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Cloned Object Memory Corruption; content:"456"; sid:4044144; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Cloned Object Memory Corruption; content:"456"; sid:4044258; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090210-10_Microsoft_Internet_Explorer_Cloned_Object_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Cloned Object Memory Corruption (IPv6 Version); content:"456"; sid:4044259; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090210-11_Microsoft_Exchange_TNEF_PidTagRtfCompressed_Integer_Underflow.xml
-alert TCP any any -> any any (msg:Microsoft Exchange TNEF PidTagRtfCompressed Integer Underflow; content:"456"; sid:4044145; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Exchange TNEF PidTagRtfCompressed Integer Underflow; content:"456"; sid:4044260; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090210-13_Microsoft_Office_Visio_Object_ID_Table_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Visio Object ID Table Memory Corruption; content:"456"; sid:4044146; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Visio Object ID Table Memory Corruption; content:"456"; sid:4044261; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090210-14_Microsoft_Internet_Explorer_CSS_Processing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Processing Memory Corruption; content:"456"; sid:4044147; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Processing Memory Corruption; content:"456"; sid:4044262; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090210-14_Microsoft_Internet_Explorer_CSS_Processing_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Processing Memory Corruption (IPv6 Version); content:"456"; sid:4044263; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090210-15_Microsoft_Office_Visio_VSD_File_Icon_Bits_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Visio VSD File Icon Bits Memory Corruption; content:"456"; sid:4044148; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Visio VSD File Icon Bits Memory Corruption; content:"456"; sid:4044264; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090210-16_Microsoft_Office_Visio_Invalid_Tag_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Visio Invalid Tag Handling Memory Corruption; content:"456"; sid:4044149; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Visio Invalid Tag Handling Memory Corruption; content:"456"; sid:4044265; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090310-17_Microsoft_WINS_Server_WPAD_Registration_Spoofing.xml
-alert UDP any any -> any any (msg:Microsoft WINS Server WPAD Registration Spoofing; content:"456"; sid:4044150; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Microsoft WINS Server WPAD Registration Spoofing; content:"456"; sid:4044266; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090310-17_Microsoft_WINS_Server_WPAD_Registration_Spoofing_IPv6.xml
+alert UDP any any -> any any (msg:Microsoft WINS Server WPAD Registration Spoofing (IPv6 Version); content:"456"; sid:4044267; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090402-10_Microsoft_Office_PowerPoint_Invalid_Object_Reference_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office PowerPoint Invalid Object Reference Code Execution; content:"456"; sid:4044151; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office PowerPoint Invalid Object Reference Code Execution; content:"456"; sid:4044268; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090402-10_Microsoft_Office_PowerPoint_Invalid_Object_Reference_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Office PowerPoint Invalid Object Reference Code Execution (IPv6 Version); content:"456"; sid:4044269; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090414-03_Microsoft_Office_Excel_Crafted_Picture_Record_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Crafted Picture Record Code Execution; content:"456"; sid:4044152; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel Crafted Picture Record Code Execution; content:"456"; sid:4044270; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090414-05_Microsoft_DirectShow_MJPEG_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft DirectShow MJPEG Parsing Memory Corruption; content:"456"; sid:4044153; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft DirectShow MJPEG Parsing Memory Corruption; content:"456"; sid:4044271; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090414-08_Microsoft_Internet_Explorer_History.go_Method_Double_Free_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer History.go Method Double Free Memory Corruption; content:"456"; sid:4044154; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer History.go Method Double Free Memory Corruption; content:"456"; sid:4044272; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090414-09_Microsoft_Internet_Explorer_Marquee_Object_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Marquee Object Handling Memory Corruption; content:"456"; sid:4044155; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Marquee Object Handling Memory Corruption; content:"456"; sid:4044273; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090414-09_Microsoft_Internet_Explorer_Marquee_Object_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Marquee Object Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044274; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090414-11_Microsoft_Office_Excel_Crafted_SST_Record_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Crafted SST Record Code Execution; content:"456"; sid:4044156; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel Crafted SST Record Code Execution; content:"456"; sid:4044275; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090414-16_Microsoft_Internet_Explorer_EMBED_Element_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer EMBED Element Memory Corruption; content:"456"; sid:4044157; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer EMBED Element Memory Corruption; content:"456"; sid:4044276; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090512-03_Microsoft_Office_PowerPoint_Legacy_File_Format_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office PowerPoint Legacy File Format Code Execution; content:"456"; sid:4044158; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office PowerPoint Legacy File Format Code Execution; content:"456"; sid:4044277; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090512-06_Microsoft_Office_PowerPoint_Legacy_File_Format_Picture_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office PowerPoint Legacy File Format Picture Object Memory Corruption; content:"456"; sid:4044159; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office PowerPoint Legacy File Format Picture Object Memory Corruption; content:"456"; sid:4044278; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090512-08_Microsoft_Office_PowerPoint_PP7_File_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office PowerPoint PP7 File Handling Memory Corruption; content:"456"; sid:4044160; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office PowerPoint PP7 File Handling Memory Corruption; content:"456"; sid:4044279; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090512-13_Microsoft_Office_PowerPoint_Notes_Container_Heap_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office PowerPoint Notes Container Heap Corruption; content:"456"; sid:4044161; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office PowerPoint Notes Container Heap Corruption; content:"456"; sid:4044280; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090512-13_Microsoft_Office_PowerPoint_Notes_Container_Heap_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Office PowerPoint Notes Container Heap Corruption (IPv6 Version); content:"456"; sid:4044281; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090528-05_Microsoft_DirectShow_QuickTime_Movie_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft DirectShow QuickTime Movie Parsing Code Execution; content:"456"; sid:4044162; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft DirectShow QuickTime Movie Parsing Code Execution; content:"456"; sid:4044282; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090528-05_Microsoft_DirectShow_QuickTime_Movie_Parsing_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft DirectShow QuickTime Movie Parsing Code Execution (IPv6 Version); content:"456"; sid:4044283; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090609-09_Microsoft_Internet_Explorer_DHTML_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer DHTML Object Memory Corruption; content:"456"; sid:4044163; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer DHTML Object Memory Corruption; content:"456"; sid:4044284; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090609-09_Microsoft_Internet_Explorer_DHTML_Object_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer DHTML Object Memory Corruption (IPv6 Version); content:"456"; sid:4044285; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090609-12_Microsoft_Internet_Explorer_7_Event_Handler_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer 7 Event Handler Memory Corruption; content:"456"; sid:4044164; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer 7 Event Handler Memory Corruption; content:"456"; sid:4044286; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090609-15_Microsoft_Internet_Explorer_DOM_Object_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer DOM Object Handling Memory Corruption; content:"456"; sid:4044165; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer DOM Object Handling Memory Corruption; content:"456"; sid:4044287; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090609-15_Microsoft_Internet_Explorer_DOM_Object_Handling_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer DOM Object Handling Memory Corruption (IPv6 Version); content:"456"; sid:4044288; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090609-17_Microsoft_Office_Excel_Record_Pointer_Overwrite_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Record Pointer Overwrite Code Execution; content:"456"; sid:4044166; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel Record Pointer Overwrite Code Execution; content:"456"; sid:4044289; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090609-18_Microsoft_Office_Excel_Malformed_Object_Record_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Malformed Object Record Parsing Code Execution; content:"456"; sid:4044167; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel Malformed Object Record Parsing Code Execution; content:"456"; sid:4044290; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090609-18_Microsoft_Office_Excel_Malformed_Object_Record_Parsing_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Office Excel Malformed Object Record Parsing Code Execution (IPv6 Version); content:"456"; sid:4044291; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090609-19_Microsoft_Office_Excel_Malformed_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Malformed Record Memory Corruption; content:"456"; sid:4044168; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel Malformed Record Memory Corruption; content:"456"; sid:4044292; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090609-21_Microsoft_Office_Excel_Unexpected_Field_Value_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Unexpected Field Value Handling Memory Corruption; content:"456"; sid:4044169; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel Unexpected Field Value Handling Memory Corruption; content:"456"; sid:4044293; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090609-23_Microsoft_Office_Excel_Malformed_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Malformed Record Memory Corruption; content:"456"; sid:4044170; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel Malformed Record Memory Corruption; content:"456"; sid:4044294; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090714-04_Microsoft_DirectShow_QuickTime_stsc_Atom_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft DirectShow QuickTime stsc Atom Parsing Memory Corruption; content:"456"; sid:4044171; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft DirectShow QuickTime stsc Atom Parsing Memory Corruption; content:"456"; sid:4044295; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090714-05_Microsoft_DirectShow_QuickTime_Atom_Size_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft DirectShow QuickTime Atom Size Memory Corruption; content:"456"; sid:4044172; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft DirectShow QuickTime Atom Size Memory Corruption; content:"456"; sid:4044296; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090714-08_Microsoft_Office_Publisher_2007_Pointer_Dereference_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Publisher 2007 Pointer Dereference Code Execution; content:"456"; sid:4044173; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Publisher 2007 Pointer Dereference Code Execution; content:"456"; sid:4044297; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090728-05_Microsoft_Internet_Explorer_Deleted_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Deleted Object Memory Corruption; content:"456"; sid:4044174; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Deleted Object Memory Corruption; content:"456"; sid:4044298; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090728-05_Microsoft_Internet_Explorer_Deleted_Object_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Deleted Object Memory Corruption (IPv6 Version); content:"456"; sid:4044299; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090728-06_Microsoft_Internet_Explorer_HTML_Objects_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Objects Memory Corruption; content:"456"; sid:4044175; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Objects Memory Corruption; content:"456"; sid:4044300; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090728-06_Microsoft_Internet_Explorer_HTML_Objects_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Objects Memory Corruption (IPv6 Version); content:"456"; sid:4044301; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090728-07_Microsoft_Internet_Explorer_Stylesheet_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Stylesheet Memory Corruption; content:"456"; sid:4044176; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Stylesheet Memory Corruption; content:"456"; sid:4044302; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090728-07_Microsoft_Internet_Explorer_Stylesheet_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Stylesheet Memory Corruption (IPv6 Version); content:"456"; sid:4044303; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090811-08_Microsoft_Windows_AVI_File_Header_Processing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows AVI File Header Processing Memory Corruption; content:"456"; sid:4044177; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows AVI File Header Processing Memory Corruption; content:"456"; sid:4044304; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090811-19_Microsoft_Remote_Desktop_Client_Heap_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Remote Desktop Client Heap Corruption; content:"456"; sid:4044178; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Remote Desktop Client Heap Corruption; content:"456"; sid:4044305; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090908-09_Microsoft_Windows_Media_ASF_Header_Parsing_Invalid_Free.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media ASF Header Parsing Invalid Free; content:"456"; sid:4044179; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Media ASF Header Parsing Invalid Free; content:"456"; sid:4044306; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090908-10_Microsoft_Windows_Media_Playback_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media Playback Memory Corruption; content:"456"; sid:4044180; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Media Playback Memory Corruption; content:"456"; sid:4044307; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091013-06_Microsoft_Windows_Media_Runtime_ASF_Voice_Sample_Rate_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media Runtime ASF Voice Sample Rate Code Execution; content:"456"; sid:4044181; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Media Runtime ASF Voice Sample Rate Code Execution; content:"456"; sid:4044308; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091013-09_Microsoft_Office_Art_Property_Table_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Art Property Table Memory Corruption; content:"456"; sid:4044182; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Art Property Table Memory Corruption; content:"456"; sid:4044309; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091013-11_Microsoft_Internet_Explorer_Deflate_Encoding_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Deflate Encoding Memory Corruption; content:"456"; sid:4044183; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Deflate Encoding Memory Corruption; content:"456"; sid:4044310; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091013-13_Microsoft_Internet_Explorer_Uninitialized_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Object Memory Corruption; content:"456"; sid:4044184; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Object Memory Corruption; content:"456"; sid:4044311; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091013-14_Microsoft_Internet_Explorer_Table_Layout_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Table Layout Memory Corruption; content:"456"; sid:4044185; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Table Layout Memory Corruption; content:"456"; sid:4044312; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091110-01_Microsoft_Office_Excel_SXDB_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel SXDB Memory Corruption; content:"456"; sid:4044186; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel SXDB Memory Corruption; content:"456"; sid:4044313; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091110-07_Microsoft_Office_Excel_Featheader_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Featheader Record Memory Corruption; content:"456"; sid:4044187; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel Featheader Record Memory Corruption; content:"456"; sid:4044314; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091120-06_Microsoft_Internet_Explorer_Style_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Style Object Memory Corruption; content:"456"; sid:4044188; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Style Object Memory Corruption; content:"456"; sid:4044315; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091208-08_Microsoft_Internet_Explorer_DOM_Object_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer DOM Object Handling Memory Corruption; content:"456"; sid:4044189; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer DOM Object Handling Memory Corruption; content:"456"; sid:4044316; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091208-10_Microsoft_Internet_Explorer_Uninitialized_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Object Memory Corruption; content:"456"; sid:4044190; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Object Memory Corruption; content:"456"; sid:4044317; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091208-11_Microsoft_Internet_Explorer_Uninitialized_DOM_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized DOM Memory Corruption; content:"456"; sid:4044191; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized DOM Memory Corruption; content:"456"; sid:4044318; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100115-01_Microsoft_Internet_Explorer_Use-After-Free_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Use-After-Free Remote Code Execution; content:"456"; sid:4044192; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Use-After-Free Remote Code Execution; content:"456"; sid:4044319; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100121-12_Microsoft_Internet_Explorer_Table_Layout_Col_Tag_Cache_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Table Layout Col Tag Cache Memory Corruption; content:"456"; sid:4044193; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Table Layout Col Tag Cache Memory Corruption; content:"456"; sid:4044320; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100121-15_Microsoft_Internet_Explorer_Deleted_Table_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Deleted Table Object Memory Corruption; content:"456"; sid:4044194; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Deleted Table Object Memory Corruption; content:"456"; sid:4044321; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100122-02_Microsoft_Internet_Explorer_DOM_mergeAttributes_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer DOM mergeAttributes Memory Corruption; content:"456"; sid:4044195; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer DOM mergeAttributes Memory Corruption; content:"456"; sid:4044322; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100209-03_Microsoft_Office_MSO_DLL_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office MSO.DLL Memory Corruption; content:"456"; sid:4044196; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office MSO.DLL Memory Corruption; content:"456"; sid:4044323; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100209-06_Microsoft_PowerPoint_OEPlaceholderAtom_placementId_Invalid_Array_Indexing.xml
-alert TCP any any -> any any (msg:Microsoft PowerPoint OEPlaceholderAtom placementId Invalid Array Indexing; content:"456"; sid:4044197; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft PowerPoint OEPlaceholderAtom placementId Invalid Array Indexing; content:"456"; sid:4044324; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100209-07_Microsoft_Office_PowerPoint_OEPlaceholderAtom_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office PowerPoint OEPlaceholderAtom Memory Corruption; content:"456"; sid:4044198; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office PowerPoint OEPlaceholderAtom Memory Corruption; content:"456"; sid:4044325; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100216-07_OpenOffice_org_Microsoft_Word_File_Processing_Integer_Underflow.xml
-alert TCP any any -> any any (msg:OpenOffice.org Microsoft Word File Processing Integer Underflow; content:"456"; sid:4044199; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:OpenOffice.org Microsoft Word File Processing Integer Underflow; content:"456"; sid:4044326; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100303-01_Microsoft_Windows_winhlp32_exe_MsgBox_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows winhlp32.exe MsgBox Remote Code Execution; content:"456"; sid:4044200; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows winhlp32.exe MsgBox Remote Code Execution; content:"456"; sid:4044327; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100309-03_Microsoft_Internet_Explorer_Invalid_Pointer_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Invalid Pointer Remote Code Execution; content:"456"; sid:4044201; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Invalid Pointer Remote Code Execution; content:"456"; sid:4044328; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100309-05_Microsoft_Office_Excel_EntExU2_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel EntExU2 Record Memory Corruption; content:"456"; sid:4044202; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel EntExU2 Record Memory Corruption; content:"456"; sid:4044329; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100309-06_Microsoft_Office_Excel_Sheet_Object_Type_Confusion.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Sheet Object Type Confusion; content:"456"; sid:4044203; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel Sheet Object Type Confusion; content:"456"; sid:4044330; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100309-09_Microsoft_Office_Excel_FNGROUPNAME_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel FNGROUPNAME Record Memory Corruption; content:"456"; sid:4044204; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel FNGROUPNAME Record Memory Corruption; content:"456"; sid:4044331; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100309-10_Microsoft_Office_Excel_XLSX_File_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel XLSX File Parsing Code Execution; content:"456"; sid:4044205; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel XLSX File Parsing Code Execution; content:"456"; sid:4044332; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100309-11_Microsoft_Office_Excel_DbOrParamQry_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel DbOrParamQry Record Parsing Memory Corruption; content:"456"; sid:4044206; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Office Excel DbOrParamQry Record Parsing Memory Corruption; content:"456"; sid:4044333; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100330-02_Microsoft_Internet_Explorer_Uninitialized_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Memory Corruption; content:"456"; sid:4044207; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Memory Corruption; content:"456"; sid:4044334; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100330-02_Microsoft_Internet_Explorer_Uninitialized_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Memory Corruption (IPv6 Version); content:"456"; sid:4044335; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100330-03_Microsoft_Internet_Explorer_HTML_Rendering_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Rendering Memory Corruption; content:"456"; sid:4044208; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Rendering Memory Corruption; content:"456"; sid:4044336; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#FSC20100330-06_Microsoft_Internet_Explorer_Uninitialized_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Object Memory Corruption; content:"456"; sid:4044209; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100330-07_Microsoft_Internet_Explorer_Tabular_Data_Control_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Tabular Data Control Memory Corruption; content:"456"; sid:4044210; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100330-08_Microsoft_Internet_Explorer_onreadystatechange_Use_After_Free_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer onreadystatechange Use After Free Vulnerability; content:"456"; sid:4044211; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100608-04_Microsoft_Internet_Explorer_8_Developer_Tools_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer 8 Developer Tools Remote Code Execution; content:"456"; sid:4044212; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100608-15_Microsoft_Office_Excel_SxView_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel SxView Record Parsing Memory Corruption; content:"456"; sid:4044213; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100608-17_Microsoft_Office_Excel_Chart_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Chart Object Memory Corruption; content:"456"; sid:4044214; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100608-18_Microsoft_Office_Excel_WOpt_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel WOpt Record Memory Corruption; content:"456"; sid:4044215; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100608-21_Microsoft_Office_Excel_RealTimeData_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel RealTimeData Record Parsing Memory Corruption; content:"456"; sid:4044216; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100720-01_Microsoft_Windows_LNK_File_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows LNK File Code Execution; content:"456"; sid:4044217; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100810-04_Microsoft_DirectShow_MPEG_Layer-3_Audio_Decoder_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft DirectShow MPEG Layer-3 Audio Decoder Memory Corruption; content:"456"; sid:4044218; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100810-06_Microsoft_Internet_Explorer_Iframe_Uninitialized_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Iframe Uninitialized Memory Corruption; content:"456"; sid:4044219; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100810-07_Microsoft_Internet_Explorer_Uninitialized_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Memory Corruption; content:"456"; sid:4044220; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100810-09_Microsoft_Internet_Explorer_Uninitialized_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Memory Corruption; content:"456"; sid:4044221; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100810-10_Microsoft_Internet_Explorer_HTML_Layout_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Layout Memory Corruption; content:"456"; sid:4044222; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100810-14_Microsoft_Windows_Cinepak_Codec_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Cinepak Codec Code Execution; content:"456"; sid:4044223; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100810-15_Microsoft_Silverlight_Pointer_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Silverlight Pointer Handling Memory Corruption; content:"456"; sid:4044224; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100810-27_Microsoft_Office_Excel_Pivot_Item_Index_Boundary_Error_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows Movie Maker MediaClipString Buffer Overflow; content:"456"; sid:4044225; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100810-35_Microsoft_Office_Word_HTML_Linked_Objects_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Word HTML Linked Objects Memory Corruption; content:"456"; sid:4044226; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100914-03_Microsoft_MPEG-4_Codec_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft MPEG-4 Codec Remote Code Execution; content:"456"; sid:4044227; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100914-04_Microsoft_Multiple_Products_Uniscribe_Font_Parsing_Engine_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Multiple Products Uniscribe Font Parsing Engine Memory Corruption; content:"456"; sid:4044228; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101012-09_Microsoft_Internet_Explorer_and_SharePoint_Services_HTML_Sanitization_Cross-Site_Scripting.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer and SharePoint Services HTML Sanitization Cross-Site Scripting; content:"456"; sid:4044229; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101012-16_Microsoft_Word_Malformed_Index_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Word Malformed Index Code Execution; content:"456"; sid:4044230; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101012-26_Microsoft_Office_Excel_PtgExtraArray_Structure_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel PtgExtraArray Structure Parsing Memory Corruption; content:"456"; sid:4044231; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101012-30_Microsoft_Office_Excel_Formula_Record_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Formula Record Code Execution; content:"456"; sid:4044232; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101012-32_Microsoft_Office_Excel_MergeCells_Record_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel MergeCells Record Parsing Code Execution; content:"456"; sid:4044233; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101012-34_Microsoft_Office_Excel_PtgExtraArray_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel PtgExtraArray Parsing Memory Corruption; content:"456"; sid:4044234; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101012-45_Microsoft_Internet_Explorer_and_SharePoint_toStaticHTML_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer and SharePoint toStaticHTML Information Disclosure; content:"456"; sid:4044235; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101012-50_Microsoft_Internet_Explorer_CStyleSheetRule_Array_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CStyleSheetRule Array Memory; content:"456"; sid:4044236; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101012-51_Microsoft_Internet_Explorer_HtmlDlgHelper_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HtmlDlgHelper Memory Corruption; content:"456"; sid:4044237; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101103-03_Microsoft_Internet_Explorer_Invalid_Flag_Reference_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Invalid Flag Reference Memory; content:"456"; sid:4044238; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101109-03_Microsoft_PowerPoint_Legacy_File_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft PowerPoint Legacy File Parsing Memory Corruption; content:"456"; sid:4044239; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101109-04_Microsoft_Office_PowerPoint_TimeVariant_Record_Integer_Underflow.xml
-alert TCP any any -> any any (msg:Microsoft Office PowerPoint TimeVariant Record Integer Underflow; content:"456"; sid:4044240; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101109-06_Microsoft_Office_Drawing_Exception_Handling_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Drawing Exception Handling Remote Code; content:"456"; sid:4044241; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101109-07_Microsoft_Office_Large_SPID_Read_Access_Violation.xml
-alert TCP any any -> any any (msg:Microsoft Office Large SPID Read Access Violation; content:"456"; sid:4044242; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101214-03_Microsoft_Internet_Explorer_HTML_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Object Memory Corruption; content:"456"; sid:4044243; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101214-06_Microsoft_Internet_Explorer_Select_Element_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Select Element Memory Corruption; content:"456"; sid:4044244; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101214-07_Microsoft_Internet_Explorer_HTML_Time_Element_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Time Element Memory Corruption; content:"456"; sid:4044245; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101214-28_Microsoft_Publisher_pubconv_dll_Size_Value_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Publisher pubconv.dll Size Value Memory Corruption; content:"456"; sid:4044246; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101214-39_Microsoft_Office_TIFF_Image_Converter_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office TIFF Image Converter Memory Corruption; content:"456"; sid:4044247; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20101214-44_Microsoft_Internet_Explorer_CSS_Import_Use-After-Free_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Import Use-After-Free Code Execution; content:"456"; sid:4044248; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110111-04_Microsoft_Windows_Data_Access_Components_ADO_Record_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Data Access Components ADO Record Code Execution; content:"456"; sid:4044249; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110121-04_Microsoft_Windows_Fax_Services_Cover_Page_Editor_Double_Free_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows Fax Services Cover Page
-Editor Double Free Memory Corruption; content:"456"; sid:4044250; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110208-20_Microsoft_Excel_Office_Drawing_Layer_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Office Drawing Layer Remote Code Execution; content:"456"; sid:4044251; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110208-25_Microsoft_Internet_Explorer_Deleted_Data_Source_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Deleted Data Source Object Memory Corruption; content:"456"; sid:4044252; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110208-27_Microsoft_Internet_Explorer_Uninitialized_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Uninitialized Object Memory Corruption; content:"456"; sid:4044253; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110208-30_Microsoft_Office_Visio_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Visio Object Memory Corruption; content:"456"; sid:4044254; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110208-31_Microsoft_Office_Visio_Data_Type_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Visio Data Type Memory Corruption; content:"456"; sid:4044255; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110208-44_Microsoft_Internet_Explorer_8_IESHIMS_DLL_Insecure_Library_Loading.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer 8 IESHIMS.DLL Insecure Library Loading; content:"456"; sid:4044256; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110308-02_Microsoft_Windows_Media_DVR-MS_File_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media DVR-MS File Code Execution; content:"456"; sid:4044257; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110412-01_Microsoft_Office_Excel_RealTimeData_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel RealTimeData Record Memory Corruption; content:"456"; sid:4044258; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110412-15_Microsoft_Internet_Explorer_Object_Management_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Object Management Memory Corruption; content:"456"; sid:4044259; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110414-01_Microsoft_Internet_Explorer_CSS_Use_After_Free_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CSS Use After Free Memory Corruption; content:"456"; sid:4044260; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20060913-10_Microsoft_Internet_Explorer_daxctle_ocx_KeyFrame_Method_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer daxctle.ocx KeyFrame Method Memory Corruption; content:"456"; sid:4044261; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20070109-16_Microsoft_Excel_Column_Record_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel Column Record Handling Memory Corruption; content:"456"; sid:4044262; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20071009-16_Microsoft_Windows_Kodak_Image_Viewer_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Kodak Image Viewer Code Execution; content:"456"; sid:4044263; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20080812-12_Microsoft_Excel_FORMAT_Record_Array_Index_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Mozilla Firefox document.write And DOM Insertions Memory Corruption; content:"456"; sid:4044264; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20090714-05_Microsoft_DirectShow_QuickTime_Atom_Size_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft DirectShow QuickTime Atom Size Memory Corruption; content:"456"; sid:4044265; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20100810-27_Microsoft_Office_Excel_Pivot_Item_Index_Boundary_Error_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Pivot Item Index Boundary Error Memory Corruption; content:"456"; sid:4044266; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20101012-05_Microsoft_Windows_Media_Player_Network_Sharing_Service_RTSP_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media Player Network Sharing Service RTSP Code Execution; content:"456"; sid:4044267; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20101012-05_Microsoft_Windows_Media_Player_Network_Sharing_Service_RTSP_Code__Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media Player Network Sharing Service RTSP Code Execution; content:"456"; sid:4044268; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110412-07_Microsoft_Office_PowerPoint_OfficeArt_Atom_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office PowerPoint OfficeArt Atom Memory Corruption; content:"456"; sid:4044269; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110412-20_Microsoft_Windows_Wordpad_Converter_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows Wordpad Converter Parsing Memory Corruption; content:"456"; sid:4044270; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110412-24_Microsoft_Excel_Data_Validation_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel Data Validation Record Parsing Memory Corruption; content:"456"; sid:4044271; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110428-04_Microsoft_Office_PowerPoint_ExtTimeNodeContainer_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office PowerPoint ExtTimeNodeContainer Record Memory Corruption; content:"456"; sid:4044272; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110510-01_Microsoft_PowerPoint_OfficeArtClientData_Container_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft PowerPoint OfficeArtClientData Container Remote Code Execution; content:"456"; sid:4044273; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110510-02_Microsoft_PowerPoint_TextHeaderAtom_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft PowerPoint TextHeaderAtom Memory Corruption; content:"456"; sid:4044274; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110614-02_Microsoft_Office_Word_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Word Remote Code Execution; content:"456"; sid:4044275; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110614-02_Microsoft_Office_Word_STSH_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Word STSH Record Parsing Memory Corruption; content:"456"; sid:4044276; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110614-14_Microsoft_Office_Excel_Record_Type_Confusion.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Record Type Confusion; content:"456"; sid:4044277; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110614-15_Microsoft_Office_Excel_BIFF_Out-of-Bounds_Access.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel BIFF Out-of-Bounds Access; content:"456"; sid:4044278; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110614-34_Microsoft_Internet_Explorer_selection_empty_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer selection.empty Use After Free; content:"456"; sid:4044279; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110614-35_Microsoft_Internet_Explorer_toStaticHTML_Cross-Site_Scripting.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer toStaticHTML Cross-Site Scripting; content:"456"; sid:4044280; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110614-37_Microsoft_Internet_Explorer_VML_vgx_dll_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer VML vgx.dll Use After Free; content:"456"; sid:4044281; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110617-02_Microsoft_Internet_Explorer_CElement_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CElement Memory Corruption; content:"456"; sid:4044282; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110623-01_Microsoft_Internet_Explorer_layout-grid-char_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer layout-grid-char Memory Corruption; content:"456"; sid:4044283; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110809-04_Microsoft_Internet_Explorer_XSLT_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer XSLT Memory Corruption; content:"456"; sid:4044284; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110809-05_Microsoft_Internet_Explorer_Style_Object_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Style Object Memory Corruption; content:"456"; sid:4044285; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110913-04_Microsoft_Office_Excel_Out_of_Bounds_Array_Indexing.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Out of Bounds Array Indexing; content:"456"; sid:4044286; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110913-05_Microsoft_Office_Excel_BIFF5_Record_Parsing_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel BIFF5 Record Parsing Use After Free; content:"456"; sid:4044287; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110915-01_Microsoft_Office_Excel_Conditional_Expression_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Conditional Expression Code Execution; content:"456"; sid:4044288; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110916-03_Microsoft_Office_Excel_Record_Out_of_Bounds_Index.xml
-alert TCP any any -> any any (msg:Microsoft Office Excel Record Out of Bounds Index; content:"456"; sid:4044289; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110923-05_Microsoft_Excel_Incorrect_BIFF2_Record_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Excel Incorrect BIFF2 Record Parsing Code Execution; content:"456"; sid:4044290; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111011-16_Microsoft_Internet_Explorer_Scroll_Event_Use-After-Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Scroll Event Use-After-Free; content:"456"; sid:4044291; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111011-17_Microsoft_Internet_Explorer_OLEAut32_dll_Uninitialized_Object_Access.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer OLEAut32.dll Uninitialized Object Access; content:"456"; sid:4044292; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111011-18_Microsoft_Internet_Explorer_Option_Element_Use-After-Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Option Element Use-After-Free; content:"456"; sid:4044293; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111011-19_Microsoft_Internet_Explorer_Event_Handler_Use-After-Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Event Handler Use-After-Free; content:"456"; sid:4044294; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111011-21_Microsoft_Internet_Explorer_Select_Element_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Select Element Memory Corruption; content:"456"; sid:4044295; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111011-22_Microsoft_Internet_Explorer_Body_Element_Use-After-Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Body Element Use-After-Free; content:"456"; sid:4044296; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111011-23_Microsoft_Internet_Explorer_Virtual_Function_Table_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Virtual Function Table Memory Corruption; content:"456"; sid:4044297; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111012-06_Microsoft_Publisher_Pubconv_dll_Function_Pointer_Overwrite.xml
-alert TCP any any -> any any (msg:Microsoft Publisher Pubconv.dll Function Pointer Overwrite; content:"456"; sid:4044298; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111103-05_Microsoft_Multiple_Products_TrueType_Font_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows win32k.sys TrueType Font Parsing Kernel Memory Corruption; content:"456"; sid:4044299; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111103-05_Microsoft_Windows_win32k_sys_TrueType_Font_Parsing_Kernel_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows win32k.sys TrueType
-Font Parsing Kernel Memory Corruption; content:"456"; sid:4044300; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111103-12_Microsoft_Office_VBA_Module_Stream_Use_after_Free.xml
-alert TCP any any -> any any (msg:Microsoft Office VBA Module Stream Use after Free; content:"456"; sid:4044301; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111213-03_Microsoft_Windows_Media_DVR-MS_File_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media DVR-MS File Memory Corruption; content:"456"; sid:4044302; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111213-05_Microsoft_Office_Word_Hidden_Border_Use-After-Free.xml
-alert TCP any any -> any any (msg:Microsoft Office Word Hidden Border Use-After-Free; content:"456"; sid:4044303; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111213-06_Microsoft_Time_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Time Remote Code Execution; content:"456"; sid:4044304; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111213-08_Microsoft_Publisher_Array_Indexing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Publisher Array Indexing Memory Corruption; content:"456"; sid:4044305; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111213-09_Microsoft_Publisher_Invalid_Pointer_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Publisher Invalid Pointer Memory Corruption; content:"456"; sid:4044306; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111213-12_Microsoft_Windows_OLE_Automation_OLESS_File_Objects_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows OLE Automation OLESS File Objects Memory Corruption; content:"456"; sid:4044307; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111213-14_Microsoft_Excel_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel Record Parsing Memory Corruption; content:"456"; sid:4044308; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111213-21_Microsoft_Office_PowerPoint_OfficeArt_Shape_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Office PowerPoint OfficeArt Shape Remote Code Execution; content:"456"; sid:4044309; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20111220-02_Microsoft_Windows_win32k_sys_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows Object Packager
-ClickOnce Object Handling Code Execution; content:"456"; sid:4044310; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120110-04_Microsoft_Windows_Media_MIDI_File_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows Media MIDI File Memory Corruption; content:"456"; sid:4044311; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120110-06_Microsoft_Windows_Object_Packager_ClickOnce_Object_Handling_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Object Packager
-ClickOnce Object Handling Code Execution; content:"456"; sid:4044312; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120214-03_Microsoft_SharePoint_Foundation_inplnview_aspx_Cross-Site_Scripting.xml
-alert TCP any any -> any any (msg:Microsoft SharePoint Foundation inplnview.aspx Cross-Site Scripting; content:"456"; sid:4044313; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120214-10_Microsoft_Internet_Explorer_HTML_Layout_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Layout Use After Free; content:"456"; sid:4044314; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120214-12_Microsoft_Internet_Explorer_Null_Byte_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Null Byte Information Disclosure; content:"456"; sid:4044315; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120214-20_Microsoft_Office_Visio_Viewer_VSD_File_Type_Confusion.xml
-alert TCP any any -> any any (msg:Microsoft Office Visio Viewer VSD File Type Confusion; content:"456"; sid:4044316; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120410-04_Microsoft_Internet_Explorer_OnReadyStateChange_Use-after-free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer OnReadyStateChange Use-after-free; content:"456"; sid:4044317; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120410-05_Microsoft_Internet_Explorer_SelectAll_Use-after-free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer OnReadyStateChange Use-after-free; content:"456"; sid:4044318; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120410-06_Microsoft_Internet_Explorer_VML_Use-after-free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer VML Use-after-free; content:"456"; sid:4044319; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-03_Microsoft_Office_RTF_Mismatch_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office RTF Mismatch Memory Corruption; content:"456"; sid:4044320; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-03_Microsoft_Office_RTF_Mismatch_Memory_Corruption_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Office RTF Mismatch Memory Corruption(IPV6 Version); content:"456"; sid:4044321; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-08_Microsoft_Excel_OBJECTLINK_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel OBJECTLINK Record Memory Corruption; content:"456"; sid:4044322; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-08_Microsoft_Excel_OBJECTLINK_Record_Memory_Corruption_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Excel OBJECTLINK Record Memory Corruption(IPV6 Version); content:"456"; sid:4044323; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-09_Microsoft_Excel_Type_Mismatch_Series_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel Type Mismatch Series Record Parsing Memory Corruption; content:"456"; sid:4044324; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-09_Microsoft_Excel_Type_Mismatch_Series_Record_Parsing_Memory_Corruption_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Excel Type Mismatch Series Record Parsing Memory Corruption(IPV6 Version); content:"456"; sid:4044325; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-11_Microsoft_Excel_File_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel File Parsing Memory Corruption; content:"456"; sid:4044326; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-11_Microsoft_Excel_File_Parsing_Memory_Corruption_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Excel File Parsing Memory Corruption(IPV6 Version); content:"456"; sid:4044327; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-13_Microsoft_Excel_SXLI_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel SXLI Record Parsing Memory Corruption; content:"456"; sid:4044328; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-13_Microsoft_Excel_SXLI_Record_Parsing_Memory_Corruption_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Excel SXLI Record Parsing Memory Corruption(IPV6 Version); content:"456"; sid:4044329; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-16_Microsoft_Excel_MergeCells_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel MergeCells Record Parsing Memory Corruption; content:"456"; sid:4044330; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-16_Microsoft_Excel_MergeCells_Record_Parsing_Memory_Corruption_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Excel MergeCells Record Parsing Memory Corruption(IPV6 Version); content:"456"; sid:4044331; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-20_Microsoft_Office_GDIplus_EMF_File_Handling_Infinite_Loop.xml
-alert TCP any any -> any any (msg:Microsoft Office GDIplus EMF File Handling Infinite Loop; content:"456"; sid:4044332; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120508-20_Microsoft_Office_GDIplus_EMF_File_Handling_Infinite_Loop_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Office GDIplus EMF File Handling Infinite Loop(IPV6 Version); content:"456"; sid:4044333; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-07_Microsoft_Multiple_Products_HTML_Sanitization_Cross-Site_Scripting.xml
-alert TCP any any -> any any (msg:Microsoft Multiple Products HTML Sanitization Cross-Site Scripting; content:"456"; sid:4044334; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-07_Microsoft_Multiple_Products_HTML_Sanitization_Cross-Site_Scripting_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Multiple Products HTML Sanitization Cross-Site Scripting(IPV6 Version); content:"456"; sid:4044335; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-09_Microsoft_Internet_Explorer_Center_Element_Out_of_Bounds_Array_Indexing.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Center Element Out of Bounds Array Indexing; content:"456"; sid:4044336; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-09_Microsoft_Internet_Explorer_Center_Element_Out_of_Bounds_Array_Indexing_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Center Element Out of Bounds Array Indexing; content:"456"; sid:4044337; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-14_Microsoft_Internet_Explorer_Developer_Toolbar_Use_After_Free_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Developer Toolbar Use After Free; content:"456"; sid:4044338; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-16_Microsoft_Internet_Explorer_Col_Element_Heap_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Col Element Heap Memory Corruption; content:"456"; sid:4044339; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-16_Microsoft_Internet_Explorer_Col_Element_Heap_Memory_Corruption_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Col Element Heap Memory Corruption(IPV6 Version); content:"456"; sid:4044340; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-18_Microsoft_Internet_Explorer_Title_Element_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Title Element Use After Free; content:"456"; sid:4044341; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-18_Microsoft_Internet_Explorer_Title_Element_Use_After_Free_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Title Element Use After Free(IPV6 Version); content:"456"; sid:4044342; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-20_Microsoft_Internet_Explorer_Row_Insertion_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Row Insertion Memory Corruption; content:"456"; sid:4044343; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-20_Microsoft_Internet_Explorer_Row_Insertion_Memory_Corruption_IPV6.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Row Insertion Memory Corruption(IPV6 Version); content:"456"; sid:4044344; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612-26_Microsoft_XML_Core_Services_Uninitialized_Object_Access.xml
-alert TCP any any -> any any (msg:Microsoft XML Core Services Uninitialized Object Access; content:"456"; sid:4044345; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120612_Microsoft_Internet_Explorer_Developer_Toolbar_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Developer Toolbar Use After Free; content:"456"; sid:4044346; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120710-02_Microsoft_Internet_Explorer_Loop_Counter_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Loop Counter Memory Corruption; content:"456"; sid:4044347; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120814-03_Microsoft_Internet_Explorer_Layout_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Layout Use After Free; content:"456"; sid:4044348; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120814-09_Microsoft_Windows_Common_Controls_MSCOMCTL_OCX_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows Common Controls MSCOMCTL.OCX Remote Code Execution; content:"456"; sid:4044349; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20120917-01_Microsoft_Internet_Explorer_execCommand_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer execCommand Use After Free; content:"456"; sid:4044350; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20121009-08_Microsoft_Office_Word_RTF_File_listid_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Word RTF File listid Memory Corruption; content:"456"; sid:4044351; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20121009-10_Microsoft_Works_Word_Document_Processing_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Works Word Document Processing Use After Free; content:"456"; sid:4044352; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20121113-06_Microsoft_Windows_TrueType_Font_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows TrueType Font Parsing Code Execution; content:"456"; sid:4044353; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20121113-12_Microsoft_Excel_SerAuxErrBar_Heap_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel SerAuxErrBar Heap Memory Corruption; content:"456"; sid:4044354; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20121113-18_Microsoft__NET_Framework_Proxy_Auto-Discovery_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft .NET Framework Proxy Auto-Discovery Code Execution; content:"456"; sid:4044355; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20121211-04_Microsoft_DirectPlay_Office_File_Handling_Invalid_Memory_Free.xml
-alert TCP any any -> any any (msg:Microsoft DirectPlay Office File Handling Invalid Memory Free; content:"456"; sid:4044356; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20121211-12_Microsoft_Windows_TrueType_Font_File_Parsing_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows TrueType Font File Parsing Remote Code Execution; content:"456"; sid:4044357; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20121212-06_Microsoft_Internet_Explorer_Mouse_Movement_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Mouse Movement Information Disclosure; content:"456"; sid:4044358; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20121231-02_Microsoft_Internet_Explorer_applyElement_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer applyElement Use After Free; content:"456"; sid:4044359; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130108-02_Microsoft_XML_Core_Services_Integer_Truncation_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft XML Core Services Integer Truncation Memory Corruption; content:"456"; sid:4044360; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130212-12_Microsoft_Internet_Explorer_vtable_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer vtable Use After Free; content:"456"; sid:4044361; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130212-17_Microsoft_Internet_Explorer_VML_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer VML Memory Corruption; content:"456"; sid:4044362; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130212-20_Microsoft_Internet_Explorer_InsertElement_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer InsertElement Use After Free; content:"456"; sid:4044363; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130212-21_Microsoft_Internet_Explorer_CPasteCommand_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CPasteCommand Use After Free; content:"456"; sid:4044364; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130212-24_Microsoft_Internet_Explorer_CHTML_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CHTML Use After Free; content:"456"; sid:4044365; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130312-01_Microsoft_Internet_Explorer_onResize_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer onResize Use After Free; content:"456"; sid:4044366; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130312-02_Microsoft_SharePoint_Server_Cross-Site_Scripting.xml
-alert TCP any any -> any any (msg:Microsoft SharePoint Server Cross-Site Scripting; content:"456"; sid:4044367; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130312-03_Microsoft_Silverlight_Pointer_Dereference_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Silverlight Pointer Dereference Memory Corruption; content:"456"; sid:4044368; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130312-05_Microsoft_Internet_Explorer_saveHistory_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer saveHistory Use After Free; content:"456"; sid:4044369; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130312-06_Microsoft_Internet_Explorer_CMarkupBehaviorContext_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CMarkupBehaviorContext Use After Free; content:"456"; sid:4044370; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130312-09_Microsoft_Internet_Explorer_GetMarkupPtr_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer GetMarkupPtr Use After Free; content:"456"; sid:4044371; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130312-13_Microsoft_Internet_Explorer_removeChild_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer removeChild Use After Free; content:"456"; sid:4044372; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130326-09_Microsoft_Internet_Explorer_CTableCell_get_cellIndex_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CTableCell get_cellIndex Information Disclosure; content:"456"; sid:4044373; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130506-02_Microsoft_Internet_Explorer_CGenericElement_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CGenericElement Memory Corruption ; content:"456"; sid:4044374; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130514-13_Microsoft_.NET_Framework_XML_Digital_Signature_Spoofing.xml
-alert TCP any any -> any any (msg:Microsoft .NET Framework XML Digital Signature Spoofing; content:"456"; sid:4044375; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130514-13_Microsoft__NET_Framework_XML_Digital_Signature_Spoofing.xml
-alert TCP any any -> any any (msg:Microsoft .NET Framework XML Digital Signature Spoofing; content:"456"; sid:4044376; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130514-30_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Use After Free; content:"456"; sid:4044377; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130514-33_Microsoft_Internet_Explorer_VML_Processing_Integer_Underflow.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer VML Processing Integer Underflow; content:"456"; sid:4044378; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130611-11_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Use After Free; content:"456"; sid:4044379; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130611-12_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Use After Free; content:"456"; sid:4044380; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130611-13_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Use After Free; content:"456"; sid:4044381; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130611-14_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Use After Free; content:"456"; sid:4044382; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130611-15_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Use After Free; content:"456"; sid:4044383; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130709-19_Microsoft_Silverlight_Null_Pointer_Dereference_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Silverlight Null Pointer Dereference Code Execution; content:"456"; sid:4044384; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130709-30_Microsoft_Internet_Explorer_CVE-2013-3146_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2013-3146 Memory Corruption; content:"456"; sid:4044385; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130709-31_Microsoft_Internet_Explorer_CVE-2013-3152_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2013-3152 Memory Corruption; content:"456"; sid:4044386; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130709-32_Microsoft_Internet_Explorer_CVE-2013-3143_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2013-3143 Memory Corruption; content:"456"; sid:4044387; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130709-33_Microsoft_Internet_Explorer_CVE-2013-3147_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2013-3147 Memory Corruption; content:"456"; sid:4044388; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130813-12_Microsoft_Internet_Explorer_EUC-JP_Character_Encoding_Universal_Cross_Site_Scripting.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer EUC-JP Character
-Encoding Universal Cross Site Scripting; content:"456"; sid:4044389; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130910-12_Microsoft_Excel_CVE-2013-1315_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Excel CVE-2013-1315 Memory Corruption; content:"456"; sid:4044390; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130910-14_Microsoft_Access_CVE-2013-3156_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Access CVE-2013-3156 Memory Corruption; content:"456"; sid:4044391; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130910-28_Microsoft_Internet_Explorer_CVE-2013-3205_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2013-3205 Memory Corruption; content:"456"; sid:4044392; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130917-05_Microsoft_Internet_Explorer_CVE-2013-3163_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2013-3163 Use After Free; content:"456"; sid:4044393; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130917-06_Microsoft_Internet_Explorer_onlosecaputre_Event_Use-After-Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer onlosecaputre Event Use-After-Free; content:"456"; sid:4044394; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20131002-01_Microsoft_Internet_Explorer_applyElement_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer applyElement Use After Free; content:"456"; sid:4044395; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20131008-10_Microsoft_Silverlight_WriteableBitmap_SetSource_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft Silverlight WriteableBitmap SetSource Information Disclosure; content:"456"; sid:4044396; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20131008-26_Microsoft_Internet_Explorer_HtmlLayout_SmartObject_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer HtmlLayout SmartObject Use After Free; content:"456"; sid:4044397; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20131105-01_Microsoft_Windows_and_Office_TIFF_Handling_GDI_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows and Office TIFF Handling GDI Memory Corruption; content:"456"; sid:4044398; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20131112-11_Microsoft_Internet_Explorer_Print_Preview_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer Print Preview Information Disclosure; content:"456"; sid:4044399; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20131112-17_Microsoft_Internet_Explorer_CAnchorElement_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CAnchorElement Use After Free; content:"456"; sid:4044400; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20131210-30_Microsoft_Internet_Explorer_CVE-2013-5052_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2013-5052 Use After Free; content:"456"; sid:4044401; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20131211-01_Microsoft_Internet_Explorer_CVE-2013-5049_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2013-5049 Memory Corruption; content:"456"; sid:4044402; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140211-13_Microsoft_Direct2D_SVG_Path_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Direct2D SVG Path Memory Corruption; content:"456"; sid:4044403; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140211-17_Microsoft_XML_Core_Services_MSXML_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft XML Core Services MSXML Information Disclosure; content:"456"; sid:4044404; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140211-21_Microsoft_Internet_Explorer_CVE-2014-0283_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-0283 Use After Free; content:"456"; sid:4044405; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140211-23_Microsoft_Internet_Explorer_CVE-2014-0278_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-0278 Memory Corruption; content:"456"; sid:4044406; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140211-24_Microsoft_Internet_Explorer_CVE-2014-0274_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-0274 Use After Free; content:"456"; sid:4044407; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140214-08_Microsoft_Internet_Explorer_CVE-2014-0275_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-0275 Use After Free; content:"456"; sid:4044408; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140228-04_Microsoft_Internet_Explorer_CVE-2014-0287_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-0287 Use After Free; content:"456"; sid:4044409; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140311-08_Microsoft_Windows_DirectShow_JPEG_Double_Free.xml
-alert TCP any any -> any any (msg:Microsoft Windows DirectShow JPEG Double Free; content:"456"; sid:4044410; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140311-14_Microsoft_Internet_Explorer_CVE-2014-0312_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-0312 Use After Free; content:"456"; sid:4044411; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140311-15_Microsoft_Internet_Explorer_TextRange_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer TextRange Use After Free; content:"456"; sid:4044412; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140311-16_Microsoft_Internet_Explorer_CVE-2014-0305_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-0305 Use After Free; content:"456"; sid:4044413; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140324-04_Microsoft_Word_RTF_listoverridecount_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Word RTF listoverridecount Memory Corruption; content:"456"; sid:4044414; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140409-01_Microsoft_Internet_Explorer_CVE-2014-1753_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-1753 Memory Corruption; content:"456"; sid:4044415; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140428-01_Microsoft_Internet_Explorer_CVE-2014-1776_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-1776 Use After Free; content:"456"; sid:4044416; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140610-01_Microsoft_Internet_Explorer_behavior_Property_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer behavior Property Use After Free; content:"456"; sid:4044417; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140610-22_Microsoft_Internet_Explorer_CVE-2014-1791_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-1791 Memory Corruption; content:"456"; sid:4044418; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140610-23_Microsoft_Internet_Explorer_CVE-2014-0282_CInput_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-0282 CInput Use After Free; content:"456"; sid:4044419; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140611-03_Microsoft_Internet_Explorer_CVE-2014-1795_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-1795 Memory Corruption; content:"456"; sid:4044420; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140612-01_Microsoft_Internet_Explorer_CVE-2014-1804_CBlockContainerBlock_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-1804 CBlockContainerBlock Use After Free; content:"456"; sid:4044421; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140709-02_Microsoft_Internet_Explorer_CVE-2014-2804_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-2804 Use After Free; content:"456"; sid:4044422; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140710-06_Microsoft_Internet_Explorer_CVE-2014-1765_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-1765 Use After Free; content:"456"; sid:4044423; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140812-18_Microsoft_Internet_Explorer_CVE-2014-4063_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-4063 Use After Free; content:"456"; sid:4044424; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140812-19_Microsoft_Internet_Explorer_CVE-2014-2820_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-2820 Use After Free; content:"456"; sid:4044425; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140812-20_Microsoft_Internet_Explorer_CVE-2014-2824_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-2824 Memory Corruption; content:"456"; sid:4044426; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140813-05_Microsoft_Internet_Explorer_CVE-2014-4050_Use_After_Free.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-4050 Use After Free; content:"456"; sid:4044427; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20141014-16_Microsoft_NET_iriParsing_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft .NET iriParsing Remote Code Execution; content:"456"; sid:4044428; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20141111-30_Microsoft_Office_Bad_Index_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Office Bad Index Memory Corruption; content:"456"; sid:4044429; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20141209-16_Microsoft_Windows_Graphics_Component_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Microsoft Windows Graphics Component Information Disclosure; content:"456"; sid:4044430; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20141209-24_Microsoft_Internet_Explorer_CVE_2014_8966_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-8966 Memory Corruption; content:"456"; sid:4044431; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20141209-26_Microsoft_Internet_Explorer_CVE_2014_6366_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Internet Explorer CVE-2014-6366 Memory Corruption; content:"456"; sid:4044432; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#FSC20100330-03_Microsoft_Internet_Explorer_HTML_Rendering_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Internet Explorer HTML Rendering Memory Corruption(IPv6 Version); content:"456"; sid:4044337; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

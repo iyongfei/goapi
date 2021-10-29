@@ -3,66 +3,126 @@
 #DNSVersion.xml
 alert UDP any any -> any any (msg:BIND Version Query; content:"456"; sid:4018000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#DNSVersion_IPv6.xml
+alert UDP any any -> any any (msg:BIND Version Query (IPv6 Version); content:"456"; sid:4018001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #DNSfloodSpoofedReq.xml
-alert UDP any any -> any any (msg:DNS Spoofed Request Flood; content:"456"; sid:4018001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:DNS Spoofed Request Flood; content:"456"; sid:4018002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040513-01_Norton_DNS_CNAME_Buffer_Overflow.xml
-alert UDP any any -> any any (msg:Norton DNS CNAME Buffer Overflow; content:"456"; sid:4018002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Norton DNS CNAME Buffer Overflow; content:"456"; sid:4018003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040513-01_Norton_DNS_CNAME_Buffer_Overflow_IPv6.xml
+alert UDP any any -> any any (msg:Norton DNS CNAME Buffer Overflow (IPv6 Version); content:"456"; sid:4018004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040518-02_Symantec_DNS_Response_DoS.xml
-alert UDP any any -> any any (msg:Symantec DNS Response DoS; content:"456"; sid:4018003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Symantec DNS Response DoS; content:"456"; sid:4018005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040518-02_Symantec_DNS_Response_DoS_IPv6.xml
+alert UDP any any -> any any (msg:Symantec DNS Response DoS (IPv6 Version); content:"456"; sid:4018006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040616-01_Symantec_Enterprise_Firewall_DNSD_Proxy_Cache_Poisoning.xml
-alert UDP any any -> any any (msg:Symantec Enterprise Firewall DNSD Proxy Cache Poisoning; content:"456"; sid:4018004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Symantec Enterprise Firewall DNSD Proxy Cache Poisoning; content:"456"; sid:4018007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040616-01_Symantec_Enterprise_Firewall_DNSD_Proxy_Cache_Poisoning_IPv6.xml
+alert UDP any any -> any any (msg:Symantec Enterprise Firewall DNSD Proxy Cache Poisoning (IPv6 Version); content:"456"; sid:4018008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040806-01_Red_Hat_Enterprise_Linux_DNS_Resolver_Buffer_Overflow.xml
-alert UDP any any -> any any (msg:Red Hat Enterprise Linux DNS Resolver Buffer Overflow; content:"456"; sid:4018005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Red Hat Enterprise Linux DNS Resolver Buffer Overflow; content:"456"; sid:4018009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040806-01_Red_Hat_Enterprise_Linux_DNS_Resolver_Buffer_Overflow_IPv6.xml
+alert UDP any any -> any any (msg:Red Hat Enterprise Linux DNS Resolver Buffer Overflow (IPv6 Version); content:"456"; sid:4018010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20041109-01_Microsoft_ISA_Server_DNS_Spoofing_Vulnerability.xml
-alert UDP any any -> any any (msg:Microsoft ISA Server DNS Spoofing Vulnerability; content:"456"; sid:4018006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Microsoft ISA Server DNS Spoofing Vulnerability; content:"456"; sid:4018011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20041109-01_Microsoft_ISA_Server_DNS_Spoofing_Vulnerability_IPv6.xml
+alert UDP any any -> any any (msg:Microsoft ISA Server DNS Spoofing Vulnerability (IPv6 Version); content:"456"; sid:4018012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070413-01_Microsoft_Windows_DNS_Server_RPC_Management_Interface_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Microsoft Windows DNS Server RPC Management Interface Buffer Overflow; content:"456"; sid:4018007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows DNS Server RPC Management Interface Buffer Overflow; content:"456"; sid:4018013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070413-01_Microsoft_Windows_DNS_Server_RPC_Management_Interface_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows DNS Server RPC Management Interface Buffer Overflow (IPv6 Version); content:"456"; sid:4018014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20070919-07_Sun_Microsystems_JRE_isInstalled_dnsResolve_Function_Memory_Exception.xml
-alert TCP any any -> any any (msg:Sun Microsystems JRE isInstalled.dnsResolve Function Memory Exception; content:"456"; sid:4018008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Sun Microsystems JRE isInstalled.dnsResolve Function Memory Exception; content:"456"; sid:4018015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070919-07_Sun_Microsystems_JRE_isInstalled_dnsResolve_Function_Memory_Exception_IPv6.xml
+alert TCP any any -> any any (msg:Sun Microsystems JRE isInstalled.dnsResolve Function Memory Exception (IPv6 Version); content:"456"; sid:4018016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071113-06_Microsoft_Windows_DNS_Server_Spoofing_Vulnerability.xml
-alert UDP any any -> any any (msg:Microsoft Windows DNS Server Spoofing Vulnerability; content:"456"; sid:4018009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Microsoft Windows DNS Server Spoofing Vulnerability; content:"456"; sid:4018017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071113-06_Microsoft_Windows_DNS_Server_Spoofing_Vulnerability_IPv6.xml
+alert UDP any any -> any any (msg:Microsoft Windows DNS Server Spoofing Vulnerability (IPv6 Version); content:"456"; sid:4018018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081023-05_Multiple_Vendors_libspf2_DNS_TXT_Record_Parsing_Buffer_Overflow.xml
-alert UDP any any -> any any (msg:Multiple Vendors libspf2 DNS TXT Record Parsing Buffer Overflow; content:"456"; sid:4018010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Multiple Vendors libspf2 DNS TXT Record Parsing Buffer Overflow; content:"456"; sid:4018019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081023-05_Multiple_Vendors_libspf2_DNS_TXT_Record_Parsing_Buffer_Overflow_IPv6.xml
+alert UDP any any -> any any (msg:Multiple Vendors libspf2 DNS TXT Record Parsing Buffer Overflow (IPv6 Version); content:"456"; sid:4018020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090310-16_Microsoft_DNS_Server_WPAD_Registration_Spoofing.xml
-alert UDP any any -> any any (msg:Microsoft DNS Server WPAD Registration Spoofing; content:"456"; sid:4018011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Microsoft DNS Server WPAD Registration Spoofing; content:"456"; sid:4018021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090310-16_Microsoft_DNS_Server_WPAD_Registration_Spoofing_IPv6.xml
+alert UDP any any -> any any (msg:Microsoft DNS Server WPAD Registration Spoofing (IPv6 Version); content:"456"; sid:4018022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090922-01_Dnsmasq_TFTP_Service_Remote_Heap_Buffer_Overflow.xml
-alert UDP any any -> any any (msg:Dnsmasq TFTP Service Remote Heap Buffer Overflow; content:"456"; sid:4018012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Dnsmasq TFTP Service Remote Heap Buffer Overflow; content:"456"; sid:4018023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #SymantecFirewallDNSDOS.xml
-alert UDP any any -> any any (msg:Symantec Firewall DNS Response Denial of Service; content:"456"; sid:4018013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Symantec Firewall DNS Response Denial of Service; content:"456"; sid:4018024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #SymantecFirewallDNSDOS2.xml
-alert UDP any any -> any any (msg:Symantec Firewall DNS Response Buffer Overflow; content:"456"; sid:4018014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Symantec Firewall DNS Response Buffer Overflow; content:"456"; sid:4018025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#SymantecFirewallDNSDOS2_IPv6.xml
+alert UDP any any -> any any (msg:Symantec Firewall DNS Response Buffer Overflow (IPv6 Version); content:"456"; sid:4018026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#SymantecFirewallDNSDOS_IPv6.xml
+alert UDP any any -> any any (msg:Symantec Firewall DNS Response Denial of Service (IPv6 Version); content:"456"; sid:4018027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140613-02_ISC_BIND_EDNS_Option_Processing_Denial_of_Service.xml
-alert UDP any any -> any any (msg:ISC BIND EDNS Option Processing Denial of Service; content:"456"; sid:4018015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:ISC BIND EDNS Option Processing Denial of Service; content:"456"; sid:4018028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140613-02_ISC_BIND_EDNS_Option_Processing_Denial_of_Service_IPv6.xml
+alert UDP any any -> any any (msg:ISC BIND EDNS Option Processing Denial of Service IPv6  version; content:"456"; sid:4018029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140616-01_PHP_php_parserr_DNS_TXT_Hea_Buffer_Overflow.xml
-alert UDP any any -> any any (msg:PHP php_parserr DNS_TXT Heap Buffer Overflow; content:"456"; sid:4018016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:PHP php_parserr DNS_TXT Heap Buffer Overflow; content:"456"; sid:4018030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140616-01_PHP_php_parserr_DNS_TXT_Hea_Buffer_Overflow_IPv6.xml
+alert UDP any any -> any any (msg:PHP php_parserr DNS_TXT Heap Buffer Overflow IPv6 version.; content:"456"; sid:4018031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #dns_data_smuggling.xml
-alert UDP any any -> any any (msg:Sample of Data Smuggling and Arbitrary Command Execution Via DNS a Based Rootkit; content:"456"; sid:4018017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Sample of Data Smuggling and Arbitrary Command Execution Via DNS a Based Rootkit; content:"456"; sid:4018032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dns_data_smuggling_IPv6.xml
+alert UDP any any -> any any (msg:Sample of Data Smuggling and Arbitrary Command Execution Via DNS a Based Rootkit (IPv6 Version); content:"456"; sid:4018033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #dns_rev.xml
-alert UDP any any -> any any (msg:DNS Reverse Address Lookup Spoofing; content:"456"; sid:4018018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:DNS Reverse Address Lookup Spoofing; content:"456"; sid:4018034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dns_rev_IPv6.xml
+alert UDP any any -> any any (msg:DNS Reverse Address Lookup Spoofing (IPv6 Version); content:"456"; sid:4018035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #dns_transfer.xml
-alert TCP any any -> any any (msg:Domain Transfer Request; content:"456"; sid:4018019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Domain Transfer Request; content:"456"; sid:4018036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dns_transfer_IPv6.xml
+alert TCP any any -> any any (msg:Domain Transfer Request (IPv6 Version); content:"456"; sid:4018037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sun_jre_dnsResolve_bof.xml
-alert TCP any any -> any any (msg:Sun jre1.6.0_X isInstalled.dnsResolve ActiveX Control Buffer Overflow Vulnerability; content:"456"; sid:4018020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Sun jre1.6.0_X isInstalled.dnsResolve ActiveX Control Buffer Overflow Vulnerability; content:"456"; sid:4018038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sun_jre_dnsResolve_bof_IPv6.xml
+alert TCP any any -> any any (msg:Sun jre1.6.0_X isInstalled.dnsResolve ActiveX Control Buffer Overflow Vulnerability (IPv6 Version); content:"456"; sid:4018039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #windowsupdateDNSSpoof.xml
-alert UDP any any -> any any (msg:Windows Update Spoofing Attempt; content:"456"; sid:4018021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Windows Update Spoofing Attempt; content:"456"; sid:4018040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#windowsupdateDNSSpoof_IPv6.xml
+alert UDP any any -> any any (msg:Windows Update Spoofing Attempt (IPv6 Version); content:"456"; sid:4018041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

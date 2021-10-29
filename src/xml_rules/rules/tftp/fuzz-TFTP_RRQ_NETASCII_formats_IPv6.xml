@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <EngDesc display="true" value="Fuzzes Mode field by appending %s to netascii with ranging sizes. OpCode is RRQ. (IPv6 Version)"/>
+    <ExecDesc display="true" value="TFTP Fuzzer fuzz-TFTP_RRQ_NETASCII_formats.xml (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="TFTP/IPv6"/>
+    <Type_Of_Equipment display="true"/>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Hailu Awlachew"/>
+    <ID value="026b3cd81182c9eeff19fc7a90cd2c84" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="True"/>
+    <SoftwareRevision display="true" value="1.7"/>
+    <RunOnce display="false" value="False"/>
+    <Valid_Traffic display="false" value="False"/>
+    <Suite display="true" value="Fuzzing"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="local"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="none"/>
+    <ImpactBias value="normal"/>
+    <Created value="1135228835" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="F"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="G"/>
+    <NamedVar name="TFTPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="I"/>
+      <for index="B" range="ModeNullTerm"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)" TFTPdestPort="$destPort" checksum="" length="">
+          <TFTP_RRQ OpCode="0001" FilenameNullTerm="696E6465782E68746D6C" ModeNullTerm="65746173636969@fill(2573,@range(0,700))00"/>
+        </UDP>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

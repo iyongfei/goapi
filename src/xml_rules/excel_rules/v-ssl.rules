@@ -3,105 +3,168 @@
 #FSC20040219-03_OpenSSL_Handshake_DoS.xml
 alert Ethernet any any -> any any (msg:OpenSSL Handshake DoS; content:"456"; sid:4047000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#FSC20040716-01_mod_ssl_-_mod_proxy_Hook_Functions_Format_String_Vulnerability.xml
-alert TCP any any -> any any (msg:mod_ssl - mod_proxy Hook Functions Format String Vulnerability; content:"456"; sid:4047001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20040903-01_Apache_2_mod_ssl_Connection_Abort_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Apache 2 mod_ssl Connection Abort Denial of Service; content:"456"; sid:4047002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20070927-14_OpenSSL_SSL_get_shared_ciphers_Function_Off-by-one_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:OpenSSL SSL_get_shared_ciphers Function Off-by-one Buffer Overflow; content:"456"; sid:4047003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20080104-15_MySQL_yaSSL_SSL_Hello_Message_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:MySQL yaSSL SSL Hello Message Buffer Overflow; content:"456"; sid:4047004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100325-01_OpenSSL_TLS_Connection_Record_Handling_Denial_of_Service.xml
-alert TCP any any -> any any (msg:OpenSSL TLS Connection Record Handling Denial of Service; content:"456"; sid:4047005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100820-07_SonicWALL_SSL_VPN_End_Point_Interrogator_Installer_ActiveX_Control_Code_Execution.xml
-alert TCP any any -> any any (msg:SonicWALL SSL VPN End Point Interrogator Installer ActiveX Control Code Execution; content:"456"; sid:4047006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100901-08_OpenSSL_ssl3_get_key_exchange_Use-After-Free_Memory_Corruption.xml
-alert TCP any any -> any any (msg:OpenSSL ssl3_get_key_exchange Use-After-Free Memory Corruption; content:"456"; sid:4047007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110317-08_Oracle_Java_Applet2ClassLoader_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Oracle Java Applet2ClassLoader Remote Code Execution; content:"456"; sid:4047008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130211-05_IBM_Java_java_lang_ClassLoader_defineClass_Sandbox_Breach.xml
-alert TCP any any -> any any (msg:IBM Java java.lang.ClassLoader.defineClass Sandbox Breach; content:"456"; sid:4047009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130819-02_PHP_SSL_Certificate_Validation_Security_Bypass.xml
-alert TCP any any -> any any (msg:PHP SSL Certificate Validation Security Bypass; content:"456"; sid:4047010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20131211-05_PHP_OpenSSL_Extension_X_509_Certificate_Memory_Corruption.xml
-alert TCP any any -> any any (msg:PHP OpenSSL Extension X.509 Certificate Memory Corruption; content:"456"; sid:4047011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140307-09_Apache_Struts_ParametersInterceptor_ClassLoader_Security_Bypass.xml
-alert TCP any any -> any any (msg:Apache Struts ParametersInterceptor ClassLoader Security Bypass; content:"456"; sid:4047012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140408-01_OpenSSL_TLS_DTLS_Heartbeat_Information_Disclosure.xml
-alert TCP any any -> any any (msg:OpenSSL TLS DTLS Heartbeat Information Disclosure; content:"456"; sid:4047013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140428-04_Apache_Struts_CookieInterceptor_ClassLoader_Security_Bypass.xml
-alert TCP any any -> any any (msg:Apache Struts CookieInterceptor ClassLoader Security Bypass; content:"456"; sid:4047014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140501-07_Apache_Struts_ActionForm_ClassLoader_Security_Bypass.xml
-alert TCP any any -> any any (msg:Apache Struts ActionForm ClassLoader Security Bypass; content:"456"; sid:4047015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140605-05_OpenSSL_Anonymous_ECDH_Denial_of_Service.xml
-alert TCP any any -> any any (msg:OpenSSL Anonymous ECDH Denial of Service; content:"456"; sid:4047016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20150109-08_OpenSSL_DTLS_dtls1_buffer_record_Denial_of_Service.xml
-alert UDP any any -> any any (msg:OpenSSL DTLS dtls1_buffer_record Denial of Service; content:"456"; sid:4047017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#cisco_ips_ssl_crash.xml
-alert TCP any any -> any any (msg:Cisco IPS SSL Heap Corruption; content:"456"; sid:4047018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#ftpd_ssl.xml
-alert TCP any any -> any any (msg:FTP SSL Threat; content:"456"; sid:4047019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sonicwall_ssl-vpn_activex.xml
-alert TCP any any -> any any (msg:SonicWall SSL-VPN NeLaunchCtrl ActiveX Control Vulnerability; content:"456"; sid:4047020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#FSC20040219-03_OpenSSL_Handshake_DoS_IPv6.xml
+alert Ethernet any any -> any any (msg:OpenSSL Handshake DoS (IPv6 Version); content:"456"; sid:4047001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040716-01_mod_ssl_-_mod_proxy_Hook_Functions_Format_String_Vulnerability.xml
-alert TCP any any -> any any (msg:mod_ssl - mod_proxy Hook Functions Format String Vulnerability; content:"456"; sid:4047021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:mod_ssl - mod_proxy Hook Functions Format String Vulnerability; content:"456"; sid:4047002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20040716-01_mod_ssl_-_mod_proxy_Hook_Functions_Format_String_Vulnerability_IPv6.xml
-alert TCP any any -> any any (msg:mod_ssl - mod_proxy Hook Functions Format String Vulnerability (IPv6 Version); content:"456"; sid:4047022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:mod_ssl - mod_proxy Hook Functions Format String Vulnerability (IPv6 Version); content:"456"; sid:4047003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040903-01_Apache_2_mod_ssl_Connection_Abort_Denial_of_Service.xml
+alert TCP any any -> any any (msg:Apache 2 mod_ssl Connection Abort Denial of Service; content:"456"; sid:4047004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040903-01_Apache_2_mod_ssl_Connection_Abort_Denial_of_Service_IPv6.xml
+alert TCP any any -> any any (msg:Apache 2 mod_ssl Connection Abort Denial of Service (IPv6 Version); content:"456"; sid:4047005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070927-14_OpenSSL_SSL_get_shared_ciphers_Function_Off-by-one_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:OpenSSL SSL_get_shared_ciphers Function Off-by-one Buffer Overflow; content:"456"; sid:4047006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070927-14_OpenSSL_SSL_get_shared_ciphers_Function_Off-by-one_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:OpenSSL SSL_get_shared_ciphers Function Off-by-one Buffer Overflow (IPv6 Version); content:"456"; sid:4047007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080104-15_MySQL_yaSSL_SSL_Hello_Message_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:MySQL yaSSL SSL Hello Message Buffer Overflow; content:"456"; sid:4047023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:MySQL yaSSL SSL Hello Message Buffer Overflow; content:"456"; sid:4047008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080104-15_MySQL_yaSSL_SSL_Hello_Message_Buffer_Overflow_IPv6.xml
-alert TCP any any -> any any (msg:MySQL yaSSL SSL Hello Message Buffer Overflow (IPv6 Version); content:"456"; sid:4047024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:MySQL yaSSL SSL Hello Message Buffer Overflow (IPv6 Version); content:"456"; sid:4047009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100325-01_OpenSSL_TLS_Connection_Record_Handling_Denial_of_Service.xml
-alert TCP any any -> any any (msg:OpenSSL TLS Connection Record Handling Denial of Service; content:"456"; sid:4047025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:OpenSSL TLS Connection Record Handling Denial of Service; content:"456"; sid:4047010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100325-01_OpenSSL_TLS_Connection_Record_Handling_Denial_of_Service_IPv6.xml
-alert TCP any any -> any any (msg:OpenSSL TLS Connection Record Handling Denial of Service (IPv6 Version); content:"456"; sid:4047026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:OpenSSL TLS Connection Record Handling Denial of Service (IPv6 Version); content:"456"; sid:4047011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100820-07_SonicWALL_SSL_VPN_End_Point_Interrogator_Installer_ActiveX_Control_Code_Execution.xml
+alert TCP any any -> any any (msg:SonicWALL SSL VPN End Point Interrogator Installer ActiveX Control Code Execution; content:"456"; sid:4047012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100820-07_SonicWALL_SSL_VPN_End_Point_Interrogator_Installer_ActiveX_Control_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:SonicWALL SSL VPN End Point Interrogator Installer ActiveX Control Code Execution; content:"456"; sid:4047013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100901-08_OpenSSL_ssl3_get_key_exchange_Use-After-Free_Memory_Corruption.xml
+alert TCP any any -> any any (msg:OpenSSL ssl3_get_key_exchange Use-After-Free Memory Corruption; content:"456"; sid:4047014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100901-08_OpenSSL_ssl3_get_key_exchange_Use-After-Free_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:OpenSSL ssl3_get_key_exchange Use-After-Free Memory Corruption (IPv6 Version); content:"456"; sid:4047015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20110317-08_Oracle_Java_Applet2ClassLoader_Remote_Code_Execution.xml
+alert TCP any any -> any any (msg:Oracle Java Applet2ClassLoader Remote Code Execution; content:"456"; sid:4047016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20110317-08_Oracle_Java_Applet2ClassLoader_Remote_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Java Applet2ClassLoader Remote Code Execution(IPv6 Version); content:"456"; sid:4047017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20130211-05_IBM_Java_java_lang_ClassLoader_defineClass_Sandbox_Breach.xml
+alert TCP any any -> any any (msg:IBM Java java.lang.ClassLoader.defineClass Sandbox Breach; content:"456"; sid:4047018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20130211-05_IBM_Java_java_lang_ClassLoader_defineClass_Sandbox_Breach_IPv6.xml
+alert TCP any any -> any any (msg:IBM Java java.lang.ClassLoader.defineClass Sandbox Breach(IPV6 Version); content:"456"; sid:4047019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130819-02_PHP_SSL_Certificate_Validation_Security_Bypass.xml
-alert TCP any any -> any any (msg:PHP SSL Certificate Validation Security Bypass; content:"456"; sid:4047027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:PHP SSL Certificate Validation Security Bypass; content:"456"; sid:4047020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130819-02_PHP_SSL_Certificate_Validation_Security_Bypass_IPv6.xml
-alert TCP any any -> any any (msg:PHP SSL Certificate Validation Security Bypass [IPv6, Version]; content:"456"; sid:4047028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:PHP SSL Certificate Validation Security Bypass [IPv6, Version]; content:"456"; sid:4047021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20131211-05_PHP_OpenSSL_Extension_X_509_Certificate_Memory_Corruption.xml
+alert TCP any any -> any any (msg:PHP OpenSSL Extension X.509 Certificate Memory Corruption; content:"456"; sid:4047022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20131211-05_PHP_OpenSSL_Extension_X_509_Certificate_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:PHP OpenSSL Extension X.509 Certificate Memory Corruption(IPv6 Version); content:"456"; sid:4047023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140307-09_Apache_Struts_ParametersInterceptor_ClassLoader_Security_Bypass.xml
+alert TCP any any -> any any (msg:Apache Struts ParametersInterceptor ClassLoader Security Bypass; content:"456"; sid:4047024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140307-09_Apache_Struts_ParametersInterceptor_ClassLoader_Security_Bypass_IPv6.xml
+alert TCP any any -> any any (msg:Apache Struts ParametersInterceptor ClassLoader Security Bypass(IPv6 Version); content:"456"; sid:4047025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140408-01_OpenSSL_TLS_DTLS_Heartbeat_Information_Disclosure.xml
+alert TCP any any -> any any (msg:OpenSSL TLS DTLS Heartbeat Information Disclosure; content:"456"; sid:4047026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140408-01_OpenSSL_TLS_DTLS_Heartbeat_Information_Disclosure_IPv6.xml
+alert TCP any any -> any any (msg:OpenSSL TLS DTLS Heartbeat Information Disclosure(IPv6 version); content:"456"; sid:4047027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140428-04_Apache_Struts_CookieInterceptor_ClassLoader_Security_Bypass.xml
+alert TCP any any -> any any (msg:Apache Struts CookieInterceptor ClassLoader Security Bypass; content:"456"; sid:4047028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140428-04_Apache_Struts_CookieInterceptor_ClassLoader_Security_Bypass_IPv6.xml
+alert TCP any any -> any any (msg:Apache Struts CookieInterceptor ClassLoader Security Bypass(IPv6 Version); content:"456"; sid:4047029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140501-07_Apache_Struts_ActionForm_ClassLoader_Security_Bypass.xml
+alert TCP any any -> any any (msg:Apache Struts ActionForm ClassLoader Security Bypass; content:"456"; sid:4047030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140501-07_Apache_Struts_ActionForm_ClassLoader_Security_Bypass_IPv6.xml
+alert TCP any any -> any any (msg:Apache Struts ActionForm ClassLoader Security Bypass(IPv6 Version); content:"456"; sid:4047031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140605-05_OpenSSL_Anonymous_ECDH_Denial_of_Service.xml
+alert TCP any any -> any any (msg:OpenSSL Anonymous ECDH Denial of Service; content:"456"; sid:4047032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140605-05_OpenSSL_Anonymous_ECDH_Denial_of_Service_IPv6.xml
+alert TCP any any -> any any (msg:OpenSSL Anonymous ECDH Denial of Service IPv6 version; content:"456"; sid:4047033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20150109-08_OpenSSL_DTLS_dtls1_buffer_record_Denial_of_Service.xml
+alert UDP any any -> any any (msg:OpenSSL DTLS dtls1_buffer_record Denial of Service; content:"456"; sid:4047034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20150109-08_OpenSSL_DTLS_dtls1_buffer_record_Denial_of_Service_IPv6.xml
+alert UDP any any -> any any (msg:OpenSSL DTLS dtls1_buffer_record Denial of Service IPv6 version.; content:"456"; sid:4047035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #cisco_ips_ssl_crash.xml
-alert TCP any any -> any any (msg:Cisco IPS SSL Heap Corruption; content:"456"; sid:4047029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Cisco IPS SSL Heap Corruption; content:"456"; sid:4047036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #cisco_ips_ssl_crash_IPv6.xml
-alert TCP any any -> any any (msg:Cisco IPS SSL Heap Corruption (IPv6 Version); content:"456"; sid:4047030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Cisco IPS SSL Heap Corruption (IPv6 Version); content:"456"; sid:4047037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ftpd_ssl.xml
-alert TCP any any -> any any (msg:FTP SSL Threat; content:"456"; sid:4047031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:FTP SSL Threat; content:"456"; sid:4047038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ftpd_ssl_IPv6.xml
-alert TCP any any -> any any (msg:FTP SSL Threat (IPv6 Version); content:"456"; sid:4047032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:FTP SSL Threat (IPv6 Version); content:"456"; sid:4047039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sonicwall_ssl-vpn_activex.xml
-alert TCP any any -> any any (msg:SonicWall SSL-VPN NeLaunchCtrl ActiveX Control Vulnerability; content:"456"; sid:4047033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:SonicWall SSL-VPN NeLaunchCtrl ActiveX Control Vulnerability; content:"456"; sid:4047040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sonicwall_ssl-vpn_activex_IPv6.xml
-alert TCP any any -> any any (msg:SonicWall SSL-VPN NeLaunchCtrl ActiveX Control Vulnerability (IPv6 Version); content:"456"; sid:4047034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:SonicWall SSL-VPN NeLaunchCtrl ActiveX Control Vulnerability (IPv6 Version); content:"456"; sid:4047041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040716-01_mod_ssl_-_mod_proxy_Hook_Functions_Format_String_Vulnerability.xml
+alert TCP any any -> any any (msg:mod_ssl - mod_proxy Hook Functions Format String Vulnerability; content:"456"; sid:4047042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040716-01_mod_ssl_-_mod_proxy_Hook_Functions_Format_String_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:mod_ssl - mod_proxy Hook Functions Format String Vulnerability (IPv6 Version); content:"456"; sid:4047043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080104-15_MySQL_yaSSL_SSL_Hello_Message_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:MySQL yaSSL SSL Hello Message Buffer Overflow; content:"456"; sid:4047044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080104-15_MySQL_yaSSL_SSL_Hello_Message_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:MySQL yaSSL SSL Hello Message Buffer Overflow (IPv6 Version); content:"456"; sid:4047045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100325-01_OpenSSL_TLS_Connection_Record_Handling_Denial_of_Service.xml
+alert TCP any any -> any any (msg:OpenSSL TLS Connection Record Handling Denial of Service; content:"456"; sid:4047046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100325-01_OpenSSL_TLS_Connection_Record_Handling_Denial_of_Service_IPv6.xml
+alert TCP any any -> any any (msg:OpenSSL TLS Connection Record Handling Denial of Service (IPv6 Version); content:"456"; sid:4047047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20130819-02_PHP_SSL_Certificate_Validation_Security_Bypass.xml
+alert TCP any any -> any any (msg:PHP SSL Certificate Validation Security Bypass; content:"456"; sid:4047048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20130819-02_PHP_SSL_Certificate_Validation_Security_Bypass_IPv6.xml
+alert TCP any any -> any any (msg:PHP SSL Certificate Validation Security Bypass [IPv6, Version]; content:"456"; sid:4047049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cisco_ips_ssl_crash.xml
+alert TCP any any -> any any (msg:Cisco IPS SSL Heap Corruption; content:"456"; sid:4047050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cisco_ips_ssl_crash_IPv6.xml
+alert TCP any any -> any any (msg:Cisco IPS SSL Heap Corruption (IPv6 Version); content:"456"; sid:4047051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ftpd_ssl.xml
+alert TCP any any -> any any (msg:FTP SSL Threat; content:"456"; sid:4047052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ftpd_ssl_IPv6.xml
+alert TCP any any -> any any (msg:FTP SSL Threat (IPv6 Version); content:"456"; sid:4047053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sonicwall_ssl-vpn_activex.xml
+alert TCP any any -> any any (msg:SonicWall SSL-VPN NeLaunchCtrl ActiveX Control Vulnerability; content:"456"; sid:4047054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sonicwall_ssl-vpn_activex_IPv6.xml
+alert TCP any any -> any any (msg:SonicWall SSL-VPN NeLaunchCtrl ActiveX Control Vulnerability (IPv6 Version); content:"456"; sid:4047055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

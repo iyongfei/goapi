@@ -3,9 +3,18 @@
 #Netbios_UDP_DOS.xml
 alert UDP any any -> any any (msg:NetBIOS Denial of Service (WinNuke); content:"456"; sid:4022000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#Netbios_UDP_DOS_IPv6.xml
+alert UDP any any -> any any (msg:NetBIOS Denial of Service (WinNuke) (IPv6 Version); content:"456"; sid:4022001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #SymantecNetbios1.xml
-alert UDP any any -> any any (msg:Symantec Firewall NetBIOS Buffer Overflow; content:"456"; sid:4022001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Symantec Firewall NetBIOS Buffer Overflow; content:"456"; sid:4022002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#SymantecNetbios1_IPv6.xml
+alert UDP any any -> any any (msg:Symantec Firewall NetBIOS Buffer Overflow (IPv6 Version); content:"456"; sid:4022003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #netbios_scan.xml
-alert UDP any any -> any any (msg:NetBIOS Query; content:"456"; sid:4022002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:NetBIOS Query; content:"456"; sid:4022004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#netbios_scan_IPv6.xml
+alert UDP any any -> any any (msg:NetBIOS Query (IPv6 Version); content:"456"; sid:4022005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

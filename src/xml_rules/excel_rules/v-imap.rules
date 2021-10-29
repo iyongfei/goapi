@@ -3,108 +3,171 @@
 #FSC20041116-01_Ipswitch_IMail_IMAP_Service_DELETE_Command_Buffer_Overflow.xml
 alert TCP any any -> any any (msg:Ipswitch IMail IMAP Service DELETE Command Buffer Overflow; content:"456"; sid:4014000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#FSC20041116-01_Ipswitch_IMail_IMAP_Service_DELETE_Command_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Ipswitch IMail IMAP Service DELETE Command Buffer Overflow (IPv6 Version); content:"456"; sid:4014001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #FSC20041123-01_Cyrus_IMAP_Server_IMAPMAGICPLUS_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Cyrus IMAP Server IMAPMAGICPLUS Buffer Overflow; content:"456"; sid:4014001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Cyrus IMAP Server IMAPMAGICPLUS Buffer Overflow; content:"456"; sid:4014002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20041123-01_Cyrus_IMAP_Server_IMAPMAGICPLUS_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Cyrus IMAP Server IMAPMAGICPLUS Buffer Overflow (IPv6 Version); content:"456"; sid:4014003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060316-13_Atrium_Mercur_IMAP_Remote_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Atrium Mercur IMAP Remote Buffer Overflow; content:"456"; sid:4014002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20071023-16_IBM_Lotus_Domino_IMAP_Server_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:IBM Lotus Domino IMAP Server Buffer Overflow; content:"456"; sid:4014003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20071212-08_Apache_mod_imap_and_mod_imagemap_Module_Cross-Site_Scripting.xml
-alert TCP any any -> any any (msg:Apache mod_imap and mod_imagemap Module Cross-Site Scripting; content:"456"; sid:4014004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20080313-20_Alt-N_MDaemon_IMAP_Server_FETCH_Command_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Alt-N MDaemon IMAP Server FETCH Command Buffer Overflow; content:"456"; sid:4014005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100716-07_Novell_GroupWise_Internet_Agent_IMAP_Service_Stack_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Novell GroupWise Internet Agent IMAP Service Stack Buffer Overflow; content:"456"; sid:4014006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Mercury_IMAP_bof.xml
-alert TCP any any -> any any (msg:Mercury IMAP Buffer Overflow Attack; content:"456"; sid:4014007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#altn_imap.xml
-alert TCP any any -> any any (msg:ALT-N IMAP Daemon Denial of Service; content:"456"; sid:4014008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#cyrus_imap_login.xml
-alert TCP any any -> any any (msg:Cyrus imapd LOGIN Buffer Overflow; content:"456"; sid:4014009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#imail_bof_imap_list.xml
-alert TCP any any -> any any (msg:Ipswitch IMail IMAP List Command DoS Vulnerability; content:"456"; sid:4014010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#imap_buffer_overflow_1025.xml
-alert TCP any any -> any any (msg:IMAP Buffer Overflow [1025] Attack; content:"456"; sid:4014011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#imap_buffer_overflow_129.xml
-alert TCP any any -> any any (msg:IMAP Buffer Overflow [129] Attack; content:"456"; sid:4014012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#imap_buffer_overflow_257.xml
-alert TCP any any -> any any (msg:IMAP Buffer Overflow [257] Attack; content:"456"; sid:4014013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#imap_buffer_overflow_513.xml
-alert TCP any any -> any any (msg:IMAP Buffer Overflow [513] Attack; content:"456"; sid:4014014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#imap_format.xml
-alert TCP any any -> any any (msg:IMAP Format String Attack; content:"456"; sid:4014015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#imap_format_command.xml
-alert TCP any any -> any any (msg:IMAP Command Tag Format String Attack; content:"456"; sid:4014016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#mailenable_imap_bof.xml
-alert TCP any any -> any any (msg:MailEnable IMAP Mailbox Name Buffer Overflow Vulnerability; content:"456"; sid:4014017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#mercur_imap_rbof.xml
-alert TCP any any -> any any (msg:Mercur Mailserver 5.0 SP3 (IMAP) Remote Buffer Overflow Vulnerability ; content:"456"; sid:4014018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#mercur_imap_rbof2.xml
-alert TCP any any -> any any (msg:Mercur Messaging 2005 IMAP (SUBSCRIBE) Remote Stack Overflow Vulnerability; content:"456"; sid:4014019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#mmimap_bof.xml
-alert TCP any any -> any any (msg:Mercur Messaging 2005 IMAP Remote Buffer Overflow Vulnerability; content:"456"; sid:4014020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#qualcomm_imap_bof.xml
-alert TCP any any -> any any (msg:Eudora Qualcomm WorldMail IMAP Buffer Overflow; content:"456"; sid:4014021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20060316-13_Atrium_Mercur_IMAP_Remote_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Atrium Mercur IMAP Remote Buffer Overflow; content:"456"; sid:4014022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Atrium Mercur IMAP Remote Buffer Overflow; content:"456"; sid:4014004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20060316-13_Atrium_Mercur_IMAP_Remote_Buffer_Overflow_IPv6.xml
-alert TCP any any -> any any (msg:Atrium Mercur IMAP Remote Buffer Overflow (IPv6 Version); content:"456"; sid:4014023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Atrium Mercur IMAP Remote Buffer Overflow (IPv6 Version); content:"456"; sid:4014005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071023-16_IBM_Lotus_Domino_IMAP_Server_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:IBM Lotus Domino IMAP Server Buffer Overflow; content:"456"; sid:4014006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071023-16_IBM_Lotus_Domino_IMAP_Server_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:IBM Lotus Domino IMAP Server Buffer Overflow (IPv6 Version); content:"456"; sid:4014007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071212-08_Apache_mod_imap_and_mod_imagemap_Module_Cross-Site_Scripting.xml
+alert TCP any any -> any any (msg:Apache mod_imap and mod_imagemap Module Cross-Site Scripting; content:"456"; sid:4014008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071212-08_Apache_mod_imap_and_mod_imagemap_Module_Cross-Site_Scripting_IPv6.xml
+alert TCP any any -> any any (msg:Apache mod_imap and mod_imagemap Module Cross-Site Scripting (IPv6 Version); content:"456"; sid:4014009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080313-20_Alt-N_MDaemon_IMAP_Server_FETCH_Command_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Alt-N MDaemon IMAP Server FETCH Command Buffer Overflow; content:"456"; sid:4014010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100716-07_Novell_GroupWise_Internet_Agent_IMAP_Service_Stack_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Novell GroupWise Internet Agent IMAP Service Stack Buffer Overflow; content:"456"; sid:4014011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100716-07_Novell_GroupWise_Internet_Agent_IMAP_Service_Stack_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Novell GroupWise Internet Agent IMAP Service Stack Buffer Overflow; content:"456"; sid:4014012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Mercury_IMAP_bof.xml
-alert TCP any any -> any any (msg:Mercury IMAP Buffer Overflow Attack; content:"456"; sid:4014024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Mercury IMAP Buffer Overflow Attack; content:"456"; sid:4014013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Mercury_IMAP_bof_IPv6.xml
-alert TCP any any -> any any (msg:Mercury IMAP Buffer Overflow Attack (IPv6 Version); content:"456"; sid:4014025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Mercury IMAP Buffer Overflow Attack (IPv6 Version); content:"456"; sid:4014014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #altn_imap.xml
-alert TCP any any -> any any (msg:ALT-N IMAP Daemon Denial of Service; content:"456"; sid:4014026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:ALT-N IMAP Daemon Denial of Service; content:"456"; sid:4014015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #altn_imap_IPv6.xml
-alert TCP any any -> any any (msg:ALT-N IMAP Daemon Denial of Service (IPv6 Version); content:"456"; sid:4014027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:ALT-N IMAP Daemon Denial of Service (IPv6 Version); content:"456"; sid:4014016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cyrus_imap_login.xml
+alert TCP any any -> any any (msg:Cyrus imapd LOGIN Buffer Overflow; content:"456"; sid:4014017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cyrus_imap_login_IPv6.xml
+alert TCP any any -> any any (msg:Cyrus imapd LOGIN Buffer Overflow (IPv6 Version); content:"456"; sid:4014018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #imail_bof_imap_list.xml
-alert TCP any any -> any any (msg:Ipswitch IMail IMAP List Command DoS Vulnerability; content:"456"; sid:4014028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Ipswitch IMail IMAP List Command DoS Vulnerability; content:"456"; sid:4014019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #imail_bof_imap_list_IPv6.xml
-alert TCP any any -> any any (msg:Ipswitch IMail IMAP List Command DoS Vulnerability (IPv6 Version); content:"456"; sid:4014029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Ipswitch IMail IMAP List Command DoS Vulnerability (IPv6 Version); content:"456"; sid:4014020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_buffer_overflow_1025.xml
+alert TCP any any -> any any (msg:IMAP Buffer Overflow [1025] Attack; content:"456"; sid:4014021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_buffer_overflow_1025_IPv6.xml
+alert TCP any any -> any any (msg:IMAP Buffer Overflow [1025] Attack (IPv6 Version); content:"456"; sid:4014022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_buffer_overflow_129.xml
+alert TCP any any -> any any (msg:IMAP Buffer Overflow [129] Attack; content:"456"; sid:4014023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_buffer_overflow_129_IPv6.xml
+alert TCP any any -> any any (msg:IMAP Buffer Overflow [129] Attack (IPv6 Version); content:"456"; sid:4014024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_buffer_overflow_257.xml
+alert TCP any any -> any any (msg:IMAP Buffer Overflow [257] Attack; content:"456"; sid:4014025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_buffer_overflow_257_IPv6.xml
+alert TCP any any -> any any (msg:IMAP Buffer Overflow [257] Attack (IPv6 Version); content:"456"; sid:4014026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #imap_buffer_overflow_513.xml
-alert TCP any any -> any any (msg:IMAP Buffer Overflow [513] Attack; content:"456"; sid:4014030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:IMAP Buffer Overflow [513] Attack; content:"456"; sid:4014027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #imap_buffer_overflow_513_IPv6.xml
-alert TCP any any -> any any (msg:IMAP Buffer Overflow [513] Attack (IPv6 Version); content:"456"; sid:4014031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:IMAP Buffer Overflow [513] Attack (IPv6 Version); content:"456"; sid:4014028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #imap_format.xml
-alert TCP any any -> any any (msg:IMAP Format String Attack; content:"456"; sid:4014032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:IMAP Format String Attack; content:"456"; sid:4014029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_format_IPv6.xml
+alert TCP any any -> any any (msg:IMAP Format String Attack (IPv6 Version); content:"456"; sid:4014030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #imap_format_command.xml
-alert TCP any any -> any any (msg:IMAP Command Tag Format String Attack; content:"456"; sid:4014033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:IMAP Command Tag Format String Attack; content:"456"; sid:4014031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_format_command_IPv6.xml
+alert TCP any any -> any any (msg:IMAP Command Tag Format String Attack (IPv6 Version); content:"456"; sid:4014032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #mailenable_imap_bof.xml
-alert TCP any any -> any any (msg:MailEnable IMAP Mailbox Name Buffer Overflow Vulnerability; content:"456"; sid:4014034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:MailEnable IMAP Mailbox Name Buffer Overflow Vulnerability; content:"456"; sid:4014033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #mailenable_imap_bof_IPv6.xml
-alert TCP any any -> any any (msg:MailEnable IMAP Mailbox Name Buffer Overflow Vulnerability (IPv6 Version); content:"456"; sid:4014035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:MailEnable IMAP Mailbox Name Buffer Overflow Vulnerability (IPv6 Version); content:"456"; sid:4014034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mercur_imap_rbof.xml
+alert TCP any any -> any any (msg:Mercur Mailserver 5.0 SP3 (IMAP) Remote Buffer Overflow Vulnerability ; content:"456"; sid:4014035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mercur_imap_rbof2.xml
+alert TCP any any -> any any (msg:Mercur Messaging 2005 IMAP (SUBSCRIBE) Remote Stack Overflow Vulnerability; content:"456"; sid:4014036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mercur_imap_rbof2_IPv6.xml
+alert TCP any any -> any any (msg:Mercur Messaging 2005 IMAP (SUBSCRIBE) Remote Stack Overflow Vulnerability (IPv6 Version); content:"456"; sid:4014037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mercur_imap_rbof_IPv6.xml
+alert TCP any any -> any any (msg:Mercur Mailserver 5.0 SP3 (IMAP) Remote Buffer Overflow Vulnerability  (IPv6 Version); content:"456"; sid:4014038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mmimap_bof.xml
+alert TCP any any -> any any (msg:Mercur Messaging 2005 IMAP Remote Buffer Overflow Vulnerability; content:"456"; sid:4014039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mmimap_bof_IPv6.xml
+alert TCP any any -> any any (msg:Mercur Messaging 2005 IMAP Remote Buffer Overflow Vulnerability (IPv6 Version); content:"456"; sid:4014040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#qualcomm_imap_bof.xml
+alert TCP any any -> any any (msg:Eudora Qualcomm WorldMail IMAP Buffer Overflow; content:"456"; sid:4014041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#qualcomm_imap_bof_IPv6.xml
+alert TCP any any -> any any (msg:Eudora Qualcomm WorldMail IMAP Buffer Overflow (IPv6 Version); content:"456"; sid:4014042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060316-13_Atrium_Mercur_IMAP_Remote_Buffer_Overflow.xml
+alert TCP any any -> any any (msg:Atrium Mercur IMAP Remote Buffer Overflow; content:"456"; sid:4014043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060316-13_Atrium_Mercur_IMAP_Remote_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Atrium Mercur IMAP Remote Buffer Overflow (IPv6 Version); content:"456"; sid:4014044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Mercury_IMAP_bof.xml
+alert TCP any any -> any any (msg:Mercury IMAP Buffer Overflow Attack; content:"456"; sid:4014045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Mercury_IMAP_bof_IPv6.xml
+alert TCP any any -> any any (msg:Mercury IMAP Buffer Overflow Attack (IPv6 Version); content:"456"; sid:4014046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#altn_imap.xml
+alert TCP any any -> any any (msg:ALT-N IMAP Daemon Denial of Service; content:"456"; sid:4014047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#altn_imap_IPv6.xml
+alert TCP any any -> any any (msg:ALT-N IMAP Daemon Denial of Service (IPv6 Version); content:"456"; sid:4014048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imail_bof_imap_list.xml
+alert TCP any any -> any any (msg:Ipswitch IMail IMAP List Command DoS Vulnerability; content:"456"; sid:4014049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imail_bof_imap_list_IPv6.xml
+alert TCP any any -> any any (msg:Ipswitch IMail IMAP List Command DoS Vulnerability (IPv6 Version); content:"456"; sid:4014050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_buffer_overflow_513.xml
+alert TCP any any -> any any (msg:IMAP Buffer Overflow [513] Attack; content:"456"; sid:4014051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_buffer_overflow_513_IPv6.xml
+alert TCP any any -> any any (msg:IMAP Buffer Overflow [513] Attack (IPv6 Version); content:"456"; sid:4014052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_format.xml
+alert TCP any any -> any any (msg:IMAP Format String Attack; content:"456"; sid:4014053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#imap_format_command.xml
+alert TCP any any -> any any (msg:IMAP Command Tag Format String Attack; content:"456"; sid:4014054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mailenable_imap_bof.xml
+alert TCP any any -> any any (msg:MailEnable IMAP Mailbox Name Buffer Overflow Vulnerability; content:"456"; sid:4014055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mailenable_imap_bof_IPv6.xml
+alert TCP any any -> any any (msg:MailEnable IMAP Mailbox Name Buffer Overflow Vulnerability (IPv6 Version); content:"456"; sid:4014056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

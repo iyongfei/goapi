@@ -1,13 +1,13 @@
 #!/bin/bash
 
-list="rules/bypass rules/chat rules/cmi rules/denial_of_service rules/dhcp
- rules/dnp3 rules/dns rules/dos rules/flood rules/ftp rules/fuzz rules/game
- rules/http rules/hunting rules/icmp rules/iis rules/imap rules/info rules/js
- rules/kerberos rules/microsoft rules/netbios rules/nfs rules/noop rules/ntp
- rules/oracle rules/overflow rules/php rules/policy rules/portscan rules/shellcode
- rules/sip  rules/smb  rules/smtp  rules/snmp rules/sql rules/ssh rules/ssl
- rules/telnet rules/tftp rules/tls rules/trojan rules/vbs rules/web rules/worm
- rules/xss"
+list="rules/ftp rules/telnet rules/tftp rules/imap rules/smtp
+ rules/dhcp rules/dnp3 rules/dns rules/http rules/icmp rules/kerberos rules/netbios
+ rules/nfs rules/ntp rules/smb rules/ssl rules/snmp rules/ssh rules/tls
+ rules/xss rules/shellcode rules/sql rules/dos rules/bypass rules/chat
+ rules/cmi rules/flood rules/fuzz rules/game rules/hunting rules/info
+ rules/sip  rules/trojan  rules/worm  rules/portscan rules/iis rules/js rules/noop
+ rules/oracle rules/overflow rules/php rules/policy rules/vbs rules/web rules/microsoft
+ rules/denial_of_service"
 for i in $list;
 do
   ./xml -v $i

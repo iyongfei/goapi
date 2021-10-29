@@ -6,12 +6,18 @@ alert UDP any any -> any any (msg:MIT Kerberos ASN.1 asn1_decode_generaltime Uni
 #FSC20090407-04_MIT_Kerberos_ASN_1_asn1_decode_generaltime_Uninitialized_Pointer_Reference.xml
 alert UDP any any -> any any (msg:MIT Kerberos ASN.1 asn1_decode_generaltime Uninitialized Pointer Reference; content:"456"; sid:4021001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#FSC20090407-04_MIT_Kerberos_ASN_1_asn1_decode_generaltime_Uninitialized_Pointer_Reference_IPv6.xml
+alert UDP any any -> any any (msg:MIT Kerberos ASN.1 asn1_decode_generaltime Uninitialized Pointer Reference (IPv6 Version); content:"456"; sid:4021002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #FSC20091229-01_MIT_Kerberos_KDC_Cross_Realm_Referral_Denial_of_Service.xml
-alert UDP any any -> any any (msg:MIT Kerberos KDC Cross Realm Referral Denial of Service; content:"456"; sid:4021002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:MIT Kerberos KDC Cross Realm Referral Denial of Service; content:"456"; sid:4021003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100217-01_MIT_Kerberos_KDC_Authentication_Denial_of_Service.xml
-alert UDP any any -> any any (msg:MIT Kerberos KDC Authentication Denial of Service; content:"456"; sid:4021003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:MIT Kerberos KDC Authentication Denial of Service; content:"456"; sid:4021004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140724-09_MIT_Kerberos_5_SPNEGO_Acceptor_acc_ctx_cont_Denial_of_Service.xml
-alert TCP any any -> any any (msg:MIT Kerberos 5 SPNEGO Acceptor acc_ctx_cont Denial of Service; content:"456"; sid:4021004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:MIT Kerberos 5 SPNEGO Acceptor acc_ctx_cont Denial of Service; content:"456"; sid:4021005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140724-09_MIT_Kerberos_5_SPNEGO_Acceptor_acc_ctx_cont_Denial_of_Service_IPv6.xml
+alert TCP any any -> any any (msg:MIT Kerberos 5 SPNEGO Acceptor acc_ctx_cont Denial of Service IPv6 version.; content:"456"; sid:4021006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

@@ -3,63 +3,96 @@
 #FSC20050211-01_Microsoft_Windows_SMB_Response_Handling_Buffer_Overflow.xml
 alert TCP any any -> any any (msg:Microsoft Windows SMB Response Handling Buffer Overflow; content:"456"; sid:4025000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#FSC20050211-01_Microsoft_Windows_SMB_Response_Handling_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows SMB Response Handling Buffer Overflow (IPv6 Version); content:"456"; sid:4025001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #FSC20070515-19_Samba_SPOOLSS_RPC_smb_io_notify_option_type_data_Request_Handling_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Samba SPOOLSS RPC smb_io_notify_option_type_data Request Handling Buffer Overflow; content:"456"; sid:4025001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Samba SPOOLSS RPC smb_io_notify_option_type_data Request Handling Buffer Overflow; content:"456"; sid:4025002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070515-19_Samba_SPOOLSS_RPC_smb_io_notify_option_type_data_Request_Handling_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Samba SPOOLSS RPC smb_io_notify_option_type_data Request Handling Buffer Overflow (IPv6 Version); content:"456"; sid:4025003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20080528-01_Samba_receive_smb_raw_SMB_Packets_Parsing_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Samba receive_smb_raw SMB Packets Parsing Buffer Overflow; content:"456"; sid:4025002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Samba receive_smb_raw SMB Packets Parsing Buffer Overflow; content:"456"; sid:4025004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20081014-25_Microsoft_Windows_SMB_Search_Request_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB Search Request Buffer Overflow; content:"456"; sid:4025003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB Search Request Buffer Overflow; content:"456"; sid:4025005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081014-25_Microsoft_Windows_SMB_Search_Request_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows SMB Search Request Buffer Overflow (IPv6 Version); content:"456"; sid:4025006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090113-13_Microsoft_Windows_SMB_TRANS_Request_Error_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB TRANS Request Error Handling Memory Corruption; content:"456"; sid:4025004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB TRANS Request Error Handling Memory Corruption; content:"456"; sid:4025007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090113-14_Microsoft_Windows_SMB_OPEN2_Request_Error_Handling_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB OPEN2 Request Error Handling Memory Corruption; content:"456"; sid:4025005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB OPEN2 Request Error Handling Memory Corruption; content:"456"; sid:4025008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090626-01_VideoLAN_VLC_Media_Player_SMB_Module_Win32AddConnection_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:VideoLAN VLC Media Player SMB Module Win32AddConnection Buffer Overflow; content:"456"; sid:4025006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:VideoLAN VLC Media Player SMB Module Win32AddConnection Buffer Overflow; content:"456"; sid:4025009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090626-01_VideoLAN_VLC_Media_Player_SMB_Module_Win32AddConnection_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:VideoLAN VLC Media Player SMB Module Win32AddConnection Buffer Overflow (IPv6 Version); content:"456"; sid:4025010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090908-06_Microsoft_Windows_SMB_Negotiate_Request_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB Negotiate Request Remote Code Execution; content:"456"; sid:4025007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB Negotiate Request Remote Code Execution; content:"456"; sid:4025011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091013-03_Microsoft_Windows_SMBv2_Infinite_Loop_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMBv2 Infinite Loop Denial of Service; content:"456"; sid:4025008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMBv2 Infinite Loop Denial of Service; content:"456"; sid:4025012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091116-02_Microsoft_Windows_SMB_Response_Denial_of_Service.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB Response Denial of Service; content:"456"; sid:4025009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB Response Denial of Service; content:"456"; sid:4025013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20091207-08_VideoLAN_VLC_Media_Player_SMB_URI_Invalid_Free_Vulnerability.xml
-alert TCP any any -> any any (msg:VideoLAN VLC Media Player SMB URI Invalid Free Vulnerability; content:"456"; sid:4025010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:VideoLAN VLC Media Player SMB URI Invalid Free Vulnerability; content:"456"; sid:4025014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100209-11_Microsoft_Windows_SMB_Client_Pool_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB Client Pool Corruption; content:"456"; sid:4025011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB Client Pool Corruption; content:"456"; sid:4025015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100209-21_Microsoft_Windows_SMB_Pathname_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB Pathname Buffer Overflow; content:"456"; sid:4025012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB Pathname Buffer Overflow; content:"456"; sid:4025016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100209-23_Microsoft_Windows_SMB_Server_Null_Pointer_Denial_Of_Service.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB Server Null Pointer Denial Of Service; content:"456"; sid:4025013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB Server Null Pointer Denial Of Service; content:"456"; sid:4025017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100413-24_Microsoft_Windows_SMB_Client_Transaction_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB Client Transaction Buffer Overflow; content:"456"; sid:4025014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB Client Transaction Buffer Overflow; content:"456"; sid:4025018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100413-24_Microsoft_Windows_SMB_Client_Transaction_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows SMB Client Transaction Buffer Overflow (IPv6 Version); content:"456"; sid:4025019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100413-25_Microsoft_Windows_SMB_Client_Response_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB Client Response Parsing Memory Corruption; content:"456"; sid:4025015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB Client Response Parsing Memory Corruption; content:"456"; sid:4025020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100413-25_Microsoft_Windows_SMB_Client_Response_Parsing_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows SMB Client Response Parsing Memory Corruption (IPv6 Version); content:"456"; sid:4025021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100413-26_Microsoft_Windows_SMB_Client_Message_Size_Vulnerability.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB Client Message Size Vulnerability; content:"456"; sid:4025016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB Client Message Size Vulnerability; content:"456"; sid:4025022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100413-26_Microsoft_Windows_SMB_Client_Message_Size_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows SMB Client Message Size Vulnerability (IPv6 Version); content:"456"; sid:4025023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20100810-11_Microsoft_Windows_SMB_Pool_Overflow_Code_Execution.xml
-alert TCP any any -> any any (msg:Microsoft Windows SMB Pool Overflow Code Execution; content:"456"; sid:4025017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows SMB Pool Overflow Code Execution; content:"456"; sid:4025024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100810-11_Microsoft_Windows_SMB_Pool_Overflow_Code_Execution_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows SMB Pool Overflow Code Execution (IPv6 Version); content:"456"; sid:4025025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20100616-01_Samba_SMB1_Packets_Chaining_Memory_Corruption.xml
-alert TCP any any -> any any (msg:Samba SMB1 Packets Chaining Memory Corruption; content:"456"; sid:4025018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Samba SMB1 Packets Chaining Memory Corruption; content:"456"; sid:4025026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20100616-01_Samba_SMB1_Packets_Chaining_Memory_Corruption_IPv6.xml
+alert TCP any any -> any any (msg:Samba SMB1 Packets Chaining Memory Corruption IPv6 version.; content:"456"; sid:4025027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #etherealSMBDoS.xml
-alert UDP any any -> any any (msg:Ethereal NetBIOS Denial Of Service; content:"456"; sid:4025019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Ethereal NetBIOS Denial Of Service; content:"456"; sid:4025028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#etherealSMBDoS_IPv6.xml
+alert UDP any any -> any any (msg:Ethereal NetBIOS Denial Of Service (IPv6 Version); content:"456"; sid:4025029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #smb_trans2.xml
-alert TCP any any -> any any (msg:Samba Trans2 Buffer Overflow; content:"456"; sid:4025020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Samba Trans2 Buffer Overflow; content:"456"; sid:4025030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#smb_trans2_IPv6.xml
+alert TCP any any -> any any (msg:Samba Trans2 Buffer Overflow (IPv6 Version); content:"456"; sid:4025031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

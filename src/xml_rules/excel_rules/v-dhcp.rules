@@ -9,21 +9,30 @@ alert UDP any any -> any any (msg:DHCP Hostname XSS Injection; content:"456"; si
 #FSC20070919-22_EMC_VMware_Workstation_DHCP_Service_Integer_Underflow.xml
 alert TCP any any -> any any (msg:EMC VMware Workstation DHCP Service Integer Underflow; content:"456"; sid:4016002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#FSC20090715-05_ISC_DHCP_dhclient_script_write_params_Stack_Buffer_Overflow.xml
-alert DHCP_ParamRequestListOption any any -> any any (msg:ISC DHCP dhclient script_write_params Stack Buffer Overflow; content:"456"; sid:4016003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#FSC20070919-22_EMC_VMware_Workstation_DHCP_Service_Integer_Underflow_IPv6.xml
+alert TCP any any -> any any (msg:EMC VMware Workstation DHCP Service Integer Underflow (IPv6 Version); content:"456"; sid:4016003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20090715-05_ISC_DHCP_dhclient_script_write_params_Stack_Buffer_Overflow.xml
-alert UDP any any -> any any (msg:ISC DHCP dhclient script_write_params Stack Buffer Overflow; content:"456"; sid:4016004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert DHCP_ParamRequestListOption any any -> any any (msg:ISC DHCP dhclient script_write_params Stack Buffer Overflow; content:"456"; sid:4016004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090715-05_ISC_DHCP_dhclient_script_write_params_Stack_Buffer_Overflow.xml
+alert UDP any any -> any any (msg:ISC DHCP dhclient script_write_params Stack Buffer Overflow; content:"456"; sid:4016005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090715-05_ISC_DHCP_dhclient_script_write_params_Stack_Buffer_Overflow_IPv6.xml
+alert DHCP_ParamRequestListOption any any -> any any (msg:ISC DHCP dhclient script_write_params Stack Buffer Overflow (IPv6 Version); content:"456"; sid:4016006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090715-05_ISC_DHCP_dhclient_script_write_params_Stack_Buffer_Overflow_IPv6.xml
+alert UDP any any -> any any (msg:ISC DHCP dhclient script_write_params Stack Buffer Overflow (IPv6 Version); content:"456"; sid:4016007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #dhcp-30-DoS.xml
-alert UDP any any -> any any (msg:ISC DHCP Buffer Overflow; content:"456"; sid:4016005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:ISC DHCP Buffer Overflow; content:"456"; sid:4016008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #dhcpDiscover.xml
-alert UDP any any -> any any (msg:DHCP Discover Flood; content:"456"; sid:4016006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:DHCP Discover Flood; content:"456"; sid:4016009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #dhcp_discover_hostname_format.xml
-alert UDP any any -> any any (msg:DHCP Hostname Format String Attack; content:"456"; sid:4016007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:DHCP Hostname Format String Attack; content:"456"; sid:4016010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #dhcp_discover_nsupdate_format_hoagie.xml
-alert UDP any any -> any any (msg:DHCP NSUPDATE Format String Attack (hoagie); content:"456"; sid:4016008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:DHCP NSUPDATE Format String Attack (hoagie); content:"456"; sid:4016011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

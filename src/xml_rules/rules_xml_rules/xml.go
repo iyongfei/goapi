@@ -1,6 +1,7 @@
 /**
 find . -name "*IPv6.xml"  -maxdepth 2 -delete
 ls -l |grep "^-"|wc -l
+ls -l |grep "^d"|wc -l
  */
 
 /**
@@ -8,7 +9,6 @@ ls -l |grep "^-"|wc -l
 #icmp:          4020000~4020999
 #floodICMPDFwhenfragsneeded.xml
 alert tcp any any -> any any (msg:"123"; content:"456"; sid:4035000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
  */
 package main
 

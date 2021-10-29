@@ -3,9 +3,18 @@
 #proxy_hunt1.xml
 alert TCP any any -> any any (msg:Proxy Connection; content:"456"; sid:4042000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#proxy_hunt1_IPv6.xml
+alert TCP any any -> any any (msg:Proxy Connection (IPv6 Version); content:"456"; sid:4042001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #proxy_hunt2.xml
-alert TCP any any -> any any (msg:Proxy Hunting with CONNECT; content:"456"; sid:4042001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Proxy Hunting with CONNECT; content:"456"; sid:4042002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#proxy_hunt2_IPv6.xml
+alert TCP any any -> any any (msg:Proxy Hunting with CONNECT (IPv6 Version); content:"456"; sid:4042003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #proxy_hunt3.xml
-alert TCP any any -> any any (msg:Proxy Hunting Spam; content:"456"; sid:4042002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Proxy Hunting Spam; content:"456"; sid:4042004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#proxy_hunt3_IPv6.xml
+alert TCP any any -> any any (msg:Proxy Hunting Spam (IPv6 Version); content:"456"; sid:4042005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

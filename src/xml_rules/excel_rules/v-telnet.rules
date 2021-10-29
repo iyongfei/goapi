@@ -3,24 +3,48 @@
 #FSC20040520-01_Opera_Telnet_URI_Handler_File_Creation.xml
 alert TCP any any -> any any (msg:Opera Telnet URI Handler File Creation; content:"456"; sid:4012000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#FSC20040520-01_Opera_Telnet_URI_Handler_File_Creation_IPv6.xml
+alert TCP any any -> any any (msg:Opera Telnet URI Handler File Creation (IPv6 Version); content:"456"; sid:4012001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #FSC20040527-02_Multiple_Browsers_Telnet_URI_Handler_File_Manipulation_Vulnerability.xml
-alert TCP any any -> any any (msg:Multiple Browsers Telnet URI Handler File Manipulation Vulnerability; content:"456"; sid:4012001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Multiple Browsers Telnet URI Handler File Manipulation Vulnerability; content:"456"; sid:4012002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040527-02_Multiple_Browsers_Telnet_URI_Handler_File_Manipulation_Vulnerability_IPv6.xml
+alert TCP any any -> any any (msg:Multiple Browsers Telnet URI Handler File Manipulation Vulnerability (IPv6 Version); content:"456"; sid:4012003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #FSC20101101-06_ProFTPD_FTP_Server_TELNET_IAC_Stack_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:ProFTPD FTP Server TELNET_IAC Stack Buffer Overflow; content:"456"; sid:4012002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:ProFTPD FTP Server TELNET_IAC Stack Buffer Overflow; content:"456"; sid:4012004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20101101-06_ProFTPD_FTP_Server_TELNET_IAC_Stack_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:ProFTPD FTP Server TELNET_IAC Stack Buffer Overflow (IPV6 VERSION); content:"456"; sid:4012005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20150113-14_Microsoft_Windows_Telnet_Service_Buffer_Overflow.xml
-alert TCP any any -> any any (msg:Microsoft Windows Telnet Service Buffer Overflow; content:"456"; sid:4012003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Microsoft Windows Telnet Service Buffer Overflow; content:"456"; sid:4012006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20150113-14_Microsoft_Windows_Telnet_Service_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Microsoft Windows Telnet Service Buffer Overflow IPv6 version.; content:"456"; sid:4012007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ms05-033_telnet.xml
-alert TCP any any -> any any (msg:MS05-033 Windows Telnet Environment Variable Disclosure; content:"456"; sid:4012004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:MS05-033 Windows Telnet Environment Variable Disclosure; content:"456"; sid:4012008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ms05-033_telnet_IPv6.xml
+alert TCP any any -> any any (msg:MS05-033 Windows Telnet Environment Variable Disclosure (IPv6 Version); content:"456"; sid:4012009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #telnetHeap.xml
-alert TCP any any -> any any (msg:Telnet Heap Overflow Attack; content:"456"; sid:4012005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Telnet Heap Overflow Attack; content:"456"; sid:4012010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#telnetHeap_IPv6.xml
+alert TCP any any -> any any (msg:Telnet Heap Overflow Attack (IPv6 Version); content:"456"; sid:4012011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #telnet_xss.xml
-alert TCP any any -> any any (msg:Telnet Cross Site Scripting Attack; content:"456"; sid:4012006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Telnet Cross Site Scripting Attack; content:"456"; sid:4012012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#telnet_xss_IPv6.xml
+alert TCP any any -> any any (msg:Telnet Cross Site Scripting Attack (IPv6 Version); content:"456"; sid:4012013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #winproxy_telnet_DoS.xml
-alert TCP any any -> any any (msg:WinProxy Telnet Denial of Service; content:"456"; sid:4012007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:WinProxy Telnet Denial of Service; content:"456"; sid:4012014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winproxy_telnet_DoS_IPv6.xml
+alert TCP any any -> any any (msg:WinProxy Telnet Denial of Service (IPv6 Version); content:"456"; sid:4012015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

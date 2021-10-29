@@ -6,15 +6,30 @@ alert TCP any any -> any any (msg:GoodTech SSH Server SFTP Processing Buffer Ove
 #FSC20100831-02_Novell_NetWare_OpenSSH_Buffer_Overflow.xml
 alert TCP any any -> any any (msg:Novell NetWare OpenSSH Buffer Overflow; content:"456"; sid:4028001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#FSC20100831-02_Novell_NetWare_OpenSSH_Buffer_Overflow_IPv6.xml
+alert TCP any any -> any any (msg:Novell NetWare OpenSSH Buffer Overflow (IPv6 Version); content:"456"; sid:4028002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #cisco_ssh.xml
-alert TCP any any -> any any (msg:Cisco SSH Protocol Negotiation Attack; content:"456"; sid:4028002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Cisco SSH Protocol Negotiation Attack; content:"456"; sid:4028003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cisco_ssh_IPv6.xml
+alert TCP any any -> any any (msg:Cisco SSH Protocol Negotiation Attack (IPv6 Version); content:"456"; sid:4028004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #freesshd_bof.xml
-alert TCP any any -> any any (msg:freeSSHd and WeOnlyDo! SSHD Buffer Overflow; content:"456"; sid:4028003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:freeSSHd and WeOnlyDo! SSHD Buffer Overflow; content:"456"; sid:4028005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#freesshd_bof_IPv6.xml
+alert TCP any any -> any any (msg:freeSSHd and WeOnlyDo! SSHD Buffer Overflow (IPv6 Version); content:"456"; sid:4028006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sshBrute.xml
-alert TCP any any -> any any (msg:SSH Brute Forcer Mimicking; content:"456"; sid:4028004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:SSH Brute Forcer Mimicking; content:"456"; sid:4028007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sshBrute_IPv6.xml
+alert TCP any any -> any any (msg:SSH Brute Forcer Mimicking (IPv6 Version); content:"456"; sid:4028008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sshutup.xml
-alert TCP any any -> any any (msg:Sshutup Theo OpenSSH Hack Attempt; content:"456"; sid:4028005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Sshutup Theo OpenSSH Hack Attempt; content:"456"; sid:4028009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sshutup_IPv6.xml
+alert TCP any any -> any any (msg:Sshutup Theo OpenSSH Hack Attempt (IPv6 Version); content:"456"; sid:4028010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

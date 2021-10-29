@@ -3,225 +3,195 @@
 #cisco_sip1.xml
 alert UDP any any -> any any (msg:Cisco IP Phone Denial of Service; content:"456"; sid:4046000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#cisco_sip1_IPv6.xml
+alert UDP any any -> any any (msg:Cisco IP Phone Denial of Service (IPv6 Version); content:"456"; sid:4046001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #etherealSIP.xml
-alert UDP any any -> any any (msg:Ethereal SIP Denial Of Service; content:"456"; sid:4046001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:Ethereal SIP Denial Of Service; content:"456"; sid:4046002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#etherealSIP_IPv6.xml
+alert UDP any any -> any any (msg:Ethereal SIP Denial Of Service (IPv6 Version); content:"456"; sid:4046003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #malformedTOSIP.xml
-alert ICMP any any -> any any (msg:Malformed Random IP Packet Type of Service Options; content:"456"; sid:4046002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert ICMP any any -> any any (msg:Malformed Random IP Packet Type of Service Options; content:"456"; sid:4046004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#malformedTOSIP_IPv6.xml
+alert ICMP any any -> any any (msg:Malformed Random IP Packet Type of Service Options (IPv6 Version); content:"456"; sid:4046005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipaddrspace.xml
-alert UDP any any -> any any (msg:SIPPING: Spaces in Address; content:"456"; sid:4046003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Spaces in Address; content:"456"; sid:4046006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipaddrspace_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Spaces in Address (IPv6 Version); content:"456"; sid:4046007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipbadaccept.xml
-alert UDP any any -> any any (msg:SIPPING: Unacceptable Accept; content:"456"; sid:4046004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Unacceptable Accept; content:"456"; sid:4046008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipbadaccept_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Unacceptable Accept (IPv6 Version); content:"456"; sid:4046009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipbadbranch.xml
-alert UDP any any -> any any (msg:SIPPING: No Additional Branch Identifier; content:"456"; sid:4046005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: No Additional Branch Identifier; content:"456"; sid:4046010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipbadbranch_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: No Additional Branch Identifier (IPv6 Version); content:"456"; sid:4046011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipbadrequesturi.xml
-alert SIP_Invite any any -> any any (msg:SIP Bad Request-URI; content:"456"; sid:4046006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP Bad Request-URI; content:"456"; sid:4046012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipbadrequesturi_IPv6.xml
+alert SIP_Invite any any -> any any (msg:SIP Bad Request-URI (IPv6 Version); content:"456"; sid:4046013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipbadtz.xml
-alert UDP any any -> any any (msg:SIPPING: Bad Timezone in Date; content:"456"; sid:4046007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Bad Timezone in Date; content:"456"; sid:4046014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipbadtz_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Bad Timezone in Date (IPv6 Version); content:"456"; sid:4046015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipbadversion.xml
-alert UDP any any -> any any (msg:SIPPING: Bad Version (Version Too High); content:"456"; sid:4046008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Bad Version (Version Too High); content:"456"; sid:4046016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipbadversion_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Bad Version (Version Too High) (IPv6 Version); content:"456"; sid:4046017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipbigcode.xml
-alert UDP any any -> any any (msg:SIPPING: Big Response Code; content:"456"; sid:4046009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Big Response Code; content:"456"; sid:4046018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipbigcode_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Big Response Code (IPv6 Version); content:"456"; sid:4046019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipbroadcastinvite.xml
-alert SIP_Invite any any -> any any (msg:SIP Broadcast INVITE; content:"456"; sid:4046010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP Broadcast INVITE; content:"456"; sid:4046020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipbroadcastok.xml
-alert UDP any any -> any any (msg:SIPPING: Broadcast Response Code; content:"456"; sid:4046011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Broadcast Response Code; content:"456"; sid:4046021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipbroadcastok_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Broadcast Response Code (IPv6 Version); content:"456"; sid:4046022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipciscoreboot.xml
-alert SIP_Notify any any -> any any (msg:Cisco IP Phone Reboot; content:"456"; sid:4046012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Notify any any -> any any (msg:Cisco IP Phone Reboot; content:"456"; sid:4046023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipciscoreboot_IPv6.xml
+alert SIP_Notify any any -> any any (msg:Cisco IP Phone Reboot (IPv6 Version); content:"456"; sid:4046024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipcontactparam.xml
-alert UDP any any -> any any (msg:SIPPING: Contact Header Parameter; content:"456"; sid:4046013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Contact Header Parameter; content:"456"; sid:4046025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipcontactparam_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Contact Header Parameter (IPv6 Version); content:"456"; sid:4046026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipcontacturiparam.xml
-alert UDP any any -> any any (msg:SIPPING: URI Parameter; content:"456"; sid:4046014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: URI Parameter; content:"456"; sid:4046027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipcontacturiparam_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: URI Parameter (IPv6 Version); content:"456"; sid:4046028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipcontentlengthlarge.xml
-alert UDP any any -> any any (msg:SIPPING: Content Length Larger Than Message; content:"456"; sid:4046015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Content Length Larger Than Message; content:"456"; sid:4046029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipcontentlengthlarge_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Content Length Larger Than Message (IPv6 Version); content:"456"; sid:4046030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipemptyviaparams.xml
-alert SIP_Invite any any -> any any (msg:SIP Empty Via: Parameters; content:"456"; sid:4046016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP Empty Via: Parameters; content:"456"; sid:4046031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipemptyviaparams_IPv6.xml
+alert SIP_Invite any any -> any any (msg:SIP Empty Via: Parameters (IPv6 Version); content:"456"; sid:4046032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipesccontant.xml
-alert UDP any any -> any any (msg:SIPPING: Escaped Contact Header; content:"456"; sid:4046017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Escaped Contact Header; content:"456"; sid:4046033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipesccontant_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Escaped Contact Header (IPv6 Version); content:"456"; sid:4046034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipescuri.xml
-alert UDP any any -> any any (msg:SIPPING: Escaped Headers in Request-URI; content:"456"; sid:4046018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Escaped Headers in Request-URI; content:"456"; sid:4046035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipescuri_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Escaped Headers in Request-URI (IPv6 Version); content:"456"; sid:4046036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipextraseparators.xml
-alert UDP any any -> any any (msg:SIPPING: Extraneous Header Field Separators; content:"456"; sid:4046019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Extraneous Header Field Separators; content:"456"; sid:4046037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipextraseparators_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Extraneous Header Field Separators (IPv6 Version); content:"456"; sid:4046038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipfarfuturedate.xml
-alert SIP_Notify any any -> any any (msg:SIP Far Future Date; content:"456"; sid:4046020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Notify any any -> any any (msg:SIP Far Future Date; content:"456"; sid:4046039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipfarfuturedate_IPv6.xml
+alert SIP_Notify any any -> any any (msg:SIP Far Future Date (IPv6 Version); content:"456"; sid:4046040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipfivedigitdate.xml
-alert SIP_Notify any any -> any any (msg:SIP Five Digit Date; content:"456"; sid:4046021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Notify any any -> any any (msg:SIP Five Digit Date; content:"456"; sid:4046041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipfivedigitdate_IPv6.xml
+alert SIP_Notify any any -> any any (msg:SIP Five Digit Date (IPv6 Version); content:"456"; sid:4046042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipheadercseqdisagree.xml
-alert SIP_Invite any any -> any any (msg:SIP Header and CSeq Disagree; content:"456"; sid:4046022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP Header and CSeq Disagree; content:"456"; sid:4046043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipheadercseqdisagree_IPv6.xml
+alert SIP_Invite any any -> any any (msg:SIP Header and CSeq Disagree (IPv6 Version); content:"456"; sid:4046044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipinvite2543.xml
-alert UDP any any -> any any (msg:SIPPING: RFC 2543 INVITE; content:"456"; sid:4046023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: RFC 2543 INVITE; content:"456"; sid:4046045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipinvite2543_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: RFC 2543 INVITE (IPv6 Version); content:"456"; sid:4046046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipinvitebadschemecontact.xml
-alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme Contact: Field; content:"456"; sid:4046024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme Contact: Field; content:"456"; sid:4046047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipinvitebadschemecontact_IPv6.xml
+alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme Contact: Field (IPv6 Version); content:"456"; sid:4046048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipinvitebadschemefrom.xml
-alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme From: Field; content:"456"; sid:4046025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme From: Field; content:"456"; sid:4046049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipinvitebadschemefrom_IPv6.xml
+alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme From: Field (IPv6 Version); content:"456"; sid:4046050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipinvitebadschemerequesturi.xml
-alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme Request-URI; content:"456"; sid:4046026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme Request-URI; content:"456"; sid:4046051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipinvitebadschemerequesturi_IPv6.xml
+alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme Request-URI (IPv6 Version); content:"456"; sid:4046052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipinvitebadschemeto.xml
-alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme To: Field; content:"456"; sid:4046027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme To: Field; content:"456"; sid:4046053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipinvitebadschemeto_IPv6.xml
+alert SIP_Invite any any -> any any (msg:SIP INVITE Bad Scheme To: Field (IPv6 Version); content:"456"; sid:4046054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipinviterandomcontenttype.xml
-alert SIP_Invite any any -> any any (msg:SIP Random Content-Type INVITE; content:"456"; sid:4046028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP Random Content-Type INVITE; content:"456"; sid:4046055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sipinviterandomcontenttype_IPv6.xml
+alert SIP_Invite any any -> any any (msg:SIP Random Content-Type INVITE (IPv6 Version); content:"456"; sid:4046056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #siplocalhostinvite.xml
-alert SIP_Invite any any -> any any (msg:SIP localhost INVITE; content:"456"; sid:4046029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP localhost INVITE; content:"456"; sid:4046057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#siplocalhostinvite_IPv6.xml
+alert SIP_Invite any any -> any any (msg:SIP localhost INVITE (IPv6 Version); content:"456"; sid:4046058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #siplongheader.xml
-alert UDP any any -> any any (msg:SIPPING: Long Values in Header Fields; content:"456"; sid:4046030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: Long Values in Header Fields; content:"456"; sid:4046059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#siplongheader_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: Long Values in Header Fields (IPv6 Version); content:"456"; sid:4046060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #siplowercasemethod.xml
-alert SIP_Invite any any -> any any (msg:SIP Lowercase Method; content:"456"; sid:4046031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SIP_Invite any any -> any any (msg:SIP Lowercase Method; content:"456"; sid:4046061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#siplowercasemethod_IPv6.xml
+alert SIP_Invite any any -> any any (msg:SIP Lowercase Method (IPv6 Version); content:"456"; sid:4046062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sipltgturi.xml
-alert UDP any any -> any any (msg:SIPPING: <> in Request-URI; content:"456"; sid:4046032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:SIPPING: <> in Request-URI; content:"456"; sid:4046063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#siplwsuri.xml
-alert UDP any any -> any any (msg:SIPPING: Illegal LWS in Request-URI; content:"456"; sid:4046033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipmissingheaders.xml
-alert UDP any any -> any any (msg:SIPPING: Missing Required Headers; content:"456"; sid:4046034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipmultiplecallid.xml
-alert SIP_Invite any any -> any any (msg:SIP Multiple Call-ID: Headers; content:"456"; sid:4046035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipmultiplefrom.xml
-alert SIP_Invite any any -> any any (msg:SIP Multiple From: Headers; content:"456"; sid:4046036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipmultipleto.xml
-alert SIP_Invite any any -> any any (msg:SIP Multiple To: Headers; content:"456"; sid:4046037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipmultlength.xml
-alert UDP any any -> any any (msg:SIPPING: Multiple Content Lengths; content:"456"; sid:4046038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipnameltgt.xml
-alert UDP any any -> any any (msg:SIPPING: Name-Addr URI Not in <>; content:"456"; sid:4046039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipnegativecontentlength.xml
-alert UDP any any -> any any (msg:SIPPING: Negative Content Length; content:"456"; sid:4046040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipnolwsdisplayname.xml
-alert UDP any any -> any any (msg:SIPPING: No LWS in Display Name; content:"456"; sid:4046041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipnonnumcontentlength.xml
-alert SIP_Invite any any -> any any (msg:SIP Non-Numeric Content Length; content:"456"; sid:4046042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipnontokenchars.xml
-alert UDP any any -> any any (msg:SIPPING: Non-Token Characters in Unquoted Name; content:"456"; sid:4046043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipnoreason.xml
-alert UDP any any -> any any (msg:SIPPING: No Reason; content:"456"; sid:4046044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipnulluri.xml
-alert UDP any any -> any any (msg:SIPPING: Escaped NULLs in URIs; content:"456"; sid:4046045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipoptionsscan.xml
-alert SIP_Options any any -> any any (msg:SIP OPTIONS Scan; content:"456"; sid:4046046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sippercentnotesc.xml
-alert UDP any any -> any any (msg:SIPPING: % Not Used as Escape; content:"456"; sid:4046047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sippiggybacksip.xml
-alert UDP any any -> any any (msg:SIPPING: Piggybacked SIP Message; content:"456"; sid:4046048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#siprandomversion.xml
-alert SIP_Invite any any -> any any (msg:SIP Random Version; content:"456"; sid:4046049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipscalarresptoolarge.xml
-alert UDP any any -> any any (msg:SIPPING: Response Scalar Values Too Large; content:"456"; sid:4046050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipscalartoolarge.xml
-alert UDP any any -> any any (msg:SIPPING: REGISTER Scalar Values Too Large; content:"456"; sid:4046051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipsemicolonparams.xml
-alert UDP any any -> any any (msg:SIPPING: Semicolon Separated Params in URI; content:"456"; sid:4046052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipshorttorturusinvite.xml
-alert UDP any any -> any any (msg:SIPPING: A Short Torturus INVITE; content:"456"; sid:4046053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipsmimesigned.xml
-alert UDP any any -> any any (msg:SIPPING: S/MIME Signed Message; content:"456"; sid:4046054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipspacereq.xml
-alert UDP any any -> any any (msg:SIPPING: Multiple Spaces on Request Line; content:"456"; sid:4046055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipspacereqend.xml
-alert UDP any any -> any any (msg:SIPPING: Multiple Spaces at Request Line End; content:"456"; sid:4046056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#siptrailingudpoctets.xml
-alert SIP_Options any any -> any any (msg:SIP Trailing Garbage; content:"456"; sid:4046057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipunknownauth.xml
-alert UDP any any -> any any (msg:SIPPING: Unknown Auth Scheme; content:"456"; sid:4046058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipunknowncontent.xml
-alert UDP any any -> any any (msg:SIPPING: Unknown Content Type; content:"456"; sid:4046059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipunknownheaders.xml
-alert SIP_Invite any any -> any any (msg:SIP Unknown Headers; content:"456"; sid:4046060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipunknownmismatch.xml
-alert UDP any any -> any any (msg:SIPPING: Unknown Method and CSeq Mismatch; content:"456"; sid:4046061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipunknownrequire.xml
-alert UDP any any -> any any (msg:SIPPING: Unknown Require and Proxy-Require; content:"456"; sid:4046062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipunknownscheme.xml
-alert UDP any any -> any any (msg:SIPPING: Unknown Request-URI Scheme; content:"456"; sid:4046063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipunterminatedquote.xml
-alert UDP any any -> any any (msg:SIPPING: Unterminated Quote in Display Name; content:"456"; sid:4046064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipunusualreason.xml
-alert UDP any any -> any any (msg:SIPPING: Unusual Reason; content:"456"; sid:4046065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipvaliduseofesc.xml
-alert UDP any any -> any any (msg:SIPPING: Valid Use of % Escape Character; content:"456"; sid:4046066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipvariedtransports.xml
-alert UDP any any -> any any (msg:SIPPING: Varied and Unknown Transports; content:"456"; sid:4046067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipvoicemailflash.xml
-alert SIP_Notify any any -> any any (msg:SIP Voicemail Flash; content:"456"; sid:4046068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipvoicemailoff.xml
-alert SIP_Notify any any -> any any (msg:SIP Voicemail Off Alert; content:"456"; sid:4046069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipvoicemailon.xml
-alert SIP_Notify any any -> any any (msg:SIP Voicemail Alert; content:"456"; sid:4046070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipwiderangeofvalidchars.xml
-alert UDP any any -> any any (msg:SIPPING: Wide Range of Valid Characters; content:"456"; sid:4046071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipxtapi_bof.xml
-alert SIP_Invite any any -> any any (msg:sipXtapi Buffer Overflow; content:"456"; sid:4046072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipzerolengthinvite.xml
-alert SIP_Invite any any -> any any (msg:SIP Zero Length INVITE; content:"456"; sid:4046073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#sipzeromf.xml
-alert UDP any any -> any any (msg:SIPPING: Zero Max Forwards; content:"456"; sid:4046074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#sipltgturi_IPv6.xml
+alert UDP any any -> any any (msg:SIPPING: <> in Request-URI (IPv6 Version); content:"456"; sid:4046064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

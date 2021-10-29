@@ -6,291 +6,273 @@ alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; cont
 #Trojan.Downloader.Small-165.0769b8be.xml
 alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Downloader.Small-165.0c402e86.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#Trojan.Downloader.Small-165.0769b8be_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.0769b8be_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Downloader.Small-165.0c402e86.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Downloader.Small-165.2294002b.xml
 alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Downloader.Small-165.2294002b.xml
+#Trojan.Downloader.Small-165.0c402e86.xml
 alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Downloader.Small-165.4449f495.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#Trojan.Downloader.Small-165.0c402e86_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Downloader.Small-165.4449f495.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#Trojan.Downloader.Small-165.0c402e86_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Downloader.Small-165.5d796596.xml
+#Trojan.Downloader.Small-165.2294002b.xml
 alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Downloader.Small-165.5d796596.xml
+#Trojan.Downloader.Small-165.2294002b.xml
 alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Downloader.Small-165.5daf5119.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#Trojan.Downloader.Small-165.2294002b_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.2294002b_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.4449f495.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.4449f495.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.4449f495_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.4449f495_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.5d796596.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.5d796596.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.5d796596_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.5d796596_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Downloader.Small-165.5daf5119.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Downloader.Small-165.60cacd41.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Downloader.Small-165.60cacd41.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Downloader.Small-165.626cfb5b.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Downloader.Small-165.626cfb5b.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Downloader.Small-165.6be9c2b7.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Downloader.Small-165.6be9c2b7.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Downloader.Small-165.74b41503.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Downloader.Small-165.74b41503.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Downloader.Small-165.9e4df818.xml
 alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Downloader.Small-165.9e4df818.xml
+#Trojan.Downloader.Small-165.5daf5119.xml
 alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Downloader.Small-165.f7925c05.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#Trojan.Downloader.Small-165.5daf5119_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.5daf5119_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.60cacd41.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.60cacd41.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.60cacd41_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.60cacd41_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.626cfb5b.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.626cfb5b.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.626cfb5b_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.626cfb5b_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.6be9c2b7.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.6be9c2b7.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.6be9c2b7_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.6be9c2b7_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.74b41503.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.74b41503.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.74b41503_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.74b41503_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.9e4df818.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.9e4df818.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.9e4df818_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.9e4df818_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Downloader.Small-165.f7925c05.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.f7925c05.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165; content:"456"; sid:4048045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.f7925c05_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Downloader.Small-165.f7925c05_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Downloader.Small-165 (IPv6 Version); content:"456"; sid:4048047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Dropper.C.336b1bcc.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Dropper.C; content:"456"; sid:4048024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.Dropper.C; content:"456"; sid:4048048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Dropper.C.336b1bcc.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Dropper.C; content:"456"; sid:4048025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.Dropper.C; content:"456"; sid:4048049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Dropper.C.336b1bcc_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Dropper.C (IPv6 Version); content:"456"; sid:4048050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Dropper.C.336b1bcc_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Dropper.C (IPv6 Version); content:"456"; sid:4048051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Happy99.SKA.02dd0eaa.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Happy99.SKA; content:"456"; sid:4048026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.Happy99.SKA; content:"456"; sid:4048052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Happy99.SKA.02dd0eaa.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Happy99.SKA; content:"456"; sid:4048027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.Happy99.SKA; content:"456"; sid:4048053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Happy99.SKA.02dd0eaa_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Happy99.SKA (IPv6 Version); content:"456"; sid:4048054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Happy99.SKA.02dd0eaa_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Happy99.SKA (IPv6 Version); content:"456"; sid:4048055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.IWorm.Fix2001.d2a5f4b7.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.Fix2001; content:"456"; sid:4048028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.Fix2001; content:"456"; sid:4048056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.IWorm.Fix2001.d2a5f4b7.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Fix2001; content:"456"; sid:4048029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Fix2001; content:"456"; sid:4048057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.Fix2001.d2a5f4b7_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.Fix2001 (IPv6 Version); content:"456"; sid:4048058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.Fix2001.d2a5f4b7_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Fix2001 (IPv6 Version); content:"456"; sid:4048059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.IWorm.Gift.Anap.038c9db8.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap; content:"456"; sid:4048030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap; content:"456"; sid:4048060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.IWorm.Gift.Anap.038c9db8.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap; content:"456"; sid:4048031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap; content:"456"; sid:4048061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.Gift.Anap.038c9db8_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap (IPv6 Version); content:"456"; sid:4048062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.Gift.Anap.038c9db8_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap (IPv6 Version); content:"456"; sid:4048063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.IWorm.Gift.Anap.a6f5addf.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap; content:"456"; sid:4048032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap; content:"456"; sid:4048064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.IWorm.Gift.Anap.a6f5addf.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap; content:"456"; sid:4048033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap; content:"456"; sid:4048065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.Gift.Anap.a6f5addf_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap (IPv6 Version); content:"456"; sid:4048066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.Gift.Anap.a6f5addf_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.Gift.Anap (IPv6 Version); content:"456"; sid:4048067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.IWorm.MP.Virus.52040688.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.MP.Virus; content:"456"; sid:4048034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.MP.Virus; content:"456"; sid:4048068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.IWorm.MP.Virus.52040688.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.MP.Virus; content:"456"; sid:4048035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.MP.Virus; content:"456"; sid:4048069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.MP.Virus.52040688_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.IWorm.MP.Virus (IPv6 Version); content:"456"; sid:4048070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.IWorm.MP.Virus.52040688_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.IWorm.MP.Virus (IPv6 Version); content:"456"; sid:4048071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.JS.Startpage.C.8bb9e14d.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.JS.Startpage.C; content:"456"; sid:4048036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.JS.Startpage.C; content:"456"; sid:4048072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.JS.Startpage.C.8bb9e14d.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.JS.Startpage.C; content:"456"; sid:4048037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.JS.Startpage.C; content:"456"; sid:4048073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.JS.Startpage.C.8bb9e14d_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.JS.Startpage.C (IPv6 Version); content:"456"; sid:4048074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.JS.Startpage.C.8bb9e14d_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.JS.Startpage.C (IPv6 Version); content:"456"; sid:4048075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Killav-31.06d00522.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Killav-31.06d00522.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Killav-31.7f6ea6c3.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048078; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Killav-31.7f6ea6c3.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048079; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Killav-31.7f6ea6c3_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-31 (IPv6 Version); content:"456"; sid:4048080; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Killav-31.7f6ea6c3_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Killav-31 (IPv6 Version); content:"456"; sid:4048081; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Killav-31.ceafebaf.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048082; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Killav-31.ceafebaf.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-31; content:"456"; sid:4048083; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Killav-34.8561d3f2.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-34; content:"456"; sid:4048044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.Killav-34; content:"456"; sid:4048084; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Killav-34.8561d3f2.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Killav-34; content:"456"; sid:4048045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-34; content:"456"; sid:4048085; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Killav-34.8561d3f2_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-34 (IPv6 Version); content:"456"; sid:4048086; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Trojan.Killav-34.8561d3f2_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Killav-34 (IPv6 Version); content:"456"; sid:4048087; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Killav-4.5ad04ebd.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-4; content:"456"; sid:4048046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Email Virus Trojan.Killav-4; content:"456"; sid:4048088; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #Trojan.Killav-4.5ad04ebd.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Killav-4; content:"456"; sid:4048047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-4; content:"456"; sid:4048089; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Newapt.IWorm.151af978.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4048048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#Trojan.Killav-4.5ad04ebd_IPv6.xml
+alert SMTP any any -> any any (msg:Email Virus Trojan.Killav-4 (IPv6 Version); content:"456"; sid:4048090; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#Trojan.Newapt.IWorm.151af978.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4048049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Newapt.IWorm.6a96c7fc.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4048050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Newapt.IWorm.6a96c7fc.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4048051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Newapt.IWorm.8d8d94a1.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4048052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Newapt.IWorm.8d8d94a1.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4048053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Newapt.IWorm.8eb51ea1.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4048054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Newapt.IWorm.8eb51ea1.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4048055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Newapt.IWorm.a274ae97.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4048056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Newapt.IWorm.a274ae97.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Newapt.IWorm; content:"456"; sid:4048057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.PSW.Hooker.Based.15c2f7ec.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.PSW.Hooker.Based; content:"456"; sid:4048058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.PSW.Hooker.Based.15c2f7ec.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.PSW.Hooker.Based; content:"456"; sid:4048059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.PawPaw.17a522f1.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.PawPaw; content:"456"; sid:4048060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.PawPaw.17a522f1.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.PawPaw; content:"456"; sid:4048061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Pinbol.A.056321b1.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Pinbol.A; content:"456"; sid:4048062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Pinbol.A.056321b1.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Pinbol.A; content:"456"; sid:4048063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Revelation.dcfdc527.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Revelation; content:"456"; sid:4048064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Revelation.dcfdc527.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Revelation; content:"456"; sid:4048065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Suppl.Worm_1.7ec3bc06.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Suppl.Worm_#1; content:"456"; sid:4048066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Suppl.Worm_1.7ec3bc06.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Suppl.Worm_#1; content:"456"; sid:4048067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Flames.A.9e48c5d1.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.VBS.Flames.A; content:"456"; sid:4048068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Flames.A.9e48c5d1.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.VBS.Flames.A; content:"456"; sid:4048069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Frekru.A.6ea5131e.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.VBS.Frekru.A; content:"456"; sid:4048070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Frekru.A.6ea5131e.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.VBS.Frekru.A; content:"456"; sid:4048071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Frekru.A.7ce9e947.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.VBS.Frekru.A; content:"456"; sid:4048072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Frekru.A.7ce9e947.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.VBS.Frekru.A; content:"456"; sid:4048073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Frekru.A.8245d806.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.VBS.Frekru.A; content:"456"; sid:4048074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Frekru.A.8245d806.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.VBS.Frekru.A; content:"456"; sid:4048075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Lowjo.C.199adafa.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.VBS.Lowjo.C; content:"456"; sid:4048076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Lowjo.C.199adafa.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.VBS.Lowjo.C; content:"456"; sid:4048077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Lowjo.C.e2e88852.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.VBS.Lowjo.C; content:"456"; sid:4048078; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Lowjo.C.e2e88852.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.VBS.Lowjo.C; content:"456"; sid:4048079; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Lowjo.C.ff8153d5.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.VBS.Lowjo.C; content:"456"; sid:4048080; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Lowjo.C.ff8153d5.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.VBS.Lowjo.C; content:"456"; sid:4048081; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Nightwish.A.b32e195b.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.VBS.Nightwish.A; content:"456"; sid:4048082; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.VBS.Nightwish.A.b32e195b.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.VBS.Nightwish.A; content:"456"; sid:4048083; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Worm.Navidad.3d315a99.xml
-alert TCP any any -> any any (msg:Email Virus Trojan.Worm.Navidad; content:"456"; sid:4048084; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Trojan.Worm.Navidad.3d315a99.xml
-alert SMTP any any -> any any (msg:Email Virus Trojan.Worm.Navidad; content:"456"; sid:4048085; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.533fe353.xml
-alert SMTP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048086; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.533fe353.xml
-alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048087; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.78f6c62a.xml
-alert SMTP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048088; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.78f6c62a.xml
-alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048089; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.c4b35f89.xml
-alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048090; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.c4b35f89.xml
-alert SMTP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048091; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.d17c5406.xml
-alert SMTP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048092; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.d17c5406.xml
-alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048093; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.d4698441.xml
-alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048094; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.d4698441.xml
-alert SMTP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048095; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.e1fcb0fb.xml
-alert SMTP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048096; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#Worm.MTX.plugin.Trojan.e1fcb0fb.xml
-alert TCP any any -> any any (msg:Email Virus Worm.MTX.plugin.Trojan; content:"456"; sid:4048097; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+#Trojan.Killav-4.5ad04ebd_IPv6.xml
+alert TCP any any -> any any (msg:Email Virus Trojan.Killav-4 (IPv6 Version); content:"456"; sid:4048091; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

