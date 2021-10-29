@@ -15,6 +15,7 @@ package main
 import (
 	"bufio"
 	"encoding/xml"
+	"flag"
 	"fmt"
 	"goapi/src/xml_rules/util"
 	"io/ioutil"
@@ -42,6 +43,14 @@ var (
 	startIndex = 4020000
 )
 func init()  {
+	fmt.Println("in..................")
+	var ruleDir string
+	flag.StringVar(&ruleDir, "v", "", "vid")
+	flag.Parse()
+
+	intrusionPath = ruleDir
+
+
 	if !util.Exists(baseXmlDir){
 		_= os.Mkdir(baseXmlDir, os.ModePerm)
 	}
@@ -66,15 +75,8 @@ func init()  {
 	fmt.Println("startIndex----->",startIndex)
 }
 
-
-type RuleRet struct {
-	XmlName string
-	Protocol string
-	ExecDesc string
-	SerialNum int
-}
-var ruleRets = []*RuleRet{}
 func main()  {
+
 	//获取rules/bypass下的所有xml
 	filepath.Walk(intrusionPath, func(ruleDirPath string, info os.FileInfo, err error) error {
 		//ruleDirPath-->>rules/bypass/awstats_cmi_b_IPv6.xml
@@ -154,11 +156,11 @@ func getXmlData(xmlNamePath string)  {
 			 */
 			for _, attr := range token.Attr {
 				valueKey := attr.Name.Local//payPayload
-				valueContent := attr.Value //payContent
+				//valueContent := attr.Value //payContent
 				if valueKey == Payload{
-					if valueContent != ""{
-						headerProto[element] = element
-					}
+					//if valueContent != ""{
+					headerProto[element] = element
+					//}
 				}
 			}
 		}
@@ -175,3 +177,12 @@ func getXmlData(xmlNamePath string)  {
 	}
 }
 
+
+
+type RuleRet struct {
+	XmlName string
+	Protocol string
+	ExecDesc string
+	SerialNum int
+}
+var ruleRets = []*RuleRet{}

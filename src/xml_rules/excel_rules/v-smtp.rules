@@ -16,74 +16,131 @@ alert TCP any any -> any any (msg:Novell GroupWise Internet Agent SMTP AUTH LOGI
 alert TCP any any -> any any (msg:BL4 SMTP Server < 0.1.5 Remote Buffer Overflow PoC; content:"456"; sid:4015004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_A.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with large buffer; content:"456"; sid:4015005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with large buffer; content:"456"; sid:4015005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_A.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with large buffer; content:"456"; sid:4015006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_ampersand.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with &; content:"456"; sid:4015006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with &; content:"456"; sid:4015007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_ampersand.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with &; content:"456"; sid:4015008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_backSlash.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with \; content:"456"; sid:4015007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with \; content:"456"; sid:4015009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_backSlash.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with \; content:"456"; sid:4015010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_brackets.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with []; content:"456"; sid:4015008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with []; content:"456"; sid:4015011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_brackets.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with []; content:"456"; sid:4015012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_carat.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with ^; content:"456"; sid:4015009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with ^; content:"456"; sid:4015013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_carat.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with ^; content:"456"; sid:4015014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_curlies.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with {}; content:"456"; sid:4015010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with {}; content:"456"; sid:4015015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_curlies.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with {}; content:"456"; sid:4015016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_dash.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with -; content:"456"; sid:4015011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with -; content:"456"; sid:4015017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_dash.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with -; content:"456"; sid:4015018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_equals.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with =; content:"456"; sid:4015012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with =; content:"456"; sid:4015019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_equals.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with =; content:"456"; sid:4015020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_formatn.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with %n; content:"456"; sid:4015013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with %n; content:"456"; sid:4015021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_formatn.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with %n; content:"456"; sid:4015022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_formats.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with %s; content:"456"; sid:4015014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with %s; content:"456"; sid:4015023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_formats.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with %s; content:"456"; sid:4015024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_forwardSlash.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with /; content:"456"; sid:4015015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with /; content:"456"; sid:4015025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_forwardSlash.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with /; content:"456"; sid:4015026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_hash.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with #; content:"456"; sid:4015016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with #; content:"456"; sid:4015027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_hash.xml
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with #; content:"456"; sid:4015028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_ltgt.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with <>; content:"456"; sid:4015017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with <>; content:"456"; sid:4015029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_ltgt.xml
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with <>; content:"456"; sid:4015030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_pipe.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with |; content:"456"; sid:4015018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with |; content:"456"; sid:4015031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_pipe.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with |; content:"456"; sid:4015032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_plus.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with +; content:"456"; sid:4015019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with +; content:"456"; sid:4015033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_plus.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with +; content:"456"; sid:4015034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_question.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with ?; content:"456"; sid:4015020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with ?; content:"456"; sid:4015035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_question.xml
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with ?; content:"456"; sid:4015036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_star.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with *; content:"456"; sid:4015021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with *; content:"456"; sid:4015037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_star.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with *; content:"456"; sid:4015038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #fuzz-SMTP-HELO_Parameter_tick.xml
-alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with `; content:"456"; sid:4015022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Fuzz SMTP HELO verb with `; content:"456"; sid:4015039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fuzz-SMTP-HELO_Parameter_tick.xml
+alert TCP any any -> any any (msg:Fuzz SMTP HELO verb with `; content:"456"; sid:4015040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #smtpFormat.xml
-alert TCP any any -> any any (msg:SMTP Server Error Message Format String Overflow; content:"456"; sid:4015023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:SMTP Server Error Message Format String Overflow; content:"456"; sid:4015041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #smtp_bounce.xml
-alert TCP any any -> any any (msg:SMTP RCPT TO bounce; content:"456"; sid:4015024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:SMTP RCPT TO bounce; content:"456"; sid:4015042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#smtp_bounce.xml
+alert TCP any any -> any any (msg:SMTP RCPT TO bounce; content:"456"; sid:4015043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #smtp_debug.xml
-alert TCP any any -> any any (msg:SMTP Probe DEBUG; content:"456"; sid:4015025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:SMTP Probe DEBUG; content:"456"; sid:4015044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #smtp_expn.xml
-alert TCP any any -> any any (msg:SMTP Probe EXPN all; content:"456"; sid:4015026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:SMTP Probe EXPN all; content:"456"; sid:4015045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #smtp_vrfy.xml
-alert TCP any any -> any any (msg:SMTP Probe VRFY all; content:"456"; sid:4015027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:SMTP Probe VRFY all; content:"456"; sid:4015046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #smtp_wiz.xml
-alert TCP any any -> any any (msg:Sendmail WIZ command; content:"456"; sid:4015028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Sendmail WIZ command; content:"456"; sid:4015047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

@@ -4,44 +4,47 @@
 alert TCP any any -> any any (msg:Apple Mac OS X iChat AIM URL Format String Vulnerability; content:"456"; sid:4036000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #W95.PornoChat.1391ae35.xml
-alert TCP any any -> any any (msg:Email Virus W95.PornoChat; content:"456"; sid:4036001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:Email Virus W95.PornoChat; content:"456"; sid:4036001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#W95.PornoChat.1391ae35.xml
+alert TCP any any -> any any (msg:Email Virus W95.PornoChat; content:"456"; sid:4036002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #apple_ichat_fmtstr.xml
-alert TCP any any -> any any (msg:Apple iChat aim:// URL Handler Format String Vulnerability; content:"456"; sid:4036002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Apple iChat aim:// URL Handler Format String Vulnerability; content:"456"; sid:4036003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #easychatserv_dos.xml
-alert TCP any any -> any any (msg:Easy Chat Server Remote Denial of Service Vulnerability; content:"456"; sid:4036003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Easy Chat Server Remote Denial of Service Vulnerability; content:"456"; sid:4036004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #flashchat_rfi.xml
-alert TCP any any -> any any (msg:FlashChat Remote File Include Vulnerability; content:"456"; sid:4036004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:FlashChat Remote File Include Vulnerability; content:"456"; sid:4036005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #gtchat_dos.xml
-alert TCP any any -> any any (msg:GTChat Denial Of Service; content:"456"; sid:4036005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:GTChat Denial Of Service; content:"456"; sid:4036006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #gtchat_file.xml
-alert TCP any any -> any any (msg:GTChat Arbitrary File Read; content:"456"; sid:4036006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:GTChat Arbitrary File Read; content:"456"; sid:4036007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #phpmychat_cmi.xml
-alert TCP any any -> any any (msg:PHPMyChat 0.14.5 MessagesL.PHP3  Command Injection / SQL Injection Vulnerability; content:"456"; sid:4036007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:PHPMyChat 0.14.5 MessagesL.PHP3  Command Injection / SQL Injection Vulnerability; content:"456"; sid:4036008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #phpmychat_cmi_b.xml
-alert TCP any any -> any any (msg:PHPMyChat 0.15.0.dev MessagesL.PHP3  Command Injection / SQL Injection Vulnerability; content:"456"; sid:4036008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:PHPMyChat 0.15.0.dev MessagesL.PHP3  Command Injection / SQL Injection Vulnerability; content:"456"; sid:4036009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #phpmychat_xss_a.xml
-alert TCP any any -> any any (msg:PHPMyChat start_page.css.php Cross-Site Scripting Vulnerabilities; content:"456"; sid:4036009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:PHPMyChat start_page.css.php Cross-Site Scripting Vulnerabilities; content:"456"; sid:4036010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #phpmychat_xss_b.xml
-alert TCP any any -> any any (msg:PHPMyChat style.css.php Cross-Site Scripting Vulnerabilities; content:"456"; sid:4036010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:PHPMyChat style.css.php Cross-Site Scripting Vulnerabilities; content:"456"; sid:4036011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #phpmychat_xss_c.xml
-alert TCP any any -> any any (msg:PHPMyChat users_popupL.php Cross-Site Scripting Vulnerabilities; content:"456"; sid:4036011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:PHPMyChat users_popupL.php Cross-Site Scripting Vulnerabilities; content:"456"; sid:4036012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #voodoochat_rfi.xml
-alert TCP any any -> any any (msg:VoodooChat File_Path Parameter Remote File Include Vulnerability; content:"456"; sid:4036012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:VoodooChat File_Path Parameter Remote File Include Vulnerability; content:"456"; sid:4036013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #x7chat_cmi.xml
-alert TCP any any -> any any (msg:X7 Chat 2.0 "help_file" arbitrary local inclusion; content:"456"; sid:4036013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:X7 Chat 2.0 "help_file" arbitrary local inclusion; content:"456"; sid:4036014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #xchat_bof.xml
-alert TCP any any -> any any (msg:XChat SOCKS 5 Remote Buffer Overrun Vulnerability; content:"456"; sid:4036014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:XChat SOCKS 5 Remote Buffer Overrun Vulnerability; content:"456"; sid:4036015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

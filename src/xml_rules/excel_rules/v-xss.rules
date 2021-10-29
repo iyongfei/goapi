@@ -163,20 +163,23 @@ alert TCP any any -> any any (msg:SelectaPix Cross-Site Scripting; content:"456"
 alert TCP any any -> any any (msg:SixCMS 6.0 List.PHP Cross-Site Scripting Vulnerability; content:"456"; sid:4059053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #sqwebmail_xss.xml
-alert TCP any any -> any any (msg:SqWebMail Attachment XSS; content:"456"; sid:4059054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert SMTP any any -> any any (msg:SqWebMail Attachment XSS; content:"456"; sid:4059054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sqwebmail_xss.xml
+alert TCP any any -> any any (msg:SqWebMail Attachment XSS; content:"456"; sid:4059055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #tikiwiki_xss.xml
-alert TCP any any -> any any (msg:TikiWiki Cross-Site Scripting Vulnerability; content:"456"; sid:4059055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:TikiWiki Cross-Site Scripting Vulnerability; content:"456"; sid:4059056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #tinywebgallery_xss.xml
-alert TCP any any -> any any (msg:Tiny Web Gallery XSS vulnerability; content:"456"; sid:4059056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Tiny Web Gallery XSS vulnerability; content:"456"; sid:4059057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ultimatehelpdesk_xss.xml
-alert TCP any any -> any any (msg:Ultimate HelpDesk Index.ASP Cross-Site Scripting Vulnerability; content:"456"; sid:4059057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Ultimate HelpDesk Index.ASP Cross-Site Scripting Vulnerability; content:"456"; sid:4059058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #wbblog_xss.xml
-alert TCP any any -> any any (msg:WBBlog Cross Site Scripting Vulnerability; content:"456"; sid:4059058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:WBBlog Cross Site Scripting Vulnerability; content:"456"; sid:4059059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #widexl_download_tracker_xss.xml
-alert TCP any any -> any any (msg:Widexl Download Tracker down.pl ID Variable XSS; content:"456"; sid:4059059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:Widexl Download Tracker down.pl ID Variable XSS; content:"456"; sid:4059060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

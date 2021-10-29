@@ -18,9 +18,12 @@ alert TCP any any -> any any (msg:MS05-030 NNTP Crash On Outlook Express; conten
 #ms05-030_nntpExp.xml
 alert TCP any any -> any any (msg:MS05-030 NNTP Exploit On Outlook Express; content:"456"; sid:4024005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
+#ntpReplyFlood.xml
+alert NTPv3 any any -> any any (msg:NTP Reply Flood; content:"456"; sid:4024006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
 #ntpRequestFlood.xml
-alert UDP any any -> any any (msg:NTP Request Flood; content:"456"; sid:4024006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:NTP Request Flood; content:"456"; sid:4024007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #ntp_readvarBoF.xml
-alert UDP any any -> any any (msg:ntpd ReadVar Buffer Overflow; content:"456"; sid:4024007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert UDP any any -> any any (msg:ntpd ReadVar Buffer Overflow; content:"456"; sid:4024008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
