@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SIP OPTIONS Scan"/>
+    <EngDesc display="true" value="This threat sends out a SIP OPTIONS message looking for a response. By sweeping these messages over a block of addresses, an attacker can learn about the setup of a VoIP network."/>
+    <Intent display="true">
+      <item value="Scoping"/>
+    </Intent>
+    <Protocol display="true" value="SIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP_Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID display="true" value="00000109c8ceb8a500c000a80001003c5eef72b2"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="1.8"/>
+    <Suite display="true" value="VoIP"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value=""/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633198429141718750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1184260850" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+    <NamedVar name="destExt" type="ImperfectControls.MultiLine" value="null" index="H"/>
+    <NamedVar name="SIPCallID" type="ImperfectControls.MultiLine" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="G">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="H"/>
+      <for index="K"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="G" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="$SIPdestPort" destPort="$SIPdestPort" checksum="" length="">
+          <SIP_Options Method="OPTIONS" Request-URI="sip:$destExt\@$destIP" SIP-Version="SIP/2.0" ViaVersion="SIP/2.0/UDP" ViaAddress="$destIP" ViaPort="$SIPdestPort" BranchTagCookie="z9hG4bK" BranchTagRest="@randstring(8)" FromName="@randstring(8)" From-URI="sip:@randstring(8)\@$sourceIP" Tag="@randstring(8)" ToName="@randstring(8)" To-URI="sip:$destExt\@$destIP" ContactName="@randstring(8)" Contact-URI="sip:$destExt\@$sourceIP" CallID="$SIPCallID" CallIDAddress="$sourceIP" CSeqNum="42" CSeqMeth="OPTIONS" MaxForwards="70" Accept="application/sdp" AdditionalHeaders="" ContentLength="0" Payload=""/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Stateful display="false" value="false"/>
+  <DestIPVarName display="false" value="$destIP"/>
+</threatSignature>

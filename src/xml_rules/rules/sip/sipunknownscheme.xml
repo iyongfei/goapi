@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SIPPING: Unknown Request-URI Scheme"/>
+    <EngDesc display="true" value="This threat sends out a SIP OPTIONS message with an unknown scheme instead of a sip: URI. Because this is unexpected, this may confuse or crash a SIP implementation."/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="SIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="IETF Draft: draft-ietf-sipping-torture-tests-07.txt"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID value="00000109c3a9975300c000a80001003c069388be" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <Suite display="true" value="VoIP"/>
+    <Created value="1141449005" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="$SIPdestPort" destPort="$SIPdestPort" checksum="" length="" Payload="4F5054494F4E53206E6F626F64794B6E6F777354686973536368656D653A746F74616C6C796F7061717565636F6E74656E74205349502F322E300D0A546F3A207369703A75736572406578616D706C652E636F6D0D0A46726F6D3A207369703A63616C6C6572406578616D706C652E6E65743B7461673D3338340D0A4D61782D466F7277617264733A20330D0A43616C6C2D49443A20756E6B73636D2E6E61736466617373657230713233396E777364666173646B6C33340D0A435365713A2033393233343233204F5054494F4E530D0A5669613A205349502F322E302F54435020686F7374392E6578616D706C652E636F6D3B6272616E63683D7A39684734624B6B646A757733393233340D0A436F6E74656E742D4C656E6774683A20300D0A0D0A"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

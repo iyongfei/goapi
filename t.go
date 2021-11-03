@@ -118,14 +118,24 @@ var HexMap = map[string]string{
 	//"7F":"DEL",
 }
 
-
+//”   ;   :   \
 func main() {
 
-	a := []byte{'a','b','c','d'}
-	b := []byte{'a'}
+	ret:= `Bay " Tech; Au:thentic\ation Bypass`
+	fmt.Println(ret)
 
-	r := bytes.SplitN(a,b,-1)
-	fmt.Println(r)
+	s4 := strings.Replace(ret,`\`,`\\`,-1)
+	fmt.Println(s4)
+
+	s1 := strings.Replace(s4,`"`,`\"`,-1)
+	fmt.Println(s1)
+
+
+	s2 := strings.Replace(s1,`;`,`\;`,-1)
+	fmt.Println(s2)
+
+	s3 := strings.Replace(s2,`:`,`\:`,-1)
+	fmt.Println(s3)
 
 
 

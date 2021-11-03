@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SIP Trailing Garbage"/>
+    <EngDesc display="true" value="This threat sends out a SIP OPTIONS message with a Content-Length of 0 and with 512 bytes of garbage following the headers. Because this trailing data is unexpected, this may confuse or crash a SIP implementation."/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="SIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP_Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID display="true" value="00000109c8cec75200c000a80001003c789f3617"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="1.8"/>
+    <Suite display="true" value="VoIP"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value=""/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633198428467343750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1184260850" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+    <NamedVar name="destExt" type="ImperfectControls.MultiLine" value="null" index="H"/>
+    <NamedVar name="SIPCallID" type="ImperfectControls.MultiLine" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="G">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="H"/>
+      <for index="K"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="G" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="$SIPdestPort" destPort="$SIPdestPort" checksum="" length="">
+          <SIP_Options Method="OPTIONS" Request-URI="sip:$destExt\@$destIP" SIP-Version="SIP/2.0" ViaVersion="SIP/2.0/UDP" ViaAddress="$destIP" ViaPort="$SIPdestPort" BranchTagCookie="z9hG4bK" BranchTagRest="@randstring(8)" FromName="@randstring(8)" From-URI="sip:@randstring(8)\@$sourceIP" Tag="@randstring(8)" ToName="@randstring(8)" To-URI="sip:$destExt\@$destIP" ContactName="@randstring(8)" Contact-URI="sip:$destExt\@$sourceIP" CallID="$SIPCallID" CallIDAddress="$sourceIP" CSeqNum="42" CSeqMeth="OPTIONS" MaxForwards="70" Accept="application/sdp" AdditionalHeaders="" ContentLength="0" Payload="8BFE86F21577B825D2D08397283932D4569B0D801C8A7A1C43A0BC6D06204EC5D7246791A7C21D447138113F043C9C3917671742EE4821018469AE75BA4A1FB182BEBF04D1A02D947EC80EE3783A18070483559F080BD68E03660C3D14A88927195FBD467C9767763983C4253A3D884951A77037F480A976E731006B93F07FD53EE7CA187DD28B6C1BDE658547B154C6DDC3EB6D37523299B6475E4A97FCE34903EEE6537370CC7F1B041C151A232E35DD3A8DD004129EECB43062367340D51EFB1B8159CA01536DF76C5133351D7E9218296D5D6E1244F04FF99E420E950BDB2FFD19FFA2D46ADBE620D998C16BB797B1CF1D4AD377B0E9D6900AD162105F6160760338037FF043BE91764E39AC2FE44207903E77C108B74D302811CA9979D5C078374B677E9332DED98C410161B02A61258E5A8020E99E6E4CEBD257DF792418A08DC075E37DC4735E5F9D35C6B5EB80FEAFA50B1E55A08E98DD1A92C1DBFF60672960D3EFB57EA8CAE722C04B69A796FF52592FD419F94BED32DC066231B282603DCD9C5417914931FC403733DF422F3584926F82CF8C4E3015E6BDD8774698349F600E9B0A41E8C00FFDD7D8C2180DEFADD0DE9E420090B07E6C3F31D470B9B6A802937F34932B42AAAE72D1B4766EFDD8CD2BA768FAF19ECF5D1D9D02B6EC9F442130BF848EBA1AA49BF3948EBEFC08FE41580645114EAD10F4AFD6758D"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Stateful display="false" value="false"/>
+  <DestIPVarName display="false" value="$destIP"/>
+</threatSignature>

@@ -1,0 +1,2 @@
+﻿XmlName,ExecDesc,EngDesc,Protocol,SPECProtocol,Payload
+﻿wireshark_dnp3_dos.xml,Wireshark < 0.99.5 DNP3 Dissector Denial of Service Vulnerability,"This threat uses a specially crafted udp packet to exploit a flaw in the DNP3 protocol dissector for Wireshark causing an infinite loop, leading to a denial of service condition. This threat uses an arbitrary udp port.",UDP,UDP,||C3 C0 01 01 00 01 07 08 01 02 03 04 05 06 07 08||

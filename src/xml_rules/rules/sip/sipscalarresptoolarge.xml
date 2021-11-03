@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SIPPING: Response Scalar Values Too Large"/>
+    <EngDesc display="true" value="This threat sends out a SIP 503 status message with the scalar values greater than the maximum allowed for that field. This is illegal and should just be dropped. Because it is unexpected, it may also confuse or crash a SIP implementation."/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="SIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="IETF Draft: draft-ietf-sipping-torture-tests-07.txt"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID value="00000109c3a9586500c000a80001003c0caa45fc" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <Suite display="true" value="VoIP"/>
+    <Created value="1141448989" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="$SIPdestPort" destPort="$SIPdestPort" checksum="" length="" Payload="5349502F322E3020353033205365727669636520556E617661696C61626C650D0A5669613A205349502F322E302F54435020686F73743132392E6578616D706C652E636F6D3B6272616E63683D7A39684734624B7A7A786469776F333473773B72656365697665643D3139322E302E322E3132390D0A546F3A203C7369703A75736572406578616D706C652E636F6D3E0D0A46726F6D3A203C7369703A6F74686572406578616D706C652E6E65743E3B7461673D32656173646A66656A770D0A435365713A2039323932333934383334373732333034303233333132204F5054494F4E530D0A43616C6C2D49443A207363616C61726C672E6E6F617365306F6630323334686E32716F666F6166303233326165776632333934720D0A52657472792D41667465723A203934393330323833383530333032383334393330343032333938380D0A5761726E696E673A2031383132206F766572747572652022496E2050726F6772657373220D0A436F6E74656E742D4C656E6774683A20300D0A0D0A"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

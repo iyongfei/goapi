@@ -1,29 +1,3 @@
 #fuzz:4039000~4039999
 
-#fuzz-Ethernet_destMac.xml
-alert Ethernet any any -> any any (msg:Fuzzer for Protocol:Ethernet and Field:destMac; content:"456"; sid:4039000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#fuzz-Ethernet_pktType.xml
-alert Ethernet any any -> any any (msg:Fuzzer for Protocol:Ethernet and Field:pktType; content:"456"; sid:4039001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#fuzz-Ethernet_pktType_IPv6.xml
-alert Ethernet any any -> any any (msg:Fuzzer for Protocol:Ethernet and Field:pktType (IPv6 Version); content:"456"; sid:4039002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#fuzz-Ethernet_srcMac.xml
-alert Ethernet any any -> any any (msg:Fuzzer for Protocol:Ethernet and Field:srcMac; content:"456"; sid:4039003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#fuzz-IP_CE.xml
-alert IP any any -> any any (msg:Fuzzer for Protocol:IP and Field:CE; content:"456"; sid:4039004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#fuzz-IP_CE_IPv6.xml
-alert IPv6 any any -> any any (msg:Fuzzer for Protocol:IP and Field:CE (IPv6 Version); content:"456"; sid:4039005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#fuzz-IP_DF.xml
-alert IP any any -> any any (msg:Fuzzer for Protocol:IP and Field:DF; content:"456"; sid:4039006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#fuzz-IP_DF_IPv6.xml
-alert IPv6 any any -> any any (msg:Fuzzer for Protocol:IP and Field:DF (IPv6 Version); content:"456"; sid:4039007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
-#fuzz-IP_destIP.xml
-alert IP any any -> any any (msg:Fuzzer for Protocol:IP and Field:destIP; content:"456"; sid:4039008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
+#fuzz-Ethernet_destMac.xml\nalert Ethernet any any -> any any (msg:"Fuzzer for Protocol\:Ethernet and Field\:destMac"; content:\"456\"; sid:4039000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-Ethernet_pktType.xml\nalert Ethernet any any -> any any (msg:"Fuzzer for Protocol\:Ethernet and Field\:pktType"; content:\"456\"; sid:4039001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-Ethernet_srcMac.xml\nalert Ethernet any any -> any any (msg:"Fuzzer for Protocol\:Ethernet and Field\:srcMac"; content:\"456\"; sid:4039002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_CE.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:CE"; content:\"456\"; sid:4039003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_DF.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:DF"; content:\"456\"; sid:4039004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_FragmentOffset.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:FragmentOffset"; content:\"456\"; sid:4039005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_HeaderChecksum.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:HeaderChecksum"; content:\"456\"; sid:4039006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_Identification.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:Identification"; content:\"456\"; sid:4039007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_InternetHeaderLength.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:InternetHeaderLength"; content:\"456\"; sid:4039008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_MF.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:MF"; content:\"456\"; sid:4039009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_Protocol.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:Protocol"; content:\"456\"; sid:4039010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_TTL.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:TTL"; content:\"456\"; sid:4039011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_TotalLength.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:TotalLength"; content:\"456\"; sid:4039012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_TypeofService.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:TypeofService"; content:\"456\"; sid:4039013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_Version.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:Version"; content:\"456\"; sid:4039014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_destIP.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:destIP"; content:\"456\"; sid:4039015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fuzz-IP_srcIP.xml\nalert IP any any -> any any (msg:"Fuzzer for Protocol\:IP and Field\:srcIP"; content:\"456\"; sid:4039016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n

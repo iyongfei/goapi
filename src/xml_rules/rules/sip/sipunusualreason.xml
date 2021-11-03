@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SIPPING: Unusual Reason"/>
+    <EngDesc display="true" value="This threat sends out a SIP status message with code 200 (OK) but a non-standard reason including escaped and UTF-8 characters. This is legal but unexpected, and may confuse or crash a SIP implementation."/>
+    <Intent display="true">
+      <item value="Fuzzing"/>
+    </Intent>
+    <Protocol display="true" value="SIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="VoIP Equipment"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="IETF Draft: draft-ietf-sipping-torture-tests-07.txt"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID value="00000109c3a9a21b00c000a80001003c7b00c379" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <Suite display="true" value="VoIP"/>
+    <Created value="1141449008" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="$SIPdestPort" destPort="$SIPdestPort" checksum="" length="" Payload="5349502F322E3020323030203D20322A2A33202A20352A2A3220D0BDD0BE20D181D182D0BE20D0B4D0B5D0B2D18FD0BDD0BED181D182D0BE20D0B4D0B5D0B2D18FD182D18C202D20D0BFD180D0BED181D182D0BED0B50D0A5669613A205349502F322E302F554450203139322E302E322E3139383B6272616E63683D7A39684734624B313332343932330D0A43616C6C2D49443A20756E726561736F6E2E313233346B736466616B336A3265727765646673415364660D0A435365713A20333520494E564954450D0A46726F6D3A207369703A75736572406578616D706C652E636F6D3B7461673D31313134313334330D0A546F3A207369703A75736572406578616D706C652E6564753B7461673D323232390D0A436F6E74656E742D4C656E6774683A203135340D0A436F6E74656E742D547970653A206170706C69636174696F6E2F7364700D0A436F6E746163743A203C7369703A7573657240686F73743139382E6578616D706C652E636F6D3E0D0A0D0A763D300D0A6F3D6D68616E646C6579203239373339203732373239333920494E20495034203139322E302E322E3139380D0A733D2D0D0A633D494E20495034203139322E302E322E3139380D0A743D3020300D0A6D3D617564696F203439323137205254502F41565020302031320D0A6D3D766964656F2033323237205254502F4156502033310D0A613D7274706D61703A3331204C50430D0A"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

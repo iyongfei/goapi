@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="TCP SYN Flood" />
+    <EngDesc display="true" value="The normal 3-way handshake for establishing a TCP session between the client and server involves the client sending a TCP SYN packet, the server receiving this packet and opening a socket connection for that user and sending a TCP SYN/ACK packet in return. At this point the server waits, with an open connection for the client to send a TCP ACK to confirm the session. This threat is executed by sending many TCP SYN packet to the targeted machine from a spoofed source address. This will result in the target opening connections until its resources have been exhausted. This will result in a denial of service for all legitimate users." />
+    <Intent display="true">
+      <item value="Denial_of_Service" />
+      <item value="Flood" />
+      <item value="Resource_Exhaustion" />
+    </Intent>
+    <Protocol display="true" value="TCP" />
+    <Type_Of_Equipment display="true">
+      <item value="Protocol" />
+    </Type_Of_Equipment>
+    <Severity display="true" value="" />
+    <Known_Vendors_Affected display="true">
+      <item value="ALL" />
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer" />
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Transport_Layer_TCP" />
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.cert.org/advisories/CA-1996-21.html" />
+    <CVEID display="true" value="CVE-1999-0116" />
+    <bugtraqID display="true" value="" />
+    <OSVDB display="true" value="10182" />
+    <Author display="true" value="Chuck McAuley" />
+    <ID display="true" value="000000ff4650cdfb00a900fe009b00c9435d626e" />
+    <Revision display="true" value="1" />
+    <Safe display="true" value="" />
+    <ServerSideAttack display="true" value="false" />
+    <SoftwareRevision display="true" value="1.4" />
+    <Suite display="true" value="Standard" />
+    <RunOnce display="false" value="" />
+    <Valid_Traffic display="false" value="" />
+    <AccessVector display="false" value="remote" />
+    <AccessComplexity display="false" value="low" />
+    <Authentication display="false" value="not-required" />
+    <ConfImpact display="false" value="none" />
+    <IntegImpact display="false" value="none" />
+    <AvailImpact display="false" value="partial" />
+    <ImpactBias display="false" value="normal" />
+    <FirstAdded display="false" value="" />
+    <LastModified display="false" value="636691472070050717" />
+    <SigStyle display="false" value="Flood" />
+    <targetNode display="false" value="A" />
+    <SigProtocol display="false" value="TCP" />
+    <Rate display="false" value="5" />
+    <Regex display="false" value="" />
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B" />
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C" />
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D" />
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="F" range="srcPort" />
+      <for index="E" range="srcIP" />
+    </for>
+    <for index="B" />
+    <for index="C" />
+    <for index="D" />
+  </Loops>
+  <PostScript />
+  <Output index="A" Count="1">
+    <Ethernet srcMac="F0:F1:F2:F3:F4:F5" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(10,FF)" Protocol="06" HeaderChecksum="" srcIP="@range(192.168.14.230,192.168.14.250)" destIP="$destIP" options="" CE="true" DF="true" MF="false">
+        <TCP srcPort="@range(58943,59183)" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="0" HeaderLength="" WindowSize="@random(1000,5000)" Checksum="" UrgentPointer="0" Options="" Payload="" CWR="false" ECE="false" URG="false" ACK="false" PSH="false" RST="false" SYN="true" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false" />
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

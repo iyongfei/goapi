@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Wake-On-LAN Flood"/>
+    <EngDesc display="true" value="This threat mimics a wake-on-LAN packet.  This is a stateless UDP based protocol which can be used to power up one or more machines remotely.  The destination port of this threat does not matter, and is not used by WOL."/>
+    <Intent display="true">
+      <item value="Thrashing"/>
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="WOL"/>
+    <Type_Of_Equipment display="true">
+      <item value="Host"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000103017fcea900c000a80001003c2ec8d7cc"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742243523125000"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="WOL"/>
+    <Rate display="false" value="5"/>
+    <Regex display="false" value=""/>
+    <Created value="1139462535" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="4"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="5"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="6"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="4"/>
+      <for index="5"/>
+      <for index="6"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="FF:FF:FF:FF:FF:FF" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="255.255.255.255" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026, 65535)" destPort="$destPort" checksum="" length="">
+          <WOL synch="FF:FF:FF:FF:FF:FF" mac1="$destMAC" mac2="$destMAC" mac3="$destMAC" mac4="$destMAC" mac5="$destMAC" mac6="$destMAC" mac7="$destMAC" mac8="$destMAC" mac9="$destMAC" mac10="$destMAC" mac11="$destMAC" mac12="$destMAC" mac13="$destMAC" mac14="$destMAC" mac15="$destMAC" mac16="$destMAC"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

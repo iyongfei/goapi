@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Multiple Vendors AgentX receive_agentx Stack Buffer Overflow"/>
+    <EngDesc display="true" value="A stack buffer overflow vulnerability exists in multiple products that use the AgentX++ software. The vulnerability is due to a boundary error in AgentX::receive_agentx function. A remote unauthenticated attacker can exploit this vulnerability by sending multiple blocks of data to the target server on port 705/TCP. Successful exploitation would allow for arbitrary code injection and execution with the privileges of the server, normally SYSTEM. Code injection that does not result in execution could terminate the application due to memory corruption, and could result in a Denial of Service condition."/>
+    <Intent display="true">
+      <item value="Code_Execution/Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="AgentX"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Multiple_Vendors"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Frank_Fock_AgentX++"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Frank_Fock_AgentX++_1.4.16_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2010-1318"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="f9fcbbb91ff3a51205bbafe3e8de8295"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634076420703777964"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1274434204" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="I"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="J"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="I"/>
+      <for index="J"/>
+    </for>
+    <for index="F">
+      <for index="I"/>
+      <for index="J"/>
+    </for>
+    <for index="G">
+      <for index="I"/>
+      <for index="J"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:F5:DA:84" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0046" Identification="699D" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6FE4" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="45771" destPort="$destPort" SeqNumber="BF9BFA4F" AckNumber="972766EF" HeaderLength="08" WindowSize="002E" Checksum="9254" UrgentPointer="0000" Options="0101080A363993DC00000000" Payload="414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="F" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:F5:DA:84" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0046" Identification="699E" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6FE3" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="45771" destPort="$destPort" SeqNumber="BF9BFA61" AckNumber="972766EF" HeaderLength="08" WindowSize="002E" Checksum="8D55" UrgentPointer="0000" Options="0101080A363995D0000002F9" Payload="414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="G" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:F5:DA:84" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0046" Identification="699F" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6FE2" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="45771" destPort="$destPort" SeqNumber="BF9BFA73" AckNumber="972766EF" HeaderLength="08" WindowSize="002E" Checksum="8D42" UrgentPointer="0000" Options="0101080A363995D0000002F9" Payload="414141414141414141414141414141414141" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="true" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

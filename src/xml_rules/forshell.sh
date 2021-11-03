@@ -10,5 +10,5 @@ list="rules/ftp rules/telnet rules/tftp rules/imap rules/smtp
  rules/denial_of_service"
 for i in $list;
 do
-  ./xml -v $i
+  ./rule -v $i
 done

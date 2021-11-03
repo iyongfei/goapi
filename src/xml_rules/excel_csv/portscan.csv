@@ -1,0 +1,3 @@
+﻿XmlName,ExecDesc,EngDesc,Protocol,SPECProtocol,Payload
+﻿﻿PortScanFIN.xml,Portscan\: FIN,"This threat mimics the behaviour of a FIN scan used by tools such as nmap. A FIN scan sets the FIN bit. Open ports should ignore the probe, while a closed port should reply with a RST packet.",TCP,TCP,
+﻿﻿﻿﻿

