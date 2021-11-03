@@ -1,3 +1,17 @@
 #shellcode:4031000~4031999
 
-#FSC20040708-01_Mozilla_shell_Protocol_Validation_Vulnerability.xml\nalert TCP any any -> any any (msg:"Mozilla shell Protocol Validation Vulnerability"; content:\"456\"; sid:4031000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040713-03_Microsoft_Windows_Shell_Vulnerability.xml\nalert TCP any any -> any any (msg:"Microsoft Windows Shell Vulnerability"; content:\"456\"; sid:4031001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20070726-10_Microsoft_Windows_ShellExecute_and_IE7_URL_Handling_Code_Execution.xml\nalert TCP any any -> any any (msg:"Microsoft Windows ShellExecute and IE7 URL Handling Code Execution"; content:\"456\"; sid:4031002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20100209-13_Microsoft_Windows_Shell_Handler_URL_Validation_Vulnerability.xml\nalert TCP any any -> any any (msg:"Microsoft Windows Shell Handler URL Validation Vulnerability"; content:\"456\"; sid:4031003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20110208-45_Microsoft_Windows_Shell_Graphics_Thumbnail_Image_Integer_Overflow.xml\nalert TCP any any -> any any (msg:"Microsoft Windows Shell Graphics Thumbnail Image Integer Overflow"; content:\"456\"; sid:4031004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#FSC20040708-01_Mozilla_shell_Protocol_Validation_Vulnerability.xml
+alert TCP any any -> any any (msg:"Mozilla shell Protocol Validation Vulnerability"; content:"456"; sid:4031000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040713-03_Microsoft_Windows_Shell_Vulnerability.xml
+alert TCP any any -> any any (msg:"Microsoft Windows Shell Vulnerability"; content:"456"; sid:4031001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070726-10_Microsoft_Windows_ShellExecute_and_IE7_URL_Handling_Code_Execution.xml
+alert TCP any any -> any any (msg:"Microsoft Windows ShellExecute and IE7 URL Handling Code Execution"; content:"456"; sid:4031002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100209-13_Microsoft_Windows_Shell_Handler_URL_Validation_Vulnerability.xml
+alert TCP any any -> any any (msg:"Microsoft Windows Shell Handler URL Validation Vulnerability"; content:"456"; sid:4031003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20110208-45_Microsoft_Windows_Shell_Graphics_Thumbnail_Image_Integer_Overflow.xml
+alert TCP any any -> any any (msg:"Microsoft Windows Shell Graphics Thumbnail Image Integer Overflow"; content:"456"; sid:4031004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

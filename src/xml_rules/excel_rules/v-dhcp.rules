@@ -1,3 +1,29 @@
 #dhcp:4016000~4016999
 
-#DHCP_hostname.xml\nalert UDP any any -> any any (msg:"DHCP Hostname Overflow"; content:\"456\"; sid:4016000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#DHCP_hostname_alert.xml\nalert UDP any any -> any any (msg:"DHCP Hostname XSS Injection"; content:\"456\"; sid:4016001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20070919-22_EMC_VMware_Workstation_DHCP_Service_Integer_Underflow.xml\nalert TCP any any -> any any (msg:"EMC VMware Workstation DHCP Service Integer Underflow"; content:\"456\"; sid:4016002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090715-05_ISC_DHCP_dhclient_script_write_params_Stack_Buffer_Overflow.xml\nalert DHCP_ParamRequestListOption any any -> any any (msg:"ISC DHCP dhclient script_write_params Stack Buffer Overflow"; content:\"456\"; sid:4016003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090715-05_ISC_DHCP_dhclient_script_write_params_Stack_Buffer_Overflow.xml\nalert UDP any any -> any any (msg:"ISC DHCP dhclient script_write_params Stack Buffer Overflow"; content:\"456\"; sid:4016004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#dhcp-30-DoS.xml\nalert UDP any any -> any any (msg:"ISC DHCP Buffer Overflow"; content:\"456\"; sid:4016005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#dhcpDiscover.xml\nalert UDP any any -> any any (msg:"DHCP Discover Flood"; content:\"456\"; sid:4016006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#dhcp_discover_hostname_format.xml\nalert UDP any any -> any any (msg:"DHCP Hostname Format String Attack"; content:\"456\"; sid:4016007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#dhcp_discover_nsupdate_format_hoagie.xml\nalert UDP any any -> any any (msg:"DHCP NSUPDATE Format String Attack (hoagie)"; content:\"456\"; sid:4016008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#DHCP_hostname.xml
+alert UDP any any -> any any (msg:"DHCP Hostname Overflow"; content:"456"; sid:4016000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#DHCP_hostname_alert.xml
+alert UDP any any -> any any (msg:"DHCP Hostname XSS Injection"; content:"456"; sid:4016001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070919-22_EMC_VMware_Workstation_DHCP_Service_Integer_Underflow.xml
+alert TCP any any -> any any (msg:"EMC VMware Workstation DHCP Service Integer Underflow"; content:"456"; sid:4016002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090715-05_ISC_DHCP_dhclient_script_write_params_Stack_Buffer_Overflow.xml
+alert DHCP_ParamRequestListOption any any -> any any (msg:"ISC DHCP dhclient script_write_params Stack Buffer Overflow"; content:"456"; sid:4016003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090715-05_ISC_DHCP_dhclient_script_write_params_Stack_Buffer_Overflow.xml
+alert UDP any any -> any any (msg:"ISC DHCP dhclient script_write_params Stack Buffer Overflow"; content:"456"; sid:4016004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dhcp-30-DoS.xml
+alert UDP any any -> any any (msg:"ISC DHCP Buffer Overflow"; content:"456"; sid:4016005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dhcpDiscover.xml
+alert UDP any any -> any any (msg:"DHCP Discover Flood"; content:"456"; sid:4016006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dhcp_discover_hostname_format.xml
+alert UDP any any -> any any (msg:"DHCP Hostname Format String Attack"; content:"456"; sid:4016007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dhcp_discover_nsupdate_format_hoagie.xml
+alert UDP any any -> any any (msg:"DHCP NSUPDATE Format String Attack (hoagie)"; content:"456"; sid:4016008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

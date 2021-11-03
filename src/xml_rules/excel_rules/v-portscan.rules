@@ -1,3 +1,20 @@
 #portscan:4046000~4046999
 
-#PortScanEverything.xml\nalert TCP any any -> any any (msg:"Portscan\: Everything"; content:\"456\"; sid:4046000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#PortScanFIN.xml\nalert TCP any any -> any any (msg:"Portscan\: FIN"; content:\"456\"; sid:4046001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#PortScanXMAS.xml\nalert TCP any any -> any any (msg:"Portscan\: XMAS"; content:\"456\"; sid:4046002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#portscanNull.xml\nalert TCP any any -> any any (msg:"Portscan\: Null"; content:\"456\"; sid:4046003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#portscanSYN.xml\nalert TCP any any -> any any (msg:"Portscan\: SYN"; content:\"456\"; sid:4046004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#portscanUDP.xml\nalert UDP any any -> any any (msg:"Portscan\: UDP"; content:\"456\"; sid:4046005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#PortScanEverything.xml
+alert TCP any any -> any any (msg:"Portscan\: Everything"; content:"456"; sid:4046000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#PortScanFIN.xml
+alert TCP any any -> any any (msg:"Portscan\: FIN"; content:"456"; sid:4046001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#PortScanXMAS.xml
+alert TCP any any -> any any (msg:"Portscan\: XMAS"; content:"456"; sid:4046002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#portscanNull.xml
+alert TCP any any -> any any (msg:"Portscan\: Null"; content:"456"; sid:4046003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#portscanSYN.xml
+alert TCP any any -> any any (msg:"Portscan\: SYN"; content:"456"; sid:4046004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#portscanUDP.xml
+alert UDP any any -> any any (msg:"Portscan\: UDP"; content:"456"; sid:4046005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

@@ -1,3 +1,62 @@
 #icmp:4020000~4020999
 
-#FSC20060207-07_Linux_Kernel_ICMP_Packet_Handling_Denial_of_Service_Vulnerability.xml\nalert UDP any any -> any any (msg:"Linux Kernel ICMP Packet Handling Denial of Service"; content:\"456\"; sid:4020000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080108-08_Microsoft_Windows_Kernel_ICMP_Fragmented_Packet_Processing_Denial_of_Service.xml\nalert IP any any -> any any (msg:"Microsoft Windows Kernel ICMP Fragmented Packet Processing Denial of Service"; content:\"456\"; sid:4020001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080108-08_Microsoft_Windows_Kernel_ICMP_Fragmented_Packet_Processing_Denial_of_Service.xml\nalert ICMP any any -> any any (msg:"Microsoft Windows Kernel ICMP Fragmented Packet Processing Denial of Service"; content:\"456\"; sid:4020002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FloodICMPreq.xml\nalert ICMP any any -> any any (msg:"ICMP Echo Request Flood"; content:\"456\"; sid:4020003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ICMPParameterBadPointer.xml\nalert ICMP any any -> any any (msg:"ICMP Parameter Problem Pointer Out of Bounds Flood"; content:\"456\"; sid:4020004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ICMPechoAmp.xml\nalert ICMP any any -> any any (msg:"ICMP Echo Amplification"; content:\"456\"; sid:4020005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ICMPechoReplyFlood.xml\nalert ICMP any any -> any any (msg:"ICMP Echo Reply Flood"; content:\"456\"; sid:4020006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ICMPingScan.xml\nalert ICMP any any -> any any (msg:"ICMP Ping Scan (ECHO request)"; content:\"456\"; sid:4020007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ICMPpSmashDoS.xml\nalert ICMP any any -> any any (msg:"ICMP p-smash Flood"; content:\"456\"; sid:4020008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ICMPredirectStorm.xml\nalert ICMP any any -> any any (msg:"ICMP Redirect Message Storm"; content:\"456\"; sid:4020009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ICMPsourceQuench.xml\nalert ICMP any any -> any any (msg:"ICMP Source Quench Denial of Service"; content:\"456\"; sid:4020010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ICMPtimestamp.xml\nalert ICMP any any -> any any (msg:"ICMP Timestamp Flood"; content:\"456\"; sid:4020011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#floodICMPDFwhenfragsneeded.xml\nalert ICMP any any -> any any (msg:"ICMP DF when Frags Needed Flood"; content:\"456\"; sid:4020012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#floodICMPhostunreachable.xml\nalert ICMP any any -> any any (msg:"ICMP Host Unreachable Flood"; content:\"456\"; sid:4020013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#floodICMPportunreachable.xml\nalert ICMP any any -> any any (msg:"ICMP Port Unreachable Flood"; content:\"456\"; sid:4020014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#floodICMPprotocolunreachable.xml\nalert ICMP any any -> any any (msg:"ICMP Protocol Unreachable Flood"; content:\"456\"; sid:4020015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fxscanner_icmp.xml\nalert ICMP any any -> any any (msg:"FX Scanner ICMP Scan"; content:\"456\"; sid:4020016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#icmpNetmask.xml\nalert ICMP any any -> any any (msg:"ICMP Netmask Flood"; content:\"456\"; sid:4020017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#malformedICMP.xml\nalert ICMP any any -> any any (msg:"Malformed Random ICMP Packet"; content:\"456\"; sid:4020018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#openbsd_icmp6_bof.xml\nalert IPv6 any any -> any any (msg:"OpenBSD ICMPV6 Packet Handling Remote Buffer Overflow Vulnerability"; content:\"456\"; sid:4020019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#FSC20060207-07_Linux_Kernel_ICMP_Packet_Handling_Denial_of_Service_Vulnerability.xml
+alert UDP any any -> any any (msg:"Linux Kernel ICMP Packet Handling Denial of Service"; content:"456"; sid:4020000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080108-08_Microsoft_Windows_Kernel_ICMP_Fragmented_Packet_Processing_Denial_of_Service.xml
+alert IP any any -> any any (msg:"Microsoft Windows Kernel ICMP Fragmented Packet Processing Denial of Service"; content:"456"; sid:4020001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080108-08_Microsoft_Windows_Kernel_ICMP_Fragmented_Packet_Processing_Denial_of_Service.xml
+alert ICMP any any -> any any (msg:"Microsoft Windows Kernel ICMP Fragmented Packet Processing Denial of Service"; content:"456"; sid:4020002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FloodICMPreq.xml
+alert ICMP any any -> any any (msg:"ICMP Echo Request Flood"; content:"456"; sid:4020003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ICMPParameterBadPointer.xml
+alert ICMP any any -> any any (msg:"ICMP Parameter Problem Pointer Out of Bounds Flood"; content:"456"; sid:4020004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ICMPechoAmp.xml
+alert ICMP any any -> any any (msg:"ICMP Echo Amplification"; content:"456"; sid:4020005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ICMPechoReplyFlood.xml
+alert ICMP any any -> any any (msg:"ICMP Echo Reply Flood"; content:"456"; sid:4020006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ICMPingScan.xml
+alert ICMP any any -> any any (msg:"ICMP Ping Scan (ECHO request)"; content:"456"; sid:4020007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ICMPpSmashDoS.xml
+alert ICMP any any -> any any (msg:"ICMP p-smash Flood"; content:"456"; sid:4020008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ICMPredirectStorm.xml
+alert ICMP any any -> any any (msg:"ICMP Redirect Message Storm"; content:"456"; sid:4020009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ICMPsourceQuench.xml
+alert ICMP any any -> any any (msg:"ICMP Source Quench Denial of Service"; content:"456"; sid:4020010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ICMPtimestamp.xml
+alert ICMP any any -> any any (msg:"ICMP Timestamp Flood"; content:"456"; sid:4020011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#floodICMPDFwhenfragsneeded.xml
+alert ICMP any any -> any any (msg:"ICMP DF when Frags Needed Flood"; content:"456"; sid:4020012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#floodICMPhostunreachable.xml
+alert ICMP any any -> any any (msg:"ICMP Host Unreachable Flood"; content:"456"; sid:4020013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#floodICMPportunreachable.xml
+alert ICMP any any -> any any (msg:"ICMP Port Unreachable Flood"; content:"456"; sid:4020014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#floodICMPprotocolunreachable.xml
+alert ICMP any any -> any any (msg:"ICMP Protocol Unreachable Flood"; content:"456"; sid:4020015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fxscanner_icmp.xml
+alert ICMP any any -> any any (msg:"FX Scanner ICMP Scan"; content:"456"; sid:4020016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#icmpNetmask.xml
+alert ICMP any any -> any any (msg:"ICMP Netmask Flood"; content:"456"; sid:4020017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#malformedICMP.xml
+alert ICMP any any -> any any (msg:"Malformed Random ICMP Packet"; content:"456"; sid:4020018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#openbsd_icmp6_bof.xml
+alert IPv6 any any -> any any (msg:"OpenBSD ICMPV6 Packet Handling Remote Buffer Overflow Vulnerability"; content:"456"; sid:4020019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

@@ -1,3 +1,11 @@
 #game:4040000~4040999
 
-#flashgamescript_rfi.xml\nalert TCP any any -> any any (msg:"FlashGameScript 1.5.4 (index.php func) Remote File Include Vulnerability"; content:\"456\"; sid:4040000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#gamesitescript_sql.xml\nalert TCP any any -> any any (msg:"GameSiteScript <= 3.1 (profile id) Remote SQL Injection Vulnerability"; content:\"456\"; sid:4040001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#pegames_rfi.xml\nalert TCP any any -> any any (msg:"PEGames Remote File Include Vulnerability"; content:\"456\"; sid:4040002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#flashgamescript_rfi.xml
+alert TCP any any -> any any (msg:"FlashGameScript 1.5.4 (index.php func) Remote File Include Vulnerability"; content:"456"; sid:4040000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#gamesitescript_sql.xml
+alert TCP any any -> any any (msg:"GameSiteScript <= 3.1 (profile id) Remote SQL Injection Vulnerability"; content:"456"; sid:4040001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#pegames_rfi.xml
+alert TCP any any -> any any (msg:"PEGames Remote File Include Vulnerability"; content:"456"; sid:4040002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

@@ -1,12 +1,617 @@
 #dos:4034000~4034999
 
-#3CTftpSvc_dos.xml\nalert UDP any any -> any any (msg:"3CTftpSvc <= 2.0.1 (Long Transporting Mode) Buffer Overflow Vulnerability"; content:\"456\"; sid:4034000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#3cdaemon_dos.xml\nalert UDP any any -> any any (msg:"3Com TFTP 3CDaemon Denial of Service"; content:\"456\"; sid:4034001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#3com_superstack_dos.xml\nalert IP any any -> any any (msg:"3Com SuperStack II Denial of Service"; content:\"456\"; sid:4034002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#CUPSdos.xml\nalert TCP any any -> any any (msg:"CUPS Web Interface Denial of Service"; content:\"456\"; sid:4034003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#CUPSdos2.xml\nalert TCP any any -> any any (msg:"CUPS Denial of Service Crash"; content:\"456\"; sid:4034004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#DB2DiscoverDoS.xml\nalert UDP any any -> any any (msg:"DB2 Discover Service Denial of Service"; content:\"456\"; sid:4034005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#DodosMail_rfi.xml\nalert TCP any any -> any any (msg:"DodosMail <= 2.0.1(dodosmail.php)  Remote File Include Vulnerability"; content:\"456\"; sid:4034006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Heybro.hey.6634551b.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Heybro.hey"; content:\"456\"; sid:4034007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Heybro.hey.6634551b.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Heybro.hey"; content:\"456\"; sid:4034008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.d.d.4a01a7d0.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.d.d"; content:\"456\"; sid:4034009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.d.d.4a01a7d0.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.d.d"; content:\"456\"; sid:4034010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.e.e.2fee0483.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.e.e"; content:\"456\"; sid:4034011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.e.e.2fee0483.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.e.e"; content:\"456\"; sid:4034012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.f.f.95109868.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.f.f"; content:\"456\"; sid:4034013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.f.f.95109868.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.f.f"; content:\"456\"; sid:4034014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.g.g.cf5d80d9.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.g.g"; content:\"456\"; sid:4034015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.g.g.cf5d80d9.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.g.g"; content:\"456\"; sid:4034016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.h.h.86883930.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.h.h"; content:\"456\"; sid:4034017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.h.h.86883930.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.h.h"; content:\"456\"; sid:4034018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.i.i.ca2d8546.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.i.i"; content:\"456\"; sid:4034019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.i.i.ca2d8546.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.i.i"; content:\"456\"; sid:4034020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.j.j.5e816e39.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.j.j"; content:\"456\"; sid:4034021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.j.j.5e816e39.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.j.j"; content:\"456\"; sid:4034022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.k.k.c8fc670e.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.k.k"; content:\"456\"; sid:4034023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.k.k.c8fc670e.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.k.k"; content:\"456\"; sid:4034024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.l.l.d1b98f7e.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.l.l"; content:\"456\"; sid:4034025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.l.l.d1b98f7e.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.l.l"; content:\"456\"; sid:4034026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.m.m.5f9bd12f.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.m.m"; content:\"456\"; sid:4034027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.m.m.5f9bd12f.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.m.m"; content:\"456\"; sid:4034028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.n.n.7df75d1c.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.n.n"; content:\"456\"; sid:4034029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.n.n.7df75d1c.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.n.n"; content:\"456\"; sid:4034030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.o.o.9c9070bb.xml\nalert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.o.o"; content:\"456\"; sid:4034031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Email-Worm.DOS.Kondrik.o.o.9c9070bb.xml\nalert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.o.o"; content:\"456\"; sid:4034032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040219-03_OpenSSL_Handshake_DoS.xml\nalert Ethernet any any -> any any (msg:"OpenSSL Handshake DoS"; content:\"456\"; sid:4034033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040405-01_TCPDUMP_ISAKMP_Payload_Handling_DoS.xml\nalert UDP any any -> any any (msg:"TCPDUMP ISAKMP Payload Handling DoS"; content:\"456\"; sid:4034034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040407-01_Macromedia_Flash_Player_LoadMovie_DoS.xml\nalert TCP any any -> any any (msg:"Macromedia Flash Player LoadMovie DoS"; content:\"456\"; sid:4034035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040518-02_Symantec_DNS_Response_DoS.xml\nalert UDP any any -> any any (msg:"Symantec DNS Response DoS"; content:\"456\"; sid:4034036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040525-01_Norton_AntiVirus_2004_ActiveX_DoS.xml\nalert TCP any any -> any any (msg:"Norton Anti-Virus 2004 ActiveX DoS"; content:\"456\"; sid:4034037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040728-01_Microsoft_SMS_Remote_Control_Service_DoS.xml\nalert TCP any any -> any any (msg:"Microsoft SMS Remote Control Service DoS"; content:\"456\"; sid:4034038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040811-01_Microsoft_Windows_Large_Image_Resize_DoS.xml\nalert TCP any any -> any any (msg:"Microsoft Windows Large Image Resize DoS "; content:\"456\"; sid:4034039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040921-01_Ipswitch_WhatsUp_Gold_DOS_Device_HTTP_Request_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Ipswitch WhatsUp Gold DOS Device HTTP Request Denial of Service"; content:\"456\"; sid:4034040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20060214-06_Microsoft_Windows_IGMP_v3_DoS_Vulnerability.xml\nalert IP any any -> any any (msg:"Microsoft Windows IGMP v3 DoS Vulnerability"; content:\"456\"; sid:4034041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080610-08_Microsoft_Windows_Pragmatic_General_Multicast_Packet_Handling_DoS.xml\nalert IP any any -> any any (msg:"Microsoft Windows Pragmatic General Multicast Packet Handling DoS"; content:\"456\"; sid:4034042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080610-12_Microsoft_Windows_Pragmatic_General_Multicast_Fragment_Handling_DoS.xml\nalert IP any any -> any any (msg:"Microsoft Windows Pragmatic General Multicast Fragment Handling DoS"; content:\"456\"; sid:4034043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20091118-04_Apple_CUPS_cupsdDoSelect_Remote_Code_Execution.xml\nalert TCP any any -> any any (msg:"Apple CUPS cupsdDoSelect Remote Code Execution"; content:\"456\"; sid:4034044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#GCALDaemon_dos.xml\nalert TCP any any -> any any (msg:"GCALDaemon <= 1.0-beta13 Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ICMPpSmashDoS.xml\nalert ICMP any any -> any any (msg:"ICMP p-smash Flood"; content:\"456\"; sid:4034046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#IE-DOS_Embedded.xml\nalert TCP any any -> any any (msg:"Internet Explorer Recursive Object Inclusion"; content:\"456\"; sid:4034047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#IE-DOS_stack.xml\nalert TCP any any -> any any (msg:"Internet Explorer Stack Overflow Denial Of Service"; content:\"456\"; sid:4034048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#IE-DOS_window.xml\nalert TCP any any -> any any (msg:"Internet Explorer MS05-054 window() Denial of Service"; content:\"456\"; sid:4034049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#IEDOS.xml\nalert TCP any any -> any any (msg:"Internet Explorer Denial of Service"; content:\"456\"; sid:4034050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#IEDOS2.xml\nalert TCP any any -> any any (msg:"IE Denial of Service Crash"; content:\"456\"; sid:4034051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#IEDOS_j2se.xml\nalert TCP any any -> any any (msg:"Internet Explorer J2SE Denial of Service"; content:\"456\"; sid:4034052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#IIS_tilde0DOS.xml\nalert TCP any any -> any any (msg:"IIS ~0 DoS"; content:\"456\"; sid:4034053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#MSRPC_DOS.xml\nalert TCP any any -> any any (msg:"MS01-041 Windows 2000 RPC Denial of Service"; content:\"456\"; sid:4034054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#MS_SMS_DoS.xml\nalert TCP any any -> any any (msg:"Microsoft SMS Denial of Service"; content:\"456\"; sid:4034055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#MSsqlDoS.xml\nalert UDP any any -> any any (msg:"MS02-039 MS SQL Server 2000 UDP Ping Flood"; content:\"456\"; sid:4034056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#Netbios_UDP_DOS.xml\nalert UDP any any -> any any (msg:"NetBIOS Denial of Service (WinNuke)"; content:\"456\"; sid:4034057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#SNMPv3catDoS.xml\nalert UDP any any -> any any (msg:"Cisco SNMPv3 Denial of Service"; content:\"456\"; sid:4034058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#SymantecFirewallDNSDOS.xml\nalert UDP any any -> any any (msg:"Symantec Firewall DNS Response Denial of Service"; content:\"456\"; sid:4034059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#SymantecFirewallDNSDOS2.xml\nalert UDP any any -> any any (msg:"Symantec Firewall DNS Response Buffer Overflow"; content:\"456\"; sid:4034060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#UDPport0DoS.xml\nalert UDP any any -> any any (msg:"UDP Port 0 DoS"; content:\"456\"; sid:4034061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#WinXPdos.xml\nalert UDP any any -> any any (msg:"Windows XP UDP Flood DoS"; content:\"456\"; sid:4034062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#aceftp_dos.xml\nalert TCP any any -> any any (msg:"Ace-FTP Client 1.24a Remote Buffer Overflow Proof of Concept"; content:\"456\"; sid:4034063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#acftp_dos.xml\nalert TCP any any -> any any (msg:"ACFTP FTP Server User Command Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#acunetix_wvs_dos.xml\nalert TCP any any -> any any (msg:"Acunetix Web Vulnerability Scanner Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#adodb_dos.xml\nalert TCP any any -> any any (msg:"ADODB tmssql.php Denial of service (win32)"; content:\"456\"; sid:4034066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#afp_dos.xml\nalert TCP any any -> any any (msg:"Apple File Server Integer Overflow"; content:\"456\"; sid:4034067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#allegro_dos.xml\nalert TCP any any -> any any (msg:"Allegro Denial Of Service"; content:\"456\"; sid:4034068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#asterisk_chan_skinny_dos.xml\nalert TCP any any -> any any (msg:"Asterisk < 1.2.22 / 1.4.8 / 2.2.1 chan_skinny Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#asterisk_pre-auth_dos.xml\nalert UDP any any -> any any (msg:"Asterisk Chan_Sip.c Unspecified Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#at-tftp_dos.xml\nalert UDP any any -> any any (msg:"AT-TFTP <= 1.9 (Long Filename) Remote Buffer Overflow Vulnerability (POC)"; content:\"456\"; sid:4034071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#bisonftp_dos.xml\nalert TCP any any -> any any (msg:"BisonFTP Remote Denial Of Service Vulnerability
-"; content:\"456\"; sid:4034072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#bl4_smtp_dos.xml\nalert TCP any any -> any any (msg:"BL4 SMTP Server < 0.1.5 Remote Buffer Overflow PoC"; content:\"456\"; sid:4034073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#bnbt_get_dos.xml\nalert TCP any any -> any any (msg:"BNBT EasyTracker Denial of Service"; content:\"456\"; sid:4034074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#browsedialog_msie7_dos.xml\nalert TCP any any -> any any (msg:"rowseDialog Class (ccrpbds6.dll) multiple methods Denial of Service Vulnerability"; content:\"456\"; sid:4034075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#catalyst_remote_reload_Dos.xml\nalert TCP any any -> any any (msg:"Cisco Catalyst CR Denial of Service"; content:\"456\"; sid:4034076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ccrp_browsedialogclass_dos.xml\nalert TCP any any -> any any (msg:"BrowseDialog Class ActiveX Control Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ccrp_foldertreeview_dos.xml\nalert TCP any any -> any any (msg:"FolderTreeView ActiveX Control Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034078; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#centericq_dos.xml\nalert TCP any any -> any any (msg:"CenterICQ Malformed Packet Handling Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034079; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#cfnetwork_dos.xml\nalert TCP any any -> any any (msg:"Apple CFNetwork HTTP Response Denial of Service"; content:\"456\"; sid:4034080; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#cisco_ONS_DoS.xml\nalert IP any any -> any any (msg:"Cisco ONS Denial of Service"; content:\"456\"; sid:4034081; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#cisco_catos_DOS.xml\nalert TCP any any -> any any (msg:"Cisco Catalyst ACK Denial of Service"; content:\"456\"; sid:4034082; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#cisco_http_dos3.xml\nalert TCP any any -> any any (msg:"Cisco IOS HTTP Error Denial of Service"; content:\"456\"; sid:4034083; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#cisco_ip_phone_dos.xml\nalert TCP any any -> any any (msg:"Cisco IP Phone Denial of Service"; content:\"456\"; sid:4034084; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#cisco_sip_invite_dos.xml\nalert UDP any any -> any any (msg:"Cisco 7940/7960 Phone SIP Invite Remote Denial of Service Vulnerability
-"; content:\"456\"; sid:4034085; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#communigate_ldap_dos.xml\nalert TCP any any -> any any (msg:"CommuniGate Pro Server LDAP BER Decoding Malformed Input DoS"; content:\"456\"; sid:4034086; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#core_mailslot_dos.xml\nalert TCP any any -> any any (msg:"SMB PIPE Server Crash"; content:\"456\"; sid:4034087; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#crobftp_dos.xml\nalert TCP any any -> any any (msg:"Crob FTP Server Remote Heap Buffer Overflow Vulnerability"; content:\"456\"; sid:4034088; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#darwin_streaming_dos.xml\nalert TCP any any -> any any (msg:"Darwin Streaming Server Denial of Service"; content:\"456\"; sid:4034089; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#datalookDoS.xml\nalert TCP any any -> any any (msg:"Datalook Denial of Service"; content:\"456\"; sid:4034090; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#dhcp-30-DoS.xml\nalert UDP any any -> any any (msg:"ISC DHCP Buffer Overflow"; content:\"456\"; sid:4034091; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#divxplayer_dos.xml\nalert TCP any any -> any any (msg:"DivX Web Player NPDIVX32.DLL ActiveX Control Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034092; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#divxwebplayer-1.3_dos.xml\nalert TCP any any -> any any (msg:"DivX Web Player NPDIVX32.DLL ActiveX Control Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034093; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#dlink_http_dos.xml\nalert TCP any any -> any any (msg:"D-Link Long URL Denial of Service"; content:\"456\"; sid:4034094; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#dlink_http_syslog_dos.xml\nalert TCP any any -> any any (msg:"D-Link syslog.HTM Denial of Service"; content:\"456\"; sid:4034095; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#easychatserv_dos.xml\nalert TCP any any -> any any (msg:"Easy Chat Server Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034096; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#etherealSMBDoS.xml\nalert UDP any any -> any any (msg:"Ethereal NetBIOS Denial Of Service"; content:\"456\"; sid:4034097; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#evolution_dos.xml\nalert TCP any any -> any any (msg:"Gnome Evolution Inline Text File Attachment DoS"; content:\"456\"; sid:4034098; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#evolution_dos.xml\nalert SMTP any any -> any any (msg:"Gnome Evolution Inline Text File Attachment DoS"; content:\"456\"; sid:4034099; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#firefly_mediaserver_dos.xml\nalert TCP any any -> any any (msg:"Firefly Media Server <= 0.2.4 Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034100; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#firefoxDOS.xml\nalert TCP any any -> any any (msg:"Firefox Function(){} Denial Of Service"; content:\"456\"; sid:4034101; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#firefox_addbookmark_dos.xml\nalert TCP any any -> any any (msg:"Firefox Add Boookmark Denial of Service"; content:\"456\"; sid:4034102; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#firefox_dos.xml\nalert TCP any any -> any any (msg:"Mozilla Firefox NULL Pointer Dereference DoS "; content:\"456\"; sid:4034103; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#firefox_ftp_dos.xml\nalert TCP any any -> any any (msg:"Mozilla Firefox FTP Denial of Service Vulnerability"; content:\"456\"; sid:4034104; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#firefox_javahandler_dos.xml\nalert TCP any any -> any any (msg:"Mozilla Firefox JavaScript Handler Race Condition Memory Corruption Vulnerability
+#3CTftpSvc_dos.xml
+alert UDP any any -> any any (msg:"3CTftpSvc <= 2.0.1 (Long Transporting Mode) Buffer Overflow Vulnerability"; content:"456"; sid:4034000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#3cdaemon_dos.xml
+alert UDP any any -> any any (msg:"3Com TFTP 3CDaemon Denial of Service"; content:"456"; sid:4034001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#3com_superstack_dos.xml
+alert IP any any -> any any (msg:"3Com SuperStack II Denial of Service"; content:"456"; sid:4034002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#CUPSdos.xml
+alert TCP any any -> any any (msg:"CUPS Web Interface Denial of Service"; content:"456"; sid:4034003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#CUPSdos2.xml
+alert TCP any any -> any any (msg:"CUPS Denial of Service Crash"; content:"456"; sid:4034004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#DB2DiscoverDoS.xml
+alert UDP any any -> any any (msg:"DB2 Discover Service Denial of Service"; content:"456"; sid:4034005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#DodosMail_rfi.xml
+alert TCP any any -> any any (msg:"DodosMail <= 2.0.1(dodosmail.php)  Remote File Include Vulnerability"; content:"456"; sid:4034006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Heybro.hey.6634551b.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Heybro.hey"; content:"456"; sid:4034007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Heybro.hey.6634551b.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Heybro.hey"; content:"456"; sid:4034008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.d.d.4a01a7d0.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.d.d"; content:"456"; sid:4034009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.d.d.4a01a7d0.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.d.d"; content:"456"; sid:4034010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.e.e.2fee0483.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.e.e"; content:"456"; sid:4034011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.e.e.2fee0483.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.e.e"; content:"456"; sid:4034012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.f.f.95109868.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.f.f"; content:"456"; sid:4034013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.f.f.95109868.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.f.f"; content:"456"; sid:4034014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.g.g.cf5d80d9.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.g.g"; content:"456"; sid:4034015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.g.g.cf5d80d9.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.g.g"; content:"456"; sid:4034016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.h.h.86883930.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.h.h"; content:"456"; sid:4034017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.h.h.86883930.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.h.h"; content:"456"; sid:4034018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.i.i.ca2d8546.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.i.i"; content:"456"; sid:4034019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.i.i.ca2d8546.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.i.i"; content:"456"; sid:4034020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.j.j.5e816e39.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.j.j"; content:"456"; sid:4034021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.j.j.5e816e39.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.j.j"; content:"456"; sid:4034022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.k.k.c8fc670e.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.k.k"; content:"456"; sid:4034023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.k.k.c8fc670e.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.k.k"; content:"456"; sid:4034024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.l.l.d1b98f7e.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.l.l"; content:"456"; sid:4034025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.l.l.d1b98f7e.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.l.l"; content:"456"; sid:4034026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.m.m.5f9bd12f.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.m.m"; content:"456"; sid:4034027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.m.m.5f9bd12f.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.m.m"; content:"456"; sid:4034028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.n.n.7df75d1c.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.n.n"; content:"456"; sid:4034029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.n.n.7df75d1c.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.n.n"; content:"456"; sid:4034030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.o.o.9c9070bb.xml
+alert SMTP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.o.o"; content:"456"; sid:4034031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Email-Worm.DOS.Kondrik.o.o.9c9070bb.xml
+alert TCP any any -> any any (msg:"Email Virus Email-Worm.DOS.Kondrik.o.o"; content:"456"; sid:4034032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040219-03_OpenSSL_Handshake_DoS.xml
+alert Ethernet any any -> any any (msg:"OpenSSL Handshake DoS"; content:"456"; sid:4034033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040405-01_TCPDUMP_ISAKMP_Payload_Handling_DoS.xml
+alert UDP any any -> any any (msg:"TCPDUMP ISAKMP Payload Handling DoS"; content:"456"; sid:4034034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040407-01_Macromedia_Flash_Player_LoadMovie_DoS.xml
+alert TCP any any -> any any (msg:"Macromedia Flash Player LoadMovie DoS"; content:"456"; sid:4034035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040518-02_Symantec_DNS_Response_DoS.xml
+alert UDP any any -> any any (msg:"Symantec DNS Response DoS"; content:"456"; sid:4034036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040525-01_Norton_AntiVirus_2004_ActiveX_DoS.xml
+alert TCP any any -> any any (msg:"Norton Anti-Virus 2004 ActiveX DoS"; content:"456"; sid:4034037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040728-01_Microsoft_SMS_Remote_Control_Service_DoS.xml
+alert TCP any any -> any any (msg:"Microsoft SMS Remote Control Service DoS"; content:"456"; sid:4034038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040811-01_Microsoft_Windows_Large_Image_Resize_DoS.xml
+alert TCP any any -> any any (msg:"Microsoft Windows Large Image Resize DoS "; content:"456"; sid:4034039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040921-01_Ipswitch_WhatsUp_Gold_DOS_Device_HTTP_Request_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Ipswitch WhatsUp Gold DOS Device HTTP Request Denial of Service"; content:"456"; sid:4034040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060214-06_Microsoft_Windows_IGMP_v3_DoS_Vulnerability.xml
+alert IP any any -> any any (msg:"Microsoft Windows IGMP v3 DoS Vulnerability"; content:"456"; sid:4034041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080610-08_Microsoft_Windows_Pragmatic_General_Multicast_Packet_Handling_DoS.xml
+alert IP any any -> any any (msg:"Microsoft Windows Pragmatic General Multicast Packet Handling DoS"; content:"456"; sid:4034042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080610-12_Microsoft_Windows_Pragmatic_General_Multicast_Fragment_Handling_DoS.xml
+alert IP any any -> any any (msg:"Microsoft Windows Pragmatic General Multicast Fragment Handling DoS"; content:"456"; sid:4034043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091118-04_Apple_CUPS_cupsdDoSelect_Remote_Code_Execution.xml
+alert TCP any any -> any any (msg:"Apple CUPS cupsdDoSelect Remote Code Execution"; content:"456"; sid:4034044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#GCALDaemon_dos.xml
+alert TCP any any -> any any (msg:"GCALDaemon <= 1.0-beta13 Remote Denial of Service Vulnerability"; content:"456"; sid:4034045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ICMPpSmashDoS.xml
+alert ICMP any any -> any any (msg:"ICMP p-smash Flood"; content:"456"; sid:4034046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#IE-DOS_Embedded.xml
+alert TCP any any -> any any (msg:"Internet Explorer Recursive Object Inclusion"; content:"456"; sid:4034047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#IE-DOS_stack.xml
+alert TCP any any -> any any (msg:"Internet Explorer Stack Overflow Denial Of Service"; content:"456"; sid:4034048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#IE-DOS_window.xml
+alert TCP any any -> any any (msg:"Internet Explorer MS05-054 window() Denial of Service"; content:"456"; sid:4034049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#IEDOS.xml
+alert TCP any any -> any any (msg:"Internet Explorer Denial of Service"; content:"456"; sid:4034050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#IEDOS2.xml
+alert TCP any any -> any any (msg:"IE Denial of Service Crash"; content:"456"; sid:4034051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#IEDOS_j2se.xml
+alert TCP any any -> any any (msg:"Internet Explorer J2SE Denial of Service"; content:"456"; sid:4034052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#IIS_tilde0DOS.xml
+alert TCP any any -> any any (msg:"IIS ~0 DoS"; content:"456"; sid:4034053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#MSRPC_DOS.xml
+alert TCP any any -> any any (msg:"MS01-041 Windows 2000 RPC Denial of Service"; content:"456"; sid:4034054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#MS_SMS_DoS.xml
+alert TCP any any -> any any (msg:"Microsoft SMS Denial of Service"; content:"456"; sid:4034055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#MSsqlDoS.xml
+alert UDP any any -> any any (msg:"MS02-039 MS SQL Server 2000 UDP Ping Flood"; content:"456"; sid:4034056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#Netbios_UDP_DOS.xml
+alert UDP any any -> any any (msg:"NetBIOS Denial of Service (WinNuke)"; content:"456"; sid:4034057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#SNMPv3catDoS.xml
+alert UDP any any -> any any (msg:"Cisco SNMPv3 Denial of Service"; content:"456"; sid:4034058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#SymantecFirewallDNSDOS.xml
+alert UDP any any -> any any (msg:"Symantec Firewall DNS Response Denial of Service"; content:"456"; sid:4034059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#SymantecFirewallDNSDOS2.xml
+alert UDP any any -> any any (msg:"Symantec Firewall DNS Response Buffer Overflow"; content:"456"; sid:4034060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#UDPport0DoS.xml
+alert UDP any any -> any any (msg:"UDP Port 0 DoS"; content:"456"; sid:4034061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#WinXPdos.xml
+alert UDP any any -> any any (msg:"Windows XP UDP Flood DoS"; content:"456"; sid:4034062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#aceftp_dos.xml
+alert TCP any any -> any any (msg:"Ace-FTP Client 1.24a Remote Buffer Overflow Proof of Concept"; content:"456"; sid:4034063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#acftp_dos.xml
+alert TCP any any -> any any (msg:"ACFTP FTP Server User Command Remote Denial of Service Vulnerability"; content:"456"; sid:4034064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#acunetix_wvs_dos.xml
+alert TCP any any -> any any (msg:"Acunetix Web Vulnerability Scanner Remote Denial of Service Vulnerability"; content:"456"; sid:4034065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#adodb_dos.xml
+alert TCP any any -> any any (msg:"ADODB tmssql.php Denial of service (win32)"; content:"456"; sid:4034066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#afp_dos.xml
+alert TCP any any -> any any (msg:"Apple File Server Integer Overflow"; content:"456"; sid:4034067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#allegro_dos.xml
+alert TCP any any -> any any (msg:"Allegro Denial Of Service"; content:"456"; sid:4034068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#asterisk_chan_skinny_dos.xml
+alert TCP any any -> any any (msg:"Asterisk < 1.2.22 / 1.4.8 / 2.2.1 chan_skinny Remote Denial of Service Vulnerability"; content:"456"; sid:4034069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#asterisk_pre-auth_dos.xml
+alert UDP any any -> any any (msg:"Asterisk Chan_Sip.c Unspecified Remote Denial of Service Vulnerability"; content:"456"; sid:4034070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#at-tftp_dos.xml
+alert UDP any any -> any any (msg:"AT-TFTP <= 1.9 (Long Filename) Remote Buffer Overflow Vulnerability (POC)"; content:"456"; sid:4034071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#bisonftp_dos.xml
+alert TCP any any -> any any (msg:"BisonFTP Remote Denial Of Service Vulnerability
+"; content:"456"; sid:4034072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#bl4_smtp_dos.xml
+alert TCP any any -> any any (msg:"BL4 SMTP Server < 0.1.5 Remote Buffer Overflow PoC"; content:"456"; sid:4034073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#bnbt_get_dos.xml
+alert TCP any any -> any any (msg:"BNBT EasyTracker Denial of Service"; content:"456"; sid:4034074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#browsedialog_msie7_dos.xml
+alert TCP any any -> any any (msg:"rowseDialog Class (ccrpbds6.dll) multiple methods Denial of Service Vulnerability"; content:"456"; sid:4034075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#catalyst_remote_reload_Dos.xml
+alert TCP any any -> any any (msg:"Cisco Catalyst CR Denial of Service"; content:"456"; sid:4034076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ccrp_browsedialogclass_dos.xml
+alert TCP any any -> any any (msg:"BrowseDialog Class ActiveX Control Remote Denial of Service Vulnerability"; content:"456"; sid:4034077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ccrp_foldertreeview_dos.xml
+alert TCP any any -> any any (msg:"FolderTreeView ActiveX Control Remote Denial of Service Vulnerability"; content:"456"; sid:4034078; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#centericq_dos.xml
+alert TCP any any -> any any (msg:"CenterICQ Malformed Packet Handling Remote Denial of Service Vulnerability"; content:"456"; sid:4034079; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cfnetwork_dos.xml
+alert TCP any any -> any any (msg:"Apple CFNetwork HTTP Response Denial of Service"; content:"456"; sid:4034080; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cisco_ONS_DoS.xml
+alert IP any any -> any any (msg:"Cisco ONS Denial of Service"; content:"456"; sid:4034081; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cisco_catos_DOS.xml
+alert TCP any any -> any any (msg:"Cisco Catalyst ACK Denial of Service"; content:"456"; sid:4034082; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cisco_http_dos3.xml
+alert TCP any any -> any any (msg:"Cisco IOS HTTP Error Denial of Service"; content:"456"; sid:4034083; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cisco_ip_phone_dos.xml
+alert TCP any any -> any any (msg:"Cisco IP Phone Denial of Service"; content:"456"; sid:4034084; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#cisco_sip_invite_dos.xml
+alert UDP any any -> any any (msg:"Cisco 7940/7960 Phone SIP Invite Remote Denial of Service Vulnerability
+"; content:"456"; sid:4034085; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#communigate_ldap_dos.xml
+alert TCP any any -> any any (msg:"CommuniGate Pro Server LDAP BER Decoding Malformed Input DoS"; content:"456"; sid:4034086; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#core_mailslot_dos.xml
+alert TCP any any -> any any (msg:"SMB PIPE Server Crash"; content:"456"; sid:4034087; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#crobftp_dos.xml
+alert TCP any any -> any any (msg:"Crob FTP Server Remote Heap Buffer Overflow Vulnerability"; content:"456"; sid:4034088; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#darwin_streaming_dos.xml
+alert TCP any any -> any any (msg:"Darwin Streaming Server Denial of Service"; content:"456"; sid:4034089; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#datalookDoS.xml
+alert TCP any any -> any any (msg:"Datalook Denial of Service"; content:"456"; sid:4034090; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dhcp-30-DoS.xml
+alert UDP any any -> any any (msg:"ISC DHCP Buffer Overflow"; content:"456"; sid:4034091; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#divxplayer_dos.xml
+alert TCP any any -> any any (msg:"DivX Web Player NPDIVX32.DLL ActiveX Control Remote Denial of Service Vulnerability"; content:"456"; sid:4034092; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#divxwebplayer-1.3_dos.xml
+alert TCP any any -> any any (msg:"DivX Web Player NPDIVX32.DLL ActiveX Control Remote Denial of Service Vulnerability"; content:"456"; sid:4034093; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dlink_http_dos.xml
+alert TCP any any -> any any (msg:"D-Link Long URL Denial of Service"; content:"456"; sid:4034094; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#dlink_http_syslog_dos.xml
+alert TCP any any -> any any (msg:"D-Link syslog.HTM Denial of Service"; content:"456"; sid:4034095; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#easychatserv_dos.xml
+alert TCP any any -> any any (msg:"Easy Chat Server Remote Denial of Service Vulnerability"; content:"456"; sid:4034096; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#etherealSMBDoS.xml
+alert UDP any any -> any any (msg:"Ethereal NetBIOS Denial Of Service"; content:"456"; sid:4034097; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#evolution_dos.xml
+alert TCP any any -> any any (msg:"Gnome Evolution Inline Text File Attachment DoS"; content:"456"; sid:4034098; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#evolution_dos.xml
+alert SMTP any any -> any any (msg:"Gnome Evolution Inline Text File Attachment DoS"; content:"456"; sid:4034099; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefly_mediaserver_dos.xml
+alert TCP any any -> any any (msg:"Firefly Media Server <= 0.2.4 Remote Denial of Service Vulnerability"; content:"456"; sid:4034100; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefoxDOS.xml
+alert TCP any any -> any any (msg:"Firefox Function(){} Denial Of Service"; content:"456"; sid:4034101; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefox_addbookmark_dos.xml
+alert TCP any any -> any any (msg:"Firefox Add Boookmark Denial of Service"; content:"456"; sid:4034102; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefox_dos.xml
+alert TCP any any -> any any (msg:"Mozilla Firefox NULL Pointer Dereference DoS "; content:"456"; sid:4034103; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefox_ftp_dos.xml
+alert TCP any any -> any any (msg:"Mozilla Firefox FTP Denial of Service Vulnerability"; content:"456"; sid:4034104; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefox_javahandler_dos.xml
+alert TCP any any -> any any (msg:"Mozilla Firefox JavaScript Handler Race Condition Memory Corruption Vulnerability
 Mozilla Firefox JavaScript Handler Race Condition Memory Corruption Vulnerability
 Mozilla Firefox JavaScript Handler Race Condition Memory Corruption Vulnerability
 Mozilla Firefox JavaScript Handler Race Condition Memory Corruption Vulnerability
 Mozilla Firefox JavaScript Handler Race Condition Memory Corruption Vulnerability
 Mozilla Firefox JavaScript Handler Race Condition Memory Corruption Vulnerability
-"; content:\"456\"; sid:4034105; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#firefox_marque_dos.xml\nalert TCP any any -> any any (msg:"Firefox Marquee Denial of Service"; content:\"456\"; sid:4034106; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#firefox_xml_dos.xml\nalert TCP any any -> any any (msg:"Mozilla Firefox 2.0.0.7 Denial of Service Vulnerability"; content:\"456\"; sid:4034107; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#foxit_pdf_dos.xml\nalert TCP any any -> any any (msg:"Foxit Reader Malformed PDF File Denial of Service Vulnerability"; content:\"456\"; sid:4034108; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fprot_ace_dos.xml\nalert TCP any any -> any any (msg:"F-PROT Antivirus ACE Remote Denial Of Service Vulnerability"; content:\"456\"; sid:4034109; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fprot_chm_dos.xml\nalert TCP any any -> any any (msg:"F-PROT Antivirus CHM File Heap Buffer Overflow Vulnerability."; content:\"456\"; sid:4034110; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#fw1_dos.xml\nalert TCP any any -> any any (msg:"FW-1 Replay Denial Of Service"; content:\"456\"; sid:4034111; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#gifDos.xml\nalert TCP any any -> any any (msg:"GIF Denial Of Service"; content:\"456\"; sid:4034112; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#grandstream_invite_dos.xml\nalert UDP any any -> any any (msg:"Grandstream Budge Tone-200 denial of service vulnerability "; content:\"456\"; sid:4034113; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#gtchat_dos.xml\nalert TCP any any -> any any (msg:"GTChat Denial Of Service"; content:\"456\"; sid:4034114; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#hp_jetdir_ftpserver_dos.xml\nalert TCP any any -> any any (msg:"HP Jetdirect FTP Print Server RERT Command Denial Of Service Vulnerability"; content:\"456\"; sid:4034115; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#hp_printservftp_dos.xml\nalert TCP any any -> any any (msg:"Hewlett-Packard FTP Print Server Version 2.4.5 Buffer Overflow Vulnerability"; content:\"456\"; sid:4034116; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ie6_dos2.xml\nalert TCP any any -> any any (msg:"Internet Explorer 6.0.2900 SP2 Denial of Service Vulnerability"; content:\"456\"; sid:4034117; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ie6_mshtml_dos.xml\nalert TCP any any -> any any (msg:"Internet Explorer 6 mshtml.dll DoS"; content:\"456\"; sid:4034118; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ie7_beta_dos_sound.xml\nalert TCP any any -> any any (msg:"Internet Explorer BGSOUND DOS"; content:\"456\"; sid:4034119; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#internetExplorerFileDOS.xml\nalert TCP any any -> any any (msg:"Internet Explorer File URL Denial of Service"; content:\"456\"; sid:4034120; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#jabber_dos.xml\nalert TCP any any -> any any (msg:"Jabberd Denial of Service"; content:\"456\"; sid:4034121; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#jetcast_srvr_dos.xml\nalert TCP any any -> any any (msg:"JetCast Server 2.0.0.4308 Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034122; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#kde_libkhtml_dos.xml\nalert TCP any any -> any any (msg:"KDE 3.5 | libkhtml <= 4.2.0 / Unhandled HTML Parse Exception"; content:\"456\"; sid:4034123; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#kerio_dos.xml\nalert UDP any any -> any any (msg:"Kerio Personal Firewall IP Options Denial Of Service"; content:\"456\"; sid:4034124; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#leadtools_isis_dos.xml\nalert TCP any any -> any any (msg:"LeadTools ISIS Control (ltisi14E.ocx v.14.5.0.44) Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034125; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#libtiff_dos.xml\nalert TCP any any -> any any (msg:"LibTiff Denial of Service Vulnerability"; content:\"456\"; sid:4034126; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#linux_natsnmp_dos.xml\nalert UDP any any -> any any (msg:"Linux Kernel SNMP NAT Helper Remote DoS"; content:\"456\"; sid:4034127; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#lotusDOS.xml\nalert TCP any any -> any any (msg:"IBM Lotus Domino Server Web Service Denial Of Service"; content:\"456\"; sid:4034128; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#lotus_domino_dos.xml\nalert SMTP any any -> any any (msg:"Lotus Mail Loop Denial of Service"; content:\"456\"; sid:4034129; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#lotus_domino_dos.xml\nalert TCP any any -> any any (msg:"Lotus Mail Loop Denial of Service"; content:\"456\"; sid:4034130; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#macosx_vpnd_dos.xml\nalert UDP any any -> any any (msg:"Apple MACOS X 10.5.0 (leopard) vpnd Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034131; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#mailsite_dos.xml\nalert TCP any any -> any any (msg:"Rockliffe MailSite HTTP Management Agent WCONSOLE.DLL Crafted Parameter DoS"; content:\"456\"; sid:4034132; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#mambo_joomla_dos.xml\nalert TCP any any -> any any (msg:"Mambo/Joomla DoS attack and"; content:\"456\"; sid:4034133; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#miniweb_post_rdos.xml\nalert TCP any any -> any any (msg:"MiniWeb Http POST Remote Denial of Service"; content:\"456\"; sid:4034134; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#motorola_sb4200_dos.xml\nalert TCP any any -> any any (msg:"Motorola SB4200 Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034135; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ms-explorer_avi_dos.xml\nalert TCP any any -> any any (msg:"MS Windows Explorer (AVI) Unspecified Denial of Service Vulnerability"; content:\"456\"; sid:4034136; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ms05-038_oom_dos.xml\nalert TCP any any -> any any (msg:"Internet Explorer JPEG Image Corruption oom_dos"; content:\"456\"; sid:4034137; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ms06-032-dos.xml\nalert ICMP any any -> any any (msg:"Microsoft Windows TCP/IP Protocol Driver Remote Buffer Overflow Vulnerability (DoS POC)"; content:\"456\"; sid:4034138; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ms_docfile_dos.xml\nalert TCP any any -> any any (msg:"Microsoft Windows OLE32.DLL Word Document Handling Denial Of Service Vulnerability"; content:\"456\"; sid:4034139; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ms_explorer_gif_dos.xml\nalert TCP any any -> any any (msg:"MS Windows Explorer.exe Gif Image Denial of Service Vulnerability"; content:\"456\"; sid:4034140; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ms_mediaplayer_mid_dos.xml\nalert TCP any any -> any any (msg:"Microsoft Windows Media MID File Denial Of Service Vulnerability"; content:\"456\"; sid:4034141; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ms_mediasx_dos.xml\nalert TCP any any -> any any (msg:"Windows Media ASX PlayList File Denial Of Service Vulnerability"; content:\"456\"; sid:4034142; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ms_office_help_activex_dos.xml\nalert TCP any any -> any any (msg:"Microsoft Office 2000 Controllo UA di Microsoft Office (OUACTRL.OCX v. 1.0.1.9) \"HelpPopup\" method Remote Buffer Overflow and winhlp32.exe Denial of Service"; content:\"456\"; sid:4034143; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#msie6_href_dos.xml\nalert TCP any any -> any any (msg:"Microsoft Internet Explorer Href Title Denial Of Service Vulnerability"; content:\"456\"; sid:4034144; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#msie7_dos.xml\nalert TCP any any -> any any (msg:"Microsoft Internet Explorer 7 Denial of Service Vulnerability"; content:\"456\"; sid:4034145; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#msie_activex_dos.xml\nalert TCP any any -> any any (msg:"Microsoft Internet Explorer Structured Graphics Control Denial Of Service Vulnerability"; content:\"456\"; sid:4034146; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#msie_frame_src_dos.xml\nalert TCP any any -> any any (msg:"Microsoft Internet Explorer Frame Src Denial Of Service Vulnerability"; content:\"456\"; sid:4034147; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#netsprint_activex_dos.xml\nalert TCP any any -> any any (msg:"NetSprint Toolbar ActiveX Denial of Service Vulnerability"; content:\"456\"; sid:4034148; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#oce_printer_dos.xml\nalert TCP any any -> any any (msg:"OCE 3121/3122 Printer Denial of Service"; content:\"456\"; sid:4034149; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#opera9_dos.xml\nalert TCP any any -> any any (msg:"Opera Malicious HTML Processing Denial of Service Vulnerability"; content:\"456\"; sid:4034150; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#opera9_dos_a.xml\nalert TCP any any -> any any (msg:"Opera Malicious HTML Processing Denial of Service Vulnerability"; content:\"456\"; sid:4034151; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#opera9_dos_b.xml\nalert TCP any any -> any any (msg:"Opera Malicious HTML Processing Denial of Service Vulnerability"; content:\"456\"; sid:4034152; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#opera_bittorrent_dos.xml\nalert TCP any any -> any any (msg:"0pera 9.2 torrent file remote denial of service vulnerability"; content:\"456\"; sid:4034153; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#oracle_web_cache_dos1.xml\nalert TCP any any -> any any (msg:"Oracle Web Cache Denial of Service 1"; content:\"456\"; sid:4034154; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#oracle_web_cache_dos2.xml\nalert TCP any any -> any any (msg:"Oracle Web Cache Denial of Service 2"; content:\"456\"; sid:4034155; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#p990i_web_dos.xml\nalert TCP any any -> any any (msg:"Symbian Mangleme Crash 0x5fb73273"; content:\"456\"; sid:4034156; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#php_iff_dos.xml\nalert TCP any any -> any any (msg:"PHP Malformed IFF Image DOS"; content:\"456\"; sid:4034157; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#postfix_dos.xml\nalert TCP any any -> any any (msg:"Postfix Envelope Denial Of Service"; content:\"456\"; sid:4034158; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#postfix_dos.xml\nalert SMTP any any -> any any (msg:"Postfix Envelope Denial Of Service"; content:\"456\"; sid:4034159; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#powerpointviewer_ocx_dos.xml\nalert TCP any any -> any any (msg:"PowerPoint Viewer OCX 3.2 (ActiveX Control) Denial of Service Exploit"; content:\"456\"; sid:4034160; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#quintessential_pls_dos.xml\nalert TCP any any -> any any (msg:"Quintessential Player <= 4.50.1.82 Playlist Denial Of Service Vulnerability"; content:\"456\"; sid:4034161; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#racoon_dos.xml\nalert ISAKMP_SAPayload any any -> any any (msg:"Racoon Denial Of Service Attack"; content:\"456\"; sid:4034162; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#realplayer_activex_dos.xml\nalert TCP any any -> any any (msg:"RealNetworks RealPlayer ActiveX Control Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034163; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#realplayer_au_dos.xml\nalert TCP any any -> any any (msg:"RealPlayer 11 local/remote Denial Of Service Vulnerability"; content:\"456\"; sid:4034164; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#realplyer_10_dos.xml\nalert TCP any any -> any any (msg:"Real player 10 Gold .Ra file Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034165; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ruby_dos.xml\nalert TCP any any -> any any (msg:"Ruby On Rails Denial Of Service"; content:\"456\"; sid:4034166; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#safari_javascript_dos.xml\nalert TCP any any -> any any (msg:"Apple Safari JavaScript Regular Expression Match Remote Denial of Service Vulnerability
-"; content:\"456\"; sid:4034167; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#sambar_dos.xml\nalert TCP any any -> any any (msg:"Sambar Webserver cgitest.exe Buffer Overflow"; content:\"456\"; sid:4034168; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#shockwave10_activex_dos_a.xml\nalert TCP any any -> any any (msg:"Macromedia Shockwave 10 SWDIR.DLL ActiveX Control Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034169; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#shockwave10_activex_dos_b.xml\nalert TCP any any -> any any (msg:"Macromedia 10.1.4.20 SwDir.dll Internet Explorer Stack Overflow Denial of Service Vulnerability #2"; content:\"456\"; sid:4034170; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#sip_dos.xml\nalert UDP any any -> any any (msg:"SIP Flood"; content:\"456\"; sid:4034171; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#smartcode_vnc_activex_dos.xml\nalert TCP any any -> any any (msg:"SmartCode VNC Manager ActiveX Control Scvncctrl.DLL Denial of Service Vulnerability"; content:\"456\"; sid:4034172; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#snort_sack_dos.xml\nalert TCP any any -> any any (msg:"Snort TCP SACK Option Denial Of Service"; content:\"456\"; sid:4034173; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#snort_tcpop_dos.xml\nalert TCP any any -> any any (msg:"Snort TCP Options Denial of Service"; content:\"456\"; sid:4034174; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#songbird_dos.xml\nalert TCP any any -> any any (msg:"Songbird Media Player <= 0.2 Format String Denial Of Service Vulnerability"; content:\"456\"; sid:4034175; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#sophos_chunkheap_dos.xml\nalert TCP any any -> any any (msg:"Sophos Antivirus CHM File Heap Overflow Vulnerability"; content:\"456\"; sid:4034176; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#sophos_namelen_dos.xml\nalert TCP any any -> any any (msg:"Sophos Antivirus CHM Chunk Name Length Memory Corruption Vulnerability"; content:\"456\"; sid:4034177; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#sophos_rar_dos.xml\nalert TCP any any -> any any (msg:"Sophos Antivirus RAR File Denial of Service Vulnerability"; content:\"456\"; sid:4034178; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#starftp_dos.xml\nalert TCP any any -> any any (msg:"Star FTP Server 1.10 (RETR) Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034179; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#swat_dos.xml\nalert TCP any any -> any any (msg:"Samba SWAT Denial of Service"; content:\"456\"; sid:4034180; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#thomson_sip_st2030_dos.xml\nalert UDP any any -> any any (msg:"Thomson SIP phone ST 2030 Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034181; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#tomcat_dos.xml\nalert TCP any any -> any any (msg:"Apache Tomcat Denial of Service"; content:\"456\"; sid:4034182; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#truenorthDoS.xml\nalert TCP any any -> any any (msg:"True North IAeMailServer DoS"; content:\"456\"; sid:4034183; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#twilightwebserver_dos.xml\nalert TCP any any -> any any (msg:"Twilight Webserver 1.3.3.0 (GET) Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034184; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#upnpdos.xml\nalert TCP any any -> any any (msg:"MS05-047 UMPNPMGR Stack Buffer Overflow Vulnerability"; content:\"456\"; sid:4034185; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ventrilo_dos.xml\nalert UDP any any -> any any (msg:"Ventrilo VoIP Denial of Service"; content:\"456\"; sid:4034186; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#w3filer_dos.xml\nalert TCP any any -> any any (msg:"W3Filer 2.1.3 Banner Handling Remote Buffer Overflow Vulnerability"; content:\"456\"; sid:4034187; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#wget_dos.xml\nalert TCP any any -> any any (msg:"wget <= 1.10.2 (Unchecked Boundary Condition) Denial of Service Vulnerability"; content:\"456\"; sid:4034188; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#winBootpDOS.xml\nalert UDP any any -> any any (msg:"Microsoft Windows BOOTP Denial of Service"; content:\"456\"; sid:4034189; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#winamp_avi_dos.xml\nalert TCP any any -> any any (msg:"Nullsoft Winamp AVI File Processing Denial of Service Vulnerability"; content:\"456\"; sid:4034190; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#winamp_mp4_dos.xml\nalert TCP any any -> any any (msg:"Winamp MP4 File Parsing Buffer Overflow Vulnerability"; content:\"456\"; sid:4034191; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#winamp_pls_dos.xml\nalert TCP any any -> any any (msg:"Nullsoft Winamp PLS File Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034192; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#winamp_wma_dos.xml\nalert TCP any any -> any any (msg:"Nullsoft Winamp Malformed Playlist File WMA Extention Remote Buffer Overflow Vulnerability"; content:\"456\"; sid:4034193; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#winftp_dos.xml\nalert TCP any any -> any any (msg:"WinFtp Server Version 2.0.2 Denial of Service Vulnerability"; content:\"456\"; sid:4034194; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#winproxy_dos.xml\nalert TCP any any -> any any (msg:"Blue Coat Systems WinProxy Remote Denial Of Service Vulnerability"; content:\"456\"; sid:4034195; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#winproxy_telnet_DoS.xml\nalert TCP any any -> any any (msg:"WinProxy Telnet Denial of Service"; content:\"456\"; sid:4034196; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#winzip_activex_dos.xml\nalert TCP any any -> any any (msg:"WinZip ActiveX Control Remote Denial of Service Vulnerability"; content:\"456\"; sid:4034197; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#winzip_wzfileview_dos.xml\nalert TCP any any -> any any (msg:"WinZip <= 10.0.7245 FileView ActiveX Buffer Overflow Vulnerability"; content:\"456\"; sid:4034198; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#wireshark_dnp3_dos.xml\nalert UDP any any -> any any (msg:"Wireshark < 0.99.5 DNP3 Dissector Denial of Service Vulnerability"; content:\"456\"; sid:4034199; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#wmp11_aiff_dos.xml\nalert TCP any any -> any any (msg:"Windows Media Player AIFF Divide By Zero Exception Denial Of Service Vulnerability"; content:\"456\"; sid:4034200; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#wuftpd_globbing_dos.xml\nalert TCP any any -> any any (msg:"WU-FTP File Globbing DOS"; content:\"456\"; sid:4034201; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+"; content:"456"; sid:4034105; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefox_marque_dos.xml
+alert TCP any any -> any any (msg:"Firefox Marquee Denial of Service"; content:"456"; sid:4034106; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#firefox_xml_dos.xml
+alert TCP any any -> any any (msg:"Mozilla Firefox 2.0.0.7 Denial of Service Vulnerability"; content:"456"; sid:4034107; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#foxit_pdf_dos.xml
+alert TCP any any -> any any (msg:"Foxit Reader Malformed PDF File Denial of Service Vulnerability"; content:"456"; sid:4034108; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fprot_ace_dos.xml
+alert TCP any any -> any any (msg:"F-PROT Antivirus ACE Remote Denial Of Service Vulnerability"; content:"456"; sid:4034109; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fprot_chm_dos.xml
+alert TCP any any -> any any (msg:"F-PROT Antivirus CHM File Heap Buffer Overflow Vulnerability."; content:"456"; sid:4034110; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#fw1_dos.xml
+alert TCP any any -> any any (msg:"FW-1 Replay Denial Of Service"; content:"456"; sid:4034111; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#gifDos.xml
+alert TCP any any -> any any (msg:"GIF Denial Of Service"; content:"456"; sid:4034112; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#grandstream_invite_dos.xml
+alert UDP any any -> any any (msg:"Grandstream Budge Tone-200 denial of service vulnerability "; content:"456"; sid:4034113; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#gtchat_dos.xml
+alert TCP any any -> any any (msg:"GTChat Denial Of Service"; content:"456"; sid:4034114; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hp_jetdir_ftpserver_dos.xml
+alert TCP any any -> any any (msg:"HP Jetdirect FTP Print Server RERT Command Denial Of Service Vulnerability"; content:"456"; sid:4034115; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#hp_printservftp_dos.xml
+alert TCP any any -> any any (msg:"Hewlett-Packard FTP Print Server Version 2.4.5 Buffer Overflow Vulnerability"; content:"456"; sid:4034116; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ie6_dos2.xml
+alert TCP any any -> any any (msg:"Internet Explorer 6.0.2900 SP2 Denial of Service Vulnerability"; content:"456"; sid:4034117; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ie6_mshtml_dos.xml
+alert TCP any any -> any any (msg:"Internet Explorer 6 mshtml.dll DoS"; content:"456"; sid:4034118; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ie7_beta_dos_sound.xml
+alert TCP any any -> any any (msg:"Internet Explorer BGSOUND DOS"; content:"456"; sid:4034119; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#internetExplorerFileDOS.xml
+alert TCP any any -> any any (msg:"Internet Explorer File URL Denial of Service"; content:"456"; sid:4034120; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#jabber_dos.xml
+alert TCP any any -> any any (msg:"Jabberd Denial of Service"; content:"456"; sid:4034121; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#jetcast_srvr_dos.xml
+alert TCP any any -> any any (msg:"JetCast Server 2.0.0.4308 Remote Denial of Service Vulnerability"; content:"456"; sid:4034122; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#kde_libkhtml_dos.xml
+alert TCP any any -> any any (msg:"KDE 3.5 | libkhtml <= 4.2.0 / Unhandled HTML Parse Exception"; content:"456"; sid:4034123; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#kerio_dos.xml
+alert UDP any any -> any any (msg:"Kerio Personal Firewall IP Options Denial Of Service"; content:"456"; sid:4034124; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#leadtools_isis_dos.xml
+alert TCP any any -> any any (msg:"LeadTools ISIS Control (ltisi14E.ocx v.14.5.0.44) Remote Denial of Service Vulnerability"; content:"456"; sid:4034125; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#libtiff_dos.xml
+alert TCP any any -> any any (msg:"LibTiff Denial of Service Vulnerability"; content:"456"; sid:4034126; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#linux_natsnmp_dos.xml
+alert UDP any any -> any any (msg:"Linux Kernel SNMP NAT Helper Remote DoS"; content:"456"; sid:4034127; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lotusDOS.xml
+alert TCP any any -> any any (msg:"IBM Lotus Domino Server Web Service Denial Of Service"; content:"456"; sid:4034128; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lotus_domino_dos.xml
+alert SMTP any any -> any any (msg:"Lotus Mail Loop Denial of Service"; content:"456"; sid:4034129; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lotus_domino_dos.xml
+alert TCP any any -> any any (msg:"Lotus Mail Loop Denial of Service"; content:"456"; sid:4034130; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#macosx_vpnd_dos.xml
+alert UDP any any -> any any (msg:"Apple MACOS X 10.5.0 (leopard) vpnd Remote Denial of Service Vulnerability"; content:"456"; sid:4034131; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mailsite_dos.xml
+alert TCP any any -> any any (msg:"Rockliffe MailSite HTTP Management Agent WCONSOLE.DLL Crafted Parameter DoS"; content:"456"; sid:4034132; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mambo_joomla_dos.xml
+alert TCP any any -> any any (msg:"Mambo/Joomla DoS attack and"; content:"456"; sid:4034133; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#miniweb_post_rdos.xml
+alert TCP any any -> any any (msg:"MiniWeb Http POST Remote Denial of Service"; content:"456"; sid:4034134; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#motorola_sb4200_dos.xml
+alert TCP any any -> any any (msg:"Motorola SB4200 Remote Denial of Service Vulnerability"; content:"456"; sid:4034135; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ms-explorer_avi_dos.xml
+alert TCP any any -> any any (msg:"MS Windows Explorer (AVI) Unspecified Denial of Service Vulnerability"; content:"456"; sid:4034136; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ms05-038_oom_dos.xml
+alert TCP any any -> any any (msg:"Internet Explorer JPEG Image Corruption oom_dos"; content:"456"; sid:4034137; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ms06-032-dos.xml
+alert ICMP any any -> any any (msg:"Microsoft Windows TCP/IP Protocol Driver Remote Buffer Overflow Vulnerability (DoS POC)"; content:"456"; sid:4034138; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ms_docfile_dos.xml
+alert TCP any any -> any any (msg:"Microsoft Windows OLE32.DLL Word Document Handling Denial Of Service Vulnerability"; content:"456"; sid:4034139; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ms_explorer_gif_dos.xml
+alert TCP any any -> any any (msg:"MS Windows Explorer.exe Gif Image Denial of Service Vulnerability"; content:"456"; sid:4034140; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ms_mediaplayer_mid_dos.xml
+alert TCP any any -> any any (msg:"Microsoft Windows Media MID File Denial Of Service Vulnerability"; content:"456"; sid:4034141; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ms_mediasx_dos.xml
+alert TCP any any -> any any (msg:"Windows Media ASX PlayList File Denial Of Service Vulnerability"; content:"456"; sid:4034142; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ms_office_help_activex_dos.xml
+alert TCP any any -> any any (msg:"Microsoft Office 2000 Controllo UA di Microsoft Office (OUACTRL.OCX v. 1.0.1.9) \"HelpPopup\" method Remote Buffer Overflow and winhlp32.exe Denial of Service"; content:"456"; sid:4034143; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#msie6_href_dos.xml
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Href Title Denial Of Service Vulnerability"; content:"456"; sid:4034144; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#msie7_dos.xml
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer 7 Denial of Service Vulnerability"; content:"456"; sid:4034145; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#msie_activex_dos.xml
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Structured Graphics Control Denial Of Service Vulnerability"; content:"456"; sid:4034146; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#msie_frame_src_dos.xml
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Frame Src Denial Of Service Vulnerability"; content:"456"; sid:4034147; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#netsprint_activex_dos.xml
+alert TCP any any -> any any (msg:"NetSprint Toolbar ActiveX Denial of Service Vulnerability"; content:"456"; sid:4034148; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#oce_printer_dos.xml
+alert TCP any any -> any any (msg:"OCE 3121/3122 Printer Denial of Service"; content:"456"; sid:4034149; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#opera9_dos.xml
+alert TCP any any -> any any (msg:"Opera Malicious HTML Processing Denial of Service Vulnerability"; content:"456"; sid:4034150; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#opera9_dos_a.xml
+alert TCP any any -> any any (msg:"Opera Malicious HTML Processing Denial of Service Vulnerability"; content:"456"; sid:4034151; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#opera9_dos_b.xml
+alert TCP any any -> any any (msg:"Opera Malicious HTML Processing Denial of Service Vulnerability"; content:"456"; sid:4034152; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#opera_bittorrent_dos.xml
+alert TCP any any -> any any (msg:"0pera 9.2 torrent file remote denial of service vulnerability"; content:"456"; sid:4034153; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#oracle_web_cache_dos1.xml
+alert TCP any any -> any any (msg:"Oracle Web Cache Denial of Service 1"; content:"456"; sid:4034154; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#oracle_web_cache_dos2.xml
+alert TCP any any -> any any (msg:"Oracle Web Cache Denial of Service 2"; content:"456"; sid:4034155; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#p990i_web_dos.xml
+alert TCP any any -> any any (msg:"Symbian Mangleme Crash 0x5fb73273"; content:"456"; sid:4034156; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#php_iff_dos.xml
+alert TCP any any -> any any (msg:"PHP Malformed IFF Image DOS"; content:"456"; sid:4034157; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#postfix_dos.xml
+alert SMTP any any -> any any (msg:"Postfix Envelope Denial Of Service"; content:"456"; sid:4034158; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#postfix_dos.xml
+alert TCP any any -> any any (msg:"Postfix Envelope Denial Of Service"; content:"456"; sid:4034159; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#powerpointviewer_ocx_dos.xml
+alert TCP any any -> any any (msg:"PowerPoint Viewer OCX 3.2 (ActiveX Control) Denial of Service Exploit"; content:"456"; sid:4034160; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#quintessential_pls_dos.xml
+alert TCP any any -> any any (msg:"Quintessential Player <= 4.50.1.82 Playlist Denial Of Service Vulnerability"; content:"456"; sid:4034161; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#racoon_dos.xml
+alert ISAKMP_SAPayload any any -> any any (msg:"Racoon Denial Of Service Attack"; content:"456"; sid:4034162; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#realplayer_activex_dos.xml
+alert TCP any any -> any any (msg:"RealNetworks RealPlayer ActiveX Control Remote Denial of Service Vulnerability"; content:"456"; sid:4034163; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#realplayer_au_dos.xml
+alert TCP any any -> any any (msg:"RealPlayer 11 local/remote Denial Of Service Vulnerability"; content:"456"; sid:4034164; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#realplyer_10_dos.xml
+alert TCP any any -> any any (msg:"Real player 10 Gold .Ra file Remote Denial of Service Vulnerability"; content:"456"; sid:4034165; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ruby_dos.xml
+alert TCP any any -> any any (msg:"Ruby On Rails Denial Of Service"; content:"456"; sid:4034166; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#safari_javascript_dos.xml
+alert TCP any any -> any any (msg:"Apple Safari JavaScript Regular Expression Match Remote Denial of Service Vulnerability
+"; content:"456"; sid:4034167; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sambar_dos.xml
+alert TCP any any -> any any (msg:"Sambar Webserver cgitest.exe Buffer Overflow"; content:"456"; sid:4034168; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#shockwave10_activex_dos_a.xml
+alert TCP any any -> any any (msg:"Macromedia Shockwave 10 SWDIR.DLL ActiveX Control Remote Denial of Service Vulnerability"; content:"456"; sid:4034169; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#shockwave10_activex_dos_b.xml
+alert TCP any any -> any any (msg:"Macromedia 10.1.4.20 SwDir.dll Internet Explorer Stack Overflow Denial of Service Vulnerability #2"; content:"456"; sid:4034170; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sip_dos.xml
+alert UDP any any -> any any (msg:"SIP Flood"; content:"456"; sid:4034171; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#smartcode_vnc_activex_dos.xml
+alert TCP any any -> any any (msg:"SmartCode VNC Manager ActiveX Control Scvncctrl.DLL Denial of Service Vulnerability"; content:"456"; sid:4034172; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#snort_sack_dos.xml
+alert TCP any any -> any any (msg:"Snort TCP SACK Option Denial Of Service"; content:"456"; sid:4034173; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#snort_tcpop_dos.xml
+alert TCP any any -> any any (msg:"Snort TCP Options Denial of Service"; content:"456"; sid:4034174; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#songbird_dos.xml
+alert TCP any any -> any any (msg:"Songbird Media Player <= 0.2 Format String Denial Of Service Vulnerability"; content:"456"; sid:4034175; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sophos_chunkheap_dos.xml
+alert TCP any any -> any any (msg:"Sophos Antivirus CHM File Heap Overflow Vulnerability"; content:"456"; sid:4034176; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sophos_namelen_dos.xml
+alert TCP any any -> any any (msg:"Sophos Antivirus CHM Chunk Name Length Memory Corruption Vulnerability"; content:"456"; sid:4034177; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#sophos_rar_dos.xml
+alert TCP any any -> any any (msg:"Sophos Antivirus RAR File Denial of Service Vulnerability"; content:"456"; sid:4034178; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#starftp_dos.xml
+alert TCP any any -> any any (msg:"Star FTP Server 1.10 (RETR) Remote Denial of Service Vulnerability"; content:"456"; sid:4034179; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#swat_dos.xml
+alert TCP any any -> any any (msg:"Samba SWAT Denial of Service"; content:"456"; sid:4034180; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#thomson_sip_st2030_dos.xml
+alert UDP any any -> any any (msg:"Thomson SIP phone ST 2030 Remote Denial of Service Vulnerability"; content:"456"; sid:4034181; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tomcat_dos.xml
+alert TCP any any -> any any (msg:"Apache Tomcat Denial of Service"; content:"456"; sid:4034182; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#truenorthDoS.xml
+alert TCP any any -> any any (msg:"True North IAeMailServer DoS"; content:"456"; sid:4034183; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#twilightwebserver_dos.xml
+alert TCP any any -> any any (msg:"Twilight Webserver 1.3.3.0 (GET) Remote Denial of Service Vulnerability"; content:"456"; sid:4034184; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#upnpdos.xml
+alert TCP any any -> any any (msg:"MS05-047 UMPNPMGR Stack Buffer Overflow Vulnerability"; content:"456"; sid:4034185; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ventrilo_dos.xml
+alert UDP any any -> any any (msg:"Ventrilo VoIP Denial of Service"; content:"456"; sid:4034186; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#w3filer_dos.xml
+alert TCP any any -> any any (msg:"W3Filer 2.1.3 Banner Handling Remote Buffer Overflow Vulnerability"; content:"456"; sid:4034187; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wget_dos.xml
+alert TCP any any -> any any (msg:"wget <= 1.10.2 (Unchecked Boundary Condition) Denial of Service Vulnerability"; content:"456"; sid:4034188; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winBootpDOS.xml
+alert UDP any any -> any any (msg:"Microsoft Windows BOOTP Denial of Service"; content:"456"; sid:4034189; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winamp_avi_dos.xml
+alert TCP any any -> any any (msg:"Nullsoft Winamp AVI File Processing Denial of Service Vulnerability"; content:"456"; sid:4034190; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winamp_mp4_dos.xml
+alert TCP any any -> any any (msg:"Winamp MP4 File Parsing Buffer Overflow Vulnerability"; content:"456"; sid:4034191; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winamp_pls_dos.xml
+alert TCP any any -> any any (msg:"Nullsoft Winamp PLS File Remote Denial of Service Vulnerability"; content:"456"; sid:4034192; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winamp_wma_dos.xml
+alert TCP any any -> any any (msg:"Nullsoft Winamp Malformed Playlist File WMA Extention Remote Buffer Overflow Vulnerability"; content:"456"; sid:4034193; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winftp_dos.xml
+alert TCP any any -> any any (msg:"WinFtp Server Version 2.0.2 Denial of Service Vulnerability"; content:"456"; sid:4034194; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winproxy_dos.xml
+alert TCP any any -> any any (msg:"Blue Coat Systems WinProxy Remote Denial Of Service Vulnerability"; content:"456"; sid:4034195; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winproxy_telnet_DoS.xml
+alert TCP any any -> any any (msg:"WinProxy Telnet Denial of Service"; content:"456"; sid:4034196; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winzip_activex_dos.xml
+alert TCP any any -> any any (msg:"WinZip ActiveX Control Remote Denial of Service Vulnerability"; content:"456"; sid:4034197; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#winzip_wzfileview_dos.xml
+alert TCP any any -> any any (msg:"WinZip <= 10.0.7245 FileView ActiveX Buffer Overflow Vulnerability"; content:"456"; sid:4034198; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wireshark_dnp3_dos.xml
+alert UDP any any -> any any (msg:"Wireshark < 0.99.5 DNP3 Dissector Denial of Service Vulnerability"; content:"456"; sid:4034199; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wmp11_aiff_dos.xml
+alert TCP any any -> any any (msg:"Windows Media Player AIFF Divide By Zero Exception Denial Of Service Vulnerability"; content:"456"; sid:4034200; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wuftpd_globbing_dos.xml
+alert TCP any any -> any any (msg:"WU-FTP File Globbing DOS"; content:"456"; sid:4034201; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

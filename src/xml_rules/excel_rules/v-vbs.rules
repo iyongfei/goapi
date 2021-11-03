@@ -1,3 +1,434 @@
 #vbs:4057000~4057999
 
-#VBS.Alcaul.B.51f19993.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Alcaul.B"; content:\"456\"; sid:4057000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Alcaul.B.51f19993.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Alcaul.B"; content:\"456\"; sid:4057001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Alicia.A.b99162cb.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Alicia.A"; content:\"456\"; sid:4057002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Alicia.A.b99162cb.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Alicia.A"; content:\"456\"; sid:4057003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Allfree.A.bf006f50.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Allfree.A"; content:\"456\"; sid:4057004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Allfree.A.bf006f50.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Allfree.A"; content:\"456\"; sid:4057005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Angela.1d4cff52.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Angela"; content:\"456\"; sid:4057006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Angela.1d4cff52.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Angela"; content:\"456\"; sid:4057007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.BWG.C.3d3b062a.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.BWG.C"; content:\"456\"; sid:4057008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.BWG.C.3d3b062a.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.BWG.C"; content:\"456\"; sid:4057009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.BWG.C.88b8c658.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.BWG.C"; content:\"456\"; sid:4057010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.BWG.C.88b8c658.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.BWG.C"; content:\"456\"; sid:4057011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Bior.A.f1aceb88.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Bior.A"; content:\"456\"; sid:4057012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Bior.A.f1aceb88.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Bior.A"; content:\"456\"; sid:4057013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Elva.1.3015e4c6.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Elva.1"; content:\"456\"; sid:4057014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Elva.1.3015e4c6.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Elva.1"; content:\"456\"; sid:4057015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Entice.A.a3f1c644.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Entice.A"; content:\"456\"; sid:4057016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Entice.A.a3f1c644.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Entice.A"; content:\"456\"; sid:4057017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Entice.B.0874bd1e.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Entice.B"; content:\"456\"; sid:4057018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Entice.B.0874bd1e.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Entice.B"; content:\"456\"; sid:4057019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Entice.B.4dbb3847.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Entice.B"; content:\"456\"; sid:4057020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Entice.B.4dbb3847.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Entice.B"; content:\"456\"; sid:4057021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Fireburn.54a600a6.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Fireburn"; content:\"456\"; sid:4057022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Fireburn.54a600a6.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Fireburn"; content:\"456\"; sid:4057023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.HomePage.1.443c5c4c.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.HomePage.1"; content:\"456\"; sid:4057024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.HomePage.1.443c5c4c.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.HomePage.1"; content:\"456\"; sid:4057025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Kitro.D.77422aef.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Kitro.D"; content:\"456\"; sid:4057026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Kitro.D.77422aef.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Kitro.D"; content:\"456\"; sid:4057027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Lamerone.f23505a1.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Lamerone"; content:\"456\"; sid:4057028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Lamerone.f23505a1.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Lamerone"; content:\"456\"; sid:4057029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LifeStages.B.b596bedf.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LifeStages.B"; content:\"456\"; sid:4057030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LifeStages.B.b596bedf.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LifeStages.B"; content:\"456\"; sid:4057031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.03.f3680ee3.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.03"; content:\"456\"; sid:4057032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.03.f3680ee3.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.03"; content:\"456\"; sid:4057033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.A.35bcabb6.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.A"; content:\"456\"; sid:4057034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.A.35bcabb6.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.A"; content:\"456\"; sid:4057035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.A.84e4510a.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.A"; content:\"456\"; sid:4057036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.A.84e4510a.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.A"; content:\"456\"; sid:4057037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.24c49b83.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.24c49b83.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.35af9e51.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.35af9e51.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.42fea410.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.42fea410.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.60e9a086.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.60e9a086.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.6f1214c6.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.6f1214c6.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.7ce5c690.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.7ce5c690.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.9eb1cfeb.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.9eb1cfeb.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.a4bdb731.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.a4bdb731.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.af1b0251.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.af1b0251.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.e420cc7e.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.LoveLetter.D.e420cc7e.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:\"456\"; sid:4057057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Lubus.A.255d745f.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Lubus.A"; content:\"456\"; sid:4057058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Lubus.A.255d745f.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Lubus.A"; content:\"456\"; sid:4057059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.MailTest.20b49737.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.MailTest"; content:\"456\"; sid:4057060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.MailTest.20b49737.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.MailTest"; content:\"456\"; sid:4057061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Mesut.6955341a.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Mesut"; content:\"456\"; sid:4057062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Mesut.6955341a.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Mesut"; content:\"456\"; sid:4057063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Newlove.D.d2b8ea4a.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Newlove.D"; content:\"456\"; sid:4057064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Newlove.D.d2b8ea4a.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Newlove.D"; content:\"456\"; sid:4057065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Nobelman.A.967d561b.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Nobelman.A"; content:\"456\"; sid:4057066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Nobelman.A.967d561b.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Nobelman.A"; content:\"456\"; sid:4057067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Platnico.2348cd41.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Platnico"; content:\"456\"; sid:4057068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Platnico.2348cd41.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Platnico"; content:\"456\"; sid:4057069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Platnico.955ab5ea.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Platnico"; content:\"456\"; sid:4057070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Platnico.955ab5ea.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Platnico"; content:\"456\"; sid:4057071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Qoma.A.9a5f3b48.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Qoma.A"; content:\"456\"; sid:4057072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Qoma.A.9a5f3b48.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Qoma.A"; content:\"456\"; sid:4057073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Rsp.08035791.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Rsp"; content:\"456\"; sid:4057074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Rsp.08035791.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Rsp"; content:\"456\"; sid:4057075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.2b4261bc.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.2b4261bc.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.2cc4a4ac.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057078; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.2cc4a4ac.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057079; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.31b83200.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057080; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.31b83200.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057081; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.36f80256.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057082; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.36f80256.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057083; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.3fb67d40.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057084; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.3fb67d40.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057085; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.409066b0.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057086; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.409066b0.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057087; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.419a92b5.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057088; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.419a92b5.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057089; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.41aa7997.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057090; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.41aa7997.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057091; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.4c136071.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057092; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.4c136071.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057093; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.4d878250.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057094; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.4d878250.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057095; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.53f2d7d4.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057096; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.53f2d7d4.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057097; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.62154693.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057098; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.62154693.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057099; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.8eb3cf7b.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057100; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.8eb3cf7b.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057101; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.90ad24cc.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057102; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.90ad24cc.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057103; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.924e0f24.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057104; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.924e0f24.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057105; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.92921e24.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057106; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.92921e24.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057107; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.948173af.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057108; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.948173af.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057109; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.97a21219.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057110; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.97a21219.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057111; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.a2769d93.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057112; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.a2769d93.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057113; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.ad24c8f4.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057114; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.ad24c8f4.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057115; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.cebfbe93.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057116; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.cebfbe93.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057117; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.d0a1a23f.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057118; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.d0a1a23f.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057119; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.e4963d61.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057120; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.e4963d61.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057121; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.ef314983.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057122; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SSIWG.ef314983.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:\"456\"; sid:4057123; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SST-A.3.03842f6c.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SST-A.3"; content:\"456\"; sid:4057124; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SST-A.3.03842f6c.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SST-A.3"; content:\"456\"; sid:4057125; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SST-A.3.cf8a94e9.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SST-A.3"; content:\"456\"; sid:4057126; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SST-A.3.cf8a94e9.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SST-A.3"; content:\"456\"; sid:4057127; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SWMF.A.42ac9c0a.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.SWMF.A"; content:\"456\"; sid:4057128; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.SWMF.A.42ac9c0a.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.SWMF.A"; content:\"456\"; sid:4057129; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Saje.f40f5149.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Saje"; content:\"456\"; sid:4057130; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Saje.f40f5149.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Saje"; content:\"456\"; sid:4057131; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.San.A.2e69f2fa.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.San.A"; content:\"456\"; sid:4057132; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.San.A.2e69f2fa.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.San.A"; content:\"456\"; sid:4057133; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.VBSWG.Gen.385962f3.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.VBSWG.Gen"; content:\"456\"; sid:4057134; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.VBSWG.Gen.385962f3.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.VBSWG.Gen"; content:\"456\"; sid:4057135; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.VBSWG2.X.41cc548e.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.VBSWG2.X"; content:\"456\"; sid:4057136; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.VBSWG2.X.41cc548e.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.VBSWG2.X"; content:\"456\"; sid:4057137; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Vabian.A.fc1fb498.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Vabian.A"; content:\"456\"; sid:4057138; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Vabian.A.fc1fb498.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Vabian.A"; content:\"456\"; sid:4057139; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Yozis.B.4716d37a.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Yozis.B"; content:\"456\"; sid:4057140; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Yozis.B.4716d37a.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Yozis.B"; content:\"456\"; sid:4057141; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Yozis.B.5f1e5f07.xml\nalert SMTP any any -> any any (msg:"Email Virus VBS.Yozis.B"; content:\"456\"; sid:4057142; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#VBS.Yozis.B.5f1e5f07.xml\nalert TCP any any -> any any (msg:"Email Virus VBS.Yozis.B"; content:\"456\"; sid:4057143; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#VBS.Alcaul.B.51f19993.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Alcaul.B"; content:"456"; sid:4057000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Alcaul.B.51f19993.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Alcaul.B"; content:"456"; sid:4057001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Alicia.A.b99162cb.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Alicia.A"; content:"456"; sid:4057002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Alicia.A.b99162cb.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Alicia.A"; content:"456"; sid:4057003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Allfree.A.bf006f50.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Allfree.A"; content:"456"; sid:4057004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Allfree.A.bf006f50.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Allfree.A"; content:"456"; sid:4057005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Angela.1d4cff52.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Angela"; content:"456"; sid:4057006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Angela.1d4cff52.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Angela"; content:"456"; sid:4057007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.BWG.C.3d3b062a.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.BWG.C"; content:"456"; sid:4057008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.BWG.C.3d3b062a.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.BWG.C"; content:"456"; sid:4057009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.BWG.C.88b8c658.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.BWG.C"; content:"456"; sid:4057010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.BWG.C.88b8c658.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.BWG.C"; content:"456"; sid:4057011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Bior.A.f1aceb88.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Bior.A"; content:"456"; sid:4057012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Bior.A.f1aceb88.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Bior.A"; content:"456"; sid:4057013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Elva.1.3015e4c6.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Elva.1"; content:"456"; sid:4057014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Elva.1.3015e4c6.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Elva.1"; content:"456"; sid:4057015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Entice.A.a3f1c644.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Entice.A"; content:"456"; sid:4057016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Entice.A.a3f1c644.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Entice.A"; content:"456"; sid:4057017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Entice.B.0874bd1e.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Entice.B"; content:"456"; sid:4057018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Entice.B.0874bd1e.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Entice.B"; content:"456"; sid:4057019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Entice.B.4dbb3847.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Entice.B"; content:"456"; sid:4057020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Entice.B.4dbb3847.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Entice.B"; content:"456"; sid:4057021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Fireburn.54a600a6.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Fireburn"; content:"456"; sid:4057022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Fireburn.54a600a6.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Fireburn"; content:"456"; sid:4057023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.HomePage.1.443c5c4c.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.HomePage.1"; content:"456"; sid:4057024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.HomePage.1.443c5c4c.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.HomePage.1"; content:"456"; sid:4057025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Kitro.D.77422aef.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Kitro.D"; content:"456"; sid:4057026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Kitro.D.77422aef.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Kitro.D"; content:"456"; sid:4057027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Lamerone.f23505a1.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Lamerone"; content:"456"; sid:4057028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Lamerone.f23505a1.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Lamerone"; content:"456"; sid:4057029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LifeStages.B.b596bedf.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LifeStages.B"; content:"456"; sid:4057030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LifeStages.B.b596bedf.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LifeStages.B"; content:"456"; sid:4057031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.03.f3680ee3.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.03"; content:"456"; sid:4057032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.03.f3680ee3.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.03"; content:"456"; sid:4057033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.A.35bcabb6.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.A"; content:"456"; sid:4057034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.A.35bcabb6.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.A"; content:"456"; sid:4057035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.A.84e4510a.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.A"; content:"456"; sid:4057036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.A.84e4510a.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.A"; content:"456"; sid:4057037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.24c49b83.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.24c49b83.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.35af9e51.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.35af9e51.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.42fea410.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.42fea410.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.60e9a086.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.60e9a086.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.6f1214c6.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.6f1214c6.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.7ce5c690.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.7ce5c690.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.9eb1cfeb.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.9eb1cfeb.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.a4bdb731.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.a4bdb731.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.af1b0251.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.af1b0251.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.e420cc7e.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.LoveLetter.D.e420cc7e.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.LoveLetter.D"; content:"456"; sid:4057057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Lubus.A.255d745f.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Lubus.A"; content:"456"; sid:4057058; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Lubus.A.255d745f.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Lubus.A"; content:"456"; sid:4057059; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.MailTest.20b49737.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.MailTest"; content:"456"; sid:4057060; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.MailTest.20b49737.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.MailTest"; content:"456"; sid:4057061; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Mesut.6955341a.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Mesut"; content:"456"; sid:4057062; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Mesut.6955341a.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Mesut"; content:"456"; sid:4057063; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Newlove.D.d2b8ea4a.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Newlove.D"; content:"456"; sid:4057064; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Newlove.D.d2b8ea4a.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Newlove.D"; content:"456"; sid:4057065; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Nobelman.A.967d561b.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Nobelman.A"; content:"456"; sid:4057066; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Nobelman.A.967d561b.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Nobelman.A"; content:"456"; sid:4057067; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Platnico.2348cd41.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Platnico"; content:"456"; sid:4057068; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Platnico.2348cd41.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Platnico"; content:"456"; sid:4057069; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Platnico.955ab5ea.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Platnico"; content:"456"; sid:4057070; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Platnico.955ab5ea.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Platnico"; content:"456"; sid:4057071; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Qoma.A.9a5f3b48.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Qoma.A"; content:"456"; sid:4057072; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Qoma.A.9a5f3b48.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Qoma.A"; content:"456"; sid:4057073; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Rsp.08035791.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Rsp"; content:"456"; sid:4057074; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Rsp.08035791.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Rsp"; content:"456"; sid:4057075; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.2b4261bc.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057076; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.2b4261bc.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057077; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.2cc4a4ac.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057078; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.2cc4a4ac.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057079; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.31b83200.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057080; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.31b83200.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057081; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.36f80256.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057082; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.36f80256.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057083; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.3fb67d40.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057084; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.3fb67d40.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057085; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.409066b0.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057086; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.409066b0.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057087; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.419a92b5.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057088; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.419a92b5.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057089; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.41aa7997.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057090; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.41aa7997.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057091; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.4c136071.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057092; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.4c136071.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057093; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.4d878250.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057094; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.4d878250.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057095; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.53f2d7d4.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057096; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.53f2d7d4.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057097; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.62154693.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057098; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.62154693.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057099; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.8eb3cf7b.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057100; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.8eb3cf7b.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057101; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.90ad24cc.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057102; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.90ad24cc.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057103; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.924e0f24.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057104; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.924e0f24.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057105; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.92921e24.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057106; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.92921e24.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057107; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.948173af.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057108; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.948173af.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057109; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.97a21219.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057110; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.97a21219.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057111; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.a2769d93.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057112; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.a2769d93.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057113; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.ad24c8f4.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057114; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.ad24c8f4.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057115; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.cebfbe93.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057116; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.cebfbe93.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057117; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.d0a1a23f.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057118; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.d0a1a23f.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057119; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.e4963d61.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057120; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.e4963d61.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057121; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.ef314983.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057122; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SSIWG.ef314983.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SSIWG"; content:"456"; sid:4057123; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SST-A.3.03842f6c.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SST-A.3"; content:"456"; sid:4057124; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SST-A.3.03842f6c.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SST-A.3"; content:"456"; sid:4057125; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SST-A.3.cf8a94e9.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SST-A.3"; content:"456"; sid:4057126; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SST-A.3.cf8a94e9.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SST-A.3"; content:"456"; sid:4057127; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SWMF.A.42ac9c0a.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.SWMF.A"; content:"456"; sid:4057128; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.SWMF.A.42ac9c0a.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.SWMF.A"; content:"456"; sid:4057129; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Saje.f40f5149.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Saje"; content:"456"; sid:4057130; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Saje.f40f5149.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Saje"; content:"456"; sid:4057131; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.San.A.2e69f2fa.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.San.A"; content:"456"; sid:4057132; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.San.A.2e69f2fa.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.San.A"; content:"456"; sid:4057133; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.VBSWG.Gen.385962f3.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.VBSWG.Gen"; content:"456"; sid:4057134; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.VBSWG.Gen.385962f3.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.VBSWG.Gen"; content:"456"; sid:4057135; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.VBSWG2.X.41cc548e.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.VBSWG2.X"; content:"456"; sid:4057136; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.VBSWG2.X.41cc548e.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.VBSWG2.X"; content:"456"; sid:4057137; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Vabian.A.fc1fb498.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Vabian.A"; content:"456"; sid:4057138; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Vabian.A.fc1fb498.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Vabian.A"; content:"456"; sid:4057139; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Yozis.B.4716d37a.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Yozis.B"; content:"456"; sid:4057140; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Yozis.B.4716d37a.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Yozis.B"; content:"456"; sid:4057141; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Yozis.B.5f1e5f07.xml
+alert SMTP any any -> any any (msg:"Email Virus VBS.Yozis.B"; content:"456"; sid:4057142; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#VBS.Yozis.B.5f1e5f07.xml
+alert TCP any any -> any any (msg:"Email Virus VBS.Yozis.B"; content:"456"; sid:4057143; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

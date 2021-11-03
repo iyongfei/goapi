@@ -121,21 +121,10 @@ var HexMap = map[string]string{
 //”   ;   :   \
 func main() {
 
-	ret:= `Bay " Tech; Au:thentic\ation Bypass`
+	ret:= "thenticssstion\nwerw"
 	fmt.Println(ret)
 
-	s4 := strings.Replace(ret,`\`,`\\`,-1)
-	fmt.Println(s4)
 
-	s1 := strings.Replace(s4,`"`,`\"`,-1)
-	fmt.Println(s1)
-
-
-	s2 := strings.Replace(s1,`;`,`\;`,-1)
-	fmt.Println(s2)
-
-	s3 := strings.Replace(s2,`:`,`\:`,-1)
-	fmt.Println(s3)
 
 
 

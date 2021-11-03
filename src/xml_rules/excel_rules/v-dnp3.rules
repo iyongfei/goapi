@@ -1,3 +1,5 @@
 #dnp3:4017000~4017999
 
-#wireshark_dnp3_dos.xml\nalert UDP any any -> any any (msg:"Wireshark < 0.99.5 DNP3 Dissector Denial of Service Vulnerability"; content:\"456\"; sid:4017000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#wireshark_dnp3_dos.xml
+alert UDP any any -> any any (msg:"Wireshark < 0.99.5 DNP3 Dissector Denial of Service Vulnerability"; content:"456"; sid:4017000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

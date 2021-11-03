@@ -1,3 +1,176 @@
 #web:4058000~4058999
 
-#4dwebstar.xml\nalert TCP any any -> any any (msg:"4DWebSTAR Buffer Overflow"; content:\"456\"; sid:4058000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20060613-22_Microsoft_Exchange_Server_Outlook_Web_Access_Script_Injection.xml\nalert TCP any any -> any any (msg:"Microsoft Exchange Server Outlook Web Access Script Injection"; content:\"456\"; sid:4058001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080212-10_Microsoft_Windows_WebDAV_Mini.xml\nalert TCP any any -> any any (msg:"Microsoft Windows WebDAV Mini-Redirector Heap Buffer Overflow"; content:\"456\"; sid:4058002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080311-17_Microsoft_Office_Web_Components_DataSource_Code_Execution.xml\nalert TCP any any -> any any (msg:"Microsoft Office Web Components DataSource Code Execution"; content:\"456\"; sid:4058003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090331-08_IBM_WebSphere_Application_Server_Cross_Site_Scripting.xml\nalert TCP any any -> any any (msg:"IBM WebSphere Application Server Cross Site Scripting"; content:\"456\"; sid:4058004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090713-01_Microsoft_Office_Web_Components_Arbitrary_Code_Execution.xml\nalert TCP any any -> any any (msg:"Microsoft Office Web Components Arbitrary Code Execution"; content:\"456\"; sid:4058005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090811-15_Microsoft_Office_Web_Components_Remote_Code_Execution.xml\nalert TCP any any -> any any (msg:"Microsoft Office Web Components Remote Code Execution"; content:\"456\"; sid:4058006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090811-18_Microsoft_Office_Web_Components_Heap_Corruption.xml\nalert TCP any any -> any any (msg:"Microsoft Office Web Components Heap Corruption"; content:\"456\"; sid:4058007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20091210-01_Symantec_Multiple_Products_VRTSweb_Code_Execution.xml\nalert TCP any any -> any any (msg:"Symantec Multiple Products VRTSweb Code Execution"; content:\"456\"; sid:4058008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20100615-12_Apple_Safari_Webkit_Option_Element_ContentEditable_Code_Execution.xml\nalert TCP any any -> any any (msg:"Apple Safari Webkit Option Element ContentEditable Code Execution"; content:\"456\"; sid:4058009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20100615-13_Apple_Safari_Webkit_Attribute_Child_Removal_Code_Execution.xml\nalert TCP any any -> any any (msg:"Apple Safari Webkit Attribute Child Removal Code Execution"; content:\"456\"; sid:4058010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20100811-05_Apple_Safari_Webkit_Button_First-Letter_Style_Rendering_Code_Execution.xml\nalert TCP any any -> any any (msg:"Apple Safari Webkit Button First-Letter Style Rendering Code Execution"; content:\"456\"; sid:4058011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20100908-06_Apple_Safari_Webkit_Floating_Point_Data_Type_Code_Execution.xml\nalert TCP any any -> any any (msg:"Apple Safari Webkit Floating Point Data Type Code Execution"; content:\"456\"; sid:4058012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20100908-07_Apple_Safari_Webkit_Use-After-Free_Code_Execution.xml\nalert TCP any any -> any any (msg:"Apple Safari Webkit Use-After-Free Code Execution"; content:\"456\"; sid:4058013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20100913-04_Apple_Safari_and_Google_Chrome_Webkit_Object_Outline_Memory_Corruption.xml\nalert TCP any any -> any any (msg:"Apple Safari and Google Chrome Webkit Object Outline Memory Corruption"; content:\"456\"; sid:4058014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20101123-06_Apple_Safari_WebKit_Selections_Use_After_Free.xml\nalert TCP any any -> any any (msg:"Apple Safari WebKit Selections Use After Free"; content:\"456\"; sid:4058015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20101124-06_Apple_Safari_WebKit_Stale_Pointer_Use-after-free_Code_Execution.xml\nalert TCP any any -> any any (msg:"Apple Safari WebKit Stale Pointer Use-after-free Code Execution"; content:\"456\"; sid:4058016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20101203-04_Apple_Safari_WebKit_Menu_Onchange_Memory_Corruption.xml\nalert TCP any any -> any any (msg:"Apple Safari WebKit Menu Onchange Memory Corruption"; content:\"456\"; sid:4058017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20110310-06_Apple_Safari_WebKit_Range_Object_Remote_Code_Execution.xml\nalert TCP any any -> any any (msg:"Apple Safari WebKit Range Object Remote Code Execution"; content:\"456\"; sid:4058018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#IMail_web.xml\nalert TCP any any -> any any (msg:"IMail Web Service Buffer Overflow"; content:\"456\"; sid:4058019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20110721-15_Apple_Safari_WebKit_SVG_Markers_Use-After-Free_Memory_Corruption.xml\nalert TCP any any -> any any (msg:"Apple Safari WebKit SVG Markers Use-After-Free Memory Corruption"; content:\"456\"; sid:4058020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20110722-04_Apple_Safari_WebKit_innerHTML_Double_Free_Memory_Corruption.xml\nalert TCP any any -> any any (msg:"Apple Safari WebKit innerHTML Double Free Memory Corruption"; content:\"456\"; sid:4058021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20110727-05_Apple_Safari_WebKit_SVG_Memory_Corruption.xml\nalert TCP any any -> any any (msg:"Apple Safari WebKit SVG Memory Corruption"; content:\"456\"; sid:4058022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20111021-02_Apple_Safari_Webkit_libxslt_Arbitrary_File_Creation.xml\nalert TCP any any -> any any (msg:"Apple Safari Webkit libxslt Arbitrary File Creation"; content:\"456\"; sid:4058023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20111031-03_Apple_Safari_WebKit_Form_Elements_Pure_Virtual_Function_Call.xml\nalert TCP any any -> any any (msg:"Apple Safari WebKit Form Elements Pure Virtual Function Call"; content:\"456\"; sid:4058024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20111116-07_InduSoft_Web_Studio_Unauthenticated_Insecure_Remote_Operations.xml\nalert TCP any any -> any any (msg:"InduSoft Web Studio Unauthenticated Insecure Remote Operations"; content:\"456\"; sid:4058025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20111205-06_Cisco_WebEx_Player_ATAS32_DLL_Remote_Code_Execution.xml\nalert TCP any any -> any any (msg:"Cisco WebEx Player ATAS32.DLL Remote Code Execution"; content:\"456\"; sid:4058026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20120802-01_Apple_Safari_WebKit_Button_Column_Blocks_Memory_Corruption.xml\nalert TCP any any -> any any (msg:"Apple Safari WebKit Button Column Blocks Memory Corruption"; content:\"456\"; sid:4058027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20121005-01_Apple_Safari_WebKit_CSS_Title_Memory_Corruption.xml\nalert TCP any any -> any any (msg:"Apple Safari WebKit CSS Title Memory Corruption"; content:\"456\"; sid:4058028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20121010-01_Cisco_WebEx_Recording_Format_Player_atas32_dll_Memory_Corruption.xml\nalert TCP any any -> any any (msg:"Cisco WebEx Recording Format Player atas32.dll Memory Corruption"; content:\"456\"; sid:4058029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20140411-10_Advantech_WebAccess_SCADA_bwocxrun_ocx_Command_Execution.xml\nalert TCP any any -> any any (msg:"Advantech WebAccess SCADA bwocxrun.ocx Command Execution"; content:\"456\"; sid:4058030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20140421-09_CA_ERwin_Web_Portal_ProfileIconServlet_Information_Disclosure.xml\nalert TCP any any -> any any (msg:"CA ERwin Web Portal ProfileIconServlet Information Disclosure"; content:\"456\"; sid:4058031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20140421-11_CA_ERwin_Web_Portal_ConfigServiceProvider_Information_Disclosure.xml\nalert TCP any any -> any any (msg:"CA ERwin Web Portal ConfigServiceProvider Information Disclosure"; content:\"456\"; sid:4058032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20140502-07_InduSoft_Web_Studio_Directory_Traversal.xml\nalert TCP any any -> any any (msg:"InduSoft Web Studio Directory Traversal"; content:\"456\"; sid:4058033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20140520-08_Cogent_DataHub_Web_Server_GetPermissions.asp_Command_Injection.xml\nalert TCP any any -> any any (msg:"Cogent DataHub Web Server GetPermissions.asp Command Injection"; content:\"456\"; sid:4058034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20141014-15_Microsoft_Office_Word_and_Web_Apps_Memory_Corruption.xml\nalert TCP any any -> any any (msg:"Microsoft Office Word and Web Apps Memory Corruption"; content:\"456\"; sid:4058035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#WebDAV_rs.xml\nalert TCP any any -> any any (msg:"WebDAV IIS Exploit"; content:\"456\"; sid:4058036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#eva-web_rfi.xml\nalert TCP any any -> any any (msg:"EVA-Web 1.1<= 2.2 (index.php3) Remote File Inclusion Vulnerability"; content:\"456\"; sid:4058037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#ie_webviewfolder_bof.xml\nalert TCP any any -> any any (msg:"Microsoft Internet Explorer WebViewFolderIcon Buffer Overflow Vulnerability"; content:\"456\"; sid:4058038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#javaWebServer.xml\nalert TCP any any -> any any (msg:"Java Web Server Remote Command Execution"; content:\"456\"; sid:4058039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#lightspeedweb_disclosure.xml\nalert TCP any any -> any any (msg:"LiteSpeed Web Server <= 3.2.3 Remote Source Code Disclosure Vulnerability"; content:\"456\"; sid:4058040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#man2web_cmd_1.xml\nalert TCP any any -> any any (msg:"man2web Remote Command Execution"; content:\"456\"; sid:4058041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#man2web_cmd_2.xml\nalert TCP any any -> any any (msg:"man2web Remote Command Execution 2"; content:\"456\"; sid:4058042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#mdweb_rfi.xml\nalert TCP any any -> any any (msg:"Mdweb132-postgres\: Remote File Inclusion Vulnerability"; content:\"456\"; sid:4058043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#omniweb_fmt.xml\nalert TCP any any -> any any (msg:"OmniWeb Javascript alert() Format String Vulnerability"; content:\"456\"; sid:4058044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#omniweb_format.xml\nalert TCP any any -> any any (msg:"Omniweb Format String Vulnerability"; content:\"456\"; sid:4058045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#rsa_webagent.xml\nalert TCP any any -> any any (msg:"RSA WebAgent Heap Overflow"; content:\"456\"; sid:4058046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#savewebportal_rfi.xml\nalert TCP any any -> any any (msg:"SaveWeb Portal SITE_Path Parameter Remote File Include Vulnerability"; content:\"456\"; sid:4058047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#tomcat_webdav_file_disclosure.xml\nalert TCP any any -> any any (msg:"Apache Tomcat (webdav) Remote File Disclosure Vulnerability"; content:\"456\"; sid:4058048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#web-inf.xml\nalert TCP any any -> any any (msg:"WEB-INF Directory Contents Listing"; content:\"456\"; sid:4058049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#web-news_rfi.xml\nalert TCP any any -> any any (msg:"Web-News Template.PHP Remote File Include Vulnerability"; content:\"456\"; sid:4058050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#web-provence_rfi.xml\nalert TCP any any -> any any (msg:"Web-Provence SL_Site Spaw_control.class.PHP Remote File Include Vulnerability"; content:\"456\"; sid:4058051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#web_oddity_dir_x-versal.xml\nalert TCP any any -> any any (msg:"Web Oddity Web Server 0.09b Directory Transversal Vulnerability"; content:\"456\"; sid:4058052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#webadmin.xml\nalert TCP any any -> any any (msg:"WebAdmin Buffer Overflow Attempt"; content:\"456\"; sid:4058053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#webnews_cookie_inject.xml\nalert TCP any any -> any any (msg:"Stylemotion WEB//NEWS SQL Injection"; content:\"456\"; sid:4058054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#webslider_rfi.xml\nalert TCP any any -> any any (msg:"Web Slider 0.6(path)Remote File Inclusion Vulnerability"; content:\"456\"; sid:4058055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#webspell_db-dwnload.xml\nalert TCP any any -> any any (msg:"WebSPELL Database.PHP Authentication Bypass Vulnerability"; content:\"456\"; sid:4058056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#xitami_web_server_bof.xml\nalert TCP any any -> any any (msg:"Xitami Web Server 2.5 (If-Modified-Since) 0day Remote Buffer Overflow Vulnerability"; content:\"456\"; sid:4058057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#4dwebstar.xml
+alert TCP any any -> any any (msg:"4DWebSTAR Buffer Overflow"; content:"456"; sid:4058000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060613-22_Microsoft_Exchange_Server_Outlook_Web_Access_Script_Injection.xml
+alert TCP any any -> any any (msg:"Microsoft Exchange Server Outlook Web Access Script Injection"; content:"456"; sid:4058001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080212-10_Microsoft_Windows_WebDAV_Mini.xml
+alert TCP any any -> any any (msg:"Microsoft Windows WebDAV Mini-Redirector Heap Buffer Overflow"; content:"456"; sid:4058002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080311-17_Microsoft_Office_Web_Components_DataSource_Code_Execution.xml
+alert TCP any any -> any any (msg:"Microsoft Office Web Components DataSource Code Execution"; content:"456"; sid:4058003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090331-08_IBM_WebSphere_Application_Server_Cross_Site_Scripting.xml
+alert TCP any any -> any any (msg:"IBM WebSphere Application Server Cross Site Scripting"; content:"456"; sid:4058004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090713-01_Microsoft_Office_Web_Components_Arbitrary_Code_Execution.xml
+alert TCP any any -> any any (msg:"Microsoft Office Web Components Arbitrary Code Execution"; content:"456"; sid:4058005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090811-15_Microsoft_Office_Web_Components_Remote_Code_Execution.xml
+alert TCP any any -> any any (msg:"Microsoft Office Web Components Remote Code Execution"; content:"456"; sid:4058006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090811-18_Microsoft_Office_Web_Components_Heap_Corruption.xml
+alert TCP any any -> any any (msg:"Microsoft Office Web Components Heap Corruption"; content:"456"; sid:4058007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091210-01_Symantec_Multiple_Products_VRTSweb_Code_Execution.xml
+alert TCP any any -> any any (msg:"Symantec Multiple Products VRTSweb Code Execution"; content:"456"; sid:4058008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100615-12_Apple_Safari_Webkit_Option_Element_ContentEditable_Code_Execution.xml
+alert TCP any any -> any any (msg:"Apple Safari Webkit Option Element ContentEditable Code Execution"; content:"456"; sid:4058009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100615-13_Apple_Safari_Webkit_Attribute_Child_Removal_Code_Execution.xml
+alert TCP any any -> any any (msg:"Apple Safari Webkit Attribute Child Removal Code Execution"; content:"456"; sid:4058010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100811-05_Apple_Safari_Webkit_Button_First-Letter_Style_Rendering_Code_Execution.xml
+alert TCP any any -> any any (msg:"Apple Safari Webkit Button First-Letter Style Rendering Code Execution"; content:"456"; sid:4058011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100908-06_Apple_Safari_Webkit_Floating_Point_Data_Type_Code_Execution.xml
+alert TCP any any -> any any (msg:"Apple Safari Webkit Floating Point Data Type Code Execution"; content:"456"; sid:4058012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100908-07_Apple_Safari_Webkit_Use-After-Free_Code_Execution.xml
+alert TCP any any -> any any (msg:"Apple Safari Webkit Use-After-Free Code Execution"; content:"456"; sid:4058013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100913-04_Apple_Safari_and_Google_Chrome_Webkit_Object_Outline_Memory_Corruption.xml
+alert TCP any any -> any any (msg:"Apple Safari and Google Chrome Webkit Object Outline Memory Corruption"; content:"456"; sid:4058014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20101123-06_Apple_Safari_WebKit_Selections_Use_After_Free.xml
+alert TCP any any -> any any (msg:"Apple Safari WebKit Selections Use After Free"; content:"456"; sid:4058015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20101124-06_Apple_Safari_WebKit_Stale_Pointer_Use-after-free_Code_Execution.xml
+alert TCP any any -> any any (msg:"Apple Safari WebKit Stale Pointer Use-after-free Code Execution"; content:"456"; sid:4058016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20101203-04_Apple_Safari_WebKit_Menu_Onchange_Memory_Corruption.xml
+alert TCP any any -> any any (msg:"Apple Safari WebKit Menu Onchange Memory Corruption"; content:"456"; sid:4058017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20110310-06_Apple_Safari_WebKit_Range_Object_Remote_Code_Execution.xml
+alert TCP any any -> any any (msg:"Apple Safari WebKit Range Object Remote Code Execution"; content:"456"; sid:4058018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#IMail_web.xml
+alert TCP any any -> any any (msg:"IMail Web Service Buffer Overflow"; content:"456"; sid:4058019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20110721-15_Apple_Safari_WebKit_SVG_Markers_Use-After-Free_Memory_Corruption.xml
+alert TCP any any -> any any (msg:"Apple Safari WebKit SVG Markers Use-After-Free Memory Corruption"; content:"456"; sid:4058020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20110722-04_Apple_Safari_WebKit_innerHTML_Double_Free_Memory_Corruption.xml
+alert TCP any any -> any any (msg:"Apple Safari WebKit innerHTML Double Free Memory Corruption"; content:"456"; sid:4058021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20110727-05_Apple_Safari_WebKit_SVG_Memory_Corruption.xml
+alert TCP any any -> any any (msg:"Apple Safari WebKit SVG Memory Corruption"; content:"456"; sid:4058022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20111021-02_Apple_Safari_Webkit_libxslt_Arbitrary_File_Creation.xml
+alert TCP any any -> any any (msg:"Apple Safari Webkit libxslt Arbitrary File Creation"; content:"456"; sid:4058023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20111031-03_Apple_Safari_WebKit_Form_Elements_Pure_Virtual_Function_Call.xml
+alert TCP any any -> any any (msg:"Apple Safari WebKit Form Elements Pure Virtual Function Call"; content:"456"; sid:4058024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20111116-07_InduSoft_Web_Studio_Unauthenticated_Insecure_Remote_Operations.xml
+alert TCP any any -> any any (msg:"InduSoft Web Studio Unauthenticated Insecure Remote Operations"; content:"456"; sid:4058025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20111205-06_Cisco_WebEx_Player_ATAS32_DLL_Remote_Code_Execution.xml
+alert TCP any any -> any any (msg:"Cisco WebEx Player ATAS32.DLL Remote Code Execution"; content:"456"; sid:4058026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20120802-01_Apple_Safari_WebKit_Button_Column_Blocks_Memory_Corruption.xml
+alert TCP any any -> any any (msg:"Apple Safari WebKit Button Column Blocks Memory Corruption"; content:"456"; sid:4058027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20121005-01_Apple_Safari_WebKit_CSS_Title_Memory_Corruption.xml
+alert TCP any any -> any any (msg:"Apple Safari WebKit CSS Title Memory Corruption"; content:"456"; sid:4058028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20121010-01_Cisco_WebEx_Recording_Format_Player_atas32_dll_Memory_Corruption.xml
+alert TCP any any -> any any (msg:"Cisco WebEx Recording Format Player atas32.dll Memory Corruption"; content:"456"; sid:4058029; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140411-10_Advantech_WebAccess_SCADA_bwocxrun_ocx_Command_Execution.xml
+alert TCP any any -> any any (msg:"Advantech WebAccess SCADA bwocxrun.ocx Command Execution"; content:"456"; sid:4058030; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140421-09_CA_ERwin_Web_Portal_ProfileIconServlet_Information_Disclosure.xml
+alert TCP any any -> any any (msg:"CA ERwin Web Portal ProfileIconServlet Information Disclosure"; content:"456"; sid:4058031; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140421-11_CA_ERwin_Web_Portal_ConfigServiceProvider_Information_Disclosure.xml
+alert TCP any any -> any any (msg:"CA ERwin Web Portal ConfigServiceProvider Information Disclosure"; content:"456"; sid:4058032; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140502-07_InduSoft_Web_Studio_Directory_Traversal.xml
+alert TCP any any -> any any (msg:"InduSoft Web Studio Directory Traversal"; content:"456"; sid:4058033; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140520-08_Cogent_DataHub_Web_Server_GetPermissions.asp_Command_Injection.xml
+alert TCP any any -> any any (msg:"Cogent DataHub Web Server GetPermissions.asp Command Injection"; content:"456"; sid:4058034; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20141014-15_Microsoft_Office_Word_and_Web_Apps_Memory_Corruption.xml
+alert TCP any any -> any any (msg:"Microsoft Office Word and Web Apps Memory Corruption"; content:"456"; sid:4058035; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#WebDAV_rs.xml
+alert TCP any any -> any any (msg:"WebDAV IIS Exploit"; content:"456"; sid:4058036; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#eva-web_rfi.xml
+alert TCP any any -> any any (msg:"EVA-Web 1.1<= 2.2 (index.php3) Remote File Inclusion Vulnerability"; content:"456"; sid:4058037; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#ie_webviewfolder_bof.xml
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer WebViewFolderIcon Buffer Overflow Vulnerability"; content:"456"; sid:4058038; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#javaWebServer.xml
+alert TCP any any -> any any (msg:"Java Web Server Remote Command Execution"; content:"456"; sid:4058039; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#lightspeedweb_disclosure.xml
+alert TCP any any -> any any (msg:"LiteSpeed Web Server <= 3.2.3 Remote Source Code Disclosure Vulnerability"; content:"456"; sid:4058040; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#man2web_cmd_1.xml
+alert TCP any any -> any any (msg:"man2web Remote Command Execution"; content:"456"; sid:4058041; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#man2web_cmd_2.xml
+alert TCP any any -> any any (msg:"man2web Remote Command Execution 2"; content:"456"; sid:4058042; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mdweb_rfi.xml
+alert TCP any any -> any any (msg:"Mdweb132-postgres\: Remote File Inclusion Vulnerability"; content:"456"; sid:4058043; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#omniweb_fmt.xml
+alert TCP any any -> any any (msg:"OmniWeb Javascript alert() Format String Vulnerability"; content:"456"; sid:4058044; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#omniweb_format.xml
+alert TCP any any -> any any (msg:"Omniweb Format String Vulnerability"; content:"456"; sid:4058045; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#rsa_webagent.xml
+alert TCP any any -> any any (msg:"RSA WebAgent Heap Overflow"; content:"456"; sid:4058046; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#savewebportal_rfi.xml
+alert TCP any any -> any any (msg:"SaveWeb Portal SITE_Path Parameter Remote File Include Vulnerability"; content:"456"; sid:4058047; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#tomcat_webdav_file_disclosure.xml
+alert TCP any any -> any any (msg:"Apache Tomcat (webdav) Remote File Disclosure Vulnerability"; content:"456"; sid:4058048; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#web-inf.xml
+alert TCP any any -> any any (msg:"WEB-INF Directory Contents Listing"; content:"456"; sid:4058049; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#web-news_rfi.xml
+alert TCP any any -> any any (msg:"Web-News Template.PHP Remote File Include Vulnerability"; content:"456"; sid:4058050; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#web-provence_rfi.xml
+alert TCP any any -> any any (msg:"Web-Provence SL_Site Spaw_control.class.PHP Remote File Include Vulnerability"; content:"456"; sid:4058051; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#web_oddity_dir_x-versal.xml
+alert TCP any any -> any any (msg:"Web Oddity Web Server 0.09b Directory Transversal Vulnerability"; content:"456"; sid:4058052; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#webadmin.xml
+alert TCP any any -> any any (msg:"WebAdmin Buffer Overflow Attempt"; content:"456"; sid:4058053; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#webnews_cookie_inject.xml
+alert TCP any any -> any any (msg:"Stylemotion WEB//NEWS SQL Injection"; content:"456"; sid:4058054; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#webslider_rfi.xml
+alert TCP any any -> any any (msg:"Web Slider 0.6(path)Remote File Inclusion Vulnerability"; content:"456"; sid:4058055; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#webspell_db-dwnload.xml
+alert TCP any any -> any any (msg:"WebSPELL Database.PHP Authentication Bypass Vulnerability"; content:"456"; sid:4058056; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#xitami_web_server_bof.xml
+alert TCP any any -> any any (msg:"Xitami Web Server 2.5 (If-Modified-Since) 0day Remote Buffer Overflow Vulnerability"; content:"456"; sid:4058057; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

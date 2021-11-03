@@ -1,3 +1,164 @@
 #denial_of_service: 4060000~4060999
 
-#FSC20040420-02_Microsoft_RPCSS_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Microsoft RPCSS Denial of Service"; content:\"456\"; sid:0; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040825-01_Symantec_Multiple_Products_ISAKMPd_Denial_of_Service.xml\nalert UDP any any -> any any (msg:"Symantec Multiple Products ISAKMPd Denial of Service"; content:\"456\"; sid:1; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040830-01_zlib_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"zlib Denial of Service"; content:\"456\"; sid:2; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20040920-01_FreeRADIUS_Unspecified_Denial_of_Service.xml\nalert UDP any any -> any any (msg:"FreeRADIUS Unspecified Denial of Service"; content:\"456\"; sid:3; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20041028-01_Squid_ASN_1_Header_Parsing_Denial_of_Service.xml\nalert UDP any any -> any any (msg:"Squid ASN.1 Header Parsing Denial of Service"; content:\"456\"; sid:4; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20041029-01_Linux_Kernel_Firewall_Logging_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Linux Kernel Firewall Logging Denial of Service"; content:\"456\"; sid:5; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20060208-13_Sun_Directory_Server_LDAP_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Sun Directory Server LDAP Denial of Service"; content:\"456\"; sid:6; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20060509-07_Microsoft_Windows_MSDTC_Denial_of_Service_Vulnerability.xml\nalert TCP any any -> any any (msg:"Microsoft Windows MSDTC Denial of Service Vulnerability"; content:\"456\"; sid:7; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20060704-16_Linux_Kernel_SCTP_Chunkless_Packet_Denial_of_Service.xml\nalert IP any any -> any any (msg:"Linux Kernel SCTP Chunkless Packet Denial of Service"; content:\"456\"; sid:8; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20070320-03_Cisco_IP_Phone_SIP_INVITE_Message_Denial_of_Service.xml\nalert UDP any any -> any any (msg:"Cisco IP Phone SIP INVITE Message Denial of Service"; content:\"456\"; sid:9; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20070424-19_CA_BrightStor_ARCserve_Backup_Media_Server_SUN_RPC_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"CA BrightStor ARCserve Backup Media Server SUN RPC Denial of Service"; content:\"456\"; sid:10; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20071009-18_Microsoft_Windows_RPC_NTLMSSP_Authentication_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Microsoft Windows RPC NTLMSSP Authentication Denial of Service"; content:\"456\"; sid:11; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20071204-02_Squid_Proxy_Cache_Update_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Squid Proxy Cache Update Denial of Service"; content:\"456\"; sid:12; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080129-16_Firebird_XDR_Operation_Request_Handling_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Firebird XDR Operation Request Handling Denial of Service"; content:\"456\"; sid:13; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080417-02_CA_ARCserve_Backup_Discovery_Service_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"CA ARCserve Backup Discovery Service Denial of Service"; content:\"456\"; sid:14; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080513-09_Microsoft_Malware_Protection_Engine_File_Processing_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Microsoft Malware Protection Engine File Processing Denial of Service"; content:\"456\"; sid:15; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080630-16_OpenLDAP_ber_get_next_BER_Decoding_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"OpenLDAP ber_get_next BER Decoding Denial of Service"; content:\"456\"; sid:16; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080903-07_ClamAV_AntiVirus_CHM_File_Handling_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"ClamAV AntiVirus CHM File Handling Denial of Service"; content:\"456\"; sid:17; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20081002-05_VMware_Server_ISAPI_Extension_Remote_Denial_Of_Service.xml\nalert TCP any any -> any any (msg:"VMware Server ISAPI Extension Remote Denial Of Service"; content:\"456\"; sid:18; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20081009-11_CA_ARCserve_Backup_Tape_Engine_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"CA ARCserve Backup Tape Engine Denial of Service"; content:\"456\"; sid:19; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20081009-12_CA_ARCserve_Backup_DB_Engine_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"CA ARCserve Backup DB Engine Denial of Service"; content:\"456\"; sid:20; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20081202-02_ClamAV_AntiVirus_cli_check_jpeg_exploit_Function_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"ClamAV AntiVirus cli_check_jpeg_exploit Function Denial of Service"; content:\"456\"; sid:21; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090210-12_Microsoft_Exchange_System_Attendant_Denial_of_Service.xml\nalert UDP any any -> any any (msg:"Microsoft Exchange System Attendant Denial of Service"; content:\"456\"; sid:22; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090304-05_MySQL_XML_Functions_Scalar_XPath_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"MySQL XML Functions Scalar XPath Denial of Service"; content:\"456\"; sid:23; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090310-04_IBM_Director_CIM_Server_Consumer_Name_Handling_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"IBM Director CIM Server Consumer Name Handling Denial of Service"; content:\"456\"; sid:24; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090402-02_IBM_DB2_Database_Server_CONNECT_Request_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"IBM DB2 Database Server CONNECT Request Denial of Service"; content:\"456\"; sid:25; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090402-03_IBM_DB2_Database_Server_Invalid_Data_Stream_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"IBM DB2 Database Server Invalid Data Stream Denial of Service"; content:\"456\"; sid:26; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090616-04_CA_ARCserve_Backup_Message_Engine_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"CA ARCserve Backup Message Engine Denial of Service"; content:\"456\"; sid:27; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090616-06_CA_ARCserve_Backup_Message_Engine_RPC_Opcode_59_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"CA ARCserve Backup Message Engine RPC Opcode 59 Denial of Service"; content:\"456\"; sid:28; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090720-04_RealNetworks_Helix_Server_RTSP_SET_PARAMETERS_Request_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"RealNetworks Helix Server RTSP SET_PARAMETERS Request Denial of Service"; content:\"456\"; sid:29; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090720-05_RealNetworks_Helix_Server_RTSP_SETUP_Request_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"RealNetworks Helix Server RTSP SETUP Request Denial of Service"; content:\"456\"; sid:30; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090728-14_ISC_BIND_9_Dynamic_Update_Request_Denial_of_Service.xml\nalert UDP any any -> any any (msg:"ISC BIND 9 Dynamic Update Request Denial of Service"; content:\"456\"; sid:31; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090731-07_Firebird_SQL_op_connect_request_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Firebird SQL op_connect_request Denial of Service"; content:\"456\"; sid:32; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090811-04_Microsoft_ASP.NET_Error_Handling_Denial_Of_Service.xml\nalert TCP any any -> any any (msg:"Microsoft ASP.NET Error Handling Denial Of Service"; content:\"456\"; sid:33; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090812-01_Digium_Asterisk_SIP_sscanf_Multiple_Denial_of_Service_Vulnerabilities.xml\nalert TCP any any -> any any (msg:"Digium Asterisk SIP sscanf Multiple Denial of Service Vulnerabilities"; content:\"456\"; sid:34; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090909-11_Digium_Asterisk_IAX2_Call_Number_Denial_Of_Service.xml\nalert UDP any any -> any any (msg:"Digium Asterisk IAX2 Call Number Denial Of Service"; content:\"456\"; sid:35; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090914-03_FreeRADIUS_RADIUS_Server_rad_decode_Remote_Denial_of_Service.xml\nalert UDP any any -> any any (msg:"FreeRADIUS RADIUS Server rad_decode Remote Denial of Service"; content:\"456\"; sid:36; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20091008-01_VMware_Authorization_Service_User_Credential_Parsing_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"VMware Authorization Service User Credential Parsing Denial of Service"; content:\"456\"; sid:37; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20091013-22_Microsoft_Windows_LSASS_Remote_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Microsoft Windows LSASS Remote Denial of Service"; content:\"456\"; sid:38; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20091022-02_EMC_RepliStor_rep_srv_and_ctrlservice_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"EMC RepliStor rep_srv and ctrlservice Denial of Service"; content:\"456\"; sid:39; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20091117-05_HP_OpenView_Network_Node_Manager_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"HP OpenView Network Node Manager Denial of Service"; content:\"456\"; sid:40; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20091124-03_Sun_MySQL_Database_SELECT_Subquery_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Sun MySQL Database SELECT Subquery Denial of Service"; content:\"456\"; sid:41; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20091125-03_Sun_MySQL_Database_PROCEDURE_ANALYSE_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Sun MySQL Database PROCEDURE ANALYSE Denial of Service"; content:\"456\"; sid:42; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20100128-09_Sun_Java_System_Web_Server_Admin_Server_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Sun Java System Web Server Admin Server Denial of Service"; content:\"456\"; sid:43; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20100624-03_Novell_iManager_Tree_Name_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Novell iManager Tree Name Denial of Service"; content:\"456\"; sid:44; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20100826-02_OpenLDAP_Modrdn_RDN_NULL_String_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"OpenLDAP Modrdn RDN NULL String Denial of Service"; content:\"456\"; sid:45; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20110110-04_HP_Data_Protector_Manager_RDS_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"HP Data Protector Manager RDS Denial of Service"; content:\"456\"; sid:46; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20050825-01_Apache_Byte-Range_Filter_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Apache Byte-Range Filter Denial of Service"; content:\"456\"; sid:47; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20130308-04_Squid_strHdrAcptLangGetItem_Value_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Squid strHdrAcptLangGetItem Value Denial of Service"; content:\"456\"; sid:48; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20131219-02_Apache_Santuario_XML_Security_for_Java_DTD_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"Apache Santuario XML Security for Java DTD Denial of Service"; content:\"456\"; sid:49; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20140421-10_CA_ERwin_Web_Portal_FileAccessServiceProvider_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"CA ERwin Web Portal FileAccessServiceProvider Denial of Service"; content:\"456\"; sid:50; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20140623-05_Samba_nmbd_sys_recvfrom_Infinite_Loop_Denial_of_Service.xml\nalert UDP any any -> any any (msg:"Samba nmbd sys_recvfrom Infinite Loop Denial of Service"; content:\"456\"; sid:51; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20141007-06_PHP_Fileinfo_cdf_read_property_info_Denial_of_Service.xml\nalert TCP any any -> any any (msg:"PHP Fileinfo cdf_read_property_info Denial of Service"; content:\"456\"; sid:52; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20141111-24_Microsoft_Windows_SChannel_Denial_Of_Service.xml\nalert TCP any any -> any any (msg:"Microsoft Windows SChannel Denial Of Service"; content:\"456\"; sid:53; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#FSC20040420-02_Microsoft_RPCSS_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Microsoft RPCSS Denial of Service"; content:"456"; sid:0; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040825-01_Symantec_Multiple_Products_ISAKMPd_Denial_of_Service.xml
+alert UDP any any -> any any (msg:"Symantec Multiple Products ISAKMPd Denial of Service"; content:"456"; sid:1; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040830-01_zlib_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"zlib Denial of Service"; content:"456"; sid:2; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20040920-01_FreeRADIUS_Unspecified_Denial_of_Service.xml
+alert UDP any any -> any any (msg:"FreeRADIUS Unspecified Denial of Service"; content:"456"; sid:3; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20041028-01_Squid_ASN_1_Header_Parsing_Denial_of_Service.xml
+alert UDP any any -> any any (msg:"Squid ASN.1 Header Parsing Denial of Service"; content:"456"; sid:4; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20041029-01_Linux_Kernel_Firewall_Logging_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Linux Kernel Firewall Logging Denial of Service"; content:"456"; sid:5; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060208-13_Sun_Directory_Server_LDAP_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Sun Directory Server LDAP Denial of Service"; content:"456"; sid:6; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060509-07_Microsoft_Windows_MSDTC_Denial_of_Service_Vulnerability.xml
+alert TCP any any -> any any (msg:"Microsoft Windows MSDTC Denial of Service Vulnerability"; content:"456"; sid:7; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060704-16_Linux_Kernel_SCTP_Chunkless_Packet_Denial_of_Service.xml
+alert IP any any -> any any (msg:"Linux Kernel SCTP Chunkless Packet Denial of Service"; content:"456"; sid:8; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070320-03_Cisco_IP_Phone_SIP_INVITE_Message_Denial_of_Service.xml
+alert UDP any any -> any any (msg:"Cisco IP Phone SIP INVITE Message Denial of Service"; content:"456"; sid:9; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20070424-19_CA_BrightStor_ARCserve_Backup_Media_Server_SUN_RPC_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"CA BrightStor ARCserve Backup Media Server SUN RPC Denial of Service"; content:"456"; sid:10; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071009-18_Microsoft_Windows_RPC_NTLMSSP_Authentication_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Microsoft Windows RPC NTLMSSP Authentication Denial of Service"; content:"456"; sid:11; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20071204-02_Squid_Proxy_Cache_Update_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Squid Proxy Cache Update Denial of Service"; content:"456"; sid:12; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080129-16_Firebird_XDR_Operation_Request_Handling_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Firebird XDR Operation Request Handling Denial of Service"; content:"456"; sid:13; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080417-02_CA_ARCserve_Backup_Discovery_Service_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"CA ARCserve Backup Discovery Service Denial of Service"; content:"456"; sid:14; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080513-09_Microsoft_Malware_Protection_Engine_File_Processing_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Microsoft Malware Protection Engine File Processing Denial of Service"; content:"456"; sid:15; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080630-16_OpenLDAP_ber_get_next_BER_Decoding_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"OpenLDAP ber_get_next BER Decoding Denial of Service"; content:"456"; sid:16; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080903-07_ClamAV_AntiVirus_CHM_File_Handling_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"ClamAV AntiVirus CHM File Handling Denial of Service"; content:"456"; sid:17; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081002-05_VMware_Server_ISAPI_Extension_Remote_Denial_Of_Service.xml
+alert TCP any any -> any any (msg:"VMware Server ISAPI Extension Remote Denial Of Service"; content:"456"; sid:18; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081009-11_CA_ARCserve_Backup_Tape_Engine_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"CA ARCserve Backup Tape Engine Denial of Service"; content:"456"; sid:19; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081009-12_CA_ARCserve_Backup_DB_Engine_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"CA ARCserve Backup DB Engine Denial of Service"; content:"456"; sid:20; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20081202-02_ClamAV_AntiVirus_cli_check_jpeg_exploit_Function_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"ClamAV AntiVirus cli_check_jpeg_exploit Function Denial of Service"; content:"456"; sid:21; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090210-12_Microsoft_Exchange_System_Attendant_Denial_of_Service.xml
+alert UDP any any -> any any (msg:"Microsoft Exchange System Attendant Denial of Service"; content:"456"; sid:22; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090304-05_MySQL_XML_Functions_Scalar_XPath_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"MySQL XML Functions Scalar XPath Denial of Service"; content:"456"; sid:23; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090310-04_IBM_Director_CIM_Server_Consumer_Name_Handling_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"IBM Director CIM Server Consumer Name Handling Denial of Service"; content:"456"; sid:24; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090402-02_IBM_DB2_Database_Server_CONNECT_Request_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"IBM DB2 Database Server CONNECT Request Denial of Service"; content:"456"; sid:25; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090402-03_IBM_DB2_Database_Server_Invalid_Data_Stream_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"IBM DB2 Database Server Invalid Data Stream Denial of Service"; content:"456"; sid:26; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090616-04_CA_ARCserve_Backup_Message_Engine_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"CA ARCserve Backup Message Engine Denial of Service"; content:"456"; sid:27; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090616-06_CA_ARCserve_Backup_Message_Engine_RPC_Opcode_59_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"CA ARCserve Backup Message Engine RPC Opcode 59 Denial of Service"; content:"456"; sid:28; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090720-04_RealNetworks_Helix_Server_RTSP_SET_PARAMETERS_Request_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"RealNetworks Helix Server RTSP SET_PARAMETERS Request Denial of Service"; content:"456"; sid:29; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090720-05_RealNetworks_Helix_Server_RTSP_SETUP_Request_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"RealNetworks Helix Server RTSP SETUP Request Denial of Service"; content:"456"; sid:30; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090728-14_ISC_BIND_9_Dynamic_Update_Request_Denial_of_Service.xml
+alert UDP any any -> any any (msg:"ISC BIND 9 Dynamic Update Request Denial of Service"; content:"456"; sid:31; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090731-07_Firebird_SQL_op_connect_request_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Firebird SQL op_connect_request Denial of Service"; content:"456"; sid:32; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090811-04_Microsoft_ASP.NET_Error_Handling_Denial_Of_Service.xml
+alert TCP any any -> any any (msg:"Microsoft ASP.NET Error Handling Denial Of Service"; content:"456"; sid:33; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090812-01_Digium_Asterisk_SIP_sscanf_Multiple_Denial_of_Service_Vulnerabilities.xml
+alert TCP any any -> any any (msg:"Digium Asterisk SIP sscanf Multiple Denial of Service Vulnerabilities"; content:"456"; sid:34; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090909-11_Digium_Asterisk_IAX2_Call_Number_Denial_Of_Service.xml
+alert UDP any any -> any any (msg:"Digium Asterisk IAX2 Call Number Denial Of Service"; content:"456"; sid:35; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090914-03_FreeRADIUS_RADIUS_Server_rad_decode_Remote_Denial_of_Service.xml
+alert UDP any any -> any any (msg:"FreeRADIUS RADIUS Server rad_decode Remote Denial of Service"; content:"456"; sid:36; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091008-01_VMware_Authorization_Service_User_Credential_Parsing_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"VMware Authorization Service User Credential Parsing Denial of Service"; content:"456"; sid:37; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091013-22_Microsoft_Windows_LSASS_Remote_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Microsoft Windows LSASS Remote Denial of Service"; content:"456"; sid:38; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091022-02_EMC_RepliStor_rep_srv_and_ctrlservice_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"EMC RepliStor rep_srv and ctrlservice Denial of Service"; content:"456"; sid:39; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091117-05_HP_OpenView_Network_Node_Manager_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"HP OpenView Network Node Manager Denial of Service"; content:"456"; sid:40; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091124-03_Sun_MySQL_Database_SELECT_Subquery_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Sun MySQL Database SELECT Subquery Denial of Service"; content:"456"; sid:41; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20091125-03_Sun_MySQL_Database_PROCEDURE_ANALYSE_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Sun MySQL Database PROCEDURE ANALYSE Denial of Service"; content:"456"; sid:42; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100128-09_Sun_Java_System_Web_Server_Admin_Server_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Sun Java System Web Server Admin Server Denial of Service"; content:"456"; sid:43; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100624-03_Novell_iManager_Tree_Name_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Novell iManager Tree Name Denial of Service"; content:"456"; sid:44; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20100826-02_OpenLDAP_Modrdn_RDN_NULL_String_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"OpenLDAP Modrdn RDN NULL String Denial of Service"; content:"456"; sid:45; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20110110-04_HP_Data_Protector_Manager_RDS_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"HP Data Protector Manager RDS Denial of Service"; content:"456"; sid:46; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20050825-01_Apache_Byte-Range_Filter_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Apache Byte-Range Filter Denial of Service"; content:"456"; sid:47; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20130308-04_Squid_strHdrAcptLangGetItem_Value_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Squid strHdrAcptLangGetItem Value Denial of Service"; content:"456"; sid:48; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20131219-02_Apache_Santuario_XML_Security_for_Java_DTD_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"Apache Santuario XML Security for Java DTD Denial of Service"; content:"456"; sid:49; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140421-10_CA_ERwin_Web_Portal_FileAccessServiceProvider_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"CA ERwin Web Portal FileAccessServiceProvider Denial of Service"; content:"456"; sid:50; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140623-05_Samba_nmbd_sys_recvfrom_Infinite_Loop_Denial_of_Service.xml
+alert UDP any any -> any any (msg:"Samba nmbd sys_recvfrom Infinite Loop Denial of Service"; content:"456"; sid:51; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20141007-06_PHP_Fileinfo_cdf_read_property_info_Denial_of_Service.xml
+alert TCP any any -> any any (msg:"PHP Fileinfo cdf_read_property_info Denial of Service"; content:"456"; sid:52; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20141111-24_Microsoft_Windows_SChannel_Denial_Of_Service.xml
+alert TCP any any -> any any (msg:"Microsoft Windows SChannel Denial Of Service"; content:"456"; sid:53; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

@@ -98,7 +98,9 @@ func main()  {
 		serialNum := ruleRet.SerialNum
 
 
-		str := fmt.Sprintf(`#%s\nalert %s any any -> any any (msg:"%s"; content:\"456\"; sid:%d; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n`,xName,proto,execDesc,serialNum)
+		str := fmt.Sprintf("#%s\nalert %s any any -> any any (msg:\"%s\"; content:\"456\"; sid:%d; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n",
+			xName,proto,execDesc,serialNum)
+
 		fmt.Println(str)
 		insertData(rulePath,str)
 	}

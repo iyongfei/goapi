@@ -1,3 +1,89 @@
 #noop:4052000~4052999
 
-#NOOPtcpAIX.xml\nalert TCP any any -> any any (msg:"TCP NOOP Packet Variant AIX"; content:\"456\"; sid:4052000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#NOOPtcpSPARC.xml\nalert TCP any any -> any any (msg:"TCP NOOP packet variant SPARC"; content:\"456\"; sid:4052001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#NOOPtcpSPARC3.xml\nalert TCP any any -> any any (msg:"TCP NOOP packet variant SPARC 3"; content:\"456\"; sid:4052002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#NOOPtcpUNIX.xml\nalert TCP any any -> any any (msg:"TCP NOOP packet variant HP-UNIX"; content:\"456\"; sid:4052003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#NOOPtcpUNIX2.xml\nalert TCP any any -> any any (msg:"TCP NOOP packet variant HP-UNIX 2"; content:\"456\"; sid:4052004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#NOOPudpAIX.xml\nalert UDP any any -> any any (msg:"UDP NOOP Variant AIX"; content:\"456\"; sid:4052005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#NOOPudpSPARC2.xml\nalert UDP any any -> any any (msg:"UDP NOOP Variant SPARC 2"; content:\"456\"; sid:4052006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#NOOPudpSPARC3.xml\nalert UDP any any -> any any (msg:"UDP NOOP Variant SPARC 3"; content:\"456\"; sid:4052007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#NOOPudpUNIX.xml\nalert UDP any any -> any any (msg:"UDP NOOP Variant UNIX"; content:\"456\"; sid:4052008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPtcp.xml\nalert TCP any any -> any any (msg:"TCP x86 NOOP packet"; content:\"456\"; sid:4052009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPtcp2.xml\nalert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 2"; content:\"456\"; sid:4052010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPtcp3.xml\nalert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 3"; content:\"456\"; sid:4052011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPtcp4.xml\nalert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 4"; content:\"456\"; sid:4052012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPtcp5.xml\nalert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 5"; content:\"456\"; sid:4052013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPtcp6.xml\nalert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 6"; content:\"456\"; sid:4052014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPtcp7.xml\nalert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 7"; content:\"456\"; sid:4052015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPtcp8.xml\nalert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 7"; content:\"456\"; sid:4052016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPtcpSGI.xml\nalert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant SGI"; content:\"456\"; sid:4052017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPtcpSGI2.xml\nalert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant SGI2"; content:\"456\"; sid:4052018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPudp2.xml\nalert UDP any any -> any any (msg:"UDP x86 NOOP Variant 2"; content:\"456\"; sid:4052019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPudp3.xml\nalert UDP any any -> any any (msg:"UDP x86 NOOP Variant 3"; content:\"456\"; sid:4052020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPudp4.xml\nalert UDP any any -> any any (msg:"UDP x86 NOOP Variant 4"; content:\"456\"; sid:4052021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPudp5.xml\nalert UDP any any -> any any (msg:"UDP x86 NOOP Variant 5"; content:\"456\"; sid:4052022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPudp6.xml\nalert UDP any any -> any any (msg:"UDP x86 NOOP Variant 6"; content:\"456\"; sid:4052023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPudp7.xml\nalert UDP any any -> any any (msg:"UDP x86 NOOP Variant 7"; content:\"456\"; sid:4052024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPudp8.xml\nalert UDP any any -> any any (msg:"UDP x86 NOOP Variant 8"; content:\"456\"; sid:4052025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPudpSGI.xml\nalert UDP any any -> any any (msg:"UDP x86 NOOP Variant SGI"; content:\"456\"; sid:4052026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPudpSGI2.xml\nalert UDP any any -> any any (msg:"UDP x86 NOOP Variant SGI 2"; content:\"456\"; sid:4052027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#x86NOOPudpUNICODE.xml\nalert UDP any any -> any any (msg:"UDP x86 NOOP Variant UNICODE"; content:\"456\"; sid:4052028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#NOOPtcpAIX.xml
+alert TCP any any -> any any (msg:"TCP NOOP Packet Variant AIX"; content:"456"; sid:4052000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#NOOPtcpSPARC.xml
+alert TCP any any -> any any (msg:"TCP NOOP packet variant SPARC"; content:"456"; sid:4052001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#NOOPtcpSPARC3.xml
+alert TCP any any -> any any (msg:"TCP NOOP packet variant SPARC 3"; content:"456"; sid:4052002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#NOOPtcpUNIX.xml
+alert TCP any any -> any any (msg:"TCP NOOP packet variant HP-UNIX"; content:"456"; sid:4052003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#NOOPtcpUNIX2.xml
+alert TCP any any -> any any (msg:"TCP NOOP packet variant HP-UNIX 2"; content:"456"; sid:4052004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#NOOPudpAIX.xml
+alert UDP any any -> any any (msg:"UDP NOOP Variant AIX"; content:"456"; sid:4052005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#NOOPudpSPARC2.xml
+alert UDP any any -> any any (msg:"UDP NOOP Variant SPARC 2"; content:"456"; sid:4052006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#NOOPudpSPARC3.xml
+alert UDP any any -> any any (msg:"UDP NOOP Variant SPARC 3"; content:"456"; sid:4052007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#NOOPudpUNIX.xml
+alert UDP any any -> any any (msg:"UDP NOOP Variant UNIX"; content:"456"; sid:4052008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPtcp.xml
+alert TCP any any -> any any (msg:"TCP x86 NOOP packet"; content:"456"; sid:4052009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPtcp2.xml
+alert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 2"; content:"456"; sid:4052010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPtcp3.xml
+alert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 3"; content:"456"; sid:4052011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPtcp4.xml
+alert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 4"; content:"456"; sid:4052012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPtcp5.xml
+alert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 5"; content:"456"; sid:4052013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPtcp6.xml
+alert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 6"; content:"456"; sid:4052014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPtcp7.xml
+alert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 7"; content:"456"; sid:4052015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPtcp8.xml
+alert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant 7"; content:"456"; sid:4052016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPtcpSGI.xml
+alert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant SGI"; content:"456"; sid:4052017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPtcpSGI2.xml
+alert TCP any any -> any any (msg:"TCP x86 NOOP Packet Variant SGI2"; content:"456"; sid:4052018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPudp2.xml
+alert UDP any any -> any any (msg:"UDP x86 NOOP Variant 2"; content:"456"; sid:4052019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPudp3.xml
+alert UDP any any -> any any (msg:"UDP x86 NOOP Variant 3"; content:"456"; sid:4052020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPudp4.xml
+alert UDP any any -> any any (msg:"UDP x86 NOOP Variant 4"; content:"456"; sid:4052021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPudp5.xml
+alert UDP any any -> any any (msg:"UDP x86 NOOP Variant 5"; content:"456"; sid:4052022; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPudp6.xml
+alert UDP any any -> any any (msg:"UDP x86 NOOP Variant 6"; content:"456"; sid:4052023; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPudp7.xml
+alert UDP any any -> any any (msg:"UDP x86 NOOP Variant 7"; content:"456"; sid:4052024; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPudp8.xml
+alert UDP any any -> any any (msg:"UDP x86 NOOP Variant 8"; content:"456"; sid:4052025; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPudpSGI.xml
+alert UDP any any -> any any (msg:"UDP x86 NOOP Variant SGI"; content:"456"; sid:4052026; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPudpSGI2.xml
+alert UDP any any -> any any (msg:"UDP x86 NOOP Variant SGI 2"; content:"456"; sid:4052027; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#x86NOOPudpUNICODE.xml
+alert UDP any any -> any any (msg:"UDP x86 NOOP Variant UNICODE"; content:"456"; sid:4052028; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+

@@ -1,3 +1,68 @@
 #sql:4032000~4032999
 
-#Contrexx_SQL_Injection.xml\nalert TCP any any -> any any (msg:"Contrexx SQL Injection Attack"; content:\"456\"; sid:4032000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20060502-06_MySQL_Login_Handshake_Information_Disclosure.xml\nalert TCP any any -> any any (msg:"MySQL Login Handshake Information Disclosure"; content:\"456\"; sid:4032001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20060721-02_MySQL_Server_Date_Format_Function_Format_String_Vulnerability.xml\nalert TCP any any -> any any (msg:"MySQL Server Date_Format Function Format String Vulnerability"; content:\"456\"; sid:4032002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20080708-05_Microsoft_SQL_Server_Backup_Restoring_Memory_Corruption.xml\nalert TCP any any -> any any (msg:"Microsoft SQL Server Backup Restoring Memory Corruption"; content:\"456\"; sid:4032003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20090709-06_Sun_MySQL_mysql_log_Format_String_Vulnerability.xml\nalert TCP any any -> any any (msg:"Sun MySQL mysql_log Format String Vulnerability"; content:\"456\"; sid:4032004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#FSC20101105-04_Symantec_IM_Manager_LoggedInUsers_lgx_Definition_File_Multiple_SQL_Injections.xml\nalert TCP any any -> any any (msg:"Symantec IM Manager LoggedInUsers.lgx Definition File Multiple"; content:\"456\"; sid:4032005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#MSsqlHeap.xml\nalert UDP any any -> any any (msg:"MS02-039/MS02-061 MS SQL Server 2000 Heap Overflow"; content:\"456\"; sid:4032006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20110427-05_Cisco_Unified_Communications_Manager_Multiple_SQL_Injections.xml\nalert TCP any any -> any any (msg:"Cisco Unified Communications Manager Multiple SQL Injections"; content:\"456\"; sid:4032007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20111111-02_HP_Data_Protector_Multiple_Products_GetPolicies_SQL_Injection.xml\nalert TCP any any -> any any (msg:"HP Data Protector Multiple Products GetPolicies SQL Injection"; content:\"456\"; sid:4032008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20111117-01_HP_Data_Protector_Multiple_Products_FinishedCopy_SQL_Injection.xml\nalert TCP any any -> any any (msg:"HP Data Protector Multiple Products FinishedCopy SQL Injection"; content:\"456\"; sid:4032009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20111123-03_HP_Data_Protector_Multiple_Products_RequestCopy_SQL_Injection.xml\nalert TCP any any -> any any (msg:"HP Data Protector Multiple Products RequestCopy SQL Injection"; content:\"456\"; sid:4032010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20120208-09_CA_Total_Defense_Suite_UNCWS_exportReport_SQL_Injection.xml\nalert TCP any any -> any any (msg:"CA Total Defense Suite UNCWS exportReport SQL Injection"; content:\"456\"; sid:4032011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20120301-10_IBM_Tivoli_Provisioning_Manager_Express_Asset_getMimeType_SQL_Injection.xml\nalert TCP any any -> any any (msg:"IBM Tivoli Provisioning Manager Express Asset.getMimeType SQL Injection"; content:\"456\"; sid:4032012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20120618-02_Ruby_on_Rails_Where_Hash_SQL_Injection.xml\nalert TCP any any -> any any (msg:"Ruby on Rails Where Hash SQL Injection"; content:\"456\"; sid:4032013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20120928-04_Trend_Micro_Control_Manager_ad_hoc_query_Module_SQL_Injection.xml\nalert TCP any any -> any any (msg:"Trend Micro Control Manager ad hoc query Module SQL Injection"; content:\"456\"; sid:4032014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20140618-14_Symantec_Web_Gateway_dbutils.php_SQL_Injection.xml\nalert TCP any any -> any any (msg:"Symantec Web Gateway dbutils.php SQL Injection"; content:\"456\"; sid:4032015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#TSL20141016-03_Drupal_Core_database_inc_expandArguments_SQL_Injection.xml\nalert TCP any any -> any any (msg:"Drupal Core database.inc expandArguments SQL Injection"; content:\"456\"; sid:4032016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#brighstor_sql.xml\nalert TCP any any -> any any (msg:"CA Brighstor ARCserve Backup Agent for MS SQL Buffer Overflow"; content:\"456\"; sid:4032017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#mybb_search_sql.xml\nalert TCP any any -> any any (msg:"MyBulletinBoard SQL Injection Attack"; content:\"456\"; sid:4032018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#revizecms_sql.xml\nalert TCP any any -> any any (msg:"Revize CMS Query_results.JSP SQL Injection Vulnerability"; content:\"456\"; sid:4032019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#simpleblog_sql.xml\nalert TCP any any -> any any (msg:"8Pixel.net SimpleBlog ID Parameter Remote SQL Injection Vulnerability"; content:\"456\"; sid:4032020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n#wbblog_sql.xml\nalert TCP any any -> any any (msg:"WBBlog Remote SQL Injection Vulnerability"; content:\"456\"; sid:4032021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)\n\n
+#Contrexx_SQL_Injection.xml
+alert TCP any any -> any any (msg:"Contrexx SQL Injection Attack"; content:"456"; sid:4032000; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060502-06_MySQL_Login_Handshake_Information_Disclosure.xml
+alert TCP any any -> any any (msg:"MySQL Login Handshake Information Disclosure"; content:"456"; sid:4032001; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20060721-02_MySQL_Server_Date_Format_Function_Format_String_Vulnerability.xml
+alert TCP any any -> any any (msg:"MySQL Server Date_Format Function Format String Vulnerability"; content:"456"; sid:4032002; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20080708-05_Microsoft_SQL_Server_Backup_Restoring_Memory_Corruption.xml
+alert TCP any any -> any any (msg:"Microsoft SQL Server Backup Restoring Memory Corruption"; content:"456"; sid:4032003; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20090709-06_Sun_MySQL_mysql_log_Format_String_Vulnerability.xml
+alert TCP any any -> any any (msg:"Sun MySQL mysql_log Format String Vulnerability"; content:"456"; sid:4032004; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#FSC20101105-04_Symantec_IM_Manager_LoggedInUsers_lgx_Definition_File_Multiple_SQL_Injections.xml
+alert TCP any any -> any any (msg:"Symantec IM Manager LoggedInUsers.lgx Definition File Multiple"; content:"456"; sid:4032005; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#MSsqlHeap.xml
+alert UDP any any -> any any (msg:"MS02-039/MS02-061 MS SQL Server 2000 Heap Overflow"; content:"456"; sid:4032006; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20110427-05_Cisco_Unified_Communications_Manager_Multiple_SQL_Injections.xml
+alert TCP any any -> any any (msg:"Cisco Unified Communications Manager Multiple SQL Injections"; content:"456"; sid:4032007; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20111111-02_HP_Data_Protector_Multiple_Products_GetPolicies_SQL_Injection.xml
+alert TCP any any -> any any (msg:"HP Data Protector Multiple Products GetPolicies SQL Injection"; content:"456"; sid:4032008; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20111117-01_HP_Data_Protector_Multiple_Products_FinishedCopy_SQL_Injection.xml
+alert TCP any any -> any any (msg:"HP Data Protector Multiple Products FinishedCopy SQL Injection"; content:"456"; sid:4032009; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20111123-03_HP_Data_Protector_Multiple_Products_RequestCopy_SQL_Injection.xml
+alert TCP any any -> any any (msg:"HP Data Protector Multiple Products RequestCopy SQL Injection"; content:"456"; sid:4032010; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20120208-09_CA_Total_Defense_Suite_UNCWS_exportReport_SQL_Injection.xml
+alert TCP any any -> any any (msg:"CA Total Defense Suite UNCWS exportReport SQL Injection"; content:"456"; sid:4032011; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20120301-10_IBM_Tivoli_Provisioning_Manager_Express_Asset_getMimeType_SQL_Injection.xml
+alert TCP any any -> any any (msg:"IBM Tivoli Provisioning Manager Express Asset.getMimeType SQL Injection"; content:"456"; sid:4032012; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20120618-02_Ruby_on_Rails_Where_Hash_SQL_Injection.xml
+alert TCP any any -> any any (msg:"Ruby on Rails Where Hash SQL Injection"; content:"456"; sid:4032013; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20120928-04_Trend_Micro_Control_Manager_ad_hoc_query_Module_SQL_Injection.xml
+alert TCP any any -> any any (msg:"Trend Micro Control Manager ad hoc query Module SQL Injection"; content:"456"; sid:4032014; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20140618-14_Symantec_Web_Gateway_dbutils.php_SQL_Injection.xml
+alert TCP any any -> any any (msg:"Symantec Web Gateway dbutils.php SQL Injection"; content:"456"; sid:4032015; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#TSL20141016-03_Drupal_Core_database_inc_expandArguments_SQL_Injection.xml
+alert TCP any any -> any any (msg:"Drupal Core database.inc expandArguments SQL Injection"; content:"456"; sid:4032016; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#brighstor_sql.xml
+alert TCP any any -> any any (msg:"CA Brighstor ARCserve Backup Agent for MS SQL Buffer Overflow"; content:"456"; sid:4032017; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#mybb_search_sql.xml
+alert TCP any any -> any any (msg:"MyBulletinBoard SQL Injection Attack"; content:"456"; sid:4032018; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#revizecms_sql.xml
+alert TCP any any -> any any (msg:"Revize CMS Query_results.JSP SQL Injection Vulnerability"; content:"456"; sid:4032019; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#simpleblog_sql.xml
+alert TCP any any -> any any (msg:"8Pixel.net SimpleBlog ID Parameter Remote SQL Injection Vulnerability"; content:"456"; sid:4032020; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
+#wbblog_sql.xml
+alert TCP any any -> any any (msg:"WBBlog Remote SQL Injection Vulnerability"; content:"456"; sid:4032021; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+
