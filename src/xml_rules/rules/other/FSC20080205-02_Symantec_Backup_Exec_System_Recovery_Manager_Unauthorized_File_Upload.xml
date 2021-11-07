@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Symantec Backup Exec System Recovery Manager Unauthorized File Upload"/>
+    <EngDesc display="true" value="A file upload vulnerability exists in the Symantec Backup Exec System Recovery Manager. The vulnerability is due to design weakness in the Tomcat service and can be exploited by remote attackers to upload arbitrary files into the system, potentially compromising the vulnerable system."/>
+    <Intent display="true">
+      <item value="DESIGN_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="PRISM-HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Symantec"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Symantec_Symantec_Backup_Exec_System_Recovery"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20080205-02"/>
+    <CVEID display="true" value="CVE-2008-0457"/>
+    <bugtraqID display="true" value="27487"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="aa3cd111ffcfc9d3789fd588935a1ac7"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633602745292187500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1219847339" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="S"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="T"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="U"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="V"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="W"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="S"/>
+      <for index="T"/>
+      <for index="U"/>
+      <for index="V"/>
+      <for index="W"/>
+    </for>
+    <for index="E"/>
+    <for index="I">
+      <for index="S"/>
+      <for index="T"/>
+      <for index="U"/>
+      <for index="V"/>
+      <for index="W"/>
+    </for>
+    <for index="M"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="008E" Identification="0270" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="8EE9" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="38A42E86" AckNumber="B69F0495" HeaderLength="05" WindowSize="FFFF" Checksum="3BE5" UrgentPointer="0000" Options="" Payload="16030000610100005D030047ABB3E3E91BD7B907FA6825A4CA74459D2CC7E6DA1EC95B417B68B8A5ECF7952047ABB2C465D1629F61FC9F5BD81B20DCD5E5C355DC0B4AFFA09BC6A4B74A778B001600040005000A000900640062000300060013001200630100" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="I" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="006B" Identification="0274" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="8F08" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="38A42EEC" AckNumber="B69F0527" HeaderLength="05" WindowSize="FF6D" Checksum="E504" UrgentPointer="0000" Options="" Payload="14030000010116030000389E4380B740DE67228C294CEE3DAC1236A21B9B3774D0D9ED9F71973049C5AC3F825F0BE1A275AD6D5795512E40FE219DB19AAE4C9112E78A170300020187096B5D64675D8654D0F427EF2B32CAA3D3FA97AA4014ED2715D29B06EA07097DB8D26169CD6D7452F98A6D41103DED7501D5E467233019A7D499A9E0BB4416A9564A1712BF7D1DCF40C9D381D6382A7E0881CF646A45CF09F808A273C30579989CA44935036D6877728488B3C8EF9855E5D767B53F9CD3EBB04D706D6BB9CE030D0308BEE4C696A7F6AA8DC9ABA81FD3C17E600BCCB19AAE09CD140B00518C251E5B7FD6B2866E1E758620AB6F9D32A46D1B2EBE1C893C62B42FBEE1829588D1381D4720D86C61C26EF45A59D736CD26FA563EFC0004359B6657447E8B781D982AD60313A9AF4BE6E8C1F5B7CF43451E6287E445BDDEB6C4AFBED6BCE372EAC91D1ECE7FBBE814938F44527620C9330CDBD3B0B0B96D924C95ECF1CCE011EDC324864505B0E2C410E95ACE795228E6A7572E3112D4F3EEC08A74EA9CBEFDC05B8313EAC4696C66F207D089F73F7F93C2471A53C36310092586A13FE69D885B43BFC01E5114643CFC39BE23FF1383CCCBF253737364F5FBC81F20BBD67B0FA75C3FFE2E4470AC5FA354648B9A364785182B993055D1DE12A3800EB4BA42E0AA350418B5C70671BD7C03A608228D9BAF86004D3F53699EB9831CD8744ED2DF59F944C5A74DCE3BA9CCBB92C3127048496ED414D17926192576E63AD589DF5DBA173D45CD285FF66DB899AAC278B7F4DAB04481A5F3921DD8593D1D7C1AAD8DF9541703000160C12761F83856E0A4D9A1FE31F968A712654D9A6638511B8F8F663248E51519BBE3A16DEE3EEB397EB42B40CF8925A3C4C34C00AED1B62D68753B783BE26DAED24C51BB02CF1B2871A403FC9CF26D823C60F836F5F7A695D7E9C89C9F5DD2E5846363328A6E02AB6D632A2358D2321B7D94F157843ECE0AB23FB0A62691FACB4B225497773511F71BBE8D761017FD009AA8F81A1009F12273624CC5CF506E2DA09CC2DCBCA6C953A63ECB6194DA0678DD12877DFBF1E2581920E22025F24356BB055D3ADC1E844E76259268EC05814F6C39626D16D45F9B326678BDFC1CE2D5D61812D939D4656E6B5DFB680930DED04446F849EB32670EB7818FF02D6E6DB1867E2065A59A65F85BAABB8A2794A796F947DED8F4DAD83C5E8F4DDBD79F12F26746726E7E7AFAEF7F04DE46C54803E0EF34ABD40F4684EAE0CF12679A34184C7AD0E6E1F4CF4FF6BBC7BFAB4AC851CD2DAE1EA29B5FD7C2935625E080C523D712" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3">
+    <Output index="E" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0077" Identification="42B2" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="4EBE" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="B69F0495" AckNumber="38A42EEC" HeaderLength="05" WindowSize="FA8A" Checksum="F2A1" UrgentPointer="0000" Options="" Payload="160300004A02000046030047ABB3E0B25A563C894F4E5AF64396550D467AD76E3E2129F8E4BCD254F2F8C12047ABB2C465D1629F61FC9F5BD81B20DCD5E5C355DC0B4AFFA09BC6A4B74A778B0004001403000001011603000038C26A0B760CACD326E04A6BD0EBC3EC2190B4AE24FDDA827F4906CD43FEA88889ABAFEF74B1BE8DDBA81C04FA704B24404EAD8B6E8B02D49E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="M" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00B6" Identification="42B6" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="4E7B" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="B69F0527" AckNumber="38A4329A" HeaderLength="05" WindowSize="F6DC" Checksum="3F03" UrgentPointer="0000" Options="" Payload="1703000089E1AB2529B069625F847718F92973B182D9684FEA3CF50477920CA43DB4BD4F276DA3E4D6736931842A0EA577E886256D4A0AC99578D7DA0A7AEBD56AAD3B17E6C77F13691698280952D6C2E4CF0B7666DE136E2052C02449AA8201377A3ABC37612F5325734329AFCFA8DF3AA44C335B37D094E0DC008FCF8446FDC7B83214B33A4E26F83C0AEA997F15030000128AA340F90079A617305625B963A87596468E00000031FF53" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

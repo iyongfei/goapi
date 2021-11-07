@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <SoftwareRevision display="true" value="1.4"/>
+    <ExecDesc display="true" value="IPv6 Tunneled Through IPv4"/>
+    <EngDesc display="true" value="This threat represents an ICMP ping packet nested inside of an IPv6 packet tunneled through IPv4.  If IPv6 traffic is unexpected, this traffic can be considered an anomaly and a possible backdoor."/>
+    <Intent display="true">
+      <item value="Tunneling"/>
+      <item value="Evasion"/>
+    </Intent>
+    <Protocol display="true" value="IP"/>
+    <Type_Of_Equipment display="true" value="Protocol"/>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.cisco.com/cgi-bin/front.x/ipsalerts/view.pl?VID=3980"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="000001045f7957a100c000a80001003c164555ef" display="true"/>
+    <Revision value="8" display="true"/>
+    <Safe display="true" value="true"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="none"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139461770" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+      <for index="B"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="40" Protocol="29" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <IPv6 Version="6" Priority="0" Flow-Label="0000" Payload-Length="000A" Next-Header="01" Hop-Limit="FF" Source-Address="@random(0000:0000:0000:0000:0000:0000:0000:0000, FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF)" Destination-Address="@random(0000:0000:0000:0000:0000:0000:0000:0000, FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF)" Payload="0800AAAAAAAAAAAAAAAA"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

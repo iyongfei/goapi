@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <SoftwareRevision display="true" value="1.4"/>
+    <ExecDesc value="Loopback Ping" display="true"/>
+    <EngDesc value="This threat sends a ping (same payload as Windows) with a source address of 127.0.0.1. This is normally picked up by IDS systems, and can cause problems on systems with a faulty network stack. A source IP of 127.0.0.1 should never been seen in the wild, and is indicative of a problem or attack. For more testing, the destination IP could be set to 127.0.0.1 as well as the source MAC being set to the same as the destination MAC address." display="true"/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Implementation_Exploitation"/>
+    </Intent>
+    <Protocol value="ICMP" display="true"/>
+    <Type_Of_Equipment value="Protocol" display="true"/>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ALL"/>
+    </Known_Versions_Affected>
+    <Credit display="true"/>
+    <Author value="Chuck McAuley" display="true"/>
+    <ID value="000000ff464eba8d00a900fe009b00c915e4945c" display="true"/>
+    <Revision value="1" display="true"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="none"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139462177" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800" Payload="">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="20" Protocol="1" HeaderChecksum="" srcIP="127.0.0.1" destIP="$destIP" options="" Payload="0800495c020002006162636465666768696a6b6c6d6e6f7071727374757677616263646566676869" CE="false" DF="true" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

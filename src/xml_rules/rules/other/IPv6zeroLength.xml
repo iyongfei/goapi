@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <SoftwareRevision display="true" value="1.4"/>
+    <ExecDesc value="Zero Length IPv6 Packet" display="true"/>
+    <EngDesc value="This threat sends a zero length IPv6 packet. Given past problems with IPv4 implementations, it is highly likely that similar problems might reside in IPv6 implementations." display="true"/>
+    <RunOnce value="false" display="false"/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol value="IPv6" display="true"/>
+    <Type_Of_Equipment value="Protocol" display="true"/>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true"/>
+    <Author value="Chuck McAuley" display="true"/>
+    <ID value="000000ffb7b44c3a00c000a80001003c12ce1e2f" display="true"/>
+    <Revision value="1" display="true"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="none"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139461773" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIPv6" type="ImperfectControls.IPv6Address" value="null" index="D"/>
+    <NamedVar name="destIPv6" type="ImperfectControls.IPv6Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="86DD">
+      <IPv6 Version="6" Priority="0" Flow-Label="0" Payload-Length="0" Next-Header="3a" Hop-Limit="80" Source-Address="$sourceIPv6" Destination-Address="$destIPv6" Payload=""/>
+    </Ethernet>
+  </Output>
+</threatSignature>

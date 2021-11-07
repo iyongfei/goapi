@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Phenoelit Autonomous System Scanner"/>
+    <EngDesc display="true" value="This threat mimics the behavior of Phenoelit's Autonomous System Scanner in active mode. It attempts to discover the AS of a router using IRDP, RIPv1, RIPv2, and IGRP."/>
+    <Intent display="true">
+      <item value="Scoping"/>
+    </Intent>
+    <Protocol display="true" value="IRDP, IGRP, RIPv1, RIPv2"/>
+    <Type_Of_Equipment display="true">
+      <item value="Router"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.phenoelit.de"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID display="true" value="22d2e981c7b12d33a1660a4f534127a2"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725859986875000"/>
+    <SigStyle display="false" value="PortSweep"/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X01\X01\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X10"/>
+    <Created value="1155320242" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="B">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="C">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="D">
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="FF:FF:FF:FF:FF:FF" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="00" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="0" TTL="80" Protocol="01" HeaderChecksum="" srcIP="$sourceIP" destIP="255.255.255.255" options="" CE="false" DF="false" MF="false">
+        <ICMP Type="0A" Code="00" Checksum="" Identifier="0000" SequenceNumber="0000" Pointer="00" unused3Byte="000000" Unused4Byte="00000000" GatewayInternetAddress="00000000" Payload=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="FF:FF:FF:FF:FF:FF" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="00" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="0" TTL="80" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="255.255.255.255" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="520" destPort="$destPort" checksum="" length="" Payload="010100000000000000000000000000000000000000000010"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="01:00:5E:00:00:09" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="00" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="0" TTL="80" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="224.0.0.9" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="520" destPort="$destPort" checksum="" length="" Payload="010200000000000000000000000000000000000000000010"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="01:00:5E:00:00:0A" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="00" TotalLength="" Identification="@random(0000,FFFF)" FragmentOffset="0" TTL="80" Protocol="09" HeaderChecksum="" srcIP="$sourceIP" destIP="224.0.0.10" options="" Payload="12000000000000000000EDFF0000000000000000000000000000" CE="false" DF="false" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

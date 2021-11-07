@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Symantec Enterprise Firewall Multiple Vulnerabilities"/>
+    <EngDesc display="true" value="Multiple vulnerabilities exist in the Symantec Enterprise Firewall/VPN Appliance and Symantec Gateway Security products. These products contain firmware flaws which result in improper enforcement of controls relative to incoming UDP traffic.  These vulnerabilities enable an attacker to view and modify the firewall rules, and additionally to create a denial of service condition."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="SNMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Symantec"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Symantec_Symantec_Firewall/VPN_Appliance"/>
+      <item value="Symantec_Symantec_Gateway_Security"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Symantec_Firewall/VPN_Appliance_100_(firmware_builds_prior_to_1.63)"/>
+      <item value="Symantec_Firewall/VPN_Appliance_200_(firmware_builds_prior_to_1.63)"/>
+      <item value="Symantec_Firewall/VPN_Appliance_200R_(firmware_builds_prior_to_1.63)"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040922-02"/>
+    <CVEID display="true" value="CVE-2004-0369"/>
+    <bugtraqID display="true" value="11039"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="91dbcf1e7ac1b7f9f160068f18653f92"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633601727872187500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213725119" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SNMPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="" Identification="E475" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026,65535)" destPort="$SNMPdestPort" checksum="" length="" Payload="302902010004067075626C6963A01C0204665067AF020100020100300E300C06082B060102010101000500"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

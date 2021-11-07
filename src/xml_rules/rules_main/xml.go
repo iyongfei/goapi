@@ -25,7 +25,7 @@ import (
 	"strconv"
 	"strings"
 )
-//go run rules_xml_rules/xml.go
+//go run rules/xml.go
 const (
 	baseXmlDir = "excel_rules"
 )
@@ -34,9 +34,10 @@ const (
 	XmlName = "XmlName"
 	ExecDesc = "ExecDesc"
 	Payload = "Payload"
+	SMTP = "SMTP"
 )
 var (
-	intrusionPath = "rules/bypass"
+	intrusionPath = "rules/other"
 	ruleDirName=""
 	rulePath = ""
 	//rulePath = "v-bypass.rules"
@@ -166,6 +167,9 @@ func getXmlData(xmlNamePath string)  {
 				valueKey := attr.Name.Local//payPayload
 				//valueContent := attr.Value //payContent
 				if valueKey == Payload{
+					if element == SMTP{
+						continue
+					}
 					//if valueContent != ""{
 					headerProto[element] = element
 					//}

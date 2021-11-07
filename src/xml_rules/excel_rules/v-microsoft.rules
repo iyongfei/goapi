@@ -908,360 +908,357 @@ Font Parsing Kernel Memory Corruption"; content:"456"; sid:300; rev:1; metadata:
 #TSL20111103-12_Microsoft_Office_VBA_Module_Stream_Use_after_Free.xml
 alert TCP any any -> any any (msg:"Microsoft Office VBA Module Stream Use after Free"; content:"456"; sid:301; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
-#TSL20111213-03_Microsoft_Windows_Media_DVR-MS_File_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Windows Media DVR-MS File Memory Corruption"; content:"456"; sid:302; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
-
 #TSL20111213-05_Microsoft_Office_Word_Hidden_Border_Use-After-Free.xml
-alert TCP any any -> any any (msg:"Microsoft Office Word Hidden Border Use-After-Free"; content:"456"; sid:303; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Office Word Hidden Border Use-After-Free"; content:"456"; sid:302; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20111213-06_Microsoft_Time_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:"Microsoft Time Remote Code Execution"; content:"456"; sid:304; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Time Remote Code Execution"; content:"456"; sid:303; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20111213-08_Microsoft_Publisher_Array_Indexing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Publisher Array Indexing Memory Corruption"; content:"456"; sid:305; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Publisher Array Indexing Memory Corruption"; content:"456"; sid:304; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20111213-09_Microsoft_Publisher_Invalid_Pointer_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Publisher Invalid Pointer Memory Corruption"; content:"456"; sid:306; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Publisher Invalid Pointer Memory Corruption"; content:"456"; sid:305; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20111213-12_Microsoft_Windows_OLE_Automation_OLESS_File_Objects_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Windows OLE Automation OLESS File Objects Memory Corruption"; content:"456"; sid:307; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Windows OLE Automation OLESS File Objects Memory Corruption"; content:"456"; sid:306; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20111213-14_Microsoft_Excel_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Excel Record Parsing Memory Corruption"; content:"456"; sid:308; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Excel Record Parsing Memory Corruption"; content:"456"; sid:307; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20111213-21_Microsoft_Office_PowerPoint_OfficeArt_Shape_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:"Microsoft Office PowerPoint OfficeArt Shape Remote Code Execution"; content:"456"; sid:309; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Office PowerPoint OfficeArt Shape Remote Code Execution"; content:"456"; sid:308; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20111220-02_Microsoft_Windows_win32k_sys_Memory_Corruption.xml
 alert TCP any any -> any any (msg:"Microsoft Windows Object Packager
-ClickOnce Object Handling Code Execution"; content:"456"; sid:310; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+ClickOnce Object Handling Code Execution"; content:"456"; sid:309; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120110-04_Microsoft_Windows_Media_MIDI_File_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Windows Media MIDI File Memory Corruption"; content:"456"; sid:311; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Windows Media MIDI File Memory Corruption"; content:"456"; sid:310; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120110-06_Microsoft_Windows_Object_Packager_ClickOnce_Object_Handling_Code_Execution.xml
 alert TCP any any -> any any (msg:"Microsoft Windows Object Packager
-ClickOnce Object Handling Code Execution"; content:"456"; sid:312; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+ClickOnce Object Handling Code Execution"; content:"456"; sid:311; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120214-03_Microsoft_SharePoint_Foundation_inplnview_aspx_Cross-Site_Scripting.xml
-alert TCP any any -> any any (msg:"Microsoft SharePoint Foundation inplnview.aspx Cross-Site Scripting"; content:"456"; sid:313; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft SharePoint Foundation inplnview.aspx Cross-Site Scripting"; content:"456"; sid:312; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120214-10_Microsoft_Internet_Explorer_HTML_Layout_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer HTML Layout Use After Free"; content:"456"; sid:314; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer HTML Layout Use After Free"; content:"456"; sid:313; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120214-12_Microsoft_Internet_Explorer_Null_Byte_Information_Disclosure.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Null Byte Information Disclosure"; content:"456"; sid:315; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Null Byte Information Disclosure"; content:"456"; sid:314; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120214-20_Microsoft_Office_Visio_Viewer_VSD_File_Type_Confusion.xml
-alert TCP any any -> any any (msg:"Microsoft Office Visio Viewer VSD File Type Confusion"; content:"456"; sid:316; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Office Visio Viewer VSD File Type Confusion"; content:"456"; sid:315; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120410-04_Microsoft_Internet_Explorer_OnReadyStateChange_Use-after-free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer OnReadyStateChange Use-after-free"; content:"456"; sid:317; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer OnReadyStateChange Use-after-free"; content:"456"; sid:316; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120410-05_Microsoft_Internet_Explorer_SelectAll_Use-after-free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer OnReadyStateChange Use-after-free"; content:"456"; sid:318; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer OnReadyStateChange Use-after-free"; content:"456"; sid:317; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120410-06_Microsoft_Internet_Explorer_VML_Use-after-free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer VML Use-after-free"; content:"456"; sid:319; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer VML Use-after-free"; content:"456"; sid:318; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120508-03_Microsoft_Office_RTF_Mismatch_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Office RTF Mismatch Memory Corruption"; content:"456"; sid:320; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Office RTF Mismatch Memory Corruption"; content:"456"; sid:319; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120508-08_Microsoft_Excel_OBJECTLINK_Record_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Excel OBJECTLINK Record Memory Corruption"; content:"456"; sid:321; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Excel OBJECTLINK Record Memory Corruption"; content:"456"; sid:320; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120508-09_Microsoft_Excel_Type_Mismatch_Series_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Excel Type Mismatch Series Record Parsing Memory Corruption"; content:"456"; sid:322; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Excel Type Mismatch Series Record Parsing Memory Corruption"; content:"456"; sid:321; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120508-11_Microsoft_Excel_File_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Excel File Parsing Memory Corruption"; content:"456"; sid:323; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Excel File Parsing Memory Corruption"; content:"456"; sid:322; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120508-13_Microsoft_Excel_SXLI_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Excel SXLI Record Parsing Memory Corruption"; content:"456"; sid:324; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Excel SXLI Record Parsing Memory Corruption"; content:"456"; sid:323; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120508-16_Microsoft_Excel_MergeCells_Record_Parsing_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Excel MergeCells Record Parsing Memory Corruption"; content:"456"; sid:325; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Excel MergeCells Record Parsing Memory Corruption"; content:"456"; sid:324; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120508-20_Microsoft_Office_GDIplus_EMF_File_Handling_Infinite_Loop.xml
-alert TCP any any -> any any (msg:"Microsoft Office GDIplus EMF File Handling Infinite Loop"; content:"456"; sid:326; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Office GDIplus EMF File Handling Infinite Loop"; content:"456"; sid:325; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120612-07_Microsoft_Multiple_Products_HTML_Sanitization_Cross-Site_Scripting.xml
-alert TCP any any -> any any (msg:"Microsoft Multiple Products HTML Sanitization Cross-Site Scripting"; content:"456"; sid:327; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Multiple Products HTML Sanitization Cross-Site Scripting"; content:"456"; sid:326; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120612-09_Microsoft_Internet_Explorer_Center_Element_Out_of_Bounds_Array_Indexing.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Center Element Out of Bounds Array Indexing"; content:"456"; sid:328; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Center Element Out of Bounds Array Indexing"; content:"456"; sid:327; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120612-16_Microsoft_Internet_Explorer_Col_Element_Heap_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Col Element Heap Memory Corruption"; content:"456"; sid:329; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Col Element Heap Memory Corruption"; content:"456"; sid:328; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120612-18_Microsoft_Internet_Explorer_Title_Element_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Title Element Use After Free"; content:"456"; sid:330; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Title Element Use After Free"; content:"456"; sid:329; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120612-20_Microsoft_Internet_Explorer_Row_Insertion_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Row Insertion Memory Corruption"; content:"456"; sid:331; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Row Insertion Memory Corruption"; content:"456"; sid:330; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120612-26_Microsoft_XML_Core_Services_Uninitialized_Object_Access.xml
-alert TCP any any -> any any (msg:"Microsoft XML Core Services Uninitialized Object Access"; content:"456"; sid:332; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft XML Core Services Uninitialized Object Access"; content:"456"; sid:331; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120612_Microsoft_Internet_Explorer_Developer_Toolbar_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Developer Toolbar Use After Free"; content:"456"; sid:333; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Developer Toolbar Use After Free"; content:"456"; sid:332; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120710-02_Microsoft_Internet_Explorer_Loop_Counter_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Loop Counter Memory Corruption"; content:"456"; sid:334; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Loop Counter Memory Corruption"; content:"456"; sid:333; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120814-03_Microsoft_Internet_Explorer_Layout_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Layout Use After Free"; content:"456"; sid:335; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Layout Use After Free"; content:"456"; sid:334; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120814-09_Microsoft_Windows_Common_Controls_MSCOMCTL_OCX_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:"Microsoft Windows Common Controls MSCOMCTL.OCX Remote Code Execution"; content:"456"; sid:336; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Windows Common Controls MSCOMCTL.OCX Remote Code Execution"; content:"456"; sid:335; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20120917-01_Microsoft_Internet_Explorer_execCommand_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer execCommand Use After Free"; content:"456"; sid:337; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer execCommand Use After Free"; content:"456"; sid:336; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20121009-08_Microsoft_Office_Word_RTF_File_listid_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Office Word RTF File listid Memory Corruption"; content:"456"; sid:338; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Office Word RTF File listid Memory Corruption"; content:"456"; sid:337; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20121009-10_Microsoft_Works_Word_Document_Processing_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Works Word Document Processing Use After Free"; content:"456"; sid:339; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Works Word Document Processing Use After Free"; content:"456"; sid:338; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20121113-06_Microsoft_Windows_TrueType_Font_Parsing_Code_Execution.xml
-alert TCP any any -> any any (msg:"Microsoft Windows TrueType Font Parsing Code Execution"; content:"456"; sid:340; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Windows TrueType Font Parsing Code Execution"; content:"456"; sid:339; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20121113-12_Microsoft_Excel_SerAuxErrBar_Heap_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Excel SerAuxErrBar Heap Memory Corruption"; content:"456"; sid:341; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Excel SerAuxErrBar Heap Memory Corruption"; content:"456"; sid:340; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20121113-18_Microsoft__NET_Framework_Proxy_Auto-Discovery_Code_Execution.xml
-alert TCP any any -> any any (msg:"Microsoft .NET Framework Proxy Auto-Discovery Code Execution"; content:"456"; sid:342; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft .NET Framework Proxy Auto-Discovery Code Execution"; content:"456"; sid:341; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20121211-04_Microsoft_DirectPlay_Office_File_Handling_Invalid_Memory_Free.xml
-alert TCP any any -> any any (msg:"Microsoft DirectPlay Office File Handling Invalid Memory Free"; content:"456"; sid:343; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft DirectPlay Office File Handling Invalid Memory Free"; content:"456"; sid:342; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20121211-12_Microsoft_Windows_TrueType_Font_File_Parsing_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:"Microsoft Windows TrueType Font File Parsing Remote Code Execution"; content:"456"; sid:344; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Windows TrueType Font File Parsing Remote Code Execution"; content:"456"; sid:343; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20121212-06_Microsoft_Internet_Explorer_Mouse_Movement_Information_Disclosure.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Mouse Movement Information Disclosure"; content:"456"; sid:345; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Mouse Movement Information Disclosure"; content:"456"; sid:344; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20121231-02_Microsoft_Internet_Explorer_applyElement_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer applyElement Use After Free"; content:"456"; sid:346; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer applyElement Use After Free"; content:"456"; sid:345; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130108-02_Microsoft_XML_Core_Services_Integer_Truncation_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft XML Core Services Integer Truncation Memory Corruption"; content:"456"; sid:347; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft XML Core Services Integer Truncation Memory Corruption"; content:"456"; sid:346; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130212-12_Microsoft_Internet_Explorer_vtable_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer vtable Use After Free"; content:"456"; sid:348; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer vtable Use After Free"; content:"456"; sid:347; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130212-17_Microsoft_Internet_Explorer_VML_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer VML Memory Corruption"; content:"456"; sid:349; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer VML Memory Corruption"; content:"456"; sid:348; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130212-20_Microsoft_Internet_Explorer_InsertElement_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer InsertElement Use After Free"; content:"456"; sid:350; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer InsertElement Use After Free"; content:"456"; sid:349; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130212-21_Microsoft_Internet_Explorer_CPasteCommand_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CPasteCommand Use After Free"; content:"456"; sid:351; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CPasteCommand Use After Free"; content:"456"; sid:350; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130212-24_Microsoft_Internet_Explorer_CHTML_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CHTML Use After Free"; content:"456"; sid:352; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CHTML Use After Free"; content:"456"; sid:351; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130312-01_Microsoft_Internet_Explorer_onResize_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer onResize Use After Free"; content:"456"; sid:353; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer onResize Use After Free"; content:"456"; sid:352; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130312-02_Microsoft_SharePoint_Server_Cross-Site_Scripting.xml
-alert TCP any any -> any any (msg:"Microsoft SharePoint Server Cross-Site Scripting"; content:"456"; sid:354; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft SharePoint Server Cross-Site Scripting"; content:"456"; sid:353; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130312-03_Microsoft_Silverlight_Pointer_Dereference_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Silverlight Pointer Dereference Memory Corruption"; content:"456"; sid:355; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Silverlight Pointer Dereference Memory Corruption"; content:"456"; sid:354; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130312-05_Microsoft_Internet_Explorer_saveHistory_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer saveHistory Use After Free"; content:"456"; sid:356; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer saveHistory Use After Free"; content:"456"; sid:355; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130312-06_Microsoft_Internet_Explorer_CMarkupBehaviorContext_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CMarkupBehaviorContext Use After Free"; content:"456"; sid:357; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CMarkupBehaviorContext Use After Free"; content:"456"; sid:356; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130312-09_Microsoft_Internet_Explorer_GetMarkupPtr_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer GetMarkupPtr Use After Free"; content:"456"; sid:358; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer GetMarkupPtr Use After Free"; content:"456"; sid:357; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130312-13_Microsoft_Internet_Explorer_removeChild_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer removeChild Use After Free"; content:"456"; sid:359; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer removeChild Use After Free"; content:"456"; sid:358; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130326-09_Microsoft_Internet_Explorer_CTableCell_get_cellIndex_Information_Disclosure.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CTableCell get_cellIndex Information Disclosure"; content:"456"; sid:360; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CTableCell get_cellIndex Information Disclosure"; content:"456"; sid:359; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130506-02_Microsoft_Internet_Explorer_CGenericElement_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CGenericElement Memory Corruption "; content:"456"; sid:361; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CGenericElement Memory Corruption "; content:"456"; sid:360; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130514-13_Microsoft_.NET_Framework_XML_Digital_Signature_Spoofing.xml
-alert TCP any any -> any any (msg:"Microsoft .NET Framework XML Digital Signature Spoofing"; content:"456"; sid:362; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft .NET Framework XML Digital Signature Spoofing"; content:"456"; sid:361; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130514-13_Microsoft__NET_Framework_XML_Digital_Signature_Spoofing.xml
-alert TCP any any -> any any (msg:"Microsoft .NET Framework XML Digital Signature Spoofing"; content:"456"; sid:363; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft .NET Framework XML Digital Signature Spoofing"; content:"456"; sid:362; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130514-30_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:364; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:363; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130514-33_Microsoft_Internet_Explorer_VML_Processing_Integer_Underflow.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer VML Processing Integer Underflow"; content:"456"; sid:365; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer VML Processing Integer Underflow"; content:"456"; sid:364; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130611-11_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:366; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:365; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130611-12_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:367; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:366; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130611-13_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:368; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:367; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130611-14_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:369; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:368; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130611-15_Microsoft_Internet_Explorer_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:370; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Use After Free"; content:"456"; sid:369; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130709-19_Microsoft_Silverlight_Null_Pointer_Dereference_Code_Execution.xml
-alert TCP any any -> any any (msg:"Microsoft Silverlight Null Pointer Dereference Code Execution"; content:"456"; sid:371; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Silverlight Null Pointer Dereference Code Execution"; content:"456"; sid:370; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130709-30_Microsoft_Internet_Explorer_CVE-2013-3146_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3146 Memory Corruption"; content:"456"; sid:372; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3146 Memory Corruption"; content:"456"; sid:371; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130709-31_Microsoft_Internet_Explorer_CVE-2013-3152_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3152 Memory Corruption"; content:"456"; sid:373; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3152 Memory Corruption"; content:"456"; sid:372; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130709-32_Microsoft_Internet_Explorer_CVE-2013-3143_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3143 Memory Corruption"; content:"456"; sid:374; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3143 Memory Corruption"; content:"456"; sid:373; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130709-33_Microsoft_Internet_Explorer_CVE-2013-3147_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3147 Memory Corruption"; content:"456"; sid:375; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3147 Memory Corruption"; content:"456"; sid:374; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130813-12_Microsoft_Internet_Explorer_EUC-JP_Character_Encoding_Universal_Cross_Site_Scripting.xml
 alert TCP any any -> any any (msg:"Microsoft Internet Explorer EUC-JP Character
-Encoding Universal Cross Site Scripting"; content:"456"; sid:376; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+Encoding Universal Cross Site Scripting"; content:"456"; sid:375; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130910-12_Microsoft_Excel_CVE-2013-1315_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Excel CVE-2013-1315 Memory Corruption"; content:"456"; sid:377; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Excel CVE-2013-1315 Memory Corruption"; content:"456"; sid:376; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130910-14_Microsoft_Access_CVE-2013-3156_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Access CVE-2013-3156 Memory Corruption"; content:"456"; sid:378; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Access CVE-2013-3156 Memory Corruption"; content:"456"; sid:377; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130910-28_Microsoft_Internet_Explorer_CVE-2013-3205_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3205 Memory Corruption"; content:"456"; sid:379; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3205 Memory Corruption"; content:"456"; sid:378; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130917-05_Microsoft_Internet_Explorer_CVE-2013-3163_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3163 Use After Free"; content:"456"; sid:380; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-3163 Use After Free"; content:"456"; sid:379; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20130917-06_Microsoft_Internet_Explorer_onlosecaputre_Event_Use-After-Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer onlosecaputre Event Use-After-Free"; content:"456"; sid:381; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer onlosecaputre Event Use-After-Free"; content:"456"; sid:380; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20131002-01_Microsoft_Internet_Explorer_applyElement_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer applyElement Use After Free"; content:"456"; sid:382; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer applyElement Use After Free"; content:"456"; sid:381; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20131008-10_Microsoft_Silverlight_WriteableBitmap_SetSource_Information_Disclosure.xml
-alert TCP any any -> any any (msg:"Microsoft Silverlight WriteableBitmap SetSource Information Disclosure"; content:"456"; sid:383; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Silverlight WriteableBitmap SetSource Information Disclosure"; content:"456"; sid:382; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20131008-26_Microsoft_Internet_Explorer_HtmlLayout_SmartObject_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer HtmlLayout SmartObject Use After Free"; content:"456"; sid:384; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer HtmlLayout SmartObject Use After Free"; content:"456"; sid:383; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20131105-01_Microsoft_Windows_and_Office_TIFF_Handling_GDI_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Windows and Office TIFF Handling GDI Memory Corruption"; content:"456"; sid:385; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Windows and Office TIFF Handling GDI Memory Corruption"; content:"456"; sid:384; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20131112-11_Microsoft_Internet_Explorer_Print_Preview_Information_Disclosure.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer Print Preview Information Disclosure"; content:"456"; sid:386; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer Print Preview Information Disclosure"; content:"456"; sid:385; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20131112-17_Microsoft_Internet_Explorer_CAnchorElement_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CAnchorElement Use After Free"; content:"456"; sid:387; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CAnchorElement Use After Free"; content:"456"; sid:386; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20131210-30_Microsoft_Internet_Explorer_CVE-2013-5052_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-5052 Use After Free"; content:"456"; sid:388; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-5052 Use After Free"; content:"456"; sid:387; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20131211-01_Microsoft_Internet_Explorer_CVE-2013-5049_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-5049 Memory Corruption"; content:"456"; sid:389; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2013-5049 Memory Corruption"; content:"456"; sid:388; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140211-13_Microsoft_Direct2D_SVG_Path_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Direct2D SVG Path Memory Corruption"; content:"456"; sid:390; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Direct2D SVG Path Memory Corruption"; content:"456"; sid:389; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140211-17_Microsoft_XML_Core_Services_MSXML_Information_Disclosure.xml
-alert TCP any any -> any any (msg:"Microsoft XML Core Services MSXML Information Disclosure"; content:"456"; sid:391; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft XML Core Services MSXML Information Disclosure"; content:"456"; sid:390; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140211-21_Microsoft_Internet_Explorer_CVE-2014-0283_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0283 Use After Free"; content:"456"; sid:392; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0283 Use After Free"; content:"456"; sid:391; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140211-23_Microsoft_Internet_Explorer_CVE-2014-0278_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0278 Memory Corruption"; content:"456"; sid:393; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0278 Memory Corruption"; content:"456"; sid:392; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140211-24_Microsoft_Internet_Explorer_CVE-2014-0274_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0274 Use After Free"; content:"456"; sid:394; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0274 Use After Free"; content:"456"; sid:393; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140214-08_Microsoft_Internet_Explorer_CVE-2014-0275_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0275 Use After Free"; content:"456"; sid:395; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0275 Use After Free"; content:"456"; sid:394; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140228-04_Microsoft_Internet_Explorer_CVE-2014-0287_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0287 Use After Free"; content:"456"; sid:396; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0287 Use After Free"; content:"456"; sid:395; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140311-08_Microsoft_Windows_DirectShow_JPEG_Double_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Windows DirectShow JPEG Double Free"; content:"456"; sid:397; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Windows DirectShow JPEG Double Free"; content:"456"; sid:396; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140311-14_Microsoft_Internet_Explorer_CVE-2014-0312_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0312 Use After Free"; content:"456"; sid:398; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0312 Use After Free"; content:"456"; sid:397; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140311-15_Microsoft_Internet_Explorer_TextRange_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer TextRange Use After Free"; content:"456"; sid:399; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer TextRange Use After Free"; content:"456"; sid:398; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140311-16_Microsoft_Internet_Explorer_CVE-2014-0305_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0305 Use After Free"; content:"456"; sid:400; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0305 Use After Free"; content:"456"; sid:399; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140324-04_Microsoft_Word_RTF_listoverridecount_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Word RTF listoverridecount Memory Corruption"; content:"456"; sid:401; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Word RTF listoverridecount Memory Corruption"; content:"456"; sid:400; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140409-01_Microsoft_Internet_Explorer_CVE-2014-1753_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1753 Memory Corruption"; content:"456"; sid:402; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1753 Memory Corruption"; content:"456"; sid:401; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140428-01_Microsoft_Internet_Explorer_CVE-2014-1776_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1776 Use After Free"; content:"456"; sid:403; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1776 Use After Free"; content:"456"; sid:402; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140610-01_Microsoft_Internet_Explorer_behavior_Property_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer behavior Property Use After Free"; content:"456"; sid:404; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer behavior Property Use After Free"; content:"456"; sid:403; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140610-22_Microsoft_Internet_Explorer_CVE-2014-1791_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1791 Memory Corruption"; content:"456"; sid:405; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1791 Memory Corruption"; content:"456"; sid:404; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140610-23_Microsoft_Internet_Explorer_CVE-2014-0282_CInput_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0282 CInput Use After Free"; content:"456"; sid:406; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-0282 CInput Use After Free"; content:"456"; sid:405; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140611-03_Microsoft_Internet_Explorer_CVE-2014-1795_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1795 Memory Corruption"; content:"456"; sid:407; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1795 Memory Corruption"; content:"456"; sid:406; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140612-01_Microsoft_Internet_Explorer_CVE-2014-1804_CBlockContainerBlock_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1804 CBlockContainerBlock Use After Free"; content:"456"; sid:408; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1804 CBlockContainerBlock Use After Free"; content:"456"; sid:407; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140709-02_Microsoft_Internet_Explorer_CVE-2014-2804_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-2804 Use After Free"; content:"456"; sid:409; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-2804 Use After Free"; content:"456"; sid:408; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140710-06_Microsoft_Internet_Explorer_CVE-2014-1765_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1765 Use After Free"; content:"456"; sid:410; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-1765 Use After Free"; content:"456"; sid:409; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140812-18_Microsoft_Internet_Explorer_CVE-2014-4063_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-4063 Use After Free"; content:"456"; sid:411; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-4063 Use After Free"; content:"456"; sid:410; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140812-19_Microsoft_Internet_Explorer_CVE-2014-2820_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-2820 Use After Free"; content:"456"; sid:412; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-2820 Use After Free"; content:"456"; sid:411; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140812-20_Microsoft_Internet_Explorer_CVE-2014-2824_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-2824 Memory Corruption"; content:"456"; sid:413; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-2824 Memory Corruption"; content:"456"; sid:412; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20140813-05_Microsoft_Internet_Explorer_CVE-2014-4050_Use_After_Free.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-4050 Use After Free"; content:"456"; sid:414; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-4050 Use After Free"; content:"456"; sid:413; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20141014-16_Microsoft_NET_iriParsing_Remote_Code_Execution.xml
-alert TCP any any -> any any (msg:"Microsoft .NET iriParsing Remote Code Execution"; content:"456"; sid:415; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft .NET iriParsing Remote Code Execution"; content:"456"; sid:414; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20141111-30_Microsoft_Office_Bad_Index_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Office Bad Index Memory Corruption"; content:"456"; sid:416; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Office Bad Index Memory Corruption"; content:"456"; sid:415; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20141209-16_Microsoft_Windows_Graphics_Component_Information_Disclosure.xml
-alert TCP any any -> any any (msg:"Microsoft Windows Graphics Component Information Disclosure"; content:"456"; sid:417; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Windows Graphics Component Information Disclosure"; content:"456"; sid:416; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20141209-24_Microsoft_Internet_Explorer_CVE_2014_8966_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-8966 Memory Corruption"; content:"456"; sid:418; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-8966 Memory Corruption"; content:"456"; sid:417; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 
 #TSL20141209-26_Microsoft_Internet_Explorer_CVE_2014_6366_Memory_Corruption.xml
-alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-6366 Memory Corruption"; content:"456"; sid:419; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
+alert TCP any any -> any any (msg:"Microsoft Internet Explorer CVE-2014-6366 Memory Corruption"; content:"456"; sid:418; rev:1; metadata:created_at 2021_10_26, updated_at 2021_10_26;)
 

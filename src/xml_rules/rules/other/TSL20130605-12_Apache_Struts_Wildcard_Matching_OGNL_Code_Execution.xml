@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apache Struts Wildcard Matching OGNL Code Execution"/>
+    <EngDesc display="true" value="A code execution vulnerability exists in Apache Struts Object-Graph Navigation Language (OGNL) expressions.&#13;&#10;The vulnerability is due to the way action names passed via Wildcard Matching to the server are evaluated by&#13;&#10;OGNL and allows arbitrary OGNL expressions encoded in a URI to be evaluated bypassing both Struts and OGNL&#13;&#10;library protections.&#13;&#10;A remote attacker could exploit this vulnerability by sending crafted HTTP requests to a server using a vulnerable&#13;&#10;version of the software. Successful exploitation will allow an attacker to execute arbitrary OGNL code in the context&#13;&#10;of the server."/>
+    <Intent display="true">
+      <item value="DESIGN_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="HTTP, HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Apache"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Apache_Software_Foundation_Struts"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="2_prior_to_2.3.14.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20130605-12"/>
+    <CVEID display="true" value="CVE-2013-2135"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="93969"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="b908b402b987ac4ecd0742cbc6502836"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="none"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635104535562727136"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1386671416" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="C"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:0D:CE" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0080" Identification="6D36" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6BF5" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="48537" destPort="$HTTPdestPort" SeqNumber="1CEA0E9B" AckNumber="3B5086BF" HeaderLength="08" WindowSize="002E" Checksum="9EF3" UrgentPointer="0000" Options="0101080A370263AE57E0ECAD" Payload="474554202F48656C6C6F2F253235253742253233666F6F25334425323754532532372B274C27253243253233666F6F25374420485454502F312E310D0A486F73743A6468637034320D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0D:CE" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0174" Identification="6A12" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6E25" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="48537" SeqNumber="3B5086BF" AckNumber="1CEA0EE7" HeaderLength="08" WindowSize="0072" Checksum="CE9B" UrgentPointer="0000" Options="0101080A57E0ED6A370263AE" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A5365742D436F6F6B69653A204A53455353494F4E49443D46363544363245424631383233434539443831443843433738384443433143313B20506174683D2F48656C6C6F0D0A436F6E74656E742D547970653A20746578742F68746D6C3B636861727365743D5554462D380D0A436F6E74656E742D4C656E6774683A203130370D0A446174653A204D6F6E2C203234204A756E20323031332031363A32343A343020474D540D0A0D0A0A0A3C68746D6C3E0A3C686561643E3C7469746C653E54534C204356452D323031332D323133353C2F7469746C653E3C2F686561643E0A0A3C626F64793E0A3C703E0A202020204356452D323031332D323133350A3C2F703E0A3C2F626F64793E0A3C2F68746D6C3E0A0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

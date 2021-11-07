@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ARP Broadcast Spoof"/>
+    <EngDesc display="true" value="This threat sends out a broadcast ARP packet, spoofing another MAC / IP address. Allows an attacker to receive information bound for another computer. Can also be used to deny service to victim computer."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Standards_Exploitation"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="ARP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="ALL"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ALL"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://neworder.box.sk/newsread.php?newsid=10388"/>
+    <CVEID display="true" value="CVE-1999-0667"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="11169"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="375caba703abbc10495bc419aa2f91ef"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725856282500000"/>
+    <SigStyle display="false" value="Flood"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="ARP"/>
+    <Rate display="false" value="5"/>
+    <Regex display="false" value="\XFF\XFF\XFF\XFF\XFF\XFF"/>
+    <Created value="1155320219" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables/>
+  <Loops>
+    <for index="A"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="@random(00:00:00:00:00:00, FF:FF:FF:FF:FF:FF)" destMac="FF:FF:FF:FF:FF:FF" pktType="0806">
+      <ARP hwAddrType="0001" protoAddrType="0800" hwAddrSize="6" protoAddrSize="4" op="0002" srcMac="@random(00:00:00:00:00:00, FF:FF:FF:FF:FF:FF)" srcIP="@random(0.0.0.0, 255.255.255.255)" destMac="FF:FF:FF:FF:FF:FF" destIP="0.0.0.0"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

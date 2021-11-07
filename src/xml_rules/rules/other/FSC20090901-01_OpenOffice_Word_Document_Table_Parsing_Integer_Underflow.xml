@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="OpenOffice Word Document Table Parsing Integer Underflow"/>
+    <EngDesc display="true" value="An integer underflow vulnerability has been reported in OpenOffice that allows remote attackers to inject and execute arbitrary code on the target system. The vulnerability is due to an integer underflow error when parsing certain records in the document table. Remote attackers can exploit this vulnerability by enticing the target user to open a malicious Word document. In case where code injection and execution is successful, the behaviour of the target is dependent on the intention of the malicious code. The injected code will execute with the privileges of the currently logged in user. In case where code injection is not successful, the affected application might terminate abnormally causing a denial of service condition."/>
+    <Intent display="true">
+      <item value="Integer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS/IMAP/POP3/SMB/CIFS/SMTP/NFS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="OpenOffice.org"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="OpenOffice.org_OpenOffice"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="OpenOffice.org_OpenOffice_3.1.0_and_earlier"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2009-0200"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="0e8a9d493e1ba95336addcd04713aa6d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633964924783981816"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1260786641" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="AV"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="AW"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="AV"/>
+      <for index="AW"/>
+    </for>
+    <for index="AO">
+      <for index="AV"/>
+      <for index="AW"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:E0:ED:09" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01D2" Identification="AC14" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="EBC2" srcIP="172.16.8.44" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1086" destPort="$HTTPdestPort" SeqNumber="D37620F6" AckNumber="2E8A86B2" HeaderLength="05" WindowSize="FAF0" Checksum="A482" UrgentPointer="0000" Options="" Payload="474554202F7E6D64656F6E6172696E652F706F632E646F6320485454502F312E310D0A486F73743A203137322E31362E312E320D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E313B20656E2D55533B2072763A312E392E302E3829204765636B6F2F323030393033323630392046697265666F782F332E302E380D0A4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C2A2F2A3B713D302E380D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A526566657265723A20687474703A2F2F3137322E31362E312E322F7E6D64656F6E6172696E652F0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="AO" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:E0:ED:09" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00BC" Identification="FF57" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="D995" srcIP="$destIP" destIP="172.16.8.44" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1086" SeqNumber="2E8B0F92" AckNumber="D37622A0" HeaderLength="05" WindowSize="1920" Checksum="FC07" UrgentPointer="0000" Options="" Payload="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

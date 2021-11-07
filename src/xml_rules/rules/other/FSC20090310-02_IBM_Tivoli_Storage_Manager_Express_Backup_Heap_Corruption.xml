@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IBM Tivoli Storage Manager Express Backup Heap Corruption"/>
+    <EngDesc display="true" value="A buffer overflow vulnerability exists in IBM Tivoli Storage Manager. This vulnerability is due to a lack of validation of a user supplied value in a message. This value is later used as a counter to populate a fixed length heap buffer. A remote unauthenticated attacker may leverage this vulnerability to create a denial of service condition of the affected service, or inject and execute arbitrary code on the target host.            In an attack case where code injection is not successful, the target IBM Tivoli Express Backup Server service will terminate.            In a more sophisticated attack where code injection is successful, the behaviour of the target is entirely dependent on the intended function of the injected code. The code in such a case would execute with SYSTEM level privileges."/>
+    <Intent display="true">
+      <item value="BUFFER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="TCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="IBM"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IBM_IBM_Tivoli_Storage_Manager_(TSM)_Enterprise_Server"/>
+      <item value="IBM_IBM_Tivoli_Storage_Manager_(TSM)_Express_server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="IBM_Tivoli_Storage_Manager_(TSM)_Enterprise_Server_5.2"/>
+      <item value="IBM_Tivoli_Storage_Manager_(TSM)_Enterprise_Server_5.3"/>
+      <item value="IBM_Tivoli_Storage_Manager_(TSM)_Enterprise_Server_5.4"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20090310-02"/>
+    <CVEID display="true" value="CVE-2008-4563"/>
+    <bugtraqID display="true" value="34077"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="d8aaefb47fb6453c19e3d1210ab96eb7"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="Complete"/>
+    <IntegImpact display="false" value="Complete"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633753988202076724"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1250667222" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="M"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="N"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="O"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="P"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Q"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="F"/>
+    <for index="H">
+      <for index="M"/>
+      <for index="N"/>
+      <for index="O"/>
+      <for index="P"/>
+      <for index="Q"/>
+    </for>
+    <for index="L"/>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0038" Identification="7D95" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="5BA7" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="877B1682" AckNumber="6D25BC38" HeaderLength="08" WindowSize="002E" Checksum="63D2" UrgentPointer="0000" Options="0101080A93576B1C00000000" Payload="00041DA5" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00D2" Identification="7D97" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="5B0B" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="877B1686" AckNumber="6D25BC79" HeaderLength="08" WindowSize="002E" Checksum="166A" UrgentPointer="0000" Options="0101080A93576C450001792C" Payload="00471AA5660000000504020005000E00130000000013000A0000DCF7FAA800000000000000000000000057696E4E54565254564D2D57494E585050524F647363656E752E74787400552AA5000100290005000300050003000000040300007FFF000000000004000E0012000C001E0010352E3031565254564D2D57494E585050524F3137322E31362E382E313038605FFF91C2DC11DCB165000C29687394" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,3">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0075" Identification="0AAF" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="8E50" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="6D25BC38" AckNumber="877B1686" HeaderLength="08" WindowSize="FAEC" Checksum="05B7" UrgentPointer="0000" Options="0101080A0001792C93576B1C" Payload="00411EA5661507D9030B101D060000000D000D00070005000300070003F77BBD6EFC0000000000000000000002324B332D4F4646494345324B3357696E646F7773" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="L" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0028" Identification="0AB2" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="8E9A" srcIP="" destIP="" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="" destPort="" SeqNumber="6D25BC79" AckNumber="877B1725" HeaderLength="05" WindowSize="0000" Checksum="B858" UrgentPointer="0000" Options="" Payload="" CWR="false" ECE="false" URG="false" ACK="true" PSH="false" RST="true" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

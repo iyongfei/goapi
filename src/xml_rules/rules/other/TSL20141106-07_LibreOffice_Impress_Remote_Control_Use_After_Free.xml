@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="LibreOffice Impress Remote Control Use After Free"/>
+    <EngDesc display="true" value="A use after free vulnerability exists in LibreOffice Impress. The vulnerability is due to an error in the code managing remote control port. A remote unauthenticated attacker can exploit this vulnerability by sending crafted data to the affected port. Successful exploitation will result in arbitrary code execution in the context of the affected application."/>
+    <Intent display="true">
+      <item value="Corruption"/>
+    </Intent>
+    <Protocol display="true" value="LibreOffice Impress Remote Control Protocol"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="LibreOffice"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="LibreOffice"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_4.2.7/prior_to_4.3.3"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20141106-07"/>
+    <CVEID display="true" value="CVE-2014-3693"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="114326"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="d0392b7bc9b51280e7e7fde0ab0036a8"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635526044183687421"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1417084239" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="C"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="A0:D3:C1:F1:4A:7D" destMac="00:50:56:B4:2E:05" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0054" Identification="2335" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="B639" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="43963" destPort="$destPort" SeqNumber="57B8C2E1" AckNumber="C5A37F06" HeaderLength="08" WindowSize="0073" Checksum="3426" UrgentPointer="0000" Options="0101080A0A89E1D402100E05" Payload="4C4F5F5345525645525F434C49454E545F504149520A5347482D54393839440A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

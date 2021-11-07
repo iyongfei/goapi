@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="UDP Port 53 Firewall"/>
+    <EngDesc display="true" value="It is possible to bypass the rules of many firewalls and inject code into a targeted system by sending the targeted system UDP packets from port 53. This threat is meant to expose weak points in firewalls by sending packets to a remote system, from a falsified location, that may contain malicious instructions or information probing techniques. "/>
+    <Intent display="true">
+      <item value="Unauthorized_Access"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="DNS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Firewall"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="ALL"/>
+      <item value="Kerio"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Transport_Layer"/>
+      <item value="Kerio_Personal_Firewall"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Transport_Layer_UDP"/>
+      <item value="Kerio_Personal_Firewall_2_2.1.4"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://cgi.nessus.org/plugins/dump.php3?id=11580 http://www.securityfocus.com/bid/7436/info/"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Phil Trainor"/>
+    <ID display="true" value="000000ff465113af00a900fe009b00c96cfffc81"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632742243460468750"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X3d\Xc1\X81\X80\X00\X01\X00\X01\X00\X02\X00\X00\X11\X69\X6d\X70\X65\X72\X66\X65\X63\X74\X6e\X65\X74\X77\X6f\X72\X6b\X73\X03\X63\X6f\X6d\X00\X00\X01\X00\X01\Xc0\X0c\X00\X01\X00\X01\X00\X00\X1c\Xd8\X00\X04\X3f\Xf7\X55\Xda\Xc0\X0c\X00\X02\X00\X01\X00\X00\X1c\Xd8\X00\X19\X03\X6e\X73\X32\X12\X74\X6f\X74\X61\X6c\X63\X68\X6f\X69\X63\X65\X68\X6f\X73\X74\X69\X6e\X67\Xc0\X1e\Xc0\X0c\X00\X02\X00\X01\X00\X00\X1c\Xd8\X00\X06\X03\X6e\X73\X31\Xc0\X47"/>
+    <Created value="1139461856" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="DNSdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="@random(00:00:00:00:00:00,FF:FF:FF:FF:FF:FF)" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="" TTL="30" Protocol="11" HeaderChecksum="@random(0,FFFF)" srcIP="@random(0.0.0.0,255.255.255.255)" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="53" destPort="$DNSdestPort" checksum="" length="" Payload="3dc18180000100010002000011696d706572666563746e6574776f726b7303636f6d0000010001c00c0001000100001cd800043ff755dac00c0002000100001cd80019036e733212746f74616c63686f696365686f7374696e67c01ec00c0002000100001cd80006036e7331c047"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

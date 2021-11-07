@@ -280,6 +280,7 @@ var RuleHeaderMap = map[string]string{
 	"web":"#web:4058000~4058999",
 	"microsoft":"#microsoft: 4059000~4059999",
 	"denial_of_service":"#denial_of_service: 4060000~4060999",
+	"other":"#other: 4061000~4061999",
 }
 
 func GetRuleLineHeaderMap() map[string] string{

